@@ -1,5 +1,8 @@
 import pathlib
 import shutil
+import sys
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent / "_ext"))
 
 project = "Fertility"
 copyright = "2026, Andrew Savage"
@@ -7,6 +10,8 @@ author = "Andrew Savage"
 
 extensions = [
     "myst_parser",
+    "sphinx_design",
+    "region_tabs",
 ]
 
 myst_enable_extensions = [
