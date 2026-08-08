@@ -1,3 +1,0 @@
-[build]
-  command = "curl -fsSL https://pixi.sh/install.sh | bash && $HOME/.pixi/bin/pixi run docs-build"
-  publish = "docs/_build/html"
