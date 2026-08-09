@@ -33,6 +33,10 @@ Compare any two fertility metrics across local authority districts (2024). Bubbl
   }
 </script>
 <p>
+  <label style="font: inherit; cursor: pointer; margin-right: 12px;">
+    <input type="checkbox" id="sync-checkbox" onchange="document.getElementById('scatter-frame').contentWindow.setSyncAxes(this.checked)">
+    Sync Axes
+  </label>
   <button class="preset-btn" onclick="showCohort('asfr_under20_2013', 'asfr_under20', 'mean_age_mother', 'pop_15_19')">&lt;20</button>
   <button class="preset-btn" onclick="showCohort('asfr_20_24_2013', 'asfr_20_24', 'mean_age_mother', 'pop_20_24')">20–24</button>
   <button class="preset-btn" onclick="showCohort('asfr_25_29_2013', 'asfr_25_29', 'mean_age_mother', 'pop_25_29')">25–29</button>
@@ -40,12 +44,6 @@ Compare any two fertility metrics across local authority districts (2024). Bubbl
   <button class="preset-btn" onclick="showCohort('asfr_35_39_2013', 'asfr_35_39', 'mean_age_mother', 'pop_35_39')">35–39</button>
   <button class="preset-btn" onclick="showCohort('asfr_40_44_2013', 'asfr_40_44', 'mean_age_mother', 'pop_40_44')">40–44</button>
   <button class="preset-btn" onclick="showCohort('asfr_45plus_2013', 'asfr_45plus', 'mean_age_mother', 'pop_45_49')">45+</button>
-</p>
-<p>
-  <label style="font: inherit; cursor: pointer;">
-    <input type="checkbox" id="sync-checkbox" onchange="document.getElementById('scatter-frame').contentWindow.setSyncAxes(this.checked)">
-    Sync X/Y axis limits (adds 0%/-20%/-40%/-60% reference lines)
-  </label>
 </p>
 <p>
   <label style="font: inherit;">
