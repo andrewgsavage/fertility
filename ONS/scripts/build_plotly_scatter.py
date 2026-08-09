@@ -289,6 +289,29 @@ for metric, meta in metric_meta.items():
     meta["range"] = [lo - pad, hi + pad]
 
 
+def wrap_title(text, width=18):
+    """Word-wrap `text` to `width` characters per line via <br> — the
+    colorbar sits in a narrow strip and Plotly doesn't wrap its title on
+    its own, so long metric names (e.g. "Housing affordability ratio")
+    would otherwise overflow past the plot edge."""
+    words = text.split(" ")
+    lines, current = [], ""
+    for word in words:
+        candidate = f"{current} {word}".strip()
+        if len(candidate) > width and current:
+            lines.append(current)
+            current = word
+        else:
+            current = candidate
+    if current:
+        lines.append(current)
+    return "<br>".join(lines)
+
+
+for metric, meta in metric_meta.items():
+    meta["colorbar_title"] = wrap_title(meta["title"])
+
+
 def hover_record(code, hover_year):
     record = dict(fertility["data"].get(hover_year, {}).get(code, {}))
     record.update(population["data"].get(hover_year, {}).get(code, {}))
@@ -369,7 +392,7 @@ fig.update_layout(
         "cmin": color_meta["cmin"],
         "cmax": color_meta["cmax"],
         "colorbar": {
-            "title": {"text": color_meta["title"]},
+            "title": {"text": color_meta["colorbar_title"]},
             "xpad": 30,
             "tickmode": "array" if color_meta.get("tickvals") else "auto",
             "tickvals": color_meta.get("tickvals", []),
@@ -513,7 +536,7 @@ function applyAxis(which, metric, fromWidgetClick) {{
                 'coloraxis.colorscale': meta.colorscale,
                 'coloraxis.cmin': meta.cmin,
                 'coloraxis.cmax': meta.cmax,
-                'coloraxis.colorbar.title.text': meta.title,
+                'coloraxis.colorbar.title.text': meta.colorbar_title,
                 'coloraxis.colorbar.tickmode': meta.tickvals ? 'array' : 'auto',
                 'coloraxis.colorbar.tickvals': meta.tickvals || [],
                 'coloraxis.colorbar.ticktext': meta.ticktext || [],
@@ -578,7 +601,7 @@ window.setPreset = function (x, y, color, size) {{
             'coloraxis.colorscale': colorMeta.colorscale,
             'coloraxis.cmin': colorMeta.cmin,
             'coloraxis.cmax': colorMeta.cmax,
-            'coloraxis.colorbar.title.text': colorMeta.title,
+            'coloraxis.colorbar.title.text': colorMeta.colorbar_title,
             'coloraxis.colorbar.tickmode': colorMeta.tickvals ? 'array' : 'auto',
             'coloraxis.colorbar.tickvals': colorMeta.tickvals || [],
             'coloraxis.colorbar.ticktext': colorMeta.ticktext || [],
