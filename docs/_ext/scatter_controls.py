@@ -50,6 +50,10 @@ class ScatterControlsDirective(SphinxDirective):
             f"  <button class=\"preset-btn\" onclick=\"showCohort('{asfr_key}_2013', '{asfr_key}', 'mean_age_mother', '{pop_key}')\">{label}</button>"
             for label, asfr_key, pop_key in _COHORT_PRESETS
         )
+        housing_buttons = "\n".join(
+            f"  <button class=\"preset-btn\" onclick=\"showHousingCohort('{asfr_key}', '{pop_key}')\">{label}</button>"
+            for label, asfr_key, pop_key in _COHORT_PRESETS
+        )
         html = f"""```{{raw}} html
 <style>
   .preset-btn {{
@@ -69,6 +73,13 @@ class ScatterControlsDirective(SphinxDirective):
     var win = document.getElementById('scatter-frame').contentWindow;
     win.setSyncAxes(true);
     win.setPreset(x, y, color, size);
+  }}
+
+  function showHousingCohort(y, size) {{
+    document.getElementById('sync-checkbox').checked = false;
+    var win = document.getElementById('scatter-frame').contentWindow;
+    win.setSyncAxes(false);
+    win.setPreset('affordability_ratio', y, 'mean_age_mother', size);
   }}
 
   var yearPlayTimer = null;
@@ -106,7 +117,12 @@ class ScatterControlsDirective(SphinxDirective):
     <input type="checkbox" id="sync-checkbox" onchange="document.getElementById('scatter-frame').contentWindow.setSyncAxes(this.checked)">
     Sync Axes
   </label>
+  <span style="margin-right: 6px;">ASFR:</span>
 {buttons}
+</p>
+<p>
+  <span style="margin-right: 6px;">Housing:</span>
+{housing_buttons}
 </p>
 <p>
   <label style="font: inherit;">
