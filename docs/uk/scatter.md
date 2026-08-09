@@ -1,5 +1,9 @@
 # Explore
 
+Following from first-vs-second-birth, it would be ideal to find data on first births to integorgate the causes for the drop in fertility. The UK does not publish first birth data at town level. It does publish Age Specific Fertility Rates (ASFR) in 5 year buckets for towns, which is presented here. 
+
+The reduction in fertility can be seen clearly in the 20-24 and 25-29 cohorts as expected based on the reduction in global first birth rates. There are much fewer births in 20-24 year olds so there's more room for randomness
+
 Compare any two fertility metrics across local authority districts (2024). Bubble size is live births; pick the X, Y, and color metrics from the dropdowns above the chart. Source: [ONS](https://www.ons.gov.uk/).
 
 Each button below sets X = ASFR (2013) for that age band, Y = its current (2024) level, Color = mean age of mother, and Size = the female population in that age band.
@@ -18,13 +22,13 @@ Each button below sets X = ASFR (2013) for that age band, Y = its current (2024)
   }
 </style>
 <p>
-  <button class="preset-btn" onclick="document.getElementById('scatter-frame').contentWindow.setPreset('asfr_under20_2013', 'asfr_under20', 'mean_age_mother', 'pop_15_19')">Show &lt;20 cohort</button>
-  <button class="preset-btn" onclick="document.getElementById('scatter-frame').contentWindow.setPreset('asfr_20_24_2013', 'asfr_20_24', 'mean_age_mother', 'pop_20_24')">Show 20–24 cohort</button>
-  <button class="preset-btn" onclick="document.getElementById('scatter-frame').contentWindow.setPreset('asfr_25_29_2013', 'asfr_25_29', 'mean_age_mother', 'pop_25_29')">Show 25–29 cohort</button>
-  <button class="preset-btn" onclick="document.getElementById('scatter-frame').contentWindow.setPreset('asfr_30_34_2013', 'asfr_30_34', 'mean_age_mother', 'pop_30_34')">Show 30–34 cohort</button>
-  <button class="preset-btn" onclick="document.getElementById('scatter-frame').contentWindow.setPreset('asfr_35_39_2013', 'asfr_35_39', 'mean_age_mother', 'pop_35_39')">Show 35–39 cohort</button>
-  <button class="preset-btn" onclick="document.getElementById('scatter-frame').contentWindow.setPreset('asfr_40_44_2013', 'asfr_40_44', 'mean_age_mother', 'pop_40_44')">Show 40–44 cohort</button>
-  <button class="preset-btn" onclick="document.getElementById('scatter-frame').contentWindow.setPreset('asfr_45plus_2013', 'asfr_45plus', 'mean_age_mother', 'pop_45_49')">Show 45+ cohort</button>
+  <button class="preset-btn" onclick="document.getElementById('scatter-frame').contentWindow.setPreset('asfr_under20_2013', 'asfr_under20', 'mean_age_mother', 'pop_15_19')">&lt;20</button>
+  <button class="preset-btn" onclick="document.getElementById('scatter-frame').contentWindow.setPreset('asfr_20_24_2013', 'asfr_20_24', 'mean_age_mother', 'pop_20_24')">20–24</button>
+  <button class="preset-btn" onclick="document.getElementById('scatter-frame').contentWindow.setPreset('asfr_25_29_2013', 'asfr_25_29', 'mean_age_mother', 'pop_25_29')">25–29</button>
+  <button class="preset-btn" onclick="document.getElementById('scatter-frame').contentWindow.setPreset('asfr_30_34_2013', 'asfr_30_34', 'mean_age_mother', 'pop_30_34')">30–34</button>
+  <button class="preset-btn" onclick="document.getElementById('scatter-frame').contentWindow.setPreset('asfr_35_39_2013', 'asfr_35_39', 'mean_age_mother', 'pop_35_39')">35–39</button>
+  <button class="preset-btn" onclick="document.getElementById('scatter-frame').contentWindow.setPreset('asfr_40_44_2013', 'asfr_40_44', 'mean_age_mother', 'pop_40_44')">40–44</button>
+  <button class="preset-btn" onclick="document.getElementById('scatter-frame').contentWindow.setPreset('asfr_45plus_2013', 'asfr_45plus', 'mean_age_mother', 'pop_45_49')">45+</button>
 </p>
 <p>
   <label style="font: inherit; cursor: pointer;">
