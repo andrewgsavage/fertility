@@ -4,7 +4,7 @@ Following from first-vs-second-birth, it would be ideal to find data on first bi
 
 The reduction in fertility can be seen clearly in the 20-24 and 25-29 age groups as expected based on the reduction in global first birth rates. The fertility decline in 30-34 year olds is much less severe.
 
-In the 20-24 and 25-29 age groups, the sharpest declines in fertility (drops larger than 50% since 2013) occur mostly in the areas that alraedy saw low fertility rates in 2013. These are generally university towns and cities, and areas in and around London.
+In the 20-24 and 25-29 age groups, the sharpest declines in fertility (drops larger than 50% since 2013) occur mostly in the areas that alraedy saw low fertility rates in 2013. These are generally university towns and cities, and areas in and around London. These are the areas young people migrate to, see [Centre for Cities: The great British "brain drain"](https://www.centreforcities.org/reader/great-british-brain-drain/nature-migration-within-england-wales/).
 
 ::::{tab-set}
 
