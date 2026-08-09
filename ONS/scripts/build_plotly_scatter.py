@@ -715,7 +715,7 @@ for asfr_key in STATIC_COHORTS:
                     "colorscale": color_meta_static["colorscale"],
                     "cmin": color_meta_static["cmin"],
                     "cmax": color_meta_static["cmax"],
-                    "colorbar": {"title": {"text": color_meta_static["colorbar_title"]}},
+                    "colorbar": {"title": {"text": color_meta_static["colorbar_title"]}, "xpad": 30},
                     "showscale": True,
                     "line": {"width": 0.5, "color": "#666"},
                     "opacity": 0.8,
