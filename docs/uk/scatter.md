@@ -6,7 +6,7 @@ The reduction in fertility can be seen clearly in the 20-24 and 25-29 age groups
 
 In the 20-24 and 25-29 age groups, the sharpest declines in fertility (drops larger than 50% since 2013) occur mostly in the areas that alraedy saw low fertility rates in 2013. These are generally university towns and cities, and areas in and around London.
 
-::::{grid} 2 2 4 4
+::::{grid} 1 1 3 3
 :gutter: 2
 
 :::{grid-item}
@@ -26,13 +26,6 @@ In the 20-24 and 25-29 age groups, the sharpest declines in fertility (drops lar
 :::{grid-item}
 ```{image} /_static/ons/scatter_asfr_30_34.png
 :alt: ASFR 30-34 (2013) vs (2024), by local authority
-:width: 100%
-```
-:::
-
-:::{grid-item}
-```{image} /_static/ons/scatter_colorbar_mean_age.png
-:alt: Color scale — mean age of mother
 :width: 100%
 ```
 :::
