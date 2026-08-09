@@ -79,7 +79,7 @@ class ScatterControlsDirective(SphinxDirective):
     document.getElementById('sync-checkbox').checked = false;
     var win = document.getElementById('scatter-frame').contentWindow;
     win.setSyncAxes(false);
-    win.setPreset('affordability_ratio', y, 'mean_age_mother', size);
+    win.setPreset('house_price', y, 'mean_age_mother', size);
   }}
 
   var yearPlayTimer = null;
