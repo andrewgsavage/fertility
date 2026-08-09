@@ -705,7 +705,7 @@ print(f"Wrote {OUTPUT} ({len(codes)} LADs, {year}, {len(metric_values)} metrics)
 # axis title spells out the year explicitly for that reason, unlike the
 # interactive chart's dropdown label which stays year-agnostic since it
 # tracks whichever year the slider is on).
-STATIC_COHORTS = ["asfr_20_24", "asfr_25_29", "asfr_30_34"]
+STATIC_COHORTS = ["asfr_20_24", "asfr_25_29", "asfr_30_34", "asfr_35_39"]
 color_meta_static = metric_meta["mean_age_mother"]
 REF_LINE_PCTS = [0, -0.2, -0.4, -0.6]
 for asfr_key in STATIC_COHORTS:
@@ -779,3 +779,48 @@ for asfr_key in STATIC_COHORTS:
     static_out = f"outputs/scatter_{asfr_key}.png"
     fig_static.write_image(static_out, scale=2)
     print(f"Wrote {static_out}")
+
+# --- Static PNG snapshots for the same cohorts against average house
+# price instead of the 2013 baseline — mirrors the Housing preset row's
+# X = house_price, Y = ASFR, Color = mean age, Size = population. No sync-
+# axes reference lines here (house price and ASFR are different units, so
+# a y=x*(1+pct) line wouldn't mean anything), and the x axis is log-scale
+# like the interactive chart's Housing presets.
+house_price_meta = metric_meta["house_price"]
+for asfr_key in STATIC_COHORTS:
+    pop_key = asfr_key.replace("asfr_", "pop_")
+    y_meta = metric_meta[asfr_key]
+    fig_housing = go.Figure(
+        data=[
+            go.Scatter(
+                x=metric_values["house_price"],
+                y=metric_values[asfr_key],
+                mode="markers",
+                marker={
+                    "size": size_data[pop_key]["sizes"],
+                    "sizemode": "area",
+                    "sizeref": size_data[pop_key]["sizeref"],
+                    "sizemin": 3,
+                    "color": metric_values["mean_age_mother"],
+                    "colorscale": color_meta_static["colorscale"],
+                    "cmin": color_meta_static["cmin"],
+                    "cmax": color_meta_static["cmax"],
+                    "colorbar": {"title": {"text": color_meta_static["colorbar_title"]}, "xpad": 30},
+                    "showscale": True,
+                    "line": {"width": 0.5, "color": "#666"},
+                    "opacity": 0.8,
+                },
+            )
+        ]
+    )
+    fig_housing.update_layout(
+        template="plotly_white",
+        width=700,
+        height=500,
+        margin={"r": 10, "t": 20, "l": 60, "b": 60},
+        xaxis={"title": {"text": f"{house_price_meta['title']} ({year})"}, "type": "log", "range": house_price_meta["log_range"]},
+        yaxis={"title": {"text": f"{METRIC_LABELS[asfr_key]} ({year})"}, "range": y_meta["range"]},
+    )
+    housing_out = f"outputs/scatter_housing_{asfr_key}.png"
+    fig_housing.write_image(housing_out, scale=2)
+    print(f"Wrote {housing_out}")

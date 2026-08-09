@@ -16,6 +16,7 @@ In the 20-24 and 25-29 age groups, the sharpest declines in fertility (drops lar
 :::
 
 :::{tab-item} 25–29
+:selected:
 ```{image} /_static/ons/scatter_asfr_25_29.png
 :alt: ASFR 25-29 (2013) vs (2024), by local authority
 :width: 100%
@@ -25,6 +26,47 @@ In the 20-24 and 25-29 age groups, the sharpest declines in fertility (drops lar
 :::{tab-item} 30–34
 ```{image} /_static/ons/scatter_asfr_30_34.png
 :alt: ASFR 30-34 (2013) vs (2024), by local authority
+:width: 100%
+```
+:::
+
+:::{tab-item} 35–39
+```{image} /_static/ons/scatter_asfr_35_39.png
+:alt: ASFR 35-39 (2013) vs (2024), by local authority
+:width: 100%
+```
+:::
+::::
+
+Areas with higher fertility rates in these cohorts also tend to have lower average house prices.
+
+::::{tab-set}
+
+:::{tab-item} 20–24
+```{image} /_static/ons/scatter_housing_asfr_20_24.png
+:alt: Average house price vs ASFR 20-24 (2024), by local authority
+:width: 100%
+```
+:::
+
+:::{tab-item} 25–29
+:selected:
+```{image} /_static/ons/scatter_housing_asfr_25_29.png
+:alt: Average house price vs ASFR 25-29 (2024), by local authority
+:width: 100%
+```
+:::
+
+:::{tab-item} 30–34
+```{image} /_static/ons/scatter_housing_asfr_30_34.png
+:alt: Average house price vs ASFR 30-34 (2024), by local authority
+:width: 100%
+```
+:::
+
+:::{tab-item} 35–39
+```{image} /_static/ons/scatter_housing_asfr_35_39.png
+:alt: Average house price vs ASFR 35-39 (2024), by local authority
 :width: 100%
 ```
 :::
