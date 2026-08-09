@@ -655,3 +655,48 @@ html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin:
 open(OUTPUT, "w", encoding="utf-8").write(html)
 
 print(f"Wrote {OUTPUT} ({len(codes)} LADs, {year}, {len(metric_values)} metrics)")
+
+# --- Static PNG snapshots for the cohorts discussed in the docs page's
+# narrative — unlike the interactive chart these can't be driven by the
+# year slider, so each is a fixed 2013-baseline-vs-{year} snapshot (the Y
+# axis title spells out the year explicitly for that reason, unlike the
+# interactive chart's dropdown label which stays year-agnostic since it
+# tracks whichever year the slider is on).
+STATIC_COHORTS = ["asfr_20_24", "asfr_25_29", "asfr_30_34"]
+for asfr_key in STATIC_COHORTS:
+    x_key = f"{asfr_key}_2013"
+    pop_key = asfr_key.replace("asfr_", "pop_")
+    color_meta_static = metric_meta["mean_age_mother"]
+    fig_static = go.Figure(
+        data=[
+            go.Scatter(
+                x=metric_values[x_key],
+                y=metric_values[asfr_key],
+                mode="markers",
+                marker={
+                    "size": size_data[pop_key]["sizes"],
+                    "sizemode": "area",
+                    "sizeref": size_data[pop_key]["sizeref"],
+                    "sizemin": 3,
+                    "color": metric_values["mean_age_mother"],
+                    "colorscale": color_meta_static["colorscale"],
+                    "cmin": color_meta_static["cmin"],
+                    "cmax": color_meta_static["cmax"],
+                    "colorbar": {"title": {"text": color_meta_static["colorbar_title"]}},
+                    "line": {"width": 0.5, "color": "#666"},
+                    "opacity": 0.8,
+                },
+            )
+        ]
+    )
+    fig_static.update_layout(
+        template="plotly_white",
+        width=700,
+        height=500,
+        margin={"r": 10, "t": 20, "l": 60, "b": 60},
+        xaxis={"title": {"text": metric_meta[x_key]["title"]}},
+        yaxis={"title": {"text": f"{METRIC_LABELS[asfr_key]} ({year})"}},
+    )
+    static_out = f"outputs/scatter_{asfr_key}.png"
+    fig_static.write_image(static_out, scale=2)
+    print(f"Wrote {static_out}")
