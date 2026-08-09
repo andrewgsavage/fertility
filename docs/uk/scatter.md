@@ -59,7 +59,7 @@ Compare any two fertility metrics across local authority districts (2024). Bubbl
 ```
 
 ```{note}
-Fertility: Office for National Statistics, "Live births in England and Wales: birth rates down to local authority areas". Available at https://www.nomisweb.co.uk/datasets/lebirthrates.
+Fertility: Office for National Statistics, "Live births in England and Wales: birth rates down to local authority areas". Available at [nomisweb.co.uk/datasets/lebirthrates](https://www.nomisweb.co.uk/datasets/lebirthrates).
 
-Population: Office for National Statistics, "Population estimates - local authority based by five year age band". Available at https://www.nomisweb.co.uk/datasets/pestnew.
+Population: Office for National Statistics, "Population estimates - local authority based by five year age band". Available at [nomisweb.co.uk/datasets/pestnew](https://www.nomisweb.co.uk/datasets/pestnew).
 ```

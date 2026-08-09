@@ -15,6 +15,6 @@ Factors that make it less likely for people to form couples, or factors that mak
 
 ```{note}
 HFD. Human Fertility Database. Max Planck Institute for Demographic Research (Germany)
-and Vienna Institute of Demography (Austria). Available at www.humanfertility.org.
+and Vienna Institute of Demography (Austria). Available at [www.humanfertility.org](https://www.humanfertility.org/).
 Data downloaded on 2026-07-13.
 ```
