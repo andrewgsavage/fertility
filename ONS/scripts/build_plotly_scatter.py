@@ -664,13 +664,42 @@ print(f"Wrote {OUTPUT} ({len(codes)} LADs, {year}, {len(metric_values)} metrics)
 # tracks whichever year the slider is on).
 STATIC_COHORTS = ["asfr_20_24", "asfr_25_29", "asfr_30_34"]
 color_meta_static = metric_meta["mean_age_mother"]
+REF_LINE_PCTS = [0, -0.2, -0.4, -0.6]
 for asfr_key in STATIC_COHORTS:
     x_key = f"{asfr_key}_2013"
     pop_key = asfr_key.replace("asfr_", "pop_")
-    # All three cohorts share the same "Mean age of mother" color scale —
-    # only the last one shows the colorbar, rather than repeating it (or
-    # splitting it into its own separate image) three times.
-    show_colorbar = asfr_key == STATIC_COHORTS[-1]
+    x_meta, y_meta = metric_meta[x_key], metric_meta[asfr_key]
+
+    # Same "sync axes" treatment as the interactive chart's checkbox
+    # (matching combined x/y range plus y=x*(1+pct) reference lines) —
+    # applied here directly rather than needing a screenshot of it toggled
+    # on in the live page.
+    range_lo = min(x_meta["range"][0], y_meta["range"][0])
+    range_hi = max(x_meta["range"][1], y_meta["range"][1])
+    shapes = [
+        {
+            "type": "line",
+            "x0": range_lo,
+            "y0": range_lo * (1 + pct),
+            "x1": range_hi,
+            "y1": range_hi * (1 + pct),
+            "line": {"color": "#999", "width": 1, "dash": "dot" if pct == 0 else "dash"},
+        }
+        for pct in REF_LINE_PCTS
+    ]
+    annotations = [
+        {
+            "x": range_hi,
+            "y": range_hi * (1 + pct),
+            "xanchor": "left",
+            "yanchor": "middle",
+            "showarrow": False,
+            "text": f"{pct * 100:.0f}%",
+            "font": {"size": 10, "color": "#888"},
+        }
+        for pct in REF_LINE_PCTS
+    ]
+
     fig_static = go.Figure(
         data=[
             go.Scatter(
@@ -687,7 +716,7 @@ for asfr_key in STATIC_COHORTS:
                     "cmin": color_meta_static["cmin"],
                     "cmax": color_meta_static["cmax"],
                     "colorbar": {"title": {"text": color_meta_static["colorbar_title"]}},
-                    "showscale": show_colorbar,
+                    "showscale": True,
                     "line": {"width": 0.5, "color": "#666"},
                     "opacity": 0.8,
                 },
@@ -699,8 +728,10 @@ for asfr_key in STATIC_COHORTS:
         width=700,
         height=500,
         margin={"r": 10, "t": 20, "l": 60, "b": 60},
-        xaxis={"title": {"text": metric_meta[x_key]["title"]}},
-        yaxis={"title": {"text": f"{METRIC_LABELS[asfr_key]} ({year})"}},
+        xaxis={"title": {"text": x_meta["title"]}, "range": [range_lo, range_hi]},
+        yaxis={"title": {"text": f"{METRIC_LABELS[asfr_key]} ({year})"}, "range": [range_lo, range_hi]},
+        shapes=shapes,
+        annotations=annotations,
     )
     static_out = f"outputs/scatter_{asfr_key}.png"
     fig_static.write_image(static_out, scale=2)
