@@ -663,10 +663,10 @@ print(f"Wrote {OUTPUT} ({len(codes)} LADs, {year}, {len(metric_values)} metrics)
 # interactive chart's dropdown label which stays year-agnostic since it
 # tracks whichever year the slider is on).
 STATIC_COHORTS = ["asfr_20_24", "asfr_25_29", "asfr_30_34"]
+color_meta_static = metric_meta["mean_age_mother"]
 for asfr_key in STATIC_COHORTS:
     x_key = f"{asfr_key}_2013"
     pop_key = asfr_key.replace("asfr_", "pop_")
-    color_meta_static = metric_meta["mean_age_mother"]
     fig_static = go.Figure(
         data=[
             go.Scatter(
@@ -682,7 +682,11 @@ for asfr_key in STATIC_COHORTS:
                     "colorscale": color_meta_static["colorscale"],
                     "cmin": color_meta_static["cmin"],
                     "cmax": color_meta_static["cmax"],
-                    "colorbar": {"title": {"text": color_meta_static["colorbar_title"]}},
+                    # No per-chart colorbar — all three cohorts share the
+                    # same "Mean age of mother" color scale, shown once as
+                    # its own image (scatter_colorbar_mean_age.png) instead
+                    # of being repeated three times.
+                    "showscale": False,
                     "line": {"width": 0.5, "color": "#666"},
                     "opacity": 0.8,
                 },
@@ -700,3 +704,34 @@ for asfr_key in STATIC_COHORTS:
     static_out = f"outputs/scatter_{asfr_key}.png"
     fig_static.write_image(static_out, scale=2)
     print(f"Wrote {static_out}")
+
+# Standalone colorbar image shared by the three cohort snapshots above —
+# an otherwise-empty trace whose only visible content is its colorbar.
+fig_colorbar = go.Figure(
+    data=[
+        go.Scatter(
+            x=[None],
+            y=[None],
+            mode="markers",
+            marker={
+                "color": [color_meta_static["cmin"]],
+                "colorscale": color_meta_static["colorscale"],
+                "cmin": color_meta_static["cmin"],
+                "cmax": color_meta_static["cmax"],
+                "colorbar": {"title": {"text": color_meta_static["colorbar_title"]}, "x": 0.4, "xanchor": "left"},
+                "showscale": True,
+            },
+        )
+    ]
+)
+fig_colorbar.update_layout(
+    template="plotly_white",
+    width=260,
+    height=350,
+    margin={"l": 0, "r": 0, "t": 20, "b": 20},
+    xaxis={"visible": False},
+    yaxis={"visible": False},
+)
+colorbar_out = "outputs/scatter_colorbar_mean_age.png"
+fig_colorbar.write_image(colorbar_out, scale=2)
+print(f"Wrote {colorbar_out}")
