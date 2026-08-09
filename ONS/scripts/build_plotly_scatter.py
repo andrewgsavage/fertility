@@ -354,13 +354,14 @@ var syncEnabled = false;
 
 function applySync() {{
     if (!syncEnabled) return;
-    var xs = (gd.data[0].x || []).filter(function (v) {{ return v !== null && v !== undefined; }});
-    var ys = (gd.data[0].y || []).filter(function (v) {{ return v !== null && v !== undefined; }});
-    if (!xs.length || !ys.length) return;
-    var lo = Math.min(Math.min.apply(null, xs), Math.min.apply(null, ys));
-    var hi = Math.max(Math.max.apply(null, xs), Math.max.apply(null, ys));
-    var pad = (hi - lo) * 0.05 || 1;
-    var rangeLo = lo - pad, rangeHi = hi + pad;
+    // Use the metrics' fixed, all-years-pooled ranges (METRIC_META[...].range)
+    // rather than whichever year's data is currently plotted — otherwise the
+    // sync range (and its reference lines) would rescale with the year
+    // control just like the un-synced axes used to before that was fixed.
+    var xMeta = METRIC_META[currentMetric.x], yMeta = METRIC_META[currentMetric.y];
+    if (!xMeta.range || !yMeta.range) return;
+    var rangeLo = Math.min(xMeta.range[0], yMeta.range[0]);
+    var rangeHi = Math.max(xMeta.range[1], yMeta.range[1]);
     var shapes = REF_LINE_PCTS.map(function (pct) {{
         return {{
             type: 'line', xref: 'x', yref: 'y',
