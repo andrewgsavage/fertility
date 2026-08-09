@@ -16,6 +16,7 @@ from metrics import (
 
 FERTILITY_IN = "outputs/fertility_by_lad.json"
 POPULATION_IN = "outputs/population_by_lad.json"
+HOUSING_IN = "outputs/housing_by_lad.json"
 OUTPUT = "outputs/scatter_plotly.html"
 
 POPULATION_LABELS = {
@@ -30,12 +31,18 @@ POPULATION_LABELS = {
 }
 POPULATION_ORDER = list(POPULATION_LABELS)
 
+HOUSING_LABELS = {
+    "house_price": "Average house price",
+    "affordability_ratio": "Housing affordability ratio",
+}
+HOUSING_ORDER = list(HOUSING_LABELS)
+
 BASE_YEAR = "2013"
 ASFR_BASE_KEYS = [m[: -len("_rel2013")] for m in REL_METRIC_ORDER]
 BASE_YEAR_ORDER = [f"{k}_{BASE_YEAR}" for k in ASFR_BASE_KEYS]
 BASE_YEAR_LABELS = {f"{k}_{BASE_YEAR}": f"{METRIC_LABELS[k]} ({BASE_YEAR})" for k in ASFR_BASE_KEYS}
 
-ALL_LABELS = {**METRIC_LABELS, **POPULATION_LABELS, **BASE_YEAR_LABELS}
+ALL_LABELS = {**METRIC_LABELS, **POPULATION_LABELS, **HOUSING_LABELS, **BASE_YEAR_LABELS}
 
 DEFAULT_X = "mean_age_mother"
 DEFAULT_Y = "tfr"
@@ -101,9 +108,9 @@ def build_hover_table(name, year_data):
 
 def full_dropdown_buttons(default_metric):
     """Fertility (Levels + Change since 2013) buttons, plus ASFR-in-2013
-    (the baseline level itself, not the % change) and Female population
-    groups. Active index is resolved by searching for default_metric
-    rather than hand-computed offsets."""
+    (the baseline level itself, not the % change), Female population, and
+    Housing groups. Active index is resolved by searching for
+    default_metric rather than hand-computed offsets."""
     fert_buttons, _ = dropdown_buttons()
     base_year_buttons = [{"label": f"— ASFR in {BASE_YEAR} —", "method": "skip", "args": [None]}] + [
         {"label": BASE_YEAR_LABELS[m], "method": "skip", "args": [m]} for m in BASE_YEAR_ORDER
@@ -111,7 +118,10 @@ def full_dropdown_buttons(default_metric):
     pop_buttons = [{"label": "— Female population —", "method": "skip", "args": [None]}] + [
         {"label": POPULATION_LABELS[m], "method": "skip", "args": [m]} for m in POPULATION_ORDER
     ]
-    buttons = fert_buttons + base_year_buttons + pop_buttons
+    housing_buttons = [{"label": "— Housing —", "method": "skip", "args": [None]}] + [
+        {"label": HOUSING_LABELS[m], "method": "skip", "args": [m]} for m in HOUSING_ORDER
+    ]
+    buttons = fert_buttons + base_year_buttons + pop_buttons + housing_buttons
     active = next(i for i, b in enumerate(buttons) if b["args"][0] == default_metric)
     return buttons, active
 
@@ -120,11 +130,14 @@ with open(FERTILITY_IN, "r", encoding="utf-8") as f:
     fertility = json.load(f)
 with open(POPULATION_IN, "r", encoding="utf-8") as f:
     population = json.load(f)
+with open(HOUSING_IN, "r", encoding="utf-8") as f:
+    housing = json.load(f)
 
 year = fertility["years"][-1]
 lad_names = fertility["lad_names"]
 year_rows = fertility["data"][year]
 population_year_rows = population["data"].get(year, {})
+housing_year_rows = housing["data"].get(year, {})
 # City of London has a tiny, atypical resident population (a few thousand
 # vs a huge daytime/working population), which makes its rates extreme
 # outliers that distort the chart's axis scaling. Isles of Scilly is
@@ -156,6 +169,12 @@ for metric in POPULATION_ORDER:
     pooled = sorted(v for v in values if v is not None)
     metric_meta[metric] = {"colorscale": SEQ_COLORSCALE, "cmin": pooled[0], "cmax": pooled[-1], "title": POPULATION_LABELS[metric], "pct": False}
 
+for metric in HOUSING_ORDER:
+    values = [housing_year_rows.get(code, {}).get(metric) for code in codes]
+    metric_values[metric] = values
+    pooled = sorted(v for v in values if v is not None)
+    metric_meta[metric] = {"colorscale": SEQ_COLORSCALE, "cmin": pooled[0], "cmax": pooled[-1], "title": HOUSING_LABELS[metric], "pct": False}
+
 base_year_rows = fertility["data"].get(BASE_YEAR, {})
 for base_key, metric in zip(ASFR_BASE_KEYS, BASE_YEAR_ORDER):
     values = [base_year_rows.get(code, {}).get(base_key) for code in codes]
@@ -173,10 +192,10 @@ for metric, values in metric_values.items():
     size_data[metric] = {"sizes": sizes_m, "sizeref": (2 * max_v / (MAX_MARKER_DIAMETER**2)) if max_v > 0 else 1}
 
 # time_values[metric][year] = [value, ...] aligned to `codes`, covering
-# every year — used so the Levels metrics (TFR, ASFR, live births, etc) and
-# Female population metrics can animate with a year control, unlike the
-# fixed 2013-baseline group and "change vs 2013" which stay pinned to the
-# latest year regardless of it.
+# every year — used so the Levels metrics (TFR, ASFR, live births, etc),
+# Female population, and Housing metrics can animate with a year control,
+# unlike the fixed 2013-baseline group and "change vs 2013" which stay
+# pinned to the latest year regardless of it.
 TIME_YEARS = fertility["years"]
 time_values = {}
 time_size = {}
@@ -189,6 +208,11 @@ for metric in POPULATION_ORDER:
     time_values[metric] = {}
     for y in TIME_YEARS:
         rows = population["data"].get(y, {})
+        time_values[metric][y] = [rows.get(code, {}).get(metric) for code in codes]
+for metric in HOUSING_ORDER:
+    time_values[metric] = {}
+    for y in TIME_YEARS:
+        rows = housing["data"].get(y, {})
         time_values[metric][y] = [rows.get(code, {}).get(metric) for code in codes]
 
 # cmin/cmax (color scale) and the marker sizeref are computed from the
