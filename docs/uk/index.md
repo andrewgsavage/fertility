@@ -1,9 +1,9 @@
-# Fertility
+# UK
 
 ```{toctree}
 :maxdepth: 1
 :hidden:
 
-hfd/index
-uk/index
+fertility-map
+scatter
 ```
