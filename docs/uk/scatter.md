@@ -31,6 +31,36 @@ Compare any two fertility metrics across local authority districts (2024). Bubbl
     win.setSyncAxes(true);
     win.setPreset(x, y, color, size);
   }
+
+  var yearPlayTimer = null;
+
+  function toggleYearPlay() {
+    var btn = document.getElementById('year-play-btn');
+    if (yearPlayTimer) {
+      clearInterval(yearPlayTimer);
+      yearPlayTimer = null;
+      btn.textContent = '▶ Play';
+      return;
+    }
+    btn.textContent = '⏸ Pause';
+    var slider = document.getElementById('year-slider');
+    var min = parseInt(slider.min, 10), max = parseInt(slider.max, 10);
+    if (parseInt(slider.value, 10) >= max) {
+      slider.value = min;
+      slider.dispatchEvent(new Event('input', {bubbles: true}));
+    }
+    yearPlayTimer = setInterval(function () {
+      var next = parseInt(slider.value, 10) + 1;
+      if (next > max) {
+        clearInterval(yearPlayTimer);
+        yearPlayTimer = null;
+        btn.textContent = '▶ Play';
+        return;
+      }
+      slider.value = next;
+      slider.dispatchEvent(new Event('input', {bubbles: true}));
+    }, 700);
+  }
 </script>
 <p>
   <label style="font: inherit; cursor: pointer; margin-right: 12px;">
@@ -49,10 +79,14 @@ Compare any two fertility metrics across local authority districts (2024). Bubbl
   <label style="font: inherit;">
     Year: <b id="scatter-year-label">2024</b>
     <br>
-    <input
-      type="range" min="2013" max="2024" step="1" value="2024" style="width: 100%; max-width: 400px;"
-      oninput="document.getElementById('scatter-year-label').textContent = this.value; document.getElementById('scatter-frame').contentWindow.setYear(this.value);"
-    >
+    <span style="display: inline-flex; align-items: center; gap: 8px; width: 100%; max-width: 400px;">
+      <button id="year-play-btn" class="preset-btn" style="margin: 0;" onclick="toggleYearPlay()">▶ Play</button>
+      <input
+        id="year-slider"
+        type="range" min="2013" max="2024" step="1" value="2024" style="flex: 1;"
+        oninput="document.getElementById('scatter-year-label').textContent = this.value; document.getElementById('scatter-frame').contentWindow.setYear(this.value);"
+      >
+    </span>
   </label>
 </p>
 <iframe id="scatter-frame" src="../_static/ons/scatter_plotly.html" style="width: 100%; aspect-ratio: 4 / 3; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
