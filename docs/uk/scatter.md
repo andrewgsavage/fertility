@@ -91,4 +91,6 @@ In the 20-24 and 25-29 age groups, the sharpest declines in fertility (drops lar
 Fertility: Office for National Statistics, "Live births in England and Wales: birth rates down to local authority areas". Available at [nomisweb.co.uk/datasets/lebirthrates](https://www.nomisweb.co.uk/datasets/lebirthrates).
 
 Population: Office for National Statistics, "Population estimates - local authority based by five year age band". Available at [nomisweb.co.uk/datasets/pestnew](https://www.nomisweb.co.uk/datasets/pestnew).
+
+Housing: Office for National Statistics, "Average house price" and "Housing affordability ratio (residence-based)". Available at [ons.gov.uk/explore-local-statistics/indicators](https://www.ons.gov.uk/explore-local-statistics/indicators).
 ```

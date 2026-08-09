@@ -1,4 +1,5 @@
 import json
+import math
 
 import plotly.graph_objects as go
 
@@ -36,6 +37,10 @@ HOUSING_LABELS = {
     "affordability_ratio": "Housing affordability ratio",
 }
 HOUSING_ORDER = list(HOUSING_LABELS)
+# Both are heavily right-skewed (a handful of prime-London LADs sit far
+# above the rest), which saturates a linear color scale — shown on a log
+# scale instead so mid-range variation stays visible.
+LOG_COLOR_METRICS = set(HOUSING_ORDER)
 
 BASE_YEAR = "2013"
 ASFR_BASE_KEYS = [m[: -len("_rel2013")] for m in REL_METRIC_ORDER]
@@ -83,6 +88,26 @@ def pad_left(text, width):
 def pad_right(text, width):
     text = str(text)
     return text + "&nbsp;" * max(0, width - len(text))
+
+
+def nice_log_ticks(lo, hi, count=5):
+    """count evenly log-spaced tick values between lo and hi (both > 0),
+    each rounded up to a "nice" 1/2/5 x 10^n number for readability."""
+    log_lo, log_hi = math.log10(lo), math.log10(hi)
+    ticks = []
+    for i in range(count):
+        raw = 10 ** (log_lo + (log_hi - log_lo) * i / (count - 1))
+        exp = math.floor(math.log10(raw))
+        nice = next((step * 10**exp for step in (1, 2, 5) if step * 10**exp >= raw), 10 ** (exp + 1))
+        if not ticks or nice > ticks[-1]:
+            ticks.append(nice)
+    return ticks
+
+
+def format_tick(metric, value):
+    if metric == "house_price":
+        return f"£{value:,.0f}"
+    return f"{value:g}"
 
 
 def hover_cell(metric, value):
@@ -173,7 +198,14 @@ for metric in HOUSING_ORDER:
     values = [housing_year_rows.get(code, {}).get(metric) for code in codes]
     metric_values[metric] = values
     pooled = sorted(v for v in values if v is not None)
-    metric_meta[metric] = {"colorscale": SEQ_COLORSCALE, "cmin": pooled[0], "cmax": pooled[-1], "title": HOUSING_LABELS[metric], "pct": False}
+    metric_meta[metric] = {
+        "colorscale": SEQ_COLORSCALE,
+        "cmin": pooled[0],
+        "cmax": pooled[-1],
+        "title": HOUSING_LABELS[metric],
+        "pct": False,
+        "log_color": True,
+    }
 
 base_year_rows = fertility["data"].get(BASE_YEAR, {})
 for base_key, metric in zip(ASFR_BASE_KEYS, BASE_YEAR_ORDER):
@@ -224,8 +256,16 @@ for metric in HOUSING_ORDER:
 for metric, by_year in time_values.items():
     pooled = sorted(v for values in by_year.values() for v in values if v is not None)
     if metric in metric_meta:
-        metric_meta[metric]["cmin"] = pooled[0]
-        metric_meta[metric]["cmax"] = pooled[-1]
+        if metric in LOG_COLOR_METRICS:
+            lo, hi = pooled[0], pooled[-1]
+            metric_meta[metric]["cmin"] = math.log10(lo)
+            metric_meta[metric]["cmax"] = math.log10(hi)
+            tick_values = nice_log_ticks(lo, hi)
+            metric_meta[metric]["tickvals"] = [math.log10(v) for v in tick_values]
+            metric_meta[metric]["ticktext"] = [format_tick(metric, v) for v in tick_values]
+        else:
+            metric_meta[metric]["cmin"] = pooled[0]
+            metric_meta[metric]["cmax"] = pooled[-1]
     sizes_by_year = {y: [max(v, 0) if v is not None else 0 for v in values] for y, values in by_year.items()}
     max_v = max((v for sizes in sizes_by_year.values() for v in sizes), default=0)
     sizeref = (2 * max_v / (MAX_MARKER_DIAMETER**2)) if max_v > 0 else 1
@@ -266,6 +306,16 @@ color_buttons, color_active = full_dropdown_buttons(DEFAULT_COLOR)
 size_buttons, size_active = full_dropdown_buttons(DEFAULT_SIZE)
 color_meta = metric_meta[DEFAULT_COLOR]
 
+
+def color_values_for(metric):
+    """marker.color values for `metric` — log10-transformed when its
+    metric_meta marks it log_color (see LOG_COLOR_METRICS), matching
+    coloraxis.cmin/cmax which are in the same log space."""
+    values = metric_values[metric]
+    if not metric_meta[metric].get("log_color"):
+        return values
+    return [math.log10(v) if v is not None and v > 0 else None for v in values]
+
 # All four dropdowns share an identical button list (full_dropdown_buttons()
 # always returns the same buttons, just a different active index) — so one
 # metric->button-index lookup covers all of them. Needed so external preset
@@ -300,7 +350,7 @@ fig = go.Figure(
                 "sizemode": "area",
                 "sizeref": size_data[DEFAULT_SIZE]["sizeref"],
                 "sizemin": 3,
-                "color": metric_values[DEFAULT_COLOR],
+                "color": color_values_for(DEFAULT_COLOR),
                 "coloraxis": "coloraxis",
                 "line": {"width": 0.5, "color": "#666"},
                 "opacity": 0.8,
@@ -318,7 +368,13 @@ fig.update_layout(
         "colorscale": color_meta["colorscale"],
         "cmin": color_meta["cmin"],
         "cmax": color_meta["cmax"],
-        "colorbar": {"title": {"text": color_meta["title"]}, "xpad": 30},
+        "colorbar": {
+            "title": {"text": color_meta["title"]},
+            "xpad": 30,
+            "tickmode": "array" if color_meta.get("tickvals") else "auto",
+            "tickvals": color_meta.get("tickvals", []),
+            "ticktext": color_meta.get("ticktext", []),
+        },
     },
     # Two dropdowns per row (X/Y, then Color/Size) — each box auto-sizes to
     # ~250px (driven by the longest metric label), which doesn't reliably
@@ -369,6 +425,19 @@ function valuesFor(metric) {{
 
 function sizeFor(metric) {{
     return (TIME_SIZE[metric] && TIME_SIZE[metric][currentYear]) || SIZE_DATA[metric];
+}}
+
+// Housing metrics are heavily right-skewed, so their coloraxis is shown on
+// a log scale (cmin/cmax and colorbar.tickvals in METRIC_META are already
+// in log space for these) — the marker.color values fed in need the same
+// log10 transform applied.
+function toColorValues(metric, values) {{
+    if (!METRIC_META[metric].log_color) return values;
+    return values.map(function (v) {{ return (v === null || v === undefined || v <= 0) ? null : Math.log10(v); }});
+}}
+
+function colorValuesFor(metric) {{
+    return toColorValues(metric, valuesFor(metric));
 }}
 
 // Sync X/Y axis limits + y=x*(1+pct) reference lines — toggled from outside
@@ -439,12 +508,15 @@ function applyAxis(which, metric, fromWidgetClick) {{
             return Plotly.relayout(gd, {{'yaxis.title.text': meta.title, 'yaxis.tickformat': meta.pct ? '.0%' : '', 'yaxis.range': meta.range, 'yaxis.autorange': false}});
         }});
     }} else if (which === 'color') {{
-        p = Plotly.restyle(gd, {{'marker.color': [valuesFor(metric)]}}, [0]).then(function () {{
+        p = Plotly.restyle(gd, {{'marker.color': [colorValuesFor(metric)]}}, [0]).then(function () {{
             return Plotly.relayout(gd, {{
                 'coloraxis.colorscale': meta.colorscale,
                 'coloraxis.cmin': meta.cmin,
                 'coloraxis.cmax': meta.cmax,
                 'coloraxis.colorbar.title.text': meta.title,
+                'coloraxis.colorbar.tickmode': meta.tickvals ? 'array' : 'auto',
+                'coloraxis.colorbar.tickvals': meta.tickvals || [],
+                'coloraxis.colorbar.ticktext': meta.ticktext || [],
             }});
         }});
     }} else if (which === 'size') {{
@@ -490,7 +562,7 @@ window.setPreset = function (x, y, color, size) {{
     Plotly.restyle(gd, {{
         x: [valuesFor(x)],
         y: [valuesFor(y)],
-        'marker.color': [valuesFor(color)],
+        'marker.color': [colorValuesFor(color)],
         'marker.size': [sd.sizes],
         'marker.sizeref': sd.sizeref,
     }}, [0]).then(function () {{
@@ -507,6 +579,9 @@ window.setPreset = function (x, y, color, size) {{
             'coloraxis.cmin': colorMeta.cmin,
             'coloraxis.cmax': colorMeta.cmax,
             'coloraxis.colorbar.title.text': colorMeta.title,
+            'coloraxis.colorbar.tickmode': colorMeta.tickvals ? 'array' : 'auto',
+            'coloraxis.colorbar.tickvals': colorMeta.tickvals || [],
+            'coloraxis.colorbar.ticktext': colorMeta.ticktext || [],
         }};
         patch['updatemenus[' + MENU_INDEX.x + '].active'] = METRIC_TO_INDEX[x];
         patch['updatemenus[' + MENU_INDEX.y + '].active'] = METRIC_TO_INDEX[y];
@@ -531,7 +606,7 @@ window.setYear = function (yr) {{
     var restyle = {{}};
     if (TIME_VALUES[currentMetric.x] && TIME_VALUES[currentMetric.x][yr]) restyle.x = [TIME_VALUES[currentMetric.x][yr]];
     if (TIME_VALUES[currentMetric.y] && TIME_VALUES[currentMetric.y][yr]) restyle.y = [TIME_VALUES[currentMetric.y][yr]];
-    if (TIME_VALUES[currentMetric.color] && TIME_VALUES[currentMetric.color][yr]) restyle['marker.color'] = [TIME_VALUES[currentMetric.color][yr]];
+    if (TIME_VALUES[currentMetric.color] && TIME_VALUES[currentMetric.color][yr]) restyle['marker.color'] = [toColorValues(currentMetric.color, TIME_VALUES[currentMetric.color][yr])];
     if (TIME_SIZE[currentMetric.size] && TIME_SIZE[currentMetric.size][yr]) {{
         var sd = TIME_SIZE[currentMetric.size][yr];
         restyle['marker.size'] = [sd.sizes];
