@@ -66,7 +66,7 @@ HOVER_LABELS = {
     "pop_40_44": "Pop 40-44",
     "pop_45_49": "Pop 45-49",
     "house_price": "House price",
-    "affordability_ratio": "Afford ratio",
+    "affordability_ratio": "Afford rat.",
 }
 LABEL_WIDTH = 11
 COL_WIDTH = 8
