@@ -38,7 +38,9 @@ In the 20-24 and 25-29 age groups, the sharpest declines in fertility (drops lar
 :::
 ::::
 
-Areas with higher fertility rates in these cohorts also tend to have lower average house prices.
+# Housing
+
+High housing costs correlate with lower fertility rates. This is most clearly seen when looking at 25-29 year olds. This correlation is also seen in the 20-24 age bracket, though university students distort this as they have much lower fertility rates, brining down the fertility in university towns and cities. In the 35-39 age bracket this trend reverses, however the ASFRs in the expensive areas are low (approx 80) compared to the highs (approx 120) seen in cheaper areas in other age brackets. The population of 35-39 year olds in these areas is lower than 25-29 year olds resulting in some of the lowest overall fertility rates in the country.
 
 ::::{tab-set}
 
@@ -71,6 +73,16 @@ Areas with higher fertility rates in these cohorts also tend to have lower avera
 ```
 :::
 ::::
+
+The resolution foundation's report https://www.resolutionfoundation.org/publications/bye-bye-baby/ https://www.resolutionfoundation.org/app/uploads/2026/03/Bye-bye-baby.pdf has a few interesting points. 
+
+also 
+
+why does fig6 show increasing childlessness 2012 onwards, but comparatively static cohabitation ratios in fig7?
+how can housing costs be a driver, if they've risen in tandem with wage increases? ditto proportions are relatively constant since 2010s
+why isn't there a drop in second births if house prices are an issue?
+
+
 
 ```{scatter-controls}
 ```
