@@ -55,9 +55,27 @@ for year in years:
         if record:
             data[year][code] = record
 
+# Same "% change vs 2013" convention as parse_csv.py's ASFR rel2013 fields:
+# (value - baseline) / baseline, stored as a fraction (e.g. -0.15 for -15%).
+BASELINE_YEAR = "2013"
+METRIC_KEYS = ["house_price", "affordability_ratio"]
+REL_METRIC_KEYS = [f"{k}_rel2013" for k in METRIC_KEYS]
+baseline_year_data = data.get(BASELINE_YEAR, {})
+for year, rows in data.items():
+    for code, record in rows.items():
+        baseline_record = baseline_year_data.get(code)
+        for metric, rel_key in zip(METRIC_KEYS, REL_METRIC_KEYS):
+            value = record.get(metric)
+            baseline = baseline_record.get(metric) if baseline_record else None
+            if value is None or baseline is None or baseline == 0:
+                record[rel_key] = None
+            else:
+                record[rel_key] = (value - baseline) / baseline
+
 out = {
     "years": years,
-    "metrics": ["house_price", "affordability_ratio"],
+    "metrics": METRIC_KEYS + REL_METRIC_KEYS,
+    "baseline_year": BASELINE_YEAR,
     "lad_names": lad_names,
     "data": data,
 }

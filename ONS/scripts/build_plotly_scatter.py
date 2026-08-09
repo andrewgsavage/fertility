@@ -28,16 +28,36 @@ HOUSING_LABELS = {
     "affordability_ratio": "Housing affordability ratio",
 }
 HOUSING_ORDER = list(HOUSING_LABELS)
-# Both are heavily right-skewed (a handful of prime-London LADs sit far
-# above the rest), which saturates a linear color scale — shown on a log
-# scale instead so mid-range variation stays visible.
-LOG_COLOR_METRICS = set(HOUSING_ORDER)
 
 BASE_YEAR = "2013"
 BASE_YEAR_ORDER = [f"{k}_{BASE_YEAR}" for k in ASFR_BASE_KEYS]
 BASE_YEAR_LABELS = {f"{k}_{BASE_YEAR}": f"{METRIC_LABELS[k]} ({BASE_YEAR})" for k in ASFR_BASE_KEYS}
 
-ALL_LABELS = {**METRIC_LABELS, **POPULATION_LABELS, **HOUSING_LABELS, **BASE_YEAR_LABELS}
+# "% change since 2013" and "(2013)" baseline groups for the housing
+# metrics — same shape as REL_METRIC_ORDER/BASE_YEAR_ORDER above for ASFR,
+# reading the housing_by_lad.json fields parse_housing_csv.py computes the
+# same way parse_csv.py computes ASFR's rel2013 fields.
+HOUSING_REL_ORDER = [f"{k}_rel2013" for k in HOUSING_ORDER]
+HOUSING_REL_LABELS = {f"{k}_rel2013": f"{HOUSING_LABELS[k]} — change vs {BASE_YEAR}" for k in HOUSING_ORDER}
+HOUSING_BASE_YEAR_ORDER = [f"{k}_{BASE_YEAR}" for k in HOUSING_ORDER]
+HOUSING_BASE_YEAR_LABELS = {f"{k}_{BASE_YEAR}": f"{HOUSING_LABELS[k]} ({BASE_YEAR})" for k in HOUSING_ORDER}
+DIVERGING_METRICS = DIVERGING_METRICS | set(HOUSING_REL_ORDER)
+
+# Housing levels are heavily right-skewed (a handful of prime-London LADs
+# sit far above the rest), which saturates a linear color scale — shown on
+# a log scale instead so mid-range variation stays visible. The 2013
+# baseline levels are just as skewed; the % change metrics aren't (they
+# use the same fixed diverging range as ASFR's change-vs-2013 group).
+LOG_COLOR_METRICS = set(HOUSING_ORDER) | set(HOUSING_BASE_YEAR_ORDER)
+
+ALL_LABELS = {
+    **METRIC_LABELS,
+    **POPULATION_LABELS,
+    **HOUSING_LABELS,
+    **BASE_YEAR_LABELS,
+    **HOUSING_REL_LABELS,
+    **HOUSING_BASE_YEAR_LABELS,
+}
 
 DEFAULT_X = "mean_age_mother"
 DEFAULT_Y = "tfr"
@@ -143,7 +163,20 @@ def full_dropdown_buttons(default_metric):
     housing_buttons = [{"label": "— Housing —", "method": "skip", "args": [None]}] + [
         {"label": HOUSING_LABELS[m], "method": "skip", "args": [m]} for m in HOUSING_ORDER
     ]
-    buttons = fert_buttons + base_year_buttons + pop_buttons + housing_buttons
+    housing_rel_buttons = [{"label": f"— Housing change since {BASE_YEAR} —", "method": "skip", "args": [None]}] + [
+        {"label": HOUSING_REL_LABELS[m], "method": "skip", "args": [m]} for m in HOUSING_REL_ORDER
+    ]
+    housing_base_year_buttons = [{"label": f"— Housing in {BASE_YEAR} —", "method": "skip", "args": [None]}] + [
+        {"label": HOUSING_BASE_YEAR_LABELS[m], "method": "skip", "args": [m]} for m in HOUSING_BASE_YEAR_ORDER
+    ]
+    buttons = (
+        fert_buttons
+        + base_year_buttons
+        + pop_buttons
+        + housing_buttons
+        + housing_rel_buttons
+        + housing_base_year_buttons
+    )
     active = next(i for i, b in enumerate(buttons) if b["args"][0] == default_metric)
     return buttons, active
 
@@ -191,18 +224,21 @@ for metric in POPULATION_ORDER:
     pooled = sorted(v for v in values if v is not None)
     metric_meta[metric] = {"colorscale": SEQ_COLORSCALE, "cmin": pooled[0], "cmax": pooled[-1], "title": POPULATION_LABELS[metric], "pct": False}
 
-for metric in HOUSING_ORDER:
+for metric in HOUSING_ORDER + HOUSING_REL_ORDER:
     values = [housing_year_rows.get(code, {}).get(metric) for code in codes]
     metric_values[metric] = values
     pooled = sorted(v for v in values if v is not None)
-    metric_meta[metric] = {
-        "colorscale": SEQ_COLORSCALE,
-        "cmin": pooled[0],
-        "cmax": pooled[-1],
-        "title": HOUSING_LABELS[metric],
-        "pct": False,
-        "log_color": True,
-    }
+    if metric in DIVERGING_METRICS:
+        metric_meta[metric] = {"colorscale": DIV_COLORSCALE, "cmin": -DIV_RANGE, "cmax": DIV_RANGE, "title": HOUSING_REL_LABELS[metric], "pct": True}
+    else:
+        metric_meta[metric] = {
+            "colorscale": SEQ_COLORSCALE,
+            "cmin": pooled[0],
+            "cmax": pooled[-1],
+            "title": HOUSING_LABELS[metric],
+            "pct": False,
+            "log_color": True,
+        }
 
 base_year_rows = fertility["data"].get(BASE_YEAR, {})
 for base_key, metric in zip(ASFR_BASE_KEYS, BASE_YEAR_ORDER):
@@ -210,6 +246,20 @@ for base_key, metric in zip(ASFR_BASE_KEYS, BASE_YEAR_ORDER):
     metric_values[metric] = values
     pooled = sorted(v for v in values if v is not None)
     metric_meta[metric] = {"colorscale": SEQ_COLORSCALE, "cmin": pooled[0], "cmax": pooled[-1], "title": BASE_YEAR_LABELS[metric], "pct": False}
+
+housing_2013_rows = housing["data"].get(BASE_YEAR, {})
+for housing_key, metric in zip(HOUSING_ORDER, HOUSING_BASE_YEAR_ORDER):
+    values = [housing_2013_rows.get(code, {}).get(housing_key) for code in codes]
+    metric_values[metric] = values
+    pooled = sorted(v for v in values if v is not None)
+    metric_meta[metric] = {
+        "colorscale": SEQ_COLORSCALE,
+        "cmin": pooled[0],
+        "cmax": pooled[-1],
+        "title": HOUSING_BASE_YEAR_LABELS[metric],
+        "pct": False,
+        "log_color": True,
+    }
 
 # size_data[metric] = {sizes, sizeref} for every selectable metric — marker
 # size can't be negative or null, so this clamps/substitutes those to 0
