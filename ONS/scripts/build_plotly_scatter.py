@@ -4,11 +4,14 @@ import math
 import plotly.graph_objects as go
 
 from metrics import (
+    ASFR_BASE_KEYS,
     DIV_COLORSCALE,
     DIV_RANGE,
     DIVERGING_METRICS,
     METRIC_LABELS,
     METRIC_ORDER,
+    POPULATION_LABELS,
+    POPULATION_ORDER,
     REL_METRIC_ORDER,
     SEQ_COLORSCALE,
     decimals_for,
@@ -19,18 +22,6 @@ FERTILITY_IN = "outputs/fertility_by_lad.json"
 POPULATION_IN = "outputs/population_by_lad.json"
 HOUSING_IN = "outputs/housing_by_lad.json"
 OUTPUT = "outputs/scatter_plotly.html"
-
-POPULATION_LABELS = {
-    "pop_total": "Female population (total)",
-    "pop_15_19": "Female population 15-19",
-    "pop_20_24": "Female population 20-24",
-    "pop_25_29": "Female population 25-29",
-    "pop_30_34": "Female population 30-34",
-    "pop_35_39": "Female population 35-39",
-    "pop_40_44": "Female population 40-44",
-    "pop_45_49": "Female population 45-49",
-}
-POPULATION_ORDER = list(POPULATION_LABELS)
 
 HOUSING_LABELS = {
     "house_price": "Average house price",
@@ -43,7 +34,6 @@ HOUSING_ORDER = list(HOUSING_LABELS)
 LOG_COLOR_METRICS = set(HOUSING_ORDER)
 
 BASE_YEAR = "2013"
-ASFR_BASE_KEYS = [m[: -len("_rel2013")] for m in REL_METRIC_ORDER]
 BASE_YEAR_ORDER = [f"{k}_{BASE_YEAR}" for k in ASFR_BASE_KEYS]
 BASE_YEAR_LABELS = {f"{k}_{BASE_YEAR}": f"{METRIC_LABELS[k]} ({BASE_YEAR})" for k in ASFR_BASE_KEYS}
 
@@ -75,6 +65,8 @@ HOVER_LABELS = {
     "pop_35_39": "Pop 35-39",
     "pop_40_44": "Pop 40-44",
     "pop_45_49": "Pop 45-49",
+    "house_price": "House price",
+    "affordability_ratio": "Afford ratio",
 }
 LABEL_WIDTH = 11
 COL_WIDTH = 8
@@ -113,6 +105,11 @@ def format_tick(metric, value):
 def hover_cell(metric, value):
     if value is None:
         return "n/a"
+    if metric == "house_price":
+        # Abbreviated (not the full comma-grouped number) so it fits the
+        # hover table's fixed-width columns without crowding the adjacent
+        # year's value.
+        return f"£{value / 1e6:.2f}M" if value >= 1_000_000 else f"£{value / 1e3:.0f}k"
     if metric == "live_births" or metric.startswith("pop_"):
         return f"{value:,.0f}"
     return f"{value:.{decimals_for(metric)}f}"
@@ -315,6 +312,7 @@ for metric, meta in metric_meta.items():
 def hover_record(code, hover_year):
     record = dict(fertility["data"].get(hover_year, {}).get(code, {}))
     record.update(population["data"].get(hover_year, {}).get(code, {}))
+    record.update(housing["data"].get(hover_year, {}).get(code, {}))
     return record
 
 

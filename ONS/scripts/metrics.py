@@ -35,6 +35,20 @@ REL_METRIC_ORDER = [
     "asfr_30_34_rel2013", "asfr_35_39_rel2013", "asfr_40_44_rel2013", "asfr_45plus_rel2013",
 ]
 DIVERGING_METRICS = set(REL_METRIC_ORDER)
+# The raw ASFR level each REL_METRIC_ORDER entry is a % change of.
+ASFR_BASE_KEYS = [m[: -len("_rel2013")] for m in REL_METRIC_ORDER]
+
+POPULATION_LABELS = {
+    "pop_total": "Female population (total)",
+    "pop_15_19": "Female population 15-19",
+    "pop_20_24": "Female population 20-24",
+    "pop_25_29": "Female population 25-29",
+    "pop_30_34": "Female population 30-34",
+    "pop_35_39": "Female population 35-39",
+    "pop_40_44": "Female population 40-44",
+    "pop_45_49": "Female population 45-49",
+}
+POPULATION_ORDER = list(POPULATION_LABELS)
 
 SEQ_COLORSCALE = [[0, "#cde2fb"], [1, "#0d366b"]]
 DIV_COLORSCALE = [[0, "#0d366b"], [0.5, "#f0efec"], [1, "#c1302f"]]
