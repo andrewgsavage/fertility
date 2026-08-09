@@ -284,6 +284,14 @@ for metric, meta in metric_meta.items():
     lo, hi = pooled[0], pooled[-1]
     pad = (hi - lo) * 0.05 or (abs(hi) * 0.05 if hi else 1)
     meta["range"] = [lo - pad, hi + pad]
+    if metric in LOG_COLOR_METRICS:
+        # Plotly log axes take their "range" in log10 space (range: [a, b]
+        # actually spans 10**a..10**b) — a separate field so the linear
+        # "range" above still works unchanged for metrics that aren't
+        # shown on a log axis.
+        log_lo, log_hi = math.log10(lo), math.log10(hi)
+        log_pad = (log_hi - log_lo) * 0.05 or 0.05
+        meta["log_range"] = [log_lo - log_pad, log_hi + log_pad]
 
 
 def wrap_title(text, width=18):
@@ -380,11 +388,26 @@ fig = go.Figure(
     ]
 )
 
+def axis_layout(metric):
+    """xaxis/yaxis layout dict for `metric` — log-scale metrics (see
+    LOG_COLOR_METRICS) get axis type "log" with their range in log10
+    space (Plotly's requirement for log axes), everything else linear."""
+    meta = metric_meta[metric]
+    layout = {"title": {"text": meta["title"]}, "tickformat": ".0%" if meta["pct"] else "", "autorange": False}
+    if meta.get("log_color"):
+        layout["type"] = "log"
+        layout["range"] = meta["log_range"]
+    else:
+        layout["type"] = "linear"
+        layout["range"] = meta["range"]
+    return layout
+
+
 fig.update_layout(
     margin={"r": 10, "t": 160, "l": 60, "b": 60},
     autosize=True,
-    xaxis={"title": {"text": ALL_LABELS[DEFAULT_X]}, "tickformat": ".0%" if metric_meta[DEFAULT_X]["pct"] else "", "range": metric_meta[DEFAULT_X]["range"], "autorange": False},
-    yaxis={"title": {"text": ALL_LABELS[DEFAULT_Y]}, "tickformat": ".0%" if metric_meta[DEFAULT_Y]["pct"] else "", "range": metric_meta[DEFAULT_Y]["range"], "autorange": False},
+    xaxis=axis_layout(DEFAULT_X),
+    yaxis=axis_layout(DEFAULT_Y),
     coloraxis={
         "colorscale": color_meta["colorscale"],
         "cmin": color_meta["cmin"],
@@ -474,6 +497,10 @@ function applySync() {{
     // control just like the un-synced axes used to before that was fixed.
     var xMeta = METRIC_META[currentMetric.x], yMeta = METRIC_META[currentMetric.y];
     if (!xMeta.range || !yMeta.range) return;
+    // The y=x*(1+pct) reference lines and combined-range math below only
+    // make sense on linear axes — skip syncing (leave each axis on its
+    // own fixed range) if either side is log-scale.
+    if (xMeta.log_color || yMeta.log_color) return;
     var rangeLo = Math.min(xMeta.range[0], yMeta.range[0]);
     var rangeHi = Math.max(xMeta.range[1], yMeta.range[1]);
     var shapes = REF_LINE_PCTS.map(function (pct) {{
@@ -504,8 +531,12 @@ function applySync() {{
 function clearSync() {{
     var xMeta = METRIC_META[currentMetric.x], yMeta = METRIC_META[currentMetric.y];
     Plotly.relayout(gd, {{
-        'xaxis.range': xMeta.range, 'xaxis.autorange': false,
-        'yaxis.range': yMeta.range, 'yaxis.autorange': false,
+        'xaxis.type': xMeta.log_color ? 'log' : 'linear',
+        'xaxis.range': xMeta.log_color ? xMeta.log_range : xMeta.range,
+        'xaxis.autorange': false,
+        'yaxis.type': yMeta.log_color ? 'log' : 'linear',
+        'yaxis.range': yMeta.log_color ? yMeta.log_range : yMeta.range,
+        'yaxis.autorange': false,
         shapes: [], annotations: BASE_ANNOTATIONS,
     }});
 }}
@@ -522,11 +553,21 @@ function applyAxis(which, metric, fromWidgetClick) {{
     var p;
     if (which === 'x') {{
         p = Plotly.restyle(gd, {{x: [valuesFor(metric)]}}, [0]).then(function () {{
-            return Plotly.relayout(gd, {{'xaxis.title.text': meta.title, 'xaxis.tickformat': meta.pct ? '.0%' : '', 'xaxis.range': meta.range, 'xaxis.autorange': false}});
+            return Plotly.relayout(gd, {{
+                'xaxis.title.text': meta.title, 'xaxis.tickformat': meta.pct ? '.0%' : '',
+                'xaxis.type': meta.log_color ? 'log' : 'linear',
+                'xaxis.range': meta.log_color ? meta.log_range : meta.range,
+                'xaxis.autorange': false,
+            }});
         }});
     }} else if (which === 'y') {{
         p = Plotly.restyle(gd, {{y: [valuesFor(metric)]}}, [0]).then(function () {{
-            return Plotly.relayout(gd, {{'yaxis.title.text': meta.title, 'yaxis.tickformat': meta.pct ? '.0%' : '', 'yaxis.range': meta.range, 'yaxis.autorange': false}});
+            return Plotly.relayout(gd, {{
+                'yaxis.title.text': meta.title, 'yaxis.tickformat': meta.pct ? '.0%' : '',
+                'yaxis.type': meta.log_color ? 'log' : 'linear',
+                'yaxis.range': meta.log_color ? meta.log_range : meta.range,
+                'yaxis.autorange': false,
+            }});
         }});
     }} else if (which === 'color') {{
         p = Plotly.restyle(gd, {{'marker.color': [colorValuesFor(metric)]}}, [0]).then(function () {{
@@ -590,11 +631,13 @@ window.setPreset = function (x, y, color, size) {{
         var patch = {{
             'xaxis.title.text': xMeta.title,
             'xaxis.tickformat': xMeta.pct ? '.0%' : '',
-            'xaxis.range': xMeta.range,
+            'xaxis.type': xMeta.log_color ? 'log' : 'linear',
+            'xaxis.range': xMeta.log_color ? xMeta.log_range : xMeta.range,
             'xaxis.autorange': false,
             'yaxis.title.text': yMeta.title,
             'yaxis.tickformat': yMeta.pct ? '.0%' : '',
-            'yaxis.range': yMeta.range,
+            'yaxis.type': yMeta.log_color ? 'log' : 'linear',
+            'yaxis.range': yMeta.log_color ? yMeta.log_range : yMeta.range,
             'yaxis.autorange': false,
             'coloraxis.colorscale': colorMeta.colorscale,
             'coloraxis.cmin': colorMeta.cmin,
