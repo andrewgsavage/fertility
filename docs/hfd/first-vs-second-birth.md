@@ -25,9 +25,8 @@ England and Wales", Table 3 (percentage of women by number of live-born children
 age and year of birth). Available at
 [ons.gov.uk](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/datasets/childbearingforwomenbornindifferentyearsreferencetable).
 
-HFD has no conditional-ASFR tables for the UK, so the UK column in the Western Europe
-tab is reconstructed from this data: at each age, the conditional (parity-progression)
+HFD has limited data for the UK, so the UK data is reconstructed from this data: at each age, the conditional (parity-progression)
 rate is estimated as a discrete hazard on the cumulative % of the cohort with at least
 1 / at least 2 children, then re-sliced from cohort into period (calendar) year to
-match HFD's chart convention. See `ONS/scripts/cond_asfr_uk_ons.py`.
+match HFD's chart convention.
 ```

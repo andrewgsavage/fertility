@@ -60,16 +60,19 @@ COUNTRY_NAMES = {
 # own groups, separate from non-communist countries, even where that breaks
 # from pure geography (e.g. Iberia is split out from the Balkans). The
 # Baltic states are the exception — grouped with the Nordics rather than
-# Eastern Europe, matching how they're commonly discussed together
-# (Nordic-Baltic cooperation) despite their Soviet-era history.
+# Central Europe, matching how they're commonly discussed together
+# (Nordic-Baltic cooperation) despite their Soviet-era history. Austria and
+# Switzerland are grouped with Central Europe rather than Western Europe,
+# for the same "discussed together" reasoning, despite not being
+# former-communist themselves.
 COUNTRY_REGIONS = {
     # Non-Europe
     "Americas & East Asia": ["CAN", "USA", "CHL", "JPN", "KOR", "TWN"],
     # Non-communist, plus the Baltics
     "Nordic & Baltic": ["DNK", "FIN", "NOR", "SWE", "EST", "LTU"],
-    "Western Europe": ["BEL", "IRL", "NLD", "AUT", "CHE", "ESP", "PRT", "UK_ONS"],
-    # Former communist
-    "Eastern Europe": ["CZE", "HUN", "SVN", "BGR", "HRV"],
+    "Western Europe": ["BEL", "IRL", "NLD", "ESP", "PRT", "UK_ONS"],
+    # Former communist, plus Austria and Switzerland
+    "Central Europe": ["AUT", "CHE", "CZE", "HUN", "SVN", "BGR", "HRV"],
 }
 
 _CODE_TO_REGION = {code: region for region, codes in COUNTRY_REGIONS.items() for code in codes}
