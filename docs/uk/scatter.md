@@ -74,7 +74,7 @@ High housing costs correlate with lower fertility rates. This is most clearly se
 :::
 ::::
 
-The resolution foundation's report https://www.resolutionfoundation.org/publications/bye-bye-baby/ https://www.resolutionfoundation.org/app/uploads/2026/03/Bye-bye-baby.pdf has a few interesting points. 
+The Resolution Foundation's report [Bye Bye Baby](https://www.resolutionfoundation.org/publications/bye-bye-baby/) ([PDF](https://www.resolutionfoundation.org/app/uploads/2026/03/Bye-bye-baby.pdf)) has a few interesting points. 
 
 also 
 
