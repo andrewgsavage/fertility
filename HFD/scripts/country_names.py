@@ -41,6 +41,11 @@ COUNTRY_NAMES = {
     "TWN": "Taiwan",
     "UKR": "Ukraine",
     "USA": "United States",
+    # Not an HFD code — a conditional-ASFR reconstruction from ONS cohort
+    # data injected into the mi.txt-derived dataframe by
+    # cond_asfr_region_grid.py (see its load_data()), since HFD itself has
+    # no conditional-ASFR tables for the UK.
+    "UK_ONS": "England & Wales",
 }
 
 
@@ -48,19 +53,26 @@ COUNTRY_NAMES = {
 # in the conditional ASFR source data (data/HFD/mi.txt). Codes in
 # COUNTRY_NAMES that aren't in that file (e.g. ITA, the GBR_* variants,
 # DEUTW/DEUTNP) are omitted here, as are DEUTE (Germany, East), RUS, BLR, UKR,
-# SVK, POL, and ISL.
+# SVK, POL, and ISL. UK_ONS is the one exception — it's not in mi.txt either,
+# but cond_asfr_region_grid.py injects it separately (see load_data()).
 #
 # Former-communist countries (Eastern Bloc / Yugoslavia) are kept in their
 # own groups, separate from non-communist countries, even where that breaks
-# from pure geography (e.g. Iberia is split out from the Balkans).
+# from pure geography (e.g. Iberia is split out from the Balkans). The
+# Baltic states are the exception — grouped with the Nordics rather than
+# Central Europe, matching how they're commonly discussed together
+# (Nordic-Baltic cooperation) despite their Soviet-era history. Austria and
+# Switzerland are grouped with Central Europe rather than Western Europe,
+# for the same "discussed together" reasoning, despite not being
+# former-communist themselves.
 COUNTRY_REGIONS = {
     # Non-Europe
     "Americas & East Asia": ["CAN", "USA", "CHL", "JPN", "KOR", "TWN"],
-    # Non-communist
-    "Nordic": ["DNK", "FIN", "NOR", "SWE"],
-    "Western Europe": ["BEL", "IRL", "NLD", "AUT", "CHE", "ESP", "PRT"],
-    # Former communist
-    "Eastern Europe": ["EST", "LTU", "CZE", "HUN", "SVN", "BGR", "HRV"],
+    # Non-communist, plus the Baltics
+    "Nordic & Baltic": ["DNK", "FIN", "NOR", "SWE", "EST", "LTU"],
+    "Western Europe": ["BEL", "IRL", "NLD", "ESP", "PRT", "UK_ONS"],
+    # Former communist, plus Austria and Switzerland
+    "Central Europe": ["AUT", "CHE", "CZE", "HUN", "SVN", "BGR", "HRV"],
 }
 
 _CODE_TO_REGION = {code: region for region, codes in COUNTRY_REGIONS.items() for code in codes}

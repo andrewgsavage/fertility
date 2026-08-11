@@ -1,4 +1,6 @@
 import io
+import pathlib
+import sys
 
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -6,6 +8,13 @@ from matplotlib.ticker import FixedLocator, FuncFormatter, MultipleLocator, Perc
 from PIL import Image
 
 from country_names import COUNTRY_REGIONS, country_title
+
+_REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
+_ONS_SCRIPTS = _REPO_ROOT / "ONS" / "scripts"
+if str(_ONS_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_ONS_SCRIPTS))
+
+from cond_asfr_uk_ons import load_period_rates  # noqa: E402
 
 SHARED_YLIM = (0, 0.25)
 Y_TICKS = [0.00, 0.05, 0.10, 0.15, 0.20, 0.25]
@@ -26,6 +35,18 @@ def load_data():
     )
     df["age"] = df["age"].astype(str).str.replace("-", "", regex=False).str.replace("+", "", regex=False).astype(int)
     df = df[df["year"] >= 2005]
+
+    # HFD has no conditional-ASFR tables for the UK — reconstruct it from
+    # ONS cohort data and inject as one more "code" so it behaves exactly
+    # like an HFD country everywhere else in this script (country_title,
+    # per-column plotting, canvas sizing).
+    by_period = load_period_rates()
+    uk_rows = [
+        {"code": "UK_ONS", "year": year, "age": age, "m1x": c1, "m2x": c2}
+        for year, ages in by_period.items()
+        for age, (c1, c2) in ages.items()
+    ]
+    df = pd.concat([df, pd.DataFrame(uk_rows)], ignore_index=True)
     return df
 
 

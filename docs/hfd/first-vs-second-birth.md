@@ -15,6 +15,18 @@ Factors that make it less likely for people to form couples, or factors that mak
 
 ```{note}
 HFD. Human Fertility Database. Max Planck Institute for Demographic Research (Germany)
-and Vienna Institute of Demography (Austria). Available at www.humanfertility.org.
+and Vienna Institute of Demography (Austria). Available at [www.humanfertility.org](https://www.humanfertility.org/).
 Data downloaded on 2026-07-13.
+```
+
+```{note}
+Office for National Statistics, "Childbearing for women born in different years,
+England and Wales", Table 3 (percentage of women by number of live-born children, by
+age and year of birth). Available at
+[ons.gov.uk](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/datasets/childbearingforwomenbornindifferentyearsreferencetable).
+
+HFD has limited data for the UK, so the UK data is reconstructed from this data: at each age, the conditional (parity-progression)
+rate is estimated as a discrete hazard on the cumulative % of the cohort with at least
+1 / at least 2 children, then re-sliced from cohort into period (calendar) year to
+match HFD's chart convention.
 ```
