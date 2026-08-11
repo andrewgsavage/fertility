@@ -32,6 +32,8 @@ from plotly.subplots import make_subplots
 _SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
 SOURCE = _SCRIPT_DIR.parent / "data" / "finalisingcohorttables2024finalforupload.xlsx"
 OUTPUT = "outputs/cond_asfr_uk_ons.html"
+COHORT_OUTPUT = "outputs/cond_asfr_uk_ons_cohort.html"
+CUMULATIVE_OUTPUT = "outputs/cond_asfr_uk_ons_cumulative.html"
 MIN_PERIOD_YEAR = 2005
 
 
@@ -86,65 +88,102 @@ def to_period(rates, min_period_year):
     return by_period
 
 
-def plot(by_period):
-    """Returns (fig, trace_years): trace_years[i] is the period year of
-    fig.data[i], or None for traces (e.g. the colorbar dummy) that should
-    stay visible regardless of any year filter applied to the figure.
+def plot(
+    by_period,
+    group_label="Year",
+    title="Conditional (parity-progression) ASFR, England & Wales — derived from ONS cohort table 3",
+    subplot_titles=("First birth", "Second birth"),
+    y_title="Conditional ASFR (%)",
+    y_range=(0, 25),
+    value_scale=100,
+):
+    """Returns (fig, trace_groups): trace_groups[i] is the group key (period
+    year, or cohort — see plot_cohort()) of fig.data[i], or None for traces
+    (e.g. the colorbar dummy) that should stay visible regardless of any
+    range filter applied to the figure. value_scale multiplies the raw
+    values before plotting — 100 for the hazard rates (stored as 0-1
+    fractions), 1 for the cumulative P1/P2 values (already 0-100 percentages
+    in ONS's table).
     """
-    period_years = sorted(by_period)
-    cmap_min, cmap_max = min(period_years), max(period_years)
-    trace_years = []
+    groups = sorted(by_period)
+    cmap_min, cmap_max = min(groups), max(groups)
+    trace_groups = []
 
-    fig = make_subplots(rows=1, cols=2, subplot_titles=("First birth", "Second birth"))
+    fig = make_subplots(rows=1, cols=2, subplot_titles=subplot_titles)
 
-    for period_year in period_years:
-        ages = sorted(by_period[period_year])
-        cond1 = [by_period[period_year][a][0] for a in ages]
-        cond2 = [by_period[period_year][a][1] for a in ages]
-        color = _year_color(period_year, cmap_min, cmap_max)
+    for group in groups:
+        ages = sorted(by_period[group])
+        v1 = [by_period[group][a][0] for a in ages]
+        v2 = [by_period[group][a][1] for a in ages]
+        color = _year_color(group, cmap_min, cmap_max)
         fig.add_trace(
             go.Scatter(
-                x=ages, y=[c * 100 if c is not None else None for c in cond1],
+                x=ages, y=[v * value_scale if v is not None else None for v in v1],
                 mode="lines", line=dict(width=1, color=color),
-                name=str(period_year), legendgroup=str(period_year), showlegend=False,
-                hovertemplate=f"Year {period_year}<br>Age %{{x}}<br>%{{y:.1f}}%<extra></extra>",
+                name=str(group), legendgroup=str(group), showlegend=False,
+                hovertemplate=f"{group_label} {group}<br>Age %{{x}}<br>%{{y:.1f}}%<extra></extra>",
             ),
             row=1, col=1,
         )
         fig.add_trace(
             go.Scatter(
-                x=ages, y=[c * 100 if c is not None else None for c in cond2],
+                x=ages, y=[v * value_scale if v is not None else None for v in v2],
                 mode="lines", line=dict(width=1, color=color),
-                name=str(period_year), legendgroup=str(period_year), showlegend=False,
-                hovertemplate=f"Year {period_year}<br>Age %{{x}}<br>%{{y:.1f}}%<extra></extra>",
+                name=str(group), legendgroup=str(group), showlegend=False,
+                hovertemplate=f"{group_label} {group}<br>Age %{{x}}<br>%{{y:.1f}}%<extra></extra>",
             ),
             row=1, col=2,
         )
-        trace_years.extend([period_year, period_year])
+        trace_groups.extend([group, group])
 
-    # Dummy trace to show a colorbar for period year.
+    # Dummy trace to show a colorbar for the group axis.
     fig.add_trace(
         go.Scatter(
             x=[None], y=[None], mode="markers",
             marker=dict(
                 colorscale="Turbo", cmin=cmap_min, cmax=cmap_max,
                 color=[cmap_min], showscale=True,
-                colorbar=dict(title="Year"),
+                colorbar=dict(title=group_label),
             ),
             showlegend=False,
         ),
         row=1, col=2,
     )
-    trace_years.append(None)
+    trace_groups.append(None)
 
     fig.update_xaxes(title_text="Age", range=[20, 45])
-    fig.update_yaxes(title_text="Conditional ASFR (%)", range=[0, 25])
-    fig.update_layout(
-        title="Conditional (parity-progression) ASFR, England & Wales — derived from ONS cohort table 3",
-        template="plotly_white",
-        height=550,
+    fig.update_yaxes(title_text=y_title, range=list(y_range))
+    fig.update_layout(title=title, template="plotly_white", autosize=True)
+    return fig, trace_groups
+
+
+def plot_cohort(by_cohort_rates):
+    """Same chart as plot(), colored/grouped by birth cohort instead of
+    period year — uses conditional_rates()'s cohort-indexed output
+    directly (no to_period() reslicing), since the hazard is naturally
+    computed along each cohort in the first place."""
+    return plot(
+        by_cohort_rates,
+        group_label="Cohort",
+        title="Conditional (parity-progression) ASFR, England & Wales — by birth cohort, derived from ONS cohort table 3",
     )
-    return fig, trace_years
+
+
+def plot_cumulative_cohort(by_cohort_cumulative):
+    """Cumulative % of the cohort with >=1 / >=2 children by age (P1/P2 —
+    the raw ONS table values, before differencing into the conditional
+    hazard that plot_cohort() shows) — colored by birth cohort, using
+    load_table3()'s cohort-indexed output directly (no reslicing needed,
+    same as plot_cohort())."""
+    return plot(
+        by_cohort_cumulative,
+        group_label="Cohort",
+        title="Cumulative % with 1+ / 2+ children by age, England & Wales — by birth cohort, ONS cohort table 3",
+        subplot_titles=("Cumulative first births", "Cumulative second births"),
+        y_title="Cumulative %",
+        y_range=(0, 100),
+        value_scale=1,
+    )
 
 
 def _year_color(year, ymin, ymax):
@@ -161,73 +200,66 @@ def load_period_rates(min_period_year=MIN_PERIOD_YEAR):
     return to_period(rates, min_period_year)
 
 
-SLIDER_POST_SCRIPT = """
+def load_cohort_cumulative():
+    """{cohort: {age: (P1, P2)}} — the cumulative % of the cohort with
+    >=1 / >=2 children, i.e. load_table3()'s raw values directly (already
+    cohort-indexed, like load_cohort_rates()). For plot_cumulative_cohort().
+    """
+    return load_table3()
+
+
+def load_cohort_rates():
+    """{cohort: {age: (cond1, cond2)}} — the cohort-indexed counterpart to
+    load_period_rates(), for plot_cohort()."""
+    by_cohort = load_table3()
+    return conditional_rates(by_cohort)
+
+
+# No in-iframe UI — the range control lives in the containing docs page
+# (outside the iframe, see docs/uk/cond-asfr.md / later-births.md) so one
+# control can drive several of these charts at once. This just exposes the
+# filtering itself as window.setRange(lo, hi) for that external control to
+# call via each iframe's contentWindow.
+RANGE_POST_SCRIPT = """
 var gd = document.getElementById('{plot_id}');
-var traceYears = __TRACE_YEARS__;
-var yearMin = __YEAR_MIN__, yearMax = __YEAR_MAX__;
-
-var panel = document.createElement('div');
-panel.style.cssText = 'max-width:1100px;margin:8px auto;font-family:sans-serif;font-size:14px;';
-panel.innerHTML =
-    '<span id="asfr-year-label">' + yearMin + '–' + yearMax + '</span> ' +
-    '<div style="position:relative;height:32px;">' +
-    '<input id="asfr-min" type="range" min="' + yearMin + '" max="' + yearMax + '" value="' + yearMin + '" ' +
-    'style="position:absolute;width:100%;pointer-events:none;">' +
-    '<input id="asfr-max" type="range" min="' + yearMin + '" max="' + yearMax + '" value="' + yearMax + '" ' +
-    'style="position:absolute;width:100%;pointer-events:none;">' +
-    '</div>';
-gd.parentNode.insertBefore(panel, gd);
-
-// Two overlaid native range inputs (thumbs only clickable) is the
-// lightest-weight way to get a min/max dual slider without a JS
-// dependency, matching this project's self-contained-HTML convention.
-var style = document.createElement('style');
-style.textContent = '#asfr-min::-webkit-slider-thumb, #asfr-max::-webkit-slider-thumb { pointer-events: auto; }' +
-    '#asfr-min::-moz-range-thumb, #asfr-max::-moz-range-thumb { pointer-events: auto; }';
-document.head.appendChild(style);
-
-var minInput = document.getElementById('asfr-min');
-var maxInput = document.getElementById('asfr-max');
-var label = document.getElementById('asfr-year-label');
-
-function applyFilter() {
-    var lo = Math.min(parseInt(minInput.value), parseInt(maxInput.value));
-    var hi = Math.max(parseInt(minInput.value), parseInt(maxInput.value));
-    var visible = traceYears.map(function(y) { return y === null ? true : (y >= lo && y <= hi); });
+var traceGroups = __TRACE_GROUPS__;
+window.setRange = function (lo, hi) {
+    var visible = traceGroups.map(function (g) { return g === null ? true : (g >= lo && g <= hi); });
     Plotly.restyle(gd, {visible: visible});
-    label.textContent = lo + '–' + hi;
-}
-
-minInput.addEventListener('input', applyFilter);
-maxInput.addEventListener('input', applyFilter);
+};
 """
 
 
-if __name__ == "__main__":
-    by_period = load_period_rates(min_period_year=0)
-    fig, trace_years = plot(by_period)
-
-    years_present = [y for y in trace_years if y is not None]
-    post_script = (
-        SLIDER_POST_SCRIPT
-        .replace("__TRACE_YEARS__", json.dumps(trace_years))
-        .replace("__YEAR_MIN__", str(min(years_present)))
-        .replace("__YEAR_MAX__", str(max(years_present)))
-    )
-    # Width only (not height) is responsive here: the year-slider panel the
-    # post_script inserts above the plot has its own fixed height, and
-    # letting the plot ALSO stretch to height:100% of its container (the
-    # pattern used in build_plotly_map.py/build_plotly_scatter.py) creates
-    # a feedback loop — body's content (panel + a plot trying to fill 100%
-    # of that same body) ends up taller than the container, causing
-    # vertical scroll. Fixed layout.height (set in plot()) avoids that;
-    # the containing page's iframe is sized in fixed pixels to match.
+def _write_range_chart(fig, trace_groups, output_path):
+    post_script = RANGE_POST_SCRIPT.replace("__TRACE_GROUPS__", json.dumps(trace_groups))
     fig.write_html(
-        OUTPUT,
+        output_path,
         include_plotlyjs="cdn",
         full_html=True,
         post_script=post_script,
         default_width="100%",
+        default_height="100%",
+        config={"responsive": True},
     )
+    # write_html's own template doesn't stretch <html>/<body> to fill the
+    # iframe — without an external UI panel pushing content down (unlike
+    # before), height:100% now works the same way build_plotly_map.py uses
+    # it. See that script for the fuller explanation.
+    html = open(output_path, "r", encoding="utf-8").read()
+    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
+    open(output_path, "w", encoding="utf-8").write(html)
+    print(f"Saved {output_path}")
 
-    print(f"Saved {OUTPUT}")
+
+if __name__ == "__main__":
+    by_period = load_period_rates(min_period_year=0)
+    fig, trace_groups = plot(by_period)
+    _write_range_chart(fig, trace_groups, OUTPUT)
+
+    by_cohort = load_cohort_rates()
+    fig_cohort, trace_groups_cohort = plot_cohort(by_cohort)
+    _write_range_chart(fig_cohort, trace_groups_cohort, COHORT_OUTPUT)
+
+    by_cohort_cumulative = load_cohort_cumulative()
+    fig_cumulative, trace_groups_cumulative = plot_cumulative_cohort(by_cohort_cumulative)
+    _write_range_chart(fig_cumulative, trace_groups_cumulative, CUMULATIVE_OUTPUT)

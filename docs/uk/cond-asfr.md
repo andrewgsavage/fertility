@@ -2,10 +2,43 @@
 
 The [First vs Second Birth](../hfd/first-vs-second-birth) page compares the conditional age specific fertility rate (ASFR) — the probability a woman has her next child in a given year — for first and second births across countries, including a UK column reconstructed from ONS cohort data (HFD itself has no conditional-ASFR tables for the UK).
 
-This page shows that same UK reconstruction on its own, with every available year plotted and a slider to narrow the range shown.
+This page shows that same UK reconstruction on its own, colored by period (calendar) year, with every available year plotted and a slider to narrow the range shown. See [Later Births](later-births) for the same chart colored by birth cohort instead, alongside the underlying cumulative data.
 
 ```{raw} html
-<iframe src="../_static/ons/cond_asfr_uk_ons.html" style="width: 100%; height: 620px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<style>
+  .range-slider-wrap { position: relative; height: 32px; max-width: 500px; }
+  .range-slider-wrap input[type="range"] { position: absolute; width: 100%; pointer-events: none; }
+  .range-slider-wrap input[type="range"]::-webkit-slider-thumb { pointer-events: auto; }
+  .range-slider-wrap input[type="range"]::-moz-range-thumb { pointer-events: auto; }
+</style>
+<p>
+  <label style="font: inherit;">
+    Year: <b id="cond-asfr-range-label">1941–2025</b>
+    <div class="range-slider-wrap">
+      <input id="cond-asfr-min" type="range" min="1941" max="2025" value="1941">
+      <input id="cond-asfr-max" type="range" min="1941" max="2025" value="2025">
+    </div>
+  </label>
+</p>
+<iframe id="cond-asfr-frame" src="../_static/ons/cond_asfr_uk_ons.html" style="width: 100%; aspect-ratio: 11 / 6; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<script>
+  (function () {
+    var minInput = document.getElementById("cond-asfr-min");
+    var maxInput = document.getElementById("cond-asfr-max");
+    var label = document.getElementById("cond-asfr-range-label");
+
+    function applyRange() {
+      var lo = Math.min(parseInt(minInput.value), parseInt(maxInput.value));
+      var hi = Math.max(parseInt(minInput.value), parseInt(maxInput.value));
+      label.textContent = lo + "–" + hi;
+      var win = document.getElementById("cond-asfr-frame").contentWindow;
+      if (win && win.setRange) win.setRange(lo, hi);
+    }
+
+    minInput.addEventListener("input", applyRange);
+    maxInput.addEventListener("input", applyRange);
+  })();
+</script>
 ```
 
 ```{note}
