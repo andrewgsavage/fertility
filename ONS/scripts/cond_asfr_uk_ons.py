@@ -10,10 +10,14 @@ At each exact age, the conditional rate is estimated as a discrete hazard:
 where P1/P2 are cumulative % of the cohort with >=1 / >=2 children.
 
 Plotted lines are period years (calendar year the transition occurred:
-cohort + age), filtered to MIN_PERIOD_YEAR onwards, matching HFD's chart
-convention even though the hazard itself is computed along each cohort.
+cohort + age). The standalone HTML output is unfiltered — a pair of
+min/max range-slider inputs in the page let the viewer restrict which
+years are shown client-side, via Plotly.restyle on trace visibility.
+load_period_rates()'s own MIN_PERIOD_YEAR default (used by callers like
+HFD/scripts/cond_asfr_region_grid.py) is unchanged.
 """
 
+import json
 import pathlib
 
 import openpyxl
@@ -83,8 +87,13 @@ def to_period(rates, min_period_year):
 
 
 def plot(by_period):
+    """Returns (fig, trace_years): trace_years[i] is the period year of
+    fig.data[i], or None for traces (e.g. the colorbar dummy) that should
+    stay visible regardless of any year filter applied to the figure.
+    """
     period_years = sorted(by_period)
     cmap_min, cmap_max = min(period_years), max(period_years)
+    trace_years = []
 
     fig = make_subplots(rows=1, cols=2, subplot_titles=("First birth", "Second birth"))
 
@@ -111,6 +120,7 @@ def plot(by_period):
             ),
             row=1, col=2,
         )
+        trace_years.extend([period_year, period_year])
 
     # Dummy trace to show a colorbar for period year.
     fig.add_trace(
@@ -125,6 +135,7 @@ def plot(by_period):
         ),
         row=1, col=2,
     )
+    trace_years.append(None)
 
     fig.update_xaxes(title_text="Age", range=[20, 45])
     fig.update_yaxes(title_text="Conditional ASFR (%)", range=[0, 25])
@@ -133,7 +144,7 @@ def plot(by_period):
         template="plotly_white",
         width=1100, height=550,
     )
-    return fig
+    return fig, trace_years
 
 
 def _year_color(year, ymin, ymax):
@@ -150,8 +161,58 @@ def load_period_rates(min_period_year=MIN_PERIOD_YEAR):
     return to_period(rates, min_period_year)
 
 
+SLIDER_POST_SCRIPT = """
+var gd = document.getElementById('{plot_id}');
+var traceYears = __TRACE_YEARS__;
+var yearMin = __YEAR_MIN__, yearMax = __YEAR_MAX__;
+
+var panel = document.createElement('div');
+panel.style.cssText = 'max-width:1100px;margin:8px auto;font-family:sans-serif;font-size:14px;';
+panel.innerHTML =
+    '<span id="asfr-year-label">' + yearMin + '–' + yearMax + '</span> ' +
+    '<div style="position:relative;height:32px;">' +
+    '<input id="asfr-min" type="range" min="' + yearMin + '" max="' + yearMax + '" value="' + yearMin + '" ' +
+    'style="position:absolute;width:100%;pointer-events:none;">' +
+    '<input id="asfr-max" type="range" min="' + yearMin + '" max="' + yearMax + '" value="' + yearMax + '" ' +
+    'style="position:absolute;width:100%;pointer-events:none;">' +
+    '</div>';
+gd.parentNode.insertBefore(panel, gd);
+
+// Two overlaid native range inputs (thumbs only clickable) is the
+// lightest-weight way to get a min/max dual slider without a JS
+// dependency, matching this project's self-contained-HTML convention.
+var style = document.createElement('style');
+style.textContent = '#asfr-min::-webkit-slider-thumb, #asfr-max::-webkit-slider-thumb { pointer-events: auto; }' +
+    '#asfr-min::-moz-range-thumb, #asfr-max::-moz-range-thumb { pointer-events: auto; }';
+document.head.appendChild(style);
+
+var minInput = document.getElementById('asfr-min');
+var maxInput = document.getElementById('asfr-max');
+var label = document.getElementById('asfr-year-label');
+
+function applyFilter() {
+    var lo = Math.min(parseInt(minInput.value), parseInt(maxInput.value));
+    var hi = Math.max(parseInt(minInput.value), parseInt(maxInput.value));
+    var visible = traceYears.map(function(y) { return y === null ? true : (y >= lo && y <= hi); });
+    Plotly.restyle(gd, {visible: visible});
+    label.textContent = lo + '–' + hi;
+}
+
+minInput.addEventListener('input', applyFilter);
+maxInput.addEventListener('input', applyFilter);
+"""
+
+
 if __name__ == "__main__":
-    by_period = load_period_rates()
-    fig = plot(by_period)
-    fig.write_html(OUTPUT, include_plotlyjs="cdn")
+    by_period = load_period_rates(min_period_year=0)
+    fig, trace_years = plot(by_period)
+
+    years_present = [y for y in trace_years if y is not None]
+    post_script = (
+        SLIDER_POST_SCRIPT
+        .replace("__TRACE_YEARS__", json.dumps(trace_years))
+        .replace("__YEAR_MIN__", str(min(years_present)))
+        .replace("__YEAR_MAX__", str(max(years_present)))
+    )
+    fig.write_html(OUTPUT, include_plotlyjs="cdn", full_html=True, post_script=post_script)
     print(f"Saved {OUTPUT}")
