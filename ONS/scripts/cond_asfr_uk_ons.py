@@ -142,7 +142,7 @@ def plot(by_period):
     fig.update_layout(
         title="Conditional (parity-progression) ASFR, England & Wales — derived from ONS cohort table 3",
         template="plotly_white",
-        width=1100, height=550,
+        height=550,
     )
     return fig, trace_years
 
@@ -214,5 +214,20 @@ if __name__ == "__main__":
         .replace("__YEAR_MIN__", str(min(years_present)))
         .replace("__YEAR_MAX__", str(max(years_present)))
     )
-    fig.write_html(OUTPUT, include_plotlyjs="cdn", full_html=True, post_script=post_script)
+    # Width only (not height) is responsive here: the year-slider panel the
+    # post_script inserts above the plot has its own fixed height, and
+    # letting the plot ALSO stretch to height:100% of its container (the
+    # pattern used in build_plotly_map.py/build_plotly_scatter.py) creates
+    # a feedback loop — body's content (panel + a plot trying to fill 100%
+    # of that same body) ends up taller than the container, causing
+    # vertical scroll. Fixed layout.height (set in plot()) avoids that;
+    # the containing page's iframe is sized in fixed pixels to match.
+    fig.write_html(
+        OUTPUT,
+        include_plotlyjs="cdn",
+        full_html=True,
+        post_script=post_script,
+        default_width="100%",
+    )
+
     print(f"Saved {OUTPUT}")
