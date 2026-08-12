@@ -6,4 +6,7 @@
 
 fertility-map
 scatter
+cond-asfr
+later-births
+historic-trends
 ```
