@@ -1,24 +1,71 @@
 # Projections
 
-The ONS 2018-based national population projections set future fertility assumptions by combining recent trends in UK fertility with advice from a panel of academic experts. Quotes below are taken directly from ONS, ["National population projections: fertility assumptions, 2018-based"](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/methodologies/nationalpopulationprojectionsfertilityassumptions2018based).
+Every few years ONS resets its future fertility assumptions, combining recent trends with advice from a panel of academic experts. Quotes below are taken directly from each round's ONS methodology document, one tab per projection round, starting from the expert panel's short-term view onwards (recent-trends recaps and framing text are omitted).
 
-## Recent trends in fertility
+::::{tab-set}
 
-> The UK total fertility rate has been declining since 2012.
+:::{tab-item} 2024-based
 
-> Following declines in the 1990s, fertility rates hit an all-time low in 2001 at a TFR of 1.63. The TFR then increased until 2008, reaching 1.91 children per woman, the highest rate since 1974. Between 2008 and 2012, the TFR fluctuated slightly but remained fairly stable at around 1.90. In 2013, there was a substantial drop in the UK TFR to 1.83 (the largest single-year change since 1975). The TFR then continued to fall each year reaching 1.68 in 2018 (declining from 1.74 in 2017), the largest single-year change since 2013.
+### Expected future fertility
 
-> Fertility rates have generally been rising for women aged 30 years and over and declining for women aged under 30 years in recent years.
+> Following expert opinion based on data up to 2024, we agreed the following target rates and trends:
+>
+> - 1.38 TFR in the short term (2029) and 1.40 in the long term (2049) at the UK level
+> - that fertility may decrease in the short term, as women delay having children, followed by a rise from the late 2020s and early 2030s, reflecting an expected recuperation in fertility as women have children at older ages
+> - that age-specific fertility rates (ASFRs) for women under 30 years would decrease in the short and long term
+> - that ASFRs for women aged 30 years and over would increase in both the short and long term
+> - that the differences in the TFR of each country, compared with the UK TFR for 2029 and 2049, should remain broadly similar to the differences experienced in 2024
 
-> Since 2016, all age groups, except women aged over 40 years, have seen decreases in fertility rates. Women aged over 40 years have continued to have higher age-specific fertility rates than those aged under 20 years.
+### Underlying factors that may influence future fertility
 
-> The UK mean age of childbearing has continued to rise in recent years, from 27.3 years in 1985 to 29.1 years in 2005. Since then, it has increased even faster, to 30.5 years in 2017, with a further increase to 30.6 years in 2018.
+> We also asked the fertility experts their views on the impact of several factors on future levels of fertility. They suggested that:
+>
+> - the cost-of-living crisis will reduce period fertility in the short term
+> - climate change will either have a negligible impact on fertility or may reduce fertility, resulting in reduced completed family size (CFS) in the long term
+> - changes to childcare funding will have a limited impact in the short term
+> - conflicts put a downward pressure on fertility or have a negligible effect
+> - assisted reproductive technology may have a limited positive impact at the oldest ages, but overall impact may be negligible
+> - international migration patterns may influence future fertility levels
 
-## Expert views on future fertility
+### Resulting assumption
 
-> In March 2019, five academic experts working in the field of fertility were asked for their views on UK fertility trends over the next 25 years, via a questionnaire. This was followed by the national population projections (NPPs) expert advisory panel discussion in April 2019, which three of the five experts attended, accompanied by three other demographic experts who did not complete the questionnaire but who contributed to discussions on the current and emerging trends in fertility.
+> We have set the UK principal total fertility rate (TFR) for the 2024-based round of projections as 1.38 children in the short term, at five years from the base year, in 2029. Rising from the short-term rate, we have set the principal TFR to 1.42 children in the long term, at 25 years from the base year, in 2049.
 
-> There is considerable uncertainty around future trends in fertility, and longer-term trends are impossible to predict. This section provides a summary of the expert advisory panel's views on future fertility, which may not be representative of the views of others.
+:::
+
+:::{tab-item} 2022-based
+
+### Expected future fertility
+
+> Our initial desired goals, following expert opinion based on data up to 2022, were:
+>
+> - to aim for 1.46 TFR in the short-term (2027) and for 1.50 in the long-term (2047) at the UK level
+> - that fertility may decline in the short term as women delay having children, followed by a rise from the late 2020s/early 2030s, reflecting an expected recuperation in fertility as women have children at older ages
+> - that completed family sizes (CFSs) for the 1980 and 1985 cohorts will exceed CFS levels of the 1965, 1970, and 1975 cohorts
+> - that age-specific fertility rates (ASFRs) for age groups under 20 years would decline in the short term and stabilise in the long term
+> - that ASFRs for women in their 20s would decline in the short and long term
+> - that ASFRs for women aged 30 to 34 years would remain stable throughout the projection
+> - that ASFRs for women aged 35 years and over would increase in both the short and long term
+> - that the differences in the TFR of each country, compared with the UK TFR for 2027 and 2047, should remain broadly similar to the differences experienced in 2022
+
+### Underlying factors that may influence future fertility
+
+> We also asked the fertility experts on their views on the impact of several factors on future levels of fertility. They suggested that:
+>
+> - the cost-of-living crisis will reduce period fertility in the short term
+> - climate change will either have a negligible impact on fertility or may reduce fertility, resulting in reduced CFS in the long term
+> - change to childcare funding will have a limited impact in the short term
+> - conflicts put a downwards pressure on fertility or have a negligible effect
+> - there will be minimal or no further impact on fertility levels because of the COVID-19 pandemic in the future
+> - international migration patterns may influence future fertility levels
+
+### Resulting assumption
+
+> We have set the UK principal total fertility rate (TFR) for the 2022-based round of projections as 1.41 children in the short-term at five years from the base year in 2027 and as 1.45 children in the long term at 25 years from the base year in 2047. The short-term figure is below the 2022 UK TFR of 1.48 children. This is because we have accounted for the latest TFR data for 2023, which show a marked decline from 2022.
+
+:::
+
+:::{tab-item} 2018-based
 
 ### Short term, to 2022
 
@@ -62,7 +109,7 @@ Other forces experts identified as important drivers of family size over the nex
 
 > As the majority of forces identified are likely to reduce fertility over the next 25 years, this justified reducing the long-term fertility assumption.
 
-## Resulting assumptions
+### Resulting assumptions
 
 > - the long-term total fertility rate (TFR) and completed family size (CFS) to be lower than the 2016-based projections at around 1.78
 > - the TFR to decline in the short term but then rise in the long term
@@ -73,7 +120,70 @@ Other forces experts identified as important drivers of family size over the nex
 
 > Recent trends and expert opinion justified a reduction in the long-term assumption for each country compared with the 2016-based projections.
 
+:::
+
+:::{tab-item} 2016-based
+
+### Long-term UK fertility level
+
+> The experts were asked for their views on the most likely level of the TFR in 2040. Their TFR predictions ranged from 1.60 to 1.90. The predictions fell into three groups, with two experts predicting between 1.60 and 1.65, three predicting 1.80 and three experts predicting between 1.86 and 1.90.
+
+> The average TFR predicted for 2040 was 1.79, which is substantially below the average predictions from the previous projection round (1.83 in the 2014 based projections).
+
+> On average, experts believed that there was a 67% chance of the TFR in 2040 lying between 1.63 and 1.96, and a 95% chance of it lying between 1.52 and 2.09, a smaller confidence interval than in the 2014-based round of projections.
+
+> There was a general consensus among the experts that the long term assumption of 1.89 in the 2014-based assumptions should be lowered.
+
+### Short-term UK fertility trend
+
+> The experts reached a broad consensus that the short-term trend was likely to be fairly stable or subject to a small decrease, with continued decreases in teenage fertility, accompanied by continued increases in fertility for women aged 40 and over.
+
+> Forecasted TFRs for 2020 ranged from 1.70 to 1.82. The mean was 1.78, a lower prediction than in the 2010, 2012 and 2014-based projection rounds.
+
+> On average, experts believed that there was a 67% chance of the TFR lying between 1.67 and 1.94 in 2020, and a 95% chance of it lying between 1.63 and 1.95.
+
+### Underlying forces that may influence future fertility
+
+> The force "changes in population composition and differential trends in population" showed a good degree of consensus among the experts with the majority thinking that this factor would have a small upwards effect on fertility rates. The expectation was that advances in "assisted reproductive technologies" would have a small upward effect on fertility rates in older women, and assist women in meeting their desired family size.
+
+> The majority of experts felt that "trends in patterns of education and work (including the proportion of time dedicated to the professional side of life)" would have little effect or a small downward effect on fertility, but there was discussion about whether saturation level had been reached in the UK for further education.
+
+> Experts felt that housing shortages and costs, economic (including employment) uncertainties, political change, migration policy, the UK leaving the European Union, social media and interpersonal interaction and the gender division of domestic work were also factors that could affect UK fertility in the long term. They agreed that quantifying the impact of these factors would be challenging.
+
+### Resulting assumption
+
+> ONS is of the view that the collective opinions of the experts (predicting lower levels of fertility) and continued current low levels of period fertility are the current strongest factors for setting the long-term assumptions. This leads ONS to recommend that the long-term TFR assumption be decreased to 1.85 for the UK, on the strength of the collective expert opinions, coupled with continued low levels of period fertility currently.
+
+:::
+
+:::{tab-item} 2014-based
+
+### Expert input
+
+> Our review prior to the 2014-based projections proposed maintaining the assumptions in line with the following arguments:
+>
+> - the expert panel cautioned against frequent changes of long-term assumption, stating that stability is desired by users
+> - four (of nine) of the expert panel predicted a long-term total fertility rate (TFR) of between 1.90 and 1.93
+
+:::
+
+:::{tab-item} 2012-based
+
+### Expert input
+
+> The NPP advisory panel was asked their views on the likely level of fertility in 2036. Six out of seven experts thought that the UK TFR would be between 1.80 and 2.00 in 2036, with four of the experts feeling it would be between 1.90 and 2.00. This suggests that experts believe fertility is likely to maintain its current period level in the long-term.
+
+:::
+
+::::
+
 ```{note}
-Office for National Statistics, "National population projections: fertility assumptions, 2018-based" (published 2019, updated with 2018 data). Available at
-[ons.gov.uk](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/methodologies/nationalpopulationprojectionsfertilityassumptions2018based).
+Office for National Statistics (ONS), fertility assumptions for the UK national population projections, by round:
+
+- 2024-based: ["National population projections, fertility assumptions: 2024-based"](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/methodologies/nationalpopulationprojectionsfertilityassumptions2024based)
+- 2022-based: ["National population projections, fertility assumptions: 2022-based"](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/methodologies/nationalpopulationprojectionsfertilityassumptions2022based)
+- 2018-based: ["National population projections: fertility assumptions, 2018-based"](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/methodologies/nationalpopulationprojectionsfertilityassumptions2018based)
+- 2016-based: ["2016-based national population projections: fertility"](https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationprojections/methodologies/2016basednationalpopulationprojectionsconsultationpapers/2016nppfertilityassumptions.pdf), NPP(17)2 consultation paper, June 2017
+- 2014-based: ["Fertility, 2014-based national population projections reference volume"](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/compendium/nationalpopulationprojections/2014basedreferencevolumeseriespp2/chapter3fertility2014basednationalpopulationprojectionsreferencevolume)
+- 2012-based: ["Fertility, 2012-based NPP Reference Volume"](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/compendium/nationalpopulationprojections/2014-03-28/chapter3fertility2012basednppreferencevolume)
 ```
