@@ -142,12 +142,20 @@ def build_figure():
             marker=dict(
                 colorscale="Turbo", cmin=CAXIS_MIN, cmax=CAXIS_MAX,
                 color=[CAXIS_MIN], showscale=True,
+                # Inset into the chart itself, spanning between where data
+                # point (age=40, y=23) falls in the ASFR panel (left edge)
+                # and where the same (40, 23) falls in the Cond. 1st panel
+                # (right edge) — both empty regions of their own curves,
+                # computed from each panel's actual xaxis domain/range
+                # (colorbar x/y is whole-figure "paper" fraction, not
+                # data-relative, so this converts data coords -> paper
+                # coords by hand for each panel's own domain).
                 colorbar=dict(
                     title=dict(text="Cohort", side="top"),
                     orientation="h",
-                    x=0.5, xanchor="center",
-                    y=1.05, yanchor="bottom",
-                    len=0.4, thickness=12,
+                    x=0.1667, xanchor="left",
+                    y=0.92, yanchor="middle",
+                    len=0.1933, thickness=10,
                 ),
             ),
             showlegend=False,
@@ -189,7 +197,7 @@ def build_figure():
     fig.update_layout(
         template="plotly_white",
         autosize=True,
-        margin=dict(t=70, r=60, l=50, b=40),
+        margin=dict(t=30, r=60, l=50, b=40),
     )
     return fig, trace_groups
 
