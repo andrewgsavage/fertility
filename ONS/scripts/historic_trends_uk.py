@@ -39,7 +39,7 @@ PANELS = [
     ("Cum. ≥2", "pct100"),
 ]
 Y_GROUP_RANGE = {"pct25": (0, 25), "pct100": (0, 100)}
-Y_GROUP_TITLE = {"pct25": "%", "pct100": "Cumulative %"}
+Y_GROUP_TITLE = {"pct25": "ASFR %", "pct100": "Cumulative %"}
 # pct25 anchors its visible axis (title/ticks) on its first column, on the
 # left edge of the whole row; pct100 anchors on its LAST column instead, on
 # the right edge — so with horizontal_spacing=0 (panels flush against each
@@ -170,7 +170,11 @@ def build_figure():
     }
 
     for col, (_, group) in enumerate(PANELS, start=1):
-        fig.update_xaxes(title_text="Age", range=[15, 45], row=1, col=col)
+        # Matches each source chart's own age range: the plain-ASFR panel
+        # (HFD/scripts/asfr_uk.py) starts at 15, the conditional/cumulative
+        # panels (ONS/scripts/cond_asfr_uk_ons.py) start at 20.
+        age_min = 15 if col == 1 else 20
+        fig.update_xaxes(title_text="Age", range=[age_min, 45], row=1, col=col)
         anchor_col = anchor_col_for_group[group]
         if col == anchor_col:
             fig.update_yaxes(
@@ -183,10 +187,9 @@ def build_figure():
             fig.update_yaxes(matches=anchor_axis, showticklabels=False, row=1, col=col)
 
     fig.update_layout(
-        title="Historic UK fertility trends by birth cohort, England & Wales",
         template="plotly_white",
         autosize=True,
-        margin=dict(t=140, r=60),
+        margin=dict(t=90, r=60, l=50, b=40),
     )
     return fig, trace_groups
 
