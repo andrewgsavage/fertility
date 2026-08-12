@@ -21,15 +21,19 @@ Every few years ONS resets its future fertility assumptions, combining recent tr
 <tr><td>2022-based</td><td>1.48</td><td>1.46</td><td>−0.02</td><td>2027</td><td>1.50</td><td>2047</td></tr>
 <tr><td>2018-based</td><td>1.68</td><td>1.70</td><td>+0.02</td><td>2022</td><td>1.77</td><td>2042</td></tr>
 <tr><td>2016-based</td><td>1.79</td><td>1.78</td><td>−0.01</td><td>2020</td><td>1.79</td><td>2040</td></tr>
-<tr><td>2014-based</td><td>1.82</td><td>—</td><td>—</td><td>—</td><td>1.90–1.93*</td><td></td></tr>
+<tr><td>2014-based</td><td>1.82</td><td>—</td><td>—</td><td>—</td><td>1.90–1.93*</td><td>2038</td></tr>
 <tr><td>2012-based</td><td>1.92</td><td>—</td><td>—</td><td>—</td><td>1.80–2.00*</td><td>2036</td></tr>
 </tbody>
 </table>
 ```
 
-\* Where experts gave a range rather than a single mean, the range is shown as reported. 2012- and 2014-based methodology publishes no quantified short-term expert prediction.
+\* Experts gave a range. 2012- and 2014-based methodology publishes no quantified short-term expert prediction.
 
 ::::{tab-set}
+
+:::{tab-item} Hide
+
+:::
 
 :::{tab-item} 2024-based
 
