@@ -33,6 +33,8 @@ Every few years ONS resets its future fertility assumptions, combining recent tr
 
 :::{tab-item} Hide
 
+&nbsp;
+
 :::
 
 :::{tab-item} 2024-based
