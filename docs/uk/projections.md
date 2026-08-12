@@ -29,6 +29,26 @@ Every few years ONS resets its future fertility assumptions, combining recent tr
 
 \* Experts gave a range. 2012- and 2014-based methodology publishes no quantified short-term expert prediction.
 
+## Comparing rounds
+
+Each round's own chart(s) of actual-and-assumed TFR, completed family size (CFS), and age-specific fertility rate (ASFR), pulled from ONS's chart data (the "Download as csv" link on each figure) and overlaid here — one line per round — to show how the projected trajectory has shifted from round to round rather than reading six separate ONS charts side by side.
+
+```{raw} html
+<iframe src="../_static/ons/projections_tfr.html" style="width: 100%; aspect-ratio: 16 / 9; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+
+```{raw} html
+<iframe src="../_static/ons/projections_cfs.html" style="width: 100%; aspect-ratio: 16 / 9; height: auto; display: block; border: 1px solid var(--color-background-border); margin-top: 8px;" loading="lazy"></iframe>
+```
+
+```{raw} html
+<iframe src="../_static/ons/projections_asfr.html" style="width: 100%; aspect-ratio: 16 / 9; height: auto; display: block; border: 1px solid var(--color-background-border); margin-top: 8px;" loading="lazy"></iframe>
+```
+
+```{note}
+Chart data downloaded from each round's own ONS chart (see `ONS/scripts/projections_comparison.py`): 2012/2014/2016/2018-based from that round's own actual-and-assumed TFR/CFS chart; 2022/2024-based TFR from ONS's own multi-round comparison chart (that round's own column only); 2018/2022/2024-based ASFR from that round's own assumed-ASFR-by-age chart. CFS and ASFR aren't available in this form for 2022/2024- and 2012/2014/2016-based respectively.
+```
+
 ::::{tab-set}
 
 :::{tab-item} Hide
@@ -208,7 +228,8 @@ Other forces experts identified as important drivers of family size over the nex
 
 :::
 
-::::
+:::{tab-item} References
+
 
 ```{note}
 Office for National Statistics (ONS), fertility assumptions for the UK national population projections, by round:
@@ -220,3 +241,11 @@ Office for National Statistics (ONS), fertility assumptions for the UK national 
 - 2014-based: ["Fertility, 2014-based national population projections reference volume"](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/compendium/nationalpopulationprojections/2014basedreferencevolumeseriespp2/chapter3fertility2014basednationalpopulationprojectionsreferencevolume)
 - 2012-based: ["Fertility, 2012-based NPP Reference Volume"](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/compendium/nationalpopulationprojections/2014-03-28/chapter3fertility2012basednppreferencevolume)
 ```
+
+:::
+
+
+
+::::
+
+
