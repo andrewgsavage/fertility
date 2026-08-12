@@ -7,55 +7,48 @@ Every few years ONS resets its future fertility assumptions, combining recent tr
 
 * - Round
   - Base year
-  -
+  - Δ short term
   - Short term
   -
-  - Δ short term
   - Long term
   -
 * -
   - Value
-  - Year
+  -
   - Value
   - Year
-  -
   - Value
   - Year
 * - 2024-based
   - 1.40
-  - 2024
+  - −0.02
   - 1.38
   - 2029
-  - −0.02
   - 1.40
   - 2049
 * - 2022-based
   - 1.48
-  - 2022
+  - −0.02
   - 1.46
   - 2027
-  - −0.02
   - 1.50
   - 2047
 * - 2018-based
   - 1.68
-  - 2018
+  - +0.02
   - 1.70
   - 2022
-  - +0.02
   - 1.77
   - 2042
 * - 2016-based
   - 1.79
-  - 2016
+  - −0.01
   - 1.78
   - 2020
-  - −0.01
   - 1.79
   - 2040
 * - 2014-based
   - 1.82
-  - 2014
   - —
   - —
   - —
@@ -63,7 +56,6 @@ Every few years ONS resets its future fertility assumptions, combining recent tr
   -
 * - 2012-based
   - 1.92
-  - 2012
   - —
   - —
   - —
