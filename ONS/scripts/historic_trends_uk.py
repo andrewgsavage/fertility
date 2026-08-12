@@ -146,7 +146,7 @@ def build_figure():
                     title=dict(text="Cohort", side="top"),
                     orientation="h",
                     x=0.5, xanchor="center",
-                    y=1.2, yanchor="bottom",
+                    y=1.05, yanchor="bottom",
                     len=0.4, thickness=12,
                 ),
             ),
@@ -189,7 +189,7 @@ def build_figure():
     fig.update_layout(
         template="plotly_white",
         autosize=True,
-        margin=dict(t=90, r=60, l=50, b=40),
+        margin=dict(t=70, r=60, l=50, b=40),
     )
     return fig, trace_groups
 
