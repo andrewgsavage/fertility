@@ -54,7 +54,7 @@ Every few years ONS resets its future fertility assumptions, combining recent tr
   - 1.79
   - 2040
 * - 2014-based
-  - 1.80†
+  - 1.82
   - 2014
   - —
   - —
@@ -62,7 +62,7 @@ Every few years ONS resets its future fertility assumptions, combining recent tr
   - 1.90–1.93*
   -
 * - 2012-based
-  - 1.91†
+  - 1.92
   - 2012
   - —
   - —
@@ -72,7 +72,6 @@ Every few years ONS resets its future fertility assumptions, combining recent tr
 ```
 
 \* Where experts gave a range rather than a single mean, the range is shown as reported. 2012- and 2014-based methodology publishes no quantified short-term expert prediction.
-† ONS's own methodology text for these older rounds doesn't state a single UK base-year TFR; figure is HFD's UK period TFR (`HFD/data/HFD/tfrRR.txt`) for that year instead, so it may not exactly match ONS's own (unpublished, for this year) figure.
 
 ::::{tab-set}
 
