@@ -39,6 +39,17 @@ The same charts as on [Later Births](later-births) — plain ASFR, conditional f
 </script>
 ```
 
+## By era
+
+The same figure, fixed to four birth-cohort eras for side-by-side comparison instead of one slider-driven chart.
+
+```{raw} html
+<iframe src="../_static/ons/historic_trends_uk_1945_1965.html" style="width: 100%; height: 400px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/ons/historic_trends_uk_1965_1979.html" style="width: 100%; height: 400px; display: block; border: 1px solid var(--color-background-border); margin-top: 8px;" loading="lazy"></iframe>
+<iframe src="../_static/ons/historic_trends_uk_1979_1989.html" style="width: 100%; height: 400px; display: block; border: 1px solid var(--color-background-border); margin-top: 8px;" loading="lazy"></iframe>
+<iframe src="../_static/ons/historic_trends_uk_1989_.html" style="width: 100%; height: 400px; display: block; border: 1px solid var(--color-background-border); margin-top: 8px;" loading="lazy"></iframe>
+```
+
 ```{note}
 HFD. Human Fertility Database. Max Planck Institute for Demographic Research (Germany)
 and Vienna Institute of Demography (Austria). Available at [www.humanfertility.org](https://www.humanfertility.org/).
