@@ -2,14 +2,14 @@
 
 Every few years ONS resets its future fertility assumptions, combining recent trends with advice from a panel of academic experts. Quotes below are taken directly from each round's ONS methodology document, one tab per projection round, starting from the expert panel's short-term view onwards (recent-trends recaps and framing text are omitted).
 
-| Round | TFR at base year | Short-term prediction | Long-term prediction |
-| --- | --- | --- | --- |
-| 2024-based | 1.40 (2024) | 1.38 (2029) | 1.40 (2049) |
-| 2022-based | 1.48 (2022) | 1.46 (2027) | 1.50 (2047) |
-| 2018-based | 1.68 (2018) | 1.70 (2022) | 1.77 (2042) |
-| 2016-based | 1.79 (2016) | 1.78 (2020) | 1.79 (2040) |
-| 2014-based | 1.80† (2014) | — | 1.90–1.93* (year not stated) |
-| 2012-based | 1.91† (2012) | — | 1.80–2.00* (2036) |
+| Round | TFR at base year | Short-term prediction | Δ short term | Long-term prediction |
+| --- | --- | --- | --- | --- |
+| 2024-based | 1.40 (2024) | 1.38 (2029) | −0.02 | 1.40 (2049) |
+| 2022-based | 1.48 (2022) | 1.46 (2027) | −0.02 | 1.50 (2047) |
+| 2018-based | 1.68 (2018) | 1.70 (2022) | +0.02 | 1.77 (2042) |
+| 2016-based | 1.79 (2016) | 1.78 (2020) | −0.01 | 1.79 (2040) |
+| 2014-based | 1.80† (2014) | — | — | 1.90–1.93* (year not stated) |
+| 2012-based | 1.91† (2012) | — | — | 1.80–2.00* (2036) |
 
 \* Where experts gave a range rather than a single mean, the range is shown as reported. 2012- and 2014-based methodology publishes no quantified short-term expert prediction.
 † ONS's own methodology text for these older rounds doesn't state a single UK base-year TFR; figure is HFD's UK period TFR (`HFD/data/HFD/tfrRR.txt`) for that year instead, so it may not exactly match ONS's own (unpublished, for this year) figure.
