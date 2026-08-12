@@ -18,7 +18,7 @@ The same charts as on [Later Births](later-births) — plain ASFR, conditional f
     </div>
   </label>
 </p>
-<iframe id="historic-trends-frame" src="../_static/ons/historic_trends_uk.html" style="width: 100%; height: 550px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe id="historic-trends-frame" src="../_static/ons/historic_trends_uk.html" style="width: 100%; height: 400px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 <script>
   (function () {
     var minInput = document.getElementById("historic-trends-min");
