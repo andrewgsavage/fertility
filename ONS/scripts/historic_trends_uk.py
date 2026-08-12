@@ -142,20 +142,20 @@ def build_figure():
             marker=dict(
                 colorscale="Turbo", cmin=CAXIS_MIN, cmax=CAXIS_MAX,
                 color=[CAXIS_MIN], showscale=True,
-                # Inset into the chart itself, spanning between where data
-                # point (age=40, y=23) falls in the ASFR panel (left edge)
-                # and where the same (40, 23) falls in the Cond. 1st panel
-                # (right edge) — both empty regions of their own curves,
-                # computed from each panel's actual xaxis domain/range
-                # (colorbar x/y is whole-figure "paper" fraction, not
+                # Inset into the chart itself, vertical, spanning from data
+                # point (age=20, y=18) to (age=20, y=25) on the Cond. 1st
+                # panel — both empty regions of that panel's curve.
+                # Colorbar x/y is whole-figure "paper" fraction, not
                 # data-relative, so this converts data coords -> paper
-                # coords by hand for each panel's own domain).
+                # coords by hand using that panel's own xaxis domain/range
+                # (age=20 sits exactly at its left edge, domain 0.2-0.4,
+                # range 20-45) and the shared yaxis (domain 0-1, range 0-25).
                 colorbar=dict(
-                    title=dict(text="Cohort", side="top"),
-                    orientation="h",
-                    x=0.1667, xanchor="left",
-                    y=0.92, yanchor="middle",
-                    len=0.1933, thickness=10,
+                    title=dict(text="Cohort"),
+                    orientation="v",
+                    x=0.2, xanchor="left",
+                    y=1.0, yanchor="top",
+                    len=0.28, thickness=10,
                 ),
             ),
             showlegend=False,
