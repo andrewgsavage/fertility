@@ -40,10 +40,31 @@ ASFR_BANDS = {
 }
 
 
+OBSERVED_COLOR = "#333333"
+
+
 def _round_color(round_label):
     i = ROUNDS.index(round_label)
     t = i / (len(ROUNDS) - 1)
     return pc.sample_colorscale("Turbo", [t])[0]
+
+
+def _split_observed_projected(series_by_round):
+    """Split {round: {year: value}} into a single reconciled "observed"
+    series (years up to that round's own base year, later rounds' revised
+    figures winning over earlier rounds' for the same year) and each
+    round's own projected-only series (years from its base year onward)."""
+    observed = {}
+    for round_label in sorted(series_by_round, key=int):
+        base_year = int(round_label)
+        for year, value in series_by_round[round_label].items():
+            if year <= base_year:
+                observed[year] = value
+    projected = {
+        round_label: {y: v for y, v in series.items() if y >= int(round_label)}
+        for round_label, series in series_by_round.items()
+    }
+    return observed, projected
 
 
 def _read_rows(path):
@@ -115,15 +136,25 @@ def load_asfr(round_label):
 
 
 def build_tfr_figure():
+    tfr_by_round = {
+        round_label: (load_tfr_multiround(round_label) if round_label in ("2022", "2024")
+                      else load_tfr_cfs(round_label)[0])
+        for round_label in ROUNDS
+    }
+    observed, projected = _split_observed_projected(tfr_by_round)
+
     fig = go.Figure()
+    years = sorted(observed)
+    fig.add_trace(go.Scatter(
+        x=years, y=[observed[y] for y in years],
+        mode="lines", name="Observed",
+        line=dict(color=OBSERVED_COLOR, width=2.5),
+        hovertemplate=f"Observed<br>%{{x}}: %{{y:.2f}}<extra></extra>",
+    ))
     for round_label in ROUNDS:
-        if round_label in ("2022", "2024"):
-            tfr = load_tfr_multiround(round_label)
-        else:
-            tfr, _ = load_tfr_cfs(round_label)
-        years = sorted(tfr)
+        years = sorted(projected[round_label])
         fig.add_trace(go.Scatter(
-            x=years, y=[tfr[y] for y in years],
+            x=years, y=[projected[round_label][y] for y in years],
             mode="lines", name=f"{round_label}-based",
             line=dict(color=_round_color(round_label), width=2),
             hovertemplate=f"{round_label}-based<br>%{{x}}: %{{y:.2f}}<extra></extra>",
@@ -141,12 +172,22 @@ def build_tfr_figure():
 
 
 def build_cfs_figure():
+    cfs_rounds = ["2012", "2014", "2016", "2018"]
+    cfs_by_round = {round_label: load_tfr_cfs(round_label)[1] for round_label in cfs_rounds}
+    observed, projected = _split_observed_projected(cfs_by_round)
+
     fig = go.Figure()
-    for round_label in ["2012", "2014", "2016", "2018"]:
-        _, cfs = load_tfr_cfs(round_label)
-        years = sorted(cfs)
+    years = sorted(observed)
+    fig.add_trace(go.Scatter(
+        x=years, y=[observed[y] for y in years],
+        mode="lines", name="Observed",
+        line=dict(color=OBSERVED_COLOR, width=2.5),
+        hovertemplate=f"Observed<br>%{{x}}: %{{y:.2f}}<extra></extra>",
+    ))
+    for round_label in cfs_rounds:
+        years = sorted(projected[round_label])
         fig.add_trace(go.Scatter(
-            x=years, y=[cfs[y] for y in years],
+            x=years, y=[projected[round_label][y] for y in years],
             mode="lines", name=f"{round_label}-based",
             line=dict(color=_round_color(round_label), width=2),
             hovertemplate=f"{round_label}-based<br>%{{x}}: %{{y:.2f}}<extra></extra>",
@@ -165,16 +206,31 @@ def build_cfs_figure():
 
 def build_asfr_figure():
     bands = list(ASFR_BANDS)
+    asfr_rounds = ["2018", "2022", "2024"]
     fig = make_subplots(rows=2, cols=3, subplot_titles=bands, shared_xaxes=False)
-    asfr_by_round = {r: load_asfr(r) for r in ("2018", "2022", "2024")}
+    asfr_by_round = {r: load_asfr(r) for r in asfr_rounds}
     for i, band in enumerate(bands):
         row, col = divmod(i, 3)
-        for round_label in ("2018", "2022", "2024"):
-            series = asfr_by_round[round_label].get(band, {})
-            years = sorted(series)
+        observed, projected = _split_observed_projected(
+            {r: asfr_by_round[r].get(band, {}) for r in asfr_rounds}
+        )
+        years = sorted(observed)
+        fig.add_trace(
+            go.Scatter(
+                x=years, y=[observed[y] for y in years],
+                mode="lines", name="Observed",
+                legendgroup="Observed",
+                showlegend=(i == 0),
+                line=dict(color=OBSERVED_COLOR, width=2.5),
+                hovertemplate=f"Observed<br>%{{x}}: %{{y:.1f}}<extra></extra>",
+            ),
+            row=row + 1, col=col + 1,
+        )
+        for round_label in asfr_rounds:
+            years = sorted(projected[round_label])
             fig.add_trace(
                 go.Scatter(
-                    x=years, y=[series[y] for y in years],
+                    x=years, y=[projected[round_label][y] for y in years],
                     mode="lines", name=f"{round_label}-based",
                     legendgroup=round_label,
                     showlegend=(i == 0),
