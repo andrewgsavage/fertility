@@ -1,6 +1,8 @@
 # Projections
 
-Every few years ONS resets its future fertility assumptions, combining recent trends with advice from a panel of academic experts. Quotes below are taken directly from each round's ONS methodology document, one tab per projection round, starting from the expert panel's short-term view onwards (recent-trends recaps and framing text are omitted).
+## Expert Advice
+
+Every few years ONS resets its future fertility assumptions, combining updated data with advice from a panel of academic experts to forecast future fertility. The table below shows the expert advice given, with quotes in the following tabs.
 
 ```{raw} html
 <table class="docutils align-default">
@@ -28,30 +30,6 @@ Every few years ONS resets its future fertility assumptions, combining recent tr
 ```
 
 \* Experts gave a range. 2012- and 2014-based methodology publishes no quantified short-term expert prediction.
-
-## Comparing rounds
-
-Each round's own chart(s) of actual-and-assumed TFR, completed family size (CFS), and age-specific fertility rate (ASFR), pulled from ONS's chart data (the "Download as csv" link on each figure) and overlaid here — one line per round — to show how the projected trajectory has shifted from round to round rather than reading six separate ONS charts side by side.
-
-```{raw} html
-<iframe src="../_static/ons/projections_tfr.html" style="width: 100%; aspect-ratio: 16 / 9; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
-```
-
-```{raw} html
-<iframe src="../_static/ons/projections_cfs.html" style="width: 100%; aspect-ratio: 16 / 9; height: auto; display: block; border: 1px solid var(--color-background-border); margin-top: 8px;" loading="lazy"></iframe>
-```
-
-```{raw} html
-<iframe src="../_static/ons/projections_asfr.html" style="width: 100%; aspect-ratio: 16 / 9; height: auto; display: block; border: 1px solid var(--color-background-border); margin-top: 8px;" loading="lazy"></iframe>
-```
-
-```{note}
-The "Observed" line has a small step around 2022: ONS rebased historical population estimates against the 2021 Census starting with the 2022-based round, which lowered the historical TFR series compared with earlier rounds. From the 2022-based chart data: "Historical TFRs are lower in the 2022-based assumptions because of census rebasing." From the 2024-based chart data: "Historical TFRs used in the 2022-based and 2024-based assumptions differ as they make use of the latest available revised population estimates during the assumption setting process." Since "Observed" here takes later rounds' revised figures over earlier rounds' for overlapping years, this step is a genuine methodology switch in the source data, not a charting artefact.
-```
-
-```{note}
-Chart data downloaded from each round's own ONS chart (see `ONS/scripts/projections_comparison.py`): 2012/2014/2016/2018-based from that round's own actual-and-assumed TFR/CFS chart; 2022/2024-based TFR from ONS's own multi-round comparison chart (that round's own column only); 2018/2022/2024-based ASFR from that round's own assumed-ASFR-by-age chart. CFS and ASFR aren't available in this form for 2022/2024- and 2012/2014/2016-based respectively.
-```
 
 ::::{tab-set}
 
@@ -251,5 +229,29 @@ Office for National Statistics (ONS), fertility assumptions for the UK national 
 
 
 ::::
+
+## Comparing rounds
+
+Each round's own chart(s) of actual-and-assumed TFR, completed family size (CFS), and age-specific fertility rate (ASFR), pulled from ONS's chart data (the "Download as csv" link on each figure) and overlaid here — one line per round — to show how the projected trajectory has shifted from round to round rather than reading six separate ONS charts side by side.
+
+```{raw} html
+<iframe src="../_static/ons/projections_tfr.html" style="width: 100%; aspect-ratio: 16 / 9; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+
+```{raw} html
+<iframe src="../_static/ons/projections_cfs.html" style="width: 100%; aspect-ratio: 16 / 9; height: auto; display: block; border: 1px solid var(--color-background-border); margin-top: 8px;" loading="lazy"></iframe>
+```
+
+```{raw} html
+<iframe src="../_static/ons/projections_asfr.html" style="width: 100%; aspect-ratio: 16 / 9; height: auto; display: block; border: 1px solid var(--color-background-border); margin-top: 8px;" loading="lazy"></iframe>
+```
+
+```{note}
+The "Observed" line has a small step around 2022: ONS rebased historical population estimates against the 2021 Census starting with the 2022-based round, which lowered the historical TFR series compared with earlier rounds. From the 2022-based chart data: "Historical TFRs are lower in the 2022-based assumptions because of census rebasing." From the 2024-based chart data: "Historical TFRs used in the 2022-based and 2024-based assumptions differ as they make use of the latest available revised population estimates during the assumption setting process." Since "Observed" here takes later rounds' revised figures over earlier rounds' for overlapping years, this step is a genuine methodology switch in the source data, not a charting artefact.
+```
+
+```{note}
+Chart data downloaded from each round's own ONS chart (see `ONS/scripts/projections_comparison.py`): 2012/2014/2016/2018-based from that round's own actual-and-assumed TFR/CFS chart; 2022/2024-based TFR from ONS's own multi-round comparison chart (that round's own column only); 2018/2022/2024-based ASFR from that round's own assumed-ASFR-by-age chart. CFS and ASFR aren't available in this form for 2022/2024- and 2012/2014/2016-based respectively.
+```
 
 
