@@ -2,65 +2,29 @@
 
 Every few years ONS resets its future fertility assumptions, combining recent trends with advice from a panel of academic experts. Quotes below are taken directly from each round's ONS methodology document, one tab per projection round, starting from the expert panel's short-term view onwards (recent-trends recaps and framing text are omitted).
 
-```{list-table}
-:header-rows: 2
-
-* - Round
-  - Base year
-  - Short term
-  -
-  -
-  - Long term
-  -
-* -
-  - Value
-  - Value
-  - Δ
-  - Year
-  - Value
-  - Year
-* - 2024-based
-  - 1.40
-  - 1.38
-  - −0.02
-  - 2029
-  - 1.40
-  - 2049
-* - 2022-based
-  - 1.48
-  - 1.46
-  - −0.02
-  - 2027
-  - 1.50
-  - 2047
-* - 2018-based
-  - 1.68
-  - 1.70
-  - +0.02
-  - 2022
-  - 1.77
-  - 2042
-* - 2016-based
-  - 1.79
-  - 1.78
-  - −0.01
-  - 2020
-  - 1.79
-  - 2040
-* - 2014-based
-  - 1.82
-  - —
-  - —
-  - —
-  - 1.90–1.93*
-  -
-* - 2012-based
-  - 1.92
-  - —
-  - —
-  - —
-  - 1.80–2.00*
-  - 2036
+```{raw} html
+<table class="docutils align-default">
+<thead>
+<tr>
+<th rowspan="2">Round</th>
+<th rowspan="2">Base year</th>
+<th colspan="3">Short term</th>
+<th colspan="2">Long term</th>
+</tr>
+<tr>
+<th>Value</th><th>Δ</th><th>Year</th>
+<th>Value</th><th>Year</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>2024-based</td><td>1.40</td><td>1.38</td><td>−0.02</td><td>2029</td><td>1.40</td><td>2049</td></tr>
+<tr><td>2022-based</td><td>1.48</td><td>1.46</td><td>−0.02</td><td>2027</td><td>1.50</td><td>2047</td></tr>
+<tr><td>2018-based</td><td>1.68</td><td>1.70</td><td>+0.02</td><td>2022</td><td>1.77</td><td>2042</td></tr>
+<tr><td>2016-based</td><td>1.79</td><td>1.78</td><td>−0.01</td><td>2020</td><td>1.79</td><td>2040</td></tr>
+<tr><td>2014-based</td><td>1.82</td><td>—</td><td>—</td><td>—</td><td>1.90–1.93*</td><td></td></tr>
+<tr><td>2012-based</td><td>1.92</td><td>—</td><td>—</td><td>—</td><td>1.80–2.00*</td><td>2036</td></tr>
+</tbody>
+</table>
 ```
 
 \* Where experts gave a range rather than a single mean, the range is shown as reported. 2012- and 2014-based methodology publishes no quantified short-term expert prediction.
