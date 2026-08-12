@@ -275,7 +275,7 @@ def build_asfr_figure():
         yaxis_title="Births per 1,000 women",
         legend=dict(title="Age band", x=1.02, y=1, xanchor="left", yanchor="top"),
         legend2=dict(title="Line style", x=1.02, y=0.55, xanchor="left", yanchor="top"),
-        hovermode="x unified",
+        hovermode="closest",
     )
     return fig
 
