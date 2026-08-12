@@ -20,7 +20,6 @@ import pathlib
 
 import plotly.colors as pc
 import plotly.graph_objects as go
-from plotly.subplots import make_subplots
 
 _SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
 DATA_DIR = _SCRIPT_DIR.parent / "data" / "projection_rounds"
@@ -41,6 +40,24 @@ ASFR_BANDS = {
 
 
 OBSERVED_COLOR = "#333333"
+
+# Fixed categorical order/hues for the six age bands (dataviz skill's
+# validated default palette, slots 1-6 -- adjacent-pair safe for a line
+# chart with this many series). Kept as one dict so color assignment
+# never depends on which bands happen to be present.
+BAND_COLORS = {
+    "Under 20": "#2a78d6",
+    "20-24": "#eb6834",
+    "25-29": "#1baf7a",
+    "30-34": "#eda100",
+    "35-39": "#e87ba4",
+    "40+": "#008300",
+}
+
+# Line style distinguishes observed vs. which round's projection, so
+# color is free to carry age-band identity when every band is overlaid
+# on one axis instead of faceted.
+ASFR_ROUND_DASH = {"2018": "dash", "2022": "dot", "2024": "dashdot"}
 
 
 def _round_color(round_label):
@@ -207,46 +224,59 @@ def build_cfs_figure():
 def build_asfr_figure():
     bands = list(ASFR_BANDS)
     asfr_rounds = ["2018", "2022", "2024"]
-    fig = make_subplots(rows=2, cols=3, subplot_titles=bands, shared_xaxes=False)
     asfr_by_round = {r: load_asfr(r) for r in asfr_rounds}
-    for i, band in enumerate(bands):
-        row, col = divmod(i, 3)
+
+    fig = go.Figure()
+    for band in bands:
+        color = BAND_COLORS[band]
         observed, projected = _split_observed_projected(
             {r: asfr_by_round[r].get(band, {}) for r in asfr_rounds}
         )
         years = sorted(observed)
-        fig.add_trace(
-            go.Scatter(
-                x=years, y=[observed[y] for y in years],
-                mode="lines", name="Observed",
-                legendgroup="Observed",
-                showlegend=(i == 0),
-                line=dict(color=OBSERVED_COLOR, width=2.5),
-                hovertemplate=f"Observed<br>%{{x}}: %{{y:.1f}}<extra></extra>",
-            ),
-            row=row + 1, col=col + 1,
-        )
+        fig.add_trace(go.Scatter(
+            x=years, y=[observed[y] for y in years],
+            mode="lines", name=band,
+            legendgroup=band,
+            legend="legend",
+            line=dict(color=color, width=2.5, dash="solid"),
+            hovertemplate=f"{band}, observed<br>%{{x}}: %{{y:.1f}}<extra></extra>",
+        ))
         for round_label in asfr_rounds:
             years = sorted(projected[round_label])
-            fig.add_trace(
-                go.Scatter(
-                    x=years, y=[projected[round_label][y] for y in years],
-                    mode="lines", name=f"{round_label}-based",
-                    legendgroup=round_label,
-                    showlegend=(i == 0),
-                    line=dict(color=_round_color(round_label), width=2),
-                    hovertemplate=f"{round_label}-based<br>%{{x}}: %{{y:.1f}}<extra></extra>",
-                ),
-                row=row + 1, col=col + 1,
-            )
+            fig.add_trace(go.Scatter(
+                x=years, y=[projected[round_label][y] for y in years],
+                mode="lines", name=f"{band} ({round_label}-based)",
+                legendgroup=band,
+                showlegend=False,
+                line=dict(color=color, width=1.8, dash=ASFR_ROUND_DASH[round_label]),
+                hovertemplate=f"{band}, {round_label}-based<br>%{{x}}: %{{y:.1f}}<extra></extra>",
+            ))
+
+    # A second legend, purely for line style, using invisible dummy
+    # traces -- color already carries age-band identity above, so this
+    # is the only way to explain what solid/dash/dot/dashdot mean.
+    fig.add_trace(go.Scatter(
+        x=[None], y=[None], mode="lines", name="Observed",
+        line=dict(color=OBSERVED_COLOR, width=2.5, dash="solid"),
+        legend="legend2", showlegend=True, hoverinfo="skip",
+    ))
+    for round_label, dash in ASFR_ROUND_DASH.items():
+        fig.add_trace(go.Scatter(
+            x=[None], y=[None], mode="lines", name=f"{round_label}-based (projected)",
+            line=dict(color=OBSERVED_COLOR, width=1.8, dash=dash),
+            legend="legend2", showlegend=True, hoverinfo="skip",
+        ))
+
     fig.update_layout(
         template="plotly_white",
         autosize=True,
-        margin=dict(t=40, r=20, l=50, b=40),
-        legend=dict(orientation="h", yanchor="bottom", y=1.08, xanchor="left", x=0),
+        margin=dict(t=30, r=170, l=50, b=40),
+        xaxis_title="Year",
+        yaxis_title="Births per 1,000 women",
+        legend=dict(title="Age band", x=1.02, y=1, xanchor="left", yanchor="top"),
+        legend2=dict(title="Line style", x=1.02, y=0.55, xanchor="left", yanchor="top"),
         hovermode="x unified",
     )
-    fig.update_yaxes(title_text="Births per 1,000 women", col=1)
     return fig
 
 
