@@ -11,6 +11,7 @@ instead of one calendar year's snapshot across all ages.
 """
 
 import json
+import pathlib
 
 import pandas as pd
 import plotly.colors as pc
@@ -19,7 +20,11 @@ from plotly.subplots import make_subplots
 
 from country_names import COUNTRY_NAMES
 
-INPUT = "data/HFD/asfrRR.txt"
+# Resolved relative to this file (not cwd) so load_data() works whether
+# this module is run directly (cwd=HFD/) or imported from elsewhere (e.g.
+# ONS/scripts/historic_trends_uk.py, cwd=ONS/).
+_SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
+INPUT = _SCRIPT_DIR.parent / "data" / "HFD" / "asfrRR.txt"
 OUTPUT = "outputs/asfr_uk.html"
 CODES = ["GBRTENW"]
 
@@ -100,7 +105,7 @@ def plot(df):
     trace_groups.append(None)
 
     fig.update_xaxes(title_text="Age", range=[15, 45])
-    fig.update_yaxes(title_text="ASFR (%)", range=[0, 15], col=1)
+    fig.update_yaxes(title_text="ASFR (%)", range=[0, 25], col=1)
     fig.update_layout(
         title=f"Cohort ASFR, England & Wales ({min(cohorts)}–{max(cohorts)} birth cohorts) — HFD",
         template="plotly_white",
