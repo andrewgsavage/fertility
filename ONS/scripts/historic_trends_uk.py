@@ -121,10 +121,29 @@ def _add_trend_arrows(fig, cond_rates, cumulative, lo, hi):
     cond_hi = cond_rates[hi] if hi in cond_rates else cond_rates[max(c for c in cond_rates if cond_rates[c])]
     cum_hi = cumulative[hi] if hi in cumulative else cumulative[max(c for c in cumulative if cumulative[c])]
 
-    def arrow(xref, yref, x0, y0, x1, y1):
+    MIN_ARROW_AGE_YEARS = 5
+    MIN_ARROW_ASFR_PCT = 3
+
+    def arrow(xref, yref, x0, y0, x1, y1, min_x=MIN_ARROW_AGE_YEARS, min_y=MIN_ARROW_ASFR_PCT):
+        """Arrowhead at the real data point (x1, y1). The tail (x0, y0) is
+        the real second data point too, EXCEPT where that makes the arrow
+        too short to read: age deltas under min_x years, or value deltas
+        under min_y percentage points, get padded out to that minimum
+        (preserving direction) rather than rendering as a near-invisible
+        sliver. Deltas already bigger than the minimum are left alone, so
+        an arrow's length still reflects the real size of the trend once
+        it's large enough to see.
+        """
+        dx, dy = x0 - x1, y0 - y1
+        if dx != 0 and abs(dx) < min_x:
+            dx = min_x if dx > 0 else -min_x
+        if dy != 0 and abs(dy) < min_y:
+            dy = min_y if dy > 0 else -min_y
+        if dx == 0 and dy == 0:
+            dy = -min_y  # degenerate (x0,y0) == (x1,y1): default to pointing up
         fig.add_annotation(
             xref=xref, yref=yref, x=x1, y=y1,
-            axref=xref, ayref=yref, ax=x0, ay=y0,
+            axref=xref, ayref=yref, ax=x1 + dx, ay=y1 + dy,
             showarrow=True, arrowhead=3, arrowsize=1, arrowwidth=2, arrowcolor="black",
             text="",
         )
@@ -136,13 +155,10 @@ def _add_trend_arrows(fig, cond_rates, cumulative, lo, hi):
             bgcolor="rgba(255,255,255,0.75)",
         )
 
-    def endpoint_arrow(xref, yref, x, y0, y1, min_len=3):
-        """Vertical arrow from y0 to y1, padding the tail so the shaft is at
-        least min_len long — some era/panel combinations land y0 and y1
-        only ~1 apart on a 0-100 axis, which renders as an invisible sliver
-        under the arrowhead. The head still lands exactly on the real y1."""
-        if abs(y1 - y0) < min_len:
-            y0 = y1 - min_len if y1 >= y0 else y1 + min_len
+    def endpoint_arrow(xref, yref, x, y0, y1):
+        """Vertical arrow from y0 to y1 — a thin wrapper now that arrow()
+        itself guarantees a fixed minimum pixel length regardless of how
+        close y0 and y1 are numerically."""
         arrow(xref, yref, x, y0, x, y1)
 
     # Cond. 1st (col 2): the eras with hand-picked call-outs below use a
@@ -158,18 +174,8 @@ def _add_trend_arrows(fig, cond_rates, cumulative, lo, hi):
         return y0, y1
 
     if (lo, hi) == (1945, 1965):
-        vertical_callout(24, "Fewer early<br>births")
-
-        # Two vertical arrows closing in on age 35 from above and below,
-        # stopping at the max/min conditional-1st-birth rate across every
-        # cohort in this era (1945-1965) at that age — the gap between the
-        # two arrowheads is the actual spread across the whole era there.
-        conv_age = 35
-        era_vals_at_35 = [v[conv_age][0] * 100 for c, v in cond_rates.items() if lo <= c <= hi and conv_age in v]
-        top_y, bottom_y = max(era_vals_at_35), min(era_vals_at_35)
-        arrow("x2", "y2", conv_age, top_y + 1.5, conv_age, top_y)
-        arrow("x2", "y2", conv_age, bottom_y - 1.5, conv_age, bottom_y)
-        label("x2", "y2", conv_age, top_y + 2, "Consistent late<br>births", yanchor="bottom")
+        vertical_callout(24, "Significantly fewer<br>early births")
+        vertical_callout(35, "Slightly more<br>late births")
     elif (lo, hi) == (1965, 1979):
         vertical_callout(25, "Fewer early<br>births")
         vertical_callout(32, "More late<br>births")
@@ -183,6 +189,8 @@ def _add_trend_arrows(fig, cond_rates, cumulative, lo, hi):
         y0, y1 = cond_lo[32][0] * 100, cond_rates[1993][32][0] * 100
         late_word = _trend_word(y0, y1, "More", "Fewer")
         vertical_callout(32, f"{late_word} late<br>births", hi_cohort=1993)
+    elif (lo, hi) == (1979, 1989):
+        pass  # no Cond. 1st call-out for this era
     else:
         age0, val0 = _peak(cond_lo, 0)
         age1, val1 = _peak(cond_hi, 0)
@@ -193,10 +201,40 @@ def _add_trend_arrows(fig, cond_rates, cumulative, lo, hi):
 
     # Cond. 2nd (col 3): how the peak conditional second-birth rate's height
     # moves across cohorts.
-    age0, val0 = _peak(cond_lo, 1)
-    age1, val1 = _peak(cond_hi, 1)
-    arrow("x3", "y3", age0, val0 * 100, age1, val1 * 100)
-    label("x3", "y3", (age0 + age1) / 2, max(val0, val1) * 100, f"Rate<br>{_trend_word(val0, val1, 'rising', 'falling')}", yanchor="bottom")
+    COND2_VERTICAL_AGE = {(1989, 9999): None, (1979, 1989): 28}  # None = lo's own peak age
+    if (lo, hi) in COND2_VERTICAL_AGE:
+        # The generic "hi" fallback (latest cohort with *any* data, possibly
+        # right-censored to too few ages to have a real peak there) isn't
+        # good enough for these eras — compare at a fixed age instead
+        # (defaulting to lo's own peak age), against the latest cohort
+        # *within this era's own range* that still has data at that age,
+        # and keep the arrow vertical (same age) rather than connecting two
+        # different peak ages.
+        peak_age = COND2_VERTICAL_AGE[(lo, hi)]
+        if peak_age is None:
+            peak_age = _peak(cond_lo, 1)[0]
+        cmp_hi_cohort = max(
+            c for c in cond_rates if lo <= c <= hi and peak_age in cond_rates[c] and cond_rates[c][peak_age][1] is not None
+        )
+        val0 = cond_lo[peak_age][1]
+        val1 = cond_rates[cmp_hi_cohort][peak_age][1]
+        arrow("x3", "y3", peak_age, val0 * 100, peak_age, val1 * 100)
+        label("x3", "y3", peak_age, max(val0, val1) * 100, f"{_trend_word(val0, val1, 'More', 'Fewer')}<br>births", yanchor="bottom")
+    else:
+        age0, val0 = _peak(cond_lo, 1)
+        age1, val1 = _peak(cond_hi, 1)
+        arrow("x3", "y3", age0, val0 * 100, age1, val1 * 100)
+        # To the right of the arrow (not above it), and clamped below the
+        # panel's 0-25 ceiling: peak values here can be high enough
+        # (individually, or their midpoint) that a label placed at the raw
+        # value gets clipped by the plot area and is never visible at all.
+        label_y = min((val0 + val1) / 2 * 100, 23)
+        label("x3", "y3", max(age0, age1) + 2, label_y, f"{_trend_word(val0, val1, 'More', 'Fewer')}<br>births", xanchor="left", yanchor="middle")
+
+    if (lo, hi) == (1945, 1965):
+        y0, y1 = cond_lo[35][1] * 100, cond_hi[35][1] * 100
+        arrow("x3", "y3", 35, y0, 35, y1)
+        label("x3", "y3", 35, max(y0, y1), f"{_trend_word(y0, y1, 'More', 'Fewer')}<br>late births", yanchor="bottom")
 
     # Cum. >=1/>=2 (cols 4-5): rising edge (age at which the cohort crosses
     # a threshold %) and the eventual/completed level (read near the right
@@ -204,6 +242,12 @@ def _add_trend_arrows(fig, cond_rates, cumulative, lo, hi):
     # right-censored (see the cond_hi/cum_hi fallback above) — 1993 is the
     # latest cohort with data as deep as age 32, so it stands in for "hi"
     # here instead of the generic fallback, at that shallower endpoint age.
+    # 1979-1989's own "hi" cohort (1989) is likewise right-censored (only
+    # reaches age 36) but has no other call-out here — skip Cum. >=1/>=2
+    # entirely for that era rather than crash on a missing age 43.
+    if (lo, hi) == (1979, 1989):
+        return
+
     if (lo, hi) == (1989, 9999):
         cum_hi_for_threshold, end_age = cumulative[1993], 32
     else:
@@ -214,20 +258,19 @@ def _add_trend_arrows(fig, cond_rates, cumulative, lo, hi):
     # skip the endpoint arrow there and keep just the rising-edge one.
     show_endpoint = (lo, hi) != (1989, 9999)
 
-    a0 = _threshold_age(cum_lo, 0, 50)
-    a1 = _threshold_age(cum_hi_for_threshold, 0, 50)
-    arrow("x4", "y4", a0, 50, a1, 50)
-    label("x4", "y4", (a0 + a1) / 2, 50, _trend_word(a0, a1, "Later", "Earlier"), yanchor="top")
+    # Rising-edge ("Later"/"Earlier") call-out kept only on Cum. >=1 for
+    # 1965-1979 — removed everywhere else per explicit request.
+    if (lo, hi) == (1965, 1979):
+        a0 = _threshold_age(cum_lo, 0, 50)
+        a1 = _threshold_age(cum_hi_for_threshold, 0, 50)
+        arrow("x4", "y4", a0, 50, a1, 50)
+        label("x4", "y4", (a0 + a1) / 2, 50, _trend_word(a0, a1, "Later", "Earlier"), yanchor="top")
     if show_endpoint:
         end0, end1 = cum_lo[end_age][0], cum_hi_for_threshold[end_age][0]
         endpoint_arrow("x4", "y4", end_age, end0, end1)
         label("x4", "y4", end_age, max(end0, end1), _trend_word(end0, end1, "More", "Fewer"), xanchor="right")
 
     # Cum. >=2 (col 5): same pattern as Cum. >=1, using the >=2-children curve.
-    a0 = _threshold_age(cum_lo, 1, 30)
-    a1 = _threshold_age(cum_hi_for_threshold, 1, 30)
-    arrow("x5", "y5", a0, 30, a1, 30)
-    label("x5", "y5", (a0 + a1) / 2, 30, _trend_word(a0, a1, "Later", "Earlier"), yanchor="top")
     if show_endpoint:
         end0, end1 = cum_lo[end_age][1], cum_hi_for_threshold[end_age][1]
         endpoint_arrow("x5", "y5", end_age, end0, end1)
@@ -398,7 +441,22 @@ def build_figure(cohort_range=None, trend_arrows=False):
     # 1945-1965" is less immediately meaningful than "aged 61-81 now".
     if cohort_range is not None:
         lo, hi = cohort_range
-        range_text = f"Cohorts {lo}–" if hi >= 9999 else f"Cohorts {lo}–{hi}"
+        label_hi = hi
+        if hi >= 9999:
+            # Open-ended era: report the actual most recent cohort that has
+            # real (non-empty) data anywhere in this chart, rather than a
+            # vague "1989-" with no real upper bound — cohorts right up
+            # against CAXIS_MAX are right-censored and often present as
+            # empty entries (see the cond_hi/cum_hi fallback in
+            # _add_trend_arrows), so "last with data" != "last key". Only
+            # this label's own display uses label_hi — hi itself stays the
+            # 9999 sentinel below, since _add_trend_arrows keys its
+            # right-censoring logic off that exact value.
+            label_hi = max(
+                max((c for c in cond_rates if cond_rates.get(c)), default=lo),
+                max((c for c in cumulative if cumulative.get(c)), default=lo),
+            )
+        range_text = f"Cohorts {lo}–{label_hi}"
         fig.add_annotation(
             xref="paper", yref="paper",
             x=0.01, y=0.97, xanchor="left", yanchor="top",
@@ -407,11 +465,8 @@ def build_figure(cohort_range=None, trend_arrows=False):
         )
         current_year = datetime.date.today().year
         age_old = current_year - lo
-        if hi >= 9999:
-            age_text = f"Ages in {current_year}: {age_old}+"
-        else:
-            age_young = current_year - hi
-            age_text = f"Ages in {current_year}: {age_old}-{age_young}"
+        age_young = current_year - label_hi
+        age_text = f"Ages in {current_year}: {age_old}-{age_young}"
         fig.add_annotation(
             xref="paper", yref="paper",
             x=0.01, y=0.88, xanchor="left", yanchor="top",
@@ -474,7 +529,7 @@ if __name__ == "__main__":
     fig, trace_groups = build_figure()
     _write(fig, trace_groups, OUTPUT)
 
-    ARROW_ERAS = {"1945_1965", "1965_1979", "1989_"}
+    ARROW_ERAS = {"1945_1965", "1965_1979", "1979_1989", "1989_"}
     for suffix, era in ERA_RANGES.items():
         era_fig, era_trace_groups = build_figure(cohort_range=era, trend_arrows=(suffix in ARROW_ERAS))
         era_output = OUTPUT.replace(".html", f"_{suffix}.html")
