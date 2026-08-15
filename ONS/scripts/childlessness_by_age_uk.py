@@ -193,6 +193,7 @@ def plot(childless_by_age):
         label="{pp:.1f}pp rise in HE participation", label_before=False,
     )
     CHILDLESS_ARROWS = {
+        25: ("Rise ({pp:.1f}pp) in Childless at 25", 3),
         30: ("Rise ({pp:.1f}pp) in Childless at 30", 3),
         35: ("Small rise ({pp:.1f}pp) in Childless at 35", 3),
         40: ("Static ({pp:.1f}pp) in Childless at 40", 3),
