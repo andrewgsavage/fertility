@@ -31,7 +31,7 @@ participation across ages 17–30, not just 18-year-olds.
 
 ## 1965–79 birth cohorts
 
-The dashed vertical lines above mark the 1969 and 1975 birth cohorts, bracketing the
+The dashed vertical lines above mark the 1968 and 1975 birth cohorts, bracketing the
 steepest rise in HE participation. For those same cohorts, here's the ASFR / conditional
 first- and second-birth / cumulative-birth panel from [Historic Trends](historic-trends).
 

@@ -13,6 +13,7 @@ ENTRY_AGE, since these participation-rate measures don't carry a birth year
 of their own.
 """
 
+import bisect
 import pathlib
 
 import plotly.colors as pc
@@ -101,6 +102,34 @@ def _to_cohort(series):
     return [(year - ENTRY_AGE, pct) for year, pct in series]
 
 
+ARROW_YEARS = (1968, 1975)
+
+
+def _interp(series, x):
+    """Linearly interpolate y at x from a sorted [(x, y), ...] series --
+    the digitized API series is only at ~2-year resolution, so ARROW_YEARS
+    won't always land on an exact digitized point."""
+    exact = dict(series)
+    if x in exact:
+        return exact[x]
+    xs = [px for px, _ in series]
+    i = bisect.bisect_left(xs, x)
+    (x0, y0), (x1, y1) = series[i - 1], series[i]
+    return y0 + (x - x0) / (x1 - x0) * (y1 - y0)
+
+
+def _add_trend_arrow(fig, series, x0, x1):
+    """Annotation arrow from (x0, y at x0) to (x1, y at x1) on a single
+    trace's data (mirrors the era call-outs in historic_trends_uk.py,
+    simplified for this figure's single, non-subplot axes)."""
+    y0, y1 = _interp(series, x0), _interp(series, x1)
+    fig.add_annotation(
+        x=x1, y=y1, ax=x0, ay=y0, xref="x", yref="y", axref="x", ayref="y",
+        showarrow=True, arrowhead=3, arrowsize=1, arrowwidth=2, arrowcolor="black",
+        text="",
+    )
+
+
 def plot(childless_by_age):
     fig = go.Figure()
 
@@ -140,8 +169,11 @@ def plot(childless_by_age):
         ),
     )
 
-    for year in (1969, 1975):
+    for year in ARROW_YEARS:
         fig.add_vline(x=year, line=dict(width=1, color="#999999", dash="dash"))
+
+    for series in (approx_cohort, childless_by_age[30], childless_by_age[35]):
+        _add_trend_arrow(fig, series, *ARROW_YEARS)
 
     fig.update_xaxes(title_text="Estimated year of birth", range=X_RANGE)
     fig.update_yaxes(title_text="%", range=[0, 100])
