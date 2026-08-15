@@ -118,19 +118,26 @@ def _interp(series, x):
     return y0 + (x - x0) / (x1 - x0) * (y1 - y0)
 
 
-def _add_trend_arrow(fig, series, x0, x1, color, y_offset=0):
+def _add_trend_arrow(fig, series, x0, x1, color, label, y_offset=0):
     """Annotation arrow from (x0, y at x0) to (x1, y at x1) on a single
     trace's data (mirrors the era call-outs in historic_trends_uk.py,
     simplified for this figure's single, non-subplot axes). y_offset shifts
     both ends vertically by the same amount, to keep overlapping arrows
-    (e.g. the two childless-at-N series) visually separated; color matches
-    the underlying trace's line color rather than a flat black, so each
-    arrow reads as belonging to its trace."""
-    y0, y1 = _interp(series, x0) + y_offset, _interp(series, x1) + y_offset
+    (e.g. the childless-at-N series) visually separated; color matches the
+    underlying trace's line color rather than a flat black, so each arrow
+    reads as belonging to its trace. label is a format string taking the
+    real (un-offset) percentage-point change as {pp}."""
+    y0_real, y1_real = _interp(series, x0), _interp(series, x1)
+    y0, y1 = y0_real + y_offset, y1_real + y_offset
     fig.add_annotation(
         x=x1, y=y1, ax=x0, ay=y0, xref="x", yref="y", axref="x", ayref="y",
         showarrow=True, arrowhead=3, arrowsize=1, arrowwidth=2, arrowcolor=color,
         text="",
+    )
+    fig.add_annotation(
+        x=(x0 + x1) / 2, y=max(y0, y1), xref="x", yref="y", yanchor="bottom",
+        showarrow=False, text=label.format(pp=y1_real - y0_real),
+        font=dict(size=11, color=color), bgcolor="rgba(255,255,255,0.75)",
     )
 
 
@@ -176,10 +183,18 @@ def plot(childless_by_age):
     for year in ARROW_YEARS:
         fig.add_vline(x=year, line=dict(width=1, color="#999999", dash="dash"))
 
-    _add_trend_arrow(fig, approx_cohort, *ARROW_YEARS, color="#999999", y_offset=-3)
-    for age in (30, 35):
+    _add_trend_arrow(
+        fig, approx_cohort, *ARROW_YEARS, color="#999999", y_offset=-6,
+        label="{pp:.1f}pp rise in HE participation",
+    )
+    CHILDLESS_ARROWS = {
+        30: ("Rise ({pp:.1f}pp) in Childless at 30", 3),
+        35: ("Small rise ({pp:.1f}pp) in Childless at 35", 3),
+        40: ("Static ({pp:.1f}pp) in Childless at 40", 0),
+    }
+    for age, (label, y_offset) in CHILDLESS_ARROWS.items():
         color = AGE_COLORS[AGES.index(age) % len(AGE_COLORS)]
-        _add_trend_arrow(fig, childless_by_age[age], *ARROW_YEARS, color=color, y_offset=3)
+        _add_trend_arrow(fig, childless_by_age[age], *ARROW_YEARS, color=color, label=label, y_offset=y_offset)
 
     fig.update_xaxes(title_text="Estimated year of birth", range=X_RANGE)
     fig.update_yaxes(title_text="%", range=[0, 100])
