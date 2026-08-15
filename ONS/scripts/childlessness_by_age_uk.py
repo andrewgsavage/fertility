@@ -118,7 +118,7 @@ def _interp(series, x):
     return y0 + (x - x0) / (x1 - x0) * (y1 - y0)
 
 
-def _add_trend_arrow(fig, series, x0, x1, color, label, y_offset=0):
+def _add_trend_arrow(fig, series, x0, x1, color, label, y_offset=0, label_before=True):
     """Annotation arrow from (x0, y at x0) to (x1, y at x1) on a single
     trace's data (mirrors the era call-outs in historic_trends_uk.py,
     simplified for this figure's single, non-subplot axes). y_offset shifts
@@ -126,7 +126,11 @@ def _add_trend_arrow(fig, series, x0, x1, color, label, y_offset=0):
     (e.g. the childless-at-N series) visually separated; color matches the
     underlying trace's line color rather than a flat black, so each arrow
     reads as belonging to its trace. label is a format string taking the
-    real (un-offset) percentage-point change as {pp}."""
+    real (un-offset) percentage-point change as {pp}. label_before puts the
+    label to the left of the arrow (right-anchored text ending at the
+    arrow's tail) when True, or to the right (left-anchored text starting
+    at the arrow's head) when False -- so the label sits clear of the
+    arrow rather than straddling it."""
     y0_real, y1_real = _interp(series, x0), _interp(series, x1)
     y0, y1 = y0_real + y_offset, y1_real + y_offset
     fig.add_annotation(
@@ -134,8 +138,9 @@ def _add_trend_arrow(fig, series, x0, x1, color, label, y_offset=0):
         showarrow=True, arrowhead=3, arrowsize=1, arrowwidth=2, arrowcolor=color,
         text="",
     )
+    label_x, label_y, xanchor = (x0, y0, "right") if label_before else (x1, y1, "left")
     fig.add_annotation(
-        x=(x0 + x1) / 2, y=max(y0, y1), xref="x", yref="y", yanchor="bottom",
+        x=label_x, y=label_y, xref="x", yref="y", xanchor=xanchor, yanchor="bottom",
         showarrow=False, text=label.format(pp=y1_real - y0_real),
         font=dict(size=11, color=color), bgcolor="rgba(255,255,255,0.75)",
     )
@@ -185,7 +190,7 @@ def plot(childless_by_age):
 
     _add_trend_arrow(
         fig, approx_cohort, *ARROW_YEARS, color="#999999", y_offset=-6,
-        label="{pp:.1f}pp rise in HE participation",
+        label="{pp:.1f}pp rise in HE participation", label_before=False,
     )
     CHILDLESS_ARROWS = {
         30: ("Rise ({pp:.1f}pp) in Childless at 30", 3),
