@@ -192,7 +192,7 @@ def plot(childless_by_age):
     _add_trend_arrow(
         fig, approx_cohort, *ARROW_YEARS, color="#999999", y_offset=-6,
         label="{pp:.1f}pp rise in HE participation", label_before=False,
-        label_dx=-2, label_dy=-10,
+        label_dx=-2, label_dy=-15,
     )
     CHILDLESS_ARROWS = {
         25: ("Rise ({pp:.1f}pp) in Childless at 25", 3),
