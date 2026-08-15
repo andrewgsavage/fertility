@@ -29,6 +29,16 @@ participation across ages 17–30, not just 18-year-olds.
 <iframe src="../_static/ons/childlessness_by_age_uk.html" style="width: 100%; aspect-ratio: 11 / 6; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
+## 1965–79 birth cohorts
+
+The dashed vertical lines above mark the 1969 and 1975 birth cohorts, bracketing the
+steepest rise in HE participation. For those same cohorts, here's the ASFR / conditional
+first- and second-birth / cumulative-birth panel from [Historic Trends](historic-trends).
+
+```{raw} html
+<iframe src="../_static/ons/historic_trends_uk_1965_1979.html" style="width: 100%; height: 400px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+
 ```{note}
 Childlessness: Office for National Statistics, "Childbearing for women born in different
 years, England and Wales", Table 3 (percentage of women by number of live-born children,
