@@ -80,7 +80,7 @@ OFFICIAL_EDUCATION = [
 ]
 
 AGE_COLORS = pc.qualitative.Safe
-X_RANGE = [1920, 2005]
+X_RANGE = [1945, 2005]
 
 
 def childlessness_by_age():
@@ -195,7 +195,7 @@ def plot(childless_by_age):
     CHILDLESS_ARROWS = {
         30: ("Rise ({pp:.1f}pp) in Childless at 30", 3),
         35: ("Small rise ({pp:.1f}pp) in Childless at 35", 3),
-        40: ("Static ({pp:.1f}pp) in Childless at 40", 0),
+        40: ("Static ({pp:.1f}pp) in Childless at 40", 3),
     }
     for age, (label, y_offset) in CHILDLESS_ARROWS.items():
         color = AGE_COLORS[AGES.index(age) % len(AGE_COLORS)]
