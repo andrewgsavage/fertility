@@ -118,14 +118,18 @@ def _interp(series, x):
     return y0 + (x - x0) / (x1 - x0) * (y1 - y0)
 
 
-def _add_trend_arrow(fig, series, x0, x1):
+def _add_trend_arrow(fig, series, x0, x1, color, y_offset=0):
     """Annotation arrow from (x0, y at x0) to (x1, y at x1) on a single
     trace's data (mirrors the era call-outs in historic_trends_uk.py,
-    simplified for this figure's single, non-subplot axes)."""
-    y0, y1 = _interp(series, x0), _interp(series, x1)
+    simplified for this figure's single, non-subplot axes). y_offset shifts
+    both ends vertically by the same amount, to keep overlapping arrows
+    (e.g. the two childless-at-N series) visually separated; color matches
+    the underlying trace's line color rather than a flat black, so each
+    arrow reads as belonging to its trace."""
+    y0, y1 = _interp(series, x0) + y_offset, _interp(series, x1) + y_offset
     fig.add_annotation(
         x=x1, y=y1, ax=x0, ay=y0, xref="x", yref="y", axref="x", ayref="y",
-        showarrow=True, arrowhead=3, arrowsize=1, arrowwidth=2, arrowcolor="black",
+        showarrow=True, arrowhead=3, arrowsize=1, arrowwidth=2, arrowcolor=color,
         text="",
     )
 
@@ -172,8 +176,10 @@ def plot(childless_by_age):
     for year in ARROW_YEARS:
         fig.add_vline(x=year, line=dict(width=1, color="#999999", dash="dash"))
 
-    for series in (approx_cohort, childless_by_age[30], childless_by_age[35]):
-        _add_trend_arrow(fig, series, *ARROW_YEARS)
+    _add_trend_arrow(fig, approx_cohort, *ARROW_YEARS, color="#999999", y_offset=-3)
+    for age in (30, 35):
+        color = AGE_COLORS[AGES.index(age) % len(AGE_COLORS)]
+        _add_trend_arrow(fig, childless_by_age[age], *ARROW_YEARS, color=color, y_offset=3)
 
     fig.update_xaxes(title_text="Estimated year of birth", range=X_RANGE)
     fig.update_yaxes(title_text="%", range=[0, 100])
