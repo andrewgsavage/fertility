@@ -140,6 +140,9 @@ def plot(childless_by_age):
         ),
     )
 
+    for year in (1969, 1975):
+        fig.add_vline(x=year, line=dict(width=1, color="#999999", dash="dash"))
+
     fig.update_xaxes(title_text="Estimated year of birth", range=X_RANGE)
     fig.update_yaxes(title_text="%", range=[0, 100])
     fig.update_layout(
