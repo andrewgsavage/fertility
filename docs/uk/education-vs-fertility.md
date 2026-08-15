@@ -7,23 +7,16 @@ participation rate — converted from the calendar year it was measured in to an
 *estimated* birth cohort by subtracting 18 (the most common age of first entry to
 higher education), so both lines sit on a shared "generation" x-axis.
 
-The education line has a real discontinuity in how confident it is: no single official
-UK source publishes a participation rate for 1950–present, so it's stitched together from
-several sources. The dotted grey segment (estimated birth cohorts 1932–1983) is the **Age
-Participation Index (API)** — the pre-2001 measure of UK-domiciled under-21 entrants to
-full-time higher education, as a proportion of the average 18/19-year-old population, and
-covers the whole series end to end (API was discontinued in 2001). Most of it (estimated
-birth cohorts 1943–1979, i.e. 1961–1997) is digitized from a published chart at 2-year
-resolution — real data, but read off a figure rather than an original table, so treat
-individual points as approximate; the endpoints (1950, and 1999/2001) are read from two
-further, separate charts — see the citations below. The 1999–2001 points on API and the
-solid dark **Higher Education Initial Participation Rate (HEIPR)** segment (which starts
-in 1999/00, estimated birth cohort 1981) genuinely overlap for a couple of years — both
-measures were published side by side during the real transition between them, so that's
-not a chart artifact. HEIPR replaced API with a broader definition (17–30 year olds, not
-just under-21s). See the citations below for exactly where each point comes from, and
-note the cohort conversion is a single-age approximation — HEIPR itself sums
-participation across ages 17–30, not just 18-year-olds.
+The education line has two segments, because the measure itself changed. The dotted grey
+segment (estimated birth cohorts 1932–1983) is the **Age Participation Index (API)** —
+the pre-2001 measure of UK-domiciled under-21 entrants to full-time higher education, as
+a proportion of the average 18/19-year-old population. The solid dark segment is the
+**Higher Education Initial Participation Rate (HEIPR)**, which starts in 1999/00
+(estimated birth cohort 1981) and replaced API with a broader definition covering 17–30
+year olds, not just under-21s. The two genuinely overlap for a couple of years around the
+transition — both measures were published side by side at the time, so that's not a chart
+artifact. The cohort conversion is also a single-age approximation throughout: HEIPR
+itself sums participation across ages 17–30, not just 18-year-olds.
 
 ```{raw} html
 <iframe src="../_static/ons/childlessness_by_age_uk.html" style="width: 100%; aspect-ratio: 11 / 6; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
