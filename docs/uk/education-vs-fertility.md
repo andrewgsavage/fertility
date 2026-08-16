@@ -1,9 +1,8 @@
 # Education vs Fertility
 
-The ONS and the resolution foundation both mention a 
+The ONS expert demographic opinion and the resolution foundation both mention the potential for a shift to women having children later in life. This is based on the cohorts of the late 60s/early 70s where there was a shift from 28 for those born in the early-1950s to 32 for those born in the 1970s.
 
-Did the expansion of UK higher education line up with women having children later — or
-not having them at all? 
+
 
 ```{raw} html
 <iframe src="../_static/ons/childlessness_by_age_uk.html" style="width: 100%; aspect-ratio: 11 / 6; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
@@ -13,6 +12,51 @@ not having them at all?
 ```{note}
 Age Participation Index (API) and Higher Education Initial Participation Rate (HEIPR) are measures of entry to full-time higher education. HEIPR replaced API. These values have been plotted assuming students enter univeristy at 18.
 ```
+
+## Quotes on later motherhood
+
+::::{tab-set}
+
+:::{tab-item} Resolution Foundation
+> A larger share of women belonged to a group – graduates – that have tended to have children
+> later. But behaviour also changed within this group, with graduates postponing motherhood
+> further over time. As a result, the median age at first birth among graduate women rose from
+> 28 for those born in the early-1950s to 32 for those born in the 1970s. Among women who
+> didn't make it to or through higher education, there was very little change in childbearing
+> behaviour for a long time – the typical age at which non-graduate women had their first child
+> remained at around 25-26 years across cohorts.
+
+C McCurdy, [*Bye bye baby: Assessing Britain's falling birth rate since the early 2010s*](https://www.resolutionfoundation.org/publications/bye-bye-baby/), Resolution Foundation, April 2026, p.14.
+:::
+
+:::{tab-item} ONS, 2024-based
+> that fertility may decrease in the short term, as women delay having children, followed by a
+> rise from the late 2020s and early 2030s, reflecting an expected recuperation in fertility as
+> women have children at older ages
+
+ONS, ["National population projections, fertility assumptions: 2024-based"](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/methodologies/nationalpopulationprojectionsfertilityassumptions2024based).
+:::
+
+:::{tab-item} ONS, 2022-based
+> that fertility may decline in the short term as women delay having children, followed by a
+> rise from the late 2020s/early 2030s, reflecting an expected recuperation in fertility as women
+> have children at older ages
+
+ONS, ["National population projections, fertility assumptions: 2022-based"](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/methodologies/nationalpopulationprojectionsfertilityassumptions2022based).
+:::
+
+:::{tab-item} ONS, 2018-based
+> Recent data have suggested that there is no evidence that postponement of childbirth has
+> finished and, as such, the panel felt that a decline in the assumed TFR could be justified.
+> Future effects of technology may also lead to a shift in timings, with women postponing until
+> later in the childbearing period. This may lead to a decline in overall TFR in the short term
+> but potentially a catch-up in the long term.
+
+ONS, ["National population projections: fertility assumptions, 2018-based"](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/methodologies/nationalpopulationprojectionsfertilityassumptions2018based).
+:::
+
+::::
+
 ## 1965–79 birth cohorts
 
 The dashed vertical lines above mark the 1968 and 1975 birth cohorts, bracketing the
