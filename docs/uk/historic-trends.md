@@ -1,6 +1,46 @@
 # Historic Trends
 
-The same charts as on [Later Births](later-births) — plain ASFR, conditional first/second-birth ASFR, and cumulative first/second-birth % — consolidated into a single figure, one row of panels sharing a y-axis wherever the underlying scale matches (ASFR and the two conditional panels share 0–25%; the two cumulative panels share 0–100%). Drag either handle to narrow the cohorts shown.
+On this page, the ONS period data [from Conditional ASFR](cond-asfr) is converted to birth cohorts and plotted, and key trends between cohorts are examined. Three types of metrics are plotted:
+
+The Age Specific Fertility Rate (ASFR) gives the probability any woman of a given age in a birth cohort will have a child. This is shown but not commented on as it's more instructive to look at the first and second birth metrics.
+
+The Conditional Age Specific Fertility Rate (Cond. N), by birth order, gives the probability any woman with n-1 children goes on to have their nth child.
+
+The Cumulative fertility rates (Cum. N), by birth order, give the cumulative probability of a woman having >=n children.
+
+Cohorts have been grouped together based on where these trends change and plotted to show these changes. These groups do not necessarily correspond to social generations!
+
+## Cohort Plots
+
+Let's start with the baby boomers. This generation is characterised by first birth fertility rates reducing up to age 32, then increasing later in life. Second births followed a similar trend. These trends gave fewer births at the end of motherhood.
+
+
+```{raw} html
+<iframe src="../_static/ons/historic_trends_uk_1945_1965.html" style="width: 100%; height: 400px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+
+The 1965-79 cohorts saw a slightly different trend in first birth fertility; first birth fertility rates reducing up to age 30 and later ages. This caused the peak in the Cond. 1st rate to shift later AND increase in magnitude (likelihood), resulting in more first births overall. Second birth fertility rates fell at ages below 35, and stayed stable at later ages. Combined with the later first births this led to fewer second births.
+
+```{raw} html
+<iframe src="../_static/ons/historic_trends_uk_1965_1979.html" style="width: 100%; height: 400px; display: block; border: 1px solid var(--color-background-border); margin-top: 8px;" loading="lazy"></iframe>
+```
+
+The 1979-1989 cohorts saw very stable fertility rates compared to other cohorts.
+
+```{raw} html
+<iframe src="../_static/ons/historic_trends_uk_1979_1989.html" style="width: 100%; height: 400px; display: block; border: 1px solid var(--color-background-border); margin-top: 8px;" loading="lazy"></iframe>
+```
+
+Post-1989 cohorts have seen a significant reduction in fertility in their early years, and the trend shows no sign of slowing; At every age each successive cohort has fewer children than the previous cohort. There are no signs that the peak of the Cond. 1st rate will shift to a later year thus far.
+
+```{raw} html
+<iframe src="../_static/ons/historic_trends_uk_1989_.html" style="width: 100%; height: 400px; display: block; border: 1px solid var(--color-background-border); margin-top: 8px;" loading="lazy"></iframe>
+```
+
+
+## All Cohorts
+
+
 
 ```{raw} html
 <style>
@@ -37,17 +77,6 @@ The same charts as on [Later Births](later-births) — plain ASFR, conditional f
     maxInput.addEventListener("input", applyRange);
   })();
 </script>
-```
-
-## By era
-
-The same figure, fixed to four birth-cohort eras for side-by-side comparison instead of one slider-driven chart.
-
-```{raw} html
-<iframe src="../_static/ons/historic_trends_uk_1945_1965.html" style="width: 100%; height: 400px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
-<iframe src="../_static/ons/historic_trends_uk_1965_1979.html" style="width: 100%; height: 400px; display: block; border: 1px solid var(--color-background-border); margin-top: 8px;" loading="lazy"></iframe>
-<iframe src="../_static/ons/historic_trends_uk_1979_1989.html" style="width: 100%; height: 400px; display: block; border: 1px solid var(--color-background-border); margin-top: 8px;" loading="lazy"></iframe>
-<iframe src="../_static/ons/historic_trends_uk_1989_.html" style="width: 100%; height: 400px; display: block; border: 1px solid var(--color-background-border); margin-top: 8px;" loading="lazy"></iframe>
 ```
 
 ```{note}
