@@ -195,6 +195,7 @@ def plot(childless_by_age):
         label_dx=-2, label_dy=-15,
     )
     CHILDLESS_ARROWS = {
+        20: ("Static ({pp:.1f}pp) in Childless at 20", 3),
         25: ("Rise ({pp:.1f}pp) in Childless at 25", 3),
         30: ("Rise ({pp:.1f}pp) in Childless at 30", 3),
         35: ("Small rise ({pp:.1f}pp) in Childless at 35", 3),
@@ -207,7 +208,7 @@ def plot(childless_by_age):
     fig.update_xaxes(title_text="Estimated year of birth", range=X_RANGE)
     fig.update_yaxes(title_text="%", range=[0, 100])
     fig.update_layout(
-        title=f"Childlessness by age vs HE participation (entry age {ENTRY_AGE}), by estimated birth cohort",
+        title="Childlessness by age vs HE participation",
         template="plotly_white", autosize=True,
         legend=dict(orientation="v", x=1.02, xanchor="left", y=1, yanchor="top"),
         margin=dict(r=140),

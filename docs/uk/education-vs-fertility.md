@@ -4,17 +4,6 @@ The ONS expert demographic opinion and the resolution foundation both mention th
 
 
 
-```{raw} html
-<iframe src="../_static/ons/childlessness_by_age_uk.html" style="width: 100%; aspect-ratio: 11 / 6; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
-```
-
-
-```{note}
-Age Participation Index (API) and Higher Education Initial Participation Rate (HEIPR) are measures of entry to full-time higher education. HEIPR replaced API. These values have been plotted assuming students enter univeristy at 18.
-```
-
-## Quotes on later motherhood
-
 ::::{tab-set}
 
 :::{tab-item} Resolution Foundation
@@ -57,15 +46,32 @@ ONS, ["National population projections: fertility assumptions, 2018-based"](http
 
 ::::
 
-## 1965–79 birth cohorts
+## Previous shifts
 
-The dashed vertical lines above mark the 1968 and 1975 birth cohorts, bracketing the
-steepest rise in HE participation. For those same cohorts, here's the ASFR / conditional
-first- and second-birth / cumulative-birth panel from [Historic Trends](historic-trends).
+It was only between the 1965-79 cohorts where the peak of the Cond. 1st rate shifted later AND increased in magnitude (likelihood), resulting in more first births overall. see [Historic Trends](historic-trends).
 
 ```{raw} html
 <iframe src="../_static/ons/historic_trends_uk_1965_1979.html" style="width: 100%; height: 400px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+## Education
+
+During this time period there was a large rise in university entrants. Graduates have children later in life (see [Bye Bye Baby?](childlessness-by-education)), which appears responsible for the later first births among the entire population.
+
+Between those born in 1968 and 1975, HE participation rose 15.7pp. The gap in childlessness was negligible at 20 (+0.3pp), and increased at 25 (+4.5pp) and 30 (+6.4pp) as the population of graduates increased and had later births. After age 30, where graduates are more likely to have children, the gap starts closing with a smaller gap at 35 (+1.9pp) and negligible gap by 40 (+0.4pp).
+
+```{raw} html
+<iframe src="../_static/ons/childlessness_by_age_uk.html" style="width: 100%; aspect-ratio: 11 / 6; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+
+```{note}
+Age Participation Index (API) and Higher Education Initial Participation Rate (HEIPR) are measures of entry to full-time higher education. HEIPR replaced API. These values have been plotted assuming students enter university at 18.
+```
+
+## Present day
+
+Current cohorts are seeing a decline in early fertility comparable to the decline seen in baby boomers, which was followed by the increase in late fertility described above. There hasn't been an increase in university entrants like seen in the 1965-79 cohorts, which would give a reason for delaying childbirth, justifying that assumption. Furthermore the decline in fertility also occurs [among graduates](childlessness-by-education), who have fewer fertile years so are likely to see fewer births at the end of their childbearing years. 
+
+**I see no evidence to justify delaying childbirth as the default assumption over not having children.**
 
 ```{note}
 Childlessness: Office for National Statistics, "Childbearing for women born in different
