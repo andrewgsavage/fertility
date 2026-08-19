@@ -118,7 +118,7 @@ Childlessness fell from 42% in 1999 to 33% in 2011, a 10pp decline. It then rose
 **The decline in coupling and increase in living with parents contribute to the increase in childlessness. Housing costs show limited relation to the decline in childlessness.**
 
 ```{note}
-Data digitized from the Resolution Foundation's [Bye Bye Baby](https://www.resolutionfoundation.org/publications/bye-bye-baby/) report, Figure 6. See `resolution/scripts/plot_grads_nongrads.py` and `resolution/data/grads.csv` / `resolution/data/nongrads.csv`.
+Data digitized from the Resolution Foundation's [Bye Bye Baby](https://www.resolutionfoundation.org/publications/bye-bye-baby/) report, Figure 6.
 
-The shared-axis chart and slope table use the digitized Figures 6a, 7a, and 8 data described in [Bye Bye Baby](../dataisugly/bye-bye-baby). See `resolution/scripts/plot_mashup.py`.
+The shared-axis chart and slope table use the digitized Figures 6a, 7a, and 8 data described in [Bye Bye Baby](../dataisugly/bye-bye-baby).
 ```

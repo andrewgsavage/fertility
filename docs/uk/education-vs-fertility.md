@@ -109,6 +109,5 @@ Participation Index (Great Britain, under-21 entrants) to 2001, then HEIPR (Engl
 indicative of the overall trend rather than a single consistent metric. It's also
 discontinued after 2017/18 here: later years moved to a cohort-based measure (CHEP-25)
 not directly comparable to HEIPR — the two segments aren't directly splice-able into
-one continuous series. See `ONS/scripts/childlessness_by_age_uk.py` for the full
-per-point sourcing.
+one continuous series.
 ```
