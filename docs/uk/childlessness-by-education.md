@@ -3,7 +3,7 @@
 The Resolution Foundation's report [Bye Bye Baby](https://www.resolutionfoundation.org/publications/bye-bye-baby/) ([PDF](https://www.resolutionfoundation.org/app/uploads/2026/03/Bye-bye-baby.pdf)) has a few conclusions that appear to be artefacts of how the data has been presented. [Reanalysing the data](../dataisugly/bye-bye-baby) gives other conclusions.
 
 
-#### Since 2011 there has been a sharp rise in the proportion of nongraduates aged 25-29 who haven’t had a child
+**Since 2011 there has been a sharp rise in the proportion of nongraduates aged 25-29 who haven’t had a child**
 
 This is correct but misleading. It is an artefact of using childlessness rates rather than fertility or motherhood rates. First birth fertility rates in both graduates and non-graduates have declined similarly. The proportion of 25-29 year olds with a child fell by practically the same amount for graduates (-33%) as for non-graduates (-30%) over 2011-2023:
 
@@ -27,7 +27,7 @@ This is correct but misleading. It is an artefact of using childlessness rates r
 
 ::::
 
-#### Graduate women set the trend for delay; now non-graduate women appear to be following suit
+**Graduate women set the trend for delay; now non-graduate women appear to be following suit**
 
 
 
@@ -60,7 +60,7 @@ The decline visible in the non-graduate 25-29 group for mothers born from ~1984 
 Graduate fertility rates were static until 2014, so it's too early to tell whether graduate childless rates will show the same follow-through, since those cohorts haven't reached 30-34 yet.
 
 
-#### The rise in childlessness among non-graduates is likely related to the decline in partnership rates and changes to housing tenure
+**The rise in childlessness among non-graduates is likely related to the decline in partnership rates and changes to housing tenure**
 
 The report's narrative links the non-graduate childlessness rise to two other trends it shows separately: falling coresidential partnership (Figure 7) and worsening housing tenure (Figure 8). Plotting all three on a shared year axis for the group the report focuses on — non-graduates aged 25-29 — with a dotted line at 2011, the year the report's own title marks as when the "sharp rise" began, tests whether the timing actually lines up:
 
