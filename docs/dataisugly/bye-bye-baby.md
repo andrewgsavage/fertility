@@ -127,7 +127,7 @@ See [Bye Bye Baby?](../uk/childlessness-by-education) for what the shared-axis d
 ```{note}
 Figures 4, 5, 6, 7, and 8 (originals, including cropped sub-panels) are reproduced from the Resolution Foundation's [Bye Bye Baby](https://www.resolutionfoundation.org/publications/bye-bye-baby/) report ([PDF](https://www.resolutionfoundation.org/app/uploads/2026/03/Bye-bye-baby.pdf)), included here for commentary and comparison against the recoloured/re-sliced versions above; copyright remains with the Resolution Foundation.
 
-The recoloured charts' data is digitized from Figure 6. See `resolution/scripts/plot_grads_nongrads.py` and `resolution/data/grads.csv` / `resolution/data/nongrads.csv`.
+The recoloured charts' data is digitized from Figure 6.
 
-The "Shared x" mashup is redrawn from data digitized off Figures 6a, 7a, and 8 (colour-matched pixel extraction from the source images). See `resolution/scripts/plot_mashup.py` and `resolution/data/fig7a_nongrad.csv` / `resolution/data/fig8_nongrad.csv`.
+The "Shared x" mashup is redrawn from data digitized off Figures 6a, 7a, and 8 (colour-matched pixel extraction from the source images).
 ```

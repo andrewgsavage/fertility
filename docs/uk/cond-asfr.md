@@ -50,6 +50,5 @@ age and year of birth). Available at
 HFD has no conditional-ASFR tables for the UK, so this is reconstructed from that data:
 at each age, the conditional (parity-progression) rate is estimated as a discrete
 hazard on the cumulative % of the cohort with at least 1 / at least 2 children, then
-re-sliced from cohort into period (calendar) year to match HFD's chart convention. See
-`ONS/scripts/cond_asfr_uk_ons.py`.
+re-sliced from cohort into period (calendar) year to match HFD's chart convention.
 ```

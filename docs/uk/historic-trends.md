@@ -88,6 +88,4 @@ Office for National Statistics, "Childbearing for women born in different years,
 England and Wales", Table 3 (percentage of women by number of live-born children, by
 age and year of birth). Available at
 [ons.gov.uk](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/datasets/childbearingforwomenbornindifferentyearsreferencetable).
-
-See `ONS/scripts/historic_trends_uk.py`.
 ```

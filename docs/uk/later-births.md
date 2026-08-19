@@ -49,7 +49,7 @@ Each chart below is colored by birth cohort — one line per cohort, tracing tha
 ```{note}
 HFD. Human Fertility Database. Max Planck Institute for Demographic Research (Germany)
 and Vienna Institute of Demography (Austria). Available at [www.humanfertility.org](https://www.humanfertility.org/).
-Data downloaded on 2026-07-13. See `HFD/scripts/asfr_uk.py`.
+Data downloaded on 2026-07-13.
 ```
 
 ```{note}
@@ -57,5 +57,4 @@ Office for National Statistics, "Childbearing for women born in different years,
 England and Wales", Table 3 (percentage of women by number of live-born children, by
 age and year of birth). Available at
 [ons.gov.uk](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/datasets/childbearingforwomenbornindifferentyearsreferencetable).
-See `ONS/scripts/cond_asfr_uk_ons.py`.
 ```
