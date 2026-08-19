@@ -38,7 +38,7 @@ In the 20-24 and 25-29 age groups, the sharpest declines in fertility (drops lar
 :::
 ::::
 
-# Housing
+## Housing
 
 High housing costs correlate with lower fertility rates. This is most clearly seen when looking at 25-29 year olds. This correlation is also seen in the 20-24 age bracket, though university students distort this as they have much lower fertility rates, brining down the fertility in university towns and cities. In the 35-39 age bracket this trend reverses, however the ASFRs in the expensive areas are low (approx 80) compared to the highs (approx 120) seen in cheaper areas in other age brackets. The population of 35-39 year olds in these areas is lower than 25-29 year olds resulting in some of the lowest overall fertility rates in the country.
 
