@@ -13,6 +13,10 @@ From this it is clear the factors causing the global fertility decline must affe
 
 Factors that make it less likely for people to form couples, or factors that make it less likely for a couple to have their first child would explain these trends.
 
+The chart above shows each country's full conditional ASFR1 curve every year; the chart below distills each of those curves down to a single point — its peak (the age of highest first-birth probability, and how high that probability gets) — and traces how that point has moved year by year. Color identifies the country, and opacity encodes year (faint = older, solid = most recent), so each trajectory can be read as a path moving forward through time.
+
+<iframe id="asfr1-peak-trajectory-frame" src="../_static/hfd/asfr1_peak_trajectory.html" style="width: 100%; aspect-ratio: 4 / 3; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+
 ```{note}
 HFD. Human Fertility Database. Max Planck Institute for Demographic Research (Germany)
 and Vienna Institute of Demography (Austria). Available at [www.humanfertility.org](https://www.humanfertility.org/).
