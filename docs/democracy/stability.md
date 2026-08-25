@@ -110,9 +110,3 @@ As the voter base becomes increasingly old, it becomes increasingly difficult to
 Politicians create policy to win votes and have a stable economy in the short term. Fertility plays out over the long term, much longer than a politician's tenure, so is very difficult to prioritise - consider that it takes 20 years for a child born today to become productive; a child does not have a payback within a retiree's lifetime so does not benefit them. The policies required to increase fertility generally cost money. Furthermore, providing benefits that the elderly did not receive themselves is a difficult sell.
 
 This is a disastrous feedback loop. The population ages, requiring more spending on pensions and healthcare for the same living standards as previous generations. Fewer workers must burden these costs, so these generations have lower standards. It becomes increasingly difficult to shift spending towards fertility policies due to the large elderly population who will see no benefit from such policies, and may see disbenefit through lower current day spending.
-
-Buchmeier & Vogt identify three ways this plays out in an aging democracy: **participation effects** (younger voters become a numerical minority and turn out less), **representation effects** (younger people are underrepresented among MPs and candidates), and **policy effects** (a bias toward policies, such as social and fiscal policy, that favour the older majority). Using Japan - the country with the oldest electorate in the world - as a case study, they estimate that by 2060 nearly four in five votes will come from voters aged 50 or older.
-
-```{note}
-Y Buchmeier and G Vogt, ["The Aging Democracy: Demographic Effects, Political Legitimacy, and the Quest for Generational Pluralism"](https://doi.org/10.1017/S1537592723000981), *Perspectives on Politics* 22(1), March 2024, pp.168-181.
-```
