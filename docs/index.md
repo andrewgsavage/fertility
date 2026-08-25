@@ -7,5 +7,6 @@
 hfd/index
 uk/index
 dataisugly/index
+democracy/index
 literature-review
 ```
