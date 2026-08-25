@@ -5,4 +5,6 @@
 :hidden:
 
 first-vs-second-birth
+../owid/tfr-derivative
+../owid/tfr-threshold
 ```

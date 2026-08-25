@@ -25,15 +25,16 @@ html_static_path = ["_static"]
 
 # --- Copy generated outputs into _static so pages can reference them ---
 #
-# HFD/outputs, ONS/outputs, and resolution/outputs are the git-tracked,
-# canonical outputs of the analysis scripts. They are copied into
-# docs/_static/<name> at build time (not duplicated in git) so pages can
-# reference them as ordinary static assets.
+# HFD/outputs, ONS/outputs, resolution/outputs, and OWID/outputs are the
+# git-tracked, canonical outputs of the analysis scripts. They are copied
+# into docs/_static/<name> at build time (not duplicated in git) so pages
+# can reference them as ordinary static assets.
 _REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent
 _OUTPUT_DIRS = {
     "hfd": _REPO_ROOT / "HFD" / "outputs",
     "ons": _REPO_ROOT / "ONS" / "outputs",
     "resolution": _REPO_ROOT / "resolution" / "outputs",
+    "owid": _REPO_ROOT / "OWID" / "outputs",
 }
 
 
