@@ -17,22 +17,28 @@ def _slug(name):
 
 
 class RegionTabsDirective(SphinxDirective):
-    """A tab-item per HFD.scripts.country_names.COUNTRY_REGIONS entry,
-    each showing that region's conditional-ASFR grid image (built by
-    HFD/scripts/cond_asfr_region_grid.py). Built live at Sphinx build time
-    so the page always matches COUNTRY_REGIONS without any generated
-    markdown being written to disk."""
+    """A tab-item per HFD.scripts.country_names.COUNTRY_REGIONS entry, each
+    showing that region's grid image for some per-region chart (built by one
+    of the HFD/scripts/*_region_grid.py scripts, named
+    "{image_prefix}_{region}.png"). Built live at Sphinx build time so the
+    page always matches COUNTRY_REGIONS without any generated markdown being
+    written to disk.
+
+    Arguments: the image filename prefix (e.g. "cond_asfr_region"), then the
+    alt-text template (the rest of the line, with "{region}" substituted)."""
 
     has_content = False
-    required_arguments = 0
+    required_arguments = 2
+    final_argument_whitespace = True
 
     def run(self):
+        image_prefix, alt_template = self.arguments
         lines = ["::::{tab-set}", ""]
         for region in COUNTRY_REGIONS:
             lines += [
                 f":::{{tab-item}} {region}",
-                f"```{{image}} /_static/hfd/cond_asfr_region_{_slug(region)}.png",
-                f":alt: Conditional ASFR for first vs second births, {region}",
+                f"```{{image}} /_static/hfd/{image_prefix}_{_slug(region)}.png",
+                f":alt: {alt_template.format(region=region)}",
                 ":width: 100%",
                 "```",
                 ":::",
