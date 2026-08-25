@@ -13,6 +13,23 @@ Belgium, Croatia, and South Korea show no lines at all, and Switzerland only one
 
 This still doesn't establish that delay itself *causes* smaller families — a woman's fertility intentions, partner situation, and biology at the time of her first birth plausibly shape both when it happens and how many children follow. But it does mean that, mechanically, later first births leave less runway for the additional children that would otherwise have followed — and the data confirms that runway is not being fully made up for elsewhere in the fertile window.
 
+## How accurate is this estimate?
+
+HFD only publishes *estimated* cohort parity-progression hazards (cft.txt), so there's no measured cohort data to check the chart above against directly. But the same recursion can run on HFD's *period* fertility tables instead, which come in two versions: one built the same estimated way as cft.txt (pft.txt), and one measured directly from each country's population register (pftc.txt — the processed output of the underlying age-and-parity data). Comparing the two, year by year, isolates the estimation method itself.
+
+Only five HFD countries have continuous, multi-decade register coverage in pftc.txt rather than isolated census years: Denmark, Finland, Hungary, Norway, and Sweden. For all five, the estimated and register-measured curves are nearly indistinguishable at every age:
+
+```{image} /_static/hfd/births_per_mother_validation.png
+:alt: Estimated (pft.txt) vs register-measured (pftc.txt) expected children by age of first birth, for Denmark, Finland, Hungary, Norway, and Sweden
+:width: 100%
+```
+
+```{note}
+Dashed = HFD's estimation method (pft.txt), applied per calendar year rather than per cohort. Solid = the same recursion run on register-measured parity data (pftc.txt). Every 10th available year shown per country.
+
+Mean absolute error across every (year, age) cell, ages 18-39: 0.006-0.010 children, against a range of roughly 1.0-3.0 — noise-level given the underlying rates are estimates to begin with. Hungary's lines look noisier above only because its fertility swung more over 1970-2020 than the Nordic countries', spreading its year-to-year lines further apart; its estimation error (MAE 0.008) is in the same range as the others. The single largest discrepancy in any country/year/age cell is 0.12 children (Sweden, 2018, age 18), a low-birth-count cell — few Swedish women have a first child at 18 — where noise in the rarer 4th/5th-birth hazards compounds through the recursion.
+```
+
 ```{note}
 HFD. Human Fertility Database. Max Planck Institute for Demographic Research (Germany)
 and Vienna Institute of Demography (Austria). Available at [www.humanfertility.org](https://www.humanfertility.org/).
