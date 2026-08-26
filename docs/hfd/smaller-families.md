@@ -32,12 +32,23 @@ hazard, capped at 4+ (coarser than HFD's 5+).
 
 ## Comparison to published research
 
-Roustaei et al. (2019) found the same pattern in Finnish population-register data (1987-2016 birth cohorts): completed fertility around 3 children for a first birth before age 21, falling to about 2 (replacement level) by age 30 — matching the shape of the Finland panel above.
+Roustaei et al. (2019) found the same pattern in Finnish population-register data: completed fertility around 3 children for a first birth before age 21, falling to about 2 (replacement level) by age 30.
+
+```{image} /_static/hfd/finland_paper_comparison.png
+:alt: HFD-derived expected children by age of first birth for Finland (1967-1978 birth cohorts) overlaid on Roustaei et al. 2019's completed fertility curves for women whose first birth was in 1987-91 or 1992-96
+:width: 60%
+```
 
 ```{note}
 Roustaei Z, Räisänen S, Gissler M, Heinonen S. "Fertility rates and the postponement of
 first births: a descriptive study with Finnish population data." BMJ Open 2019;9:e026336.
 Available at [bmjopen.bmj.com](https://bmjopen.bmj.com/content/9/1/e026336).
+
+Dashed lines digitized by eye from the paper's Figure 2B. The two curves aren't measuring
+identical groups — HFD's cohorts are grouped by the mother's own birth year, the paper's by
+the calendar year her first birth occurred — but two independent methods (HFD's parity-
+progression tables vs Finland's population register, tabulated directly by the paper's
+authors) land on the same shape and range.
 ```
 
 ## Estimated across all countries, period basis
