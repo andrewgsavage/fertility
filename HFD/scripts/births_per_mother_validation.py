@@ -1,32 +1,26 @@
-"""How well does births_per_mother_region_grid.py's backward-recursion
-estimate match reality?
+"""Same expected-children-given-first-birth-age recursion as
+births_per_mother_region_grid.py, run on HFD's period fertility tables
+(pft.txt) instead of cohort tables (cft.txt) -- one line per calendar year
+instead of one line per birth cohort -- for every country in
+COUNTRY_REGIONS. A period-basis cross-check of the same estimation method
+against the main (cohort-based) chart, covering every country rather than
+just the handful with register-measured parity data.
 
-cft.txt (used by that page) only has HFD's *estimated* parity-progression
-hazards -- there's no census/register-measured cohort equivalent to check
-it against. But HFD's *period* fertility tables come in both flavours:
-pft.txt (same estimation method as cft.txt) and pftc.txt (measured
-directly from register/census parity data, i.e. the processed output of
-XXXparity.txt). Both have the same q2x-q5px hazard columns cft.txt does,
-so the exact same recursion can run on either -- just per calendar year
-instead of per birth cohort -- giving an apples-to-apples check of the
-estimation method wherever register data exists.
-
-Restricted to the handful of countries with continuous multi-decade
-register coverage in pftc.txt (Denmark, Finland, Hungary, Norway, Sweden;
->=30 years each) -- everywhere else pftc.txt only has isolated census
-years, too sparse for a year-by-year comparison.
+UK_ONS is skipped: it has no HFD period table to run this on (the main
+chart's UK column comes from ONS Table 3 instead, which is inherently
+cohort-based).
 """
 
 import pathlib
 
 import matplotlib.pyplot as plt
 import pandas as pd
+from matplotlib.ticker import FuncFormatter, MultipleLocator
+from PIL import Image
 
+from births_per_mother_region_grid import X_LIM, Y_LIM
 from births_per_mother_region_grid import _expected_children_curve as expected_children_curve
-from country_names import country_title
-
-REGISTER_COUNTRIES = ["DNK", "FIN", "HUN", "NOR", "SWE"]
-X_LIM = (18, 40)
+from country_names import COUNTRY_REGIONS, country_title
 
 COLS = ["code", "year", "x", "w0x", "m1x", "q1x", "l0x", "b1x", "L0x", "Sb1x",
         "w1x", "m2x", "q2x", "l1x", "b2x", "L1x", "Sb2x",
@@ -35,77 +29,74 @@ COLS = ["code", "year", "x", "w0x", "m1x", "q1x", "l0x", "b1x", "L0x", "Sb1x",
         "w4x", "m5px", "q5px", "l4x", "b5px", "L4x", "Sb5px"]
 
 
-def load_period_table(path):
-    df = pd.read_csv(path, sep=r"\s+", skiprows=3, names=COLS, na_values=".")
+def load_data():
+    df = pd.read_csv("data/HFD/pft.txt", sep=r"\s+", skiprows=3, names=COLS, na_values=".")
     df = df[pd.to_numeric(df["x"], errors="coerce").notna()].copy()
     df["x"] = df["x"].astype(int)
-    return df
 
-
-def curves_by_year(df, code):
-    """{year: {age: expected_children}} for one country, every year present."""
-    subset = df[df["code"] == code]
-    return {year: expected_children_curve(rows) for year, rows in subset.groupby("year")}
-
-
-def error_summary(estimated, actual):
-    """One row per (year, age) cell present in both curves, for ages in
-    X_LIM -- the same cells the sample-year plot below draws from."""
     rows = []
-    for year, est_curve in estimated.items():
-        act_curve = actual.get(year, {})
-        for age in range(*X_LIM):
-            if age in est_curve and age in act_curve:
-                rows.append({"year": year, "age": age,
-                             "diff": est_curve[age] - act_curve[age]})
+    for (code, year), sub in df.groupby(["code", "year"]):
+        for age, value in expected_children_curve(sub).items():
+            rows.append({"code": code, "year": year, "age": age, "expected_children": value})
     return pd.DataFrame(rows)
 
 
-def make_plot(estimated_by_country, actual_by_country):
+def slug(name):
+    return name.lower().replace(" & ", "_").replace(" / ", "_").replace(" ", "_")
+
+
+def make_region_grid(df, countries):
+    cmap = plt.colormaps["turbo"]
+    norm = plt.Normalize(df["year"].min(), df["year"].max())
+
+    ncols = len(countries)
     fig, axes = plt.subplots(
-        1, len(REGISTER_COUNTRIES), figsize=(3.2 * len(REGISTER_COUNTRIES), 3.4),
-        sharex=True, sharey=True,
+        1, ncols, figsize=(3 * ncols, 3), sharex=True, sharey=True,
+        gridspec_kw={"wspace": 0}, squeeze=False,
     )
-    for ax, code in zip(axes, REGISTER_COUNTRIES):
-        estimated = estimated_by_country[code]
-        actual = actual_by_country[code]
-        sample_years = sorted(set(estimated) & set(actual))[::10]  # every ~10th year, evenly spread
-        cmap = plt.colormaps["turbo"]
-        norm = plt.Normalize(min(sample_years), max(sample_years))
-        for year in sample_years:
-            ages = [a for a in range(*X_LIM) if a in estimated[year] and a in actual[year]]
-            color = cmap(norm(year))
-            ax.plot(ages, [estimated[year][a] for a in ages], color=color, linestyle="--", linewidth=1)
-            ax.plot(ages, [actual[year][a] for a in ages], color=color, linestyle="-", linewidth=1)
+
+    for col, country in enumerate(countries):
+        subset = df[df["code"] == country]
+        ax = axes[0, col]
+        for year, rows in subset.groupby("year"):
+            rows = rows.sort_values("age")
+            ax.plot(rows["age"], rows["expected_children"], color=cmap(norm(year)), alpha=0.6, linewidth=0.8)
         ax.set_xlim(*X_LIM)
+        ax.set_ylim(*Y_LIM)
         ax.grid(True, linewidth=0.4)
-        ax.set_title(country_title(code), fontsize=9)
-        ax.set_xlabel("Age at first birth")
-    axes[0].set_ylabel("Expected total children")
-    axes[0].plot([], [], color="grey", linestyle="--", label="Estimated (pft.txt)")
-    axes[0].plot([], [], color="grey", linestyle="-", label="Register-based (pftc.txt)")
-    axes[0].legend(fontsize=7, loc="lower left")
-    fig.tight_layout()
-    return fig
+        ax.set_title(country_title(country, subset["year"].min(), subset["year"].max()), fontsize=9)
+        if col == 0:
+            ax.set_ylabel("Expected children")
+
+    fig.supxlabel("Age at first birth")
+
+    sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
+    cbar = fig.colorbar(sm, ax=axes.ravel().tolist(), label="Year", shrink=0.6)
+    cbar.ax.yaxis.set_major_locator(MultipleLocator(10))
+    cbar.ax.yaxis.set_major_formatter(FuncFormatter(lambda value, _: f"{value:.0f}"))
+
+    buf_path = pathlib.Path("outputs") / "_tmp_region_grid.png"
+    fig.savefig(buf_path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    image = Image.open(buf_path).convert("RGB")
+    buf_path.unlink()
+    return image
 
 
 if __name__ == "__main__":
-    pft = load_period_table("data/HFD/pft.txt")
-    pftc = load_period_table("data/HFD/pftc.txt")
+    df = load_data()
 
-    estimated_by_country = {code: curves_by_year(pft, code) for code in REGISTER_COUNTRIES}
-    actual_by_country = {code: curves_by_year(pftc, code) for code in REGISTER_COUNTRIES}
+    images = {
+        region: make_region_grid(df, [c for c in countries if c != "UK_ONS"])
+        for region, countries in COUNTRY_REGIONS.items()
+    }
 
-    all_errors = pd.concat([
-        error_summary(estimated_by_country[code], actual_by_country[code]).assign(code=code)
-        for code in REGISTER_COUNTRIES
-    ])
-    print(all_errors.groupby("code")["diff"].agg(
-        mean="mean", mae=lambda s: s.abs().mean(), max_abs=lambda s: s.abs().max(),
-    ))
-    print("Overall MAE:", all_errors["diff"].abs().mean())
+    canvas_width = max(im.width for im in images.values())
+    canvas_height = max(im.height for im in images.values())
 
-    fig = make_plot(estimated_by_country, actual_by_country)
-    path = "outputs/births_per_mother_validation.png"
-    fig.savefig(path, dpi=150, bbox_inches="tight")
-    print(f"Saved {path}")
+    for region, im in images.items():
+        canvas = Image.new("RGB", (canvas_width, canvas_height), "white")
+        canvas.paste(im, (0, 0))
+        path = f"outputs/births_per_mother_estimated_region_{slug(region)}.png"
+        canvas.save(path)
+        print(f"Saved {path}")
