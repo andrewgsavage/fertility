@@ -45,10 +45,6 @@ HFD. Human Fertility Database. Max Planck Institute for Demographic Research (Ge
 and Vienna Institute of Demography (Austria). Available at [www.humanfertility.org](https://www.humanfertility.org/).
 Data downloaded on 2026-07-13.
 
-TMR = TFR1, CPM = TFR / TFR1, from HFD's period birth-order table (`tfrRRbo.txt`). TMR is a period (synthetic-cohort) rate, so tempo effects can push it above 100% in a given year — the United States' late-1940s postwar spike reaches 130%, clipped by the chart's 120% ceiling. Countries and regions match [First vs Second Birth](first-vs-second-birth); all panels share the same x-axis (1950–present).
-```
-
-```{note}
 Office for National Statistics, "Childbearing for women born in different years,
 England and Wales", Table 3 (percentage of women by number of live-born children, by
 age and year of birth). Available at
