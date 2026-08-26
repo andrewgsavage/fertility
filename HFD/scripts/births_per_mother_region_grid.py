@@ -34,7 +34,7 @@ VALUE_5PLUS = 5.0
 # South Korea) show no lines: none of their tracked cohorts are old enough
 # yet for this page's terminal-age assumption to be safe.
 MIN_COMPLETE_AGE = 45
-X_LIM = (18, 40)
+X_LIM = (18, 45)
 Y_LIM = (1.0, 4.0)
 
 

@@ -55,5 +55,5 @@ HFD. Human Fertility Database. Max Planck Institute for Demographic Research (Ge
 and Vienna Institute of Demography (Austria). Available at [www.humanfertility.org](https://www.humanfertility.org/).
 Data downloaded on 2026-07-13.
 
-Mean absolute error across every (year, age 18-39) cell: 0.006-0.010 children, against a range of roughly 1.0-3.0.
+Mean absolute error across every (year, age 18-44) cell: 0.005-0.008 children, against a range of roughly 1.0-3.0.
 ```

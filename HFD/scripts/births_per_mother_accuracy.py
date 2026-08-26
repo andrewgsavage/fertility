@@ -28,7 +28,7 @@ from births_per_mother_region_grid import _expected_children_curve as expected_c
 from country_names import country_title
 
 REGISTER_COUNTRIES = ["DNK", "FIN", "HUN", "NOR", "SWE"]
-X_LIM = (18, 40)
+X_LIM = (18, 45)
 
 COLS = ["code", "year", "x", "w0x", "m1x", "q1x", "l0x", "b1x", "L0x", "Sb1x",
         "w1x", "m2x", "q2x", "l1x", "b2x", "L1x", "Sb2x",
