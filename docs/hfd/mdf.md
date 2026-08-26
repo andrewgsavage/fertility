@@ -1,0 +1,58 @@
+# Microdemographic Framework (TMR, CPM, TCR)
+
+The Total Fertility Rate (TFR) is the product of two independent components: TFR = TMR × CPM.
+
+- **TMR** (Total Maternal Rate) — the share of women who become mothers, under current age-specific rates. Equivalent to the first-birth TFR (TFR1).
+- **CPM** (Children per Mother) — the average number of children born to women who become mothers.
+- **TCR** (Total Childlessness Rate) — 1 − TMR, the share who remain childless. Omitted from the charts below since it's just TMR's mirror image.
+
+::::{tab-set}
+
+:::{tab-item} Americas & East Asia
+```{image} /_static/hfd/mdf_region_americas_east_asia.png
+:alt: TMR, CPM and TFR by year, Americas & East Asia
+:width: 100%
+```
+:::
+
+:::{tab-item} Nordic & Baltic
+```{image} /_static/hfd/mdf_region_nordic_baltic.png
+:alt: TMR, CPM and TFR by year, Nordic & Baltic
+:width: 100%
+```
+:::
+
+:::{tab-item} Western Europe
+```{image} /_static/hfd/mdf_region_western_europe.png
+:alt: TMR, CPM and TFR by year, Western Europe
+:width: 100%
+```
+:::
+
+:::{tab-item} Central Europe
+```{image} /_static/hfd/mdf_region_central_europe.png
+:alt: TMR, CPM and TFR by year, Central Europe
+:width: 100%
+```
+:::
+
+::::
+
+```{note}
+Shaw, S. J. (2025), ["On a microdemographic framework for decomposing contemporary fertility dynamics"](https://doi.org/10.1038/s41598-025-11522-9), *Scientific Reports* 15, 30726.
+
+HFD. Human Fertility Database. Max Planck Institute for Demographic Research (Germany)
+and Vienna Institute of Demography (Austria). Available at [www.humanfertility.org](https://www.humanfertility.org/).
+Data downloaded on 2026-07-13.
+
+TMR = TFR1, CPM = TFR / TFR1, from HFD's period birth-order table (`tfrRRbo.txt`). TMR is a period (synthetic-cohort) rate, so tempo effects can push it above 100% in a given year — the United States' late-1940s postwar spike reaches 130%, clipped by the chart's 120% ceiling. Countries and regions match [First vs Second Birth](first-vs-second-birth); all panels share the same x-axis (1950–present).
+```
+
+```{note}
+Office for National Statistics, "Childbearing for women born in different years,
+England and Wales", Table 3 (percentage of women by number of live-born children, by
+age and year of birth). Available at
+[ons.gov.uk](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/datasets/childbearingforwomenbornindifferentyearsreferencetable).
+
+HFD's UK birth-order data only starts in 2013, so "England & Wales" extends coverage back to 1965 by reconstructing TMR/CPM/TFR from this ONS table: parity-progression hazards (as on [First vs Second Birth](first-vs-second-birth), extended up to the 4th birth) are re-sliced from cohort into period year, then run through a synthetic cohort spanning ages 21–45 (Table 3 has no data below age 20) to give each period year's TMR, CPM and TFR. Cross-checked against HFD's own England & Wales figures for the 2013–2022 overlap: TFR matches within about 0.1, but the TMR/CPM split itself runs biased (TMR ~7–9 points high, CPM ~0.2–0.4 low) — a reslicing artifact from stitching hazards across different birth cohorts into one calendar year.
+```
