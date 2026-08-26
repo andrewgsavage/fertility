@@ -82,6 +82,7 @@ def make_plot(estimated_by_country, actual_by_country):
             ax.plot(ages, [estimated[year][a] for a in ages], color=color, linestyle="--", linewidth=1)
             ax.plot(ages, [actual[year][a] for a in ages], color=color, linestyle="-", linewidth=1)
         ax.set_xlim(*X_LIM)
+        ax.set_xticks(list(range(20, X_LIM[1], 10)) + [X_LIM[1]])
         ax.grid(True, linewidth=0.4)
         ax.set_title(country_title(code), fontsize=9)
         ax.set_xlabel("Age at first birth")

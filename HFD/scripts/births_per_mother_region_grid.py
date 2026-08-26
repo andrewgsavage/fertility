@@ -131,6 +131,7 @@ def make_region_grid(df, countries):
                 color=cmap(norm(cohort)), alpha=0.6, linewidth=0.8,
             )
         ax.set_xlim(*X_LIM)
+        ax.set_xticks(list(range(20, X_LIM[1], 10)) + [X_LIM[1]])
         ax.set_ylim(*Y_LIM)
         ax.grid(True, linewidth=0.4)
         ax.set_title(
