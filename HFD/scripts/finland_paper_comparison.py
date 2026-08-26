@@ -4,11 +4,20 @@ line per birth cohort) against Figure 2B of Roustaei et al. (2019, BMJ
 Open) -- "completed fertility rate by age at first birth" for Finnish
 women whose first birth occurred in 1987-91 or 1992-96, digitized by eye
 from the published figure (https://bmjopen.bmj.com/content/9/1/e026336,
-Finnish Medical Birth Register data). Two independent methods (HFD's
-own parity-progression tables vs the paper's direct register tabulation)
-and two different cohort definitions (mother's birth year vs her first-
-birth calendar year) landing on the same curve shape is the comparison
-being made here -- not a claim that the two datasets are identical.
+Finnish Medical Birth Register data).
+
+These are two different kinds of measurement, not two samples of the same
+thing. HFD's curve is a modeled expected value: it chains each cohort's
+own age-specific parity-progression hazards together, assuming a woman's
+chance of a 2nd, 3rd, etc. birth can be treated as an independent
+probability at each age. The paper's curve, from Finland's individually-
+linked Medical Birth Register, is presumably a direct empirical average --
+the actual completed number of children real women had, tracked via
+personal identifiers, with no chaining of rates required. The two also
+group cohorts differently (mother's birth year vs her first-birth
+calendar year). That a rate-chained model and a direct headcount land on
+the same curve shape is itself a check on the independence assumption the
+recursion relies on -- not a claim that the two datasets are identical.
 """
 
 import matplotlib.pyplot as plt

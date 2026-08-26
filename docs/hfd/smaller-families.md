@@ -44,11 +44,17 @@ Roustaei Z, Räisänen S, Gissler M, Heinonen S. "Fertility rates and the postpo
 first births: a descriptive study with Finnish population data." BMJ Open 2019;9:e026336.
 Available at [bmjopen.bmj.com](https://bmjopen.bmj.com/content/9/1/e026336).
 
-Dashed lines digitized by eye from the paper's Figure 2B. The two curves aren't measuring
-identical groups — HFD's cohorts are grouped by the mother's own birth year, the paper's by
-the calendar year her first birth occurred — but two independent methods (HFD's parity-
-progression tables vs Finland's population register, tabulated directly by the paper's
-authors) land on the same shape and range.
+Dashed lines digitized by eye from the paper's Figure 2B. The two curves aren't the same
+kind of measurement. HFD's is a modeled expected value: it chains each cohort's own
+age-specific parity-progression hazards together, assuming a woman's chance of a 2nd birth,
+3rd birth, etc. can be treated as independent probabilities at each age. The paper's, from
+Finland's individually-linked Medical Birth Register, is presumably a direct empirical
+average — the actual completed number of children real women had, tracked to today via
+personal identifiers, no chaining of rates required. The two also group cohorts
+differently (HFD by the mother's own birth year, the paper by the calendar year her first
+birth occurred). That a rate-based model and a direct headcount land on the same shape and
+range is themselves a useful check on the hazard-independence assumption the recursion
+relies on.
 ```
 
 ## Estimated across all countries, period basis
