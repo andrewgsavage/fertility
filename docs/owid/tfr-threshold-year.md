@@ -19,6 +19,5 @@ to see its country and year.
 Data: Human Fertility Database (2025); UN, World Population Prospects (2024)
 — with major processing by Our World in Data. Source:
 [Fertility rate: births per woman](https://ourworldindata.org/grapher/children-born-per-woman),
-Our World in Data. The default threshold, 2.1, is the commonly cited
-replacement rate.
+Our World in Data.
 ```
