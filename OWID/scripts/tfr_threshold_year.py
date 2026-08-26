@@ -50,7 +50,7 @@ entities = sorted(e for e in series if e in major_entities)
 
 all_years = [v for e in entities for v in series[e]["years"]]
 X_SLIDER_MIN, X_SLIDER_MAX = min(all_years), max(all_years)
-DEFAULT_XLIM = [1960, X_SLIDER_MAX]
+DEFAULT_XLIM = [1980, X_SLIDER_MAX]
 
 fig = go.Figure(
     data=[
@@ -80,6 +80,12 @@ fig.update_layout(
         type="line", xref="paper", x0=0, x1=1, yref="y",
         y0=DEFAULT_THRESHOLD, y1=DEFAULT_THRESHOLD,
         line=dict(color="#999", width=1, dash="dot"),
+    )],
+    annotations=[dict(
+        xref="paper", x=0, xanchor="left",
+        yref="y", y=DEFAULT_THRESHOLD, yshift=8, yanchor="bottom",
+        text="TFR = threshold", showarrow=False,
+        font=dict(size=11, color="#999"),
     )],
 )
 
@@ -121,9 +127,12 @@ function applyThreshold(threshold) {{
     Plotly.restyle(gd, {{
         x: xs, y: ys, customdata: customdatas, visible: visibles,
     }}, ENTITIES.map(function (_, i) {{ return i; }}));
-    // The reference line tracks the slider itself, not just the initial
-    // DEFAULT_THRESHOLD baked into the figure above.
-    Plotly.relayout(gd, {{'shapes[0].y0': threshold, 'shapes[0].y1': threshold}});
+    // The reference line and its label track the slider itself, not just
+    // the initial DEFAULT_THRESHOLD baked into the figure above.
+    Plotly.relayout(gd, {{
+        'shapes[0].y0': threshold, 'shapes[0].y1': threshold,
+        'annotations[0].y': threshold,
+    }});
     var countEl = document.getElementById('match-count');
     if (countEl) countEl.textContent = matched;
 }}
