@@ -2,9 +2,9 @@
 
 The Total Fertility Rate (TFR) is the product of two independent components: TFR = TMR × CPM.
 
-- **TMR** (Total Maternal Rate) — the share of women who become mothers, under current age-specific rates. Equivalent to the first-birth TFR (TFR1).
-- **CPM** (Children per Mother) — the average number of children born to women who become mothers.
-- **TCR** (Total Childlessness Rate) — 1 − TMR, the share who remain childless. Omitted from the charts below since it's just TMR's mirror image.
+- **Total Maternal Rate (TMR)**: A societal measure of the proportion of women who would become mothers over their reproductive lifetime, assuming current age-specific fertility rates persist.
+- **Total Childlessness Rate (TCR)**: A societal measure indicating the proportion of women who would remain childless over their reproductive lifetime, assuming current age-specific fertility rates persist. As the complement of TMR (i.e., TCR = 1 – TMR). The term societal childlessness encompasses voluntary, medically and biologically involuntary, as well as circumstantial forms of childlessness. Omitted from the charts below since it's just TMR's mirror image.
+- **Children per Mother (CPM)**: A societal measure representing the average number of children born to women who become mothers, based on current age-specific fertility rates. This period-based metric captures trends in family size independently of childlessness.
 
 ::::{tab-set}
 
