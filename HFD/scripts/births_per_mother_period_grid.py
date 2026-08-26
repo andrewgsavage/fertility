@@ -68,6 +68,20 @@ def make_region_grid(df, countries):
         if col == 0:
             ax.set_ylabel("Expected children")
 
+    # wspace=0 means each interior panel's rightmost *visible* x-tick label
+    # sits right next to the next panel's leftmost one, overlapping. Hiding
+    # it on every panel but the last leaves one label per boundary instead
+    # of two colliding ones. get_xticklabels() includes off-range ticks
+    # just outside xlim (e.g. "50" when xlim tops out at 45), so the
+    # rightmost *visible* one has to be picked by position, not by index.
+    for ax in axes[0, :-1]:
+        xlim = ax.get_xlim()
+        positions = ax.get_xticks()
+        labels = ax.get_xticklabels()
+        visible = [i for i, p in enumerate(positions) if xlim[0] <= p <= xlim[1]]
+        if visible:
+            labels[visible[-1]].set_visible(False)
+
     fig.supxlabel("Age at first birth")
 
     sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
