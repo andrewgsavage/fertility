@@ -5,5 +5,5 @@
 :hidden:
 
 first-vs-second-birth
-births-per-mother
+smaller-families
 ```
