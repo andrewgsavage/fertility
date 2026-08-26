@@ -53,6 +53,4 @@ Office for National Statistics, "Childbearing for women born in different years,
 England and Wales", Table 3 (percentage of women by number of live-born children, by
 age and year of birth). Available at
 [ons.gov.uk](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/datasets/childbearingforwomenbornindifferentyearsreferencetable).
-
-HFD's UK birth-order data only starts in 2013, so "England & Wales" extends coverage back to 1965 by reconstructing TMR/CPM/TFR from this ONS table: parity-progression hazards (as on [First vs Second Birth](first-vs-second-birth), extended up to the 4th birth) are re-sliced from cohort into period year, then run through a synthetic cohort spanning ages 21–45 (Table 3 has no data below age 20) to give each period year's TMR, CPM and TFR. Cross-checked against HFD's own England & Wales figures for the 2013–2022 overlap: TFR matches within about 0.1, but the TMR/CPM split itself runs biased (TMR ~7–9 points high, CPM ~0.2–0.4 low) — a reslicing artifact from stitching hazards across different birth cohorts into one calendar year.
 ```
