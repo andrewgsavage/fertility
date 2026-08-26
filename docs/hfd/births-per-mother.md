@@ -26,6 +26,21 @@ UK column reconstructed from Table 3 (HFD has no UK parity-progression tables): 
 hazard, capped at 4+ (coarser than HFD's 5+).
 ```
 
+## Estimated across all countries, period basis
+
+Same recursion applied to HFD's period fertility tables (pft.txt: q2x-q5px) per calendar year instead of per birth cohort, for every HFD country.
+
+```{region-tabs} births_per_mother_estimated_region Estimated expected total children given first birth at that age (period basis), {region}
+```
+
+```{note}
+HFD. Human Fertility Database. Max Planck Institute for Demographic Research (Germany)
+and Vienna Institute of Demography (Austria). Available at [www.humanfertility.org](https://www.humanfertility.org/).
+Data downloaded on 2026-07-13.
+
+UK excluded: no HFD period fertility table exists for it.
+```
+
 ## How accurate is this estimate?
 
 Same recursion run per calendar year on HFD's period fertility tables: an estimated version (pft.txt) and, for the five countries with continuous population-register coverage, a version measured directly from register data (pftc.txt).
@@ -41,19 +56,4 @@ and Vienna Institute of Demography (Austria). Available at [www.humanfertility.o
 Data downloaded on 2026-07-13.
 
 Mean absolute error across every (year, age 18-39) cell: 0.006-0.010 children, against a range of roughly 1.0-3.0.
-```
-
-## Estimated across all countries, period basis
-
-Same recursion applied to HFD's period fertility tables (pft.txt: q2x-q5px) per calendar year instead of per birth cohort, for every HFD country.
-
-```{region-tabs} births_per_mother_estimated_region Estimated expected total children given first birth at that age (period basis), {region}
-```
-
-```{note}
-HFD. Human Fertility Database. Max Planck Institute for Demographic Research (Germany)
-and Vienna Institute of Demography (Austria). Available at [www.humanfertility.org](https://www.humanfertility.org/).
-Data downloaded on 2026-07-13.
-
-UK excluded: no HFD period fertility table exists for it.
 ```
