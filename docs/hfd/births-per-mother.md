@@ -26,6 +26,23 @@ UK column reconstructed from Table 3 (HFD has no UK parity-progression tables): 
 hazard, capped at 4+ (coarser than HFD's 5+).
 ```
 
+## How accurate is this estimate?
+
+Same recursion run per calendar year on HFD's period fertility tables: an estimated version (pft.txt) and, for the five countries with continuous population-register coverage, a version measured directly from register data (pftc.txt).
+
+```{image} /_static/hfd/births_per_mother_accuracy.png
+:alt: Estimated (pft.txt, dashed) vs register-measured (pftc.txt, solid) expected children by age of first birth, for Denmark, Finland, Hungary, Norway, and Sweden
+:width: 100%
+```
+
+```{note}
+HFD. Human Fertility Database. Max Planck Institute for Demographic Research (Germany)
+and Vienna Institute of Demography (Austria). Available at [www.humanfertility.org](https://www.humanfertility.org/).
+Data downloaded on 2026-07-13.
+
+Mean absolute error across every (year, age 18-39) cell: 0.006-0.010 children, against a range of roughly 1.0-3.0.
+```
+
 ## Estimated across all countries, period basis
 
 Same recursion applied to HFD's period fertility tables (pft.txt: q2x-q5px) per calendar year instead of per birth cohort, for every HFD country.
