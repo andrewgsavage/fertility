@@ -40,7 +40,7 @@ VALUE_4PLUS = 4.0
 # the data to have caught up with yet. Only cohorts whose tracked hazards
 # reach this age are used at all (mirrors HFD/scripts/births_per_mother_region_grid.py's
 # MIN_COMPLETE_AGE for the same reason).
-MIN_COMPLETE_AGE = 40
+MIN_COMPLETE_AGE = 45
 
 
 def _load_table3_shares():

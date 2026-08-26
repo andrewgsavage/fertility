@@ -12,7 +12,7 @@ Data downloaded on 2026-07-13.
 
 Backward recursion over each cohort's own parity-progression hazards (cft.txt: q2x-q5px),
 giving expected total children for a woman at parity 1 at each age. 5th-or-higher order
-approximated as exactly 5. Only cohorts whose tracked data reaches age 40 are shown.
+approximated as exactly 5. Only cohorts whose tracked data reaches age 45 are shown.
 ```
 
 ```{note}
