@@ -35,26 +35,29 @@ hazard, capped at 4+ (coarser than HFD's 5+).
 Roustaei et al. (2019) found the same pattern in Finnish population-register data: completed fertility around 3 children for a first birth before age 21, falling to about 2 (replacement level) by age 30.
 
 ```{image} /_static/hfd/finland_paper_comparison.png
-:alt: HFD-derived expected children by age of first birth for Finland (1967-1978 birth cohorts) overlaid on Roustaei et al. 2019's completed fertility curves for women whose first birth was in 1987-91 or 1992-96
+:alt: HFD-derived expected children by age of first birth for Finland (1967-1978 birth cohorts) overlaid on Roustaei et al. 2019's completed fertility curves for women whose first birth was in 1987-91, 1992-96, 1997-01, or 2002-06
 :width: 60%
 ```
 
 ```{note}
 Roustaei Z, Räisänen S, Gissler M, Heinonen S. "Fertility rates and the postponement of
 first births: a descriptive study with Finnish population data." BMJ Open 2019;9:e026336.
-Available at [bmjopen.bmj.com](https://bmjopen.bmj.com/content/9/1/e026336).
+Available at [bmjopen.bmj.com](https://bmjopen.bmj.com/content/9/1/e026336). Four periods
+digitized from panel B of the paper's [online supplementary
+figure](https://pmc.ncbi.nlm.nih.gov/articles/instance/6340426/bin/bmjopen-2018-026336supp001.pdf),
+which extends the main text's Figure 2B (1987-91 and 1992-96 only) to two further 5-year
+periods.
 
-Dashed lines digitized by eye from the paper's Figure 2B. The two curves aren't the same
-kind of measurement. HFD's is a modeled expected value: it chains each cohort's own
-age-specific parity-progression hazards together, assuming a woman's chance of a 2nd birth,
-3rd birth, etc. can be treated as independent probabilities at each age. The paper's, from
-Finland's individually-linked Medical Birth Register, is presumably a direct empirical
-average — the actual completed number of children real women had, tracked to today via
-personal identifiers, no chaining of rates required. The two also group cohorts
-differently (HFD by the mother's own birth year, the paper by the calendar year her first
-birth occurred). That a rate-based model and a direct headcount land on the same shape and
-range is themselves a useful check on the hazard-independence assumption the recursion
-relies on.
+The two curves aren't the same kind of measurement. HFD's is a modeled expected value: it
+chains each cohort's own age-specific parity-progression hazards together, assuming a
+woman's chance of a 2nd birth, 3rd birth, etc. can be treated as independent probabilities
+at each age. The paper's, from Finland's individually-linked Medical Birth Register, is
+presumably a direct empirical average — the actual completed number of children real women
+had, tracked to today via personal identifiers, no chaining of rates required. The two also
+group cohorts differently (HFD by the mother's own birth year, the paper by the calendar
+year her first birth occurred). That a rate-based model and a direct headcount land on the
+same shape and range is itself a useful check on the hazard-independence assumption the
+recursion relies on.
 ```
 
 ## Estimated across all countries, period basis
