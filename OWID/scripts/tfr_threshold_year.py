@@ -84,7 +84,7 @@ fig.update_layout(
     annotations=[dict(
         xref="paper", x=0, xanchor="left",
         yref="y", y=DEFAULT_THRESHOLD, yshift=8, yanchor="bottom",
-        text="TFR = threshold", showarrow=False,
+        text=f"TFR = {DEFAULT_THRESHOLD:.2f}", showarrow=False,
         font=dict(size=11, color="#999"),
     )],
 )
@@ -132,9 +132,11 @@ function applyThreshold(threshold) {{
     Plotly.relayout(gd, {{
         'shapes[0].y0': threshold, 'shapes[0].y1': threshold,
         'annotations[0].y': threshold,
+        'annotations[0].text': 'TFR = ' + threshold.toFixed(2),
     }});
     var countEl = document.getElementById('match-count');
     if (countEl) countEl.textContent = matched;
+    clearSelection();
 }}
 
 var thresholdSlider = document.getElementById('threshold-slider');
@@ -148,6 +150,28 @@ function onThresholdInput() {{
 
 thresholdSlider.addEventListener('input', onThresholdInput);
 onThresholdInput();
+
+// Click a line to highlight it (dim the rest); click it again, or change
+// the threshold, to clear the selection.
+var selectedIdx = null;
+
+function clearSelection() {{
+    selectedIdx = null;
+    Plotly.restyle(gd, {{
+        'line.width': ENTITIES.map(function () {{ return 1; }}),
+        opacity: ENTITIES.map(function () {{ return 1; }}),
+    }}, ENTITIES.map(function (_, i) {{ return i; }}));
+}}
+
+gd.on('plotly_click', function (eventData) {{
+    if (!eventData.points || !eventData.points.length) return;
+    var idx = eventData.points[0].curveNumber;
+    selectedIdx = (selectedIdx === idx) ? null : idx;
+    Plotly.restyle(gd, {{
+        'line.width': ENTITIES.map(function (_, i) {{ return i === selectedIdx ? 2.5 : 1; }}),
+        opacity: ENTITIES.map(function (_, i) {{ return selectedIdx === null || i === selectedIdx ? 1 : 0.15; }}),
+    }}, ENTITIES.map(function (_, i) {{ return i; }}));
+}});
 """
 
 fig.write_html(
