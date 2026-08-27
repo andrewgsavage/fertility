@@ -60,6 +60,37 @@ same shape and range is itself a useful check on the hazard-independence assumpt
 recursion relies on.
 ```
 
+Beaujouan, Zeman & Nathan (2023) found the same pattern directly from survey and census birth histories across ten high-income countries, for mothers' completed fertility conditional on age at first birth.
+
+```{image} /_static/hfd/beaujouan_paper_comparison.png
+:alt: HFD-derived expected children by age of first birth overlaid on Beaujouan, Zeman & Nathan 2023's completed cohort fertility by age at first birth, for Austria, Netherlands, Norway, Poland, Sweden, United States and Great Britain
+:width: 100%
+```
+
+```{note}
+Beaujouan É, Zeman K, Nathan M. "Delayed first births and completed fertility across the
+1940–1969 birth cohorts." Demographic Research 2023;48(15):387-420. Available at
+[demographic-research.org](https://www.demographic-research.org/volumes/vol48/15/). Values
+for the seven countries shown are taken directly from the paper's supplementary Excel file
+(one sheet per country), not digitized from Figure 3 — France, Italy and Switzerland are
+also in the paper but aren't in HFD's cft.txt. Age bins (15-19 .. 35-39) plotted at their
+midpoint; the paper's own 40-44 bin is dropped, as its completed fertility mostly sits at
+its definitional floor of 1 child and adds noise rather than signal.
+```
+
+Andersson (2008), reprinted in Schmidt et al. (2012)'s review of postponement research, shows the same pattern going back further for Sweden — cohorts born 1935-39 and 1950-54, predating HFD's own Swedish coverage (which starts at the 1955 cohort), so there's no HFD line to overlay here.
+
+```{image} /_static/hfd/andersson_sweden_paper_comparison.png
+:alt: Completed fertility rate by age at first birth for Swedish women born 1935-39 and 1950-54, digitized from Schmidt et al. 2012's Figure 4
+:width: 60%
+```
+
+```{note}
+Schmidt L, Sobotka T, Bentzen JG, Nyboe Andersen A. "Demographic and medical consequences
+of the postponement of parenthood." Human Reproduction Update 2012;18(1):29-43. Original
+data source: Andersson G (2008), Table 12d. Digitized by eye from Figure 4.
+```
+
 ## Estimated across all countries, period basis
 
 Same recursion applied to HFD's period fertility tables (pft.txt: q2x-q5px) per calendar year instead of per birth cohort, for every HFD country.
