@@ -75,7 +75,7 @@ fig.update_layout(
         range=DEFAULT_XLIM, autorange=False,
         rangeslider=dict(visible=True, thickness=0.08, range=[X_SLIDER_MIN, X_SLIDER_MAX]),
     ),
-    yaxis=dict(title="TFR (children per woman)", range=DEFAULT_YLIM, autorange=False),
+    yaxis=dict(title="TFR", range=DEFAULT_YLIM, autorange=False),
     shapes=[dict(
         type="line", xref="paper", x0=0, x1=1, yref="y",
         y0=DEFAULT_THRESHOLD, y1=DEFAULT_THRESHOLD,
@@ -206,7 +206,7 @@ threshold_panel_html = (
     '<label for="threshold-slider">TFR threshold</label>'
     f'<input id="threshold-slider" type="range" min="{THRESHOLD_MIN}" max="{THRESHOLD_MAX}" step="{THRESHOLD_STEP}" value="{DEFAULT_THRESHOLD}">'
     f'<div id="threshold-value">{DEFAULT_THRESHOLD:.2f}</div>'
-    '<div id="match-count-wrap"><span id="match-count"></span> countries have dropped below this TFR at some point — each plotted from the year it first crosses below, to its most recent year. The dotted line marks the threshold itself.</div>'
+    '<div id="match-count-wrap"><span id="match-count"></span> countries have dropped below this TFR.</div>'
     "</div>"
 )
 html = html.replace("<body>", f"<body>\n{threshold_panel_html}", 1)
