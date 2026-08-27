@@ -2,18 +2,18 @@
 orphan: true
 ---
 
-https://github.com/Greater-London-Authority/fertility_rate_estimation
-https://data.london.gov.uk/blog/fertility-rate-estimates
+# See Also
 
-https://link.springer.com/book/10.1007/978-3-319-44667-7?page=1#toc
-http://statmodeling.stat.columbia.edu/wp-content/uploads/2017/06/Schimtermann_2014_Bayesian_Forecasting-fo-Cohort_Fertility.pdf
+Links relevant to this site, not yet worked into a page.
 
-https://eprints.soton.ac.uk/503488/1/Parity-specific_fertility_projections_accepted_manuscript.pdf#page=35&zoom=100,57,153
-https://academic.oup.com/jrsssc/article/73/2/275/7343209
-
-https://www.centreforsocialjustice.org.uk/newsroom/baby-bust
-https://www.centreforsocialjustice.org.uk/library/baby-bust-update Stillbirths, Marriage. Marriage section plots variables that should not be plotted together.
-
-https://www.ox.ac.uk/news/2024-12-10-expert-comment-why-are-people-uk-leaving-it-so-late-have-children
-
-https://iea.org.uk/media/deregulate-to-boost-birth-rates-new-research-suggests/
+| Source | Brief | Keywords |
+|---|---|---|
+| [Greater London Authority, *fertility_rate_estimation*](https://github.com/Greater-London-Authority/fertility_rate_estimation) (GitHub) | Open-source code and methodology the GLA uses to calculate age-specific fertility rates from public birth and population data. | code, ASFR, methodology, London |
+| [GLA, *Fertility rate estimates*](https://data.london.gov.uk/blog/fertility-rate-estimates) (blog) | Companion blog to the repo above, publishing the resulting fertility estimates and noting sharper declines in Inner London than the rest of England & Wales. | London, blog, decline, Inner London |
+| Kreyenfeld, M. and Konietzka, D. (eds.) (2017), [*Childlessness in Europe: Contexts, Causes, and Consequences*](https://link.springer.com/book/10.1007/978-3-319-44667-7), Springer, open access. | Edited volume surveying childlessness across Germany, France, the UK, Finland, Sweden, Austria, Switzerland and the US: determinants, social-strata differences, and whether governments can/should counteract it. | childlessness, Europe, book, open access |
+| Schmertmann, C., Zagheni, E., Goldstein, J.R. and Myrskylä, M. (2014), [*Bayesian Forecasting of Cohort Fertility*](http://statmodeling.stat.columbia.edu/wp-content/uploads/2017/06/Schimtermann_2014_Bayesian_Forecasting-fo-Cohort_Fertility.pdf), *JASA* 109(506), pp.500-513. | Hierarchical Bayesian model that forecasts still-incomplete cohorts' fertility by borrowing the age pattern of more advanced cohorts. | Bayesian, cohort fertility, forecasting, methodology |
+| Ellison, J., Berrington, A., Dodd, E. and Forster, J.J. (2024), *Combining individual- and population-level data to develop a Bayesian parity-specific fertility projection model*, [accepted manuscript](https://eprints.soton.ac.uk/503488/1/Parity-specific_fertility_projections_accepted_manuscript.pdf) / [published version](https://academic.oup.com/jrsssc/article/73/2/275/7343209), *JRSS Series C* 73(2), pp.275-297. | Combines individual-level survey data (Understanding Society) with population-level aggregates to produce parity-specific fertility projections for England & Wales, including breakdowns by education that aren't available in the aggregate data alone. | Bayesian, parity, projection, England & Wales, education |
+| Centre for Social Justice (2023), [*Baby Bust*](https://www.centreforsocialjustice.org.uk/newsroom/baby-bust). | Estimates ~600,000 UK women may miss out on motherhood versus previous generations, despite nine in ten young women wanting children; attributes the gap to housing costs, delayed marriage, and career/economic uncertainty pushing family formation later. | UK, motherhood gap, housing, marriage, CSJ |
+| Centre for Social Justice (2025), [*Baby Bust Update*](https://www.centreforsocialjustice.org.uk/library/baby-bust-update). | Follow-up: UK TFR fell to a record 1.39 in 2025 (-22% in a decade), warning of workforce and ageing pressures and the potential closure of ~1,150 primary schools by 2030. Has a Stillbirths/Marriage section plotting variables that shouldn't be plotted together — check before reusing. | UK, TFR, schools, ageing, CSJ |
+| Sheppard, P. (2024), [*Expert comment: Why are people in the UK leaving it so late to have children?*](https://www.ox.ac.uk/news/2024-12-10-expert-comment-why-are-people-uk-leaving-it-so-late-have-children), University of Oxford. | Oxford evolutionary anthropologist on why UK fertility (1.6 in 2020) sits ~0.3 children below stated desired family size, driven largely by delayed childbearing. | UK, later births, fertility gap, commentary |
+| Institute of Economic Affairs (2025), [*Deregulate to boost birth rates, new research suggests*](https://iea.org.uk/media/deregulate-to-boost-birth-rates-new-research-suggests/). | Argues labour-market, childcare and housing/planning deregulation — not cash incentives — narrows the UK fertility gap by improving work-family compatibility; draws on US state-level and international (France, Israel, Latin America) comparisons. | UK, deregulation, housing, labour market, policy |
