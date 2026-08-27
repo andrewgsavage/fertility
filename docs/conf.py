@@ -35,6 +35,7 @@ _OUTPUT_DIRS = {
     "ons": _REPO_ROOT / "ONS" / "outputs",
     "resolution": _REPO_ROOT / "resolution" / "outputs",
     "owid": _REPO_ROOT / "OWID" / "outputs",
+    "democracy": _REPO_ROOT / "democracy" / "outputs",
 }
 
 

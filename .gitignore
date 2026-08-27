@@ -12,6 +12,7 @@ docs/_static/hfd/
 docs/_static/ons/
 docs/_static/resolution/
 docs/_static/owid/
+docs/_static/democracy/
 
 # Python
 __pycache__/
