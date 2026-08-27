@@ -1,13 +1,9 @@
-"""TFR vs year, same threshold-based selection as tfr_threshold_derivative.py
-(every major country whose TFR has ever dropped below the chosen threshold,
-plotted from the year it first crosses below through to its most recent
-year — recoveries back above are not clipped) but the plain, direct chart:
-x = year, y = TFR, with a horizontal reference line at the threshold itself
-so it's visually obvious every curve dips under it somewhere.
-
-See tfr_threshold_derivative.py for the shared design notes (the JS-side
-slicing, the alpha-by-year fade, and the population/ISO3 "major countries"
-filter).
+"""TFR vs year: every major country whose TFR has ever dropped below the
+chosen threshold, plotted from the year it first crosses below through to
+its most recent year (recoveries back above are not clipped) — the plain,
+direct chart: x = year, y = TFR, with a horizontal reference line at the
+threshold itself so it's visually obvious every curve dips under it
+somewhere.
 """
 
 import json
