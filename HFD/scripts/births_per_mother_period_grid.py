@@ -83,6 +83,7 @@ def make_region_grid(df, countries):
         if visible:
             labels[visible[-1]].set_visible(False)
 
+    fig.subplots_adjust(bottom=0.22)
     fig.supxlabel("Age at first birth")
 
     sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)

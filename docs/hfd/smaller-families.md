@@ -2,9 +2,14 @@
 
 In many countries the average family size is decreasing; there are increasingly more single child families. This is often described as a preference for fewer children. However this does not account for the first child being born later.
 
-If there was a preference for fewer children, the total number of children should decrease when controlling for the age of her first birth. This is not seen when plotting the expected number of children against the age of first birth.
+If there was a preference for fewer children, the total number of children should decrease when controlling for the age of her first birth. This is not seen when plotting the expected number of children against the age of first birth. This suggests women who desire multiple children are having their first child later.
 
-This suggests women who desire multiple children are having their first child later.
+```{warning}
+Most countries do not collect or make data available that shows this. The plots below have been calculated using the conditional probabilities of each birth without information on birth year. This distorts the plot, however the general trends discussed are the same. 
+
+```
+
+
 
 ```{region-tabs} births_per_mother_region Expected total children given first birth at that age, {region}
 ```
