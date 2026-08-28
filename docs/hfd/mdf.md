@@ -1,4 +1,4 @@
-# Microdemographic Framework (TMR, CPM, TCR)
+# Microdemographic Framework
 
 The Total Fertility Rate (TFR) is the product of two independent components: TFR = TMR × CPM.
 
@@ -6,37 +6,9 @@ The Total Fertility Rate (TFR) is the product of two independent components: TFR
 - **Total Childlessness Rate (TCR)**: A societal measure indicating the proportion of women who would remain childless over their reproductive lifetime, assuming current age-specific fertility rates persist. As the complement of TMR (i.e., TCR = 1 – TMR). The term societal childlessness encompasses voluntary, medically and biologically involuntary, as well as circumstantial forms of childlessness.
 - **Children per Mother (CPM)**: A societal measure representing the average number of children born to women who become mothers, based on current age-specific fertility rates. This period-based metric captures trends in family size independently of childlessness.
 
-::::{tab-set}
-
-:::{tab-item} Americas & East Asia
-```{image} /_static/hfd/mdf_region_americas_east_asia.png
-:alt: TMR, CPM and TFR by year, Americas & East Asia
-:width: 100%
+```{raw} html
+<iframe src="../_static/hfd/mdf_facet.html" style="width: 100%; height: 1060px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
-:::
-
-:::{tab-item} Nordic & Baltic
-```{image} /_static/hfd/mdf_region_nordic_baltic.png
-:alt: TMR, CPM and TFR by year, Nordic & Baltic
-:width: 100%
-```
-:::
-
-:::{tab-item} Western Europe
-```{image} /_static/hfd/mdf_region_western_europe.png
-:alt: TMR, CPM and TFR by year, Western Europe
-:width: 100%
-```
-:::
-
-:::{tab-item} Central Europe
-```{image} /_static/hfd/mdf_region_central_europe.png
-:alt: TMR, CPM and TFR by year, Central Europe
-:width: 100%
-```
-:::
-
-::::
 
 ```{note}
 Shaw, S. J. (2025), ["On a microdemographic framework for decomposing contemporary fertility dynamics"](https://doi.org/10.1038/s41598-025-11522-9), *Scientific Reports* 15, 30726.
