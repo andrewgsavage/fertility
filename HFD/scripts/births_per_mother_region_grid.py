@@ -1,13 +1,7 @@
-import io
 import pathlib
 import sys
 
-import matplotlib.pyplot as plt
 import pandas as pd
-from matplotlib.ticker import FuncFormatter, MultipleLocator
-from PIL import Image
-
-from country_names import COUNTRY_REGIONS, country_title
 
 _REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 _ONS_SCRIPTS = _REPO_ROOT / "ONS" / "scripts"
@@ -96,95 +90,3 @@ def _expected_children_curve(sub):
         curve[ages[i]] = e1
         e1_next, e2_next, e3_next, e4_next = e1, e2, e3, e4
     return curve
-
-
-def slug(name):
-    return (
-        name.lower()
-        .replace(" & ", "_")
-        .replace(" / ", "_")
-        .replace(" ", "_")
-    )
-
-
-def make_region_grid(df, countries):
-    """Render one region's grid, sized to its own country count (no wasted
-    padding columns), cropped tight. Returns a PIL image; final canvas-size
-    equalization across regions happens in the caller."""
-    cmap = plt.colormaps["turbo"]
-    norm = plt.Normalize(df["cohort"].min(), df["cohort"].max())
-
-    ncols = len(countries)
-    fig, axes = plt.subplots(
-        1, ncols, figsize=(3 * ncols, 3), sharex=True, sharey=True,
-        gridspec_kw={"wspace": 0},
-        squeeze=False,
-    )
-
-    for col, country in enumerate(countries):
-        subset = df[df["code"] == country]
-        ax = axes[0, col]
-        for cohort, cohort_rows in subset.groupby("cohort"):
-            cohort_rows = cohort_rows.sort_values("age")
-            ax.plot(
-                cohort_rows["age"], cohort_rows["expected_children"],
-                color=cmap(norm(cohort)), alpha=0.6, linewidth=0.8,
-            )
-        ax.set_xlim(*X_LIM)
-        ax.set_xticks(list(range(20, X_LIM[1], 10)) + [X_LIM[1]])
-        ax.set_ylim(*Y_LIM)
-        ax.grid(True, linewidth=0.4)
-        ax.set_title(
-            country_title(country, subset["cohort"].min(), subset["cohort"].max()),
-            fontsize=9,
-        )
-        if col == 0:
-            ax.set_ylabel("Expected children")
-
-    # wspace=0 means each interior panel's rightmost *visible* x-tick label
-    # sits right next to the next panel's leftmost one, overlapping. Hiding
-    # it on every panel but the last leaves one label per boundary instead
-    # of two colliding ones. get_xticklabels() includes off-range ticks
-    # just outside xlim (e.g. "50" when xlim tops out at 45), so the
-    # rightmost *visible* one has to be picked by position, not by index.
-    for ax in axes[0, :-1]:
-        xlim = ax.get_xlim()
-        positions = ax.get_xticks()
-        labels = ax.get_xticklabels()
-        visible = [i for i, p in enumerate(positions) if xlim[0] <= p <= xlim[1]]
-        if visible:
-            labels[visible[-1]].set_visible(False)
-
-    fig.subplots_adjust(bottom=0.22)
-    fig.supxlabel("Age at first birth")
-
-    sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
-    cbar = fig.colorbar(sm, ax=axes.ravel().tolist(), label="Birth cohort", shrink=0.6)
-    cbar.ax.yaxis.set_major_locator(MultipleLocator(10))
-    cbar.ax.yaxis.set_major_formatter(FuncFormatter(lambda value, _: f"{value:.0f}"))
-
-    buf = io.BytesIO()
-    fig.savefig(buf, format="png", dpi=150, bbox_inches="tight")
-    plt.close(fig)
-    buf.seek(0)
-    return Image.open(buf).convert("RGB")
-
-
-if __name__ == "__main__":
-    df = load_data()
-
-    images = {region: make_region_grid(df, countries) for region, countries in COUNTRY_REGIONS.items()}
-
-    # Regions have different country counts, so their tightly-cropped images
-    # are different sizes. Pad each onto a common white canvas (the largest
-    # image's size) so every saved PNG has identical dimensions, instead of
-    # reserving blank matplotlib subplot columns to achieve that.
-    canvas_width = max(im.width for im in images.values())
-    canvas_height = max(im.height for im in images.values())
-
-    for region, im in images.items():
-        canvas = Image.new("RGB", (canvas_width, canvas_height), "white")
-        canvas.paste(im, (0, 0))
-        path = f"outputs/births_per_mother_region_{slug(region)}.png"
-        canvas.save(path)
-        print(f"Saved {path}")

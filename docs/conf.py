@@ -11,7 +11,6 @@ author = "Andrew Savage"
 extensions = [
     "myst_parser",
     "sphinx_design",
-    "region_tabs",
     "scatter_controls",
 ]
 
