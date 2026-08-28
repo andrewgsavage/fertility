@@ -6,7 +6,8 @@ The conditional ASFR gives the probability that a woman will give birth to their
 
 This reduction in first birth fertility rates can be seen in almost all countries the [Human Fertility Database](https://www.humanfertility.org/) has data on. In contrast, the second birth fertility rates do not show the same trend; in most countries the second birth rates are fairly static.
 
-```{region-tabs} cond_asfr_region Conditional ASFR for first vs second births, {region}
+```{raw} html
+<iframe src="../_static/hfd/cond_asfr_facet.html" style="width: 100%; height: 1490px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
 From this it is clear the factors causing the global fertility decline must affect first birth rates, but NOT second birth rates.
