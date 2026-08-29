@@ -118,8 +118,7 @@ def plot(df):
         fig.add_trace(
             go.Scatter(
                 x=avg.index, y=avg.values, mode="lines",
-                line=dict(width=2.5, color=color),
-                name="HFD (period basis)", legendgroup="hfd", showlegend=(col == 1),
+                line=dict(width=2.5, color=color), showlegend=False,
                 hovertemplate=f"HFD, first birth {label}<br>Age %{{x}}<br>%{{y:.2f}} children<extra></extra>",
             ),
             row=1, col=col,
@@ -127,8 +126,7 @@ def plot(df):
         fig.add_trace(
             go.Scatter(
                 x=PAPER_AGES, y=PAPER_CURVES[label], mode="lines",
-                line=dict(width=2, color=color, dash="dash"),
-                name="Roustaei et al. 2019", legendgroup="paper", showlegend=(col == 1),
+                line=dict(width=2, color=color, dash="dash"), showlegend=False,
                 hovertemplate=f"Roustaei et al., first birth {label}<br>Age %{{x}}<br>%{{y:.2f}} children<extra></extra>",
             ),
             row=1, col=col,
@@ -137,10 +135,11 @@ def plot(df):
         fig.update_yaxes(range=list(Y_LIM), showticklabels=(col == 1), row=1, col=col)
 
     fig.update_layout(
-        title="Finland: HFD (period basis) vs Roustaei et al. 2019, by first-birth period",
+        title="Finland: HFD (period basis, solid) vs Roustaei et al. 2019 (dashed), by first-birth period",
         template="plotly_white",
-        height=420,
-        legend=dict(orientation="h", x=0.5, xanchor="center", y=1.16, yanchor="bottom", font=dict(size=10)),
+        height=380,
+        margin=dict(t=60, b=40, l=50, r=20),
+        showlegend=False,
     )
     return fig
 
