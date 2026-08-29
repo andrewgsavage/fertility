@@ -58,10 +58,7 @@ It was only between the 1965-79 cohorts where the peak of the Cond. 1st rate shi
 
 Between those born in 1968 and 1975, HE participation rose 15.7pp. The gap in childlessness was negligible at 20 (+0.3pp), and increased at 25 (+4.5pp) and 30 (+6.4pp) as the population of graduates increased and had later births. After age 30, where graduates are more likely to have children (see [Bye Bye Baby?](childlessness-by-education)), the gap starts closing with a smaller gap at 35 (+1.9pp) and negligible gap by 40 (+0.4pp).
 
-During this time period there was an increase in the age students left school (+xxpp at age 16, +xxpp at age 17, +xxpp at age 18), and a corresponding rise in university entrants (+xxpp). Graduates tend to have children later in life, especially after 30 , which appears responsible for the later first births among the population. Students staying in school for longer does lead to later births, but these would be expected to still predominantely occur before age 30.
-
-
-[add note saying increase in school leaving age 15 to 16 in 1972 as text on graph. add +xxpp for 16,17,18,university to graph. change all FTE age in sept to use dotted line.]
+During this time period there was an increase in the age students left school (+12.6pp at age 16, +17.6pp at age 17, +16.7pp at age 18), and a corresponding rise in university entrants (+15.7pp) -- also marked on the chart below, along with the 1972 raising of the school leaving age from 15 to 16, which drove a step change in staying-on rates rather than a gradual one. Graduates tend to have children later in life, especially after 30 , which appears responsible for the later first births among the population. Students staying in school for longer does lead to later births, but these would be expected to still predominantely occur before age 30.
 
 ::::{tab-set}
 
@@ -168,9 +165,44 @@ Data and sources for each line are given in Data tab.
 
 ::::
 
+Kuang, Berrington & Falkingham (2025), ["Educational trends in cohort fertility by birth order: A comparison of England and Wales, Scotland, and Northern Ireland"](https://www.demographic-research.org/volumes/vol51/36/51-36.pdf), *Demographic Research* 51(36), break the same relationship down by country and by exact educational attainment (rather than a single UK-wide staying-on/HE proxy), corroborating the pattern above:
+
+::::{tab-set}
+
+:::{tab-item} Figure 2: education by cohort
+```{image} /_static/kuang2025/fig2-educational-attainment-distribution.png
+:alt: Educational attainment distribution by birth cohort, England & Wales, Scotland and Northern Ireland
+:width: 100%
+```
+:::
+
+:::{tab-item} Figure 3: family size
+<iframe src="../_static/ons/family_size_by_education_uk.html" style="width: 100%; aspect-ratio: 7 / 4; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+
+```{note}
+Digitized from the figure's own pixels (it's a raster image in the source PDF, not published as a table) -- see the calibration method in `ONS/scripts/family_size_by_education_uk.py`. Values are approximate to roughly ±0.02 children and aren't independently cross-checked against a second source.
+```
+:::
+
+:::{tab-item} Figure 4: age at first birth
+```{image} /_static/kuang2025/fig4-mean-age-at-first-birth.png
+:alt: Mean age at first birth, by educational attainment and birth cohort, England & Wales, Scotland and Northern Ireland
+:width: 100%
+```
+:::
+
+:::{tab-item} Figure 5: childlessness
+```{image} /_static/kuang2025/fig5-proportion-childless-age-40.png
+:alt: Proportion of women without children at age 40, by birth cohort and educational attainment, England & Wales, Scotland and Northern Ireland
+:width: 100%
+```
+:::
+
+::::
+
 ## Present day
 
-Current cohorts are seeing a significant decline in early fertility at early ages. Cohorts born between 1987 and 1999 saw rising school leaving ages (+xxpp at age 16, +xxpp at age 17, +xxpp at age 18), which can explain some, but not all, of the increase in childlessnesss before 25 and 30. 
+Current cohorts are seeing a significant decline in early fertility at early ages. Cohorts born between 1987 and 1999 saw rising school leaving ages (+14.5pp at age 16, +15.6pp at age 17, +7.6pp at age 18), which can explain some, but not all, of the increase in childlessnesss before 25 and 30. 
 
 University entrance rates rose 7pp for cohorts born between 1987 and 1993 before plateauing, (2011 university entrance), which also leads to later births. 
  comparable to the decline seen in baby boomers, which was followed by the increase in late fertility described above. There has been an increase in university entrants like seen in the 1965-79 cohorts, however the this increase has not been large enough to fully explain the 

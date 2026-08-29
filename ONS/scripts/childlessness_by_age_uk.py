@@ -55,31 +55,37 @@ def _interp(series, x):
     return y0 + (x - x0) / (x1 - x0) * (y1 - y0)
 
 
-def _add_trend_arrow(fig, series, x0, x1, color, label, y_offset=0, label_before=True, label_dx=0, label_dy=0):
+def _add_trend_arrow(fig, series, x0, x1, color, label, row=1, y_offset=0, label_before=True, label_dx=0, label_dy=0):
     """Annotation arrow from (x0, y at x0) to (x1, y at x1) on a single
-    trace's data in the top (childlessness) panel -- xref/yref are hardcoded
-    to that panel's own axes ("x"/"y", i.e. row 1 of the shared-x subplot
-    grid) since every call site here targets it. y_offset shifts both ends
-    vertically by the same amount, to keep overlapping arrows (e.g. the
-    childless-at-N series) visually separated; color matches the underlying
-    trace's line color rather than a flat black, so each arrow reads as
-    belonging to its trace. label is a format string taking the real
-    (un-offset) percentage-point change as {pp}. label_before puts the
-    label to the left of the arrow (right-anchored text ending at the
-    arrow's tail) when True, or to the right (left-anchored text starting
-    at the arrow's head) when False -- so the label sits clear of the
-    arrow rather than straddling it. label_dx/label_dy nudge just the text
-    (not the arrow itself) further, in data units."""
+    trace's data in either subplot row of the shared-x grid -- xref/yref are
+    derived from row (row 1 -> "x"/"y", row 2 -> "x2"/"y2", matching
+    make_subplots' default axis ids for this single-column, 2-row grid) so
+    the same helper serves the top (childlessness) and bottom
+    (staying-on/HE) panels. y_offset shifts both ends vertically by the same
+    amount, to keep overlapping arrows (e.g. the childless-at-N series)
+    visually separated; color matches the underlying trace's line color
+    rather than a flat black, so each arrow reads as belonging to its
+    trace. label is a format string taking the real (un-offset)
+    percentage-point change as {pp}. label_before puts the label to the
+    left of the arrow (right-anchored text ending at the arrow's tail) when
+    True, or to the right (left-anchored text starting at the arrow's head)
+    when False -- so the label sits clear of the arrow rather than
+    straddling it. label_dx/label_dy nudge just the text (not the arrow
+    itself) further, in data units."""
+    axis_suffix = "" if row == 1 else str(row)
+    xref = f"x{axis_suffix}"
+    yref = f"y{axis_suffix}"
+    axref, ayref = xref, yref
     y0_real, y1_real = _interp(series, x0), _interp(series, x1)
     y0, y1 = y0_real + y_offset, y1_real + y_offset
     fig.add_annotation(
-        x=x1, y=y1, ax=x0, ay=y0, xref="x", yref="y", axref="x", ayref="y",
+        x=x1, y=y1, ax=x0, ay=y0, xref=xref, yref=yref, axref=axref, ayref=ayref,
         showarrow=True, arrowhead=3, arrowsize=1, arrowwidth=2, arrowcolor=color,
         text="",
     )
     label_x, label_y, xanchor = (x0, y0, "right") if label_before else (x1, y1, "left")
     fig.add_annotation(
-        x=label_x + label_dx, y=label_y + label_dy, xref="x", yref="y", xanchor=xanchor, yanchor="bottom",
+        x=label_x + label_dx, y=label_y + label_dy, xref=xref, yref=yref, xanchor=xanchor, yanchor="bottom",
         showarrow=False, text=label.format(pp=y1_real - y0_real),
         font=dict(size=11, color=color), bgcolor="rgba(255,255,255,0.75)",
     )
@@ -125,6 +131,41 @@ def plot(childless_by_age):
     for age, (label, y_offset) in CHILDLESS_ARROWS.items():
         color = AGE_COLORS[AGES.index(age) % len(AGE_COLORS)]
         _add_trend_arrow(fig, childless_by_age[age], *ARROW_YEARS, color=color, label=label, y_offset=y_offset)
+
+    # Same ARROW_YEARS callout as CHILDLESS_ARROWS above, but for the
+    # staying-on/HE panel -- the {pp} figures quoted in the docs page's
+    # "Education" section prose are these same interpolated values (see
+    # staying_on_cohort_series/he_cohort_series), so the chart and the text
+    # stay in sync if the underlying digitized data ever changes.
+    STAYING_ON_ARROWS = {
+        16: ("Aged 16 ({pp:+.1f}pp)", 2),
+        17: ("Aged 17 ({pp:+.1f}pp)", 2),
+        18: ("Aged 18 ({pp:+.1f}pp)", 2),
+    }
+    for age, (label, y_offset) in STAYING_ON_ARROWS.items():
+        _add_trend_arrow(
+            fig, staying_on.staying_on_cohort_series(age), *ARROW_YEARS,
+            color=staying_on.STAYING_ON_COLORS[age], label=label, row=2, y_offset=y_offset,
+        )
+    _add_trend_arrow(
+        fig, staying_on.he_cohort_series(), *ARROW_YEARS,
+        color="#555555", label="HE ({pp:+.1f}pp)", row=2, y_offset=2, label_before=False,
+    )
+
+    # 1972: the Raising of the School Leaving Age (ROSLA) took compulsory
+    # schooling from 15 to 16, mechanically forcing the Aged-15 rate to
+    # ~100% and driving the outsized Aged-16 jump visible right at the
+    # STAYING_ON_16_P1/P2 boundary (35.1% in 1970 to 54.8% by 1974) -- a
+    # policy step, not a gradual behavioural shift like the rest of the
+    # trend. Marked at birth year 1956 (the Aged-16 line's own x-position
+    # for observation year 1972 = 1972 - 16), which also sits within a
+    # couple of years of the Aged-15 line's equivalent position (1972 - 15
+    # = 1957), so one line reasonably flags the jump on both.
+    fig.add_vline(
+        x=1956, line=dict(width=1, color="#d62728", dash="dot"), row=2, col=1,
+        annotation_text="1972: school leaving age raised 15→16",
+        annotation_position="top", annotation_font=dict(size=10, color="#d62728"),
+    )
 
     # Flush against row 2 (vertical_spacing=0), so row 1 shows no x-axis of
     # its own -- ticks/labels only appear once, on the shared bottom axis.

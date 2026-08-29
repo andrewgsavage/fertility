@@ -103,7 +103,7 @@ BREAK = None
 REF_DASH = {
     1: "solid", 4: "solid",
     2: "dash", 5: "dash",
-    3: "longdash", 6: "longdash",
+    3: "dot", 6: "dot",
     7: "dashdot",
 }
 
@@ -113,7 +113,7 @@ REF_DASH = {
 STYLE_LEGEND = [
     ("School only, excludes college", "solid"),
     ("All FTE, age at Christmas", "dash"),
-    ("All FTE, age in Sept", "longdash"),
+    ("All FTE, age in Sept", "dot"),
     ("DfE", "dashdot"),
 ]
 
@@ -289,6 +289,31 @@ OFFICIAL_EDUCATION = [
 
 def _to_cohort(series):
     return [(year - ENTRY_AGE, pct) for year, pct in series]
+
+
+def staying_on_cohort_series(age):
+    """Flat, sorted [(birth_year, pct), ...] for one age, combining every
+    STAYING_ON_PERIODS period plus the DfE continuation (breaks dropped) --
+    for interpolating an approximate value at an arbitrary birth year across
+    period/source boundaries (e.g. education-vs-fertility.md's cohort-gap
+    callouts), the same cross-source bridging already used for HE
+    participation (see he_cohort_series)."""
+    out = []
+    for _ref, pairs in STAYING_ON_PERIODS[age]:
+        for item in pairs:
+            if item is BREAK:
+                continue
+            year, pct = item
+            out.append((year - age, pct))
+    for year, pct in STAYING_ON_DFE.get(age, []):
+        out.append((year - age, pct))
+    return sorted(out)
+
+
+def he_cohort_series():
+    """Flat, sorted [(birth_year, pct), ...] bridging APPROX_EDUCATION (API)
+    and OFFICIAL_EDUCATION (HEIPR) -- same use as staying_on_cohort_series."""
+    return sorted(_to_cohort(APPROX_EDUCATION) + _to_cohort(OFFICIAL_EDUCATION))
 
 
 def _cohort_series(age_col, pairs):
