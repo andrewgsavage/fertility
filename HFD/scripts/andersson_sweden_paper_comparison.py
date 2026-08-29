@@ -99,7 +99,7 @@ def plot(df):
     ))
 
     fig.update_layout(
-        title=dict(text="Sweden: Andersson (2008) via Schmidt et al. 2012", y=0.97, yanchor="top"),
+        title=dict(text="Total children per mother given first birth age", y=0.97, yanchor="top"),
         template="plotly_white",
         height=430,
         margin=dict(t=110, b=40, l=50, r=20),
