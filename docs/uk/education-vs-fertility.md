@@ -170,9 +170,10 @@ Kuang, Berrington & Falkingham (2025), ["Educational trends in cohort fertility 
 ::::{tab-set}
 
 :::{tab-item} Figure 2: education by cohort
-```{image} /_static/kuang2025/fig2-educational-attainment-distribution.png
-:alt: Educational attainment distribution by birth cohort, England & Wales, Scotland and Northern Ireland
-:width: 100%
+<iframe src="../_static/ons/education_attainment_by_cohort_uk.html" style="width: 100%; aspect-ratio: 7 / 4; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+
+```{note}
+Digitized from the figure's own pixels -- see the calibration method in `ONS/scripts/education_attainment_by_cohort_uk.py`. Segment proportions are approximate to roughly ±0.01 each and aren't independently cross-checked against a second source.
 ```
 :::
 
@@ -185,20 +186,30 @@ Digitized from the figure's own pixels (it's a raster image in the source PDF, n
 :::
 
 :::{tab-item} Figure 4: age at first birth
-```{image} /_static/kuang2025/fig4-mean-age-at-first-birth.png
-:alt: Mean age at first birth, by educational attainment and birth cohort, England & Wales, Scotland and Northern Ireland
-:width: 100%
+<iframe src="../_static/ons/mean_age_first_birth_by_education_uk.html" style="width: 100%; aspect-ratio: 7 / 4; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+
+```{note}
+Digitized from the figure's own pixels -- see the calibration method in `ONS/scripts/mean_age_first_birth_by_education_uk.py`. Values are approximate to roughly ±0.05 years and aren't independently cross-checked against a second source.
 ```
 :::
 
 :::{tab-item} Figure 5: childlessness
-```{image} /_static/kuang2025/fig5-proportion-childless-age-40.png
-:alt: Proportion of women without children at age 40, by birth cohort and educational attainment, England & Wales, Scotland and Northern Ireland
-:width: 100%
+<iframe src="../_static/ons/childless_at_40_by_education_uk.html" style="width: 100%; aspect-ratio: 7 / 4; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+
+```{note}
+Digitized from the figure's own pixels -- see the calibration method in `ONS/scripts/childless_at_40_by_education_uk.py`. Values are approximate to roughly ±0.5pp and aren't independently cross-checked against a second source.
 ```
 :::
 
 ::::
+
+Kulu, Kuang, Christison & Berrington (2025), ["Long-term fertility trends by birth order in Britain: Comparison between England & Wales and Scotland"](https://doi.org/10.1080/00324728.2025.2491354), *Population Studies* 80(1):1-23, look at first-birth rates by education and age group over calendar time (rather than by birth cohort) and find a similar pattern: low-educated women's first-birth rates fell furthest and fastest at the youngest ages (15-29) by 2015-17, while highly educated women's rates at older ages (30-49) rose steadily over the same three decades.
+
+<iframe src="../_static/ons/first_birth_rates_by_education_uk.html" style="width: 100%; aspect-ratio: 4 / 3; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+
+```{note}
+Rates are relative to "Low educated, 2000-04" for each country (=1.0), not absolute fertility rates. Digitized from the figure's own pixels (it's a raster image in the source PDF) -- see the calibration method in `ONS/scripts/first_birth_rates_by_education_uk.py`. High and Low use the same near-black colour in the source (distinguished only by solid vs. dash-dot line style), so those two series are harder to tell apart automatically than Medium -- treat values as approximate to roughly ±0.03-0.05 where the lines cross or run close together, and ±0.02 elsewhere.
+```
 
 ## Present day
 
