@@ -134,12 +134,21 @@ def plot(df):
         fig.update_xaxes(range=list(X_LIM), showticklabels=True, row=1, col=col)
         fig.update_yaxes(range=list(Y_LIM), showticklabels=(col == 1), row=1, col=col)
 
+    # Dummy traces, style only -- a legend describing what solid vs dashed
+    # means, independent of the per-period color coding.
+    fig.add_trace(go.Scatter(
+        x=[None], y=[None], mode="lines", line=dict(width=2.5, color="black"), name="HFD (period basis)",
+    ))
+    fig.add_trace(go.Scatter(
+        x=[None], y=[None], mode="lines", line=dict(width=2, color="black", dash="dash"), name="Roustaei et al. 2019",
+    ))
+
     fig.update_layout(
-        title="Finland: HFD (period basis, solid) vs Roustaei et al. 2019 (dashed), by first-birth period",
+        title="Finland: HFD vs Roustaei et al. 2019, by first-birth period",
         template="plotly_white",
-        height=380,
-        margin=dict(t=60, b=40, l=50, r=20),
-        showlegend=False,
+        height=420,
+        margin=dict(t=90, b=40, l=50, r=20),
+        legend=dict(orientation="h", x=0.5, xanchor="center", y=1.22, yanchor="bottom", font=dict(size=10)),
     )
     return fig
 

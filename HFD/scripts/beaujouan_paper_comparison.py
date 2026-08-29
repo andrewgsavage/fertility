@@ -137,7 +137,7 @@ def plot(df):
 
     for row, country in enumerate(countries, start=1):
         fig.add_annotation(
-            text=f"<b>{COUNTRY_TITLES.get(country, country)}</b>", x=0.04, y=0.92,
+            text=COUNTRY_TITLES.get(country, country), x=0.04, y=0.92,
             xref="x domain", yref="y domain", xanchor="left", yanchor="top", showarrow=False,
             font=LABEL_FONT, row=row, col=1,
         )
@@ -185,12 +185,21 @@ def plot(df):
             fig.update_xaxes(range=list(X_LIM), showticklabels=(row == nrows), row=row, col=col)
             fig.update_yaxes(range=list(Y_LIM), showticklabels=(col == 1), row=row, col=col)
 
+    # Dummy traces, style only -- a legend describing what solid vs dashed
+    # means, independent of the per-decade color coding.
+    fig.add_trace(go.Scatter(
+        x=[None], y=[None], mode="lines", line=dict(width=2, color="black"), name="HFD (decade average)",
+    ))
+    fig.add_trace(go.Scatter(
+        x=[None], y=[None], mode="lines", line=dict(width=2, color="black", dash="dash"), name="Beaujouan et al. 2023",
+    ))
+
     fig.update_layout(
-        title="HFD birth cohorts (decade-averaged, solid) vs Beaujouan, Zeman & Nathan 2023 (dashed)",
+        title=dict(text="HFD birth cohorts vs Beaujouan, Zeman & Nathan 2023", y=0.99, yanchor="top"),
         template="plotly_white",
-        height=ROW_HEIGHT * nrows + 60,
-        margin=dict(t=60, b=40, l=50, r=20),
-        showlegend=False,
+        height=ROW_HEIGHT * nrows + 110,
+        margin=dict(t=110, b=40, l=50, r=20),
+        legend=dict(orientation="h", x=0.5, xanchor="center", y=1.045, yanchor="bottom", font=dict(size=10)),
     )
     return fig
 

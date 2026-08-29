@@ -41,7 +41,7 @@ hazard, capped at 4+ (coarser than HFD's 5+).
 Roustaei et al. (2019) found the same pattern in Finnish population-register data: completed fertility around 3 children for a first birth before age 21, falling to about 2 (replacement level) by age 30.
 
 ```{raw} html
-<iframe src="../_static/hfd/finland_paper_comparison.html" style="width: 100%; height: 400px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/hfd/finland_paper_comparison.html" style="width: 100%; height: 440px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
 ```{note}
@@ -68,7 +68,7 @@ is itself a useful check on the hazard-independence assumption the recursion rel
 Beaujouan, Zeman & Nathan (2023) found the same pattern directly from survey and census birth histories across ten high-income countries, for mothers' completed fertility conditional on age at first birth.
 
 ```{raw} html
-<iframe src="../_static/hfd/beaujouan_paper_comparison.html" style="width: 100%; height: 1260px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/hfd/beaujouan_paper_comparison.html" style="width: 100%; height: 1290px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
 ```{note}
@@ -107,21 +107,4 @@ and Vienna Institute of Demography (Austria). Available at [www.humanfertility.o
 Data downloaded on 2026-07-13.
 
 UK excluded: no HFD period fertility table exists for it.
-```
-
-## How accurate is this estimate?
-
-Same recursion run per calendar year on HFD's period fertility tables: an estimated version (pft.txt) and, for the five countries with continuous population-register coverage, a version measured directly from register data (pftc.txt).
-
-```{image} /_static/hfd/births_per_mother_accuracy.png
-:alt: Estimated (pft.txt, dashed) vs register-measured (pftc.txt, solid) expected children by age of first birth, for Denmark, Finland, Hungary, Norway, and Sweden
-:width: 100%
-```
-
-```{note}
-HFD. Human Fertility Database. Max Planck Institute for Demographic Research (Germany)
-and Vienna Institute of Demography (Austria). Available at [www.humanfertility.org](https://www.humanfertility.org/).
-Data downloaded on 2026-07-13.
-
-Mean absolute error across every (year, age 18-44) cell: 0.005-0.008 children, against a range of roughly 1.0-3.0.
 ```
