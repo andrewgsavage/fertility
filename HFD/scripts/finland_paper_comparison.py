@@ -31,11 +31,13 @@ recursion relies on -- not a claim that the two datasets are identical.
 """
 
 import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 
 from births_per_mother_period_grid import load_data
 from births_per_mother_region_grid import X_LIM, Y_LIM
 
 OUTPUT = "outputs/finland_paper_comparison.html"
+LABEL_FONT = dict(size=12, family='"Open Sans", verdana, arial, sans-serif', color="#2a3f5f")
 
 # Digitized at gridline resolution (every 2 years / 0.5 children) from
 # panel B of the supplementary PDF, which plots four curves: 1987-91,
@@ -76,31 +78,69 @@ def hfd_period_average(df, start, end):
 
 def plot(df):
     subset = df[df["code"] == "FIN"]
+    labels = list(PAPER_PERIODS.keys())
+    hfd_averages = {
+        label: hfd_period_average(subset, *PAPER_PERIODS[label]) for label in labels
+    }
 
-    fig = go.Figure()
-    for label, (start, end) in PAPER_PERIODS.items():
+    fig = make_subplots(
+        rows=1, cols=len(labels),
+        subplot_titles=[f"First birth {label}" for label in labels],
+        horizontal_spacing=0.04,
+    )
+    for annotation in fig.layout.annotations:
+        annotation.font = LABEL_FONT
+
+    for col, label in enumerate(labels, start=1):
+        # Every other period's pair, in light grey, for context -- drawn
+        # first so the highlighted period's colored pair sits on top.
+        for other in labels:
+            if other == label:
+                continue
+            fig.add_trace(
+                go.Scatter(
+                    x=hfd_averages[other].index, y=hfd_averages[other].values, mode="lines",
+                    line=dict(width=1, color="lightgrey"), showlegend=False, hoverinfo="skip",
+                ),
+                row=1, col=col,
+            )
+            fig.add_trace(
+                go.Scatter(
+                    x=PAPER_AGES, y=PAPER_CURVES[other], mode="lines",
+                    line=dict(width=1, color="lightgrey", dash="dash"), showlegend=False, hoverinfo="skip",
+                ),
+                row=1, col=col,
+            )
+
+        start, end = PAPER_PERIODS[label]
         color = PAPER_COLORS[label]
-        avg = hfd_period_average(subset, start, end)
-        fig.add_trace(go.Scatter(
-            x=avg.index, y=avg.values, mode="lines",
-            line=dict(width=2.5, color=color),
-            name=f"HFD {label}",
-            hovertemplate=f"HFD, first birth {label}<br>Age %{{x}}<br>%{{y:.2f}} children<extra></extra>",
-        ))
-        fig.add_trace(go.Scatter(
-            x=PAPER_AGES, y=PAPER_CURVES[label], mode="lines",
-            line=dict(width=2, color=color, dash="dash"),
-            name=f"Roustaei et al. {label}",
-            hovertemplate=f"Roustaei et al., first birth {label}<br>Age %{{x}}<br>%{{y:.2f}} children<extra></extra>",
-        ))
+        avg = hfd_averages[label]
+        fig.add_trace(
+            go.Scatter(
+                x=avg.index, y=avg.values, mode="lines",
+                line=dict(width=2.5, color=color),
+                name="HFD (period basis)", legendgroup="hfd", showlegend=(col == 1),
+                hovertemplate=f"HFD, first birth {label}<br>Age %{{x}}<br>%{{y:.2f}} children<extra></extra>",
+            ),
+            row=1, col=col,
+        )
+        fig.add_trace(
+            go.Scatter(
+                x=PAPER_AGES, y=PAPER_CURVES[label], mode="lines",
+                line=dict(width=2, color=color, dash="dash"),
+                name="Roustaei et al. 2019", legendgroup="paper", showlegend=(col == 1),
+                hovertemplate=f"Roustaei et al., first birth {label}<br>Age %{{x}}<br>%{{y:.2f}} children<extra></extra>",
+            ),
+            row=1, col=col,
+        )
+        fig.update_xaxes(range=list(X_LIM), showticklabels=True, row=1, col=col)
+        fig.update_yaxes(range=list(Y_LIM), showticklabels=(col == 1), row=1, col=col)
 
-    fig.update_xaxes(range=list(X_LIM), title="Age at first birth")
-    fig.update_yaxes(range=list(Y_LIM), title="Expected / completed children")
     fig.update_layout(
         title="Finland: HFD (period basis) vs Roustaei et al. 2019, by first-birth period",
         template="plotly_white",
-        height=520,
-        legend=dict(font=dict(size=10)),
+        height=420,
+        legend=dict(orientation="h", x=0.5, xanchor="center", y=1.16, yanchor="bottom", font=dict(size=10)),
     )
     return fig
 
