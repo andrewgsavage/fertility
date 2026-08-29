@@ -11,7 +11,16 @@ Source (per the paper): ONS Longitudinal Study, Scottish Longitudinal
 Study, Northern Ireland Longitudinal Study (NILS' earliest data point is
 the 1966-1969 birth cohort, binned into "1965-1969" here as in the source).
 
-Digitized from the figure's own raster pixels, same method as this repo's
+Unlike Figures 3 and 4 in this paper (family_size_by_education_uk.py /
+mean_age_first_birth_by_education_uk.py), Figure 5 has no exact published
+table behind it -- the paper's appendix covers average family size
+(Appendix 2), mean age at first birth (Appendix 3) and parity progression
+ratios (Appendix 4), but not proportion childless as such. Table A-7
+(Appendix 4, transition from childless to first birth) is a related but
+distinct measure -- 1 minus that ratio tracks these values closely but
+not exactly, likely a different age cutoff or estimation method, so it
+isn't used as a substitute here. CHILDLESS_AT_40 below is therefore fully
+pixel-digitized, same method as this repo's
 mean_age_first_birth_by_education_uk.py / family_size_by_education_uk.py
 (see either module's docstring), with y-axis calibration cross-checked
 against the axis tick label text's own row positions rather than trusting

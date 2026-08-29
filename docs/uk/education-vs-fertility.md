@@ -165,7 +165,7 @@ Data and sources for each line are given in Data tab.
 
 ::::
 
-Kuang, Berrington & Falkingham (2025), ["Educational trends in cohort fertility by birth order: A comparison of England and Wales, Scotland, and Northern Ireland"](https://www.demographic-research.org/volumes/vol51/36/51-36.pdf), *Demographic Research* 51(36), break the same relationship down by country and by exact educational attainment (rather than a single UK-wide staying-on/HE proxy), corroborating the pattern above:
+Kuang, Berrington & Falkingham (2025), ["Educational trends in cohort fertility by birth order: A comparison of England and Wales, Scotland, and Northern Ireland"](https://www.demographic-research.org/volumes/vol51/36/51-36.pdf), *Demographic Research* 51(36), used longitudinal studies to determine education and fertility metrics. They find the same trends in education levels - stable until 1969 then increasing (Fig 2). They also seperate fertility metrics by education level.  They find roughly 0.1 CPM decrease between medium (A level or eqv) and high (degree) education, a 3-4 year increase in mean age at first birth, and 4-7% increase in childlessness.
 
 ::::{tab-set}
 
@@ -202,15 +202,6 @@ Digitized from the figure's own pixels -- see the calibration method in `ONS/scr
 :::
 
 ::::
-
-Kulu, Kuang, Christison & Berrington (2025), ["Long-term fertility trends by birth order in Britain: Comparison between England & Wales and Scotland"](https://doi.org/10.1080/00324728.2025.2491354), *Population Studies* 80(1):1-23, look at first-birth rates by education and age group over calendar time (rather than by birth cohort) and find a similar pattern: low-educated women's first-birth rates fell furthest and fastest at the youngest ages (15-29) by 2015-17, while highly educated women's rates at older ages (30-49) rose steadily over the same three decades.
-
-<iframe src="../_static/ons/first_birth_rates_by_education_uk.html" style="width: 100%; aspect-ratio: 4 / 3; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
-
-```{note}
-Rates are relative to "Low educated, 2000-04" for each country (=1.0), not absolute fertility rates. Digitized from the figure's own pixels (it's a raster image in the source PDF) -- see the calibration method in `ONS/scripts/first_birth_rates_by_education_uk.py`. High and Low use the same near-black colour in the source (distinguished only by solid vs. dash-dot line style), so those two series are harder to tell apart automatically than Medium -- treat values as approximate to roughly ±0.03-0.05 where the lines cross or run close together, and ±0.02 elsewhere.
-```
-
 ## Present day
 
 Current cohorts are seeing a significant decline in early fertility at early ages. Cohorts born between 1987 and 1999 saw rising school leaving ages (+14.5pp at age 16, +15.6pp at age 17, +7.6pp at age 18), which can explain some, but not all, of the increase in childlessnesss before 25 and 30. 
@@ -220,6 +211,15 @@ University entrance rates rose 7pp for cohorts born between 1987 and 1993 before
 which would give a reason for delaying childbirth, justifying that assumption. Furthermore the decline in fertility also occurs [among graduates](childlessness-by-education), who have fewer fertile years so are likely to see fewer births at the end of their childbearing years. 
 
 **I see no evidence to justify delaying childbirth as the default assumption over not having children.**
+
+
+Kulu, Kuang, Christison & Berrington (2025), ["Long-term fertility trends by birth order in Britain: Comparison between England & Wales and Scotland"](https://doi.org/10.1080/00324728.2025.2491354), *Population Studies* 80(1):1-23, looked at first-birth rates by education and age group over calendar periods and found a similar trend to the sharp increase in childlessness found by the resolution foundation (33% in 2011, 53% in 2022 among 25-29 year olds)- low-educated women's first-birth rates fell furthest and fastest at the youngest ages (15-29) after peaking in 2005-09.
+
+<iframe src="../_static/ons/first_birth_rates_by_education_uk.html" style="width: 100%; aspect-ratio: 4 / 3; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+
+```{note}
+Rates are relative to "Low educated, 2000-04" for each country (=1.0), not absolute fertility rates. Digitized from the figure's own pixels (it's a raster image in the source PDF) -- see the calibration method in `ONS/scripts/first_birth_rates_by_education_uk.py`. High and Low use the same near-black colour in the source (distinguished only by solid vs. dash-dot line style), so those two series are harder to tell apart automatically than Medium -- treat values as approximate to roughly ±0.03-0.05 where the lines cross or run close together, and ±0.02 elsewhere.
+```
 
 ```{note}
 Childlessness: Office for National Statistics, "Childbearing for women born in different
