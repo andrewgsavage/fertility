@@ -8,7 +8,9 @@ Unlike the Finland (Roustaei) comparison, the paper's own grouping here
 *is* by birth-cohort decade (1940-49/1950-59/1960-69), the same unit HFD's
 cft.txt is indexed by -- so each decade's HFD cohorts are averaged
 together into one solid line, colored to match that decade's paper line
-(dashed), instead of showing the full per-cohort spaghetti.
+(dashed), instead of showing the full per-cohort spaghetti. Faceted one
+country per row, one decade per column, with the country's other two
+decades shown in light grey for context in each panel.
 
 The paper's own values are exact, not digitized: it supplies an Excel
 supplement (one sheet per country) with the CFMx figures underlying its
@@ -95,8 +97,8 @@ DECADE_COLORS = {
     "1960-69": "#e45756",
 }
 
-NCOLS = 4
 LABEL_FONT = dict(size=12, family='"Open Sans", verdana, arial, sans-serif', color="#2a3f5f")
+ROW_HEIGHT = 170
 
 
 def hfd_decade_average(df, code, start, end):
@@ -106,21 +108,64 @@ def hfd_decade_average(df, code, start, end):
 
 def plot(df):
     countries = list(PAPER_CFMX.keys())
-    nrows = -(-len(countries) // NCOLS)  # ceil division
+    decades = list(DECADE_RANGES.keys())
+    nrows, ncols = len(countries), len(decades)
+
+    # Precompute every (country, decade) HFD average up front, once, so
+    # each panel can also draw its country's *other* two decades as light
+    # grey context lines without recomputing them.
+    hfd_avg = {
+        country: {
+            decade: hfd_decade_average(df, HFD_CODE[country], start, end)
+            for decade, (start, end) in DECADE_RANGES.items()
+        }
+        for country in countries
+    }
+
+    # Decade labels head the top row only, like column labels in a faceted
+    # grid; country names are placed inside each row's first panel instead
+    # (see the annotation loop below), matching cond_asfr_facet.py's
+    # first-vs-second-birth convention.
+    subplot_titles = decades + ["" for _ in range(ncols * (nrows - 1))]
 
     fig = make_subplots(
-        rows=nrows, cols=NCOLS,
-        subplot_titles=[COUNTRY_TITLES.get(c, c) for c in countries] + [""] * (nrows * NCOLS - len(countries)),
-        horizontal_spacing=0.03, vertical_spacing=0.12,
+        rows=nrows, cols=ncols, subplot_titles=subplot_titles,
+        horizontal_spacing=0.03, vertical_spacing=0.02,
     )
     for annotation in fig.layout.annotations:
         annotation.font = LABEL_FONT
 
-    for i, country in enumerate(countries):
-        row, col = i // NCOLS + 1, i % NCOLS + 1
-        for decade, (start, end) in DECADE_RANGES.items():
+    for row, country in enumerate(countries, start=1):
+        fig.add_annotation(
+            text=f"<b>{COUNTRY_TITLES.get(country, country)}</b>", x=0.04, y=0.92,
+            xref="x domain", yref="y domain", xanchor="left", yanchor="top", showarrow=False,
+            font=LABEL_FONT, row=row, col=1,
+        )
+        for col, decade in enumerate(decades, start=1):
+            # Every other decade's pair, in light grey, for context --
+            # drawn first so the highlighted decade's colored pair sits on
+            # top.
+            for other in decades:
+                if other == decade:
+                    continue
+                other_avg = hfd_avg[country][other]
+                fig.add_trace(
+                    go.Scatter(
+                        x=other_avg.index, y=other_avg.values, mode="lines",
+                        line=dict(width=1, color="lightgrey"), showlegend=False, hoverinfo="skip",
+                    ),
+                    row=row, col=col,
+                )
+                fig.add_trace(
+                    go.Scatter(
+                        x=BIN_MIDPOINTS, y=PAPER_CFMX[country][other], mode="lines",
+                        line=dict(width=1, color="lightgrey", dash="dash"), showlegend=False, hoverinfo="skip",
+                    ),
+                    row=row, col=col,
+                )
+
             color = DECADE_COLORS[decade]
-            avg = hfd_decade_average(df, HFD_CODE[country], start, end)
+            avg = hfd_avg[country][decade]
             fig.add_trace(
                 go.Scatter(
                     x=avg.index, y=avg.values, mode="lines",
@@ -137,13 +182,13 @@ def plot(df):
                 ),
                 row=row, col=col,
             )
-        fig.update_xaxes(range=list(X_LIM), showticklabels=(row == nrows), row=row, col=col)
-        fig.update_yaxes(range=list(Y_LIM), showticklabels=(col == 1), row=row, col=col)
+            fig.update_xaxes(range=list(X_LIM), showticklabels=(row == nrows), row=row, col=col)
+            fig.update_yaxes(range=list(Y_LIM), showticklabels=(col == 1), row=row, col=col)
 
     fig.update_layout(
         title="HFD birth cohorts (decade-averaged, solid) vs Beaujouan, Zeman & Nathan 2023 (dashed)",
         template="plotly_white",
-        height=310 * nrows + 60,
+        height=ROW_HEIGHT * nrows + 60,
         margin=dict(t=60, b=40, l=50, r=20),
         showlegend=False,
     )

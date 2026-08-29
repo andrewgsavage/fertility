@@ -68,7 +68,7 @@ is itself a useful check on the hazard-independence assumption the recursion rel
 Beaujouan, Zeman & Nathan (2023) found the same pattern directly from survey and census birth histories across ten high-income countries, for mothers' completed fertility conditional on age at first birth.
 
 ```{raw} html
-<iframe src="../_static/hfd/beaujouan_paper_comparison.html" style="width: 100%; height: 700px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/hfd/beaujouan_paper_comparison.html" style="width: 100%; height: 1260px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
 ```{note}
