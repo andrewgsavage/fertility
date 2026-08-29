@@ -7,7 +7,7 @@ If there was a preference for fewer children, the total number of children shoul
 ```{warning}
 These charts show estimations, not real data. However they still show overall trends. Comparisons to published data follow.
 
-Most countries do not collect or make data available that shows this. The plots below have been calculated using the conditional probabilities of each birth without information on birth year. This distorts the plot, however the overarching trends remain. 
+Most countries do not make data available that shows children per mother by first birth age. The plots below have been calculated using the conditional probabilities of each birth without information on birth year. This distorts the plot, however the overarching trends remain. 
 
 ```
 
@@ -59,10 +59,12 @@ also in the paper but aren't in HFD's cft.txt. Age bins (15-19 .. 40-44) plotted
 midpoint.
 ```
 
-Andersson (2008), reprinted in Schmidt et al. (2012)'s review of postponement research, shows the same pattern going back further for Sweden — cohorts born 1935-39 and 1950-54, predating HFD's own Swedish coverage (which starts at the 1955 cohort), so there's no HFD line to overlay here.
+### Sweden, Andersson (2008)
+
+Andersson (2008), reprinted in Schmidt et al. (2012)'s review of postponement research, shows the same pattern for Sweden. HFD does not contain data for Sweden during this period, so the closest available HFD data, the 1955 cohort, has been plotted with the 1950-54 cohort.
 
 ```{raw} html
-<iframe src="../_static/hfd/andersson_sweden_paper_comparison.html" style="width: 100%; height: 520px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/hfd/andersson_sweden_paper_comparison.html" style="width: 100%; height: 460px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
 ```{note}
