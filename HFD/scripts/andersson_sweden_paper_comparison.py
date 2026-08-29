@@ -12,7 +12,9 @@ rest of this page's "Comparison to published research" section, just
 predating HFD's own coverage.
 """
 
-import matplotlib.pyplot as plt
+import plotly.graph_objects as go
+
+OUTPUT = "outputs/andersson_sweden_paper_comparison.html"
 
 # Digitized by eye, one point per age year, from Fig. 4 of Schmidt et al.
 # 2012 (originally Andersson 2008, Table 12d).
@@ -30,24 +32,41 @@ COHORT_1950_54 = [
 
 
 def plot():
-    fig, ax = plt.subplots(figsize=(6, 5))
-    ax.plot(AGES, COHORT_1935_39, color="navy", linewidth=1.5, marker="D", markersize=3, label="Cohorts 1935-39")
-    ax.plot(AGES, COHORT_1950_54, color="black", linewidth=1.5, marker="s", markersize=3, label="Cohorts 1950-54")
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(
+        x=AGES, y=COHORT_1935_39, mode="lines+markers",
+        line=dict(width=1.8, color="navy"), marker=dict(size=5, symbol="diamond"),
+        name="Cohorts 1935-39",
+        hovertemplate="Cohorts 1935-39<br>Age %{x}<br>%{y:.2f} children<extra></extra>",
+    ))
+    fig.add_trace(go.Scatter(
+        x=AGES, y=COHORT_1950_54, mode="lines+markers",
+        line=dict(width=1.8, color="black"), marker=dict(size=5, symbol="square"),
+        name="Cohorts 1950-54",
+        hovertemplate="Cohorts 1950-54<br>Age %{x}<br>%{y:.2f} children<extra></extra>",
+    ))
 
-    ax.set_xlim(15, 44)
-    ax.set_ylim(1.0, 4.0)
-    ax.grid(True, linewidth=0.4)
-    ax.set_xlabel("Age at first birth")
-    ax.set_ylabel("Completed fertility rate")
-    ax.set_title("Sweden: Andersson (2008) via Schmidt et al. 2012")
-    ax.legend(fontsize=9)
-
-    fig.tight_layout()
+    fig.update_xaxes(range=[15, 44], title="Age at first birth")
+    fig.update_yaxes(range=[1.0, 4.0], title="Completed fertility rate")
+    fig.update_layout(
+        title="Sweden: Andersson (2008) via Schmidt et al. 2012",
+        template="plotly_white",
+        height=500,
+    )
     return fig
 
 
 if __name__ == "__main__":
     fig = plot()
-    path = "outputs/andersson_sweden_paper_comparison.png"
-    fig.savefig(path, dpi=150, bbox_inches="tight")
-    print(f"Saved {path}")
+    fig.write_html(
+        OUTPUT,
+        include_plotlyjs="cdn",
+        full_html=True,
+        default_width="100%",
+        default_height=f"{fig.layout.height}px",
+        config={"responsive": True},
+    )
+    html = open(OUTPUT, "r", encoding="utf-8").read()
+    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
+    open(OUTPUT, "w", encoding="utf-8").write(html)
+    print(f"Saved {OUTPUT}")

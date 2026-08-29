@@ -40,9 +40,8 @@ hazard, capped at 4+ (coarser than HFD's 5+).
 
 Roustaei et al. (2019) found the same pattern in Finnish population-register data: completed fertility around 3 children for a first birth before age 21, falling to about 2 (replacement level) by age 30.
 
-```{image} /_static/hfd/finland_paper_comparison.png
-:alt: HFD-derived expected children by age of first birth for Finland (1967-1978 birth cohorts) overlaid on Roustaei et al. 2019's completed fertility curves for women whose first birth was in 1987-91, 1992-96, 1997-01, or 2002-06
-:width: 60%
+```{raw} html
+<iframe src="../_static/hfd/finland_paper_comparison.html" style="width: 100%; height: 540px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
 ```{note}
@@ -52,25 +51,24 @@ Available at [bmjopen.bmj.com](https://bmjopen.bmj.com/content/9/1/e026336). Fou
 digitized from panel B of the paper's [online supplementary
 figure](https://pmc.ncbi.nlm.nih.gov/articles/instance/6340426/bin/bmjopen-2018-026336supp001.pdf),
 which extends the main text's Figure 2B (1987-91 and 1992-96 only) to two further 5-year
-periods.
+periods. The paper groups by first-birth calendar period, so the HFD line for each period
+is averaged from HFD's own period-basis recursion (pft.txt) over those same calendar years,
+rather than from a birth-cohort grouping that has no real correspondence to it.
 
-The two curves aren't the same kind of measurement. HFD's is a modeled expected value: it
-chains each cohort's own age-specific parity-progression hazards together, assuming a
-woman's chance of a 2nd birth, 3rd birth, etc. can be treated as independent probabilities
-at each age. The paper's, from Finland's individually-linked Medical Birth Register, is
-presumably a direct empirical average — the actual completed number of children real women
-had, tracked to today via personal identifiers, no chaining of rates required. The two also
-group cohorts differently (HFD by the mother's own birth year, the paper by the calendar
-year her first birth occurred). That a rate-based model and a direct headcount land on the
-same shape and range is itself a useful check on the hazard-independence assumption the
-recursion relies on.
+The two curves still aren't the same kind of measurement. HFD's is a modeled expected
+value: it chains each calendar year's own age-specific parity-progression hazards together,
+assuming a woman's chance of a 2nd birth, 3rd birth, etc. can be treated as independent
+probabilities at each age. The paper's, from Finland's individually-linked Medical Birth
+Register, is presumably a direct empirical average — the actual completed number of
+children real women had, tracked to today via personal identifiers, no chaining of rates
+required. That a rate-based model and a direct headcount land on the same shape and range
+is itself a useful check on the hazard-independence assumption the recursion relies on.
 ```
 
 Beaujouan, Zeman & Nathan (2023) found the same pattern directly from survey and census birth histories across ten high-income countries, for mothers' completed fertility conditional on age at first birth.
 
-```{image} /_static/hfd/beaujouan_paper_comparison.png
-:alt: HFD-derived expected children by age of first birth overlaid on Beaujouan, Zeman & Nathan 2023's completed cohort fertility by age at first birth, for Austria, Netherlands, Norway, Poland, Sweden, United States and Great Britain
-:width: 100%
+```{raw} html
+<iframe src="../_static/hfd/beaujouan_paper_comparison.html" style="width: 100%; height: 800px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
 ```{note}
@@ -79,16 +77,14 @@ Beaujouan É, Zeman K, Nathan M. "Delayed first births and completed fertility a
 [demographic-research.org](https://www.demographic-research.org/volumes/vol48/15/). Values
 for the seven countries shown are taken directly from the paper's supplementary Excel file
 (one sheet per country), not digitized from Figure 3 — France, Italy and Switzerland are
-also in the paper but aren't in HFD's cft.txt. Age bins (15-19 .. 35-39) plotted at their
-midpoint; the paper's own 40-44 bin is dropped, as its completed fertility mostly sits at
-its definitional floor of 1 child and adds noise rather than signal.
+also in the paper but aren't in HFD's cft.txt. Age bins (15-19 .. 40-44) plotted at their
+midpoint.
 ```
 
 Andersson (2008), reprinted in Schmidt et al. (2012)'s review of postponement research, shows the same pattern going back further for Sweden — cohorts born 1935-39 and 1950-54, predating HFD's own Swedish coverage (which starts at the 1955 cohort), so there's no HFD line to overlay here.
 
-```{image} /_static/hfd/andersson_sweden_paper_comparison.png
-:alt: Completed fertility rate by age at first birth for Swedish women born 1935-39 and 1950-54, digitized from Schmidt et al. 2012's Figure 4
-:width: 60%
+```{raw} html
+<iframe src="../_static/hfd/andersson_sweden_paper_comparison.html" style="width: 100%; height: 520px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
 ```{note}
