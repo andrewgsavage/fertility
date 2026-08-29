@@ -46,7 +46,7 @@ The estimation and published data both show fewer children born to older mothers
 
 
 ```{raw} html
-<iframe src="../_static/hfd/beaujouan_paper_comparison.html" style="width: 100%; height: 1350px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/hfd/beaujouan_paper_comparison.html" style="width: 100%; height: 1310px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
 ```{note}

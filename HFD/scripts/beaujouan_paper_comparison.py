@@ -195,11 +195,11 @@ def plot(df):
     ))
 
     fig.update_layout(
-        title=dict(text="HFD birth cohorts vs Beaujouan, Zeman & Nathan 2023", y=0.985, yanchor="top"),
+        title=dict(text="Total children per mother given first birth age, by country", y=0.985, yanchor="top"),
         template="plotly_white",
-        height=ROW_HEIGHT * nrows + 160,
-        margin=dict(t=160, b=40, l=50, r=20),
-        legend=dict(orientation="h", x=0.5, xanchor="center", y=1.05, yanchor="bottom", font=dict(size=10)),
+        height=ROW_HEIGHT * nrows + 120,
+        margin=dict(t=120, b=40, l=50, r=20),
+        legend=dict(orientation="h", x=0.5, xanchor="center", y=1.04, yanchor="bottom", font=dict(size=10)),
     )
     return fig
 
