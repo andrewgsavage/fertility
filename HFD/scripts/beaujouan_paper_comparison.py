@@ -118,15 +118,13 @@ def plot(df):
 
     for i, country in enumerate(countries):
         row, col = i // NCOLS + 1, i % NCOLS + 1
-        is_first_panel = i == 0
         for decade, (start, end) in DECADE_RANGES.items():
             color = DECADE_COLORS[decade]
             avg = hfd_decade_average(df, HFD_CODE[country], start, end)
             fig.add_trace(
                 go.Scatter(
                     x=avg.index, y=avg.values, mode="lines",
-                    line=dict(width=2, color=color),
-                    name=f"HFD {decade}", legendgroup=f"hfd-{decade}", showlegend=is_first_panel,
+                    line=dict(width=2, color=color), showlegend=False,
                     hovertemplate=f"{COUNTRY_TITLES.get(country, country)}, HFD {decade}<br>Age %{{x}}<br>%{{y:.2f}} children<extra></extra>",
                 ),
                 row=row, col=col,
@@ -134,8 +132,7 @@ def plot(df):
             fig.add_trace(
                 go.Scatter(
                     x=BIN_MIDPOINTS, y=PAPER_CFMX[country][decade], mode="lines",
-                    line=dict(width=2, color=color, dash="dash"),
-                    name=f"Beaujouan et al. {decade}", legendgroup=f"paper-{decade}", showlegend=is_first_panel,
+                    line=dict(width=2, color=color, dash="dash"), showlegend=False,
                     hovertemplate=f"{COUNTRY_TITLES.get(country, country)}, Beaujouan et al. {decade}<br>Age %{{x}}<br>%{{y:.2f}} children<extra></extra>",
                 ),
                 row=row, col=col,
@@ -144,10 +141,11 @@ def plot(df):
         fig.update_yaxes(range=list(Y_LIM), showticklabels=(col == 1), row=row, col=col)
 
     fig.update_layout(
-        title="HFD birth cohorts (decade-averaged) vs Beaujouan, Zeman & Nathan 2023",
+        title="HFD birth cohorts (decade-averaged, solid) vs Beaujouan, Zeman & Nathan 2023 (dashed)",
         template="plotly_white",
-        height=340 * nrows + 100,
-        legend=dict(orientation="h", x=0.5, xanchor="center", y=1.06, yanchor="bottom", font=dict(size=10)),
+        height=310 * nrows + 60,
+        margin=dict(t=60, b=40, l=50, r=20),
+        showlegend=False,
     )
     return fig
 
