@@ -85,7 +85,7 @@ def plot(df):
 
     fig = make_subplots(
         rows=1, cols=len(labels),
-        subplot_titles=[f"First birth {label}" for label in labels],
+        subplot_titles=[f"<b>{label}</b>" for label in labels],
         horizontal_spacing=0.04,
     )
     for annotation in fig.layout.annotations:
@@ -137,18 +137,18 @@ def plot(df):
     # Dummy traces, style only -- a legend describing what solid vs dashed
     # means, independent of the per-period color coding.
     fig.add_trace(go.Scatter(
-        x=[None], y=[None], mode="lines", line=dict(width=2.5, color="black"), name="HFD (period basis)",
+        x=[None], y=[None], mode="lines", line=dict(width=2.5, color="black"), name="Probabilistic estimation using HFD period data",
     ))
     fig.add_trace(go.Scatter(
         x=[None], y=[None], mode="lines", line=dict(width=2, color="black", dash="dash"), name="Roustaei et al. 2019",
     ))
 
     fig.update_layout(
-        title="Finland: HFD vs Roustaei et al. 2019, by first-birth period",
+        title=dict(text="Finland: HFD vs Roustaei et al. 2019, by first-birth period", y=0.98, yanchor="top"),
         template="plotly_white",
-        height=420,
-        margin=dict(t=90, b=40, l=50, r=20),
-        legend=dict(orientation="h", x=0.5, xanchor="center", y=1.22, yanchor="bottom", font=dict(size=10)),
+        height=460,
+        margin=dict(t=130, b=40, l=50, r=20),
+        legend=dict(orientation="h", x=0.5, xanchor="center", y=1.1, yanchor="bottom", font=dict(size=10)),
     )
     return fig
 

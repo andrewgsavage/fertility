@@ -126,7 +126,7 @@ def plot(df):
     # grid; country names are placed inside each row's first panel instead
     # (see the annotation loop below), matching cond_asfr_facet.py's
     # first-vs-second-birth convention.
-    subplot_titles = decades + ["" for _ in range(ncols * (nrows - 1))]
+    subplot_titles = [f"<b>{d}</b>" for d in decades] + ["" for _ in range(ncols * (nrows - 1))]
 
     fig = make_subplots(
         rows=nrows, cols=ncols, subplot_titles=subplot_titles,
@@ -137,7 +137,7 @@ def plot(df):
 
     for row, country in enumerate(countries, start=1):
         fig.add_annotation(
-            text=COUNTRY_TITLES.get(country, country), x=0.04, y=0.92,
+            text=f"<b>{COUNTRY_TITLES.get(country, country)}</b>", x=0.04, y=0.92,
             xref="x domain", yref="y domain", xanchor="left", yanchor="top", showarrow=False,
             font=LABEL_FONT, row=row, col=1,
         )
@@ -188,18 +188,18 @@ def plot(df):
     # Dummy traces, style only -- a legend describing what solid vs dashed
     # means, independent of the per-decade color coding.
     fig.add_trace(go.Scatter(
-        x=[None], y=[None], mode="lines", line=dict(width=2, color="black"), name="HFD (decade average)",
+        x=[None], y=[None], mode="lines", line=dict(width=2, color="black"), name="Probabilistic estimation using HFD cohort data",
     ))
     fig.add_trace(go.Scatter(
         x=[None], y=[None], mode="lines", line=dict(width=2, color="black", dash="dash"), name="Beaujouan et al. 2023",
     ))
 
     fig.update_layout(
-        title=dict(text="HFD birth cohorts vs Beaujouan, Zeman & Nathan 2023", y=0.99, yanchor="top"),
+        title=dict(text="HFD birth cohorts vs Beaujouan, Zeman & Nathan 2023", y=0.985, yanchor="top"),
         template="plotly_white",
-        height=ROW_HEIGHT * nrows + 110,
-        margin=dict(t=110, b=40, l=50, r=20),
-        legend=dict(orientation="h", x=0.5, xanchor="center", y=1.045, yanchor="bottom", font=dict(size=10)),
+        height=ROW_HEIGHT * nrows + 160,
+        margin=dict(t=160, b=40, l=50, r=20),
+        legend=dict(orientation="h", x=0.5, xanchor="center", y=1.05, yanchor="bottom", font=dict(size=10)),
     )
     return fig
 

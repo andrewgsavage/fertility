@@ -41,7 +41,7 @@ hazard, capped at 4+ (coarser than HFD's 5+).
 Roustaei et al. (2019) found the same pattern in Finnish population-register data: completed fertility around 3 children for a first birth before age 21, falling to about 2 (replacement level) by age 30.
 
 ```{raw} html
-<iframe src="../_static/hfd/finland_paper_comparison.html" style="width: 100%; height: 440px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/hfd/finland_paper_comparison.html" style="width: 100%; height: 480px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
 ```{note}
@@ -68,7 +68,7 @@ is itself a useful check on the hazard-independence assumption the recursion rel
 Beaujouan, Zeman & Nathan (2023) found the same pattern directly from survey and census birth histories across ten high-income countries, for mothers' completed fertility conditional on age at first birth.
 
 ```{raw} html
-<iframe src="../_static/hfd/beaujouan_paper_comparison.html" style="width: 100%; height: 1290px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/hfd/beaujouan_paper_comparison.html" style="width: 100%; height: 1350px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
 ```{note}
