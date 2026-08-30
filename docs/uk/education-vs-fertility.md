@@ -165,7 +165,7 @@ Data and sources for each line are given in Data tab.
 
 ::::
 
-Kuang, Berrington & Falkingham (2025), ["Educational trends in cohort fertility by birth order: A comparison of England and Wales, Scotland, and Northern Ireland"](https://www.demographic-research.org/volumes/vol51/36/51-36.pdf), *Demographic Research* 51(36), used longitudinal studies to determine education and fertility metrics. They find the same trends in education levels - stable until 1969 then increasing (Fig 2). They also seperate fertility metrics by education level.  They find roughly 0.1 CPM decrease between medium (A level or eqv) and high (degree) education, a 3-4 year increase in mean age at first birth, and 4-7% increase in childlessness.
+Kuang, Berrington & Falkingham (2025), ["Educational trends in cohort fertility by birth order: A comparison of England and Wales, Scotland, and Northern Ireland"](https://www.demographic-research.org/volumes/vol51/36/51-36.pdf), *Demographic Research* 51(36), used longitudinal studies to determine education and fertility metrics. They find the same trends in education levels - stable until 1969 then increasing (Fig 2). They also examine fertility metrics seperated by education level.  They find roughly 0.1 CPM decrease between medium (A level or eqv) and high (degree) education, a 3-4 year increase in mean age at first birth, and 4-7% increase in childlessness.
 
 ::::{tab-set}
 
@@ -215,11 +215,46 @@ which would give a reason for delaying childbirth, justifying that assumption. F
 
 Kulu, Kuang, Christison & Berrington (2025), ["Long-term fertility trends by birth order in Britain: Comparison between England & Wales and Scotland"](https://doi.org/10.1080/00324728.2025.2491354), *Population Studies* 80(1):1-23, looked at first-birth rates by education and age group over calendar periods and found a similar trend to the sharp increase in childlessness found by the resolution foundation (33% in 2011, 53% in 2022 among 25-29 year olds)- low-educated women's first-birth rates fell furthest and fastest at the youngest ages (15-29) after peaking in 2005-09.
 
+::::{tab-set}
+
+:::{tab-item} Chart
 <iframe src="../_static/ons/first_birth_rates_by_education_uk.html" style="width: 100%; aspect-ratio: 4 / 3; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 
 ```{note}
 Rates are relative to "Low educated, 2000-04" for each country (=1.0), not absolute fertility rates. Digitized from the figure's own pixels (it's a raster image in the source PDF) -- see the calibration method in `ONS/scripts/first_birth_rates_by_education_uk.py`. High and Low use the same near-black colour in the source (distinguished only by solid vs. dash-dot line style), so those two series are harder to tell apart automatically than Medium -- treat values as approximate to roughly ±0.03-0.05 where the lines cross or run close together, and ±0.02 elsewhere.
 ```
+:::
+
+:::{tab-item} Log scale
+<iframe src="../_static/ons/first_birth_rates_by_education_uk_logy.html" style="width: 100%; aspect-ratio: 4 / 3; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+
+```{note}
+Same data as the Chart tab, with a log y-axis -- useful here since the reference group (Low educated, 2000-04 = 1.0) means every series is itself a ratio, so equal proportional changes (e.g. Medium roughly halving between 1990-94 and 2015-17 in the 15-29 panels) read as equal visual distances regardless of which side of 1.0 they're on.
+```
+:::
+
+:::{tab-item} Data
+| Period | England & Wales 15-29, Low | England & Wales 15-29, Medium | England & Wales 15-29, High | Scotland 15-29, Low | Scotland 15-29, Medium | Scotland 15-29, High | England & Wales 30-49, Low | England & Wales 30-49, Medium | England & Wales 30-49, High | Scotland 30-49, Low | Scotland 30-49, Medium | Scotland 30-49, High |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1990-94 | 0.91 | 0.88 | 0.50 | 0.88 | 0.76 | 0.49 | 0.99 | 1.47 | 1.19 | 1.01 | 1.43 | 1.31 |
+| 1995-99 | 1.03 | 0.59 | 0.38 | 1.07 | 0.76 | 0.42 | 1.04 | 1.19 | 1.28 | 0.96 | 1.26 | 1.19 |
+| 2000-04 | 1.00 | 0.53 | 0.39 | 1.00 | 0.46 | 0.52 | 1.00 | 1.07 | 1.30 | 1.00 | 1.16 | 1.22 |
+| 2005-09 | 1.18 | 0.63 | 0.41 | 1.27 | 0.59 | 0.48 | 1.03 | 1.25 | 1.51 | 0.95 | 1.19 | 1.57 |
+| 2010-14 | 0.96 | 0.58 | 0.50 | 0.87 | 0.45 | 0.55 | 1.04 | 1.32 | 1.59 | 0.93 | 1.30 | 1.57 |
+| 2015-17 | 0.62 | 0.50 | 0.64 | 0.52 | 0.37 | 0.67 | 1.00 | 1.21 | 1.53 | 0.83 | 1.17 | 1.46 |
+
+Digitized from Kulu, Kuang, Christison & Berrington (2025) Figure 11 -- see `ONS/scripts/first_birth_rates_by_education_uk.py` for the calibration method and per-point confidence notes.
+:::
+
+:::{tab-item} Age colour comparison
+<iframe src="../_static/ons/childlessness_age_colour_comparison_uk.html" style="width: 100%; aspect-ratio: 7 / 5; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+
+```{note}
+Two sources from this page, replotted on a shared continuous colour scale by age (rather than each one's own discrete palette) so the same colour means the same age in both panels; each panel's own second dimension is carried by line style instead, and both panels share the same x-axis -- Kulu et al.'s own 5-year reporting periods. Top: the Chart tab's England & Wales data, both age groups combined onto one chart -- colour is age group (15-29 vs 30-49, mean age 22/39.5), line style is education level (Low solid, Medium dashed, High dotted). Bottom: the Resolution Foundation ["Bye Bye Baby"](https://www.resolutionfoundation.org/publications/bye-bye-baby/) report's Figure 6, digitized as described on [Bye Bye Baby?](childlessness-by-education), bucketed into the same six periods (mean of every digitized point whose reporting year falls in that period; points outside 1990-2017 are dropped) -- colour is each 5-year age band's own median age (27/32/37/42), line style is graduates (dotted, matching High education's style above) vs non-graduates (solid). See `ONS/scripts/childlessness_age_colour_comparison_uk.py`.
+```
+:::
+
+::::
 
 ```{note}
 Childlessness: Office for National Statistics, "Childbearing for women born in different

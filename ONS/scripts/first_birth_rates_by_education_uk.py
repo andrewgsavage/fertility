@@ -39,10 +39,13 @@ and are flagged inline in FIRST_BIRTH_RATES below. Not independently
 cross-checked against a second source.
 """
 
+import math
+
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 OUTPUT = "outputs/first_birth_rates_by_education_uk.html"
+OUTPUT_LOGY = "outputs/first_birth_rates_by_education_uk_logy.html"
 
 COUNTRIES = ["England & Wales", "Scotland"]
 AGE_GROUPS = [("15-29", "Women aged 15-29"), ("30-49", "Women aged 30-49")]
@@ -89,7 +92,7 @@ FIRST_BIRTH_RATES = {
 }
 
 
-def plot():
+def plot(log_y=False):
     fig = make_subplots(
         rows=2, cols=2, vertical_spacing=0.1, horizontal_spacing=0.05,
         column_titles=COUNTRIES, row_titles=[label for _, label in AGE_GROUPS],
@@ -114,10 +117,19 @@ def plot():
                 type="category", categoryorder="array", categoryarray=PERIODS,
                 tickangle=-45, row=row, col=col,
             )
-            fig.update_yaxes(range=Y_RANGE[age_key], showticklabels=(col == 1), row=row, col=col)
+            if log_y:
+                # log10 of Y_RANGE's own bounds, since Plotly's "range" on a
+                # log axis is specified in log10 units, not data units.
+                lo, hi = Y_RANGE[age_key]
+                fig.update_yaxes(type="log", range=[math.log10(lo), math.log10(hi)], showticklabels=(col == 1), row=row, col=col)
+            else:
+                fig.update_yaxes(range=Y_RANGE[age_key], showticklabels=(col == 1), row=row, col=col)
 
+    title = "Relative first-birth rates in Britain by education and age group (ref: Low educated, 2000-04)"
+    if log_y:
+        title += " -- log y-axis"
     fig.update_layout(
-        title="Relative first-birth rates in Britain by education and age group (ref: Low educated, 2000-04)",
+        title=title,
         template="plotly_white", autosize=True,
         legend=dict(title="Education level", x=1.02, y=1, xanchor="left", yanchor="top"),
         margin=dict(r=140, t=90),
@@ -125,17 +137,21 @@ def plot():
     return fig
 
 
-if __name__ == "__main__":
-    fig = plot()
+def _save(fig, path):
     fig.write_html(
-        OUTPUT,
+        path,
         include_plotlyjs="cdn",
         full_html=True,
         default_width="100%",
         default_height="100%",
         config={"responsive": True},
     )
-    html = open(OUTPUT, "r", encoding="utf-8").read()
+    html = open(path, "r", encoding="utf-8").read()
     html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    open(OUTPUT, "w", encoding="utf-8").write(html)
-    print(f"Saved {OUTPUT}")
+    open(path, "w", encoding="utf-8").write(html)
+    print(f"Saved {path}")
+
+
+if __name__ == "__main__":
+    _save(plot(log_y=False), OUTPUT)
+    _save(plot(log_y=True), OUTPUT_LOGY)
