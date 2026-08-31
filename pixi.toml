@@ -7,6 +7,7 @@ version = "0.1.0"
 
 [tasks]
 docs-build = "sphinx-build -b html docs docs/_build/html"
+docs-serve = "sphinx-autobuild docs docs/_build/html"
 
 [dependencies]
 pandas = ">=2.3.1,<3"
@@ -27,3 +28,4 @@ furo = "*"
 myst-parser = "*"
 sphinx-design = "*"
 python-kaleido = ">=1.3.0,<2"
+sphinx-autobuild = "*"
