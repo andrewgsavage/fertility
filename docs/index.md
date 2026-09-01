@@ -4,6 +4,7 @@
 :maxdepth: 1
 :hidden:
 
+theory/index
 hfd/index
 uk/index
 dataisugly/index
