@@ -7,7 +7,7 @@ For each election:
                population, not the electoral register)
   voters     = electorate weighted by that election's turnout rate for each
                age band
-and the mean and median age of each. Ages are age-last-birthday, so single
+and the mean and median age of each (the page shows medians only). Ages are age-last-birthday, so single
 year a covers [a, a+1); the median is linearly interpolated within the bin
 where the cumulative total crosses 50%.
 
@@ -34,6 +34,7 @@ import pathlib
 
 import openpyxl
 import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 
 DATA_DIR = pathlib.Path("data")
 OUTPUT_DIR = pathlib.Path("outputs")
@@ -350,17 +351,94 @@ def _save_html(fig, name):
     print(f"Saved {output}")
 
 
+BAND_LABELS = ["18-24", "25-34", "35-44", "45-54", "55-64", "65+"]
+BAND_COLORS = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300"]
+
+
+def electorate_shares(pop, voting_age):
+    """% of the electorate in each turnout band."""
+    bins = weighted_bins(pop, voting_age)
+    total = sum(w for _, _, w in bins)
+    shares = [0.0] * len(BAND_EDGES)
+    for lo, _, w in bins:
+        band = max(i for i, e in enumerate(BAND_EDGES) if lo >= e)
+        shares[band] += 100 * w / total
+    return shares
+
+
+def _turnout_figure():
+    mye = load_mye()
+    npp = load_npp()
+    fig = make_subplots(
+        rows=2, cols=1, shared_xaxes=True, vertical_spacing=0.06,
+        subplot_titles=("Turnout by age group", "Share of electorate by age group"),
+    )
+    actual_x = [X_POS.get(label, year + 0.5) for label, year, _ in ELECTIONS]
+    for i, (band, color) in enumerate(zip(BAND_LABELS, BAND_COLORS)):
+        marker = dict(size=8)
+        bes = [(x, BES_TURNOUT[label][i], label)
+               for x, (label, _, _) in zip(actual_x, ELECTIONS) if label in BES_TURNOUT]
+        ipsos = [(x, IPSOS_TURNOUT[label][i], label)
+                 for x, (label, _, _) in zip(actual_x, ELECTIONS) if label in IPSOS_TURNOUT]
+        for pts, src, dash, show in ((bes, "BES", "solid", True), (ipsos, "Ipsos", "dot", False)):
+            fig.add_trace(go.Scatter(
+                x=[p[0] for p in pts], y=[p[1] for p in pts], customdata=[p[2] for p in pts],
+                mode="lines+markers", name=band, showlegend=show, marker=marker,
+                hovertemplate=f"{band}, {src}<br>%{{customdata}}: %{{y:.0f}}%<extra></extra>",
+                legendgroup=band, line=dict(width=2, color=color, dash=dash),
+            ), row=1, col=1)
+        fig.add_trace(go.Scatter(
+            x=[2024.5] + PROJECTION_YEARS_X, y=[PROJECTION_TURNOUT[i]] * (1 + len(PROJECTION_YEARS)),
+            mode="lines", showlegend=False, hoverinfo="skip",
+            legendgroup=band, line=dict(width=1.5, color=color, dash="dash"),
+        ), row=1, col=1)
+
+        shares = [(x, electorate_shares(mye[year], va)[i], label)
+                  for x, (label, year, va) in zip(actual_x, ELECTIONS)]
+        proj = [(year + 0.5, electorate_shares(npp[year], 18)[i], str(year))
+                for year in PROJECTION_YEARS]
+        for pts, dash in ((shares, "solid"), (shares[-1:] + proj, "dash")):
+            fig.add_trace(go.Scatter(
+                x=[p[0] for p in pts], y=[p[1] for p in pts], customdata=[p[2] for p in pts],
+                mode="lines+markers", showlegend=False, legendgroup=band, marker=marker,
+                line=dict(width=2, color=color, dash=dash),
+                hovertemplate=f"{band}<br>%{{customdata}}: %{{y:.1f}}% of electorate<extra></extra>",
+            ), row=2, col=1)
+    for row in (1, 2):
+        fig.add_vrect(x0=2025, x1=2075, fillcolor="#888888", opacity=0.08, line_width=0, row=row, col=1)
+    fig.add_annotation(
+        x=2025.5, y=1, xref="x", yref="y domain", xanchor="left", yanchor="top", showarrow=False,
+        text="Projection: 2024 turnout held flat", font=dict(size=11),
+    )
+    fig.add_annotation(
+        x=1962.5, y=1, xref="x", yref="y domain", xanchor="left", yanchor="top", showarrow=False,
+        text="Solid: BES · Dotted: Ipsos", font=dict(size=11),
+    )
+    fig.update_xaxes(range=[1962, 2076], dtick=10)
+    fig.update_xaxes(title_text="General election", row=2, col=1)
+    fig.update_yaxes(title_text="Turnout (%)", row=1, col=1)
+    fig.update_yaxes(title_text="% of electorate", rangemode="tozero", row=2, col=1)
+    fig.update_layout(
+        template="plotly_white", autosize=True, hovermode="closest",
+        legend=dict(orientation="h", yanchor="top", y=-0.08, x=0, title_text="Age group"),
+        margin=dict(t=40, b=90),
+    )
+    return fig
+
+
+PROJECTION_YEARS_X = [y + 0.5 for y in PROJECTION_YEARS]
+
+
 def _table_markdown(rows):
     header = (
-        "| Election | Voting age | Turnout source | Mean electorate | Median electorate "
-        "| Mean voter | Median voter | Basis |"
+        "| Election | Voting age | Turnout source | Median electorate age "
+        "| Median voter age | Basis |"
     )
-    lines = [header, "|---|---|---|---|---|---|---|---|"]
+    lines = [header, "|---|---|---|---|---|---|"]
     for r in rows:
         lines.append(
             f"| {r['election']} | {r['voting_age']} | {r['turnout_source']} "
-            f"| {r['mean_electorate_age']:.1f} | {r['median_electorate_age']:.1f} "
-            f"| {r['mean_voter_age']:.1f} | {r['median_voter_age']:.1f} | {r['basis']} |"
+            f"| {r['median_electorate_age']:.1f} | {r['median_voter_age']:.1f} | {r['basis']} |"
         )
     return "\n".join(lines) + "\n"
 
@@ -395,7 +473,7 @@ if __name__ == "__main__":
     rows = build_rows()
     _save_csv(rows)
     _save_html(_figure(rows, "median"), "voter_age_uk_median.html")
-    _save_html(_figure(rows, "mean"), "voter_age_uk_mean.html")
+    _save_html(_turnout_figure(), "voter_age_uk_turnout.html")
     # .txt, not .md -- see half_life_tfr.py.
     for name, text in (
         ("voter_age_uk_table.txt", _table_markdown(rows)),
