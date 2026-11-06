@@ -1,9 +1,5 @@
 # Microdemographic Framework
 
-```{warning}
-This page was written by AI and has not been fully reviewed. Check figures and claims against the linked sources.
-```
-
 The Total Fertility Rate (TFR) is the product of two independent components: TFR = TMR × CPM.
 
 - **Total Maternal Rate (TMR)**: A societal measure of the proportion of women who would become mothers over their reproductive lifetime, assuming current age-specific fertility rates persist.
