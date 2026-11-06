@@ -1,5 +1,9 @@
 # Later Births
 
+```{warning}
+This page was written by AI and has not been fully reviewed. Check figures and claims against the linked sources.
+```
+
 The [Conditional ASFR](cond-asfr) page reconstructs conditional (parity-progression) ASFR for the UK, since HFD has no such tables for it. HFD does, however, publish plain ASFR (all birth orders combined, not split by parity) directly for England & Wales — no reconstruction needed here.
 
 Each chart below is colored by birth cohort — one line per cohort, tracing that cohort's fertility across its own lifetime — rather than one calendar year's cross-section across all ages. The chart below shows plain ASFR; further down, the same conditional and cumulative first/second-birth charts from the Conditional ASFR page, colored by cohort instead of period. Drag either handle to narrow the cohorts shown across all three charts at once.
