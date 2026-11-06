@@ -5,6 +5,7 @@
 :hidden:
 
 theory/index
+factors/index
 hfd/index
 uk/index
 dataisugly/index
