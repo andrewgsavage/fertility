@@ -89,8 +89,47 @@ Unweighted country means. The gap is between two averages, not the time between 
 
 Nordic women leave home almost 9 years before the average first birth; Southern European women leave about 2.5 years before it. First births everywhere cluster around 27-32, regardless of when women leave home. Leaving home late shortens the gap between moving out and having a first child, rather than pushing the first child later.
 
+## Following cohorts
+
+TFR is a period measure: in any year it adds up births to women born across three decades, most of whom left home long before that year. Mean age at first birth has the same problem and also only counts women who became mothers. Following each birth cohort avoids both. Each cohort's leaving age is Eurostat's estimate for the year it turned 25, compared with that cohort's own fertility from the Human Fertility Database.
+
+By this measure the relationship has not broken down. For the 11 countries with data for every cohort from 1979 to 1988, r between leaving age and children per woman by 35 stayed between -0.72 and -0.83, and each extra year of leaving age went with about 0.07 fewer children by 35 (-0.071 for the 1979 cohort, -0.062 for 1988). The collapse in the TFR chart is a period effect, not a change in how cohorts behave.
+
+Leaving age is not related to whether women become mothers by 30. For the 10 countries with data for every cohort from 1981 to 1992, r stayed between -0.03 and +0.08. Southern Europe leaves late and has the fewest mothers by 30, but Central and Eastern Europe also leaves late and has the most:
+
+::::{tab-set}
+
+:::{tab-item} Children by 35
+```{raw} html
+<iframe src="../_static/eurostat/leaving_home_cohort_ccf35.html" style="width: 100%; aspect-ratio: 1 / 1; max-height: 720px; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+Drag the slider to change birth cohort.
+:::
+
+:::{tab-item} Mothers by 30
+```{raw} html
+<iframe src="../_static/eurostat/leaving_home_cohort_ccf1_30.html" style="width: 100%; aspect-ratio: 1 / 1; max-height: 720px; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+Share of women with a first child by their 30th birthday; childless women count as zero. Drag the slider to change birth cohort.
+:::
+
+:::{tab-item} By region
+| Region | Leaving age | Children by 35 (1988 cohort) | Mothers by 30 (1992 cohort) |
+|---|---|---|---|
+| Nordic | 20.3-20.9 | 1.29 | 37% |
+| Western | 23.6-23.9 | 1.30 | 35% |
+| Central & Eastern | 26.3-26.9 | 1.25 | 47% |
+| Southern | 28.2-28.5 | 0.92 | 27% |
+
+Unweighted means over all countries with data for each cohort (15 per cohort). Leaving age ranges over the two cohorts' regional means.
+:::
+
+::::
+
+Late home-leaving goes with fewer children by 35 mainly through Southern Europe, where women both leave late and have few children. Central and Eastern Europe leaves almost as late but becomes mothers earlier and reaches similar fertility by 35 to the early-leaving north and west.
+
 ```{note}
-Data: Eurostat, [Estimated average age of young people leaving the parental household by sex](https://ec.europa.eu/eurostat/databrowser/view/yth_demo_030/default/table) (yth_demo_030), women; [Fertility indicators](https://ec.europa.eu/eurostat/databrowser/view/demo_find/default/table) (demo_find), total fertility rate and mean age of women at birth of first child. Leaving age is estimated from the Labour Force Survey and has series breaks in some countries; Sweden's series is noisy, dropping to about 17.6 in 2019-20. Leaving-age series start in 2009 for Sweden, 2010 for Denmark and 2021 for Norway, and the UK series ends in 2019 (2018 for the scatter).
+Data: Eurostat, [Estimated average age of young people leaving the parental household by sex](https://ec.europa.eu/eurostat/databrowser/view/yth_demo_030/default/table) (yth_demo_030), women; [Fertility indicators](https://ec.europa.eu/eurostat/databrowser/view/demo_find/default/table) (demo_find), total fertility rate and mean age of women at birth of first child. Cohort fertility: [Human Fertility Database](https://www.humanfertility.org), cumulative cohort fertility rates by age and birth order (ccfrVH, ccfrVHbo). Leaving age is estimated from the Labour Force Survey and has series breaks in some countries; Sweden's series is noisy, dropping to about 17.6 in 2019-20. Leaving-age series start in 2009 for Sweden, 2010 for Denmark and 2021 for Norway, and the UK series ends in 2019 (2018 for the scatter). Assigning a year's average leaving age to the cohort aged 25 that year is an approximation; the estimate covers everyone who left home that year.
 
 Billari, F.C. and Kohler, H.-P. (2002), [*Patterns of Lowest-Low Fertility in Europe*](https://www.demogr.mpg.de/papers/working/wp-2002-040.pdf), MPIDR Working Paper WP-2002-040, Figure 6.
 ```
