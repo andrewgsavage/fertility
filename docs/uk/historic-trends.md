@@ -1,5 +1,9 @@
 # Historic Trends
 
+```{warning}
+This page was written by AI and has not been fully reviewed. Check figures and claims against the linked sources.
+```
+
 On this page, the ONS period data [from Conditional ASFR](cond-asfr) is converted to birth cohorts and plotted, and key trends between cohorts are examined. Three types of metrics are plotted:
 
 The Age Specific Fertility Rate (ASFR) gives the probability any woman of a given age in a birth cohort will have a child. This is shown but not commented on as it's more instructive to look at the first and second birth metrics.

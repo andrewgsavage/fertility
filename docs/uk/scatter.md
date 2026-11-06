@@ -1,5 +1,9 @@
 # Explore
 
+```{warning}
+This page was written by AI and has not been fully reviewed. Check figures and claims against the linked sources.
+```
+
 Following from first-vs-second-birth, it would be ideal to find data on first births to integorgate the causes for the drop in fertility. The UK does not publish first birth data at town level. It does publish Age Specific Fertility Rates (ASFR) in 5 year buckets for towns, which is presented here. 
 
 The reduction in fertility can be seen clearly in the 20-24 and 25-29 age groups as expected based on the reduction in global first birth rates. The fertility decline in 30-34 year olds is much less severe.

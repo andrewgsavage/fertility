@@ -1,5 +1,9 @@
 # First vs Second Birth
 
+```{warning}
+This page was written by AI and has not been fully reviewed. Check figures and claims against the linked sources.
+```
+
 The global drop in fertility is almost entirely down to the drop in fertility of first time mothers. The drop is strongest in younger women and reduces with age. By age 30-32 fertility rates return to their historic values. This can be seen by comparing the [conditional age specific fertility rates (ASFR)](https://www.humanfertility.org/Data/ExplanatoryNotes) for first and second births.
 
 The conditional ASFR gives the probability that a woman will give birth to their next child in a given year. The charts below show that a 30 year old woman in South Korea in 2005 had approximately a 15% chance of having a child, and in 2024 that dropped to 4%.

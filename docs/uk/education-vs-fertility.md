@@ -1,5 +1,9 @@
 # Education vs Fertility
 
+```{warning}
+This page was written by AI and has not been fully reviewed. Check figures and claims against the linked sources.
+```
+
 The ONS expert demographic opinion and the resolution foundation both mention the potential for a shift to women having children later in life. This is based on the cohorts of the late 60s/early 70s where there was a shift from 28 for those born in the early-1950s to 32 for those born in the 1970s.
 
 

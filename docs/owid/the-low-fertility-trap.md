@@ -1,5 +1,9 @@
 # The Low Fertility Trap
 
+```{warning}
+This page was written by AI and has not been fully reviewed. Check figures and claims against the linked sources.
+```
+
 When a country's TFR drops significantly it very rarely recovers. The chart below plots each country's TFR from the year it first drops below a chosen threshold. The majority of countries TFR do not recover over the long term. 
 
 Some countries did see some recovery in TFR:
