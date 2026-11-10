@@ -37,6 +37,7 @@ _OUTPUT_DIRS = {
     "owid": _REPO_ROOT / "OWID" / "outputs",
     "democracy": _REPO_ROOT / "democracy" / "outputs",
     "eurostat": _REPO_ROOT / "eurostat" / "outputs",
+    "housing": _REPO_ROOT / "housing" / "outputs",
 }
 
 

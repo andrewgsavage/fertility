@@ -12,4 +12,5 @@ Known factors associated with lower fertility.
 
 leaving-home
 education
+housing
 ```

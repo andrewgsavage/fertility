@@ -1,0 +1,41 @@
+REF_AREA,price,rent,pti,tfr0,tfr1,dtfr,tfr_source,name
+FIN,-16.86,2.442,-21.263,1.75,1.25,-0.5,Eurostat,Finland
+ITA,-15.669,-10.872,-22.291,1.39,1.18,-0.21,Eurostat,Italy
+KOR,-5.967,-7.583,-27.743,1.187,0.748,-0.439,World Bank,Korea
+FRA,-0.385,-10.668,-11.306,1.99,1.61,-0.38,Eurostat,France
+ROU,2.577,-2.644,-49.417,1.46,1.39,-0.07,Eurostat,Romania
+BEL,5.978,-3.646,-3.479,1.76,1.44,-0.32,Eurostat,Belgium
+COL,11.572,-16.647,-10.49,1.86,1.634,-0.226,World Bank,Colombia
+JPN,17.953,-15.009,16.098,1.43,1.15,-0.28,World Bank,Japan
+NOR,20.45,-0.849,3.019,1.78,1.45,-0.33,Eurostat,Norway
+DEU,22.928,-9.12,7.965,1.42,1.36,-0.06,Eurostat,Germany
+SWE,23.654,-6.924,11.798,1.89,1.43,-0.46,Eurostat,Sweden
+GBR,23.715,-0.15,11.832,1.83,1.41,-0.42,ONS (England & Wales),United Kingdom
+AUT,30.338,11.73,21.508,1.44,1.31,-0.13,Eurostat,Austria
+DNK,32.658,0.217,7.079,1.67,1.47,-0.2,Eurostat,Denmark
+GRC,34.619,-15.655,-2.105,1.29,1.24,-0.05,Eurostat,Greece
+ESP,34.991,-11.117,14.741,1.27,1.1,-0.17,Eurostat,Spain
+BGR,35.73,-17.877,-9.68,1.54,1.72,0.18,Eurostat,Bulgaria
+SVK,38.886,-13.079,2.286,1.34,1.46,0.12,Eurostat,Slovak Republic
+CHE,39.607,8.108,24.18,1.52,1.29,-0.23,Eurostat,Switzerland
+AUS,41.11,-5.158,35.908,1.855,1.481,-0.374,World Bank,Australia
+LVA,42.112,-10.869,-2.554,1.52,1.24,-0.28,Eurostat,Latvia
+LUX,42.275,-7.873,34.291,1.55,1.25,-0.3,Eurostat,Luxembourg
+MEX,42.783,-18.104,,2.269,1.892,-0.377,World Bank,Mexico
+POL,44.232,16.25,-4.438,1.29,1.14,-0.15,Eurostat,Poland
+HRV,46.486,-2.386,-6.086,1.47,1.46,-0.01,Eurostat,Croatia
+SVN,46.901,34.485,8.638,1.55,1.52,-0.03,Eurostat,Slovenia
+NLD,51.695,-2.725,29.34,1.68,1.43,-0.25,Eurostat,Netherlands
+CHL,53.596,,33.641,1.786,1.14,-0.646,World Bank,Chile
+CZE,53.666,-7.62,20.993,1.46,1.36,-0.1,Eurostat,Czechia
+CAN,55.326,5.795,43.125,1.61,1.25,-0.36,World Bank,Canada
+ISR,56.221,9.57,,3.03,2.87,-0.16,World Bank,Israel
+NZL,58.938,8.38,24.949,2.01,1.57,-0.44,World Bank,New Zealand
+USA,66.584,21.531,30.589,1.858,1.626,-0.231,World Bank,United States
+EST,66.825,23.44,19.238,1.52,1.18,-0.34,Eurostat,Estonia
+LTU,75.005,54.845,16.409,1.59,1.11,-0.48,Eurostat,Lithuania
+IRL,79.527,46.336,38.549,1.93,1.47,-0.46,Eurostat,Ireland
+PRT,90.82,8.207,51.302,1.21,1.41,0.2,Eurostat,Portugal
+ISL,94.742,17.196,,1.93,1.56,-0.37,Eurostat,Iceland
+TUR,96.573,-11.223,,2.08,1.48,-0.6,Eurostat,Türkiye
+HUN,110.787,10.561,23.052,1.36,1.41,0.05,Eurostat,Hungary
