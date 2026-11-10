@@ -1,5 +1,5 @@
-"""Average age at leaving the parental home vs total fertility rate, by
-European country, from Eurostat.
+"""Average age at leaving the parental home vs total fertility rate and vs
+mean age of mothers at first birth, by European country, from Eurostat.
 
 Inputs (download into eurostat/data/ — not tracked in git):
   yth_demo_030.csv  Estimated average age of young people leaving the
@@ -7,11 +7,14 @@ Inputs (download into eurostat/data/ — not tracked in git):
                     https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/yth_demo_030?format=SDMX-CSV
   demo_find.csv     Fertility indicators, TOTFERRT (total fertility rate)
                     https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/demo_find/A.TOTFERRT.?format=SDMX-CSV
+  demo_find_agemoth1.csv  Fertility indicators, AGEMOTH1 (mean age of
+                    women at birth of first child)
+                    https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/demo_find/A.AGEMOTH1.?format=SDMX-CSV
 
 Outputs:
   outputs/leaving_home_vs_tfr.html    scatter, women's leaving age vs TFR, year slider
-  outputs/leaving_home_trend.html     women's leaving age over time, by country
-  outputs/leaving_home_corr.csv       per-year Pearson r and country count
+  outputs/leaving_home_vs_mab1.html   scatter, women's leaving age vs mean age at first birth
+  outputs/leaving_home_corr.csv       per-year Pearson r and country count, per y metric
 
 Run from the eurostat/ directory.
 """
@@ -22,6 +25,14 @@ import plotly.graph_objects as go
 
 AGE_INPUT = "data/yth_demo_030.csv"
 TFR_INPUT = "data/demo_find.csv"
+MAB_INPUT = "data/demo_find_agemoth1.csv"
+
+# y metric -> (axis title, hover label, hover format, axis padding, output file)
+METRICS = {
+    "tfr": ("Total fertility rate", "TFR", ".2f", 0.1, "outputs/leaving_home_vs_tfr.html"),
+    "mab1": ("Mean age of mothers at first birth", "Age at first birth", ".1f", 0.5,
+             "outputs/leaving_home_vs_mab1.html"),
+}
 
 SEX = "F"  # women, matching Billari & Kohler (2002) Figure 6
 AGGREGATES = {"EU27_2020", "EA21", "EA20", "EA19", "EU28"}
@@ -54,43 +65,44 @@ REGION_COLOR = {
 }
 CODE_REGION = {c: r for r, codes in REGION.items() for c in codes}
 
-HIGHLIGHT = ["IT", "ES", "HR", "FR", "UK", "SE", "FI"]
-
-
 def load():
     age = pd.read_csv(AGE_INPUT)
     age = age[(age["sex"] == SEX) & ~age["geo"].isin(AGGREGATES)]
     age = age.rename(columns={"TIME_PERIOD": "year", "OBS_VALUE": "age"})[["geo", "year", "age"]]
 
-    tfr = pd.read_csv(TFR_INPUT)
-    tfr = tfr.rename(columns={"TIME_PERIOD": "year", "OBS_VALUE": "tfr"})[["geo", "year", "tfr"]]
-
-    df = age.merge(tfr, on=["geo", "year"], how="inner").dropna()
+    df = age
+    for path, col in [(TFR_INPUT, "tfr"), (MAB_INPUT, "mab1")]:
+        y = pd.read_csv(path)
+        y = y.rename(columns={"TIME_PERIOD": "year", "OBS_VALUE": col})[["geo", "year", col]]
+        df = df.merge(y, on=["geo", "year"], how="left")
+    df = df.dropna(subset=["age"])
     df = df[df["geo"].isin(NAMES)]
     df["name"] = df["geo"].map(NAMES)
     df["region"] = df["geo"].map(CODE_REGION)
     return age[age["geo"].isin(NAMES)], df.sort_values(["year", "geo"])
 
 
-def correlations(df):
+def correlations(df, ycol):
     rows = []
-    for year, g in df.groupby("year"):
+    for year, g in df.dropna(subset=[ycol]).groupby("year"):
         if len(g) < 10:
             continue
-        rows.append({"year": year, "n": len(g), "r": round(g["age"].corr(g["tfr"]), 2)})
+        rows.append({"year": year, "n": len(g), "r": round(g["age"].corr(g[ycol]), 2)})
     return pd.DataFrame(rows)
 
 
-def fit_line(g):
-    slope, intercept = np.polyfit(g["age"], g["tfr"], 1)
+def fit_line(g, ycol="tfr"):
+    slope, intercept = np.polyfit(g["age"], g[ycol], 1)
     xs = np.array([g["age"].min(), g["age"].max()])
     return xs, slope * xs + intercept, slope
 
 
-def scatter(df, corr):
+def scatter(df, corr, ycol):
+    ytitle, ylabel, yfmt, ypad, output = METRICS[ycol]
+    df = df.dropna(subset=[ycol])
     years = corr["year"].tolist()
     x_range = [df["age"].min() - 0.5, df["age"].max() + 0.5]
-    y_range = [df["tfr"].min() - 0.1, df["tfr"].max() + 0.1]
+    y_range = [df[ycol].min() - ypad, df[ycol].max() + ypad]
 
     def traces(year):
         g = df[df["year"] == year]
@@ -98,14 +110,14 @@ def scatter(df, corr):
         for region, color in REGION_COLOR.items():
             r = g[g["region"] == region]
             out.append(go.Scatter(
-                x=r["age"], y=r["tfr"], text=r["geo"], customdata=r["name"],
+                x=r["age"], y=r[ycol], text=r["geo"], customdata=r["name"],
                 mode="markers+text", textposition="top center",
                 textfont=dict(size=10, color=color),
                 marker=dict(size=10, color=color),
                 name=region, legendgroup=region,
-                hovertemplate="<b>%{customdata}</b><br>Leaving age %{x:.1f}<br>TFR %{y:.2f}<extra></extra>",
+                hovertemplate=f"<b>%{{customdata}}</b><br>Leaving age %{{x:.1f}}<br>{ylabel} %{{y:{yfmt}}}<extra></extra>",
             ))
-        xs, ys, slope = fit_line(g)
+        xs, ys, slope = fit_line(g, ycol)
         out.append(go.Scatter(
             x=xs, y=ys, mode="lines", line=dict(color="#999", dash="dot", width=1.5),
             name="Linear fit", hoverinfo="skip",
@@ -135,7 +147,7 @@ def scatter(df, corr):
         template="plotly_white",
         title=dict(text=title(last), x=0.02, font=dict(size=14)),
         xaxis=dict(title="Women's average age at leaving the parental home", range=x_range),
-        yaxis=dict(title="Total fertility rate", range=y_range),
+        yaxis=dict(title=ytitle, range=y_range),
         legend=dict(orientation="h", y=-0.28),
         margin=dict(t=50, r=20, l=60, b=40),
         sliders=[dict(
@@ -145,50 +157,21 @@ def scatter(df, corr):
             steps=[step(y) for y in years],
         )],
     )
-    fig.write_html("outputs/leaving_home_vs_tfr.html", include_plotlyjs="cdn",
-                   default_width="100%", default_height="100%", config={"responsive": True})
-
-
-def trend(age):
-    fig = go.Figure()
-    for geo, g in age.sort_values("year").groupby("geo"):
-        if geo in HIGHLIGHT:
-            continue
-        fig.add_trace(go.Scatter(
-            x=g["year"], y=g["age"], mode="lines", line=dict(color="#d0d0d0", width=1),
-            name=NAMES[geo], showlegend=False,
-            hovertemplate=f"<b>{NAMES[geo]}</b><br>%{{x}}: %{{y:.1f}}<extra></extra>",
-        ))
-    for geo in HIGHLIGHT:
-        g = age[age["geo"] == geo].sort_values("year")
-        color = REGION_COLOR[CODE_REGION[geo]]
-        fig.add_trace(go.Scatter(
-            x=g["year"], y=g["age"], mode="lines", line=dict(color=color, width=2),
-            name=NAMES[geo],
-            hovertemplate=f"<b>{NAMES[geo]}</b><br>%{{x}}: %{{y:.1f}}<extra></extra>",
-        ))
-        end = g.iloc[-1]
-        fig.add_annotation(x=end["year"], y=end["age"], text=NAMES[geo], showarrow=False,
-                           xanchor="left", xshift=4, font=dict(size=11, color=color))
-    fig.update_layout(
-        template="plotly_white",
-        xaxis=dict(title=None, range=[age["year"].min() - 0.5, age["year"].max() + 3.5]),
-        yaxis=dict(title="Women's average age at leaving the parental home"),
-        showlegend=False,
-        margin=dict(t=20, r=20, l=60, b=40),
-    )
-    fig.write_html("outputs/leaving_home_trend.html", include_plotlyjs="cdn",
+    fig.write_html(output, include_plotlyjs="cdn",
                    default_width="100%", default_height="100%", config={"responsive": True})
 
 
 if __name__ == "__main__":
-    age, df = load()
-    corr = correlations(df)
-    corr.to_csv("outputs/leaving_home_corr.csv", index=False)
-    scatter(df, corr)
-    trend(age)
-    print(corr.to_string(index=False))
-    latest = df[df["year"] == corr["year"].max()]
-    _, _, slope = fit_line(latest)
-    print(f"{corr['year'].max()} slope: {slope:+.3f} TFR per year of leaving age")
-    print(latest.sort_values("age")[["name", "age", "tfr"]].to_string(index=False))
+    _, df = load()
+    corrs = {}
+    for ycol in METRICS:
+        corrs[ycol] = correlations(df, ycol)
+        scatter(df, corrs[ycol], ycol)
+    combined = corrs["tfr"].merge(corrs["mab1"], on="year", how="outer", suffixes=("_tfr", "_mab1"))
+    combined.to_csv("outputs/leaving_home_corr.csv", index=False)
+    print(combined.to_string(index=False))
+    for ycol in METRICS:
+        y = corrs[ycol]["year"].max()
+        latest = df[df["year"] == y].dropna(subset=[ycol])
+        _, _, slope = fit_line(latest, ycol)
+        print(f"{ycol} {y} slope: {slope:+.3f} per year of leaving age")
