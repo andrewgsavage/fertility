@@ -6,6 +6,10 @@ This page was written by AI and has not been fully reviewed. Check figures and c
 
 Childbearing almost always happens after young adults leave their parental home, so a later move-out could delay or reduce childbearing. Billari & Kohler (2002) found a clear negative association across Europe between the median age women born in 1960 left home and their completed fertility: every country with "latest-late" home-leaving (Italy, Spain) also had lowest-low fertility, while Sweden, the earliest leaver, was among the highest.
 
+> Concluding this paper, we also emphasize an important caveat of our descriptive analyses that do not necessarily identify causal relations; causal patterns are almost impossible to disentangle with the aggregate-level data used in these introductory investigations. The patterns we have described may either be part of a complex web of causation where fertility and fertility-related factors influence each other, or they may just be the indication that other general factors are simultaneously driving changes in fertility and fertility-related behaviors.
+
+F.C. Billari and H.-P. Kohler, [*Patterns of Lowest-Low Fertility in Europe*](https://www.demogr.mpg.de/papers/working/wp-2002-040.pdf), MPIDR Working Paper WP-2002-040, 2002, p.26.
+
 Eurostat's annual estimates of the average age young people leave home show this relationship held through the 2000s, then broke down. In 2005, each extra year of women's leaving age went with 0.065 fewer children per woman (r = -0.75). By 2024 the slope was zero (r = -0.02). Holding the country set fixed to the 28 countries with data in every year from 2010 to 2024 gives the same picture: r went from -0.71 to -0.07.
 
 ::::{tab-set}
@@ -17,34 +21,11 @@ Eurostat's annual estimates of the average age young people leave home show this
 Drag the slider to change year.
 :::
 
-:::{tab-item} Correlation by year
-| Year | Countries | r |
-|---|---|---|
-| 2000 | 11 | -0.57 |
-| 2002 | 17 | -0.60 |
-| 2004 | 25 | -0.72 |
-| 2005 | 25 | -0.75 |
-| 2006 | 27 | -0.75 |
-| 2008 | 28 | -0.64 |
-| 2010 | 30 | -0.70 |
-| 2012 | 31 | -0.63 |
-| 2014 | 32 | -0.57 |
-| 2016 | 32 | -0.54 |
-| 2018 | 32 | -0.42 |
-| 2019 | 31 | -0.31 |
-| 2020 | 30 | -0.29 |
-| 2021 | 30 | -0.32 |
-| 2022 | 31 | -0.12 |
-| 2023 | 31 | -0.02 |
-| 2024 | 31 | -0.02 |
-
-Pearson correlation between women's average leaving age and TFR across countries with both values that year. The country set grows over the 2000s.
-:::
-
-:::{tab-item} Leaving age over time
+:::{tab-item} Trend arrows
 ```{raw} html
-<iframe src="../_static/eurostat/leaving_home_trend.html" style="width: 100%; aspect-ratio: 3 / 2; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/eurostat/leaving_home_tfr_fitted.html" style="width: 100%; aspect-ratio: 1 / 1; max-height: 720px; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+Faint points are every country-year. Each arrow follows the country's straight-line trend in both variables from 2010 to its latest year. Hover an arrow to highlight the points it was fitted to.
 :::
 
 ::::
@@ -73,6 +54,13 @@ If leaving home late delayed families, countries where women leave later would a
 Drag the slider to change year.
 :::
 
+:::{tab-item} Trend arrows
+```{raw} html
+<iframe src="../_static/eurostat/leaving_home_mab1_fitted.html" style="width: 100%; aspect-ratio: 1 / 1; max-height: 720px; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+Faint points are every country-year. Each arrow follows the country's straight-line trend in both variables from 2010 to its latest year, which smooths out year-to-year noise such as Sweden's 2019-20 dip. Hover an arrow to highlight the points it was fitted to.
+:::
+
 :::{tab-item} By region, 2024
 | Region | Leaving age | Age at first birth | Gap (years) |
 |---|---|---|---|
@@ -88,6 +76,12 @@ Unweighted country means. The gap is between two averages, not the time between 
 ::::
 
 Nordic women leave home almost 9 years before the average first birth; Southern European women leave about 2.5 years before it. First births everywhere cluster around 27-32, regardless of when women leave home. Leaving home late shortens the gap between moving out and having a first child, rather than pushing the first child later.
+
+> The direct effect is not as important as it might seem.
+
+G. Dalla Zuanna, [*The banquet of Aeolus: A familistic interpretation of Italy's lowest low fertility*](https://doi.org/10.4054/DemRes.2001.4.5), Demographic Research 4(5), 2001, p.147.
+
+Dalla Zuanna made the same point for Italy in the 1990s. Italian women's mean age at first birth in 1996 was 27.8, the same as in the UK and France, where young people left home early. He argued that the problem was not a late start to childbearing but how few women went on to have a first, second or third child, with late home-leaving often ending in never marrying or having children.
 
 ## Following cohorts
 

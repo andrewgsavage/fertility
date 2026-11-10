@@ -14,7 +14,6 @@ Inputs (download into eurostat/data/ — not tracked in git):
 Outputs:
   outputs/leaving_home_vs_tfr.html    scatter, women's leaving age vs TFR, year slider
   outputs/leaving_home_vs_mab1.html   scatter, women's leaving age vs mean age at first birth
-  outputs/leaving_home_trend.html     women's leaving age over time, by country
   outputs/leaving_home_corr.csv       per-year Pearson r and country count, per y metric
 
 Run from the eurostat/ directory.
@@ -65,9 +64,6 @@ REGION_COLOR = {
     "Balkans & Türkiye": "#8c564b",
 }
 CODE_REGION = {c: r for r, codes in REGION.items() for c in codes}
-
-HIGHLIGHT = ["IT", "ES", "HR", "FR", "UK", "SE", "FI"]
-
 
 def load():
     age = pd.read_csv(AGE_INPUT)
@@ -165,45 +161,12 @@ def scatter(df, corr, ycol):
                    default_width="100%", default_height="100%", config={"responsive": True})
 
 
-def trend(age):
-    fig = go.Figure()
-    for geo, g in age.sort_values("year").groupby("geo"):
-        if geo in HIGHLIGHT:
-            continue
-        fig.add_trace(go.Scatter(
-            x=g["year"], y=g["age"], mode="lines", line=dict(color="#d0d0d0", width=1),
-            name=NAMES[geo], showlegend=False,
-            hovertemplate=f"<b>{NAMES[geo]}</b><br>%{{x}}: %{{y:.1f}}<extra></extra>",
-        ))
-    for geo in HIGHLIGHT:
-        g = age[age["geo"] == geo].sort_values("year")
-        color = REGION_COLOR[CODE_REGION[geo]]
-        fig.add_trace(go.Scatter(
-            x=g["year"], y=g["age"], mode="lines", line=dict(color=color, width=2),
-            name=NAMES[geo],
-            hovertemplate=f"<b>{NAMES[geo]}</b><br>%{{x}}: %{{y:.1f}}<extra></extra>",
-        ))
-        end = g.iloc[-1]
-        fig.add_annotation(x=end["year"], y=end["age"], text=NAMES[geo], showarrow=False,
-                           xanchor="left", xshift=4, font=dict(size=11, color=color))
-    fig.update_layout(
-        template="plotly_white",
-        xaxis=dict(title=None, range=[age["year"].min() - 0.5, age["year"].max() + 3.5]),
-        yaxis=dict(title="Women's average age at leaving the parental home"),
-        showlegend=False,
-        margin=dict(t=20, r=20, l=60, b=40),
-    )
-    fig.write_html("outputs/leaving_home_trend.html", include_plotlyjs="cdn",
-                   default_width="100%", default_height="100%", config={"responsive": True})
-
-
 if __name__ == "__main__":
-    age, df = load()
+    _, df = load()
     corrs = {}
     for ycol in METRICS:
         corrs[ycol] = correlations(df, ycol)
         scatter(df, corrs[ycol], ycol)
-    trend(age)
     combined = corrs["tfr"].merge(corrs["mab1"], on="year", how="outer", suffixes=("_tfr", "_mab1"))
     combined.to_csv("outputs/leaving_home_corr.csv", index=False)
     print(combined.to_string(index=False))
