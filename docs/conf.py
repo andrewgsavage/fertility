@@ -38,6 +38,8 @@ _OUTPUT_DIRS = {
     "democracy": _REPO_ROOT / "democracy" / "outputs",
     "eurostat": _REPO_ROOT / "eurostat" / "outputs",
     "housing": _REPO_ROOT / "housing" / "outputs",
+    "gss": _REPO_ROOT / "GSS" / "outputs",
+    "hcmst": _REPO_ROOT / "HCMST" / "outputs",
 }
 
 
