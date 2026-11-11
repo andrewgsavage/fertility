@@ -4,7 +4,7 @@
 This page was written by AI and has not been fully reviewed. Check figures and claims against the linked sources.
 ```
 
-Factors proposed as drivers of lower fertility. Linked factor names go to their own page; the rest are candidates without a page yet.
+Factors proposed as drivers of lower fertility. Factors that lower young first births without lowering second+ births (the filter preset below) have their own page, with data and the studies found; the rest are listed here only.
 
 The ticks mark where each factor's proposed mechanism mainly acts. They are a starting classification, not measured effects. For how much of the UK's post-2010 drop the measured effects explain, see [Explaining the 2010s Drop](explaining-the-2010s-drop.md).
 
@@ -66,19 +66,19 @@ The ticks mark where each factor's proposed mechanism mainly acts. They are a st
 |---|---|:-:|:-:|:-:|:-:|:-:|:-:|
 | **Life-course timing** | | | | | | | |
 | [Leaving home](leaving-home.md) | Later departure from the parental home delays partnership and first birth | ✓ | ✓ | ✓ | ✓ |  |  |
-| Partnership formation | Fewer and later partnerships delay or prevent first births | ✓ | ✓ | ✓ | ✓ |  |  |
+| [Partnership formation](partnership-formation.md) | Fewer and later partnerships delay or prevent first births | ✓ | ✓ | ✓ | ✓ |  |  |
 | Partnership stability | Separation and divorce end relationships before later births happen (PPR 1→2+: small net effect once repartnering is counted) |  |  |  |  | ✓ | ✓ |
 | Age at first birth | Later first births leave less time for higher-order births |  | |  | | ? | ✓ |
 | Female age-related infertility | Fecundity falls with age; postponed births are more often not realised |  | ✓ | ✓ |  | ✓ | ✓ |
 | Falling sperm counts | Reported declines in semen quality may lower conception rates at all ages |  | ✓ | ✓ |  | ✓ | ✓ |
 | **Education and work** | | | | | | | |
 | [Education](education.md) | Longer schooling delays family formation; graduates have higher childlessness (coupling: delays marriage rather than preventing it) | ✓ | ✓ | ✓ | ✓ |  |  |
-| Student debt | Repayments reduce disposable income during prime childbearing years | ✓ | ✓ | ✓ | ✓ |  |  |
+| [Student debt](student-debt.md) | Repayments reduce disposable income during prime childbearing years | ✓ | ✓ | ✓ | ✓ |  |  |
 | Female employment | More women in paid work raises the cost of time out of work for children |  | ✓ | ? | ✓ | ✓ | ✓ |
 | Motherhood earnings penalty | Mothers' lasting loss of earnings after a birth raises the price of each child |  | ✓ | ✓ |  | ✓ | ✓ |
 | Long working hours | Little time left for children, especially a second |  |  |  |  | ✓ | ✓ |
-| Job insecurity | Temporary contracts and unstable early careers delay partnership and first births (young first births: not for low-educated groups) | ✓ | ✓ | ✓ | ✓ |  |  |
-| Left-behind young men | Young men falling behind in education, work and earnings (including NEETs) leave fewer partners seen as able to support a family (young first births: not for low-educated men) | ✓ | ✓ | ✓ | ✓ |  |  |
+| [Job insecurity](job-insecurity.md) | Temporary contracts and unstable early careers delay partnership and first births (young first births: not for low-educated groups) | ✓ | ✓ | ✓ | ✓ |  |  |
+| [Left-behind young men](left-behind-young-men.md) | Young men falling behind in education, work and earnings (including NEETs) leave fewer partners seen as able to support a family (young first births: not for low-educated men) | ✓ | ✓ | ✓ | ✓ |  |  |
 | **Costs and housing** | | | | | | | |
 | [House prices and home ownership](housing.md) | Delayed home ownership postpones partnership and family formation | ✓ | ✓ | ✓ | ✓ | ✓ | ? |
 | [Rents](housing.md) | High rents cut disposable income and keep young adults living with parents or sharing | ✓ | ✓ | ? | ✓ |  |  |
@@ -98,17 +98,17 @@ The ticks mark where each factor's proposed mechanism mainly acts. They are a st
 | Planning rules | Restricting housing supply raises house prices and rents | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | **Social and cultural** | | | | | | | |
 | Contraception | Reliable contraception (the pill, then long-acting methods) prevents unintended births and lets couples delay |  | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Abortion | Legal access ends unintended pregnancies, most of them among young women |  | ✓ | ✓ | ✓ |  |  |
+| [Abortion](abortion.md) | Legal access ends unintended pregnancies, most of them among young women |  | ✓ | ✓ | ✓ |  |  |
 | Sex education and teen pregnancy campaigns | Teaching contraception and campaigns against teenage pregnancy cut unintended births among teenagers, mostly delaying rather than preventing motherhood |  |  | ? | ? |  |  |
 | Low fertility awareness | People overestimate how late they can conceive and how well IVF works, so they postpone past the point where births are realised |  | ✓ | ✓ |  | ✓ | ✓ |
 | Secularisation | Decline in religious practice, which is associated with marriage and larger families | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | Gender equality at home | Women carrying most housework and childcare after a first birth deters a second |  |  | ? | | ✓ | ✓ |
 | Ideal family size | Smaller desired family size; children as one life option among many |  | ? | ? |  | ? | ? |
 | Intensive parenting norms | Higher expected time and money per child raise the cost of each extra child |  |  | ? |  | ✓ | ✓ |
-| Smartphones | Screen time displaces in-person socialising, so young adults meet fewer potential partners | ✓ | ✓ | ✓ | ✓ |  |  |
-| Dating apps | Abundant choice and swipe markets delay commitment and concentrate attention on a minority of profiles | ✓ | ✓ | ✓ | ✓ |  |  |
-| Social media | Online comparison and curated lives shift expectations of partners and of parenthood | ✓ | ✓ | ✓ | ✓ |  |  |
-| Political divide between young men and women | Young women and men diverging in politics and values makes partners harder to match | ✓ | ✓ | ✓ | ✓ |  |  |
+| [Smartphones](smartphones.md) | Screen time displaces in-person socialising, so young adults meet fewer potential partners | ✓ | ✓ | ✓ | ✓ |  |  |
+| [Dating apps](dating-apps.md) | Abundant choice and swipe markets delay commitment and concentrate attention on a minority of profiles | ✓ | ✓ | ✓ | ✓ |  |  |
+| [Social media](social-media.md) | Online comparison and curated lives shift expectations of partners and of parenthood | ✓ | ✓ | ✓ | ✓ |  |  |
+| [Political divide between young men and women](political-divide-between-young-men-and-women.md) | Young women and men diverging in politics and values makes partners harder to match | ✓ | ✓ | ✓ | ✓ |  |  |
 | [Low-fertility trap](../owid/the-low-fertility-trap.md) | Small families become the norm, lowering ideals in the next generation |  |  |  | | ✓ | ✓ |
 | **Population structure** | | | | | | | |
 | Urbanisation | Cities have higher housing costs and lower fertility than rural areas |  | ✓ | ✓ | | ✓ | ✓ |
@@ -192,4 +192,13 @@ education
 housing
 causal-analysis
 explaining-the-2010s-drop
+partnership-formation
+student-debt
+job-insecurity
+left-behind-young-men
+abortion
+smartphones
+dating-apps
+social-media
+political-divide-between-young-men-and-women
 ```
