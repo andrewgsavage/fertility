@@ -256,3 +256,13 @@ It appears the short and long term assumptions are based on the trends in ASFRs 
 The Observed line has a small step around 2022: "Historical TFRs used in the 2022-based and 2024-based assumptions differ as they make use of the latest available revised population estimates during the assumption setting process." (ONS)
 ```
 
+```{note}
+Parametric models of the age-specific fertility curve (Hadwiger, Coale-Trussell, gamma, skew-normal and skew-logistic) summarise each year's ASFRs in a few parameters, which can then be projected instead of every age separately. Examples:
+
+- Aliverti, Durante and Scarpa (2020), ["Projecting Proportionate Age-Specific Fertility Rates via Bayesian Skewed Processes"](https://link.springer.com/chapter/10.1007/978-3-030-42472-5_5): skew-normal with location and skewness evolving over time, applied to Italy.
+- Asili, Rezaei and Najjar (2014), ["Using Skew-Logistic Probability Density Function as a Model for Age-Specific Fertility Rate Pattern"](https://pmc.ncbi.nlm.nih.gov/articles/PMC4055447/).
+- Srivastava et al. (2021), ["Experiments in Modeling Recent Indian Fertility Pattern"](https://www.nature.com/articles/s41598-021-85959-z): modified Gompertz, Peristera-Kostaki and Gamma-Pearson models beat Hadwiger on AICc.
+
+See the [literature review](../literature-review.md).
+```
+
