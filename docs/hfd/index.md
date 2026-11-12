@@ -6,7 +6,6 @@
 
 first-vs-second-birth
 smaller-families
-mdf
 ../owid/tfr-derivative
 ../owid/the-low-fertility-trap
 ```
