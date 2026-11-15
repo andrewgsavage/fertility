@@ -6,6 +6,7 @@ in pairs of (first birth, second birth) subplots, three country-pairs
 (six subplot columns) per row.
 """
 
+import math
 import pathlib
 import sys
 
@@ -24,8 +25,18 @@ if str(_ONS_SCRIPTS) not in sys.path:
 from cond_asfr_uk_ons import load_period_rates  # noqa: E402
 
 OUTPUT = "outputs/cond_asfr_facet.html"
+OUTPUT_CHANGE = "outputs/cond_asfr_facet_change.html"
 
 SHARED_YRANGE = (0, 0.25)
+# Change-since-baseline chart: each rate is divided by the same country's
+# mean rate at that age over BASELINE_YEARS, and drawn on a log axis (so a
+# halving and a doubling are the same distance from baseline). Ages whose
+# baseline rate is under MIN_BASELINE are dropped: dividing by a tiny rate
+# at the youngest and oldest ages gives wildly noisy ratios.
+BASELINE_YEARS = (2009, 2011)
+MIN_BASELINE = 0.005
+CHANGE_YRANGE = (0.22, 3.3)
+CHANGE_TICKS = [0.25, 0.5, 0.75, 1, 1.5, 2, 3]
 COUNTRY_PAIRS_PER_ROW = 3
 ROW_HEIGHT = 150
 # Gap between the first/second-birth columns of one country's pair vs. the
@@ -63,6 +74,21 @@ def load_data():
     return df
 
 
+def add_change_since_baseline(df):
+    """Add r1x / r2x: each conditional ASFR divided by the country's mean
+    rate at that age over BASELINE_YEARS (all years in the window must be
+    present). NaN where the baseline is missing or below MIN_BASELINE."""
+    lo, hi = BASELINE_YEARS
+    df = df.copy()
+    window = df[df["year"].between(lo, hi)].groupby(["code", "age"])
+    for column in ("m1x", "m2x"):
+        baseline = window[column].mean().where(window[column].count() == hi - lo + 1)
+        baseline = baseline.where(baseline >= MIN_BASELINE).rename("baseline")
+        ratio = df[column] / df.join(baseline, on=["code", "age"])["baseline"]
+        df["r" + column[1:]] = ratio
+    return df
+
+
 def _year_color(year, ymin, ymax, alpha=0.6):
     t = 0.0 if ymax == ymin else (year - ymin) / (ymax - ymin)
     r, g, b = pc.sample_colorscale("Turbo", [t])[0][4:-1].split(",")
@@ -85,11 +111,12 @@ def _column_domains(ncols, within_gap, between_gap):
     return domains
 
 
-def make_facet(df, countries):
+def make_facet(df, countries, change=False):
     """One Plotly figure with a (first birth, second birth) subplot pair per
     country, COUNTRY_PAIRS_PER_ROW pairs (2 * COUNTRY_PAIRS_PER_ROW columns)
     per row, countries continuing onto further rows rather than behind
-    per-region tabs."""
+    per-region tabs. With change, plots each rate relative to its country's
+    BASELINE_YEARS mean (r1x / r2x) on a log axis instead of the raw rate."""
     ymin, ymax = df["year"].min(), df["year"].max()
     rows_of_countries = [
         countries[i : i + COUNTRY_PAIRS_PER_ROW] for i in range(0, len(countries), COUNTRY_PAIRS_PER_ROW)
@@ -128,21 +155,40 @@ def make_facet(df, countries):
             )
             for order, column, label in BIRTH_ORDERS:
                 col = pair * 2 + order
+                if change:
+                    column = "r" + column[1:]
                 for year, year_rows in subset.groupby("year"):
                     year_rows = year_rows.sort_values("age")
+                    if change:
+                        year_rows = year_rows.dropna(subset=[column])
+                        hover = (
+                            f"{hover_name}, {label}<br>Year {year}<br>Age %{{x}}<br>"
+                            f"%{{customdata:+.0%}} vs {BASELINE_YEARS[0]}-{BASELINE_YEARS[1]}<extra></extra>"
+                        )
+                        customdata = year_rows[column] - 1
+                    else:
+                        hover = f"{hover_name}, {label}<br>Year {year}<br>Age %{{x}}<br>%{{y:.1%}}<extra></extra>"
+                        customdata = None
                     fig.add_trace(
                         go.Scatter(
                             x=year_rows["age"], y=year_rows[column],
                             mode="lines", line=dict(width=0.8, color=_year_color(year, ymin, ymax)),
                             name=str(year), legendgroup=str(year), showlegend=False,
-                            hovertemplate=f"{hover_name}, {label}<br>Year {year}<br>Age %{{x}}<br>%{{y:.1%}}<extra></extra>",
+                            customdata=customdata, hovertemplate=hover,
                         ),
                         row=row, col=col,
                     )
                 fig.update_xaxes(range=[15, 45], showticklabels=(row == nrows), row=row, col=col)
-                fig.update_yaxes(
-                    range=list(SHARED_YRANGE), tickformat=".0%", showticklabels=(col == 1), row=row, col=col,
-                )
+                if change:
+                    fig.update_yaxes(
+                        type="log", range=[math.log10(r) for r in CHANGE_YRANGE],
+                        tickvals=CHANGE_TICKS, ticktext=[f"{t - 1:+.0%}" if t != 1 else "0%" for t in CHANGE_TICKS],
+                        showticklabels=(col == 1), row=row, col=col,
+                    )
+                else:
+                    fig.update_yaxes(
+                        range=list(SHARED_YRANGE), tickformat=".0%", showticklabels=(col == 1), row=row, col=col,
+                    )
 
     # Dummy trace to show a colorbar for the year axis, placed next to the
     # last country's subplots when that row has empty columns to spare
@@ -169,7 +215,11 @@ def make_facet(df, countries):
     fig.update_yaxes(visible=False, row=colorbar_row, col=colorbar_col)
 
     fig.update_layout(
-        title="First and Second Birth Conditional ASFRs vs age, by country",
+        title=(
+            f"Change in Conditional ASFR since {BASELINE_YEARS[0]}-{BASELINE_YEARS[1]}, by country (log scale)"
+            if change
+            else "First and Second Birth Conditional ASFRs vs age, by country"
+        ),
         template="plotly_white",
         height=ROW_HEIGHT * nrows + 120,
         showlegend=False,
@@ -180,17 +230,18 @@ def make_facet(df, countries):
 if __name__ == "__main__":
     df = load_data()
     all_countries = [code for codes in COUNTRY_REGIONS.values() for code in codes]
-    fig = make_facet(df, all_countries)
-
-    fig.write_html(
-        OUTPUT,
-        include_plotlyjs="cdn",
-        full_html=True,
-        default_width="100%",
-        default_height=f"{fig.layout.height}px",
-        config={"responsive": True},
-    )
-    html = open(OUTPUT, "r", encoding="utf-8").read()
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    open(OUTPUT, "w", encoding="utf-8").write(html)
-    print(f"Saved {OUTPUT}")
+    df = add_change_since_baseline(df)
+    for output, change in [(OUTPUT, False), (OUTPUT_CHANGE, True)]:
+        fig = make_facet(df, all_countries, change=change)
+        fig.write_html(
+            output,
+            include_plotlyjs="cdn",
+            full_html=True,
+            default_width="100%",
+            default_height=f"{fig.layout.height}px",
+            config={"responsive": True},
+        )
+        html = open(output, "r", encoding="utf-8").read()
+        html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
+        open(output, "w", encoding="utf-8").write(html)
+        print(f"Saved {output}")
