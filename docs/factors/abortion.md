@@ -58,6 +58,8 @@ Coverage: Eurostat [abortions](https://ec.europa.eu/eurostat/databrowser/view/de
 
 The share rose at every age. By 2022, nearly half of pregnancies to women aged 20–24 ended in abortion. The share of abortions to women who already had a child rose from 53% in 2013 to 57% in 2021 (DHSC Table 3a), so the rise is not only among the childless. For how this enters the UK's post-2010 fall in births, see [Explaining the 2010s Drop](explaining-the-2010s-drop.md).
 
+For abortions and births by age in 31 European countries, the US and Japan, see [Abortions and Births by Age](abortion-by-age.md).
+
 ## Causal evidence
 
 From the [causal analysis](causal-analysis.md), graded by research design (A quasi-experiment, B panel or register, C correlation or simulation, T theory):
