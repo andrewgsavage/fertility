@@ -36,7 +36,7 @@ def half_life_years(tfr):
 # specific claim to a specific point on the curve.
 CALLOUTS = {
     1.05: "1.05: halves every generation (30 years)",
-    1.40: "1.40: the \"point of no return\"",
+    1.40: f"1.40: 33% below replacement, {half_life_years(1.40):.0f}-year half-life",
     1.70: f"1.70: {half_life_years(1.70):.0f}-year half-life",
 }
 

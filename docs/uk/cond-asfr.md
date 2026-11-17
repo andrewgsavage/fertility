@@ -1,5 +1,9 @@
 # Conditional ASFR
 
+```{warning}
+This page was written by AI and has not been fully reviewed. Check figures and claims against the linked sources.
+```
+
 The [First vs Second Birth](../hfd/first-vs-second-birth) page compares the conditional age specific fertility rate (ASFR) — the probability a woman has her next child in a given year — for first and second births across countries, including a UK column reconstructed from ONS cohort data (HFD itself has no conditional-ASFR tables for the UK).
 
 This page shows that same UK reconstruction on its own, colored by period (calendar) year, with every available year plotted and a slider to narrow the range shown. See [Later Births](later-births) for the same chart colored by birth cohort instead, alongside the underlying cumulative data.

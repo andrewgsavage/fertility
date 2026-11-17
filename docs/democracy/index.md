@@ -5,4 +5,6 @@
 :hidden:
 
 stability
+voter-age
+economic-decline
 ```
