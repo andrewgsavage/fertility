@@ -26,6 +26,7 @@ extends further (to ~2022) than Kulu et al.'s own period coverage (ending
 2015-17).
 """
 
+import bisect
 import pathlib
 
 import pandas as pd
@@ -54,11 +55,31 @@ RF_DASH = {"Graduates": "dot", "Non-graduates": "solid"}
 COLORSCALE = "Viridis"
 AGE_RANGE = (20, 45)
 
+# Where the direct line labels sit -- both panels' data span this year, so
+# one shared x keeps every label lined up vertically rather than trailing
+# off at each line's own (staggered) end point.
+LABEL_X = 2000
+
 
 def _age_color(age):
     frac = (age - AGE_RANGE[0]) / (AGE_RANGE[1] - AGE_RANGE[0])
     frac = min(max(frac, 0), 1)
     return pc.sample_colorscale(COLORSCALE, frac)[0]
+
+
+def _interp(series_x, series_y, x):
+    """Linearly interpolate y at x from parallel (sorted-x) sequences --
+    used to place each line's label at LABEL_X even though the underlying
+    series (Kulu et al.'s period midpoints, the RF digitized points) aren't
+    necessarily sampled exactly there."""
+    if x <= series_x[0]:
+        return series_y[0]
+    if x >= series_x[-1]:
+        return series_y[-1]
+    i = bisect.bisect_left(series_x, x)
+    x0, x1 = series_x[i - 1], series_x[i]
+    y0, y1 = series_y[i - 1], series_y[i]
+    return y0 + (x - x0) / (x1 - x0) * (y1 - y0)
 
 
 def _load_rf_series(path):
@@ -105,11 +126,10 @@ def plot():
 
     fig = make_subplots(rows=2, cols=1, shared_xaxes=True, vertical_spacing=0.08)
 
-    # (row, x_of_last_point, y_of_last_point, label, colour, y_pixel_nudge)
-    # -- direct end-of-line labels replace the colour-scale/dash-style
-    # legends below; y_pixel_nudge keeps labels from overlapping where
-    # lines end close together (Low/High cross near the final point).
-    end_labels = []
+    # (row, y_at_LABEL_X, label, colour) -- direct labels (positioned right
+    # above each line at LABEL_X, see the drawing loop below) replace the
+    # colour-scale/dash-style legends below.
+    line_labels = []
     all_years = []
 
     period_years = [_period_midpoint(p) for p in PERIODS]
@@ -129,7 +149,7 @@ def plot():
                 ),
                 row=1, col=1,
             )
-            end_labels.append((1, period_years[-1], values[-1], f"{series} education", color, 0))
+            line_labels.append((1, _interp(period_years, values, LABEL_X), f"{series} education", color))
 
     for education, by_group in rf_data.items():
         for group in RF_AGE_GROUPS:
@@ -145,32 +165,41 @@ def plot():
                 ),
                 row=2, col=1,
             )
-            end_labels.append((2, years[-1], pct[-1], education, color, 0))
+            line_labels.append((2, _interp(list(years), list(pct), LABEL_X), education, color))
 
-    # Nudge the two top-panel labels that end close together (Low/High
-    # cross right at the final point) apart vertically.
-    end_labels[0] = end_labels[0][:5] + (10,)   # Low education
-    end_labels[2] = end_labels[2][:5] + (-10,)  # High education
-
-    for row, x, y, label, color, yshift in end_labels:
+    for row, y, label, color in line_labels:
         fig.add_annotation(
-            x=x, y=y, text=label, showarrow=False,
-            xanchor="left", yanchor="middle", xshift=8, yshift=yshift,
-            font=dict(size=12, color=color),
+            x=LABEL_X, y=y, text=label, showarrow=False,
+            xanchor="center", yanchor="bottom", yshift=10,
+            font=dict(size=12, color=color), bgcolor="rgba(255,255,255,0.75)",
             row=row, col=1,
+        )
+
+    # Panel titles, top-left of each subplot's own plot area (not the shared
+    # figure title, and not an axis title) -- positioned via "x/y domain"
+    # refs rather than data coordinates, so they stay pinned to the corner
+    # regardless of each panel's own y-range.
+    PANEL_TITLES = {
+        1: "Relative fertility rate, England & Wales, ages 15-29",
+        2: "% with child, ages 25-29",
+    }
+    for row, title in PANEL_TITLES.items():
+        axis_suffix = "" if row == 1 else str(row)
+        fig.add_annotation(
+            x=0, y=1, xref=f"x{axis_suffix} domain", yref=f"y{axis_suffix} domain",
+            xanchor="left", yanchor="bottom", yshift=4,
+            text=f"<b>{title}</b>", showarrow=False, font=dict(size=13),
         )
 
     x_range = [min(all_years), max(all_years)]
     fig.update_xaxes(range=x_range, showticklabels=False, row=1, col=1)
     fig.update_xaxes(range=x_range, row=2, col=1)
-    fig.update_yaxes(title_text="Relative fertility rate", row=1, col=1)
-    fig.update_yaxes(title_text="% with child", rangemode="tozero", row=2, col=1)
+    fig.update_yaxes(rangemode="tozero", row=2, col=1)
 
     fig.update_layout(
-        title="England & Wales fertility/childlessness, aged under 30 -- Kulu et al. Fig. 11 vs Resolution Foundation Fig. 6",
         template="plotly_white", autosize=True,
         showlegend=False,
-        margin=dict(l=10, r=115, t=50, b=10),
+        margin=dict(l=10, r=10, t=50, b=10),
     )
     return fig
 

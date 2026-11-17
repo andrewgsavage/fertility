@@ -250,7 +250,9 @@ Digitized from Kulu, Kuang, Christison & Berrington (2025) Figure 11 -- see `ONS
 <iframe src="../_static/ons/childlessness_age_colour_comparison_uk.html" style="width: 100%; aspect-ratio: 7 / 5; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 
 ```{note}
-Two sources from this page, both restricted to their own under-30 age group (Kulu et al.'s 15-29, Resolution Foundation's 25-29) and lined up on a shared continuous year x-axis -- each line labelled directly rather than via a legend. Top: Kulu et al.'s Figure 11, England & Wales, by education (Low/Medium/High) -- only published per 5-year reporting period, so each period is plotted at its own midpoint year. Bottom: the Resolution Foundation ["Bye Bye Baby"](https://www.resolutionfoundation.org/publications/bye-bye-baby/) report's Figure 6, graduates vs non-graduates, digitized as described on [Bye Bye Baby?](childlessness-by-education) and plotted unaveraged at its own ~0.2-year digitized resolution -- which is also why it extends further (to ~2022) than Kulu et al.'s own period coverage (ending 2015-17). Note the bottom panel's y-axis is % *with* a child (100 - the source's own childlessness rate), not % childless. See `ONS/scripts/childlessness_age_colour_comparison_uk.py`.
+Top: Kulu, Kuang, Christison & Berrington (2025), "Long-term fertility trends by birth order in Britain: Comparison between England & Wales and Scotland", Figure 11, England & Wales, ages 15-29, plotted at midpoint year.
+
+Bottom: The Resolution Foundation ["Bye Bye Baby"](https://www.resolutionfoundation.org/publications/bye-bye-baby/), Figure 6, ages 25-29, with y axis inverted.
 ```
 :::
 
