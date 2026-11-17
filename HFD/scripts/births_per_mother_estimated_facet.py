@@ -18,6 +18,7 @@ from plotly.subplots import make_subplots
 from births_per_mother_period_grid import load_data
 from births_per_mother_region_grid import X_LIM, Y_LIM
 from country_names import COUNTRY_REGIONS, country_title
+from plot_colors import PERIOD_CAXIS, PERIOD_COLORSCALE
 
 OUTPUT = "outputs/births_per_mother_estimated_facet.html"
 
@@ -28,12 +29,13 @@ LABEL_FONT = dict(size=12, family='"Open Sans", verdana, arial, sans-serif', col
 
 def _year_color(year, ymin, ymax, alpha=0.6):
     t = 0.0 if ymax == ymin else (year - ymin) / (ymax - ymin)
-    r, g, b = pc.sample_colorscale("Turbo", [t])[0][4:-1].split(",")
+    t = min(1.0, max(0.0, t))  # clip: years outside [ymin, ymax] clamp to the end color
+    r, g, b = pc.sample_colorscale(PERIOD_COLORSCALE, [t])[0][4:-1].split(",")
     return f"rgba({r},{g},{b},{alpha})"
 
 
 def make_facet(df, countries):
-    ymin, ymax = df["year"].min(), df["year"].max()
+    ymin, ymax = PERIOD_CAXIS
     rows_of_countries = [
         countries[i : i + COUNTRIES_PER_ROW] for i in range(0, len(countries), COUNTRIES_PER_ROW)
     ]
@@ -80,7 +82,7 @@ def make_facet(df, countries):
         go.Scatter(
             x=[None], y=[None], mode="markers",
             marker=dict(
-                colorscale="Turbo", cmin=ymin, cmax=ymax,
+                colorscale=PERIOD_COLORSCALE, cmin=ymin, cmax=ymax,
                 color=[ymin], showscale=True,
                 colorbar=dict(title="Year"),
             ),

@@ -19,6 +19,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 from country_names import COUNTRY_NAMES
+from plot_colors import COHORT_CAXIS, COHORT_COLORSCALE
 
 # Resolved relative to this file (not cwd) so load_data() works whether
 # this module is run directly (cwd=HFD/) or imported from elsewhere (e.g.
@@ -28,12 +29,11 @@ INPUT = _SCRIPT_DIR.parent / "data" / "HFD" / "asfrRR.txt"
 OUTPUT = "outputs/asfr_uk.html"
 CODES = ["GBRTENW"]
 
-# Fixed to match the color axis of the ONS-derived conditional/cumulative
-# charts this one sits alongside on docs/uk/later-births.md (their cohort
-# coverage is 1920-2005), so the same color means the same cohort across
-# all three charts even though this one's own data (and the external range
-# control) covers a wider span.
-CAXIS_MIN, CAXIS_MAX = 1920, 2005
+# Shared with the ONS-derived conditional/cumulative charts this one sits
+# alongside on docs/uk/later-births.md, so the same color means the same
+# cohort across all three charts even though this one's own data (and the
+# external range control) covers a wider span. See plot_colors.py.
+CAXIS_MIN, CAXIS_MAX = COHORT_CAXIS
 
 # No in-iframe UI — matches ONS/scripts/cond_asfr_uk_ons.py's RANGE_POST_SCRIPT,
 # so the same external cohort-range control on docs/uk/later-births.md can
@@ -94,7 +94,7 @@ def plot(df):
         go.Scatter(
             x=[None], y=[None], mode="markers",
             marker=dict(
-                colorscale="Turbo", cmin=cmap_min, cmax=cmap_max,
+                colorscale=COHORT_COLORSCALE, cmin=cmap_min, cmax=cmap_max,
                 color=[cmap_min], showscale=True,
                 colorbar=dict(title="Cohort"),
             ),
@@ -117,7 +117,7 @@ def plot(df):
 def _cohort_color(cohort, cmin, cmax):
     t = 0.0 if cmax == cmin else (cohort - cmin) / (cmax - cmin)
     t = min(1.0, max(0.0, t))  # clip: cohorts outside [cmin, cmax] clamp to the end color
-    return pc.sample_colorscale("Turbo", [t])[0]
+    return pc.sample_colorscale(COHORT_COLORSCALE, [t])[0]
 
 
 if __name__ == "__main__":

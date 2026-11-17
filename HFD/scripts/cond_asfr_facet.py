@@ -15,6 +15,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 from country_names import COUNTRY_REGIONS, country_title
+from plot_colors import PERIOD_COLORSCALE, period_axis
 
 _REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 _ONS_SCRIPTS = _REPO_ROOT / "ONS" / "scripts"
@@ -65,7 +66,8 @@ def load_data():
 
 def _year_color(year, ymin, ymax, alpha=0.6):
     t = 0.0 if ymax == ymin else (year - ymin) / (ymax - ymin)
-    r, g, b = pc.sample_colorscale("Turbo", [t])[0][4:-1].split(",")
+    t = min(1.0, max(0.0, t))  # clip: years outside [ymin, ymax] clamp to the end color
+    r, g, b = pc.sample_colorscale(PERIOD_COLORSCALE, [t])[0][4:-1].split(",")
     return f"rgba({r},{g},{b},{alpha})"
 
 
@@ -90,7 +92,7 @@ def make_facet(df, countries):
     country, COUNTRY_PAIRS_PER_ROW pairs (2 * COUNTRY_PAIRS_PER_ROW columns)
     per row, countries continuing onto further rows rather than behind
     per-region tabs."""
-    ymin, ymax = df["year"].min(), df["year"].max()
+    ymin, ymax = period_axis(df["year"].min(), df["year"].max())
     rows_of_countries = [
         countries[i : i + COUNTRY_PAIRS_PER_ROW] for i in range(0, len(countries), COUNTRY_PAIRS_PER_ROW)
     ]
@@ -157,7 +159,7 @@ def make_facet(df, countries):
         go.Scatter(
             x=[None], y=[None], mode="markers",
             marker=dict(
-                colorscale="Turbo", cmin=ymin, cmax=ymax,
+                colorscale=PERIOD_COLORSCALE, cmin=ymin, cmax=ymax,
                 color=[ymin], showscale=True,
                 colorbar=dict(title="Year"),
             ),

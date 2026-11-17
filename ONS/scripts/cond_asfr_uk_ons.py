@@ -19,6 +19,7 @@ HFD/scripts/cond_asfr_region_grid.py) is unchanged.
 
 import json
 import pathlib
+import sys
 
 import openpyxl
 import plotly.colors as pc
@@ -30,6 +31,12 @@ from plotly.subplots import make_subplots
 # elsewhere (e.g. HFD/scripts/cond_asfr_region_grid.py, cwd=HFD/) to fold the
 # UK into the Western Europe region grid as an extra column.
 _SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
+_HFD_SCRIPTS = _SCRIPT_DIR.parent.parent / "HFD" / "scripts"
+if str(_HFD_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_HFD_SCRIPTS))
+
+from plot_colors import COHORT_COLORSCALE, PERIOD_COLORSCALE, cohort_axis, period_axis  # noqa: E402
+
 SOURCE = _SCRIPT_DIR.parent / "data" / "finalisingcohorttables2024finalforupload.xlsx"
 OUTPUT = "outputs/cond_asfr_uk_ons.html"
 COHORT_OUTPUT = "outputs/cond_asfr_uk_ons_cohort.html"
@@ -96,6 +103,8 @@ def plot(
     y_title="Conditional ASFR (%)",
     y_range=(0, 25),
     value_scale=100,
+    colorscale=PERIOD_COLORSCALE,
+    caxis=None,
 ):
     """Returns (fig, trace_groups): trace_groups[i] is the group key (period
     year, or cohort — see plot_cohort()) of fig.data[i], or None for traces
@@ -103,10 +112,12 @@ def plot(
     range filter applied to the figure. value_scale multiplies the raw
     values before plotting — 100 for the hazard rates (stored as 0-1
     fractions), 1 for the cumulative P1/P2 values (already 0-100 percentages
-    in ONS's table).
+    in ONS's table). caxis is the (min, max) color axis range — the
+    period axis for the data by default, cohort_axis() for plot_cohort()/
+    plot_cumulative_cohort() (see plot_colors.py).
     """
     groups = sorted(by_period)
-    cmap_min, cmap_max = min(groups), max(groups)
+    cmap_min, cmap_max = caxis if caxis is not None else period_axis(min(groups), max(groups))
     trace_groups = []
 
     fig = make_subplots(rows=1, cols=2, subplot_titles=subplot_titles)
@@ -115,7 +126,7 @@ def plot(
         ages = sorted(by_period[group])
         v1 = [by_period[group][a][0] for a in ages]
         v2 = [by_period[group][a][1] for a in ages]
-        color = _year_color(group, cmap_min, cmap_max)
+        color = _year_color(group, cmap_min, cmap_max, colorscale)
         fig.add_trace(
             go.Scatter(
                 x=ages, y=[v * value_scale if v is not None else None for v in v1],
@@ -141,7 +152,7 @@ def plot(
         go.Scatter(
             x=[None], y=[None], mode="markers",
             marker=dict(
-                colorscale="Turbo", cmin=cmap_min, cmax=cmap_max,
+                colorscale=colorscale, cmin=cmap_min, cmax=cmap_max,
                 color=[cmap_min], showscale=True,
                 colorbar=dict(title=group_label),
             ),
@@ -166,6 +177,8 @@ def plot_cohort(by_cohort_rates):
         by_cohort_rates,
         group_label="Cohort",
         title="Conditional (parity-progression) ASFR, England & Wales — by birth cohort, derived from ONS cohort table 3",
+        colorscale=COHORT_COLORSCALE,
+        caxis=cohort_axis(min(by_cohort_rates), max(by_cohort_rates)),
     )
 
 
@@ -183,12 +196,15 @@ def plot_cumulative_cohort(by_cohort_cumulative):
         y_title="Cumulative %",
         y_range=(0, 100),
         value_scale=1,
+        colorscale=COHORT_COLORSCALE,
+        caxis=cohort_axis(min(by_cohort_cumulative), max(by_cohort_cumulative)),
     )
 
 
-def _year_color(year, ymin, ymax):
+def _year_color(year, ymin, ymax, colorscale):
     t = 0.0 if ymax == ymin else (year - ymin) / (ymax - ymin)
-    return pc.sample_colorscale("Turbo", [t])[0]
+    t = min(1.0, max(0.0, t))  # clip: groups outside [ymin, ymax] clamp to the end color
+    return pc.sample_colorscale(colorscale, [t])[0]
 
 
 def load_period_rates(min_period_year=MIN_PERIOD_YEAR):

@@ -12,6 +12,7 @@ from plotly.subplots import make_subplots
 
 from births_per_mother_region_grid import X_LIM, Y_LIM, load_data
 from country_names import COUNTRY_REGIONS, country_title
+from plot_colors import COHORT_CAXIS, COHORT_COLORSCALE
 
 OUTPUT = "outputs/births_per_mother_facet.html"
 
@@ -25,7 +26,8 @@ LABEL_FONT = dict(size=12, family='"Open Sans", verdana, arial, sans-serif', col
 
 def _cohort_color(cohort, cmin, cmax, alpha=0.6):
     t = 0.0 if cmax == cmin else (cohort - cmin) / (cmax - cmin)
-    r, g, b = pc.sample_colorscale("Turbo", [t])[0][4:-1].split(",")
+    t = min(1.0, max(0.0, t))  # clip: cohorts outside [cmin, cmax] clamp to the end color
+    r, g, b = pc.sample_colorscale(COHORT_COLORSCALE, [t])[0][4:-1].split(",")
     return f"rgba({r},{g},{b},{alpha})"
 
 
@@ -34,7 +36,7 @@ def make_facet(df, countries):
     countries per row, continuing onto further rows rather than behind
     per-region tabs -- same continuous-grid convention as
     cond_asfr_facet.py's first-vs-second-birth page."""
-    cmin, cmax = df["cohort"].min(), df["cohort"].max()
+    cmin, cmax = COHORT_CAXIS
     rows_of_countries = [
         countries[i : i + COUNTRIES_PER_ROW] for i in range(0, len(countries), COUNTRIES_PER_ROW)
     ]
@@ -85,7 +87,7 @@ def make_facet(df, countries):
         go.Scatter(
             x=[None], y=[None], mode="markers",
             marker=dict(
-                colorscale="Turbo", cmin=cmin, cmax=cmax,
+                colorscale=COHORT_COLORSCALE, cmin=cmin, cmax=cmax,
                 color=[cmin], showscale=True,
                 colorbar=dict(title="Birth cohort"),
             ),

@@ -20,14 +20,15 @@ if str(_HFD_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_HFD_SCRIPTS))
 
 from asfr_uk import load_data as load_hfd_asfr  # noqa: E402
+from plot_colors import COHORT_CAXIS, COHORT_COLORSCALE, cohort_axis, sample_color  # noqa: E402
 
 from cond_asfr_uk_ons import load_cohort_cumulative, load_cohort_rates  # noqa: E402
 
 OUTPUT = "outputs/historic_trends_uk.html"
 
 # Same cohort color axis as every other chart on Later Births, so the same
-# color means the same cohort here too.
-CAXIS_MIN, CAXIS_MAX = 1920, 2005
+# color means the same cohort here too. See plot_colors.py.
+CAXIS_MIN, CAXIS_MAX = COHORT_CAXIS
 
 # (subplot title, y-axis group). Panels in the same group get linked
 # y-axes (Plotly's "matches") and only the first panel in each group shows
@@ -51,22 +52,18 @@ Y_GROUP_SIDE = {"pct25": "left", "pct100": "right"}
 
 
 # Number of extra "context" cohorts prepended before each era's own start
-# year, shown in black/grey instead of the turbo scale (see _line_color).
+# year, shown in black/grey instead of the viridis scale (see _line_color).
 CONTEXT_YEARS = 5
 
 
-def _cohort_color(cohort):
-    t = (cohort - CAXIS_MIN) / (CAXIS_MAX - CAXIS_MIN)
-    t = min(1.0, max(0.0, t))
-    return pc.sample_colorscale("Turbo", [t])[0]
-
-
-def _line_color(cohort, context_range):
-    """Turbo-scale color by default; inside context_range (the CONTEXT_YEARS
-    cohorts just before an era's start) a grey gradient — dark grey for the
-    most recent of those, grading lighter the further back a cohort goes —
-    so they read as context rather than competing with the era's own
-    colored cohorts."""
+def _line_color(cohort, context_range, axis=COHORT_CAXIS):
+    """Viridis-scale color by default, over axis (the shared COHORT_CAXIS
+    for the full chart, the era's own range for an era copy); inside
+    context_range (the CONTEXT_YEARS cohorts just before an era's start) a
+    grey gradient —
+    dark grey for the most recent of those, grading lighter the further
+    back a cohort goes — so they read as context rather than competing
+    with the era's own colored cohorts."""
     if context_range is not None:
         c_lo, c_hi = context_range
         if c_lo <= cohort <= c_hi:
@@ -74,7 +71,7 @@ def _line_color(cohort, context_range):
             t = (cohort - c_lo) / span if span > 0 else 1.0  # 0 = oldest (lightest), 1 = most recent (darkest)
             shade = round(190 - t * 130)  # 190 (light grey) .. 60 (dark grey)
             return f"#{shade:02x}{shade:02x}{shade:02x}"
-    return _cohort_color(cohort)
+    return sample_color(COHORT_COLORSCALE, cohort, axis)
 
 
 def _peak(ages, idx):
@@ -279,11 +276,11 @@ def _add_trend_arrows(fig, cond_rates, cumulative, lo, hi):
 
 def build_figure(cohort_range=None, trend_arrows=False):
     """cohort_range: optional (lo, hi) to restrict which birth cohorts get
-    plotted at all (used for the fixed-era copies below) — the color axis
-    stays fixed at CAXIS_MIN/CAXIS_MAX regardless, so colors stay comparable
-    across the full-range chart and every era copy. When set, the
+    plotted at all (used for the fixed-era copies below) — the full chart
+    uses the shared COHORT_CAXIS; an era stretches the same scale over its
+    own (short) range, first cohort yellow to last purple. When set, the
     CONTEXT_YEARS cohorts immediately before lo are also included, colored
-    dark grey (most recent)/light grey (older) instead of by the turbo
+    dark grey (most recent)/light grey (older) instead of by the viridis
     scale. trend_arrows: when True (and cohort_range is set), adds
     data-driven arrows comparing the lo vs hi boundary cohorts on each
     panel — see _add_trend_arrows()."""
@@ -292,6 +289,7 @@ def build_figure(cohort_range=None, trend_arrows=False):
     cumulative = load_cohort_cumulative()
 
     context_range = None
+    axis = COHORT_CAXIS
     if cohort_range is not None:
         lo, hi = cohort_range
         context_range = (lo - CONTEXT_YEARS, lo - 1)
@@ -299,6 +297,12 @@ def build_figure(cohort_range=None, trend_arrows=False):
         hfd_df = hfd_df[(hfd_df["cohort"] >= plot_lo) & (hfd_df["cohort"] <= hi)]
         cond_rates = {c: v for c, v in cond_rates.items() if plot_lo <= c <= hi}
         cumulative = {c: v for c, v in cumulative.items() if plot_lo <= c <= hi}
+        # An era covers few cohorts, so it stretches the full scale (first
+        # cohort yellow -> last purple) over its own range rather than a
+        # sliver of the long-term axis. hi may be the 9999 sentinel, so
+        # use the latest cohort that actually has data.
+        last = max(c for c in {**cond_rates, **cumulative} if cond_rates.get(c) or cumulative.get(c))
+        axis = cohort_axis(lo, min(hi, last))
 
     fig = make_subplots(
         rows=1, cols=len(PANELS), subplot_titles=[p[0] for p in PANELS], horizontal_spacing=0
@@ -312,7 +316,7 @@ def build_figure(cohort_range=None, trend_arrows=False):
         fig.add_trace(
             go.Scatter(
                 x=rows["age"], y=rows["asfr"] * 100,
-                mode="lines", line=dict(width=1, color=_line_color(cohort, context_range)),
+                mode="lines", line=dict(width=1, color=_line_color(cohort, context_range, axis)),
                 name=str(cohort), legendgroup=str(cohort), showlegend=False,
                 hovertemplate=f"ASFR<br>Cohort {cohort}<br>Age %{{x}}<br>%{{y:.1f}}%<extra></extra>",
             ),
@@ -322,7 +326,7 @@ def build_figure(cohort_range=None, trend_arrows=False):
 
     # Panels 2-3: conditional first/second birth (ONS reconstruction).
     for cohort, ages in cond_rates.items():
-        color = _line_color(cohort, context_range)
+        color = _line_color(cohort, context_range, axis)
         sorted_ages = sorted(ages)
         c1 = [ages[a][0] for a in sorted_ages]
         c2 = [ages[a][1] for a in sorted_ages]
@@ -349,7 +353,7 @@ def build_figure(cohort_range=None, trend_arrows=False):
     # Panels 4-5: cumulative % with >=1 / >=2 children (ONS reconstruction,
     # already 0-100 percentages, no *100 needed).
     for cohort, ages in cumulative.items():
-        color = _line_color(cohort, context_range)
+        color = _line_color(cohort, context_range, axis)
         sorted_ages = sorted(ages)
         p1 = [ages[a][0] for a in sorted_ages]
         p2 = [ages[a][1] for a in sorted_ages]
@@ -380,8 +384,8 @@ def build_figure(cohort_range=None, trend_arrows=False):
         go.Scatter(
             x=[None], y=[None], mode="markers",
             marker=dict(
-                colorscale="Turbo", cmin=CAXIS_MIN, cmax=CAXIS_MAX,
-                color=[CAXIS_MIN], showscale=True,
+                colorscale=COHORT_COLORSCALE, cmin=axis[0], cmax=axis[1],
+                color=[axis[0]], showscale=True,
                 # Inset into the chart itself, vertical, centered on age=40
                 # on the Cond. 1st panel — an empty region of that panel's
                 # curve. Colorbar x/y is whole-figure "paper" fraction, not
