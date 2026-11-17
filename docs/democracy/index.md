@@ -6,4 +6,5 @@
 
 stability
 voter-age
+economic-decline
 ```
