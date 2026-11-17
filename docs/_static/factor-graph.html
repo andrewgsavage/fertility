@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Factor Influence Graph</title>
+<style>
+  :root { --bg: #ffffff; --fg: #1f2328; --muted: #57606a; --link: #2962ff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #131416; --fg: #e6e6e6; --muted: #9aa0a6; --link: #6ea8ff; }
+  }
+  body { margin: 0; padding: 16px; background: var(--bg); color: var(--fg); font-family: system-ui, sans-serif; }
+  h1 { font-size: 1.4rem; margin: 0 0 8px; }
+  p { color: var(--muted); max-width: 70em; margin: 0 0 8px; line-height: 1.45; }
+  a { color: var(--link); }
+  .graph { overflow-x: auto; margin-top: 16px; }
+  .mermaid { background: none; border: none; margin: 0; }
+  .mermaid .clickable .nodeLabel { text-decoration: underline; }
+</style>
+</head>
+<body>
+<h1>Factor influence graph</h1>
+<p>Written by AI and not fully reviewed. Arrows are proposed influences, not estimated effects.</p>
+<p>Grey: factors. Underlined nodes link to their page. Blue: life stages. Yellow: conditional ASFRs. Red: TFR and its consequences. Feedback from low TFR (through population ageing and the low-fertility trap) back to policy and preferences is left off to keep the layout readable.</p>
+<p><a href="../factors/index.html">Back to Factors</a></p>
+<div class="graph">
+<pre class="mermaid">
+flowchart LR
+  edu[Education]
+  debt[Student debt]
+  urban[Urbanisation]
+  planning[Planning rules]
+  price[House prices and<br>home ownership]
+  rent[Rents]
+  size[Home size]
+  hours[Long working hours]
+  insecure[Job insecurity]
+  men[Left-behind young men<br>and NEETs]
+  income[Income level]
+  uncert[Economic uncertainty]
+  femp[Female employment]
+  penalty[Motherhood<br>earnings penalty]
+  ratios[Childcare staff ratios]
+  childcare[Childcare costs]
+  provision[Childcare provision]
+  pleave[Parental leave]
+  benefits[Child benefits<br>and tax credits]
+  tax[Tax system]
+  carseat[Car-seat rules]
+  cost[Cost of raising children]
+  intensive[Intensive<br>parenting norms]
+  pensions[Pensions and<br>welfare state]
+  mort[Child mortality decline]
+  contra[Contraception]
+  abortion[Abortion]
+  sexed[Sex education and<br>teen pregnancy campaigns]
+  aware[Low fertility<br>awareness]
+  secular[Secularisation]
+  gender[Gender equality<br>at home]
+  phones[Smartphones]
+  apps[Dating apps]
+  social[Social media]
+  divide[Political divide<br>between young<br>men and women]
+  ideal[Ideal family size]
+  sperm[Falling sperm counts]
+
+  leavehome[Leaving home]
+  form[Partnership formation]
+  stable[Partnership stability]
+  afb[Age at first birth]
+  infert[Female age-related<br>infertility]
+
+  c1([First-birth cond. ASFR])
+  c2([Second+ cond. ASFR])
+  tfr[[TFR]]
+  ageing[Population ageing<br>and politics]
+  trap[Low-fertility trap]
+
+  urban --> price
+  urban --> rent
+  planning --> price
+  planning --> rent
+  edu --> debt
+  edu --> femp
+  edu --> form
+  edu --> afb
+  edu --> divide
+  debt --> leavehome
+  price --> leavehome
+  rent --> leavehome
+  price --> form
+  price --> c2
+  size --> c2
+  insecure --> form
+  insecure --> uncert
+  edu --> men
+  insecure --> men
+  men --> form
+  men --> divide
+  hours --> c2
+  income --> c1
+  income --> c2
+  uncert --> c1
+  uncert --> c2
+  femp --> c1
+  femp --> c2
+  penalty --> c1
+  penalty --> c2
+  ratios --> childcare
+  childcare --> femp
+  childcare --> c2
+  provision --> femp
+  provision --> c2
+  pleave --> c1
+  pleave --> c2
+  benefits --> c1
+  benefits --> c2
+  tax --> femp
+  tax --> c2
+  carseat --> cost
+  intensive --> cost
+  cost --> c2
+  pensions --> ideal
+  mort --> ideal
+  secular --> form
+  secular --> ideal
+  phones --> form
+  apps --> form
+  social --> divide
+  social --> ideal
+  social --> intensive
+  divide --> form
+  contra --> afb
+  contra --> c1
+  abortion --> afb
+  sexed --> contra
+  sexed --> afb
+  aware --> afb
+  aware --> c1
+  aware --> c2
+  abortion --> c1
+  gender --> c2
+  ideal --> c1
+  ideal --> c2
+  sperm --> c1
+  sperm --> c2
+
+  leavehome --> form
+  form --> afb
+  form --> c1
+  stable --> c2
+  afb --> infert
+  afb --> c2
+  infert --> c1
+  infert --> c2
+
+  c1 --> tfr
+  c2 --> tfr
+  tfr --> ageing
+  tfr --> trap
+
+  click leavehome "../factors/leaving-home.html" _top
+  click edu "../factors/education.html" _top
+  click price "../factors/housing.html" _top
+  click rent "../factors/housing.html" _top
+  click size "../factors/housing.html" _top
+  click trap "../owid/the-low-fertility-trap.html" _top
+  click ageing "../democracy/index.html" _top
+
+  classDef stage fill:#dbeafe,stroke:#3b82f6,color:#111
+  classDef rate fill:#fde68a,stroke:#d97706,color:#111
+  classDef out fill:#fecaca,stroke:#dc2626,color:#111
+  class leavehome,form,stable,afb,infert stage
+  class c1,c2 rate
+  class tfr,ageing,trap out
+</pre>
+</div>
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.esm.min.mjs";
+  const dark = matchMedia("(prefers-color-scheme: dark)").matches;
+  mermaid.initialize({ startOnLoad: true, securityLevel: "loose", theme: dark ? "dark" : "neutral",
+    flowchart: { useMaxWidth: true, nodeSpacing: 12, rankSpacing: 30 } });
+</script>
+</body>
+</html>

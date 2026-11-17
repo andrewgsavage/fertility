@@ -36,13 +36,19 @@ _OUTPUT_DIRS = {
     "resolution": _REPO_ROOT / "resolution" / "outputs",
     "owid": _REPO_ROOT / "OWID" / "outputs",
     "democracy": _REPO_ROOT / "democracy" / "outputs",
+    "eurostat": _REPO_ROOT / "eurostat" / "outputs",
+    "housing": _REPO_ROOT / "housing" / "outputs",
+    "gss": _REPO_ROOT / "GSS" / "outputs",
+    "hcmst": _REPO_ROOT / "HCMST" / "outputs",
 }
 
 
 def _sync_dir(src, dest):
-    """Mirror src into dest, touching only files that differ -- rewriting
-    unchanged files would make sphinx-autobuild (which watches _static)
-    see a change and rebuild forever."""
+    """Mirror src into dest, touching only files whose content differs.
+
+    Rewriting unchanged files would look like an edit to sphinx-autobuild
+    (which watches docs/), triggering an endless rebuild/reload loop.
+    """
     wanted = set()
     for path in src.rglob("*"):
         if not path.is_file():
