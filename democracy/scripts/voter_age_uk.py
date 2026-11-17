@@ -371,7 +371,6 @@ def _turnout_figure():
     npp = load_npp()
     fig = make_subplots(
         rows=2, cols=1, shared_xaxes=True, vertical_spacing=0.06,
-        subplot_titles=("Turnout by age group", "Share of electorate by age group"),
     )
     actual_x = [X_POS.get(label, year + 0.5) for label, year, _ in ELECTIONS]
     for i, (band, color) in enumerate(zip(BAND_LABELS, BAND_COLORS)):
@@ -407,21 +406,20 @@ def _turnout_figure():
     for row in (1, 2):
         fig.add_vrect(x0=2025, x1=2075, fillcolor="#888888", opacity=0.08, line_width=0, row=row, col=1)
     fig.add_annotation(
-        x=2025.5, y=1, xref="x", yref="y domain", xanchor="left", yanchor="top", showarrow=False,
-        text="Projection: 2024 turnout held flat", font=dict(size=11),
-    )
-    fig.add_annotation(
-        x=1962.5, y=1, xref="x", yref="y domain", xanchor="left", yanchor="top", showarrow=False,
-        text="Solid: BES · Dotted: Ipsos", font=dict(size=11),
+        x=0, y=0, yshift=-28, xref="paper", yref="paper", xanchor="left", yanchor="top",
+        showarrow=False, font=dict(size=11), align="left",
+        text="Solid: BES · Dotted: Ipsos · Dashed/shaded: projection, 2024 turnout held flat",
     )
     fig.update_xaxes(range=[1962, 2076], dtick=10)
-    fig.update_xaxes(title_text="General election", row=2, col=1)
     fig.update_yaxes(title_text="Turnout (%)", row=1, col=1)
     fig.update_yaxes(title_text="% of electorate", rangemode="tozero", row=2, col=1)
     fig.update_layout(
         template="plotly_white", autosize=True, hovermode="closest",
-        legend=dict(orientation="h", yanchor="top", y=-0.08, x=0, title_text="Age group"),
-        margin=dict(t=40, b=90),
+        legend=dict(
+            orientation="h", yanchor="bottom", y=1.01, x=0,
+            entrywidth=70, entrywidthmode="pixels",
+        ),
+        margin=dict(t=50, b=60),
     )
     return fig
 
