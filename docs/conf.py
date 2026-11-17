@@ -1,3 +1,4 @@
+import filecmp
 import pathlib
 import shutil
 import sys
@@ -38,15 +39,32 @@ _OUTPUT_DIRS = {
 }
 
 
+def _sync_dir(src, dest):
+    """Mirror src into dest, touching only files that differ -- rewriting
+    unchanged files would make sphinx-autobuild (which watches _static)
+    see a change and rebuild forever."""
+    wanted = set()
+    for path in src.rglob("*"):
+        if not path.is_file():
+            continue
+        rel = path.relative_to(src)
+        wanted.add(rel)
+        target = dest / rel
+        if target.exists() and filecmp.cmp(path, target, shallow=False):
+            continue
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(path, target)
+    if dest.exists():
+        for path in dest.rglob("*"):
+            if path.is_file() and path.relative_to(dest) not in wanted:
+                path.unlink()
+
+
 def _copy_outputs(app, config):
     static_dir = pathlib.Path(app.confdir) / "_static"
     for name, src in _OUTPUT_DIRS.items():
-        if not src.exists():
-            continue
-        dest = static_dir / name
-        if dest.exists():
-            shutil.rmtree(dest)
-        shutil.copytree(src, dest)
+        if src.exists():
+            _sync_dir(src, static_dir / name)
 
 
 def setup(app):
