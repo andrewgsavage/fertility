@@ -324,7 +324,7 @@ def _figure(rows, stat):
     )
     fig.add_vline(
         x=1969.5, line=dict(width=1, color="#999999", dash="dash"),
-        annotation_text="Voting age 21 → 18", annotation_position="bottom right",
+        annotation_text="Voting age 21 → 18", annotation_position="top right",
         annotation_font_size=11,
     )
     fig.update_xaxes(title_text="General election", range=[1962, 2076], dtick=10)
