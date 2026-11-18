@@ -145,6 +145,23 @@ At 30–44 the share in a couple is flat or slightly up, with cohabitation repla
 
 Coverage: ONS [population estimates by marital status and living arrangements](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesbymaritalstatusandlivingarrangements), England and Wales, 2002–2025 (Labour Force Survey weighted to mid-year population estimates), tables 5–6. The youngest group is 18–29 in 2025.
 
+## Coupling against conditional birth rates, England and Wales
+
+Conditional ASFR (first births per childless woman, second births per one-child woman) against the share of women living in a couple, one point per year from 2002. Use the dropdowns to pick the age band and to switch the x axis to the cohabiting share alone.
+
+```{raw} html
+<iframe src="../_static/ons/coupling_vs_cond_asfr_ew.html" style="width: 100%; height: 560px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+
+| Women aged | In a couple 2010 | In a couple 2025 | First-birth rate 2010 | First-birth rate 2025 |
+|---|--:|--:|--:|--:|
+| 21–29 | 34.0% | 32.7% | 5.8% | 3.6% |
+| 30–34 | 73.2% | 73.3% | 10.4% | 8.1% |
+| 35–39 | 73.6% | 77.3% | 7.7% | 7.8% |
+| 40–44 | 71.9% | 77.1% | 2.5% | 3.0% |
+
+Coverage: conditional rates reconstructed from ONS [cohort fertility table 3](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/datasets/childbearingforwomenbornindifferentyearsreferencetable) (parity distribution by age and year of birth), as on the [conditional ASFR page](../uk/cond-asfr.md); single ages pooled into each band, weighted by the share of the cohort at risk. Rates start at age 21, so the youngest band is 21–29 for births and 16–29 (18–29 in 2025) for living arrangements.
+
 ## Coupling by education, UK and US
 
 Share of people aged 25–34 in a couple, by whether they have a degree, from the same FT article.
