@@ -1,0 +1,5018 @@
+country,ref_area,sex,age,year,share
+Argentina,ARG,women,15-24,2004,16.46
+Argentina,ARG,women,25-34,2004,60.86
+Argentina,ARG,women,35-44,2004,72.81
+Argentina,ARG,men,15-24,2004,9.46
+Argentina,ARG,men,25-34,2004,57.34
+Argentina,ARG,men,35-44,2004,80.04
+Argentina,ARG,women,15-24,2005,16.45
+Argentina,ARG,women,25-34,2005,59.76
+Argentina,ARG,women,35-44,2005,71.84
+Argentina,ARG,men,15-24,2005,9.27
+Argentina,ARG,men,25-34,2005,55.92
+Argentina,ARG,men,35-44,2005,78.66
+Argentina,ARG,women,15-24,2006,16.91
+Argentina,ARG,women,25-34,2006,59.9
+Argentina,ARG,women,35-44,2006,72.15
+Argentina,ARG,men,15-24,2006,9.38
+Argentina,ARG,men,25-34,2006,56.11
+Argentina,ARG,men,35-44,2006,79.35
+Argentina,ARG,women,15-24,2008,15.63
+Argentina,ARG,women,25-34,2008,59.92
+Argentina,ARG,women,35-44,2008,73.24
+Argentina,ARG,men,15-24,2008,9.11
+Argentina,ARG,men,25-34,2008,55.06
+Argentina,ARG,men,35-44,2008,79.42
+Argentina,ARG,women,15-24,2009,15.57
+Argentina,ARG,women,25-34,2009,59.66
+Argentina,ARG,women,35-44,2009,72.22
+Argentina,ARG,men,15-24,2009,8.66
+Argentina,ARG,men,25-34,2009,54.7
+Argentina,ARG,men,35-44,2009,78.39
+Argentina,ARG,women,15-24,2010,16.65
+Argentina,ARG,women,25-34,2010,59.09
+Argentina,ARG,women,35-44,2010,73.64
+Argentina,ARG,men,15-24,2010,9.45
+Argentina,ARG,men,25-34,2010,54.13
+Argentina,ARG,men,35-44,2010,77.98
+Argentina,ARG,women,15-24,2011,16.74
+Argentina,ARG,women,25-34,2011,60.04
+Argentina,ARG,women,35-44,2011,75.19
+Argentina,ARG,men,15-24,2011,9.69
+Argentina,ARG,men,25-34,2011,53.79
+Argentina,ARG,men,35-44,2011,77.99
+Argentina,ARG,women,15-24,2012,16.34
+Argentina,ARG,women,25-34,2012,60.12
+Argentina,ARG,women,35-44,2012,73.58
+Argentina,ARG,men,15-24,2012,9.51
+Argentina,ARG,men,25-34,2012,53.89
+Argentina,ARG,men,35-44,2012,77.2
+Argentina,ARG,women,15-24,2013,17.01
+Argentina,ARG,women,25-34,2013,59.96
+Argentina,ARG,women,35-44,2013,71.81
+Argentina,ARG,men,15-24,2013,9.8
+Argentina,ARG,men,25-34,2013,53.64
+Argentina,ARG,men,35-44,2013,76.87
+Argentina,ARG,women,15-24,2014,17.93
+Argentina,ARG,women,25-34,2014,58.3
+Argentina,ARG,women,35-44,2014,72.47
+Argentina,ARG,men,15-24,2014,10.62
+Argentina,ARG,men,25-34,2014,54.13
+Argentina,ARG,men,35-44,2014,77.32
+Argentina,ARG,women,15-24,2017,16.03
+Argentina,ARG,women,25-34,2017,54.78
+Argentina,ARG,women,35-44,2017,70.07
+Argentina,ARG,men,15-24,2017,10.17
+Argentina,ARG,men,25-34,2017,48.47
+Argentina,ARG,men,35-44,2017,72.58
+Argentina,ARG,women,15-24,2018,16.04
+Argentina,ARG,women,25-34,2018,54.17
+Argentina,ARG,women,35-44,2018,69.47
+Argentina,ARG,men,15-24,2018,10.06
+Argentina,ARG,men,25-34,2018,49.41
+Argentina,ARG,men,35-44,2018,71.34
+Argentina,ARG,women,15-24,2019,14.68
+Argentina,ARG,women,25-34,2019,53.23
+Argentina,ARG,women,35-44,2019,68.63
+Argentina,ARG,men,15-24,2019,8.73
+Argentina,ARG,men,25-34,2019,47.13
+Argentina,ARG,men,35-44,2019,71.88
+Argentina,ARG,women,15-24,2020,13.11
+Argentina,ARG,women,25-34,2020,54.88
+Argentina,ARG,women,35-44,2020,66.03
+Argentina,ARG,men,15-24,2020,7.82
+Argentina,ARG,men,25-34,2020,48.66
+Argentina,ARG,men,35-44,2020,71.74
+Argentina,ARG,women,15-24,2021,13.09
+Argentina,ARG,women,25-34,2021,54.86
+Argentina,ARG,women,35-44,2021,69.88
+Argentina,ARG,men,15-24,2021,8.03
+Argentina,ARG,men,25-34,2021,46.49
+Argentina,ARG,men,35-44,2021,71.39
+Argentina,ARG,women,15-24,2022,12.63
+Argentina,ARG,women,25-34,2022,53.23
+Argentina,ARG,women,35-44,2022,67.99
+Argentina,ARG,men,15-24,2022,7.5
+Argentina,ARG,men,25-34,2022,47.34
+Argentina,ARG,men,35-44,2022,69.66
+Argentina,ARG,women,15-24,2023,11.92
+Argentina,ARG,women,25-34,2023,53.94
+Argentina,ARG,women,35-44,2023,67.94
+Argentina,ARG,men,15-24,2023,8.0
+Argentina,ARG,men,25-34,2023,45.43
+Argentina,ARG,men,35-44,2023,69.36
+Argentina,ARG,women,15-24,2024,11.5
+Argentina,ARG,women,25-34,2024,52.01
+Argentina,ARG,women,35-44,2024,67.6
+Argentina,ARG,men,15-24,2024,7.33
+Argentina,ARG,men,25-34,2024,45.08
+Argentina,ARG,men,35-44,2024,67.06
+Argentina,ARG,women,15-24,2025,10.43
+Argentina,ARG,women,25-34,2025,50.38
+Argentina,ARG,women,35-44,2025,68.16
+Argentina,ARG,men,15-24,2025,6.15
+Argentina,ARG,men,25-34,2025,43.99
+Argentina,ARG,men,35-44,2025,67.28
+Armenia,ARM,women,15-24,2008,19.45
+Armenia,ARM,women,25-34,2008,72.67
+Armenia,ARM,women,35-44,2008,77.92
+Armenia,ARM,men,15-24,2008,5.46
+Armenia,ARM,men,25-34,2008,58.13
+Armenia,ARM,men,35-44,2008,91.83
+Armenia,ARM,women,15-24,2014,25.37
+Armenia,ARM,women,25-34,2014,72.29
+Armenia,ARM,women,35-44,2014,78.5
+Armenia,ARM,men,15-24,2014,6.66
+Armenia,ARM,men,25-34,2014,62.3
+Armenia,ARM,men,35-44,2014,85.94
+Armenia,ARM,women,15-24,2015,23.78
+Armenia,ARM,women,25-34,2015,73.66
+Armenia,ARM,women,35-44,2015,80.4
+Armenia,ARM,men,15-24,2015,6.78
+Armenia,ARM,men,25-34,2015,60.55
+Armenia,ARM,men,35-44,2015,87.68
+Armenia,ARM,women,15-24,2016,25.54
+Armenia,ARM,women,25-34,2016,72.77
+Armenia,ARM,women,35-44,2016,78.65
+Armenia,ARM,men,15-24,2016,5.53
+Armenia,ARM,men,25-34,2016,55.78
+Armenia,ARM,men,35-44,2016,87.13
+Armenia,ARM,women,15-24,2017,22.39
+Armenia,ARM,women,25-34,2017,74.35
+Armenia,ARM,women,35-44,2017,81.01
+Armenia,ARM,men,15-24,2017,4.42
+Armenia,ARM,men,25-34,2017,56.98
+Armenia,ARM,men,35-44,2017,87.2
+Armenia,ARM,women,15-24,2018,26.08
+Armenia,ARM,women,25-34,2018,72.67
+Armenia,ARM,women,35-44,2018,78.8
+Armenia,ARM,men,15-24,2018,6.05
+Armenia,ARM,men,25-34,2018,57.31
+Armenia,ARM,men,35-44,2018,88.75
+Armenia,ARM,women,15-24,2019,19.99
+Armenia,ARM,women,25-34,2019,74.25
+Armenia,ARM,women,35-44,2019,77.2
+Armenia,ARM,men,15-24,2019,4.67
+Armenia,ARM,men,25-34,2019,57.16
+Armenia,ARM,men,35-44,2019,85.75
+Armenia,ARM,women,15-24,2020,18.52
+Armenia,ARM,women,25-34,2020,70.12
+Armenia,ARM,women,35-44,2020,78.47
+Armenia,ARM,men,15-24,2020,3.6
+Armenia,ARM,men,25-34,2020,50.82
+Armenia,ARM,men,35-44,2020,86.44
+Armenia,ARM,women,15-24,2021,18.06
+Armenia,ARM,women,25-34,2021,70.14
+Armenia,ARM,women,35-44,2021,80.64
+Armenia,ARM,men,15-24,2021,3.74
+Armenia,ARM,men,25-34,2021,48.82
+Armenia,ARM,men,35-44,2021,87.1
+Armenia,ARM,women,15-24,2022,17.73
+Armenia,ARM,women,25-34,2022,73.61
+Armenia,ARM,women,35-44,2022,78.59
+Armenia,ARM,men,15-24,2022,4.34
+Armenia,ARM,men,25-34,2022,49.25
+Armenia,ARM,men,35-44,2022,83.39
+Armenia,ARM,women,15-24,2023,13.66
+Armenia,ARM,women,25-34,2023,72.82
+Armenia,ARM,women,35-44,2023,79.16
+Armenia,ARM,men,15-24,2023,2.82
+Armenia,ARM,men,25-34,2023,45.88
+Armenia,ARM,men,35-44,2023,79.37
+Armenia,ARM,women,15-24,2024,13.93
+Armenia,ARM,women,25-34,2024,70.89
+Armenia,ARM,women,35-44,2024,77.91
+Armenia,ARM,men,15-24,2024,2.24
+Armenia,ARM,men,25-34,2024,45.93
+Armenia,ARM,men,35-44,2024,81.14
+Australia,AUS,women,15-24,2002,14.76
+Australia,AUS,women,25-34,2002,62.07
+Australia,AUS,women,35-44,2002,71.65
+Australia,AUS,men,15-24,2002,7.69
+Australia,AUS,men,25-34,2002,52.83
+Australia,AUS,men,35-44,2002,70.03
+Australia,AUS,women,15-24,2003,14.97
+Australia,AUS,women,25-34,2003,64.27
+Australia,AUS,women,35-44,2003,71.62
+Australia,AUS,men,15-24,2003,6.62
+Australia,AUS,men,25-34,2003,52.12
+Australia,AUS,men,35-44,2003,68.65
+Australia,AUS,women,15-24,2004,12.27
+Australia,AUS,women,25-34,2004,62.01
+Australia,AUS,women,35-44,2004,73.62
+Australia,AUS,men,15-24,2004,6.82
+Australia,AUS,men,25-34,2004,55.23
+Australia,AUS,men,35-44,2004,69.95
+Australia,AUS,women,15-24,2005,13.97
+Australia,AUS,women,25-34,2005,60.81
+Australia,AUS,women,35-44,2005,74.07
+Australia,AUS,men,15-24,2005,8.23
+Australia,AUS,men,25-34,2005,54.89
+Australia,AUS,men,35-44,2005,68.56
+Australia,AUS,women,15-24,2006,12.84
+Australia,AUS,women,25-34,2006,60.86
+Australia,AUS,women,35-44,2006,72.14
+Australia,AUS,men,15-24,2006,6.1
+Australia,AUS,men,25-34,2006,58.36
+Australia,AUS,men,35-44,2006,70.06
+Australia,AUS,women,15-24,2007,13.43
+Australia,AUS,women,25-34,2007,62.27
+Australia,AUS,women,35-44,2007,71.79
+Australia,AUS,men,15-24,2007,7.64
+Australia,AUS,men,25-34,2007,53.95
+Australia,AUS,men,35-44,2007,68.78
+Australia,AUS,women,15-24,2008,16.64
+Australia,AUS,women,25-34,2008,60.67
+Australia,AUS,women,35-44,2008,70.06
+Australia,AUS,men,15-24,2008,9.17
+Australia,AUS,men,25-34,2008,54.36
+Australia,AUS,men,35-44,2008,69.57
+Australia,AUS,women,15-24,2009,14.0
+Australia,AUS,women,25-34,2009,62.74
+Australia,AUS,women,35-44,2009,73.05
+Australia,AUS,men,15-24,2009,9.24
+Australia,AUS,men,25-34,2009,54.62
+Australia,AUS,men,35-44,2009,71.27
+Australia,AUS,women,15-24,2010,14.95
+Australia,AUS,women,25-34,2010,62.79
+Australia,AUS,women,35-44,2010,72.83
+Australia,AUS,men,15-24,2010,9.24
+Australia,AUS,men,25-34,2010,55.02
+Australia,AUS,men,35-44,2010,70.8
+Australia,AUS,women,15-24,2011,16.11
+Australia,AUS,women,25-34,2011,63.67
+Australia,AUS,women,35-44,2011,73.43
+Australia,AUS,men,15-24,2011,7.72
+Australia,AUS,men,25-34,2011,57.22
+Australia,AUS,men,35-44,2011,71.19
+Australia,AUS,women,15-24,2012,13.83
+Australia,AUS,women,25-34,2012,62.36
+Australia,AUS,women,35-44,2012,74.0
+Australia,AUS,men,15-24,2012,8.02
+Australia,AUS,men,25-34,2012,57.8
+Australia,AUS,men,35-44,2012,72.34
+Australia,AUS,women,15-24,2013,13.92
+Australia,AUS,women,25-34,2013,63.41
+Australia,AUS,women,35-44,2013,73.73
+Australia,AUS,men,15-24,2013,6.84
+Australia,AUS,men,25-34,2013,59.71
+Australia,AUS,men,35-44,2013,71.02
+Australia,AUS,women,15-24,2014,15.3
+Australia,AUS,women,25-34,2014,64.91
+Australia,AUS,women,35-44,2014,73.9
+Australia,AUS,men,15-24,2014,6.66
+Australia,AUS,men,25-34,2014,57.3
+Australia,AUS,men,35-44,2014,72.2
+Australia,AUS,women,15-24,2015,15.2
+Australia,AUS,women,25-34,2015,62.22
+Australia,AUS,women,35-44,2015,74.0
+Australia,AUS,men,15-24,2015,6.11
+Australia,AUS,men,25-34,2015,57.18
+Australia,AUS,men,35-44,2015,73.42
+Australia,AUS,women,15-24,2016,13.46
+Australia,AUS,women,25-34,2016,64.55
+Australia,AUS,women,35-44,2016,73.17
+Australia,AUS,men,15-24,2016,7.36
+Australia,AUS,men,25-34,2016,56.8
+Australia,AUS,men,35-44,2016,72.42
+Australia,AUS,women,15-24,2017,11.54
+Australia,AUS,women,25-34,2017,63.54
+Australia,AUS,women,35-44,2017,73.49
+Australia,AUS,men,15-24,2017,8.18
+Australia,AUS,men,25-34,2017,55.21
+Australia,AUS,men,35-44,2017,73.13
+Belarus,BLR,women,15-24,2016,22.04
+Belarus,BLR,women,25-34,2016,70.28
+Belarus,BLR,women,35-44,2016,69.56
+Belarus,BLR,men,15-24,2016,10.25
+Belarus,BLR,men,25-34,2016,59.71
+Belarus,BLR,men,35-44,2016,77.27
+Belarus,BLR,women,15-24,2017,23.02
+Belarus,BLR,women,25-34,2017,70.19
+Belarus,BLR,women,35-44,2017,69.54
+Belarus,BLR,men,15-24,2017,10.35
+Belarus,BLR,men,25-34,2017,58.56
+Belarus,BLR,men,35-44,2017,75.08
+Belarus,BLR,women,15-24,2018,20.94
+Belarus,BLR,women,25-34,2018,70.0
+Belarus,BLR,women,35-44,2018,70.04
+Belarus,BLR,men,15-24,2018,9.22
+Belarus,BLR,men,25-34,2018,58.11
+Belarus,BLR,men,35-44,2018,74.36
+Belarus,BLR,women,15-24,2019,18.89
+Belarus,BLR,women,25-34,2019,70.02
+Belarus,BLR,women,35-44,2019,69.6
+Belarus,BLR,men,15-24,2019,7.66
+Belarus,BLR,men,25-34,2019,56.16
+Belarus,BLR,men,35-44,2019,72.39
+Belarus,BLR,women,15-24,2020,16.27
+Belarus,BLR,women,25-34,2020,67.59
+Belarus,BLR,women,35-44,2020,69.13
+Belarus,BLR,men,15-24,2020,7.0
+Belarus,BLR,men,25-34,2020,53.87
+Belarus,BLR,men,35-44,2020,71.92
+Belarus,BLR,women,15-24,2021,14.52
+Belarus,BLR,women,25-34,2021,66.84
+Belarus,BLR,women,35-44,2021,67.77
+Belarus,BLR,men,15-24,2021,6.79
+Belarus,BLR,men,25-34,2021,53.38
+Belarus,BLR,men,35-44,2021,71.36
+Belarus,BLR,women,15-24,2022,14.95
+Belarus,BLR,women,25-34,2022,66.78
+Belarus,BLR,women,35-44,2022,69.06
+Belarus,BLR,men,15-24,2022,6.97
+Belarus,BLR,men,25-34,2022,56.7
+Belarus,BLR,men,35-44,2022,73.28
+Belarus,BLR,women,15-24,2023,13.61
+Belarus,BLR,women,25-34,2023,67.11
+Belarus,BLR,women,35-44,2023,69.69
+Belarus,BLR,men,15-24,2023,5.0
+Belarus,BLR,men,25-34,2023,55.29
+Belarus,BLR,men,35-44,2023,74.86
+Belarus,BLR,women,15-24,2024,12.39
+Belarus,BLR,women,25-34,2024,66.57
+Belarus,BLR,women,35-44,2024,71.02
+Belarus,BLR,men,15-24,2024,5.74
+Belarus,BLR,men,25-34,2024,53.21
+Belarus,BLR,men,35-44,2024,73.91
+Belarus,BLR,women,15-24,2025,12.25
+Belarus,BLR,women,25-34,2025,65.11
+Belarus,BLR,women,35-44,2025,71.67
+Belarus,BLR,men,15-24,2025,5.23
+Belarus,BLR,men,25-34,2025,53.52
+Belarus,BLR,men,35-44,2025,75.64
+Bolivia,BOL,women,15-24,1999,26.28
+Bolivia,BOL,women,25-34,1999,73.2
+Bolivia,BOL,women,35-44,1999,81.48
+Bolivia,BOL,men,15-24,1999,13.93
+Bolivia,BOL,men,25-34,1999,72.05
+Bolivia,BOL,men,35-44,1999,89.41
+Bolivia,BOL,women,15-24,2005,23.53
+Bolivia,BOL,women,25-34,2005,71.17
+Bolivia,BOL,women,35-44,2005,81.32
+Bolivia,BOL,men,15-24,2005,12.68
+Bolivia,BOL,men,25-34,2005,68.19
+Bolivia,BOL,men,35-44,2005,89.38
+Bolivia,BOL,women,15-24,2006,24.93
+Bolivia,BOL,women,25-34,2006,70.36
+Bolivia,BOL,women,35-44,2006,83.45
+Bolivia,BOL,men,15-24,2006,12.75
+Bolivia,BOL,men,25-34,2006,71.82
+Bolivia,BOL,men,35-44,2006,89.12
+Bolivia,BOL,women,15-24,2007,22.69
+Bolivia,BOL,women,25-34,2007,68.41
+Bolivia,BOL,women,35-44,2007,76.75
+Bolivia,BOL,men,15-24,2007,14.49
+Bolivia,BOL,men,25-34,2007,64.25
+Bolivia,BOL,men,35-44,2007,86.03
+Bolivia,BOL,women,15-24,2008,21.97
+Bolivia,BOL,women,25-34,2008,69.86
+Bolivia,BOL,women,35-44,2008,78.1
+Bolivia,BOL,men,15-24,2008,11.49
+Bolivia,BOL,men,25-34,2008,66.54
+Bolivia,BOL,men,35-44,2008,84.43
+Bolivia,BOL,women,15-24,2009,24.56
+Bolivia,BOL,women,25-34,2009,69.29
+Bolivia,BOL,women,35-44,2009,81.58
+Bolivia,BOL,men,15-24,2009,13.37
+Bolivia,BOL,men,25-34,2009,65.42
+Bolivia,BOL,men,35-44,2009,83.87
+Bolivia,BOL,women,15-24,2011,25.65
+Bolivia,BOL,women,25-34,2011,71.44
+Bolivia,BOL,women,35-44,2011,78.72
+Bolivia,BOL,men,15-24,2011,13.68
+Bolivia,BOL,men,25-34,2011,65.75
+Bolivia,BOL,men,35-44,2011,86.43
+Bolivia,BOL,women,15-24,2012,21.25
+Bolivia,BOL,women,25-34,2012,67.1
+Bolivia,BOL,women,35-44,2012,76.85
+Bolivia,BOL,men,15-24,2012,13.15
+Bolivia,BOL,men,25-34,2012,64.25
+Bolivia,BOL,men,35-44,2012,83.93
+Bolivia,BOL,women,15-24,2013,20.5
+Bolivia,BOL,women,25-34,2013,64.04
+Bolivia,BOL,women,35-44,2013,78.15
+Bolivia,BOL,men,15-24,2013,10.48
+Bolivia,BOL,men,25-34,2013,58.51
+Bolivia,BOL,men,35-44,2013,81.33
+Bolivia,BOL,women,15-24,2014,25.46
+Bolivia,BOL,women,25-34,2014,69.1
+Bolivia,BOL,women,35-44,2014,76.52
+Bolivia,BOL,men,15-24,2014,13.46
+Bolivia,BOL,men,25-34,2014,63.45
+Bolivia,BOL,men,35-44,2014,82.56
+Bolivia,BOL,women,15-24,2015,23.77
+Bolivia,BOL,women,25-34,2015,68.42
+Bolivia,BOL,women,35-44,2015,78.57
+Bolivia,BOL,men,15-24,2015,13.75
+Bolivia,BOL,men,25-34,2015,62.39
+Bolivia,BOL,men,35-44,2015,82.37
+Bolivia,BOL,women,15-24,2020,17.62
+Bolivia,BOL,women,25-34,2020,61.71
+Bolivia,BOL,women,35-44,2020,72.96
+Bolivia,BOL,men,15-24,2020,10.67
+Bolivia,BOL,men,25-34,2020,54.81
+Bolivia,BOL,men,35-44,2020,77.81
+Barbados,BRB,women,15-24,2015,1.75
+Barbados,BRB,women,25-34,2015,15.78
+Barbados,BRB,women,35-44,2015,30.86
+Barbados,BRB,men,25-34,2015,9.55
+Barbados,BRB,men,35-44,2015,26.43
+Barbados,BRB,women,15-24,2016,2.2
+Barbados,BRB,women,25-34,2016,13.23
+Barbados,BRB,women,35-44,2016,30.16
+Barbados,BRB,men,15-24,2016,1.22
+Barbados,BRB,men,25-34,2016,9.13
+Barbados,BRB,men,35-44,2016,24.43
+Barbados,BRB,women,15-24,2017,1.82
+Barbados,BRB,women,25-34,2017,14.28
+Barbados,BRB,women,35-44,2017,32.36
+Barbados,BRB,men,15-24,2017,1.61
+Barbados,BRB,men,25-34,2017,9.14
+Barbados,BRB,men,35-44,2017,24.41
+Barbados,BRB,women,15-24,2018,1.86
+Barbados,BRB,women,25-34,2018,16.14
+Barbados,BRB,women,35-44,2018,32.28
+Barbados,BRB,men,15-24,2018,1.69
+Barbados,BRB,men,25-34,2018,12.23
+Barbados,BRB,men,35-44,2018,26.6
+Barbados,BRB,women,15-24,2019,1.17
+Barbados,BRB,women,25-34,2019,13.87
+Barbados,BRB,women,35-44,2019,32.22
+Barbados,BRB,men,25-34,2019,8.87
+Barbados,BRB,men,35-44,2019,24.73
+Barbados,BRB,women,15-24,2021,1.91
+Barbados,BRB,women,25-34,2021,10.48
+Barbados,BRB,women,35-44,2021,23.19
+Barbados,BRB,men,15-24,2021,0.89
+Barbados,BRB,men,25-34,2021,6.59
+Barbados,BRB,men,35-44,2021,21.72
+Barbados,BRB,women,15-24,2022,1.65
+Barbados,BRB,women,25-34,2022,13.76
+Barbados,BRB,women,35-44,2022,25.81
+Barbados,BRB,men,25-34,2022,7.98
+Barbados,BRB,men,35-44,2022,21.79
+Barbados,BRB,women,15-24,2023,1.69
+Barbados,BRB,women,25-34,2023,9.96
+Barbados,BRB,women,35-44,2023,26.41
+Barbados,BRB,men,15-24,2023,0.76
+Barbados,BRB,men,25-34,2023,7.3
+Barbados,BRB,men,35-44,2023,20.99
+Barbados,BRB,women,25-34,2024,8.56
+Barbados,BRB,women,35-44,2024,24.43
+Barbados,BRB,men,25-34,2024,5.18
+Barbados,BRB,men,35-44,2024,22.39
+Brunei Darussalam,BRN,women,15-24,2014,10.73
+Brunei Darussalam,BRN,women,25-34,2014,62.58
+Brunei Darussalam,BRN,women,35-44,2014,82.02
+Brunei Darussalam,BRN,men,15-24,2014,4.46
+Brunei Darussalam,BRN,men,25-34,2014,52.64
+Brunei Darussalam,BRN,men,35-44,2014,85.69
+Brunei Darussalam,BRN,women,15-24,2017,7.76
+Brunei Darussalam,BRN,women,25-34,2017,55.03
+Brunei Darussalam,BRN,women,35-44,2017,78.83
+Brunei Darussalam,BRN,men,15-24,2017,3.16
+Brunei Darussalam,BRN,men,25-34,2017,44.61
+Brunei Darussalam,BRN,men,35-44,2017,79.32
+Brunei Darussalam,BRN,women,15-24,2018,7.85
+Brunei Darussalam,BRN,women,25-34,2018,54.71
+Brunei Darussalam,BRN,women,35-44,2018,80.22
+Brunei Darussalam,BRN,men,15-24,2018,3.55
+Brunei Darussalam,BRN,men,25-34,2018,49.44
+Brunei Darussalam,BRN,men,35-44,2018,82.44
+Brunei Darussalam,BRN,women,15-24,2019,8.34
+Brunei Darussalam,BRN,women,25-34,2019,56.3
+Brunei Darussalam,BRN,women,35-44,2019,75.82
+Brunei Darussalam,BRN,men,15-24,2019,4.92
+Brunei Darussalam,BRN,men,25-34,2019,48.9
+Brunei Darussalam,BRN,men,35-44,2019,80.94
+Brunei Darussalam,BRN,women,15-24,2020,7.14
+Brunei Darussalam,BRN,women,25-34,2020,54.58
+Brunei Darussalam,BRN,women,35-44,2020,77.81
+Brunei Darussalam,BRN,men,15-24,2020,3.89
+Brunei Darussalam,BRN,men,25-34,2020,51.11
+Brunei Darussalam,BRN,men,35-44,2020,80.54
+Brunei Darussalam,BRN,women,15-24,2021,7.48
+Brunei Darussalam,BRN,women,25-34,2021,53.4
+Brunei Darussalam,BRN,women,35-44,2021,76.16
+Brunei Darussalam,BRN,men,15-24,2021,3.66
+Brunei Darussalam,BRN,men,25-34,2021,42.35
+Brunei Darussalam,BRN,men,35-44,2021,73.11
+Brunei Darussalam,BRN,women,15-24,2022,5.35
+Brunei Darussalam,BRN,women,25-34,2022,52.46
+Brunei Darussalam,BRN,women,35-44,2022,76.84
+Brunei Darussalam,BRN,men,15-24,2022,2.92
+Brunei Darussalam,BRN,men,25-34,2022,45.38
+Brunei Darussalam,BRN,men,35-44,2022,73.48
+Brunei Darussalam,BRN,women,15-24,2023,6.68
+Brunei Darussalam,BRN,women,25-34,2023,55.35
+Brunei Darussalam,BRN,women,35-44,2023,79.81
+Brunei Darussalam,BRN,men,15-24,2023,4.38
+Brunei Darussalam,BRN,men,25-34,2023,43.17
+Brunei Darussalam,BRN,men,35-44,2023,77.14
+Brunei Darussalam,BRN,women,15-24,2024,10.03
+Brunei Darussalam,BRN,women,25-34,2024,52.78
+Brunei Darussalam,BRN,women,35-44,2024,79.76
+Brunei Darussalam,BRN,men,15-24,2024,6.57
+Brunei Darussalam,BRN,men,25-34,2024,43.6
+Brunei Darussalam,BRN,men,35-44,2024,81.75
+Brunei Darussalam,BRN,women,15-24,2025,6.37
+Brunei Darussalam,BRN,women,25-34,2025,51.14
+Brunei Darussalam,BRN,women,35-44,2025,76.98
+Brunei Darussalam,BRN,men,15-24,2025,3.77
+Brunei Darussalam,BRN,men,25-34,2025,40.02
+Brunei Darussalam,BRN,men,35-44,2025,77.35
+Bhutan,BTN,women,15-24,2018,20.92
+Bhutan,BTN,women,25-34,2018,81.68
+Bhutan,BTN,women,35-44,2018,85.47
+Bhutan,BTN,men,15-24,2018,10.71
+Bhutan,BTN,men,25-34,2018,70.84
+Bhutan,BTN,men,35-44,2018,91.27
+Bhutan,BTN,women,15-24,2019,19.61
+Bhutan,BTN,women,25-34,2019,81.99
+Bhutan,BTN,women,35-44,2019,88.12
+Bhutan,BTN,men,15-24,2019,8.02
+Bhutan,BTN,men,25-34,2019,71.2
+Bhutan,BTN,men,35-44,2019,91.17
+Bhutan,BTN,women,15-24,2020,17.63
+Bhutan,BTN,women,25-34,2020,77.8
+Bhutan,BTN,women,35-44,2020,85.59
+Bhutan,BTN,men,15-24,2020,8.16
+Bhutan,BTN,men,25-34,2020,68.91
+Bhutan,BTN,men,35-44,2020,88.8
+Bhutan,BTN,women,15-24,2021,14.78
+Bhutan,BTN,women,25-34,2021,79.47
+Bhutan,BTN,women,35-44,2021,85.59
+Bhutan,BTN,men,15-24,2021,6.61
+Bhutan,BTN,men,25-34,2021,67.83
+Bhutan,BTN,men,35-44,2021,90.12
+Bhutan,BTN,women,15-24,2022,18.06
+Bhutan,BTN,women,25-34,2022,79.65
+Bhutan,BTN,women,35-44,2022,87.35
+Bhutan,BTN,men,15-24,2022,8.2
+Bhutan,BTN,men,25-34,2022,72.08
+Bhutan,BTN,men,35-44,2022,90.94
+Bhutan,BTN,women,15-24,2023,18.43
+Bhutan,BTN,women,25-34,2023,83.11
+Bhutan,BTN,women,35-44,2023,87.86
+Bhutan,BTN,men,15-24,2023,8.18
+Bhutan,BTN,men,25-34,2023,67.81
+Bhutan,BTN,men,35-44,2023,90.81
+Bhutan,BTN,women,15-24,2024,16.26
+Bhutan,BTN,women,25-34,2024,79.62
+Bhutan,BTN,women,35-44,2024,86.4
+Bhutan,BTN,men,15-24,2024,9.17
+Bhutan,BTN,men,25-34,2024,68.3
+Bhutan,BTN,men,35-44,2024,89.98
+Bhutan,BTN,women,15-24,2025,13.2
+Bhutan,BTN,women,25-34,2025,79.59
+Bhutan,BTN,women,35-44,2025,85.99
+Bhutan,BTN,men,15-24,2025,6.46
+Bhutan,BTN,men,25-34,2025,65.88
+Bhutan,BTN,men,35-44,2025,89.51
+Canada,CAN,women,15-24,2000,15.46
+Canada,CAN,women,25-34,2000,67.24
+Canada,CAN,women,35-44,2000,76.51
+Canada,CAN,men,15-24,2000,7.85
+Canada,CAN,men,25-34,2000,55.89
+Canada,CAN,men,35-44,2000,72.93
+Canada,CAN,women,15-24,2001,15.14
+Canada,CAN,women,25-34,2001,66.74
+Canada,CAN,women,35-44,2001,76.48
+Canada,CAN,men,15-24,2001,7.51
+Canada,CAN,men,25-34,2001,54.92
+Canada,CAN,men,35-44,2001,72.56
+Canada,CAN,women,15-24,2002,14.83
+Canada,CAN,women,25-34,2002,66.69
+Canada,CAN,women,35-44,2002,76.1
+Canada,CAN,men,15-24,2002,7.48
+Canada,CAN,men,25-34,2002,54.51
+Canada,CAN,men,35-44,2002,72.47
+Canada,CAN,women,15-24,2003,14.33
+Canada,CAN,women,25-34,2003,65.67
+Canada,CAN,women,35-44,2003,75.66
+Canada,CAN,men,15-24,2003,7.11
+Canada,CAN,men,25-34,2003,53.79
+Canada,CAN,men,35-44,2003,71.41
+Canada,CAN,women,15-24,2004,13.96
+Canada,CAN,women,25-34,2004,65.99
+Canada,CAN,women,35-44,2004,76.07
+Canada,CAN,men,15-24,2004,7.03
+Canada,CAN,men,25-34,2004,53.35
+Canada,CAN,men,35-44,2004,72.63
+Canada,CAN,women,15-24,2005,14.44
+Canada,CAN,women,25-34,2005,66.03
+Canada,CAN,women,35-44,2005,76.2
+Canada,CAN,men,15-24,2005,7.14
+Canada,CAN,men,25-34,2005,53.46
+Canada,CAN,men,35-44,2005,73.33
+Canada,CAN,women,15-24,2006,13.84
+Canada,CAN,women,25-34,2006,64.39
+Canada,CAN,women,35-44,2006,74.96
+Canada,CAN,men,15-24,2006,7.05
+Canada,CAN,men,25-34,2006,52.46
+Canada,CAN,men,35-44,2006,71.95
+Canada,CAN,women,15-24,2007,14.14
+Canada,CAN,women,25-34,2007,63.09
+Canada,CAN,women,35-44,2007,74.84
+Canada,CAN,men,15-24,2007,7.18
+Canada,CAN,men,25-34,2007,51.99
+Canada,CAN,men,35-44,2007,71.17
+Canada,CAN,women,15-24,2008,13.68
+Canada,CAN,women,25-34,2008,63.7
+Canada,CAN,women,35-44,2008,76.16
+Canada,CAN,men,15-24,2008,7.33
+Canada,CAN,men,25-34,2008,52.8
+Canada,CAN,men,35-44,2008,72.4
+Canada,CAN,women,15-24,2009,13.53
+Canada,CAN,women,25-34,2009,62.75
+Canada,CAN,women,35-44,2009,75.48
+Canada,CAN,men,15-24,2009,7.09
+Canada,CAN,men,25-34,2009,51.7
+Canada,CAN,men,35-44,2009,72.27
+Canada,CAN,women,15-24,2010,13.13
+Canada,CAN,women,25-34,2010,62.65
+Canada,CAN,women,35-44,2010,75.58
+Canada,CAN,men,15-24,2010,6.55
+Canada,CAN,men,25-34,2010,51.54
+Canada,CAN,men,35-44,2010,72.49
+Canada,CAN,women,15-24,2011,13.12
+Canada,CAN,women,25-34,2011,62.31
+Canada,CAN,women,35-44,2011,74.61
+Canada,CAN,men,15-24,2011,6.54
+Canada,CAN,men,25-34,2011,51.71
+Canada,CAN,men,35-44,2011,72.07
+Canada,CAN,women,15-24,2012,11.98
+Canada,CAN,women,25-34,2012,61.2
+Canada,CAN,women,35-44,2012,74.36
+Canada,CAN,men,15-24,2012,6.19
+Canada,CAN,men,25-34,2012,50.44
+Canada,CAN,men,35-44,2012,71.86
+Canada,CAN,women,15-24,2013,11.82
+Canada,CAN,women,25-34,2013,61.42
+Canada,CAN,women,35-44,2013,74.12
+Canada,CAN,men,15-24,2013,6.13
+Canada,CAN,men,25-34,2013,50.28
+Canada,CAN,men,35-44,2013,72.16
+Canada,CAN,women,15-24,2014,11.41
+Canada,CAN,women,25-34,2014,60.62
+Canada,CAN,women,35-44,2014,74.48
+Canada,CAN,men,15-24,2014,5.57
+Canada,CAN,men,25-34,2014,49.37
+Canada,CAN,men,35-44,2014,72.81
+Canada,CAN,women,15-24,2015,11.25
+Canada,CAN,women,25-34,2015,61.0
+Canada,CAN,women,35-44,2015,73.82
+Canada,CAN,men,15-24,2015,5.83
+Canada,CAN,men,25-34,2015,48.88
+Canada,CAN,men,35-44,2015,72.81
+Canada,CAN,women,15-24,2016,10.88
+Canada,CAN,women,25-34,2016,62.17
+Canada,CAN,women,35-44,2016,75.1
+Canada,CAN,men,15-24,2016,5.64
+Canada,CAN,men,25-34,2016,50.06
+Canada,CAN,men,35-44,2016,72.73
+Canada,CAN,women,15-24,2017,10.86
+Canada,CAN,women,25-34,2017,60.43
+Canada,CAN,women,35-44,2017,74.64
+Canada,CAN,men,15-24,2017,5.79
+Canada,CAN,men,25-34,2017,48.17
+Canada,CAN,men,35-44,2017,72.42
+Canada,CAN,women,15-24,2018,10.9
+Canada,CAN,women,25-34,2018,61.15
+Canada,CAN,women,35-44,2018,74.68
+Canada,CAN,men,15-24,2018,5.77
+Canada,CAN,men,25-34,2018,48.03
+Canada,CAN,men,35-44,2018,72.61
+Canada,CAN,women,15-24,2019,10.5
+Canada,CAN,women,25-34,2019,59.96
+Canada,CAN,women,35-44,2019,75.07
+Canada,CAN,men,15-24,2019,5.95
+Canada,CAN,men,25-34,2019,46.26
+Canada,CAN,men,35-44,2019,73.0
+Canada,CAN,women,15-24,2020,8.95
+Canada,CAN,women,25-34,2020,60.36
+Canada,CAN,women,35-44,2020,76.65
+Canada,CAN,men,15-24,2020,4.82
+Canada,CAN,men,25-34,2020,46.67
+Canada,CAN,men,35-44,2020,73.82
+Canada,CAN,women,15-24,2021,8.6
+Canada,CAN,women,25-34,2021,59.14
+Canada,CAN,women,35-44,2021,77.91
+Canada,CAN,men,15-24,2021,4.4
+Canada,CAN,men,25-34,2021,45.75
+Canada,CAN,men,35-44,2021,73.8
+Canada,CAN,women,15-24,2022,7.59
+Canada,CAN,women,25-34,2022,58.55
+Canada,CAN,women,35-44,2022,76.75
+Canada,CAN,men,15-24,2022,4.26
+Canada,CAN,men,25-34,2022,45.89
+Canada,CAN,men,35-44,2022,72.91
+Canada,CAN,women,15-24,2023,7.9
+Canada,CAN,women,25-34,2023,58.48
+Canada,CAN,women,35-44,2023,76.11
+Canada,CAN,men,15-24,2023,4.55
+Canada,CAN,men,25-34,2023,45.69
+Canada,CAN,men,35-44,2023,72.78
+Canada,CAN,women,15-24,2024,7.8
+Canada,CAN,women,25-34,2024,57.77
+Canada,CAN,women,35-44,2024,76.56
+Canada,CAN,men,15-24,2024,4.4
+Canada,CAN,men,25-34,2024,44.99
+Canada,CAN,men,35-44,2024,72.71
+Canada,CAN,women,15-24,2025,7.65
+Canada,CAN,women,25-34,2025,57.19
+Canada,CAN,women,35-44,2025,76.52
+Canada,CAN,men,15-24,2025,4.61
+Canada,CAN,men,25-34,2025,44.55
+Canada,CAN,men,35-44,2025,72.33
+Chile,CHL,women,15-24,2010,14.44
+Chile,CHL,women,25-34,2010,53.46
+Chile,CHL,women,35-44,2010,66.77
+Chile,CHL,men,15-24,2010,8.58
+Chile,CHL,men,25-34,2010,49.09
+Chile,CHL,men,35-44,2010,71.45
+Chile,CHL,women,15-24,2011,14.29
+Chile,CHL,women,25-34,2011,51.6
+Chile,CHL,women,35-44,2011,65.94
+Chile,CHL,men,15-24,2011,8.57
+Chile,CHL,men,25-34,2011,47.7
+Chile,CHL,men,35-44,2011,71.76
+Chile,CHL,women,15-24,2012,12.65
+Chile,CHL,women,25-34,2012,49.07
+Chile,CHL,women,35-44,2012,64.92
+Chile,CHL,men,15-24,2012,7.99
+Chile,CHL,men,25-34,2012,45.21
+Chile,CHL,men,35-44,2012,71.47
+Chile,CHL,women,15-24,2013,13.05
+Chile,CHL,women,25-34,2013,49.74
+Chile,CHL,women,35-44,2013,65.2
+Chile,CHL,men,15-24,2013,8.29
+Chile,CHL,men,25-34,2013,45.55
+Chile,CHL,men,35-44,2013,71.01
+Chile,CHL,women,15-24,2014,13.45
+Chile,CHL,women,25-34,2014,48.09
+Chile,CHL,women,35-44,2014,64.74
+Chile,CHL,men,15-24,2014,8.49
+Chile,CHL,men,25-34,2014,44.45
+Chile,CHL,men,35-44,2014,69.41
+Chile,CHL,women,15-24,2015,12.6
+Chile,CHL,women,25-34,2015,47.96
+Chile,CHL,women,35-44,2015,62.82
+Chile,CHL,men,15-24,2015,8.14
+Chile,CHL,men,25-34,2015,44.97
+Chile,CHL,men,35-44,2015,67.93
+Chile,CHL,women,15-24,2016,12.86
+Chile,CHL,women,25-34,2016,47.98
+Chile,CHL,women,35-44,2016,61.53
+Chile,CHL,men,15-24,2016,7.72
+Chile,CHL,men,25-34,2016,42.39
+Chile,CHL,men,35-44,2016,67.14
+Chile,CHL,women,15-24,2017,12.47
+Chile,CHL,women,25-34,2017,48.24
+Chile,CHL,women,35-44,2017,62.01
+Chile,CHL,men,15-24,2017,7.29
+Chile,CHL,men,25-34,2017,42.91
+Chile,CHL,men,35-44,2017,65.89
+Chile,CHL,women,15-24,2018,12.04
+Chile,CHL,women,25-34,2018,47.86
+Chile,CHL,women,35-44,2018,61.08
+Chile,CHL,men,15-24,2018,6.96
+Chile,CHL,men,25-34,2018,42.41
+Chile,CHL,men,35-44,2018,65.37
+Chile,CHL,women,15-24,2019,11.0
+Chile,CHL,women,25-34,2019,45.76
+Chile,CHL,women,35-44,2019,60.19
+Chile,CHL,men,15-24,2019,6.63
+Chile,CHL,men,25-34,2019,41.13
+Chile,CHL,men,35-44,2019,66.12
+Chile,CHL,women,15-24,2020,9.77
+Chile,CHL,women,25-34,2020,45.9
+Chile,CHL,women,35-44,2020,58.44
+Chile,CHL,men,15-24,2020,6.68
+Chile,CHL,men,25-34,2020,40.7
+Chile,CHL,men,35-44,2020,66.34
+Chile,CHL,women,15-24,2021,8.0
+Chile,CHL,women,25-34,2021,45.47
+Chile,CHL,women,35-44,2021,56.82
+Chile,CHL,men,15-24,2021,4.75
+Chile,CHL,men,25-34,2021,40.47
+Chile,CHL,men,35-44,2021,66.49
+Chile,CHL,women,15-24,2022,9.15
+Chile,CHL,women,25-34,2022,46.33
+Chile,CHL,women,35-44,2022,57.48
+Chile,CHL,men,15-24,2022,5.9
+Chile,CHL,men,25-34,2022,41.79
+Chile,CHL,men,35-44,2022,65.97
+Chile,CHL,women,15-24,2023,9.87
+Chile,CHL,women,25-34,2023,48.01
+Chile,CHL,women,35-44,2023,58.76
+Chile,CHL,men,15-24,2023,6.13
+Chile,CHL,men,25-34,2023,43.1
+Chile,CHL,men,35-44,2023,64.26
+Chile,CHL,women,15-24,2024,16.21
+Chile,CHL,women,25-34,2024,50.77
+Chile,CHL,women,35-44,2024,61.02
+Chile,CHL,men,15-24,2024,12.57
+Chile,CHL,men,25-34,2024,45.04
+Chile,CHL,men,35-44,2024,65.18
+Chile,CHL,women,15-24,2025,7.32
+Chile,CHL,women,25-34,2025,43.64
+Chile,CHL,women,35-44,2025,58.49
+Chile,CHL,men,15-24,2025,4.2
+Chile,CHL,men,25-34,2025,38.73
+Chile,CHL,men,35-44,2025,61.81
+Colombia,COL,women,15-24,2008,28.63
+Colombia,COL,women,25-34,2008,63.96
+Colombia,COL,women,35-44,2008,68.74
+Colombia,COL,men,15-24,2008,12.76
+Colombia,COL,men,25-34,2008,57.73
+Colombia,COL,men,35-44,2008,75.34
+Colombia,COL,women,15-24,2009,29.34
+Colombia,COL,women,25-34,2009,64.76
+Colombia,COL,women,35-44,2009,70.02
+Colombia,COL,men,15-24,2009,13.29
+Colombia,COL,men,25-34,2009,58.31
+Colombia,COL,men,35-44,2009,75.36
+Colombia,COL,women,15-24,2010,26.51
+Colombia,COL,women,25-34,2010,62.63
+Colombia,COL,women,35-44,2010,69.05
+Colombia,COL,men,15-24,2010,12.05
+Colombia,COL,men,25-34,2010,56.03
+Colombia,COL,men,35-44,2010,73.65
+Colombia,COL,women,15-24,2011,26.96
+Colombia,COL,women,25-34,2011,63.24
+Colombia,COL,women,35-44,2011,68.47
+Colombia,COL,men,15-24,2011,12.08
+Colombia,COL,men,25-34,2011,56.19
+Colombia,COL,men,35-44,2011,74.06
+Colombia,COL,women,15-24,2012,27.1
+Colombia,COL,women,25-34,2012,63.0
+Colombia,COL,women,35-44,2012,69.33
+Colombia,COL,men,15-24,2012,12.44
+Colombia,COL,men,25-34,2012,55.98
+Colombia,COL,men,35-44,2012,73.55
+Colombia,COL,women,15-24,2013,27.5
+Colombia,COL,women,25-34,2013,62.53
+Colombia,COL,women,35-44,2013,68.75
+Colombia,COL,men,15-24,2013,12.63
+Colombia,COL,men,25-34,2013,56.49
+Colombia,COL,men,35-44,2013,72.9
+Colombia,COL,women,15-24,2014,27.1
+Colombia,COL,women,25-34,2014,62.19
+Colombia,COL,women,35-44,2014,68.58
+Colombia,COL,men,15-24,2014,12.83
+Colombia,COL,men,25-34,2014,56.3
+Colombia,COL,men,35-44,2014,72.26
+Colombia,COL,women,15-24,2015,26.97
+Colombia,COL,women,25-34,2015,62.27
+Colombia,COL,women,35-44,2015,67.75
+Colombia,COL,men,15-24,2015,12.7
+Colombia,COL,men,25-34,2015,55.65
+Colombia,COL,men,35-44,2015,71.22
+Colombia,COL,women,15-24,2016,27.71
+Colombia,COL,women,25-34,2016,62.42
+Colombia,COL,women,35-44,2016,67.99
+Colombia,COL,men,15-24,2016,12.86
+Colombia,COL,men,25-34,2016,56.38
+Colombia,COL,men,35-44,2016,71.35
+Colombia,COL,women,15-24,2017,27.97
+Colombia,COL,women,25-34,2017,62.8
+Colombia,COL,women,35-44,2017,67.68
+Colombia,COL,men,15-24,2017,13.16
+Colombia,COL,men,25-34,2017,55.37
+Colombia,COL,men,35-44,2017,71.26
+Colombia,COL,women,15-24,2018,28.09
+Colombia,COL,women,25-34,2018,63.05
+Colombia,COL,women,35-44,2018,66.86
+Colombia,COL,men,15-24,2018,13.5
+Colombia,COL,men,25-34,2018,56.31
+Colombia,COL,men,35-44,2018,71.52
+Colombia,COL,women,15-24,2019,27.64
+Colombia,COL,women,25-34,2019,62.34
+Colombia,COL,women,35-44,2019,67.25
+Colombia,COL,men,15-24,2019,13.26
+Colombia,COL,men,25-34,2019,54.9
+Colombia,COL,men,35-44,2019,70.24
+Colombia,COL,women,15-24,2021,30.09
+Colombia,COL,women,25-34,2021,62.07
+Colombia,COL,women,35-44,2021,66.9
+Colombia,COL,men,15-24,2021,14.77
+Colombia,COL,men,25-34,2021,55.33
+Colombia,COL,men,35-44,2021,69.07
+Colombia,COL,women,15-24,2022,26.49
+Colombia,COL,women,25-34,2022,59.67
+Colombia,COL,women,35-44,2022,66.05
+Colombia,COL,men,15-24,2022,12.89
+Colombia,COL,men,25-34,2022,52.15
+Colombia,COL,men,35-44,2022,69.78
+Colombia,COL,women,15-24,2023,26.1
+Colombia,COL,women,25-34,2023,58.86
+Colombia,COL,women,35-44,2023,65.1
+Colombia,COL,men,15-24,2023,12.14
+Colombia,COL,men,25-34,2023,51.39
+Colombia,COL,men,35-44,2023,69.01
+Colombia,COL,women,15-24,2024,24.11
+Colombia,COL,women,25-34,2024,57.34
+Colombia,COL,women,35-44,2024,64.74
+Colombia,COL,men,15-24,2024,11.15
+Colombia,COL,men,25-34,2024,49.94
+Colombia,COL,men,35-44,2024,66.99
+Colombia,COL,women,15-24,2025,23.9
+Colombia,COL,women,25-34,2025,57.9
+Colombia,COL,women,35-44,2025,64.53
+Colombia,COL,men,15-24,2025,11.45
+Colombia,COL,men,25-34,2025,49.02
+Colombia,COL,men,35-44,2025,66.82
+Costa Rica,CRI,women,15-24,2011,20.05
+Costa Rica,CRI,women,25-34,2011,54.19
+Costa Rica,CRI,women,35-44,2011,68.32
+Costa Rica,CRI,men,15-24,2011,9.09
+Costa Rica,CRI,men,25-34,2011,48.9
+Costa Rica,CRI,men,35-44,2011,72.51
+Costa Rica,CRI,women,15-24,2012,16.76
+Costa Rica,CRI,women,25-34,2012,53.88
+Costa Rica,CRI,women,35-44,2012,66.62
+Costa Rica,CRI,men,15-24,2012,8.27
+Costa Rica,CRI,men,25-34,2012,48.39
+Costa Rica,CRI,men,35-44,2012,73.3
+Costa Rica,CRI,women,15-24,2013,17.75
+Costa Rica,CRI,women,25-34,2013,53.97
+Costa Rica,CRI,women,35-44,2013,63.53
+Costa Rica,CRI,men,15-24,2013,9.53
+Costa Rica,CRI,men,25-34,2013,47.48
+Costa Rica,CRI,men,35-44,2013,71.66
+Costa Rica,CRI,women,15-24,2014,20.07
+Costa Rica,CRI,women,25-34,2014,53.38
+Costa Rica,CRI,women,35-44,2014,66.39
+Costa Rica,CRI,men,15-24,2014,10.13
+Costa Rica,CRI,men,25-34,2014,47.15
+Costa Rica,CRI,men,35-44,2014,72.48
+Costa Rica,CRI,women,15-24,2015,18.65
+Costa Rica,CRI,women,25-34,2015,53.38
+Costa Rica,CRI,women,35-44,2015,65.84
+Costa Rica,CRI,men,15-24,2015,9.25
+Costa Rica,CRI,men,25-34,2015,47.26
+Costa Rica,CRI,men,35-44,2015,69.77
+Costa Rica,CRI,women,15-24,2016,18.79
+Costa Rica,CRI,women,25-34,2016,52.84
+Costa Rica,CRI,women,35-44,2016,66.17
+Costa Rica,CRI,men,15-24,2016,8.69
+Costa Rica,CRI,men,25-34,2016,47.0
+Costa Rica,CRI,men,35-44,2016,72.09
+Costa Rica,CRI,women,15-24,2017,15.59
+Costa Rica,CRI,women,25-34,2017,54.14
+Costa Rica,CRI,women,35-44,2017,63.12
+Costa Rica,CRI,men,15-24,2017,8.03
+Costa Rica,CRI,men,25-34,2017,45.86
+Costa Rica,CRI,men,35-44,2017,69.41
+Costa Rica,CRI,women,15-24,2018,17.71
+Costa Rica,CRI,women,25-34,2018,54.66
+Costa Rica,CRI,women,35-44,2018,60.92
+Costa Rica,CRI,men,15-24,2018,8.05
+Costa Rica,CRI,men,25-34,2018,44.91
+Costa Rica,CRI,men,35-44,2018,70.34
+Costa Rica,CRI,women,15-24,2019,14.99
+Costa Rica,CRI,women,25-34,2019,49.74
+Costa Rica,CRI,women,35-44,2019,63.03
+Costa Rica,CRI,men,15-24,2019,6.8
+Costa Rica,CRI,men,25-34,2019,44.09
+Costa Rica,CRI,men,35-44,2019,67.36
+Costa Rica,CRI,women,15-24,2020,13.57
+Costa Rica,CRI,women,25-34,2020,46.43
+Costa Rica,CRI,women,35-44,2020,60.74
+Costa Rica,CRI,men,15-24,2020,6.07
+Costa Rica,CRI,men,25-34,2020,39.68
+Costa Rica,CRI,men,35-44,2020,64.33
+Costa Rica,CRI,women,15-24,2021,12.78
+Costa Rica,CRI,women,25-34,2021,48.56
+Costa Rica,CRI,women,35-44,2021,58.87
+Costa Rica,CRI,men,15-24,2021,5.1
+Costa Rica,CRI,men,25-34,2021,42.57
+Costa Rica,CRI,men,35-44,2021,63.61
+Costa Rica,CRI,women,15-24,2022,13.57
+Costa Rica,CRI,women,25-34,2022,45.77
+Costa Rica,CRI,women,35-44,2022,60.38
+Costa Rica,CRI,men,15-24,2022,5.6
+Costa Rica,CRI,men,25-34,2022,37.21
+Costa Rica,CRI,men,35-44,2022,67.22
+Costa Rica,CRI,women,15-24,2023,11.91
+Costa Rica,CRI,women,25-34,2023,46.51
+Costa Rica,CRI,women,35-44,2023,59.98
+Costa Rica,CRI,men,15-24,2023,5.89
+Costa Rica,CRI,men,25-34,2023,38.82
+Costa Rica,CRI,men,35-44,2023,62.03
+Costa Rica,CRI,women,15-24,2024,10.4
+Costa Rica,CRI,women,25-34,2024,47.24
+Costa Rica,CRI,women,35-44,2024,55.9
+Costa Rica,CRI,men,15-24,2024,6.32
+Costa Rica,CRI,men,25-34,2024,39.01
+Costa Rica,CRI,men,35-44,2024,65.24
+Costa Rica,CRI,women,15-24,2025,12.55
+Costa Rica,CRI,women,25-34,2025,42.02
+Costa Rica,CRI,women,35-44,2025,56.05
+Costa Rica,CRI,men,15-24,2025,7.41
+Costa Rica,CRI,men,25-34,2025,39.33
+Costa Rica,CRI,men,35-44,2025,61.92
+Dominican Republic,DOM,women,15-24,2000,27.76
+Dominican Republic,DOM,women,25-34,2000,68.69
+Dominican Republic,DOM,women,35-44,2000,72.08
+Dominican Republic,DOM,men,15-24,2000,10.2
+Dominican Republic,DOM,men,25-34,2000,59.68
+Dominican Republic,DOM,men,35-44,2000,78.25
+Dominican Republic,DOM,women,15-24,2001,27.17
+Dominican Republic,DOM,women,25-34,2001,66.71
+Dominican Republic,DOM,women,35-44,2001,70.96
+Dominican Republic,DOM,men,15-24,2001,10.58
+Dominican Republic,DOM,men,25-34,2001,56.46
+Dominican Republic,DOM,men,35-44,2001,74.52
+Dominican Republic,DOM,women,15-24,2002,26.87
+Dominican Republic,DOM,women,25-34,2002,65.35
+Dominican Republic,DOM,women,35-44,2002,70.7
+Dominican Republic,DOM,men,15-24,2002,10.41
+Dominican Republic,DOM,men,25-34,2002,55.53
+Dominican Republic,DOM,men,35-44,2002,76.02
+Dominican Republic,DOM,women,15-24,2003,27.42
+Dominican Republic,DOM,women,25-34,2003,66.63
+Dominican Republic,DOM,women,35-44,2003,70.71
+Dominican Republic,DOM,men,15-24,2003,10.13
+Dominican Republic,DOM,men,25-34,2003,57.13
+Dominican Republic,DOM,men,35-44,2003,76.24
+Dominican Republic,DOM,women,15-24,2004,27.1
+Dominican Republic,DOM,women,25-34,2004,68.4
+Dominican Republic,DOM,women,35-44,2004,72.81
+Dominican Republic,DOM,men,15-24,2004,9.93
+Dominican Republic,DOM,men,25-34,2004,57.5
+Dominican Republic,DOM,men,35-44,2004,77.79
+Dominican Republic,DOM,women,15-24,2005,24.26
+Dominican Republic,DOM,women,25-34,2005,65.96
+Dominican Republic,DOM,women,35-44,2005,70.05
+Dominican Republic,DOM,men,15-24,2005,8.51
+Dominican Republic,DOM,men,25-34,2005,54.42
+Dominican Republic,DOM,men,35-44,2005,74.11
+Dominican Republic,DOM,women,15-24,2006,23.61
+Dominican Republic,DOM,women,25-34,2006,64.79
+Dominican Republic,DOM,women,35-44,2006,70.09
+Dominican Republic,DOM,men,15-24,2006,9.14
+Dominican Republic,DOM,men,25-34,2006,51.85
+Dominican Republic,DOM,men,35-44,2006,73.69
+Dominican Republic,DOM,women,15-24,2007,23.28
+Dominican Republic,DOM,women,25-34,2007,62.03
+Dominican Republic,DOM,women,35-44,2007,70.74
+Dominican Republic,DOM,men,15-24,2007,8.19
+Dominican Republic,DOM,men,25-34,2007,52.91
+Dominican Republic,DOM,men,35-44,2007,73.56
+Dominican Republic,DOM,women,15-24,2008,26.49
+Dominican Republic,DOM,women,25-34,2008,63.1
+Dominican Republic,DOM,women,35-44,2008,69.53
+Dominican Republic,DOM,men,15-24,2008,9.75
+Dominican Republic,DOM,men,25-34,2008,54.0
+Dominican Republic,DOM,men,35-44,2008,72.87
+Dominican Republic,DOM,women,15-24,2009,24.97
+Dominican Republic,DOM,women,25-34,2009,61.31
+Dominican Republic,DOM,women,35-44,2009,67.89
+Dominican Republic,DOM,men,15-24,2009,9.5
+Dominican Republic,DOM,men,25-34,2009,49.7
+Dominican Republic,DOM,men,35-44,2009,71.16
+Dominican Republic,DOM,women,15-24,2010,23.21
+Dominican Republic,DOM,women,25-34,2010,60.48
+Dominican Republic,DOM,women,35-44,2010,68.62
+Dominican Republic,DOM,men,15-24,2010,8.53
+Dominican Republic,DOM,men,25-34,2010,49.53
+Dominican Republic,DOM,men,35-44,2010,71.42
+Dominican Republic,DOM,women,15-24,2011,24.14
+Dominican Republic,DOM,women,25-34,2011,60.74
+Dominican Republic,DOM,women,35-44,2011,68.09
+Dominican Republic,DOM,men,15-24,2011,9.82
+Dominican Republic,DOM,men,25-34,2011,50.51
+Dominican Republic,DOM,men,35-44,2011,70.17
+Dominican Republic,DOM,women,15-24,2012,23.48
+Dominican Republic,DOM,women,25-34,2012,57.58
+Dominican Republic,DOM,women,35-44,2012,67.4
+Dominican Republic,DOM,men,15-24,2012,8.32
+Dominican Republic,DOM,men,25-34,2012,47.95
+Dominican Republic,DOM,men,35-44,2012,65.99
+Dominican Republic,DOM,women,15-24,2013,23.95
+Dominican Republic,DOM,women,25-34,2013,57.61
+Dominican Republic,DOM,women,35-44,2013,66.52
+Dominican Republic,DOM,men,15-24,2013,9.49
+Dominican Republic,DOM,men,25-34,2013,48.72
+Dominican Republic,DOM,men,35-44,2013,68.06
+Dominican Republic,DOM,women,15-24,2014,23.44
+Dominican Republic,DOM,women,25-34,2014,61.25
+Dominican Republic,DOM,women,35-44,2014,67.09
+Dominican Republic,DOM,men,15-24,2014,9.74
+Dominican Republic,DOM,men,25-34,2014,50.22
+Dominican Republic,DOM,men,35-44,2014,67.22
+Ecuador,ECU,women,15-24,2005,24.88
+Ecuador,ECU,women,25-34,2005,65.48
+Ecuador,ECU,women,35-44,2005,75.37
+Ecuador,ECU,men,15-24,2005,12.56
+Ecuador,ECU,men,25-34,2005,58.67
+Ecuador,ECU,men,35-44,2005,78.58
+Ecuador,ECU,women,15-24,2006,23.91
+Ecuador,ECU,women,25-34,2006,63.2
+Ecuador,ECU,women,35-44,2006,72.42
+Ecuador,ECU,men,15-24,2006,12.64
+Ecuador,ECU,men,25-34,2006,54.65
+Ecuador,ECU,men,35-44,2006,78.52
+Ecuador,ECU,women,15-24,2007,24.2
+Ecuador,ECU,women,25-34,2007,66.38
+Ecuador,ECU,women,35-44,2007,73.92
+Ecuador,ECU,men,15-24,2007,12.98
+Ecuador,ECU,men,25-34,2007,61.35
+Ecuador,ECU,men,35-44,2007,78.94
+Ecuador,ECU,women,15-24,2008,23.71
+Ecuador,ECU,women,25-34,2008,63.29
+Ecuador,ECU,women,35-44,2008,73.3
+Ecuador,ECU,men,15-24,2008,12.81
+Ecuador,ECU,men,25-34,2008,58.03
+Ecuador,ECU,men,35-44,2008,79.18
+Ecuador,ECU,women,15-24,2009,22.14
+Ecuador,ECU,women,25-34,2009,59.04
+Ecuador,ECU,women,35-44,2009,70.36
+Ecuador,ECU,men,15-24,2009,13.1
+Ecuador,ECU,men,25-34,2009,52.5
+Ecuador,ECU,men,35-44,2009,74.52
+Ecuador,ECU,women,15-24,2010,21.35
+Ecuador,ECU,women,25-34,2010,56.84
+Ecuador,ECU,women,35-44,2010,69.95
+Ecuador,ECU,men,15-24,2010,12.37
+Ecuador,ECU,men,25-34,2010,50.41
+Ecuador,ECU,men,35-44,2010,73.2
+Ecuador,ECU,women,15-24,2011,21.59
+Ecuador,ECU,women,25-34,2011,56.93
+Ecuador,ECU,women,35-44,2011,70.29
+Ecuador,ECU,men,15-24,2011,12.71
+Ecuador,ECU,men,25-34,2011,51.14
+Ecuador,ECU,men,35-44,2011,73.55
+Ecuador,ECU,women,15-24,2012,21.41
+Ecuador,ECU,women,25-34,2012,54.23
+Ecuador,ECU,women,35-44,2012,70.48
+Ecuador,ECU,men,15-24,2012,11.79
+Ecuador,ECU,men,25-34,2012,49.52
+Ecuador,ECU,men,35-44,2012,71.22
+Ecuador,ECU,women,15-24,2013,21.56
+Ecuador,ECU,women,25-34,2013,58.21
+Ecuador,ECU,women,35-44,2013,70.4
+Ecuador,ECU,men,15-24,2013,11.84
+Ecuador,ECU,men,25-34,2013,52.82
+Ecuador,ECU,men,35-44,2013,74.59
+Ecuador,ECU,women,15-24,2014,26.28
+Ecuador,ECU,women,25-34,2014,63.91
+Ecuador,ECU,women,35-44,2014,71.27
+Ecuador,ECU,men,15-24,2014,14.44
+Ecuador,ECU,men,25-34,2014,62.14
+Ecuador,ECU,men,35-44,2014,78.01
+Ecuador,ECU,women,15-24,2015,28.56
+Ecuador,ECU,women,25-34,2015,67.02
+Ecuador,ECU,women,35-44,2015,72.5
+Ecuador,ECU,men,15-24,2015,15.73
+Ecuador,ECU,men,25-34,2015,64.84
+Ecuador,ECU,men,35-44,2015,80.15
+Ecuador,ECU,women,15-24,2016,26.86
+Ecuador,ECU,women,25-34,2016,67.36
+Ecuador,ECU,women,35-44,2016,73.51
+Ecuador,ECU,men,15-24,2016,15.75
+Ecuador,ECU,men,25-34,2016,64.42
+Ecuador,ECU,men,35-44,2016,79.41
+Ecuador,ECU,women,15-24,2017,25.67
+Ecuador,ECU,women,25-34,2017,66.35
+Ecuador,ECU,women,35-44,2017,72.7
+Ecuador,ECU,men,15-24,2017,14.07
+Ecuador,ECU,men,25-34,2017,63.41
+Ecuador,ECU,men,35-44,2017,78.33
+Ecuador,ECU,women,15-24,2018,22.97
+Ecuador,ECU,women,25-34,2018,63.72
+Ecuador,ECU,women,35-44,2018,72.42
+Ecuador,ECU,men,15-24,2018,12.85
+Ecuador,ECU,men,25-34,2018,58.34
+Ecuador,ECU,men,35-44,2018,77.96
+Ecuador,ECU,women,15-24,2019,20.25
+Ecuador,ECU,women,25-34,2019,61.93
+Ecuador,ECU,women,35-44,2019,71.9
+Ecuador,ECU,men,15-24,2019,11.38
+Ecuador,ECU,men,25-34,2019,54.46
+Ecuador,ECU,men,35-44,2019,77.02
+Ecuador,ECU,women,15-24,2020,18.6
+Ecuador,ECU,women,25-34,2020,55.07
+Ecuador,ECU,women,35-44,2020,68.24
+Ecuador,ECU,men,15-24,2020,10.26
+Ecuador,ECU,men,25-34,2020,50.4
+Ecuador,ECU,men,35-44,2020,72.19
+Ecuador,ECU,women,15-24,2021,22.35
+Ecuador,ECU,women,25-34,2021,58.73
+Ecuador,ECU,women,35-44,2021,69.0
+Ecuador,ECU,men,15-24,2021,12.33
+Ecuador,ECU,men,25-34,2021,52.78
+Ecuador,ECU,men,35-44,2021,74.79
+Ecuador,ECU,women,15-24,2022,20.73
+Ecuador,ECU,women,25-34,2022,56.91
+Ecuador,ECU,women,35-44,2022,68.51
+Ecuador,ECU,men,15-24,2022,10.97
+Ecuador,ECU,men,25-34,2022,51.47
+Ecuador,ECU,men,35-44,2022,73.82
+Ecuador,ECU,women,15-24,2023,18.48
+Ecuador,ECU,women,25-34,2023,53.13
+Ecuador,ECU,women,35-44,2023,65.26
+Ecuador,ECU,men,15-24,2023,9.86
+Ecuador,ECU,men,25-34,2023,52.14
+Ecuador,ECU,men,35-44,2023,74.24
+Ecuador,ECU,women,15-24,2024,19.89
+Ecuador,ECU,women,25-34,2024,54.27
+Ecuador,ECU,women,35-44,2024,66.76
+Ecuador,ECU,men,15-24,2024,10.94
+Ecuador,ECU,men,25-34,2024,47.68
+Ecuador,ECU,men,35-44,2024,72.51
+Ecuador,ECU,women,15-24,2025,19.86
+Ecuador,ECU,women,25-34,2025,53.79
+Ecuador,ECU,women,35-44,2025,66.14
+Ecuador,ECU,men,15-24,2025,9.93
+Ecuador,ECU,men,25-34,2025,49.34
+Ecuador,ECU,men,35-44,2025,73.09
+Egypt,EGY,women,15-24,2008,16.2
+Egypt,EGY,women,25-34,2008,81.28
+Egypt,EGY,women,35-44,2008,90.04
+Egypt,EGY,men,15-24,2008,2.22
+Egypt,EGY,men,25-34,2008,48.7
+Egypt,EGY,men,35-44,2008,93.53
+Egypt,EGY,women,15-24,2009,16.43
+Egypt,EGY,women,25-34,2009,81.33
+Egypt,EGY,women,35-44,2009,89.64
+Egypt,EGY,men,15-24,2009,2.65
+Egypt,EGY,men,25-34,2009,48.51
+Egypt,EGY,men,35-44,2009,93.77
+Egypt,EGY,women,15-24,2010,29.31
+Egypt,EGY,women,25-34,2010,84.11
+Egypt,EGY,women,35-44,2010,89.87
+Egypt,EGY,men,15-24,2010,5.16
+Egypt,EGY,men,25-34,2010,61.56
+Egypt,EGY,men,35-44,2010,94.75
+Egypt,EGY,women,15-24,2011,25.58
+Egypt,EGY,women,25-34,2011,83.43
+Egypt,EGY,women,35-44,2011,89.64
+Egypt,EGY,men,15-24,2011,4.5
+Egypt,EGY,men,25-34,2011,58.86
+Egypt,EGY,men,35-44,2011,94.01
+Egypt,EGY,women,15-24,2012,22.3
+Egypt,EGY,women,25-34,2012,83.35
+Egypt,EGY,women,35-44,2012,90.16
+Egypt,EGY,men,15-24,2012,2.88
+Egypt,EGY,men,25-34,2012,56.39
+Egypt,EGY,men,35-44,2012,94.14
+Egypt,EGY,women,15-24,2013,19.66
+Egypt,EGY,women,25-34,2013,84.04
+Egypt,EGY,women,35-44,2013,90.1
+Egypt,EGY,men,15-24,2013,2.51
+Egypt,EGY,men,25-34,2013,56.24
+Egypt,EGY,men,35-44,2013,94.23
+Egypt,EGY,women,15-24,2014,18.36
+Egypt,EGY,women,25-34,2014,84.17
+Egypt,EGY,women,35-44,2014,89.08
+Egypt,EGY,men,15-24,2014,2.26
+Egypt,EGY,men,25-34,2014,54.8
+Egypt,EGY,men,35-44,2014,94.24
+Egypt,EGY,women,15-24,2015,18.67
+Egypt,EGY,women,25-34,2015,82.06
+Egypt,EGY,women,35-44,2015,88.76
+Egypt,EGY,men,15-24,2015,2.06
+Egypt,EGY,men,25-34,2015,49.64
+Egypt,EGY,men,35-44,2015,93.15
+Egypt,EGY,women,15-24,2016,17.9
+Egypt,EGY,women,25-34,2016,81.09
+Egypt,EGY,women,35-44,2016,88.39
+Egypt,EGY,men,15-24,2016,1.96
+Egypt,EGY,men,25-34,2016,47.18
+Egypt,EGY,men,35-44,2016,92.78
+Egypt,EGY,women,15-24,2017,15.55
+Egypt,EGY,women,25-34,2017,79.63
+Egypt,EGY,women,35-44,2017,88.74
+Egypt,EGY,men,15-24,2017,1.47
+Egypt,EGY,men,25-34,2017,43.09
+Egypt,EGY,men,35-44,2017,91.56
+Egypt,EGY,women,15-24,2018,12.13
+Egypt,EGY,women,25-34,2018,77.55
+Egypt,EGY,women,35-44,2018,89.18
+Egypt,EGY,men,15-24,2018,1.52
+Egypt,EGY,men,25-34,2018,38.95
+Egypt,EGY,men,35-44,2018,91.58
+Egypt,EGY,women,15-24,2019,22.19
+Egypt,EGY,women,25-34,2019,82.05
+Egypt,EGY,women,35-44,2019,88.98
+Egypt,EGY,men,15-24,2019,2.97
+Egypt,EGY,men,25-34,2019,50.82
+Egypt,EGY,men,35-44,2019,91.16
+Egypt,EGY,women,15-24,2020,26.8
+Egypt,EGY,women,25-34,2020,85.12
+Egypt,EGY,women,35-44,2020,89.08
+Egypt,EGY,men,15-24,2020,3.47
+Egypt,EGY,men,25-34,2020,58.04
+Egypt,EGY,men,35-44,2020,92.41
+Egypt,EGY,women,15-24,2021,25.73
+Egypt,EGY,women,25-34,2021,84.29
+Egypt,EGY,women,35-44,2021,88.98
+Egypt,EGY,men,15-24,2021,3.25
+Egypt,EGY,men,25-34,2021,57.09
+Egypt,EGY,men,35-44,2021,91.12
+Egypt,EGY,women,15-24,2022,22.63
+Egypt,EGY,women,25-34,2022,83.65
+Egypt,EGY,women,35-44,2022,88.59
+Egypt,EGY,men,15-24,2022,2.53
+Egypt,EGY,men,25-34,2022,56.01
+Egypt,EGY,men,35-44,2022,90.62
+Egypt,EGY,women,15-24,2023,20.98
+Egypt,EGY,women,25-34,2023,82.61
+Egypt,EGY,women,35-44,2023,88.5
+Egypt,EGY,men,15-24,2023,2.46
+Egypt,EGY,men,25-34,2023,53.74
+Egypt,EGY,men,35-44,2023,89.96
+Egypt,EGY,women,15-24,2024,20.42
+Egypt,EGY,women,25-34,2024,83.29
+Egypt,EGY,women,35-44,2024,88.08
+Egypt,EGY,men,15-24,2024,2.48
+Egypt,EGY,men,25-34,2024,53.67
+Egypt,EGY,men,35-44,2024,89.4
+Georgia,GEO,women,15-24,2009,26.27
+Georgia,GEO,women,25-34,2009,69.58
+Georgia,GEO,women,35-44,2009,78.43
+Georgia,GEO,men,15-24,2009,9.21
+Georgia,GEO,men,25-34,2009,57.12
+Georgia,GEO,men,35-44,2009,79.47
+Georgia,GEO,women,15-24,2010,26.01
+Georgia,GEO,women,25-34,2010,71.11
+Georgia,GEO,women,35-44,2010,77.43
+Georgia,GEO,men,15-24,2010,10.49
+Georgia,GEO,men,25-34,2010,55.33
+Georgia,GEO,men,35-44,2010,80.62
+Georgia,GEO,women,15-24,2011,28.73
+Georgia,GEO,women,25-34,2011,69.52
+Georgia,GEO,women,35-44,2011,78.23
+Georgia,GEO,men,15-24,2011,11.54
+Georgia,GEO,men,25-34,2011,59.76
+Georgia,GEO,men,35-44,2011,80.03
+Georgia,GEO,women,15-24,2012,29.7
+Georgia,GEO,women,25-34,2012,71.97
+Georgia,GEO,women,35-44,2012,79.3
+Georgia,GEO,men,15-24,2012,12.74
+Georgia,GEO,men,25-34,2012,60.59
+Georgia,GEO,men,35-44,2012,81.52
+Georgia,GEO,women,15-24,2013,29.3
+Georgia,GEO,women,25-34,2013,74.3
+Georgia,GEO,women,35-44,2013,79.44
+Georgia,GEO,men,15-24,2013,11.89
+Georgia,GEO,men,25-34,2013,58.97
+Georgia,GEO,men,35-44,2013,77.76
+Georgia,GEO,women,15-24,2014,28.6
+Georgia,GEO,women,25-34,2014,72.02
+Georgia,GEO,women,35-44,2014,76.54
+Georgia,GEO,men,15-24,2014,12.54
+Georgia,GEO,men,25-34,2014,56.03
+Georgia,GEO,men,35-44,2014,76.09
+Georgia,GEO,women,15-24,2015,26.45
+Georgia,GEO,women,25-34,2015,75.99
+Georgia,GEO,women,35-44,2015,75.24
+Georgia,GEO,men,15-24,2015,9.68
+Georgia,GEO,men,25-34,2015,55.26
+Georgia,GEO,men,35-44,2015,76.83
+Georgia,GEO,women,15-24,2016,28.3
+Georgia,GEO,women,25-34,2016,74.42
+Georgia,GEO,women,35-44,2016,79.06
+Georgia,GEO,men,15-24,2016,11.41
+Georgia,GEO,men,25-34,2016,53.47
+Georgia,GEO,men,35-44,2016,75.9
+Guatemala,GTM,women,15-24,2002,36.23
+Guatemala,GTM,women,25-34,2002,75.11
+Guatemala,GTM,women,35-44,2002,76.43
+Guatemala,GTM,men,15-24,2002,23.87
+Guatemala,GTM,men,25-34,2002,78.82
+Guatemala,GTM,men,35-44,2002,85.21
+Guatemala,GTM,women,15-24,2003,34.01
+Guatemala,GTM,women,25-34,2003,77.12
+Guatemala,GTM,women,35-44,2003,76.83
+Guatemala,GTM,men,15-24,2003,22.74
+Guatemala,GTM,men,25-34,2003,78.06
+Guatemala,GTM,men,35-44,2003,87.56
+Guatemala,GTM,women,15-24,2004,34.74
+Guatemala,GTM,women,25-34,2004,72.88
+Guatemala,GTM,women,35-44,2004,78.59
+Guatemala,GTM,men,15-24,2004,19.01
+Guatemala,GTM,men,25-34,2004,73.37
+Guatemala,GTM,men,35-44,2004,87.03
+Guatemala,GTM,women,15-24,2010,31.35
+Guatemala,GTM,women,25-34,2010,70.9
+Guatemala,GTM,women,35-44,2010,75.24
+Guatemala,GTM,men,15-24,2010,19.38
+Guatemala,GTM,men,25-34,2010,72.0
+Guatemala,GTM,men,35-44,2010,88.44
+Guatemala,GTM,women,15-24,2011,29.3
+Guatemala,GTM,women,25-34,2011,67.95
+Guatemala,GTM,women,35-44,2011,79.13
+Guatemala,GTM,men,15-24,2011,19.35
+Guatemala,GTM,men,25-34,2011,71.99
+Guatemala,GTM,men,35-44,2011,87.7
+Guatemala,GTM,women,15-24,2012,30.33
+Guatemala,GTM,women,25-34,2012,69.61
+Guatemala,GTM,women,35-44,2012,74.89
+Guatemala,GTM,men,15-24,2012,17.04
+Guatemala,GTM,men,25-34,2012,74.53
+Guatemala,GTM,men,35-44,2012,86.42
+Guatemala,GTM,women,15-24,2013,31.03
+Guatemala,GTM,women,25-34,2013,67.33
+Guatemala,GTM,women,35-44,2013,73.4
+Guatemala,GTM,men,15-24,2013,19.5
+Guatemala,GTM,men,25-34,2013,73.95
+Guatemala,GTM,men,35-44,2013,87.74
+Guatemala,GTM,women,15-24,2014,30.9
+Guatemala,GTM,women,25-34,2014,68.16
+Guatemala,GTM,women,35-44,2014,75.34
+Guatemala,GTM,men,15-24,2014,20.92
+Guatemala,GTM,men,25-34,2014,71.95
+Guatemala,GTM,men,35-44,2014,88.8
+Guatemala,GTM,women,15-24,2015,30.92
+Guatemala,GTM,women,25-34,2015,68.55
+Guatemala,GTM,women,35-44,2015,74.32
+Guatemala,GTM,men,15-24,2015,18.6
+Guatemala,GTM,men,25-34,2015,71.86
+Guatemala,GTM,men,35-44,2015,87.87
+Guatemala,GTM,women,15-24,2016,28.47
+Guatemala,GTM,women,25-34,2016,68.26
+Guatemala,GTM,women,35-44,2016,73.67
+Guatemala,GTM,men,15-24,2016,17.94
+Guatemala,GTM,men,25-34,2016,70.44
+Guatemala,GTM,men,35-44,2016,86.95
+Guatemala,GTM,women,15-24,2017,28.9
+Guatemala,GTM,women,25-34,2017,68.54
+Guatemala,GTM,women,35-44,2017,72.85
+Guatemala,GTM,men,15-24,2017,17.13
+Guatemala,GTM,men,25-34,2017,70.05
+Guatemala,GTM,men,35-44,2017,85.85
+Guatemala,GTM,women,15-24,2018,26.82
+Guatemala,GTM,women,25-34,2018,64.93
+Guatemala,GTM,women,35-44,2018,72.83
+Guatemala,GTM,men,15-24,2018,17.39
+Guatemala,GTM,men,25-34,2018,68.52
+Guatemala,GTM,men,35-44,2018,85.67
+Guatemala,GTM,women,15-24,2019,24.32
+Guatemala,GTM,women,25-34,2019,63.33
+Guatemala,GTM,women,35-44,2019,72.94
+Guatemala,GTM,men,15-24,2019,15.19
+Guatemala,GTM,men,25-34,2019,64.56
+Guatemala,GTM,men,35-44,2019,84.61
+Guatemala,GTM,women,15-24,2021,29.12
+Guatemala,GTM,women,25-34,2021,66.19
+Guatemala,GTM,women,35-44,2021,72.8
+Guatemala,GTM,men,15-24,2021,18.92
+Guatemala,GTM,men,25-34,2021,65.77
+Guatemala,GTM,men,35-44,2021,84.04
+Guatemala,GTM,women,15-24,2022,28.68
+Guatemala,GTM,women,25-34,2022,67.03
+Guatemala,GTM,women,35-44,2022,71.97
+Guatemala,GTM,men,15-24,2022,17.43
+Guatemala,GTM,men,25-34,2022,68.84
+Guatemala,GTM,men,35-44,2022,84.03
+Guatemala,GTM,women,15-24,2024,27.37
+Guatemala,GTM,women,25-34,2024,66.02
+Guatemala,GTM,women,35-44,2024,70.83
+Guatemala,GTM,men,15-24,2024,16.38
+Guatemala,GTM,men,25-34,2024,67.27
+Guatemala,GTM,men,35-44,2024,82.7
+Guatemala,GTM,women,15-24,2025,25.25
+Guatemala,GTM,women,25-34,2025,66.48
+Guatemala,GTM,women,35-44,2025,74.23
+Guatemala,GTM,men,15-24,2025,13.31
+Guatemala,GTM,men,25-34,2025,62.25
+Guatemala,GTM,men,35-44,2025,82.86
+Hong Kong,HKG,women,15-24,2010,2.29
+Hong Kong,HKG,women,25-34,2010,44.76
+Hong Kong,HKG,women,35-44,2010,74.48
+Hong Kong,HKG,men,15-24,2010,0.57
+Hong Kong,HKG,men,25-34,2010,28.32
+Hong Kong,HKG,men,35-44,2010,71.07
+Hong Kong,HKG,women,15-24,2011,2.52
+Hong Kong,HKG,women,25-34,2011,44.3
+Hong Kong,HKG,women,35-44,2011,74.3
+Hong Kong,HKG,men,15-24,2011,0.66
+Hong Kong,HKG,men,25-34,2011,29.2
+Hong Kong,HKG,men,35-44,2011,70.91
+Hong Kong,HKG,women,15-24,2012,2.86
+Hong Kong,HKG,women,25-34,2012,44.45
+Hong Kong,HKG,women,35-44,2012,73.72
+Hong Kong,HKG,men,15-24,2012,0.82
+Hong Kong,HKG,men,25-34,2012,30.22
+Hong Kong,HKG,men,35-44,2012,70.53
+Hong Kong,HKG,women,15-24,2013,2.46
+Hong Kong,HKG,women,25-34,2013,45.24
+Hong Kong,HKG,women,35-44,2013,74.0
+Hong Kong,HKG,men,15-24,2013,0.75
+Hong Kong,HKG,men,25-34,2013,30.52
+Hong Kong,HKG,men,35-44,2013,71.63
+Hong Kong,HKG,women,15-24,2014,2.73
+Hong Kong,HKG,women,25-34,2014,45.25
+Hong Kong,HKG,women,35-44,2014,74.2
+Hong Kong,HKG,men,15-24,2014,0.91
+Hong Kong,HKG,men,25-34,2014,30.17
+Hong Kong,HKG,men,35-44,2014,72.09
+Hong Kong,HKG,women,15-24,2015,3.11
+Hong Kong,HKG,women,25-34,2015,45.99
+Hong Kong,HKG,women,35-44,2015,72.92
+Hong Kong,HKG,men,15-24,2015,0.88
+Hong Kong,HKG,men,25-34,2015,30.7
+Hong Kong,HKG,men,35-44,2015,71.77
+Hong Kong,HKG,women,15-24,2016,2.93
+Hong Kong,HKG,women,25-34,2016,45.18
+Hong Kong,HKG,women,35-44,2016,74.3
+Hong Kong,HKG,men,15-24,2016,0.77
+Hong Kong,HKG,men,25-34,2016,30.2
+Hong Kong,HKG,men,35-44,2016,72.37
+Hong Kong,HKG,women,15-24,2017,2.77
+Hong Kong,HKG,women,25-34,2017,43.99
+Hong Kong,HKG,women,35-44,2017,73.42
+Hong Kong,HKG,men,15-24,2017,0.95
+Hong Kong,HKG,men,25-34,2017,29.65
+Hong Kong,HKG,men,35-44,2017,71.47
+Hong Kong,HKG,women,15-24,2018,2.69
+Hong Kong,HKG,women,25-34,2018,43.27
+Hong Kong,HKG,women,35-44,2018,73.6
+Hong Kong,HKG,men,15-24,2018,0.86
+Hong Kong,HKG,men,25-34,2018,28.81
+Hong Kong,HKG,men,35-44,2018,71.65
+Hong Kong,HKG,women,15-24,2019,2.57
+Hong Kong,HKG,women,25-34,2019,42.65
+Hong Kong,HKG,women,35-44,2019,72.91
+Hong Kong,HKG,men,15-24,2019,0.84
+Hong Kong,HKG,men,25-34,2019,29.25
+Hong Kong,HKG,men,35-44,2019,71.81
+Hong Kong,HKG,women,15-24,2020,2.0
+Hong Kong,HKG,women,25-34,2020,39.7
+Hong Kong,HKG,women,35-44,2020,71.61
+Hong Kong,HKG,men,15-24,2020,0.58
+Hong Kong,HKG,men,25-34,2020,26.96
+Hong Kong,HKG,men,35-44,2020,69.74
+Hong Kong,HKG,women,15-24,2021,1.59
+Hong Kong,HKG,women,25-34,2021,37.73
+Hong Kong,HKG,women,35-44,2021,70.53
+Hong Kong,HKG,men,15-24,2021,0.44
+Hong Kong,HKG,men,25-34,2021,25.13
+Hong Kong,HKG,men,35-44,2021,68.02
+Hong Kong,HKG,women,15-24,2022,1.38
+Hong Kong,HKG,women,25-34,2022,36.03
+Hong Kong,HKG,women,35-44,2022,69.2
+Hong Kong,HKG,men,15-24,2022,0.44
+Hong Kong,HKG,men,25-34,2022,24.06
+Hong Kong,HKG,men,35-44,2022,66.04
+Hong Kong,HKG,women,15-24,2023,1.29
+Hong Kong,HKG,women,25-34,2023,35.25
+Hong Kong,HKG,women,35-44,2023,69.39
+Hong Kong,HKG,men,15-24,2023,0.29
+Hong Kong,HKG,men,25-34,2023,22.91
+Hong Kong,HKG,men,35-44,2023,65.42
+Hong Kong,HKG,women,15-24,2024,1.09
+Hong Kong,HKG,women,25-34,2024,36.32
+Hong Kong,HKG,women,35-44,2024,68.72
+Hong Kong,HKG,men,15-24,2024,0.52
+Hong Kong,HKG,men,25-34,2024,23.78
+Hong Kong,HKG,men,35-44,2024,64.58
+Hong Kong,HKG,women,15-24,2025,1.26
+Hong Kong,HKG,women,25-34,2025,34.57
+Hong Kong,HKG,women,35-44,2025,68.43
+Hong Kong,HKG,men,15-24,2025,0.33
+Hong Kong,HKG,men,25-34,2025,21.9
+Hong Kong,HKG,men,35-44,2025,63.24
+Honduras,HND,women,15-24,2005,30.42
+Honduras,HND,women,25-34,2005,66.44
+Honduras,HND,women,35-44,2005,73.39
+Honduras,HND,men,15-24,2005,16.01
+Honduras,HND,men,25-34,2005,67.08
+Honduras,HND,men,35-44,2005,84.96
+Honduras,HND,women,15-24,2006,28.57
+Honduras,HND,women,25-34,2006,66.72
+Honduras,HND,women,35-44,2006,71.22
+Honduras,HND,men,15-24,2006,15.57
+Honduras,HND,men,25-34,2006,66.35
+Honduras,HND,men,35-44,2006,82.57
+Honduras,HND,women,15-24,2007,27.32
+Honduras,HND,women,25-34,2007,66.23
+Honduras,HND,women,35-44,2007,72.63
+Honduras,HND,men,15-24,2007,15.05
+Honduras,HND,men,25-34,2007,65.83
+Honduras,HND,men,35-44,2007,82.74
+Honduras,HND,women,15-24,2008,27.14
+Honduras,HND,women,25-34,2008,63.46
+Honduras,HND,women,35-44,2008,70.85
+Honduras,HND,men,15-24,2008,14.91
+Honduras,HND,men,25-34,2008,65.27
+Honduras,HND,men,35-44,2008,81.01
+Honduras,HND,women,15-24,2009,27.08
+Honduras,HND,women,25-34,2009,61.92
+Honduras,HND,women,35-44,2009,71.14
+Honduras,HND,men,15-24,2009,15.31
+Honduras,HND,men,25-34,2009,63.48
+Honduras,HND,men,35-44,2009,81.53
+Honduras,HND,women,15-24,2010,25.84
+Honduras,HND,women,25-34,2010,61.47
+Honduras,HND,women,35-44,2010,70.9
+Honduras,HND,men,15-24,2010,13.88
+Honduras,HND,men,25-34,2010,60.97
+Honduras,HND,men,35-44,2010,78.3
+Honduras,HND,women,15-24,2011,27.59
+Honduras,HND,women,25-34,2011,59.28
+Honduras,HND,women,35-44,2011,69.48
+Honduras,HND,men,15-24,2011,15.67
+Honduras,HND,men,25-34,2011,61.03
+Honduras,HND,men,35-44,2011,79.09
+Honduras,HND,women,15-24,2012,25.76
+Honduras,HND,women,25-34,2012,57.81
+Honduras,HND,women,35-44,2012,66.92
+Honduras,HND,men,15-24,2012,14.12
+Honduras,HND,men,25-34,2012,58.45
+Honduras,HND,men,35-44,2012,76.77
+Honduras,HND,women,15-24,2013,26.34
+Honduras,HND,women,25-34,2013,58.94
+Honduras,HND,women,35-44,2013,65.88
+Honduras,HND,men,15-24,2013,15.41
+Honduras,HND,men,25-34,2013,61.2
+Honduras,HND,men,35-44,2013,78.89
+Honduras,HND,women,15-24,2014,27.33
+Honduras,HND,women,25-34,2014,59.58
+Honduras,HND,women,35-44,2014,68.59
+Honduras,HND,men,15-24,2014,16.26
+Honduras,HND,men,25-34,2014,63.99
+Honduras,HND,men,35-44,2014,79.52
+Honduras,HND,women,15-24,2015,25.34
+Honduras,HND,women,25-34,2015,61.44
+Honduras,HND,women,35-44,2015,67.66
+Honduras,HND,men,15-24,2015,13.91
+Honduras,HND,men,25-34,2015,63.8
+Honduras,HND,men,35-44,2015,81.66
+Honduras,HND,women,15-24,2016,25.2
+Honduras,HND,women,25-34,2016,60.28
+Honduras,HND,women,35-44,2016,66.98
+Honduras,HND,men,15-24,2016,14.39
+Honduras,HND,men,25-34,2016,62.84
+Honduras,HND,men,35-44,2016,80.79
+Honduras,HND,women,15-24,2017,26.81
+Honduras,HND,women,25-34,2017,63.14
+Honduras,HND,women,35-44,2017,65.6
+Honduras,HND,men,15-24,2017,15.02
+Honduras,HND,men,25-34,2017,63.92
+Honduras,HND,men,35-44,2017,81.69
+Honduras,HND,women,15-24,2018,28.65
+Honduras,HND,women,25-34,2018,57.38
+Honduras,HND,women,35-44,2018,68.82
+Honduras,HND,men,15-24,2018,15.83
+Honduras,HND,men,25-34,2018,58.37
+Honduras,HND,men,35-44,2018,76.85
+Honduras,HND,women,15-24,2019,26.21
+Honduras,HND,women,25-34,2019,59.38
+Honduras,HND,women,35-44,2019,68.79
+Honduras,HND,men,15-24,2019,15.93
+Honduras,HND,men,25-34,2019,56.62
+Honduras,HND,men,35-44,2019,74.78
+Honduras,HND,women,15-24,2020,23.23
+Honduras,HND,women,25-34,2020,57.4
+Honduras,HND,women,35-44,2020,66.43
+Honduras,HND,men,15-24,2020,12.17
+Honduras,HND,men,25-34,2020,53.57
+Honduras,HND,men,35-44,2020,76.9
+Honduras,HND,women,15-24,2021,28.11
+Honduras,HND,women,25-34,2021,57.74
+Honduras,HND,women,35-44,2021,68.72
+Honduras,HND,men,15-24,2021,16.03
+Honduras,HND,men,25-34,2021,54.1
+Honduras,HND,men,35-44,2021,75.68
+Honduras,HND,women,15-24,2022,28.31
+Honduras,HND,women,25-34,2022,55.61
+Honduras,HND,women,35-44,2022,66.61
+Honduras,HND,men,15-24,2022,16.82
+Honduras,HND,men,25-34,2022,55.42
+Honduras,HND,men,35-44,2022,74.39
+Honduras,HND,women,15-24,2023,25.75
+Honduras,HND,women,25-34,2023,56.62
+Honduras,HND,women,35-44,2023,65.28
+Honduras,HND,men,15-24,2023,13.51
+Honduras,HND,men,25-34,2023,53.12
+Honduras,HND,men,35-44,2023,71.08
+Honduras,HND,women,15-24,2024,24.2
+Honduras,HND,women,25-34,2024,53.42
+Honduras,HND,women,35-44,2024,65.28
+Honduras,HND,men,15-24,2024,13.24
+Honduras,HND,men,25-34,2024,52.22
+Honduras,HND,men,35-44,2024,74.94
+Honduras,HND,women,15-24,2025,25.9
+Honduras,HND,women,25-34,2025,55.72
+Honduras,HND,women,35-44,2025,65.94
+Honduras,HND,men,15-24,2025,14.55
+Honduras,HND,men,25-34,2025,54.21
+Honduras,HND,men,35-44,2025,72.88
+Indonesia,IDN,women,15-24,1996,31.5
+Indonesia,IDN,women,25-34,1996,85.36
+Indonesia,IDN,women,35-44,1996,89.89
+Indonesia,IDN,men,15-24,1996,9.86
+Indonesia,IDN,men,25-34,1996,75.56
+Indonesia,IDN,men,35-44,1996,95.71
+Indonesia,IDN,women,15-24,1997,31.95
+Indonesia,IDN,women,25-34,1997,84.98
+Indonesia,IDN,women,35-44,1997,89.7
+Indonesia,IDN,men,15-24,1997,9.74
+Indonesia,IDN,men,25-34,1997,75.18
+Indonesia,IDN,men,35-44,1997,95.37
+Indonesia,IDN,women,15-24,1998,30.39
+Indonesia,IDN,women,25-34,1998,84.65
+Indonesia,IDN,women,35-44,1998,90.12
+Indonesia,IDN,men,15-24,1998,9.05
+Indonesia,IDN,men,25-34,1998,74.79
+Indonesia,IDN,men,35-44,1998,95.52
+Indonesia,IDN,women,15-24,1999,30.21
+Indonesia,IDN,women,25-34,1999,84.07
+Indonesia,IDN,women,35-44,1999,89.63
+Indonesia,IDN,men,15-24,1999,9.06
+Indonesia,IDN,men,25-34,1999,72.37
+Indonesia,IDN,men,35-44,1999,94.9
+Indonesia,IDN,women,15-24,2000,32.39
+Indonesia,IDN,women,25-34,2000,84.25
+Indonesia,IDN,women,35-44,2000,89.37
+Indonesia,IDN,men,15-24,2000,10.2
+Indonesia,IDN,men,25-34,2000,73.81
+Indonesia,IDN,men,35-44,2000,94.38
+Indonesia,IDN,women,15-24,2001,31.72
+Indonesia,IDN,women,25-34,2001,87.07
+Indonesia,IDN,women,35-44,2001,90.52
+Indonesia,IDN,men,15-24,2001,9.48
+Indonesia,IDN,men,25-34,2001,75.71
+Indonesia,IDN,men,35-44,2001,95.3
+Indonesia,IDN,women,15-24,2002,32.12
+Indonesia,IDN,women,25-34,2002,86.27
+Indonesia,IDN,women,35-44,2002,90.42
+Indonesia,IDN,men,15-24,2002,9.55
+Indonesia,IDN,men,25-34,2002,75.57
+Indonesia,IDN,men,35-44,2002,94.98
+Indonesia,IDN,women,15-24,2003,33.5
+Indonesia,IDN,women,25-34,2003,85.44
+Indonesia,IDN,women,35-44,2003,89.66
+Indonesia,IDN,men,15-24,2003,11.05
+Indonesia,IDN,men,25-34,2003,75.77
+Indonesia,IDN,men,35-44,2003,94.62
+Indonesia,IDN,women,15-24,2004,30.79
+Indonesia,IDN,women,25-34,2004,86.11
+Indonesia,IDN,women,35-44,2004,90.83
+Indonesia,IDN,men,15-24,2004,9.26
+Indonesia,IDN,men,25-34,2004,74.27
+Indonesia,IDN,men,35-44,2004,94.81
+Indonesia,IDN,women,15-24,2005,27.51
+Indonesia,IDN,women,25-34,2005,84.99
+Indonesia,IDN,women,35-44,2005,89.92
+Indonesia,IDN,men,15-24,2005,7.86
+Indonesia,IDN,men,25-34,2005,71.35
+Indonesia,IDN,men,35-44,2005,94.48
+Indonesia,IDN,women,15-24,2006,27.64
+Indonesia,IDN,women,25-34,2006,83.59
+Indonesia,IDN,women,35-44,2006,90.77
+Indonesia,IDN,men,15-24,2006,7.67
+Indonesia,IDN,men,25-34,2006,69.12
+Indonesia,IDN,men,35-44,2006,94.09
+Indonesia,IDN,women,15-24,2007,31.9
+Indonesia,IDN,women,25-34,2007,85.07
+Indonesia,IDN,women,35-44,2007,90.36
+Indonesia,IDN,men,15-24,2007,10.08
+Indonesia,IDN,men,25-34,2007,70.52
+Indonesia,IDN,men,35-44,2007,93.49
+Indonesia,IDN,women,15-24,2008,31.28
+Indonesia,IDN,women,25-34,2008,85.33
+Indonesia,IDN,women,35-44,2008,90.1
+Indonesia,IDN,men,15-24,2008,9.65
+Indonesia,IDN,men,25-34,2008,70.11
+Indonesia,IDN,men,35-44,2008,93.09
+Indonesia,IDN,women,15-24,2009,29.03
+Indonesia,IDN,women,25-34,2009,84.81
+Indonesia,IDN,women,35-44,2009,90.1
+Indonesia,IDN,men,15-24,2009,9.04
+Indonesia,IDN,men,25-34,2009,69.07
+Indonesia,IDN,men,35-44,2009,92.89
+Indonesia,IDN,women,15-24,2010,27.38
+Indonesia,IDN,women,25-34,2010,84.27
+Indonesia,IDN,women,35-44,2010,90.38
+Indonesia,IDN,men,15-24,2010,8.37
+Indonesia,IDN,men,25-34,2010,67.31
+Indonesia,IDN,men,35-44,2010,92.22
+Indonesia,IDN,women,15-24,2011,30.28
+Indonesia,IDN,women,25-34,2011,85.67
+Indonesia,IDN,women,35-44,2011,90.57
+Indonesia,IDN,men,15-24,2011,9.34
+Indonesia,IDN,men,25-34,2011,70.16
+Indonesia,IDN,men,35-44,2011,92.82
+Indonesia,IDN,women,15-24,2012,29.37
+Indonesia,IDN,women,25-34,2012,86.06
+Indonesia,IDN,women,35-44,2012,90.63
+Indonesia,IDN,men,15-24,2012,9.04
+Indonesia,IDN,men,25-34,2012,69.25
+Indonesia,IDN,men,35-44,2012,92.55
+Indonesia,IDN,women,15-24,2013,28.46
+Indonesia,IDN,women,25-34,2013,85.52
+Indonesia,IDN,women,35-44,2013,91.0
+Indonesia,IDN,men,15-24,2013,9.0
+Indonesia,IDN,men,25-34,2013,67.8
+Indonesia,IDN,men,35-44,2013,92.19
+Indonesia,IDN,women,15-24,2014,27.25
+Indonesia,IDN,women,25-34,2014,86.09
+Indonesia,IDN,women,35-44,2014,91.14
+Indonesia,IDN,men,15-24,2014,8.87
+Indonesia,IDN,men,25-34,2014,67.25
+Indonesia,IDN,men,35-44,2014,91.66
+Indonesia,IDN,women,15-24,2015,26.85
+Indonesia,IDN,women,25-34,2015,84.66
+Indonesia,IDN,women,35-44,2015,90.78
+Indonesia,IDN,men,15-24,2015,8.82
+Indonesia,IDN,men,25-34,2015,64.47
+Indonesia,IDN,men,35-44,2015,90.73
+Indonesia,IDN,women,15-24,2016,25.8
+Indonesia,IDN,women,25-34,2016,84.95
+Indonesia,IDN,women,35-44,2016,90.71
+Indonesia,IDN,men,15-24,2016,8.43
+Indonesia,IDN,men,25-34,2016,63.41
+Indonesia,IDN,men,35-44,2016,90.01
+Indonesia,IDN,women,15-24,2017,25.6
+Indonesia,IDN,women,25-34,2017,84.75
+Indonesia,IDN,women,35-44,2017,90.82
+Indonesia,IDN,men,15-24,2017,8.81
+Indonesia,IDN,men,25-34,2017,65.36
+Indonesia,IDN,men,35-44,2017,89.68
+Indonesia,IDN,women,15-24,2018,24.14
+Indonesia,IDN,women,25-34,2018,83.79
+Indonesia,IDN,women,35-44,2018,91.07
+Indonesia,IDN,men,15-24,2018,8.26
+Indonesia,IDN,men,25-34,2018,62.39
+Indonesia,IDN,men,35-44,2018,88.98
+Indonesia,IDN,women,15-24,2019,23.93
+Indonesia,IDN,women,25-34,2019,83.96
+Indonesia,IDN,women,35-44,2019,90.84
+Indonesia,IDN,men,15-24,2019,7.96
+Indonesia,IDN,men,25-34,2019,62.77
+Indonesia,IDN,men,35-44,2019,89.07
+Indonesia,IDN,women,15-24,2020,22.13
+Indonesia,IDN,women,25-34,2020,83.54
+Indonesia,IDN,women,35-44,2020,91.06
+Indonesia,IDN,men,15-24,2020,7.67
+Indonesia,IDN,men,25-34,2020,62.67
+Indonesia,IDN,men,35-44,2020,88.84
+Indonesia,IDN,women,15-24,2021,18.94
+Indonesia,IDN,women,25-34,2021,82.55
+Indonesia,IDN,women,35-44,2021,91.33
+Indonesia,IDN,men,15-24,2021,6.47
+Indonesia,IDN,men,25-34,2021,60.43
+Indonesia,IDN,men,35-44,2021,88.35
+Indonesia,IDN,women,15-24,2022,20.97
+Indonesia,IDN,women,25-34,2022,84.25
+Indonesia,IDN,women,35-44,2022,91.21
+Indonesia,IDN,men,15-24,2022,7.17
+Indonesia,IDN,men,25-34,2022,63.17
+Indonesia,IDN,men,35-44,2022,89.14
+Indonesia,IDN,women,15-24,2023,18.76
+Indonesia,IDN,women,25-34,2023,82.77
+Indonesia,IDN,women,35-44,2023,91.62
+Indonesia,IDN,men,15-24,2023,6.5
+Indonesia,IDN,men,25-34,2023,60.6
+Indonesia,IDN,men,35-44,2023,88.2
+Indonesia,IDN,women,15-24,2024,15.67
+Indonesia,IDN,women,25-34,2024,81.09
+Indonesia,IDN,women,35-44,2024,91.95
+Indonesia,IDN,men,15-24,2024,5.34
+Indonesia,IDN,men,25-34,2024,57.04
+Indonesia,IDN,men,35-44,2024,86.77
+India,IND,women,15-24,2018,32.14
+India,IND,women,25-34,2018,91.77
+India,IND,women,35-44,2018,92.75
+India,IND,men,15-24,2018,8.73
+India,IND,men,25-34,2018,71.16
+India,IND,men,35-44,2018,93.97
+India,IND,women,15-24,2019,32.02
+India,IND,women,25-34,2019,90.49
+India,IND,women,35-44,2019,92.53
+India,IND,men,15-24,2019,8.89
+India,IND,men,25-34,2019,71.38
+India,IND,men,35-44,2019,93.94
+India,IND,women,15-24,2020,29.54
+India,IND,women,25-34,2020,89.68
+India,IND,women,35-44,2020,92.16
+India,IND,men,15-24,2020,8.14
+India,IND,men,25-34,2020,67.48
+India,IND,men,35-44,2020,93.4
+India,IND,women,15-24,2021,28.7
+India,IND,women,25-34,2021,89.06
+India,IND,women,35-44,2021,92.02
+India,IND,men,15-24,2021,8.02
+India,IND,men,25-34,2021,67.59
+India,IND,men,35-44,2021,93.36
+India,IND,women,15-24,2022,29.79
+India,IND,women,25-34,2022,90.78
+India,IND,women,35-44,2022,93.43
+India,IND,men,15-24,2022,8.21
+India,IND,men,25-34,2022,71.41
+India,IND,men,35-44,2022,94.25
+India,IND,women,15-24,2023,28.7
+India,IND,women,25-34,2023,90.44
+India,IND,women,35-44,2023,92.97
+India,IND,men,15-24,2023,7.96
+India,IND,men,25-34,2023,69.09
+India,IND,men,35-44,2023,93.24
+India,IND,women,15-24,2024,28.5
+India,IND,women,25-34,2024,89.51
+India,IND,women,35-44,2024,92.42
+India,IND,men,15-24,2024,7.85
+India,IND,men,25-34,2024,67.97
+India,IND,men,35-44,2024,93.0
+India,IND,women,15-24,2025,26.87
+India,IND,women,25-34,2025,88.45
+India,IND,women,35-44,2025,92.12
+India,IND,men,15-24,2025,7.72
+India,IND,men,25-34,2025,65.05
+India,IND,men,35-44,2025,92.25
+Iran,IRN,women,15-24,2005,27.05
+Iran,IRN,women,25-34,2005,78.58
+Iran,IRN,women,35-44,2005,93.66
+Iran,IRN,men,15-24,2005,8.39
+Iran,IRN,men,25-34,2005,70.45
+Iran,IRN,men,35-44,2005,95.85
+Iran,IRN,women,15-24,2006,26.41
+Iran,IRN,women,25-34,2006,76.54
+Iran,IRN,women,35-44,2006,93.51
+Iran,IRN,men,15-24,2006,8.27
+Iran,IRN,men,25-34,2006,68.92
+Iran,IRN,men,35-44,2006,95.35
+Iran,IRN,women,15-24,2007,25.53
+Iran,IRN,women,25-34,2007,75.34
+Iran,IRN,women,35-44,2007,93.34
+Iran,IRN,men,15-24,2007,8.0
+Iran,IRN,men,25-34,2007,66.45
+Iran,IRN,men,35-44,2007,95.18
+Iran,IRN,women,15-24,2008,24.54
+Iran,IRN,women,25-34,2008,73.09
+Iran,IRN,women,35-44,2008,92.47
+Iran,IRN,men,15-24,2008,7.43
+Iran,IRN,men,25-34,2008,62.22
+Iran,IRN,men,35-44,2008,94.7
+Iran,IRN,women,15-24,2009,27.59
+Iran,IRN,women,25-34,2009,74.06
+Iran,IRN,women,35-44,2009,92.35
+Iran,IRN,men,15-24,2009,8.12
+Iran,IRN,men,25-34,2009,63.75
+Iran,IRN,men,35-44,2009,94.53
+Iran,IRN,women,15-24,2010,27.65
+Iran,IRN,women,25-34,2010,72.15
+Iran,IRN,women,35-44,2010,91.08
+Iran,IRN,men,15-24,2010,7.8
+Iran,IRN,men,25-34,2010,61.42
+Iran,IRN,men,35-44,2010,94.4
+Iran,IRN,women,15-24,2011,26.96
+Iran,IRN,women,25-34,2011,70.91
+Iran,IRN,women,35-44,2011,89.76
+Iran,IRN,men,15-24,2011,7.99
+Iran,IRN,men,25-34,2011,58.07
+Iran,IRN,men,35-44,2011,93.78
+Iran,IRN,women,15-24,2012,27.33
+Iran,IRN,women,25-34,2012,69.24
+Iran,IRN,women,35-44,2012,89.53
+Iran,IRN,men,15-24,2012,8.2
+Iran,IRN,men,25-34,2012,56.61
+Iran,IRN,men,35-44,2012,92.63
+Iran,IRN,women,15-24,2013,34.72
+Iran,IRN,women,25-34,2013,74.36
+Iran,IRN,women,35-44,2013,90.52
+Iran,IRN,men,15-24,2013,9.71
+Iran,IRN,men,25-34,2013,63.75
+Iran,IRN,men,35-44,2013,92.97
+Iran,IRN,women,15-24,2014,33.48
+Iran,IRN,women,25-34,2014,73.69
+Iran,IRN,women,35-44,2014,89.16
+Iran,IRN,men,15-24,2014,8.38
+Iran,IRN,men,25-34,2014,61.45
+Iran,IRN,men,35-44,2014,92.32
+Iran,IRN,women,15-24,2015,32.11
+Iran,IRN,women,25-34,2015,73.49
+Iran,IRN,women,35-44,2015,87.98
+Iran,IRN,men,15-24,2015,7.66
+Iran,IRN,men,25-34,2015,60.01
+Iran,IRN,men,35-44,2015,91.74
+Iran,IRN,women,15-24,2016,31.32
+Iran,IRN,women,25-34,2016,74.07
+Iran,IRN,women,35-44,2016,87.62
+Iran,IRN,men,15-24,2016,7.15
+Iran,IRN,men,25-34,2016,58.46
+Iran,IRN,men,35-44,2016,90.48
+Iran,IRN,women,15-24,2017,31.17
+Iran,IRN,women,25-34,2017,74.66
+Iran,IRN,women,35-44,2017,87.27
+Iran,IRN,men,15-24,2017,7.13
+Iran,IRN,men,25-34,2017,57.35
+Iran,IRN,men,35-44,2017,89.6
+Iran,IRN,women,15-24,2018,32.4
+Iran,IRN,women,25-34,2018,77.45
+Iran,IRN,women,35-44,2018,88.22
+Iran,IRN,men,15-24,2018,7.27
+Iran,IRN,men,25-34,2018,59.54
+Iran,IRN,men,35-44,2018,90.25
+Iran,IRN,women,15-24,2019,29.66
+Iran,IRN,women,25-34,2019,77.11
+Iran,IRN,women,35-44,2019,87.46
+Iran,IRN,men,15-24,2019,6.28
+Iran,IRN,men,25-34,2019,56.5
+Iran,IRN,men,35-44,2019,89.05
+Iran,IRN,women,15-24,2020,26.33
+Iran,IRN,women,25-34,2020,77.44
+Iran,IRN,women,35-44,2020,87.36
+Iran,IRN,men,15-24,2020,5.37
+Iran,IRN,men,25-34,2020,54.86
+Iran,IRN,men,35-44,2020,88.06
+Iran,IRN,women,15-24,2021,23.14
+Iran,IRN,women,25-34,2021,77.83
+Iran,IRN,women,35-44,2021,87.25
+Iran,IRN,men,15-24,2021,4.19
+Iran,IRN,men,25-34,2021,53.01
+Iran,IRN,men,35-44,2021,87.72
+Iran,IRN,women,15-24,2022,21.35
+Iran,IRN,women,25-34,2022,76.19
+Iran,IRN,women,35-44,2022,87.42
+Iran,IRN,men,15-24,2022,4.33
+Iran,IRN,men,25-34,2022,49.87
+Iran,IRN,men,35-44,2022,86.33
+Iran,IRN,women,15-24,2023,19.54
+Iran,IRN,women,25-34,2023,75.67
+Iran,IRN,women,35-44,2023,87.54
+Iran,IRN,men,15-24,2023,4.3
+Iran,IRN,men,25-34,2023,48.36
+Iran,IRN,men,35-44,2023,85.47
+Iran,IRN,women,15-24,2024,17.59
+Iran,IRN,women,25-34,2024,74.1
+Iran,IRN,women,35-44,2024,87.43
+Iran,IRN,men,15-24,2024,3.79
+Iran,IRN,men,25-34,2024,45.87
+Iran,IRN,men,35-44,2024,84.43
+Israel,ISR,women,15-24,2012,11.5
+Israel,ISR,women,25-34,2012,67.24
+Israel,ISR,women,35-44,2012,80.27
+Israel,ISR,men,15-24,2012,3.91
+Israel,ISR,men,25-34,2012,51.65
+Israel,ISR,men,35-44,2012,83.29
+Israel,ISR,women,15-24,2013,11.13
+Israel,ISR,women,25-34,2013,66.38
+Israel,ISR,women,35-44,2013,79.0
+Israel,ISR,men,15-24,2013,3.93
+Israel,ISR,men,25-34,2013,50.98
+Israel,ISR,men,35-44,2013,81.21
+Israel,ISR,women,15-24,2014,11.25
+Israel,ISR,women,25-34,2014,66.1
+Israel,ISR,women,35-44,2014,79.01
+Israel,ISR,men,15-24,2014,4.16
+Israel,ISR,men,25-34,2014,50.36
+Israel,ISR,men,35-44,2014,81.86
+Israel,ISR,women,15-24,2015,10.31
+Israel,ISR,women,25-34,2015,66.73
+Israel,ISR,women,35-44,2015,80.14
+Israel,ISR,men,15-24,2015,3.71
+Israel,ISR,men,25-34,2015,50.5
+Israel,ISR,men,35-44,2015,81.68
+Israel,ISR,women,15-24,2016,10.06
+Israel,ISR,women,25-34,2016,67.38
+Israel,ISR,women,35-44,2016,79.82
+Israel,ISR,men,15-24,2016,3.92
+Israel,ISR,men,25-34,2016,50.75
+Israel,ISR,men,35-44,2016,81.6
+Israel,ISR,women,15-24,2017,9.76
+Israel,ISR,women,25-34,2017,66.31
+Israel,ISR,women,35-44,2017,79.82
+Israel,ISR,men,15-24,2017,4.14
+Israel,ISR,men,25-34,2017,50.37
+Israel,ISR,men,35-44,2017,80.95
+Israel,ISR,women,15-24,2018,9.64
+Israel,ISR,women,25-34,2018,66.08
+Israel,ISR,women,35-44,2018,79.69
+Israel,ISR,men,15-24,2018,3.91
+Israel,ISR,men,25-34,2018,50.83
+Israel,ISR,men,35-44,2018,80.62
+Israel,ISR,women,15-24,2019,8.62
+Israel,ISR,women,25-34,2019,66.09
+Israel,ISR,women,35-44,2019,79.6
+Israel,ISR,men,15-24,2019,3.73
+Israel,ISR,men,25-34,2019,50.24
+Israel,ISR,men,35-44,2019,79.88
+Israel,ISR,women,15-24,2020,8.04
+Israel,ISR,women,25-34,2020,65.73
+Israel,ISR,women,35-44,2020,80.29
+Israel,ISR,men,15-24,2020,2.74
+Israel,ISR,men,25-34,2020,49.7
+Israel,ISR,men,35-44,2020,79.78
+Israel,ISR,women,15-24,2021,8.12
+Israel,ISR,women,25-34,2021,64.54
+Israel,ISR,women,35-44,2021,80.62
+Israel,ISR,men,15-24,2021,3.73
+Israel,ISR,men,25-34,2021,47.51
+Israel,ISR,men,35-44,2021,79.2
+Israel,ISR,women,15-24,2022,8.41
+Israel,ISR,women,25-34,2022,62.71
+Israel,ISR,women,35-44,2022,80.13
+Israel,ISR,men,15-24,2022,3.78
+Israel,ISR,men,25-34,2022,48.46
+Israel,ISR,men,35-44,2022,78.42
+Israel,ISR,women,15-24,2023,7.41
+Israel,ISR,women,25-34,2023,62.92
+Israel,ISR,women,35-44,2023,79.9
+Israel,ISR,men,15-24,2023,3.57
+Israel,ISR,men,25-34,2023,46.49
+Israel,ISR,men,35-44,2023,78.63
+Israel,ISR,women,15-24,2024,7.34
+Israel,ISR,women,25-34,2024,62.52
+Israel,ISR,women,35-44,2024,80.06
+Israel,ISR,men,15-24,2024,4.01
+Israel,ISR,men,25-34,2024,46.35
+Israel,ISR,men,35-44,2024,77.17
+Jordan,JOR,women,15-24,2017,19.65
+Jordan,JOR,women,25-34,2017,72.7
+Jordan,JOR,women,35-44,2017,83.16
+Jordan,JOR,men,15-24,2017,4.25
+Jordan,JOR,men,25-34,2017,51.5
+Jordan,JOR,men,35-44,2017,90.11
+Jordan,JOR,women,15-24,2018,18.54
+Jordan,JOR,women,25-34,2018,72.83
+Jordan,JOR,women,35-44,2018,82.29
+Jordan,JOR,men,15-24,2018,3.73
+Jordan,JOR,men,25-34,2018,49.39
+Jordan,JOR,men,35-44,2018,89.61
+Jordan,JOR,women,15-24,2019,17.56
+Jordan,JOR,women,25-34,2019,70.99
+Jordan,JOR,women,35-44,2019,84.16
+Jordan,JOR,men,15-24,2019,3.92
+Jordan,JOR,men,25-34,2019,48.64
+Jordan,JOR,men,35-44,2019,89.67
+Jordan,JOR,women,15-24,2020,14.64
+Jordan,JOR,women,25-34,2020,67.57
+Jordan,JOR,women,35-44,2020,81.81
+Jordan,JOR,men,15-24,2020,3.52
+Jordan,JOR,men,25-34,2020,46.94
+Jordan,JOR,men,35-44,2020,89.61
+Jordan,JOR,women,15-24,2021,13.56
+Jordan,JOR,women,25-34,2021,66.85
+Jordan,JOR,women,35-44,2021,82.13
+Jordan,JOR,men,15-24,2021,3.1
+Jordan,JOR,men,25-34,2021,45.96
+Jordan,JOR,men,35-44,2021,90.03
+Jordan,JOR,women,15-24,2022,12.29
+Jordan,JOR,women,25-34,2022,65.73
+Jordan,JOR,women,35-44,2022,81.29
+Jordan,JOR,men,15-24,2022,2.43
+Jordan,JOR,men,25-34,2022,46.23
+Jordan,JOR,men,35-44,2022,88.67
+Jordan,JOR,women,15-24,2023,13.15
+Jordan,JOR,women,25-34,2023,64.74
+Jordan,JOR,women,35-44,2023,80.33
+Jordan,JOR,men,15-24,2023,2.44
+Jordan,JOR,men,25-34,2023,47.69
+Jordan,JOR,men,35-44,2023,89.0
+Jordan,JOR,women,15-24,2024,12.44
+Jordan,JOR,women,25-34,2024,64.25
+Jordan,JOR,women,35-44,2024,80.49
+Jordan,JOR,men,15-24,2024,2.06
+Jordan,JOR,men,25-34,2024,46.4
+Jordan,JOR,men,35-44,2024,87.96
+Japan,JPN,women,15-24,2000,6.29
+Japan,JPN,women,25-34,2000,57.41
+Japan,JPN,women,35-44,2000,83.57
+Japan,JPN,men,15-24,2000,3.86
+Japan,JPN,men,25-34,2000,43.77
+Japan,JPN,men,35-44,2000,75.62
+Japan,JPN,women,15-24,2001,6.14
+Japan,JPN,women,25-34,2001,56.11
+Japan,JPN,women,35-44,2001,82.24
+Japan,JPN,men,15-24,2001,3.74
+Japan,JPN,men,25-34,2001,43.53
+Japan,JPN,men,35-44,2001,74.12
+Japan,JPN,women,15-24,2002,5.85
+Japan,JPN,women,25-34,2002,54.88
+Japan,JPN,women,35-44,2002,81.2
+Japan,JPN,men,15-24,2002,3.55
+Japan,JPN,men,25-34,2002,43.11
+Japan,JPN,men,35-44,2002,73.16
+Japan,JPN,women,15-24,2003,5.76
+Japan,JPN,women,25-34,2003,54.22
+Japan,JPN,women,35-44,2003,79.94
+Japan,JPN,men,15-24,2003,3.47
+Japan,JPN,men,25-34,2003,42.59
+Japan,JPN,men,35-44,2003,72.81
+Japan,JPN,women,15-24,2004,5.6
+Japan,JPN,women,25-34,2004,53.72
+Japan,JPN,women,35-44,2004,79.35
+Japan,JPN,men,15-24,2004,3.36
+Japan,JPN,men,25-34,2004,42.71
+Japan,JPN,men,35-44,2004,72.05
+Japan,JPN,women,15-24,2005,5.39
+Japan,JPN,women,25-34,2005,52.88
+Japan,JPN,women,35-44,2005,78.16
+Japan,JPN,men,15-24,2005,3.19
+Japan,JPN,men,25-34,2005,41.58
+Japan,JPN,men,35-44,2005,70.8
+Japan,JPN,women,15-24,2006,5.5
+Japan,JPN,women,25-34,2006,52.16
+Japan,JPN,women,35-44,2006,76.87
+Japan,JPN,men,15-24,2006,3.22
+Japan,JPN,men,25-34,2006,41.21
+Japan,JPN,men,35-44,2006,69.93
+Japan,JPN,women,15-24,2007,5.38
+Japan,JPN,women,25-34,2007,51.81
+Japan,JPN,women,35-44,2007,75.9
+Japan,JPN,men,15-24,2007,3.24
+Japan,JPN,men,25-34,2007,41.12
+Japan,JPN,men,35-44,2007,69.27
+Japan,JPN,women,15-24,2008,5.17
+Japan,JPN,women,25-34,2008,51.25
+Japan,JPN,women,35-44,2008,75.08
+Japan,JPN,men,15-24,2008,3.09
+Japan,JPN,men,25-34,2008,41.53
+Japan,JPN,men,35-44,2008,68.38
+Japan,JPN,women,15-24,2009,5.08
+Japan,JPN,women,25-34,2009,50.69
+Japan,JPN,women,35-44,2009,74.69
+Japan,JPN,men,15-24,2009,2.95
+Japan,JPN,men,25-34,2009,42.09
+Japan,JPN,men,35-44,2009,67.55
+Japan,JPN,women,15-24,2010,4.73
+Japan,JPN,women,25-34,2010,50.05
+Japan,JPN,women,35-44,2010,73.49
+Japan,JPN,men,15-24,2010,2.7
+Japan,JPN,men,25-34,2010,40.85
+Japan,JPN,men,35-44,2010,67.37
+Japan,JPN,women,15-24,2011,4.7
+Japan,JPN,women,25-34,2011,50.47
+Japan,JPN,women,35-44,2011,73.05
+Japan,JPN,men,15-24,2011,2.64
+Japan,JPN,men,25-34,2011,40.68
+Japan,JPN,men,35-44,2011,67.7
+Japan,JPN,women,15-24,2012,4.03
+Japan,JPN,women,25-34,2012,49.58
+Japan,JPN,women,35-44,2012,72.98
+Japan,JPN,men,15-24,2012,2.34
+Japan,JPN,men,25-34,2012,39.97
+Japan,JPN,men,35-44,2012,66.88
+Japan,JPN,women,15-24,2013,3.96
+Japan,JPN,women,25-34,2013,49.8
+Japan,JPN,women,35-44,2013,72.65
+Japan,JPN,men,15-24,2013,2.21
+Japan,JPN,men,25-34,2013,40.42
+Japan,JPN,men,35-44,2013,66.21
+Japan,JPN,women,15-24,2014,3.98
+Japan,JPN,women,25-34,2014,49.52
+Japan,JPN,women,35-44,2014,72.22
+Japan,JPN,men,15-24,2014,2.35
+Japan,JPN,men,25-34,2014,40.08
+Japan,JPN,men,35-44,2014,66.55
+Japan,JPN,women,15-24,2015,4.11
+Japan,JPN,women,25-34,2015,49.73
+Japan,JPN,women,35-44,2015,71.89
+Japan,JPN,men,15-24,2015,2.56
+Japan,JPN,men,25-34,2015,38.9
+Japan,JPN,men,35-44,2015,65.65
+Japan,JPN,women,15-24,2016,3.88
+Japan,JPN,women,25-34,2016,49.53
+Japan,JPN,women,35-44,2016,72.56
+Japan,JPN,men,15-24,2016,2.26
+Japan,JPN,men,25-34,2016,39.6
+Japan,JPN,men,35-44,2016,65.64
+Japan,JPN,women,15-24,2017,3.75
+Japan,JPN,women,25-34,2017,49.2
+Japan,JPN,women,35-44,2017,72.44
+Japan,JPN,men,15-24,2017,2.21
+Japan,JPN,men,25-34,2017,40.22
+Japan,JPN,men,35-44,2017,66.23
+Japan,JPN,women,15-24,2018,3.74
+Japan,JPN,women,25-34,2018,48.07
+Japan,JPN,women,35-44,2018,71.67
+Japan,JPN,men,15-24,2018,2.37
+Japan,JPN,men,25-34,2018,39.37
+Japan,JPN,men,35-44,2018,66.26
+Japan,JPN,women,15-24,2019,3.87
+Japan,JPN,women,25-34,2019,49.47
+Japan,JPN,women,35-44,2019,72.37
+Japan,JPN,men,15-24,2019,2.47
+Japan,JPN,men,25-34,2019,39.47
+Japan,JPN,men,35-44,2019,66.22
+Japan,JPN,women,15-24,2020,3.79
+Japan,JPN,women,25-34,2020,48.09
+Japan,JPN,women,35-44,2020,71.49
+Japan,JPN,men,15-24,2020,2.71
+Japan,JPN,men,25-34,2020,39.01
+Japan,JPN,men,35-44,2020,65.34
+Japan,JPN,women,15-24,2021,3.67
+Japan,JPN,women,25-34,2021,46.8
+Japan,JPN,women,35-44,2021,70.81
+Japan,JPN,men,15-24,2021,2.51
+Japan,JPN,men,25-34,2021,37.98
+Japan,JPN,men,35-44,2021,64.63
+Japan,JPN,women,15-24,2022,3.47
+Japan,JPN,women,25-34,2022,45.82
+Japan,JPN,women,35-44,2022,70.46
+Japan,JPN,men,15-24,2022,2.24
+Japan,JPN,men,25-34,2022,36.76
+Japan,JPN,men,35-44,2022,63.76
+Japan,JPN,women,15-24,2023,3.46
+Japan,JPN,women,25-34,2023,46.05
+Japan,JPN,women,35-44,2023,70.31
+Japan,JPN,men,15-24,2023,2.26
+Japan,JPN,men,25-34,2023,36.92
+Japan,JPN,men,35-44,2023,63.71
+Cambodia,KHM,women,15-24,1996,25.66
+Cambodia,KHM,women,25-34,1996,74.51
+Cambodia,KHM,women,35-44,1996,77.47
+Cambodia,KHM,men,15-24,1996,14.9
+Cambodia,KHM,men,25-34,1996,83.32
+Cambodia,KHM,men,35-44,1996,96.6
+Cambodia,KHM,women,15-24,1997,24.33
+Cambodia,KHM,women,25-34,1997,74.01
+Cambodia,KHM,women,35-44,1997,76.23
+Cambodia,KHM,men,15-24,1997,13.26
+Cambodia,KHM,men,25-34,1997,81.68
+Cambodia,KHM,men,35-44,1997,95.51
+Cambodia,KHM,women,15-24,1999,20.1
+Cambodia,KHM,women,25-34,1999,75.12
+Cambodia,KHM,women,35-44,1999,80.04
+Cambodia,KHM,men,15-24,1999,10.71
+Cambodia,KHM,men,25-34,1999,81.11
+Cambodia,KHM,men,35-44,1999,96.86
+Cambodia,KHM,women,15-24,2003,24.18
+Cambodia,KHM,women,25-34,2003,75.53
+Cambodia,KHM,women,35-44,2003,78.2
+Cambodia,KHM,men,15-24,2003,13.73
+Cambodia,KHM,men,25-34,2003,80.66
+Cambodia,KHM,men,35-44,2003,95.37
+Cambodia,KHM,women,15-24,2007,23.87
+Cambodia,KHM,women,25-34,2007,74.25
+Cambodia,KHM,women,35-44,2007,78.29
+Cambodia,KHM,men,15-24,2007,12.91
+Cambodia,KHM,men,25-34,2007,76.07
+Cambodia,KHM,men,35-44,2007,94.19
+Cambodia,KHM,women,15-24,2008,23.76
+Cambodia,KHM,women,25-34,2008,70.59
+Cambodia,KHM,women,35-44,2008,79.51
+Cambodia,KHM,men,15-24,2008,14.15
+Cambodia,KHM,men,25-34,2008,73.97
+Cambodia,KHM,men,35-44,2008,94.31
+Cambodia,KHM,women,15-24,2009,25.42
+Cambodia,KHM,women,25-34,2009,72.78
+Cambodia,KHM,women,35-44,2009,79.85
+Cambodia,KHM,men,15-24,2009,13.88
+Cambodia,KHM,men,25-34,2009,75.09
+Cambodia,KHM,men,35-44,2009,94.77
+Cambodia,KHM,women,15-24,2010,23.01
+Cambodia,KHM,women,25-34,2010,71.5
+Cambodia,KHM,women,35-44,2010,80.13
+Cambodia,KHM,men,15-24,2010,13.02
+Cambodia,KHM,men,25-34,2010,72.83
+Cambodia,KHM,men,35-44,2010,93.65
+Cambodia,KHM,women,15-24,2011,21.09
+Cambodia,KHM,women,25-34,2011,71.16
+Cambodia,KHM,women,35-44,2011,79.13
+Cambodia,KHM,men,15-24,2011,10.98
+Cambodia,KHM,men,25-34,2011,72.84
+Cambodia,KHM,men,35-44,2011,95.84
+Cambodia,KHM,women,15-24,2013,26.93
+Cambodia,KHM,women,25-34,2013,71.45
+Cambodia,KHM,women,35-44,2013,80.69
+Cambodia,KHM,men,15-24,2013,15.46
+Cambodia,KHM,men,25-34,2013,72.94
+Cambodia,KHM,men,35-44,2013,94.57
+Cambodia,KHM,women,15-24,2014,23.24
+Cambodia,KHM,women,25-34,2014,69.43
+Cambodia,KHM,women,35-44,2014,79.46
+Cambodia,KHM,men,15-24,2014,12.47
+Cambodia,KHM,men,25-34,2014,68.73
+Cambodia,KHM,men,35-44,2014,93.52
+Cambodia,KHM,women,15-24,2015,25.23
+Cambodia,KHM,women,25-34,2015,69.49
+Cambodia,KHM,women,35-44,2015,82.7
+Cambodia,KHM,men,15-24,2015,14.23
+Cambodia,KHM,men,25-34,2015,68.61
+Cambodia,KHM,men,35-44,2015,92.27
+Cambodia,KHM,women,15-24,2016,27.52
+Cambodia,KHM,women,25-34,2016,69.35
+Cambodia,KHM,women,35-44,2016,79.88
+Cambodia,KHM,men,15-24,2016,13.24
+Cambodia,KHM,men,25-34,2016,67.56
+Cambodia,KHM,men,35-44,2016,92.38
+Cambodia,KHM,women,15-24,2017,22.82
+Cambodia,KHM,women,25-34,2017,67.51
+Cambodia,KHM,women,35-44,2017,78.48
+Cambodia,KHM,men,15-24,2017,11.74
+Cambodia,KHM,men,25-34,2017,62.01
+Cambodia,KHM,men,35-44,2017,91.56
+Cambodia,KHM,women,15-24,2020,26.58
+Cambodia,KHM,women,25-34,2020,74.64
+Cambodia,KHM,women,35-44,2020,83.05
+Cambodia,KHM,men,15-24,2020,14.06
+Cambodia,KHM,men,25-34,2020,69.61
+Cambodia,KHM,men,35-44,2020,90.9
+Cambodia,KHM,women,15-24,2021,23.67
+Cambodia,KHM,women,25-34,2021,74.66
+Cambodia,KHM,women,35-44,2021,83.27
+Cambodia,KHM,men,15-24,2021,12.51
+Cambodia,KHM,men,25-34,2021,66.99
+Cambodia,KHM,men,35-44,2021,91.57
+Cambodia,KHM,women,15-24,2023,23.31
+Cambodia,KHM,women,25-34,2023,73.27
+Cambodia,KHM,women,35-44,2023,82.82
+Cambodia,KHM,men,15-24,2023,11.89
+Cambodia,KHM,men,25-34,2023,64.05
+Cambodia,KHM,men,35-44,2023,90.24
+S Korea,KOR,women,15-24,2000,5.92
+S Korea,KOR,women,25-34,2000,70.45
+S Korea,KOR,women,35-44,2000,91.94
+S Korea,KOR,men,15-24,2000,1.83
+S Korea,KOR,men,25-34,2000,46.31
+S Korea,KOR,men,35-44,2000,87.98
+S Korea,KOR,women,15-24,2001,5.5
+S Korea,KOR,women,25-34,2001,69.14
+S Korea,KOR,women,35-44,2001,91.53
+S Korea,KOR,men,15-24,2001,1.71
+S Korea,KOR,men,25-34,2001,44.57
+S Korea,KOR,men,35-44,2001,86.73
+S Korea,KOR,women,15-24,2002,4.76
+S Korea,KOR,women,25-34,2002,67.25
+S Korea,KOR,women,35-44,2002,90.86
+S Korea,KOR,men,15-24,2002,1.34
+S Korea,KOR,men,25-34,2002,42.89
+S Korea,KOR,men,35-44,2002,85.56
+S Korea,KOR,women,15-24,2003,4.96
+S Korea,KOR,women,25-34,2003,66.42
+S Korea,KOR,women,35-44,2003,90.5
+S Korea,KOR,men,15-24,2003,1.33
+S Korea,KOR,men,25-34,2003,43.81
+S Korea,KOR,men,35-44,2003,87.07
+S Korea,KOR,women,15-24,2004,4.22
+S Korea,KOR,women,25-34,2004,63.15
+S Korea,KOR,women,35-44,2004,89.83
+S Korea,KOR,men,15-24,2004,1.34
+S Korea,KOR,men,25-34,2004,40.78
+S Korea,KOR,men,35-44,2004,85.53
+S Korea,KOR,women,15-24,2005,3.09
+S Korea,KOR,women,25-34,2005,59.69
+S Korea,KOR,women,35-44,2005,89.23
+S Korea,KOR,men,15-24,2005,1.14
+S Korea,KOR,men,25-34,2005,38.22
+S Korea,KOR,men,35-44,2005,84.12
+S Korea,KOR,women,15-24,2006,2.86
+S Korea,KOR,women,25-34,2006,55.9
+S Korea,KOR,women,35-44,2006,88.08
+S Korea,KOR,men,15-24,2006,0.95
+S Korea,KOR,men,25-34,2006,35.3
+S Korea,KOR,men,35-44,2006,81.84
+S Korea,KOR,women,15-24,2007,3.08
+S Korea,KOR,women,25-34,2007,53.22
+S Korea,KOR,women,35-44,2007,87.61
+S Korea,KOR,men,15-24,2007,0.96
+S Korea,KOR,men,25-34,2007,33.87
+S Korea,KOR,men,35-44,2007,79.55
+S Korea,KOR,women,15-24,2008,3.34
+S Korea,KOR,women,25-34,2008,52.78
+S Korea,KOR,women,35-44,2008,87.27
+S Korea,KOR,men,15-24,2008,0.72
+S Korea,KOR,men,25-34,2008,33.64
+S Korea,KOR,men,35-44,2008,78.43
+S Korea,KOR,women,15-24,2009,3.07
+S Korea,KOR,women,25-34,2009,53.2
+S Korea,KOR,women,35-44,2009,87.31
+S Korea,KOR,men,15-24,2009,0.47
+S Korea,KOR,men,25-34,2009,33.88
+S Korea,KOR,men,35-44,2009,78.95
+S Korea,KOR,women,15-24,2010,2.93
+S Korea,KOR,women,25-34,2010,51.9
+S Korea,KOR,women,35-44,2010,87.18
+S Korea,KOR,men,15-24,2010,0.44
+S Korea,KOR,men,25-34,2010,32.76
+S Korea,KOR,men,35-44,2010,78.02
+S Korea,KOR,women,15-24,2011,2.91
+S Korea,KOR,women,25-34,2011,51.1
+S Korea,KOR,women,35-44,2011,86.6
+S Korea,KOR,men,15-24,2011,0.52
+S Korea,KOR,men,25-34,2011,32.2
+S Korea,KOR,men,35-44,2011,77.62
+S Korea,KOR,women,15-24,2012,2.47
+S Korea,KOR,women,25-34,2012,50.57
+S Korea,KOR,women,35-44,2012,86.71
+S Korea,KOR,men,15-24,2012,0.4
+S Korea,KOR,men,25-34,2012,32.05
+S Korea,KOR,men,35-44,2012,77.33
+S Korea,KOR,women,15-24,2013,2.34
+S Korea,KOR,women,25-34,2013,50.46
+S Korea,KOR,women,35-44,2013,86.89
+S Korea,KOR,men,15-24,2013,0.4
+S Korea,KOR,men,25-34,2013,31.48
+S Korea,KOR,men,35-44,2013,77.09
+S Korea,KOR,women,15-24,2014,2.38
+S Korea,KOR,women,25-34,2014,48.61
+S Korea,KOR,women,35-44,2014,85.69
+S Korea,KOR,men,15-24,2014,0.63
+S Korea,KOR,men,25-34,2014,30.44
+S Korea,KOR,men,35-44,2014,76.03
+S Korea,KOR,women,15-24,2015,2.4
+S Korea,KOR,women,25-34,2015,46.15
+S Korea,KOR,women,35-44,2015,83.93
+S Korea,KOR,men,15-24,2015,0.71
+S Korea,KOR,men,25-34,2015,29.35
+S Korea,KOR,men,35-44,2015,73.75
+S Korea,KOR,women,15-24,2016,2.25
+S Korea,KOR,women,25-34,2016,43.12
+S Korea,KOR,women,35-44,2016,83.02
+S Korea,KOR,men,15-24,2016,0.55
+S Korea,KOR,men,25-34,2016,27.38
+S Korea,KOR,men,35-44,2016,72.49
+S Korea,KOR,women,15-24,2017,1.85
+S Korea,KOR,women,25-34,2017,40.15
+S Korea,KOR,women,35-44,2017,82.24
+S Korea,KOR,men,15-24,2017,0.45
+S Korea,KOR,men,25-34,2017,23.78
+S Korea,KOR,men,35-44,2017,71.59
+S Korea,KOR,women,15-24,2018,1.73
+S Korea,KOR,women,25-34,2018,37.79
+S Korea,KOR,women,35-44,2018,82.11
+S Korea,KOR,men,15-24,2018,0.57
+S Korea,KOR,men,25-34,2018,21.87
+S Korea,KOR,men,35-44,2018,69.31
+S Korea,KOR,women,15-24,2019,1.54
+S Korea,KOR,women,25-34,2019,35.49
+S Korea,KOR,women,35-44,2019,80.86
+S Korea,KOR,men,15-24,2019,0.51
+S Korea,KOR,men,25-34,2019,20.37
+S Korea,KOR,men,35-44,2019,68.11
+S Korea,KOR,women,15-24,2020,1.55
+S Korea,KOR,women,25-34,2020,33.64
+S Korea,KOR,women,35-44,2020,78.49
+S Korea,KOR,men,15-24,2020,0.48
+S Korea,KOR,men,25-34,2020,18.04
+S Korea,KOR,men,35-44,2020,66.49
+S Korea,KOR,women,15-24,2021,1.29
+S Korea,KOR,women,25-34,2021,31.61
+S Korea,KOR,women,35-44,2021,78.04
+S Korea,KOR,men,15-24,2021,0.35
+S Korea,KOR,men,25-34,2021,18.41
+S Korea,KOR,men,35-44,2021,64.36
+S Korea,KOR,women,15-24,2022,1.0
+S Korea,KOR,women,25-34,2022,30.52
+S Korea,KOR,women,35-44,2022,77.44
+S Korea,KOR,men,15-24,2022,0.41
+S Korea,KOR,men,25-34,2022,17.91
+S Korea,KOR,men,35-44,2022,63.42
+S Korea,KOR,women,15-24,2023,1.43
+S Korea,KOR,women,25-34,2023,29.58
+S Korea,KOR,women,35-44,2023,74.64
+S Korea,KOR,men,15-24,2023,0.62
+S Korea,KOR,men,25-34,2023,17.53
+S Korea,KOR,men,35-44,2023,62.29
+S Korea,KOR,women,15-24,2024,1.22
+S Korea,KOR,women,25-34,2024,28.65
+S Korea,KOR,women,35-44,2024,73.13
+S Korea,KOR,men,15-24,2024,0.34
+S Korea,KOR,men,25-34,2024,16.26
+S Korea,KOR,men,35-44,2024,61.33
+S Korea,KOR,women,15-24,2025,0.78
+S Korea,KOR,women,25-34,2025,26.41
+S Korea,KOR,women,35-44,2025,71.61
+S Korea,KOR,men,15-24,2025,0.4
+S Korea,KOR,men,25-34,2025,15.31
+S Korea,KOR,men,35-44,2025,59.55
+Sri Lanka,LKA,women,15-24,2010,20.9
+Sri Lanka,LKA,women,25-34,2010,79.47
+Sri Lanka,LKA,women,35-44,2010,88.4
+Sri Lanka,LKA,men,15-24,2010,7.01
+Sri Lanka,LKA,men,25-34,2010,63.19
+Sri Lanka,LKA,men,35-44,2010,90.4
+Sri Lanka,LKA,women,15-24,2011,22.49
+Sri Lanka,LKA,women,25-34,2011,78.61
+Sri Lanka,LKA,women,35-44,2011,88.3
+Sri Lanka,LKA,men,15-24,2011,7.8
+Sri Lanka,LKA,men,25-34,2011,61.68
+Sri Lanka,LKA,men,35-44,2011,89.52
+Sri Lanka,LKA,women,15-24,2013,22.68
+Sri Lanka,LKA,women,25-34,2013,80.35
+Sri Lanka,LKA,women,35-44,2013,87.98
+Sri Lanka,LKA,men,15-24,2013,8.06
+Sri Lanka,LKA,men,25-34,2013,64.89
+Sri Lanka,LKA,men,35-44,2013,91.22
+Sri Lanka,LKA,women,15-24,2014,22.23
+Sri Lanka,LKA,women,25-34,2014,80.7
+Sri Lanka,LKA,women,35-44,2014,88.41
+Sri Lanka,LKA,men,15-24,2014,7.38
+Sri Lanka,LKA,men,25-34,2014,63.09
+Sri Lanka,LKA,men,35-44,2014,89.05
+Sri Lanka,LKA,women,15-24,2015,20.71
+Sri Lanka,LKA,women,25-34,2015,80.49
+Sri Lanka,LKA,women,35-44,2015,89.92
+Sri Lanka,LKA,men,15-24,2015,7.16
+Sri Lanka,LKA,men,25-34,2015,62.96
+Sri Lanka,LKA,men,35-44,2015,90.79
+Sri Lanka,LKA,women,15-24,2016,20.35
+Sri Lanka,LKA,women,25-34,2016,79.58
+Sri Lanka,LKA,women,35-44,2016,89.44
+Sri Lanka,LKA,men,15-24,2016,6.32
+Sri Lanka,LKA,men,25-34,2016,61.49
+Sri Lanka,LKA,men,35-44,2016,89.6
+Sri Lanka,LKA,women,15-24,2017,18.28
+Sri Lanka,LKA,women,25-34,2017,80.8
+Sri Lanka,LKA,women,35-44,2017,89.3
+Sri Lanka,LKA,men,15-24,2017,6.34
+Sri Lanka,LKA,men,25-34,2017,58.78
+Sri Lanka,LKA,men,35-44,2017,89.16
+Sri Lanka,LKA,women,15-24,2018,18.13
+Sri Lanka,LKA,women,25-34,2018,79.23
+Sri Lanka,LKA,women,35-44,2018,90.66
+Sri Lanka,LKA,men,15-24,2018,5.36
+Sri Lanka,LKA,men,25-34,2018,56.38
+Sri Lanka,LKA,men,35-44,2018,89.52
+Sri Lanka,LKA,women,15-24,2019,17.6
+Sri Lanka,LKA,women,25-34,2019,77.53
+Sri Lanka,LKA,women,35-44,2019,90.52
+Sri Lanka,LKA,men,15-24,2019,5.75
+Sri Lanka,LKA,men,25-34,2019,55.41
+Sri Lanka,LKA,men,35-44,2019,89.73
+Sri Lanka,LKA,women,15-24,2020,14.34
+Sri Lanka,LKA,women,25-34,2020,75.99
+Sri Lanka,LKA,women,35-44,2020,90.55
+Sri Lanka,LKA,men,15-24,2020,4.79
+Sri Lanka,LKA,men,25-34,2020,52.3
+Sri Lanka,LKA,men,35-44,2020,88.11
+Sri Lanka,LKA,women,15-24,2021,11.89
+Sri Lanka,LKA,women,25-34,2021,72.37
+Sri Lanka,LKA,women,35-44,2021,90.18
+Sri Lanka,LKA,men,15-24,2021,4.04
+Sri Lanka,LKA,men,25-34,2021,47.96
+Sri Lanka,LKA,men,35-44,2021,86.76
+Sri Lanka,LKA,women,15-24,2022,11.81
+Sri Lanka,LKA,women,25-34,2022,75.89
+Sri Lanka,LKA,women,35-44,2022,91.23
+Sri Lanka,LKA,men,15-24,2022,4.18
+Sri Lanka,LKA,men,25-34,2022,51.04
+Sri Lanka,LKA,men,35-44,2022,86.69
+Sri Lanka,LKA,women,15-24,2023,11.82
+Sri Lanka,LKA,women,25-34,2023,72.57
+Sri Lanka,LKA,women,35-44,2023,90.64
+Sri Lanka,LKA,men,15-24,2023,3.83
+Sri Lanka,LKA,men,25-34,2023,50.29
+Sri Lanka,LKA,men,35-44,2023,84.73
+Sri Lanka,LKA,women,15-24,2024,10.16
+Sri Lanka,LKA,women,25-34,2024,70.98
+Sri Lanka,LKA,women,35-44,2024,90.01
+Sri Lanka,LKA,men,15-24,2024,3.44
+Sri Lanka,LKA,men,25-34,2024,47.63
+Sri Lanka,LKA,men,35-44,2024,83.57
+Moldova,MDA,women,15-24,2011,18.01
+Moldova,MDA,women,25-34,2011,72.34
+Moldova,MDA,women,35-44,2011,79.51
+Moldova,MDA,men,15-24,2011,7.0
+Moldova,MDA,men,25-34,2011,59.01
+Moldova,MDA,men,35-44,2011,83.68
+Moldova,MDA,women,15-24,2012,16.96
+Moldova,MDA,women,25-34,2012,72.51
+Moldova,MDA,women,35-44,2012,79.38
+Moldova,MDA,men,15-24,2012,5.53
+Moldova,MDA,men,25-34,2012,56.42
+Moldova,MDA,men,35-44,2012,82.76
+Moldova,MDA,women,15-24,2013,17.29
+Moldova,MDA,women,25-34,2013,73.16
+Moldova,MDA,women,35-44,2013,78.7
+Moldova,MDA,men,15-24,2013,5.26
+Moldova,MDA,men,25-34,2013,56.07
+Moldova,MDA,men,35-44,2013,81.29
+Moldova,MDA,women,15-24,2014,18.76
+Moldova,MDA,women,25-34,2014,72.92
+Moldova,MDA,women,35-44,2014,79.36
+Moldova,MDA,men,15-24,2014,5.35
+Moldova,MDA,men,25-34,2014,57.05
+Moldova,MDA,men,35-44,2014,80.2
+Moldova,MDA,women,15-24,2015,20.68
+Moldova,MDA,women,25-34,2015,73.48
+Moldova,MDA,women,35-44,2015,79.67
+Moldova,MDA,men,15-24,2015,7.16
+Moldova,MDA,men,25-34,2015,55.11
+Moldova,MDA,men,35-44,2015,79.92
+Moldova,MDA,women,15-24,2016,20.43
+Moldova,MDA,women,25-34,2016,74.16
+Moldova,MDA,women,35-44,2016,79.55
+Moldova,MDA,men,15-24,2016,7.14
+Moldova,MDA,men,25-34,2016,56.05
+Moldova,MDA,men,35-44,2016,78.51
+Moldova,MDA,women,15-24,2017,20.69
+Moldova,MDA,women,25-34,2017,72.67
+Moldova,MDA,women,35-44,2017,79.93
+Moldova,MDA,men,15-24,2017,6.14
+Moldova,MDA,men,25-34,2017,56.58
+Moldova,MDA,men,35-44,2017,77.23
+Moldova,MDA,women,15-24,2018,21.26
+Moldova,MDA,women,25-34,2018,74.02
+Moldova,MDA,women,35-44,2018,79.43
+Moldova,MDA,men,15-24,2018,5.4
+Moldova,MDA,men,25-34,2018,55.33
+Moldova,MDA,men,35-44,2018,74.71
+Moldova,MDA,women,15-24,2019,24.8
+Moldova,MDA,women,25-34,2019,78.86
+Moldova,MDA,women,35-44,2019,80.37
+Moldova,MDA,men,15-24,2019,8.36
+Moldova,MDA,men,25-34,2019,63.42
+Moldova,MDA,men,35-44,2019,78.93
+Moldova,MDA,women,15-24,2020,19.16
+Moldova,MDA,women,25-34,2020,78.05
+Moldova,MDA,women,35-44,2020,80.57
+Moldova,MDA,men,15-24,2020,5.52
+Moldova,MDA,men,25-34,2020,60.99
+Moldova,MDA,men,35-44,2020,76.74
+Moldova,MDA,women,15-24,2021,17.98
+Moldova,MDA,women,25-34,2021,78.98
+Moldova,MDA,women,35-44,2021,80.96
+Moldova,MDA,men,15-24,2021,5.75
+Moldova,MDA,men,25-34,2021,62.27
+Moldova,MDA,men,35-44,2021,79.42
+Moldova,MDA,women,15-24,2022,18.01
+Moldova,MDA,women,25-34,2022,79.88
+Moldova,MDA,women,35-44,2022,81.98
+Moldova,MDA,men,15-24,2022,5.42
+Moldova,MDA,men,25-34,2022,60.66
+Moldova,MDA,men,35-44,2022,79.29
+Moldova,MDA,women,15-24,2023,16.71
+Moldova,MDA,women,25-34,2023,77.86
+Moldova,MDA,women,35-44,2023,81.4
+Moldova,MDA,men,15-24,2023,6.03
+Moldova,MDA,men,25-34,2023,61.61
+Moldova,MDA,men,35-44,2023,78.25
+Moldova,MDA,women,15-24,2024,17.15
+Moldova,MDA,women,25-34,2024,75.3
+Moldova,MDA,women,35-44,2024,80.42
+Moldova,MDA,men,15-24,2024,4.35
+Moldova,MDA,men,25-34,2024,60.76
+Moldova,MDA,men,35-44,2024,78.12
+Moldova,MDA,women,15-24,2025,14.84
+Moldova,MDA,women,25-34,2025,77.16
+Moldova,MDA,women,35-44,2025,78.5
+Moldova,MDA,men,15-24,2025,4.16
+Moldova,MDA,men,25-34,2025,61.1
+Moldova,MDA,men,35-44,2025,77.71
+Mexico,MEX,women,15-24,2002,26.32
+Mexico,MEX,women,25-34,2002,70.2
+Mexico,MEX,women,35-44,2002,78.41
+Mexico,MEX,men,15-24,2002,15.72
+Mexico,MEX,men,25-34,2002,68.49
+Mexico,MEX,men,35-44,2002,85.66
+Mexico,MEX,women,15-24,2003,26.92
+Mexico,MEX,women,25-34,2003,69.45
+Mexico,MEX,women,35-44,2003,78.01
+Mexico,MEX,men,15-24,2003,15.98
+Mexico,MEX,men,25-34,2003,67.8
+Mexico,MEX,men,35-44,2003,85.29
+Mexico,MEX,women,15-24,2004,27.08
+Mexico,MEX,women,25-34,2004,68.87
+Mexico,MEX,women,35-44,2004,77.18
+Mexico,MEX,men,15-24,2004,16.18
+Mexico,MEX,men,25-34,2004,67.69
+Mexico,MEX,men,35-44,2004,84.56
+Mexico,MEX,women,15-24,2005,25.73
+Mexico,MEX,women,25-34,2005,69.13
+Mexico,MEX,women,35-44,2005,77.63
+Mexico,MEX,men,15-24,2005,14.75
+Mexico,MEX,men,25-34,2005,66.84
+Mexico,MEX,men,35-44,2005,85.4
+Mexico,MEX,women,15-24,2006,25.18
+Mexico,MEX,women,25-34,2006,69.16
+Mexico,MEX,women,35-44,2006,77.26
+Mexico,MEX,men,15-24,2006,14.61
+Mexico,MEX,men,25-34,2006,67.04
+Mexico,MEX,men,35-44,2006,84.31
+Mexico,MEX,women,15-24,2007,24.81
+Mexico,MEX,women,25-34,2007,68.66
+Mexico,MEX,women,35-44,2007,76.97
+Mexico,MEX,men,15-24,2007,14.39
+Mexico,MEX,men,25-34,2007,66.39
+Mexico,MEX,men,35-44,2007,84.25
+Mexico,MEX,women,15-24,2008,25.4
+Mexico,MEX,women,25-34,2008,68.3
+Mexico,MEX,women,35-44,2008,76.16
+Mexico,MEX,men,15-24,2008,14.69
+Mexico,MEX,men,25-34,2008,65.41
+Mexico,MEX,men,35-44,2008,83.45
+Mexico,MEX,women,15-24,2009,25.03
+Mexico,MEX,women,25-34,2009,67.18
+Mexico,MEX,women,35-44,2009,75.61
+Mexico,MEX,men,15-24,2009,14.48
+Mexico,MEX,men,25-34,2009,64.0
+Mexico,MEX,men,35-44,2009,82.92
+Mexico,MEX,women,15-24,2010,25.58
+Mexico,MEX,women,25-34,2010,66.99
+Mexico,MEX,women,35-44,2010,75.37
+Mexico,MEX,men,15-24,2010,14.78
+Mexico,MEX,men,25-34,2010,64.23
+Mexico,MEX,men,35-44,2010,82.26
+Mexico,MEX,women,15-24,2011,26.39
+Mexico,MEX,women,25-34,2011,66.63
+Mexico,MEX,women,35-44,2011,75.3
+Mexico,MEX,men,15-24,2011,15.42
+Mexico,MEX,men,25-34,2011,63.78
+Mexico,MEX,men,35-44,2011,81.32
+Mexico,MEX,women,15-24,2012,26.54
+Mexico,MEX,women,25-34,2012,65.74
+Mexico,MEX,women,35-44,2012,74.98
+Mexico,MEX,men,15-24,2012,15.37
+Mexico,MEX,men,25-34,2012,62.38
+Mexico,MEX,men,35-44,2012,81.44
+Mexico,MEX,women,15-24,2013,25.95
+Mexico,MEX,women,25-34,2013,65.3
+Mexico,MEX,women,35-44,2013,75.21
+Mexico,MEX,men,15-24,2013,15.1
+Mexico,MEX,men,25-34,2013,61.88
+Mexico,MEX,men,35-44,2013,81.29
+Mexico,MEX,women,15-24,2014,26.24
+Mexico,MEX,women,25-34,2014,65.4
+Mexico,MEX,women,35-44,2014,75.37
+Mexico,MEX,men,15-24,2014,15.1
+Mexico,MEX,men,25-34,2014,62.33
+Mexico,MEX,men,35-44,2014,81.94
+Mexico,MEX,women,15-24,2015,26.11
+Mexico,MEX,women,25-34,2015,65.58
+Mexico,MEX,women,35-44,2015,74.43
+Mexico,MEX,men,15-24,2015,15.02
+Mexico,MEX,men,25-34,2015,61.55
+Mexico,MEX,men,35-44,2015,80.89
+Mexico,MEX,women,15-24,2016,25.75
+Mexico,MEX,women,25-34,2016,64.95
+Mexico,MEX,women,35-44,2016,74.15
+Mexico,MEX,men,15-24,2016,15.1
+Mexico,MEX,men,25-34,2016,60.99
+Mexico,MEX,men,35-44,2016,80.29
+Mexico,MEX,women,15-24,2017,25.07
+Mexico,MEX,women,25-34,2017,64.72
+Mexico,MEX,women,35-44,2017,74.14
+Mexico,MEX,men,15-24,2017,14.67
+Mexico,MEX,men,25-34,2017,60.8
+Mexico,MEX,men,35-44,2017,79.91
+Mexico,MEX,women,15-24,2018,24.54
+Mexico,MEX,women,25-34,2018,64.48
+Mexico,MEX,women,35-44,2018,73.46
+Mexico,MEX,men,15-24,2018,14.1
+Mexico,MEX,men,25-34,2018,60.2
+Mexico,MEX,men,35-44,2018,79.08
+Mexico,MEX,women,15-24,2019,23.9
+Mexico,MEX,women,25-34,2019,63.53
+Mexico,MEX,women,35-44,2019,72.47
+Mexico,MEX,men,15-24,2019,13.51
+Mexico,MEX,men,25-34,2019,58.32
+Mexico,MEX,men,35-44,2019,77.34
+Mexico,MEX,women,15-24,2020,21.36
+Mexico,MEX,women,25-34,2020,62.92
+Mexico,MEX,women,35-44,2020,71.07
+Mexico,MEX,men,15-24,2020,12.23
+Mexico,MEX,men,25-34,2020,56.69
+Mexico,MEX,men,35-44,2020,76.03
+Mexico,MEX,women,15-24,2021,20.61
+Mexico,MEX,women,25-34,2021,60.74
+Mexico,MEX,women,35-44,2021,71.49
+Mexico,MEX,men,15-24,2021,12.03
+Mexico,MEX,men,25-34,2021,53.93
+Mexico,MEX,men,35-44,2021,75.65
+Mexico,MEX,women,15-24,2022,20.36
+Mexico,MEX,women,25-34,2022,60.3
+Mexico,MEX,women,35-44,2022,70.7
+Mexico,MEX,men,15-24,2022,12.11
+Mexico,MEX,men,25-34,2022,53.07
+Mexico,MEX,men,35-44,2022,75.26
+Mexico,MEX,women,15-24,2023,19.39
+Mexico,MEX,women,25-34,2023,59.74
+Mexico,MEX,women,35-44,2023,70.29
+Mexico,MEX,men,15-24,2023,11.3
+Mexico,MEX,men,25-34,2023,52.81
+Mexico,MEX,men,35-44,2023,73.86
+Mexico,MEX,women,15-24,2024,18.76
+Mexico,MEX,women,25-34,2024,58.92
+Mexico,MEX,women,35-44,2024,69.88
+Mexico,MEX,men,15-24,2024,10.84
+Mexico,MEX,men,25-34,2024,51.91
+Mexico,MEX,men,35-44,2024,73.98
+Mexico,MEX,women,15-24,2025,17.36
+Mexico,MEX,women,25-34,2025,57.88
+Mexico,MEX,women,35-44,2025,68.56
+Mexico,MEX,men,15-24,2025,10.17
+Mexico,MEX,men,25-34,2025,50.61
+Mexico,MEX,men,35-44,2025,72.8
+Mongolia,MNG,women,15-24,2013,18.49
+Mongolia,MNG,women,25-34,2013,73.77
+Mongolia,MNG,women,35-44,2013,82.66
+Mongolia,MNG,men,15-24,2013,11.0
+Mongolia,MNG,men,25-34,2013,69.76
+Mongolia,MNG,men,35-44,2013,86.38
+Mongolia,MNG,women,15-24,2014,18.24
+Mongolia,MNG,women,25-34,2014,76.63
+Mongolia,MNG,women,35-44,2014,82.19
+Mongolia,MNG,men,15-24,2014,11.06
+Mongolia,MNG,men,25-34,2014,69.05
+Mongolia,MNG,men,35-44,2014,86.88
+Mongolia,MNG,women,15-24,2015,17.71
+Mongolia,MNG,women,25-34,2015,75.46
+Mongolia,MNG,women,35-44,2015,81.72
+Mongolia,MNG,men,15-24,2015,9.71
+Mongolia,MNG,men,25-34,2015,69.97
+Mongolia,MNG,men,35-44,2015,87.49
+Mongolia,MNG,women,15-24,2016,15.94
+Mongolia,MNG,women,25-34,2016,74.69
+Mongolia,MNG,women,35-44,2016,82.58
+Mongolia,MNG,men,15-24,2016,8.62
+Mongolia,MNG,men,25-34,2016,69.14
+Mongolia,MNG,men,35-44,2016,85.22
+Mongolia,MNG,women,15-24,2017,15.8
+Mongolia,MNG,women,25-34,2017,74.29
+Mongolia,MNG,women,35-44,2017,82.27
+Mongolia,MNG,men,15-24,2017,7.45
+Mongolia,MNG,men,25-34,2017,68.23
+Mongolia,MNG,men,35-44,2017,86.62
+Mongolia,MNG,women,15-24,2018,13.73
+Mongolia,MNG,women,25-34,2018,73.71
+Mongolia,MNG,women,35-44,2018,80.82
+Mongolia,MNG,men,15-24,2018,7.74
+Mongolia,MNG,men,25-34,2018,68.97
+Mongolia,MNG,men,35-44,2018,85.59
+Mongolia,MNG,women,15-24,2019,16.86
+Mongolia,MNG,women,25-34,2019,75.02
+Mongolia,MNG,women,35-44,2019,82.84
+Mongolia,MNG,men,15-24,2019,7.8
+Mongolia,MNG,men,25-34,2019,68.64
+Mongolia,MNG,men,35-44,2019,86.57
+Mongolia,MNG,women,15-24,2020,16.93
+Mongolia,MNG,women,25-34,2020,75.92
+Mongolia,MNG,women,35-44,2020,81.78
+Mongolia,MNG,men,15-24,2020,8.73
+Mongolia,MNG,men,25-34,2020,66.87
+Mongolia,MNG,men,35-44,2020,85.99
+Mongolia,MNG,women,15-24,2021,11.72
+Mongolia,MNG,women,25-34,2021,72.05
+Mongolia,MNG,women,35-44,2021,82.08
+Mongolia,MNG,men,15-24,2021,7.24
+Mongolia,MNG,men,25-34,2021,70.01
+Mongolia,MNG,men,35-44,2021,87.13
+Mongolia,MNG,women,15-24,2022,14.47
+Mongolia,MNG,women,25-34,2022,76.36
+Mongolia,MNG,women,35-44,2022,82.1
+Mongolia,MNG,men,15-24,2022,9.69
+Mongolia,MNG,men,25-34,2022,68.32
+Mongolia,MNG,men,35-44,2022,84.64
+Mongolia,MNG,women,15-24,2023,13.34
+Mongolia,MNG,women,25-34,2023,73.4
+Mongolia,MNG,women,35-44,2023,81.54
+Mongolia,MNG,men,15-24,2023,6.57
+Mongolia,MNG,men,25-34,2023,67.24
+Mongolia,MNG,men,35-44,2023,84.73
+Mongolia,MNG,women,15-24,2024,11.5
+Mongolia,MNG,women,25-34,2024,72.44
+Mongolia,MNG,women,35-44,2024,81.92
+Mongolia,MNG,men,15-24,2024,7.16
+Mongolia,MNG,men,25-34,2024,63.66
+Mongolia,MNG,men,35-44,2024,84.14
+Mongolia,MNG,women,15-24,2025,10.41
+Mongolia,MNG,women,25-34,2025,75.09
+Mongolia,MNG,women,35-44,2025,83.76
+Mongolia,MNG,men,15-24,2025,5.99
+Mongolia,MNG,men,25-34,2025,62.49
+Mongolia,MNG,men,35-44,2025,85.23
+Mauritius,MUS,women,15-24,2001,27.93
+Mauritius,MUS,women,25-34,2001,81.02
+Mauritius,MUS,women,35-44,2001,84.16
+Mauritius,MUS,men,15-24,2001,5.53
+Mauritius,MUS,men,25-34,2001,56.74
+Mauritius,MUS,men,35-44,2001,85.1
+Mauritius,MUS,women,15-24,2002,25.28
+Mauritius,MUS,women,25-34,2002,78.76
+Mauritius,MUS,women,35-44,2002,83.53
+Mauritius,MUS,men,15-24,2002,5.37
+Mauritius,MUS,men,25-34,2002,52.11
+Mauritius,MUS,men,35-44,2002,85.28
+Mauritius,MUS,women,15-24,2003,29.39
+Mauritius,MUS,women,25-34,2003,81.04
+Mauritius,MUS,women,35-44,2003,83.4
+Mauritius,MUS,men,15-24,2003,6.35
+Mauritius,MUS,men,25-34,2003,58.41
+Mauritius,MUS,men,35-44,2003,85.52
+Mauritius,MUS,women,15-24,2004,25.18
+Mauritius,MUS,women,25-34,2004,79.0
+Mauritius,MUS,women,35-44,2004,83.38
+Mauritius,MUS,men,15-24,2004,3.9
+Mauritius,MUS,men,25-34,2004,54.11
+Mauritius,MUS,men,35-44,2004,83.63
+Mauritius,MUS,women,15-24,2005,28.47
+Mauritius,MUS,women,25-34,2005,80.65
+Mauritius,MUS,women,35-44,2005,83.0
+Mauritius,MUS,men,15-24,2005,5.77
+Mauritius,MUS,men,25-34,2005,55.66
+Mauritius,MUS,men,35-44,2005,85.15
+Mauritius,MUS,women,15-24,2006,22.79
+Mauritius,MUS,women,25-34,2006,79.27
+Mauritius,MUS,women,35-44,2006,84.65
+Mauritius,MUS,men,15-24,2006,3.33
+Mauritius,MUS,men,25-34,2006,53.14
+Mauritius,MUS,men,35-44,2006,84.42
+Mauritius,MUS,women,15-24,2007,17.65
+Mauritius,MUS,women,25-34,2007,77.86
+Mauritius,MUS,women,35-44,2007,85.81
+Mauritius,MUS,men,15-24,2007,2.44
+Mauritius,MUS,men,25-34,2007,48.59
+Mauritius,MUS,men,35-44,2007,82.64
+Mauritius,MUS,women,15-24,2008,18.31
+Mauritius,MUS,women,25-34,2008,78.29
+Mauritius,MUS,women,35-44,2008,85.25
+Mauritius,MUS,men,15-24,2008,3.33
+Mauritius,MUS,men,25-34,2008,51.2
+Mauritius,MUS,men,35-44,2008,82.52
+Mauritius,MUS,women,15-24,2009,19.17
+Mauritius,MUS,women,25-34,2009,78.61
+Mauritius,MUS,women,35-44,2009,83.85
+Mauritius,MUS,men,15-24,2009,3.87
+Mauritius,MUS,men,25-34,2009,52.01
+Mauritius,MUS,men,35-44,2009,81.66
+Mauritius,MUS,women,15-24,2010,17.25
+Mauritius,MUS,women,25-34,2010,76.21
+Mauritius,MUS,women,35-44,2010,84.18
+Mauritius,MUS,men,15-24,2010,4.18
+Mauritius,MUS,men,25-34,2010,46.77
+Mauritius,MUS,men,35-44,2010,81.43
+Mauritius,MUS,women,15-24,2011,15.95
+Mauritius,MUS,women,25-34,2011,73.88
+Mauritius,MUS,women,35-44,2011,86.61
+Mauritius,MUS,men,15-24,2011,4.13
+Mauritius,MUS,men,25-34,2011,44.51
+Mauritius,MUS,men,35-44,2011,80.15
+Mauritius,MUS,women,15-24,2012,13.78
+Mauritius,MUS,women,25-34,2012,71.45
+Mauritius,MUS,women,35-44,2012,86.94
+Mauritius,MUS,men,15-24,2012,3.41
+Mauritius,MUS,men,25-34,2012,40.47
+Mauritius,MUS,men,35-44,2012,78.82
+Mauritius,MUS,women,15-24,2013,14.46
+Mauritius,MUS,women,25-34,2013,71.4
+Mauritius,MUS,women,35-44,2013,83.06
+Mauritius,MUS,men,15-24,2013,3.12
+Mauritius,MUS,men,25-34,2013,43.3
+Mauritius,MUS,men,35-44,2013,76.73
+Mauritius,MUS,women,15-24,2014,14.12
+Mauritius,MUS,women,25-34,2014,71.07
+Mauritius,MUS,women,35-44,2014,84.31
+Mauritius,MUS,men,15-24,2014,2.81
+Mauritius,MUS,men,25-34,2014,39.24
+Mauritius,MUS,men,35-44,2014,76.0
+Mauritius,MUS,women,15-24,2015,11.1
+Mauritius,MUS,women,25-34,2015,64.89
+Mauritius,MUS,women,35-44,2015,86.14
+Mauritius,MUS,men,15-24,2015,2.75
+Mauritius,MUS,men,25-34,2015,34.05
+Mauritius,MUS,men,35-44,2015,76.31
+Mauritius,MUS,women,15-24,2016,14.6
+Mauritius,MUS,women,25-34,2016,66.87
+Mauritius,MUS,women,35-44,2016,84.28
+Mauritius,MUS,men,15-24,2016,4.3
+Mauritius,MUS,men,25-34,2016,43.37
+Mauritius,MUS,men,35-44,2016,74.12
+Mauritius,MUS,women,15-24,2017,12.26
+Mauritius,MUS,women,25-34,2017,63.87
+Mauritius,MUS,women,35-44,2017,83.71
+Mauritius,MUS,men,15-24,2017,3.13
+Mauritius,MUS,men,25-34,2017,40.7
+Mauritius,MUS,men,35-44,2017,73.38
+Mauritius,MUS,women,15-24,2018,10.25
+Mauritius,MUS,women,25-34,2018,63.74
+Mauritius,MUS,women,35-44,2018,83.94
+Mauritius,MUS,men,15-24,2018,2.33
+Mauritius,MUS,men,25-34,2018,35.43
+Mauritius,MUS,men,35-44,2018,71.92
+Mauritius,MUS,women,15-24,2019,8.43
+Mauritius,MUS,women,25-34,2019,61.68
+Mauritius,MUS,women,35-44,2019,82.65
+Mauritius,MUS,men,15-24,2019,2.66
+Mauritius,MUS,men,25-34,2019,31.87
+Mauritius,MUS,men,35-44,2019,71.78
+Mauritius,MUS,women,15-24,2020,14.55
+Mauritius,MUS,women,25-34,2020,60.57
+Mauritius,MUS,women,35-44,2020,85.48
+Mauritius,MUS,men,15-24,2020,4.42
+Mauritius,MUS,men,25-34,2020,34.76
+Mauritius,MUS,men,35-44,2020,75.82
+Mauritius,MUS,women,15-24,2021,6.97
+Mauritius,MUS,women,25-34,2021,57.48
+Mauritius,MUS,women,35-44,2021,85.31
+Mauritius,MUS,men,15-24,2021,3.31
+Mauritius,MUS,men,25-34,2021,33.57
+Mauritius,MUS,men,35-44,2021,70.32
+Mauritius,MUS,women,15-24,2022,5.63
+Mauritius,MUS,women,25-34,2022,52.6
+Mauritius,MUS,women,35-44,2022,80.02
+Mauritius,MUS,men,15-24,2022,1.33
+Mauritius,MUS,men,25-34,2022,29.6
+Mauritius,MUS,men,35-44,2022,65.81
+Mauritius,MUS,women,15-24,2023,8.53
+Mauritius,MUS,women,25-34,2023,55.82
+Mauritius,MUS,women,35-44,2023,79.52
+Mauritius,MUS,men,15-24,2023,3.32
+Mauritius,MUS,men,25-34,2023,35.72
+Mauritius,MUS,men,35-44,2023,65.78
+Mauritius,MUS,women,15-24,2024,7.49
+Mauritius,MUS,women,25-34,2024,51.45
+Mauritius,MUS,women,35-44,2024,78.88
+Mauritius,MUS,men,15-24,2024,2.47
+Mauritius,MUS,men,25-34,2024,31.86
+Mauritius,MUS,men,35-44,2024,63.73
+Pakistan,PAK,women,15-24,2006,31.96
+Pakistan,PAK,women,25-34,2006,89.32
+Pakistan,PAK,women,35-44,2006,94.69
+Pakistan,PAK,men,15-24,2006,11.82
+Pakistan,PAK,men,25-34,2006,72.42
+Pakistan,PAK,men,35-44,2006,95.34
+Pakistan,PAK,women,15-24,2007,31.08
+Pakistan,PAK,women,25-34,2007,89.94
+Pakistan,PAK,women,35-44,2007,94.72
+Pakistan,PAK,men,15-24,2007,11.0
+Pakistan,PAK,men,25-34,2007,72.69
+Pakistan,PAK,men,35-44,2007,95.24
+Pakistan,PAK,women,15-24,2008,29.41
+Pakistan,PAK,women,25-34,2008,88.94
+Pakistan,PAK,women,35-44,2008,94.78
+Pakistan,PAK,men,15-24,2008,10.0
+Pakistan,PAK,men,25-34,2008,72.05
+Pakistan,PAK,men,35-44,2008,96.14
+Pakistan,PAK,women,15-24,2009,28.8
+Pakistan,PAK,women,25-34,2009,88.94
+Pakistan,PAK,women,35-44,2009,94.81
+Pakistan,PAK,men,15-24,2009,9.72
+Pakistan,PAK,men,25-34,2009,71.73
+Pakistan,PAK,men,35-44,2009,95.79
+Pakistan,PAK,women,15-24,2010,28.39
+Pakistan,PAK,women,25-34,2010,88.51
+Pakistan,PAK,women,35-44,2010,94.95
+Pakistan,PAK,men,15-24,2010,9.88
+Pakistan,PAK,men,25-34,2010,72.07
+Pakistan,PAK,men,35-44,2010,95.49
+Pakistan,PAK,women,15-24,2011,29.12
+Pakistan,PAK,women,25-34,2011,88.84
+Pakistan,PAK,women,35-44,2011,94.22
+Pakistan,PAK,men,15-24,2011,9.97
+Pakistan,PAK,men,25-34,2011,72.23
+Pakistan,PAK,men,35-44,2011,95.67
+Pakistan,PAK,women,15-24,2013,30.5
+Pakistan,PAK,women,25-34,2013,88.83
+Pakistan,PAK,women,35-44,2013,94.41
+Pakistan,PAK,men,15-24,2013,10.54
+Pakistan,PAK,men,25-34,2013,72.23
+Pakistan,PAK,men,35-44,2013,95.59
+Pakistan,PAK,women,15-24,2014,32.46
+Pakistan,PAK,women,25-34,2014,89.13
+Pakistan,PAK,women,35-44,2014,94.94
+Pakistan,PAK,men,15-24,2014,12.16
+Pakistan,PAK,men,25-34,2014,75.6
+Pakistan,PAK,men,35-44,2014,95.64
+Pakistan,PAK,women,15-24,2015,31.9
+Pakistan,PAK,women,25-34,2015,89.9
+Pakistan,PAK,women,35-44,2015,94.73
+Pakistan,PAK,men,15-24,2015,11.43
+Pakistan,PAK,men,25-34,2015,75.6
+Pakistan,PAK,men,35-44,2015,95.77
+Pakistan,PAK,women,15-24,2018,32.57
+Pakistan,PAK,women,25-34,2018,88.15
+Pakistan,PAK,women,35-44,2018,94.03
+Pakistan,PAK,men,15-24,2018,11.73
+Pakistan,PAK,men,25-34,2018,73.72
+Pakistan,PAK,men,35-44,2018,95.25
+Pakistan,PAK,women,15-24,2019,32.64
+Pakistan,PAK,women,25-34,2019,89.22
+Pakistan,PAK,women,35-44,2019,94.2
+Pakistan,PAK,men,15-24,2019,12.56
+Pakistan,PAK,men,25-34,2019,74.7
+Pakistan,PAK,men,35-44,2019,95.39
+Pakistan,PAK,women,15-24,2021,32.79
+Pakistan,PAK,women,25-34,2021,89.45
+Pakistan,PAK,women,35-44,2021,94.81
+Pakistan,PAK,men,15-24,2021,13.12
+Pakistan,PAK,men,25-34,2021,75.61
+Pakistan,PAK,men,35-44,2021,95.43
+Pakistan,PAK,women,15-24,2025,26.78
+Pakistan,PAK,women,25-34,2025,88.08
+Pakistan,PAK,women,35-44,2025,94.86
+Pakistan,PAK,men,15-24,2025,9.72
+Pakistan,PAK,men,25-34,2025,69.53
+Pakistan,PAK,men,35-44,2025,94.39
+Panama,PAN,women,15-24,2010,30.93
+Panama,PAN,women,25-34,2010,65.12
+Panama,PAN,women,35-44,2010,69.75
+Panama,PAN,men,15-24,2010,16.2
+Panama,PAN,men,25-34,2010,58.3
+Panama,PAN,men,35-44,2010,72.03
+Panama,PAN,women,15-24,2011,30.08
+Panama,PAN,women,25-34,2011,66.16
+Panama,PAN,women,35-44,2011,72.52
+Panama,PAN,men,15-24,2011,14.79
+Panama,PAN,men,25-34,2011,61.07
+Panama,PAN,men,35-44,2011,74.96
+Panama,PAN,women,15-24,2012,28.58
+Panama,PAN,women,25-34,2012,67.45
+Panama,PAN,women,35-44,2012,73.9
+Panama,PAN,men,15-24,2012,15.66
+Panama,PAN,men,25-34,2012,61.2
+Panama,PAN,men,35-44,2012,75.27
+Panama,PAN,women,15-24,2013,27.8
+Panama,PAN,women,25-34,2013,66.58
+Panama,PAN,women,35-44,2013,71.79
+Panama,PAN,men,15-24,2013,14.05
+Panama,PAN,men,25-34,2013,58.84
+Panama,PAN,men,35-44,2013,74.47
+Panama,PAN,women,15-24,2014,27.79
+Panama,PAN,women,25-34,2014,66.95
+Panama,PAN,women,35-44,2014,69.84
+Panama,PAN,men,15-24,2014,13.98
+Panama,PAN,men,25-34,2014,57.71
+Panama,PAN,men,35-44,2014,75.65
+Panama,PAN,women,15-24,2015,26.58
+Panama,PAN,women,25-34,2015,65.42
+Panama,PAN,women,35-44,2015,71.01
+Panama,PAN,men,15-24,2015,13.64
+Panama,PAN,men,25-34,2015,57.03
+Panama,PAN,men,35-44,2015,74.85
+Panama,PAN,women,15-24,2016,25.35
+Panama,PAN,women,25-34,2016,66.13
+Panama,PAN,women,35-44,2016,72.82
+Panama,PAN,men,15-24,2016,12.08
+Panama,PAN,men,25-34,2016,56.55
+Panama,PAN,men,35-44,2016,74.08
+Panama,PAN,women,15-24,2017,23.74
+Panama,PAN,women,25-34,2017,62.17
+Panama,PAN,women,35-44,2017,73.93
+Panama,PAN,men,15-24,2017,11.95
+Panama,PAN,men,25-34,2017,55.82
+Panama,PAN,men,35-44,2017,74.88
+Panama,PAN,women,15-24,2018,22.46
+Panama,PAN,women,25-34,2018,61.01
+Panama,PAN,women,35-44,2018,68.55
+Panama,PAN,men,15-24,2018,11.85
+Panama,PAN,men,25-34,2018,50.61
+Panama,PAN,men,35-44,2018,70.96
+Panama,PAN,women,15-24,2019,22.18
+Panama,PAN,women,25-34,2019,58.31
+Panama,PAN,women,35-44,2019,70.84
+Panama,PAN,men,15-24,2019,10.93
+Panama,PAN,men,25-34,2019,48.82
+Panama,PAN,men,35-44,2019,71.7
+Panama,PAN,women,15-24,2021,19.55
+Panama,PAN,women,25-34,2021,56.44
+Panama,PAN,women,35-44,2021,69.52
+Panama,PAN,men,15-24,2021,12.07
+Panama,PAN,men,25-34,2021,47.34
+Panama,PAN,men,35-44,2021,68.88
+Panama,PAN,women,15-24,2023,18.99
+Panama,PAN,women,25-34,2023,52.48
+Panama,PAN,women,35-44,2023,66.15
+Panama,PAN,men,15-24,2023,11.65
+Panama,PAN,men,25-34,2023,45.91
+Panama,PAN,men,35-44,2023,66.46
+Panama,PAN,women,15-24,2024,17.64
+Panama,PAN,women,25-34,2024,52.26
+Panama,PAN,women,35-44,2024,64.48
+Panama,PAN,men,15-24,2024,9.92
+Panama,PAN,men,25-34,2024,43.24
+Panama,PAN,men,35-44,2024,63.91
+Panama,PAN,women,15-24,2025,17.1
+Panama,PAN,women,25-34,2025,50.9
+Panama,PAN,women,35-44,2025,63.68
+Panama,PAN,men,15-24,2025,8.08
+Panama,PAN,men,25-34,2025,41.41
+Panama,PAN,men,35-44,2025,64.09
+Peru,PER,women,15-24,1997,21.01
+Peru,PER,women,25-34,1997,64.34
+Peru,PER,women,35-44,1997,75.61
+Peru,PER,men,15-24,1997,11.02
+Peru,PER,men,25-34,1997,61.07
+Peru,PER,men,35-44,1997,84.9
+Peru,PER,women,15-24,1998,19.5
+Peru,PER,women,25-34,1998,64.42
+Peru,PER,women,35-44,1998,75.99
+Peru,PER,men,15-24,1998,9.74
+Peru,PER,men,25-34,1998,60.06
+Peru,PER,men,35-44,1998,85.01
+Peru,PER,women,15-24,1999,17.01
+Peru,PER,women,25-34,1999,64.64
+Peru,PER,women,35-44,1999,76.25
+Peru,PER,men,15-24,1999,9.85
+Peru,PER,men,25-34,1999,59.45
+Peru,PER,men,35-44,1999,84.67
+Peru,PER,women,15-24,2000,21.6
+Peru,PER,women,25-34,2000,60.8
+Peru,PER,women,35-44,2000,75.07
+Peru,PER,men,15-24,2000,11.13
+Peru,PER,men,25-34,2000,60.99
+Peru,PER,men,35-44,2000,83.31
+Peru,PER,women,15-24,2001,21.11
+Peru,PER,women,25-34,2001,63.87
+Peru,PER,women,35-44,2001,74.99
+Peru,PER,men,15-24,2001,9.85
+Peru,PER,men,25-34,2001,60.7
+Peru,PER,men,35-44,2001,81.26
+Peru,PER,women,15-24,2002,20.45
+Peru,PER,women,25-34,2002,64.18
+Peru,PER,women,35-44,2002,74.64
+Peru,PER,men,15-24,2002,9.43
+Peru,PER,men,25-34,2002,59.65
+Peru,PER,men,35-44,2002,81.56
+Peru,PER,women,15-24,2003,19.02
+Peru,PER,women,25-34,2003,58.37
+Peru,PER,women,35-44,2003,75.04
+Peru,PER,men,15-24,2003,8.6
+Peru,PER,men,25-34,2003,55.19
+Peru,PER,men,35-44,2003,77.7
+Peru,PER,women,15-24,2004,18.96
+Peru,PER,women,25-34,2004,60.22
+Peru,PER,women,35-44,2004,75.59
+Peru,PER,men,15-24,2004,8.76
+Peru,PER,men,25-34,2004,54.37
+Peru,PER,men,35-44,2004,80.46
+Peru,PER,women,15-24,2005,19.59
+Peru,PER,women,25-34,2005,60.22
+Peru,PER,women,35-44,2005,73.5
+Peru,PER,men,15-24,2005,9.17
+Peru,PER,men,25-34,2005,55.93
+Peru,PER,men,35-44,2005,80.02
+Peru,PER,women,15-24,2006,19.22
+Peru,PER,women,25-34,2006,59.11
+Peru,PER,women,35-44,2006,73.48
+Peru,PER,men,15-24,2006,9.16
+Peru,PER,men,25-34,2006,53.88
+Peru,PER,men,35-44,2006,78.83
+Peru,PER,women,15-24,2007,20.46
+Peru,PER,women,25-34,2007,61.61
+Peru,PER,women,35-44,2007,73.9
+Peru,PER,men,15-24,2007,9.91
+Peru,PER,men,25-34,2007,56.48
+Peru,PER,men,35-44,2007,79.5
+Peru,PER,women,15-24,2008,18.91
+Peru,PER,women,25-34,2008,59.59
+Peru,PER,women,35-44,2008,73.78
+Peru,PER,men,15-24,2008,8.84
+Peru,PER,men,25-34,2008,55.34
+Peru,PER,men,35-44,2008,78.99
+Peru,PER,women,15-24,2009,19.14
+Peru,PER,women,25-34,2009,59.38
+Peru,PER,women,35-44,2009,72.9
+Peru,PER,men,15-24,2009,8.64
+Peru,PER,men,25-34,2009,54.65
+Peru,PER,men,35-44,2009,78.66
+Peru,PER,women,15-24,2010,18.08
+Peru,PER,women,25-34,2010,59.36
+Peru,PER,women,35-44,2010,72.85
+Peru,PER,men,15-24,2010,8.8
+Peru,PER,men,25-34,2010,53.44
+Peru,PER,men,35-44,2010,77.11
+Peru,PER,women,15-24,2011,16.82
+Peru,PER,women,25-34,2011,57.26
+Peru,PER,women,35-44,2011,72.3
+Peru,PER,men,15-24,2011,7.96
+Peru,PER,men,25-34,2011,50.38
+Peru,PER,men,35-44,2011,76.99
+Peru,PER,women,15-24,2012,15.92
+Peru,PER,women,25-34,2012,56.13
+Peru,PER,women,35-44,2012,71.75
+Peru,PER,men,15-24,2012,8.01
+Peru,PER,men,25-34,2012,48.55
+Peru,PER,men,35-44,2012,75.9
+Peru,PER,women,15-24,2013,15.52
+Peru,PER,women,25-34,2013,56.5
+Peru,PER,women,35-44,2013,71.25
+Peru,PER,men,15-24,2013,7.54
+Peru,PER,men,25-34,2013,46.69
+Peru,PER,men,35-44,2013,76.98
+Peru,PER,women,15-24,2014,15.26
+Peru,PER,women,25-34,2014,55.35
+Peru,PER,women,35-44,2014,70.95
+Peru,PER,men,15-24,2014,7.57
+Peru,PER,men,25-34,2014,47.33
+Peru,PER,men,35-44,2014,75.92
+Peru,PER,women,15-24,2015,16.95
+Peru,PER,women,25-34,2015,57.47
+Peru,PER,women,35-44,2015,70.88
+Peru,PER,men,15-24,2015,8.8
+Peru,PER,men,25-34,2015,51.25
+Peru,PER,men,35-44,2015,77.27
+Peru,PER,women,15-24,2016,16.9
+Peru,PER,women,25-34,2016,58.49
+Peru,PER,women,35-44,2016,72.11
+Peru,PER,men,15-24,2016,8.08
+Peru,PER,men,25-34,2016,51.68
+Peru,PER,men,35-44,2016,76.41
+Peru,PER,women,15-24,2017,16.6
+Peru,PER,women,25-34,2017,57.66
+Peru,PER,women,35-44,2017,70.97
+Peru,PER,men,15-24,2017,8.19
+Peru,PER,men,25-34,2017,50.57
+Peru,PER,men,35-44,2017,76.1
+Peru,PER,women,15-24,2018,15.1
+Peru,PER,women,25-34,2018,55.4
+Peru,PER,women,35-44,2018,68.74
+Peru,PER,men,15-24,2018,7.77
+Peru,PER,men,25-34,2018,47.89
+Peru,PER,men,35-44,2018,74.58
+Peru,PER,women,15-24,2019,14.33
+Peru,PER,women,25-34,2019,54.32
+Peru,PER,women,35-44,2019,69.37
+Peru,PER,men,15-24,2019,8.1
+Peru,PER,men,25-34,2019,46.4
+Peru,PER,men,35-44,2019,73.08
+Peru,PER,women,15-24,2020,13.39
+Peru,PER,women,25-34,2020,54.57
+Peru,PER,women,35-44,2020,66.64
+Peru,PER,men,15-24,2020,6.85
+Peru,PER,men,25-34,2020,45.82
+Peru,PER,men,35-44,2020,72.51
+Peru,PER,women,15-24,2021,13.27
+Peru,PER,women,25-34,2021,53.01
+Peru,PER,women,35-44,2021,64.98
+Peru,PER,men,15-24,2021,7.23
+Peru,PER,men,25-34,2021,45.96
+Peru,PER,men,35-44,2021,71.53
+Peru,PER,women,15-24,2022,14.29
+Peru,PER,women,25-34,2022,52.97
+Peru,PER,women,35-44,2022,65.27
+Peru,PER,men,15-24,2022,6.77
+Peru,PER,men,25-34,2022,43.55
+Peru,PER,men,35-44,2022,71.42
+Philippines,PHL,women,15-24,2001,14.72
+Philippines,PHL,women,25-34,2001,70.48
+Philippines,PHL,women,35-44,2001,85.45
+Philippines,PHL,men,15-24,2001,7.1
+Philippines,PHL,men,25-34,2001,57.23
+Philippines,PHL,men,35-44,2001,86.46
+Philippines,PHL,women,15-24,2003,18.08
+Philippines,PHL,women,25-34,2003,72.5
+Philippines,PHL,women,35-44,2003,85.47
+Philippines,PHL,men,15-24,2003,8.66
+Philippines,PHL,men,25-34,2003,61.63
+Philippines,PHL,men,35-44,2003,86.23
+Philippines,PHL,women,15-24,2004,21.12
+Philippines,PHL,women,25-34,2004,75.22
+Philippines,PHL,women,35-44,2004,85.32
+Philippines,PHL,men,15-24,2004,10.07
+Philippines,PHL,men,25-34,2004,65.3
+Philippines,PHL,men,35-44,2004,86.79
+Philippines,PHL,women,15-24,2005,19.13
+Philippines,PHL,women,25-34,2005,74.27
+Philippines,PHL,women,35-44,2005,85.34
+Philippines,PHL,men,15-24,2005,8.93
+Philippines,PHL,men,25-34,2005,63.31
+Philippines,PHL,men,35-44,2005,85.78
+Philippines,PHL,women,15-24,2006,18.43
+Philippines,PHL,women,25-34,2006,73.74
+Philippines,PHL,women,35-44,2006,85.93
+Philippines,PHL,men,15-24,2006,8.47
+Philippines,PHL,men,25-34,2006,61.88
+Philippines,PHL,men,35-44,2006,85.58
+Philippines,PHL,women,15-24,2007,17.51
+Philippines,PHL,women,25-34,2007,72.55
+Philippines,PHL,women,35-44,2007,85.66
+Philippines,PHL,men,15-24,2007,8.2
+Philippines,PHL,men,25-34,2007,60.3
+Philippines,PHL,men,35-44,2007,85.12
+Philippines,PHL,women,15-24,2008,17.29
+Philippines,PHL,women,25-34,2008,71.61
+Philippines,PHL,women,35-44,2008,85.27
+Philippines,PHL,men,15-24,2008,8.13
+Philippines,PHL,men,25-34,2008,59.46
+Philippines,PHL,men,35-44,2008,84.67
+Philippines,PHL,women,15-24,2009,17.55
+Philippines,PHL,women,25-34,2009,71.11
+Philippines,PHL,women,35-44,2009,85.18
+Philippines,PHL,men,15-24,2009,8.26
+Philippines,PHL,men,25-34,2009,58.43
+Philippines,PHL,men,35-44,2009,84.38
+Philippines,PHL,women,15-24,2010,17.56
+Philippines,PHL,women,25-34,2010,70.19
+Philippines,PHL,women,35-44,2010,85.39
+Philippines,PHL,men,15-24,2010,8.28
+Philippines,PHL,men,25-34,2010,57.25
+Philippines,PHL,men,35-44,2010,83.5
+Philippines,PHL,women,15-24,2011,18.17
+Philippines,PHL,women,25-34,2011,69.85
+Philippines,PHL,women,35-44,2011,84.72
+Philippines,PHL,men,15-24,2011,8.88
+Philippines,PHL,men,25-34,2011,57.52
+Philippines,PHL,men,35-44,2011,83.04
+Philippines,PHL,women,15-24,2012,19.01
+Philippines,PHL,women,25-34,2012,69.42
+Philippines,PHL,women,35-44,2012,84.14
+Philippines,PHL,men,15-24,2012,9.31
+Philippines,PHL,men,25-34,2012,57.55
+Philippines,PHL,men,35-44,2012,82.38
+Philippines,PHL,women,15-24,2013,18.87
+Philippines,PHL,women,25-34,2013,68.44
+Philippines,PHL,women,35-44,2013,84.07
+Philippines,PHL,men,15-24,2013,9.15
+Philippines,PHL,men,25-34,2013,56.48
+Philippines,PHL,men,35-44,2013,81.74
+Philippines,PHL,women,15-24,2014,18.98
+Philippines,PHL,women,25-34,2014,67.78
+Philippines,PHL,women,35-44,2014,84.28
+Philippines,PHL,men,15-24,2014,9.41
+Philippines,PHL,men,25-34,2014,56.07
+Philippines,PHL,men,35-44,2014,81.74
+Philippines,PHL,women,15-24,2015,18.15
+Philippines,PHL,women,25-34,2015,66.53
+Philippines,PHL,women,35-44,2015,83.91
+Philippines,PHL,men,15-24,2015,9.05
+Philippines,PHL,men,25-34,2015,54.25
+Philippines,PHL,men,35-44,2015,81.58
+Philippines,PHL,women,15-24,2016,21.93
+Philippines,PHL,women,25-34,2016,69.92
+Philippines,PHL,women,35-44,2016,83.99
+Philippines,PHL,men,15-24,2016,10.95
+Philippines,PHL,men,25-34,2016,59.91
+Philippines,PHL,men,35-44,2016,82.21
+Philippines,PHL,women,15-24,2017,21.18
+Philippines,PHL,women,25-34,2017,70.52
+Philippines,PHL,women,35-44,2017,83.94
+Philippines,PHL,men,15-24,2017,10.49
+Philippines,PHL,men,25-34,2017,60.21
+Philippines,PHL,men,35-44,2017,82.6
+Philippines,PHL,women,15-24,2018,19.03
+Philippines,PHL,women,25-34,2018,69.98
+Philippines,PHL,women,35-44,2018,83.87
+Philippines,PHL,men,15-24,2018,9.38
+Philippines,PHL,men,25-34,2018,58.59
+Philippines,PHL,men,35-44,2018,81.46
+Philippines,PHL,women,15-24,2019,17.44
+Philippines,PHL,women,25-34,2019,69.02
+Philippines,PHL,women,35-44,2019,83.74
+Philippines,PHL,men,15-24,2019,8.8
+Philippines,PHL,men,25-34,2019,55.97
+Philippines,PHL,men,35-44,2019,80.69
+Philippines,PHL,women,15-24,2020,15.91
+Philippines,PHL,women,25-34,2020,66.56
+Philippines,PHL,women,35-44,2020,82.16
+Philippines,PHL,men,15-24,2020,8.01
+Philippines,PHL,men,25-34,2020,53.37
+Philippines,PHL,men,35-44,2020,78.96
+Philippines,PHL,women,15-24,2021,14.03
+Philippines,PHL,women,25-34,2021,64.51
+Philippines,PHL,women,35-44,2021,81.83
+Philippines,PHL,men,15-24,2021,7.58
+Philippines,PHL,men,25-34,2021,51.17
+Philippines,PHL,men,35-44,2021,77.7
+Philippines,PHL,women,15-24,2022,12.92
+Philippines,PHL,women,25-34,2022,64.41
+Philippines,PHL,women,35-44,2022,82.96
+Philippines,PHL,men,15-24,2022,7.2
+Philippines,PHL,men,25-34,2022,50.54
+Philippines,PHL,men,35-44,2022,78.47
+Philippines,PHL,women,15-24,2023,13.36
+Philippines,PHL,women,25-34,2023,64.71
+Philippines,PHL,women,35-44,2023,79.75
+Philippines,PHL,men,15-24,2023,7.12
+Philippines,PHL,men,25-34,2023,51.35
+Philippines,PHL,men,35-44,2023,75.35
+Paraguay,PRY,women,15-24,1998,28.23
+Paraguay,PRY,women,25-34,1998,77.75
+Paraguay,PRY,women,35-44,1998,81.69
+Paraguay,PRY,men,15-24,1998,12.09
+Paraguay,PRY,men,25-34,1998,68.92
+Paraguay,PRY,men,35-44,1998,84.43
+Paraguay,PRY,women,15-24,1999,24.47
+Paraguay,PRY,women,25-34,1999,78.45
+Paraguay,PRY,women,35-44,1999,83.88
+Paraguay,PRY,men,15-24,1999,9.45
+Paraguay,PRY,men,25-34,1999,68.05
+Paraguay,PRY,men,35-44,1999,84.76
+Paraguay,PRY,women,15-24,2001,25.28
+Paraguay,PRY,women,25-34,2001,70.77
+Paraguay,PRY,women,35-44,2001,81.2
+Paraguay,PRY,men,15-24,2001,9.99
+Paraguay,PRY,men,25-34,2001,63.68
+Paraguay,PRY,men,35-44,2001,84.98
+Paraguay,PRY,women,15-24,2002,24.61
+Paraguay,PRY,women,25-34,2002,74.48
+Paraguay,PRY,women,35-44,2002,80.7
+Paraguay,PRY,men,15-24,2002,11.25
+Paraguay,PRY,men,25-34,2002,64.41
+Paraguay,PRY,men,35-44,2002,80.76
+Paraguay,PRY,women,15-24,2003,24.82
+Paraguay,PRY,women,25-34,2003,73.34
+Paraguay,PRY,women,35-44,2003,80.22
+Paraguay,PRY,men,15-24,2003,10.37
+Paraguay,PRY,men,25-34,2003,65.03
+Paraguay,PRY,men,35-44,2003,84.06
+Paraguay,PRY,women,15-24,2004,26.02
+Paraguay,PRY,women,25-34,2004,72.05
+Paraguay,PRY,women,35-44,2004,80.44
+Paraguay,PRY,men,15-24,2004,10.44
+Paraguay,PRY,men,25-34,2004,61.59
+Paraguay,PRY,men,35-44,2004,82.49
+Paraguay,PRY,women,15-24,2005,23.67
+Paraguay,PRY,women,25-34,2005,73.56
+Paraguay,PRY,women,35-44,2005,80.7
+Paraguay,PRY,men,15-24,2005,9.32
+Paraguay,PRY,men,25-34,2005,61.54
+Paraguay,PRY,men,35-44,2005,80.97
+Paraguay,PRY,women,15-24,2006,22.89
+Paraguay,PRY,women,25-34,2006,70.18
+Paraguay,PRY,women,35-44,2006,80.51
+Paraguay,PRY,men,15-24,2006,10.33
+Paraguay,PRY,men,25-34,2006,60.02
+Paraguay,PRY,men,35-44,2006,83.8
+Paraguay,PRY,women,15-24,2007,21.65
+Paraguay,PRY,women,25-34,2007,69.07
+Paraguay,PRY,women,35-44,2007,82.38
+Paraguay,PRY,men,15-24,2007,8.52
+Paraguay,PRY,men,25-34,2007,63.09
+Paraguay,PRY,men,35-44,2007,82.86
+Paraguay,PRY,women,15-24,2008,26.7
+Paraguay,PRY,women,25-34,2008,73.31
+Paraguay,PRY,women,35-44,2008,78.19
+Paraguay,PRY,men,15-24,2008,11.18
+Paraguay,PRY,men,25-34,2008,63.84
+Paraguay,PRY,men,35-44,2008,81.23
+Paraguay,PRY,women,15-24,2009,24.39
+Paraguay,PRY,women,25-34,2009,70.22
+Paraguay,PRY,women,35-44,2009,77.97
+Paraguay,PRY,men,15-24,2009,9.93
+Paraguay,PRY,men,25-34,2009,58.96
+Paraguay,PRY,men,35-44,2009,77.69
+Paraguay,PRY,women,15-24,2010,25.38
+Paraguay,PRY,women,25-34,2010,66.63
+Paraguay,PRY,women,35-44,2010,79.71
+Paraguay,PRY,men,15-24,2010,9.98
+Paraguay,PRY,men,25-34,2010,58.23
+Paraguay,PRY,men,35-44,2010,80.13
+Paraguay,PRY,women,15-24,2011,21.58
+Paraguay,PRY,women,25-34,2011,64.65
+Paraguay,PRY,women,35-44,2011,78.57
+Paraguay,PRY,men,15-24,2011,9.45
+Paraguay,PRY,men,25-34,2011,56.97
+Paraguay,PRY,men,35-44,2011,81.26
+Paraguay,PRY,women,15-24,2012,25.52
+Paraguay,PRY,women,25-34,2012,70.03
+Paraguay,PRY,women,35-44,2012,78.32
+Paraguay,PRY,men,15-24,2012,11.52
+Paraguay,PRY,men,25-34,2012,61.6
+Paraguay,PRY,men,35-44,2012,78.95
+Paraguay,PRY,women,15-24,2013,22.78
+Paraguay,PRY,women,25-34,2013,67.05
+Paraguay,PRY,women,35-44,2013,76.04
+Paraguay,PRY,men,15-24,2013,11.06
+Paraguay,PRY,men,25-34,2013,60.61
+Paraguay,PRY,men,35-44,2013,80.14
+Paraguay,PRY,women,15-24,2014,22.18
+Paraguay,PRY,women,25-34,2014,63.45
+Paraguay,PRY,women,35-44,2014,76.84
+Paraguay,PRY,men,15-24,2014,11.31
+Paraguay,PRY,men,25-34,2014,57.17
+Paraguay,PRY,men,35-44,2014,75.14
+Paraguay,PRY,women,15-24,2015,23.07
+Paraguay,PRY,women,25-34,2015,63.86
+Paraguay,PRY,women,35-44,2015,72.43
+Paraguay,PRY,men,15-24,2015,11.05
+Paraguay,PRY,men,25-34,2015,59.39
+Paraguay,PRY,men,35-44,2015,78.16
+Paraguay,PRY,women,15-24,2016,28.21
+Paraguay,PRY,women,25-34,2016,68.98
+Paraguay,PRY,women,35-44,2016,77.83
+Paraguay,PRY,men,15-24,2016,13.03
+Paraguay,PRY,men,25-34,2016,62.64
+Paraguay,PRY,men,35-44,2016,80.51
+Palestine,PSE,women,15-24,2000,32.28
+Palestine,PSE,women,25-34,2000,79.79
+Palestine,PSE,women,35-44,2000,85.37
+Palestine,PSE,men,15-24,2000,8.84
+Palestine,PSE,men,25-34,2000,74.69
+Palestine,PSE,men,35-44,2000,96.81
+Palestine,PSE,women,15-24,2001,30.06
+Palestine,PSE,women,25-34,2001,79.83
+Palestine,PSE,women,35-44,2001,85.6
+Palestine,PSE,men,15-24,2001,8.32
+Palestine,PSE,men,25-34,2001,71.56
+Palestine,PSE,men,35-44,2001,96.68
+Palestine,PSE,women,15-24,2002,25.71
+Palestine,PSE,women,25-34,2002,78.57
+Palestine,PSE,women,35-44,2002,85.81
+Palestine,PSE,men,15-24,2002,6.9
+Palestine,PSE,men,25-34,2002,68.49
+Palestine,PSE,men,35-44,2002,96.81
+Palestine,PSE,women,15-24,2003,23.49
+Palestine,PSE,women,25-34,2003,76.87
+Palestine,PSE,women,35-44,2003,84.8
+Palestine,PSE,men,15-24,2003,6.34
+Palestine,PSE,men,25-34,2003,66.58
+Palestine,PSE,men,35-44,2003,96.08
+Palestine,PSE,women,15-24,2004,24.22
+Palestine,PSE,women,25-34,2004,76.15
+Palestine,PSE,women,35-44,2004,83.83
+Palestine,PSE,men,15-24,2004,6.29
+Palestine,PSE,men,25-34,2004,67.62
+Palestine,PSE,men,35-44,2004,96.46
+Palestine,PSE,women,15-24,2005,27.29
+Palestine,PSE,women,25-34,2005,79.1
+Palestine,PSE,women,35-44,2005,84.63
+Palestine,PSE,men,15-24,2005,6.08
+Palestine,PSE,men,25-34,2005,69.22
+Palestine,PSE,men,35-44,2005,96.84
+Palestine,PSE,women,15-24,2006,26.75
+Palestine,PSE,women,25-34,2006,80.42
+Palestine,PSE,women,35-44,2006,85.3
+Palestine,PSE,men,15-24,2006,6.46
+Palestine,PSE,men,25-34,2006,69.41
+Palestine,PSE,men,35-44,2006,96.97
+Palestine,PSE,women,15-24,2007,25.18
+Palestine,PSE,women,25-34,2007,78.96
+Palestine,PSE,women,35-44,2007,86.0
+Palestine,PSE,men,15-24,2007,6.46
+Palestine,PSE,men,25-34,2007,67.7
+Palestine,PSE,men,35-44,2007,96.88
+Palestine,PSE,women,15-24,2008,24.78
+Palestine,PSE,women,25-34,2008,77.62
+Palestine,PSE,women,35-44,2008,86.81
+Palestine,PSE,men,15-24,2008,6.77
+Palestine,PSE,men,25-34,2008,66.61
+Palestine,PSE,men,35-44,2008,97.04
+Palestine,PSE,women,15-24,2009,26.45
+Palestine,PSE,women,25-34,2009,79.71
+Palestine,PSE,women,35-44,2009,86.51
+Palestine,PSE,men,15-24,2009,6.69
+Palestine,PSE,men,25-34,2009,67.72
+Palestine,PSE,men,35-44,2009,96.82
+Palestine,PSE,women,15-24,2010,27.06
+Palestine,PSE,women,25-34,2010,81.63
+Palestine,PSE,women,35-44,2010,85.74
+Palestine,PSE,men,15-24,2010,6.54
+Palestine,PSE,men,25-34,2010,69.07
+Palestine,PSE,men,35-44,2010,96.6
+Palestine,PSE,women,15-24,2011,20.66
+Palestine,PSE,women,25-34,2011,79.36
+Palestine,PSE,women,35-44,2011,86.47
+Palestine,PSE,men,15-24,2011,4.63
+Palestine,PSE,men,25-34,2011,63.55
+Palestine,PSE,men,35-44,2011,96.44
+Palestine,PSE,women,15-24,2012,21.38
+Palestine,PSE,women,25-34,2012,78.78
+Palestine,PSE,women,35-44,2012,86.15
+Palestine,PSE,men,15-24,2012,4.37
+Palestine,PSE,men,25-34,2012,64.22
+Palestine,PSE,men,35-44,2012,96.62
+Palestine,PSE,women,15-24,2013,27.48
+Palestine,PSE,women,25-34,2013,80.87
+Palestine,PSE,women,35-44,2013,85.91
+Palestine,PSE,men,15-24,2013,6.11
+Palestine,PSE,men,25-34,2013,68.89
+Palestine,PSE,men,35-44,2013,96.45
+Palestine,PSE,women,15-24,2014,26.05
+Palestine,PSE,women,25-34,2014,80.09
+Palestine,PSE,women,35-44,2014,85.71
+Palestine,PSE,men,15-24,2014,5.88
+Palestine,PSE,men,25-34,2014,66.98
+Palestine,PSE,men,35-44,2014,96.42
+Palestine,PSE,women,15-24,2015,19.19
+Palestine,PSE,women,25-34,2015,78.09
+Palestine,PSE,women,35-44,2015,86.57
+Palestine,PSE,men,15-24,2015,4.13
+Palestine,PSE,men,25-34,2015,59.78
+Palestine,PSE,men,35-44,2015,95.95
+Palestine,PSE,women,15-24,2016,18.49
+Palestine,PSE,women,25-34,2016,76.56
+Palestine,PSE,women,35-44,2016,85.88
+Palestine,PSE,men,15-24,2016,4.25
+Palestine,PSE,men,25-34,2016,57.21
+Palestine,PSE,men,35-44,2016,96.57
+Palestine,PSE,women,15-24,2017,17.72
+Palestine,PSE,women,25-34,2017,73.74
+Palestine,PSE,women,35-44,2017,84.92
+Palestine,PSE,men,15-24,2017,4.31
+Palestine,PSE,men,25-34,2017,55.47
+Palestine,PSE,men,35-44,2017,95.55
+Palestine,PSE,women,15-24,2018,20.96
+Palestine,PSE,women,25-34,2018,75.62
+Palestine,PSE,women,35-44,2018,86.36
+Palestine,PSE,men,15-24,2018,5.44
+Palestine,PSE,men,25-34,2018,59.94
+Palestine,PSE,men,35-44,2018,95.08
+Palestine,PSE,women,15-24,2019,23.15
+Palestine,PSE,women,25-34,2019,78.46
+Palestine,PSE,women,35-44,2019,85.51
+Palestine,PSE,men,15-24,2019,5.35
+Palestine,PSE,men,25-34,2019,63.65
+Palestine,PSE,men,35-44,2019,94.39
+Palestine,PSE,women,15-24,2020,19.85
+Palestine,PSE,women,25-34,2020,78.21
+Palestine,PSE,women,35-44,2020,85.87
+Palestine,PSE,men,15-24,2020,3.89
+Palestine,PSE,men,25-34,2020,60.93
+Palestine,PSE,men,35-44,2020,93.94
+Palestine,PSE,women,15-24,2021,18.64
+Palestine,PSE,women,25-34,2021,78.34
+Palestine,PSE,women,35-44,2021,86.42
+Palestine,PSE,men,15-24,2021,3.25
+Palestine,PSE,men,25-34,2021,58.78
+Palestine,PSE,men,35-44,2021,94.78
+Palestine,PSE,women,15-24,2022,16.86
+Palestine,PSE,women,25-34,2022,77.14
+Palestine,PSE,women,35-44,2022,86.16
+Palestine,PSE,men,15-24,2022,3.0
+Palestine,PSE,men,25-34,2022,56.09
+Palestine,PSE,men,35-44,2022,94.82
+Russia,RUS,women,15-24,2010,19.15
+Russia,RUS,women,25-34,2010,61.25
+Russia,RUS,women,35-44,2010,71.22
+Russia,RUS,men,15-24,2010,9.11
+Russia,RUS,men,25-34,2010,56.36
+Russia,RUS,men,35-44,2010,79.15
+Russia,RUS,women,15-24,2011,19.71
+Russia,RUS,women,25-34,2011,61.21
+Russia,RUS,women,35-44,2011,71.15
+Russia,RUS,men,15-24,2011,9.55
+Russia,RUS,men,25-34,2011,56.11
+Russia,RUS,men,35-44,2011,78.83
+Russia,RUS,women,15-24,2012,18.24
+Russia,RUS,women,25-34,2012,61.54
+Russia,RUS,women,35-44,2012,71.66
+Russia,RUS,men,15-24,2012,8.43
+Russia,RUS,men,25-34,2012,55.05
+Russia,RUS,men,35-44,2012,79.01
+Russia,RUS,women,15-24,2013,20.27
+Russia,RUS,women,25-34,2013,62.53
+Russia,RUS,women,35-44,2013,71.19
+Russia,RUS,men,15-24,2013,9.84
+Russia,RUS,men,25-34,2013,56.47
+Russia,RUS,men,35-44,2013,79.22
+Russia,RUS,women,15-24,2014,21.23
+Russia,RUS,women,25-34,2014,63.17
+Russia,RUS,women,35-44,2014,71.46
+Russia,RUS,men,15-24,2014,10.54
+Russia,RUS,men,25-34,2014,57.28
+Russia,RUS,men,35-44,2014,79.63
+Russia,RUS,women,15-24,2015,19.68
+Russia,RUS,women,25-34,2015,64.29
+Russia,RUS,women,35-44,2015,71.16
+Russia,RUS,men,15-24,2015,9.34
+Russia,RUS,men,25-34,2015,57.31
+Russia,RUS,men,35-44,2015,78.96
+Russia,RUS,women,15-24,2016,18.22
+Russia,RUS,women,25-34,2016,64.77
+Russia,RUS,women,35-44,2016,71.78
+Russia,RUS,men,15-24,2016,8.41
+Russia,RUS,men,25-34,2016,57.56
+Russia,RUS,men,35-44,2016,79.56
+Russia,RUS,women,15-24,2017,17.22
+Russia,RUS,women,25-34,2017,66.36
+Russia,RUS,women,35-44,2017,72.47
+Russia,RUS,men,15-24,2017,7.6
+Russia,RUS,men,25-34,2017,57.94
+Russia,RUS,men,35-44,2017,79.27
+Russia,RUS,women,15-24,2018,15.89
+Russia,RUS,women,25-34,2018,66.26
+Russia,RUS,women,35-44,2018,73.37
+Russia,RUS,men,15-24,2018,7.21
+Russia,RUS,men,25-34,2018,57.03
+Russia,RUS,men,35-44,2018,79.8
+Russia,RUS,women,15-24,2019,16.55
+Russia,RUS,women,25-34,2019,66.49
+Russia,RUS,women,35-44,2019,73.06
+Russia,RUS,men,15-24,2019,7.6
+Russia,RUS,men,25-34,2019,58.09
+Russia,RUS,men,35-44,2019,78.78
+Russia,RUS,women,15-24,2020,15.63
+Russia,RUS,women,25-34,2020,65.65
+Russia,RUS,women,35-44,2020,72.67
+Russia,RUS,men,15-24,2020,7.53
+Russia,RUS,men,25-34,2020,57.4
+Russia,RUS,men,35-44,2020,78.53
+Russia,RUS,women,15-24,2021,13.35
+Russia,RUS,women,25-34,2021,66.14
+Russia,RUS,women,35-44,2021,73.12
+Russia,RUS,men,15-24,2021,6.28
+Russia,RUS,men,25-34,2021,56.48
+Russia,RUS,men,35-44,2021,78.25
+Russia,RUS,women,15-24,2022,12.42
+Russia,RUS,women,25-34,2022,65.43
+Russia,RUS,women,35-44,2022,72.83
+Russia,RUS,men,15-24,2022,6.27
+Russia,RUS,men,25-34,2022,56.11
+Russia,RUS,men,35-44,2022,77.63
+Russia,RUS,women,15-24,2023,11.59
+Russia,RUS,women,25-34,2023,65.33
+Russia,RUS,women,35-44,2023,74.15
+Russia,RUS,men,15-24,2023,5.94
+Russia,RUS,men,25-34,2023,55.7
+Russia,RUS,men,35-44,2023,78.28
+Russia,RUS,women,15-24,2024,13.79
+Russia,RUS,women,25-34,2024,64.03
+Russia,RUS,women,35-44,2024,71.98
+Russia,RUS,men,15-24,2024,7.36
+Russia,RUS,men,25-34,2024,57.54
+Russia,RUS,men,35-44,2024,77.07
+Russia,RUS,women,15-24,2025,12.69
+Russia,RUS,women,25-34,2025,62.88
+Russia,RUS,women,35-44,2025,72.38
+Russia,RUS,men,15-24,2025,6.57
+Russia,RUS,men,25-34,2025,56.0
+Russia,RUS,men,35-44,2025,77.46
+Rwanda,RWA,women,15-24,2017,13.2
+Rwanda,RWA,women,25-34,2017,68.33
+Rwanda,RWA,women,35-44,2017,76.6
+Rwanda,RWA,men,15-24,2017,4.55
+Rwanda,RWA,men,25-34,2017,62.41
+Rwanda,RWA,men,35-44,2017,88.44
+Rwanda,RWA,women,15-24,2018,12.37
+Rwanda,RWA,women,25-34,2018,68.37
+Rwanda,RWA,women,35-44,2018,78.31
+Rwanda,RWA,men,15-24,2018,4.76
+Rwanda,RWA,men,25-34,2018,61.5
+Rwanda,RWA,men,35-44,2018,88.68
+Rwanda,RWA,women,15-24,2019,12.65
+Rwanda,RWA,women,25-34,2019,67.48
+Rwanda,RWA,women,35-44,2019,80.51
+Rwanda,RWA,men,15-24,2019,4.89
+Rwanda,RWA,men,25-34,2019,60.89
+Rwanda,RWA,men,35-44,2019,89.86
+Rwanda,RWA,women,15-24,2020,13.21
+Rwanda,RWA,women,25-34,2020,68.8
+Rwanda,RWA,women,35-44,2020,78.41
+Rwanda,RWA,men,15-24,2020,5.18
+Rwanda,RWA,men,25-34,2020,61.43
+Rwanda,RWA,men,35-44,2020,89.45
+Rwanda,RWA,women,15-24,2021,11.44
+Rwanda,RWA,women,25-34,2021,67.99
+Rwanda,RWA,women,35-44,2021,78.7
+Rwanda,RWA,men,15-24,2021,4.05
+Rwanda,RWA,men,25-34,2021,59.65
+Rwanda,RWA,men,35-44,2021,89.25
+Rwanda,RWA,women,15-24,2022,10.32
+Rwanda,RWA,women,25-34,2022,66.92
+Rwanda,RWA,women,35-44,2022,79.72
+Rwanda,RWA,men,15-24,2022,3.71
+Rwanda,RWA,men,25-34,2022,61.16
+Rwanda,RWA,men,35-44,2022,88.66
+Rwanda,RWA,women,15-24,2023,14.74
+Rwanda,RWA,women,25-34,2023,69.19
+Rwanda,RWA,women,35-44,2023,79.08
+Rwanda,RWA,men,15-24,2023,6.06
+Rwanda,RWA,men,25-34,2023,65.14
+Rwanda,RWA,men,35-44,2023,89.42
+Rwanda,RWA,women,15-24,2024,16.42
+Rwanda,RWA,women,25-34,2024,67.68
+Rwanda,RWA,women,35-44,2024,77.32
+Rwanda,RWA,men,15-24,2024,6.54
+Rwanda,RWA,men,25-34,2024,64.76
+Rwanda,RWA,men,35-44,2024,88.06
+Rwanda,RWA,women,15-24,2025,13.85
+Rwanda,RWA,women,25-34,2025,67.82
+Rwanda,RWA,women,35-44,2025,76.75
+Rwanda,RWA,men,15-24,2025,5.5
+Rwanda,RWA,men,25-34,2025,62.03
+Rwanda,RWA,men,35-44,2025,87.84
+Senegal,SEN,women,15-24,2015,36.91
+Senegal,SEN,women,25-34,2015,77.13
+Senegal,SEN,women,35-44,2015,86.13
+Senegal,SEN,men,15-24,2015,5.19
+Senegal,SEN,men,25-34,2015,46.68
+Senegal,SEN,men,35-44,2015,83.48
+Senegal,SEN,women,15-24,2016,39.17
+Senegal,SEN,women,25-34,2016,80.85
+Senegal,SEN,women,35-44,2016,86.27
+Senegal,SEN,men,15-24,2016,4.76
+Senegal,SEN,men,25-34,2016,49.37
+Senegal,SEN,men,35-44,2016,85.98
+Senegal,SEN,women,15-24,2017,39.39
+Senegal,SEN,women,25-34,2017,79.87
+Senegal,SEN,women,35-44,2017,87.09
+Senegal,SEN,men,15-24,2017,5.68
+Senegal,SEN,men,25-34,2017,49.14
+Senegal,SEN,men,35-44,2017,86.12
+Senegal,SEN,women,15-24,2019,35.41
+Senegal,SEN,women,25-34,2019,77.98
+Senegal,SEN,women,35-44,2019,84.73
+Senegal,SEN,men,15-24,2019,4.94
+Senegal,SEN,men,25-34,2019,43.49
+Senegal,SEN,men,35-44,2019,82.43
+Senegal,SEN,women,15-24,2022,31.48
+Senegal,SEN,women,25-34,2022,76.51
+Senegal,SEN,women,35-44,2022,85.48
+Senegal,SEN,men,15-24,2022,5.3
+Senegal,SEN,men,25-34,2022,41.75
+Senegal,SEN,men,35-44,2022,78.4
+Senegal,SEN,women,15-24,2023,30.09
+Senegal,SEN,women,25-34,2023,76.19
+Senegal,SEN,women,35-44,2023,85.15
+Senegal,SEN,men,15-24,2023,4.49
+Senegal,SEN,men,25-34,2023,40.98
+Senegal,SEN,men,35-44,2023,79.11
+Senegal,SEN,women,15-24,2024,32.16
+Senegal,SEN,women,25-34,2024,79.28
+Senegal,SEN,women,35-44,2024,86.7
+Senegal,SEN,men,15-24,2024,4.11
+Senegal,SEN,men,25-34,2024,42.17
+Senegal,SEN,men,35-44,2024,82.09
+Senegal,SEN,women,15-24,2025,29.99
+Senegal,SEN,women,25-34,2025,77.39
+Senegal,SEN,women,35-44,2025,84.55
+Senegal,SEN,men,15-24,2025,3.78
+Senegal,SEN,men,25-34,2025,39.5
+Senegal,SEN,men,35-44,2025,76.86
+El Salvador,SLV,women,15-24,2010,28.52
+El Salvador,SLV,women,25-34,2010,57.52
+El Salvador,SLV,women,35-44,2010,60.53
+El Salvador,SLV,men,15-24,2010,17.03
+El Salvador,SLV,men,25-34,2010,63.42
+El Salvador,SLV,men,35-44,2010,78.29
+El Salvador,SLV,women,15-24,2011,27.02
+El Salvador,SLV,women,25-34,2011,58.46
+El Salvador,SLV,women,35-44,2011,61.58
+El Salvador,SLV,men,15-24,2011,16.12
+El Salvador,SLV,men,25-34,2011,62.27
+El Salvador,SLV,men,35-44,2011,77.06
+El Salvador,SLV,women,15-24,2012,26.16
+El Salvador,SLV,women,25-34,2012,57.0
+El Salvador,SLV,women,35-44,2012,63.45
+El Salvador,SLV,men,15-24,2012,15.59
+El Salvador,SLV,men,25-34,2012,61.97
+El Salvador,SLV,men,35-44,2012,75.89
+El Salvador,SLV,women,15-24,2013,27.37
+El Salvador,SLV,women,25-34,2013,56.98
+El Salvador,SLV,women,35-44,2013,61.14
+El Salvador,SLV,men,15-24,2013,16.06
+El Salvador,SLV,men,25-34,2013,62.51
+El Salvador,SLV,men,35-44,2013,77.98
+El Salvador,SLV,women,15-24,2014,27.99
+El Salvador,SLV,women,25-34,2014,57.72
+El Salvador,SLV,women,35-44,2014,60.05
+El Salvador,SLV,men,15-24,2014,17.1
+El Salvador,SLV,men,25-34,2014,61.11
+El Salvador,SLV,men,35-44,2014,75.58
+El Salvador,SLV,women,15-24,2015,27.94
+El Salvador,SLV,women,25-34,2015,56.42
+El Salvador,SLV,women,35-44,2015,61.33
+El Salvador,SLV,men,15-24,2015,16.31
+El Salvador,SLV,men,25-34,2015,59.94
+El Salvador,SLV,men,35-44,2015,75.23
+El Salvador,SLV,women,15-24,2016,25.65
+El Salvador,SLV,women,25-34,2016,55.35
+El Salvador,SLV,women,35-44,2016,60.23
+El Salvador,SLV,men,15-24,2016,15.71
+El Salvador,SLV,men,25-34,2016,58.49
+El Salvador,SLV,men,35-44,2016,74.0
+El Salvador,SLV,women,15-24,2017,26.64
+El Salvador,SLV,women,25-34,2017,56.72
+El Salvador,SLV,women,35-44,2017,59.79
+El Salvador,SLV,men,15-24,2017,16.26
+El Salvador,SLV,men,25-34,2017,59.78
+El Salvador,SLV,men,35-44,2017,72.42
+El Salvador,SLV,women,15-24,2018,26.23
+El Salvador,SLV,women,25-34,2018,55.87
+El Salvador,SLV,women,35-44,2018,60.45
+El Salvador,SLV,men,15-24,2018,16.49
+El Salvador,SLV,men,25-34,2018,55.19
+El Salvador,SLV,men,35-44,2018,73.31
+El Salvador,SLV,women,15-24,2019,26.83
+El Salvador,SLV,women,25-34,2019,53.16
+El Salvador,SLV,women,35-44,2019,60.54
+El Salvador,SLV,men,15-24,2019,16.41
+El Salvador,SLV,men,25-34,2019,54.79
+El Salvador,SLV,men,35-44,2019,71.66
+El Salvador,SLV,women,15-24,2020,23.11
+El Salvador,SLV,women,25-34,2020,54.15
+El Salvador,SLV,women,35-44,2020,62.28
+El Salvador,SLV,men,15-24,2020,13.75
+El Salvador,SLV,men,25-34,2020,51.78
+El Salvador,SLV,men,35-44,2020,73.23
+El Salvador,SLV,women,15-24,2021,23.93
+El Salvador,SLV,women,25-34,2021,54.48
+El Salvador,SLV,women,35-44,2021,60.04
+El Salvador,SLV,men,15-24,2021,14.69
+El Salvador,SLV,men,25-34,2021,55.2
+El Salvador,SLV,men,35-44,2021,73.34
+El Salvador,SLV,women,15-24,2022,22.61
+El Salvador,SLV,women,25-34,2022,54.82
+El Salvador,SLV,women,35-44,2022,59.86
+El Salvador,SLV,men,15-24,2022,14.39
+El Salvador,SLV,men,25-34,2022,56.24
+El Salvador,SLV,men,35-44,2022,71.18
+El Salvador,SLV,women,15-24,2023,22.03
+El Salvador,SLV,women,25-34,2023,53.76
+El Salvador,SLV,women,35-44,2023,57.75
+El Salvador,SLV,men,15-24,2023,13.89
+El Salvador,SLV,men,25-34,2023,52.74
+El Salvador,SLV,men,35-44,2023,70.21
+El Salvador,SLV,women,15-24,2024,19.01
+El Salvador,SLV,women,25-34,2024,51.54
+El Salvador,SLV,women,35-44,2024,60.6
+El Salvador,SLV,men,15-24,2024,11.04
+El Salvador,SLV,men,25-34,2024,52.89
+El Salvador,SLV,men,35-44,2024,69.32
+El Salvador,SLV,women,15-24,2025,18.23
+El Salvador,SLV,women,25-34,2025,49.06
+El Salvador,SLV,women,35-44,2025,59.56
+El Salvador,SLV,men,15-24,2025,11.03
+El Salvador,SLV,men,25-34,2025,46.6
+El Salvador,SLV,men,35-44,2025,70.93
+Seychelles,SYC,women,15-24,2014,18.11
+Seychelles,SYC,women,25-34,2014,48.52
+Seychelles,SYC,women,35-44,2014,56.84
+Seychelles,SYC,men,15-24,2014,9.7
+Seychelles,SYC,men,25-34,2014,42.33
+Seychelles,SYC,men,35-44,2014,61.66
+Seychelles,SYC,women,15-24,2015,16.46
+Seychelles,SYC,women,25-34,2015,46.42
+Seychelles,SYC,women,35-44,2015,57.79
+Seychelles,SYC,men,15-24,2015,9.2
+Seychelles,SYC,men,25-34,2015,45.08
+Seychelles,SYC,men,35-44,2015,61.41
+Seychelles,SYC,women,15-24,2016,17.74
+Seychelles,SYC,women,25-34,2016,49.67
+Seychelles,SYC,women,35-44,2016,62.13
+Seychelles,SYC,men,15-24,2016,9.71
+Seychelles,SYC,men,25-34,2016,39.84
+Seychelles,SYC,men,35-44,2016,63.15
+Seychelles,SYC,women,15-24,2017,16.76
+Seychelles,SYC,women,25-34,2017,50.8
+Seychelles,SYC,women,35-44,2017,63.7
+Seychelles,SYC,men,15-24,2017,10.37
+Seychelles,SYC,men,25-34,2017,44.32
+Seychelles,SYC,men,35-44,2017,59.56
+Seychelles,SYC,women,15-24,2018,19.83
+Seychelles,SYC,women,25-34,2018,50.16
+Seychelles,SYC,women,35-44,2018,57.45
+Seychelles,SYC,men,15-24,2018,10.99
+Seychelles,SYC,men,25-34,2018,45.84
+Seychelles,SYC,men,35-44,2018,63.54
+Seychelles,SYC,women,15-24,2019,17.96
+Seychelles,SYC,women,25-34,2019,48.21
+Seychelles,SYC,women,35-44,2019,58.3
+Seychelles,SYC,men,15-24,2019,9.84
+Seychelles,SYC,men,25-34,2019,43.46
+Seychelles,SYC,men,35-44,2019,61.79
+Seychelles,SYC,women,15-24,2020,16.26
+Seychelles,SYC,women,25-34,2020,53.43
+Seychelles,SYC,women,35-44,2020,56.09
+Seychelles,SYC,men,15-24,2020,11.24
+Seychelles,SYC,men,25-34,2020,40.01
+Seychelles,SYC,men,35-44,2020,60.45
+Seychelles,SYC,women,15-24,2023,13.73
+Seychelles,SYC,women,25-34,2023,48.28
+Seychelles,SYC,women,35-44,2023,57.26
+Seychelles,SYC,men,15-24,2023,6.04
+Seychelles,SYC,men,25-34,2023,38.75
+Seychelles,SYC,men,35-44,2023,57.66
+Seychelles,SYC,women,15-24,2024,12.51
+Seychelles,SYC,women,25-34,2024,45.93
+Seychelles,SYC,women,35-44,2024,56.84
+Seychelles,SYC,men,15-24,2024,7.71
+Seychelles,SYC,men,25-34,2024,38.1
+Seychelles,SYC,men,35-44,2024,61.94
+Seychelles,SYC,women,15-24,2025,11.0
+Seychelles,SYC,women,25-34,2025,44.33
+Seychelles,SYC,women,35-44,2025,53.99
+Seychelles,SYC,men,15-24,2025,5.63
+Seychelles,SYC,men,25-34,2025,40.46
+Seychelles,SYC,men,35-44,2025,55.99
+Thailand,THA,women,15-24,2010,34.01
+Thailand,THA,women,25-34,2010,72.25
+Thailand,THA,women,35-44,2010,80.71
+Thailand,THA,men,15-24,2010,16.0
+Thailand,THA,men,25-34,2010,56.9
+Thailand,THA,men,35-44,2010,79.67
+Thailand,THA,women,15-24,2013,32.12
+Thailand,THA,women,25-34,2013,71.4
+Thailand,THA,women,35-44,2013,80.45
+Thailand,THA,men,15-24,2013,16.12
+Thailand,THA,men,25-34,2013,54.91
+Thailand,THA,men,35-44,2013,76.59
+Thailand,THA,women,15-24,2014,29.28
+Thailand,THA,women,25-34,2014,66.44
+Thailand,THA,women,35-44,2014,79.56
+Thailand,THA,men,15-24,2014,15.05
+Thailand,THA,men,25-34,2014,53.23
+Thailand,THA,men,35-44,2014,75.09
+Thailand,THA,women,15-24,2015,28.94
+Thailand,THA,women,25-34,2015,66.22
+Thailand,THA,women,35-44,2015,78.93
+Thailand,THA,men,15-24,2015,14.81
+Thailand,THA,men,25-34,2015,52.97
+Thailand,THA,men,35-44,2015,73.55
+Thailand,THA,women,15-24,2016,28.42
+Thailand,THA,women,25-34,2016,64.49
+Thailand,THA,women,35-44,2016,77.91
+Thailand,THA,men,15-24,2016,14.49
+Thailand,THA,men,25-34,2016,51.01
+Thailand,THA,men,35-44,2016,71.57
+Thailand,THA,women,15-24,2017,27.81
+Thailand,THA,women,25-34,2017,63.76
+Thailand,THA,women,35-44,2017,77.35
+Thailand,THA,men,15-24,2017,13.66
+Thailand,THA,men,25-34,2017,49.51
+Thailand,THA,men,35-44,2017,70.53
+Thailand,THA,women,15-24,2018,26.69
+Thailand,THA,women,25-34,2018,63.82
+Thailand,THA,women,35-44,2018,76.66
+Thailand,THA,men,15-24,2018,13.07
+Thailand,THA,men,25-34,2018,49.45
+Thailand,THA,men,35-44,2018,69.34
+Thailand,THA,women,15-24,2019,25.23
+Thailand,THA,women,25-34,2019,62.98
+Thailand,THA,women,35-44,2019,76.02
+Thailand,THA,men,15-24,2019,12.41
+Thailand,THA,men,25-34,2019,48.18
+Thailand,THA,men,35-44,2019,68.39
+Trinidad and Tobago,TTO,women,15-24,2010,13.82
+Trinidad and Tobago,TTO,women,25-34,2010,45.47
+Trinidad and Tobago,TTO,women,35-44,2010,63.57
+Trinidad and Tobago,TTO,men,15-24,2010,4.94
+Trinidad and Tobago,TTO,men,25-34,2010,33.76
+Trinidad and Tobago,TTO,men,35-44,2010,59.38
+Trinidad and Tobago,TTO,women,15-24,2011,11.79
+Trinidad and Tobago,TTO,women,25-34,2011,47.69
+Trinidad and Tobago,TTO,women,35-44,2011,62.06
+Trinidad and Tobago,TTO,men,15-24,2011,4.54
+Trinidad and Tobago,TTO,men,25-34,2011,32.75
+Trinidad and Tobago,TTO,men,35-44,2011,57.01
+Trinidad and Tobago,TTO,women,15-24,2012,11.34
+Trinidad and Tobago,TTO,women,25-34,2012,46.23
+Trinidad and Tobago,TTO,women,35-44,2012,61.51
+Trinidad and Tobago,TTO,men,15-24,2012,4.53
+Trinidad and Tobago,TTO,men,25-34,2012,33.13
+Trinidad and Tobago,TTO,men,35-44,2012,57.11
+Trinidad and Tobago,TTO,women,15-24,2013,10.77
+Trinidad and Tobago,TTO,women,25-34,2013,44.0
+Trinidad and Tobago,TTO,women,35-44,2013,61.64
+Trinidad and Tobago,TTO,men,15-24,2013,4.13
+Trinidad and Tobago,TTO,men,25-34,2013,32.41
+Trinidad and Tobago,TTO,men,35-44,2013,56.87
+Trinidad and Tobago,TTO,women,15-24,2014,11.44
+Trinidad and Tobago,TTO,women,25-34,2014,43.51
+Trinidad and Tobago,TTO,women,35-44,2014,58.69
+Trinidad and Tobago,TTO,men,15-24,2014,3.8
+Trinidad and Tobago,TTO,men,25-34,2014,31.78
+Trinidad and Tobago,TTO,men,35-44,2014,55.75
+Trinidad and Tobago,TTO,women,15-24,2015,10.95
+Trinidad and Tobago,TTO,women,25-34,2015,43.81
+Trinidad and Tobago,TTO,women,35-44,2015,58.55
+Trinidad and Tobago,TTO,men,15-24,2015,4.45
+Trinidad and Tobago,TTO,men,25-34,2015,32.3
+Trinidad and Tobago,TTO,men,35-44,2015,53.82
+Trinidad and Tobago,TTO,women,15-24,2016,11.92
+Trinidad and Tobago,TTO,women,25-34,2016,43.83
+Trinidad and Tobago,TTO,women,35-44,2016,59.43
+Trinidad and Tobago,TTO,men,15-24,2016,3.93
+Trinidad and Tobago,TTO,men,25-34,2016,34.73
+Trinidad and Tobago,TTO,men,35-44,2016,52.59
+Trinidad and Tobago,TTO,women,15-24,2019,7.74
+Trinidad and Tobago,TTO,women,25-34,2019,43.78
+Trinidad and Tobago,TTO,women,35-44,2019,55.95
+Trinidad and Tobago,TTO,men,15-24,2019,3.54
+Trinidad and Tobago,TTO,men,25-34,2019,31.99
+Trinidad and Tobago,TTO,men,35-44,2019,51.88
+Trinidad and Tobago,TTO,women,15-24,2020,10.64
+Trinidad and Tobago,TTO,women,25-34,2020,42.89
+Trinidad and Tobago,TTO,women,35-44,2020,57.65
+Trinidad and Tobago,TTO,men,15-24,2020,3.05
+Trinidad and Tobago,TTO,men,25-34,2020,31.9
+Trinidad and Tobago,TTO,men,35-44,2020,50.61
+Trinidad and Tobago,TTO,women,15-24,2021,8.99
+Trinidad and Tobago,TTO,women,25-34,2021,42.16
+Trinidad and Tobago,TTO,women,35-44,2021,57.34
+Trinidad and Tobago,TTO,men,15-24,2021,5.23
+Trinidad and Tobago,TTO,men,25-34,2021,29.49
+Trinidad and Tobago,TTO,men,35-44,2021,53.06
+Trinidad and Tobago,TTO,women,15-24,2022,8.39
+Trinidad and Tobago,TTO,women,25-34,2022,44.21
+Trinidad and Tobago,TTO,women,35-44,2022,54.17
+Trinidad and Tobago,TTO,men,15-24,2022,3.93
+Trinidad and Tobago,TTO,men,25-34,2022,31.02
+Trinidad and Tobago,TTO,men,35-44,2022,50.25
+Trinidad and Tobago,TTO,women,15-24,2023,8.05
+Trinidad and Tobago,TTO,women,25-34,2023,41.14
+Trinidad and Tobago,TTO,women,35-44,2023,55.73
+Trinidad and Tobago,TTO,men,15-24,2023,3.1
+Trinidad and Tobago,TTO,men,25-34,2023,31.17
+Trinidad and Tobago,TTO,men,35-44,2023,50.06
+Trinidad and Tobago,TTO,women,15-24,2024,6.41
+Trinidad and Tobago,TTO,women,25-34,2024,37.34
+Trinidad and Tobago,TTO,women,35-44,2024,54.09
+Trinidad and Tobago,TTO,men,15-24,2024,1.36
+Trinidad and Tobago,TTO,men,25-34,2024,26.49
+Trinidad and Tobago,TTO,men,35-44,2024,46.76
+Tunisia,TUN,women,15-24,2005,8.53
+Tunisia,TUN,women,25-34,2005,56.09
+Tunisia,TUN,women,35-44,2005,82.29
+Tunisia,TUN,men,15-24,2005,0.86
+Tunisia,TUN,men,25-34,2005,29.34
+Tunisia,TUN,men,35-44,2005,84.46
+Tunisia,TUN,women,15-24,2006,8.28
+Tunisia,TUN,women,25-34,2006,54.55
+Tunisia,TUN,women,35-44,2006,81.85
+Tunisia,TUN,men,15-24,2006,0.91
+Tunisia,TUN,men,25-34,2006,28.78
+Tunisia,TUN,men,35-44,2006,83.75
+Tunisia,TUN,women,15-24,2007,8.71
+Tunisia,TUN,women,25-34,2007,54.78
+Tunisia,TUN,women,35-44,2007,81.78
+Tunisia,TUN,men,15-24,2007,1.0
+Tunisia,TUN,men,25-34,2007,26.99
+Tunisia,TUN,men,35-44,2007,83.86
+Tunisia,TUN,women,15-24,2008,8.63
+Tunisia,TUN,women,25-34,2008,54.81
+Tunisia,TUN,women,35-44,2008,81.66
+Tunisia,TUN,men,15-24,2008,1.0
+Tunisia,TUN,men,25-34,2008,28.42
+Tunisia,TUN,men,35-44,2008,83.8
+Tunisia,TUN,women,15-24,2009,8.28
+Tunisia,TUN,women,25-34,2009,54.22
+Tunisia,TUN,women,35-44,2009,81.35
+Tunisia,TUN,men,15-24,2009,1.1
+Tunisia,TUN,men,25-34,2009,27.71
+Tunisia,TUN,men,35-44,2009,81.7
+Tunisia,TUN,women,15-24,2010,9.51
+Tunisia,TUN,women,25-34,2010,55.55
+Tunisia,TUN,women,35-44,2010,81.13
+Tunisia,TUN,men,15-24,2010,1.08
+Tunisia,TUN,men,25-34,2010,29.56
+Tunisia,TUN,men,35-44,2010,83.18
+Tunisia,TUN,women,15-24,2011,9.1
+Tunisia,TUN,women,25-34,2011,55.62
+Tunisia,TUN,women,35-44,2011,79.63
+Tunisia,TUN,men,15-24,2011,1.08
+Tunisia,TUN,men,25-34,2011,28.82
+Tunisia,TUN,men,35-44,2011,82.31
+Tunisia,TUN,women,15-24,2012,10.78
+Tunisia,TUN,women,25-34,2012,55.8
+Tunisia,TUN,women,35-44,2012,78.91
+Tunisia,TUN,men,15-24,2012,1.29
+Tunisia,TUN,men,25-34,2012,28.83
+Tunisia,TUN,men,35-44,2012,81.81
+Tunisia,TUN,women,15-24,2013,9.86
+Tunisia,TUN,women,25-34,2013,55.91
+Tunisia,TUN,women,35-44,2013,79.0
+Tunisia,TUN,men,15-24,2013,1.22
+Tunisia,TUN,men,25-34,2013,29.7
+Tunisia,TUN,men,35-44,2013,81.59
+Tunisia,TUN,women,15-24,2015,10.33
+Tunisia,TUN,women,25-34,2015,60.33
+Tunisia,TUN,women,35-44,2015,80.36
+Tunisia,TUN,men,15-24,2015,1.49
+Tunisia,TUN,men,25-34,2015,31.98
+Tunisia,TUN,men,35-44,2015,79.72
+Tunisia,TUN,women,15-24,2016,11.53
+Tunisia,TUN,women,25-34,2016,59.96
+Tunisia,TUN,women,35-44,2016,81.19
+Tunisia,TUN,men,15-24,2016,1.77
+Tunisia,TUN,men,25-34,2016,30.59
+Tunisia,TUN,men,35-44,2016,78.42
+Tunisia,TUN,women,15-24,2017,11.0
+Tunisia,TUN,women,25-34,2017,59.58
+Tunisia,TUN,women,35-44,2017,80.57
+Tunisia,TUN,men,15-24,2017,1.51
+Tunisia,TUN,men,25-34,2017,28.82
+Tunisia,TUN,men,35-44,2017,78.48
+Tunisia,TUN,women,15-24,2019,8.31
+Tunisia,TUN,women,25-34,2019,57.84
+Tunisia,TUN,women,35-44,2019,81.43
+Tunisia,TUN,men,15-24,2019,1.92
+Tunisia,TUN,men,25-34,2019,26.82
+Tunisia,TUN,men,35-44,2019,75.67
+Tunisia,TUN,women,15-24,2022,4.48
+Tunisia,TUN,women,25-34,2022,51.56
+Tunisia,TUN,women,35-44,2022,81.05
+Tunisia,TUN,men,15-24,2022,0.57
+Tunisia,TUN,men,25-34,2022,19.78
+Tunisia,TUN,men,35-44,2022,72.43
+Tunisia,TUN,women,15-24,2023,3.72
+Tunisia,TUN,women,25-34,2023,50.38
+Tunisia,TUN,women,35-44,2023,82.33
+Tunisia,TUN,men,15-24,2023,0.31
+Tunisia,TUN,men,25-34,2023,18.24
+Tunisia,TUN,men,35-44,2023,72.53
+Türkiye,TUR,women,15-24,2000,29.94
+Türkiye,TUR,women,25-34,2000,83.94
+Türkiye,TUR,women,35-44,2000,92.0
+Türkiye,TUR,men,15-24,2000,10.41
+Türkiye,TUR,men,25-34,2000,76.36
+Türkiye,TUR,men,35-44,2000,95.85
+Türkiye,TUR,women,15-24,2001,30.08
+Türkiye,TUR,women,25-34,2001,83.66
+Türkiye,TUR,women,35-44,2001,91.47
+Türkiye,TUR,men,15-24,2001,11.07
+Türkiye,TUR,men,25-34,2001,76.86
+Türkiye,TUR,men,35-44,2001,95.79
+Türkiye,TUR,women,15-24,2002,29.31
+Türkiye,TUR,women,25-34,2002,82.9
+Türkiye,TUR,women,35-44,2002,90.76
+Türkiye,TUR,men,15-24,2002,9.5
+Türkiye,TUR,men,25-34,2002,76.12
+Türkiye,TUR,men,35-44,2002,95.66
+Türkiye,TUR,women,15-24,2003,28.31
+Türkiye,TUR,women,25-34,2003,82.35
+Türkiye,TUR,women,35-44,2003,90.31
+Türkiye,TUR,men,15-24,2003,8.8
+Türkiye,TUR,men,25-34,2003,74.74
+Türkiye,TUR,men,35-44,2003,95.35
+Türkiye,TUR,women,15-24,2004,27.61
+Türkiye,TUR,women,25-34,2004,82.29
+Türkiye,TUR,women,35-44,2004,90.97
+Türkiye,TUR,men,15-24,2004,8.11
+Türkiye,TUR,men,25-34,2004,73.74
+Türkiye,TUR,men,35-44,2004,95.26
+Türkiye,TUR,women,15-24,2005,27.68
+Türkiye,TUR,women,25-34,2005,80.59
+Türkiye,TUR,women,35-44,2005,89.36
+Türkiye,TUR,men,15-24,2005,7.99
+Türkiye,TUR,men,25-34,2005,72.91
+Türkiye,TUR,men,35-44,2005,94.7
+Türkiye,TUR,women,15-24,2006,27.97
+Türkiye,TUR,women,25-34,2006,79.27
+Türkiye,TUR,women,35-44,2006,88.68
+Türkiye,TUR,men,15-24,2006,8.34
+Türkiye,TUR,men,25-34,2006,71.8
+Türkiye,TUR,men,35-44,2006,94.37
+Türkiye,TUR,women,15-24,2007,27.55
+Türkiye,TUR,women,25-34,2007,79.77
+Türkiye,TUR,women,35-44,2007,88.92
+Türkiye,TUR,men,15-24,2007,8.25
+Türkiye,TUR,men,25-34,2007,71.03
+Türkiye,TUR,men,35-44,2007,94.23
+Türkiye,TUR,women,15-24,2008,27.95
+Türkiye,TUR,women,25-34,2008,79.76
+Türkiye,TUR,women,35-44,2008,88.57
+Türkiye,TUR,men,15-24,2008,8.64
+Türkiye,TUR,men,25-34,2008,70.24
+Türkiye,TUR,men,35-44,2008,93.69
+Türkiye,TUR,women,15-24,2009,26.6
+Türkiye,TUR,women,25-34,2009,78.84
+Türkiye,TUR,women,35-44,2009,88.04
+Türkiye,TUR,men,15-24,2009,7.42
+Türkiye,TUR,men,25-34,2009,68.47
+Türkiye,TUR,men,35-44,2009,92.93
+Türkiye,TUR,women,15-24,2010,25.31
+Türkiye,TUR,women,25-34,2010,78.71
+Türkiye,TUR,women,35-44,2010,87.91
+Türkiye,TUR,men,15-24,2010,6.31
+Türkiye,TUR,men,25-34,2010,67.17
+Türkiye,TUR,men,35-44,2010,92.49
+Türkiye,TUR,women,15-24,2011,23.79
+Türkiye,TUR,women,25-34,2011,78.09
+Türkiye,TUR,women,35-44,2011,87.79
+Türkiye,TUR,men,15-24,2011,6.39
+Türkiye,TUR,men,25-34,2011,65.54
+Türkiye,TUR,men,35-44,2011,91.77
+Türkiye,TUR,women,15-24,2012,22.65
+Türkiye,TUR,women,25-34,2012,77.26
+Türkiye,TUR,women,35-44,2012,86.74
+Türkiye,TUR,men,15-24,2012,5.87
+Türkiye,TUR,men,25-34,2012,63.29
+Türkiye,TUR,men,35-44,2012,90.54
+Türkiye,TUR,women,15-24,2013,21.68
+Türkiye,TUR,women,25-34,2013,77.07
+Türkiye,TUR,women,35-44,2013,86.28
+Türkiye,TUR,men,15-24,2013,5.59
+Türkiye,TUR,men,25-34,2013,62.28
+Türkiye,TUR,men,35-44,2013,90.37
+Türkiye,TUR,women,15-24,2014,21.93
+Türkiye,TUR,women,25-34,2014,75.77
+Türkiye,TUR,women,35-44,2014,87.11
+Türkiye,TUR,men,15-24,2014,5.93
+Türkiye,TUR,men,25-34,2014,59.0
+Türkiye,TUR,men,35-44,2014,87.79
+Türkiye,TUR,women,15-24,2015,21.06
+Türkiye,TUR,women,25-34,2015,76.38
+Türkiye,TUR,women,35-44,2015,86.56
+Türkiye,TUR,men,15-24,2015,6.21
+Türkiye,TUR,men,25-34,2015,57.99
+Türkiye,TUR,men,35-44,2015,86.98
+Türkiye,TUR,women,15-24,2016,20.93
+Türkiye,TUR,women,25-34,2016,76.34
+Türkiye,TUR,women,35-44,2016,87.09
+Türkiye,TUR,men,15-24,2016,6.23
+Türkiye,TUR,men,25-34,2016,57.52
+Türkiye,TUR,men,35-44,2016,86.68
+Türkiye,TUR,women,15-24,2017,21.2
+Türkiye,TUR,women,25-34,2017,76.37
+Türkiye,TUR,women,35-44,2017,86.96
+Türkiye,TUR,men,15-24,2017,6.12
+Türkiye,TUR,men,25-34,2017,57.07
+Türkiye,TUR,men,35-44,2017,86.01
+Türkiye,TUR,women,15-24,2018,20.45
+Türkiye,TUR,women,25-34,2018,75.33
+Türkiye,TUR,women,35-44,2018,86.4
+Türkiye,TUR,men,15-24,2018,5.84
+Türkiye,TUR,men,25-34,2018,56.45
+Türkiye,TUR,men,35-44,2018,84.92
+Türkiye,TUR,women,15-24,2019,18.49
+Türkiye,TUR,women,25-34,2019,74.23
+Türkiye,TUR,women,35-44,2019,85.9
+Türkiye,TUR,men,15-24,2019,5.44
+Türkiye,TUR,men,25-34,2019,55.05
+Türkiye,TUR,men,35-44,2019,83.81
+Türkiye,TUR,women,15-24,2020,15.9
+Türkiye,TUR,women,25-34,2020,72.95
+Türkiye,TUR,women,35-44,2020,86.14
+Türkiye,TUR,men,15-24,2020,4.61
+Türkiye,TUR,men,25-34,2020,52.86
+Türkiye,TUR,men,35-44,2020,83.66
+Türkiye,TUR,women,15-24,2021,14.36
+Türkiye,TUR,women,25-34,2021,70.24
+Türkiye,TUR,women,35-44,2021,85.59
+Türkiye,TUR,men,15-24,2021,4.42
+Türkiye,TUR,men,25-34,2021,49.57
+Türkiye,TUR,men,35-44,2021,82.06
+Türkiye,TUR,women,15-24,2022,13.88
+Türkiye,TUR,women,25-34,2022,68.87
+Türkiye,TUR,women,35-44,2022,84.81
+Türkiye,TUR,men,15-24,2022,4.25
+Türkiye,TUR,men,25-34,2022,48.23
+Türkiye,TUR,men,35-44,2022,80.52
+Türkiye,TUR,women,15-24,2023,13.38
+Türkiye,TUR,women,25-34,2023,68.4
+Türkiye,TUR,women,35-44,2023,84.43
+Türkiye,TUR,men,15-24,2023,4.15
+Türkiye,TUR,men,25-34,2023,47.6
+Türkiye,TUR,men,35-44,2023,79.96
+Türkiye,TUR,women,15-24,2024,12.22
+Türkiye,TUR,women,25-34,2024,66.48
+Türkiye,TUR,women,35-44,2024,84.06
+Türkiye,TUR,men,15-24,2024,3.8
+Türkiye,TUR,men,25-34,2024,46.62
+Türkiye,TUR,men,35-44,2024,78.54
+Türkiye,TUR,women,15-24,2025,11.29
+Türkiye,TUR,women,25-34,2025,65.34
+Türkiye,TUR,women,35-44,2025,84.29
+Türkiye,TUR,men,15-24,2025,3.57
+Türkiye,TUR,men,25-34,2025,45.45
+Türkiye,TUR,men,35-44,2025,78.19
+Uruguay,URY,women,15-24,1998,18.7
+Uruguay,URY,women,25-34,1998,65.18
+Uruguay,URY,women,35-44,1998,76.18
+Uruguay,URY,men,15-24,1998,8.82
+Uruguay,URY,men,25-34,1998,59.79
+Uruguay,URY,men,35-44,1998,82.25
+Uruguay,URY,women,15-24,1999,19.45
+Uruguay,URY,women,25-34,1999,64.6
+Uruguay,URY,women,35-44,1999,73.66
+Uruguay,URY,men,15-24,1999,10.75
+Uruguay,URY,men,25-34,1999,58.29
+Uruguay,URY,men,35-44,1999,82.27
+Uruguay,URY,women,15-24,2000,19.64
+Uruguay,URY,women,25-34,2000,62.95
+Uruguay,URY,women,35-44,2000,74.76
+Uruguay,URY,men,15-24,2000,10.83
+Uruguay,URY,men,25-34,2000,57.18
+Uruguay,URY,men,35-44,2000,81.54
+Uruguay,URY,women,15-24,2001,18.7
+Uruguay,URY,women,25-34,2001,61.27
+Uruguay,URY,women,35-44,2001,74.33
+Uruguay,URY,men,15-24,2001,10.55
+Uruguay,URY,men,25-34,2001,56.06
+Uruguay,URY,men,35-44,2001,81.56
+Uruguay,URY,women,15-24,2002,19.04
+Uruguay,URY,women,25-34,2002,61.44
+Uruguay,URY,women,35-44,2002,73.2
+Uruguay,URY,men,15-24,2002,10.24
+Uruguay,URY,men,25-34,2002,57.01
+Uruguay,URY,men,35-44,2002,80.46
+Uruguay,URY,women,15-24,2003,18.3
+Uruguay,URY,women,25-34,2003,60.69
+Uruguay,URY,women,35-44,2003,72.23
+Uruguay,URY,men,15-24,2003,9.52
+Uruguay,URY,men,25-34,2003,55.1
+Uruguay,URY,men,35-44,2003,79.24
+Uruguay,URY,women,15-24,2004,18.13
+Uruguay,URY,women,25-34,2004,59.87
+Uruguay,URY,women,35-44,2004,72.06
+Uruguay,URY,men,15-24,2004,8.99
+Uruguay,URY,men,25-34,2004,53.41
+Uruguay,URY,men,35-44,2004,77.89
+Uruguay,URY,women,15-24,2005,17.5
+Uruguay,URY,women,25-34,2005,59.55
+Uruguay,URY,women,35-44,2005,69.21
+Uruguay,URY,men,15-24,2005,9.28
+Uruguay,URY,men,25-34,2005,54.75
+Uruguay,URY,men,35-44,2005,76.02
+Uruguay,URY,women,15-24,2006,19.29
+Uruguay,URY,women,25-34,2006,66.23
+Uruguay,URY,women,35-44,2006,77.91
+Uruguay,URY,men,15-24,2006,9.87
+Uruguay,URY,men,25-34,2006,58.8
+Uruguay,URY,men,35-44,2006,81.52
+Uruguay,URY,women,15-24,2007,20.14
+Uruguay,URY,women,25-34,2007,67.12
+Uruguay,URY,women,35-44,2007,77.16
+Uruguay,URY,men,15-24,2007,11.04
+Uruguay,URY,men,25-34,2007,61.56
+Uruguay,URY,men,35-44,2007,81.67
+Uruguay,URY,women,15-24,2008,19.35
+Uruguay,URY,women,25-34,2008,65.52
+Uruguay,URY,women,35-44,2008,76.97
+Uruguay,URY,men,15-24,2008,10.79
+Uruguay,URY,men,25-34,2008,58.78
+Uruguay,URY,men,35-44,2008,81.05
+Uruguay,URY,women,15-24,2009,20.42
+Uruguay,URY,women,25-34,2009,66.84
+Uruguay,URY,women,35-44,2009,76.66
+Uruguay,URY,men,15-24,2009,10.53
+Uruguay,URY,men,25-34,2009,60.62
+Uruguay,URY,men,35-44,2009,80.2
+Uruguay,URY,women,15-24,2010,20.36
+Uruguay,URY,women,25-34,2010,66.6
+Uruguay,URY,women,35-44,2010,77.65
+Uruguay,URY,men,15-24,2010,10.95
+Uruguay,URY,men,25-34,2010,60.21
+Uruguay,URY,men,35-44,2010,80.77
+Uruguay,URY,women,15-24,2011,20.64
+Uruguay,URY,women,25-34,2011,64.45
+Uruguay,URY,women,35-44,2011,76.07
+Uruguay,URY,men,15-24,2011,10.74
+Uruguay,URY,men,25-34,2011,56.39
+Uruguay,URY,men,35-44,2011,78.31
+Uruguay,URY,women,15-24,2012,21.28
+Uruguay,URY,women,25-34,2012,64.79
+Uruguay,URY,women,35-44,2012,75.11
+Uruguay,URY,men,15-24,2012,11.05
+Uruguay,URY,men,25-34,2012,57.96
+Uruguay,URY,men,35-44,2012,79.35
+Uruguay,URY,women,15-24,2013,21.27
+Uruguay,URY,women,25-34,2013,66.05
+Uruguay,URY,women,35-44,2013,77.62
+Uruguay,URY,men,15-24,2013,11.37
+Uruguay,URY,men,25-34,2013,58.37
+Uruguay,URY,men,35-44,2013,79.01
+Uruguay,URY,women,15-24,2014,22.08
+Uruguay,URY,women,25-34,2014,67.03
+Uruguay,URY,women,35-44,2014,75.6
+Uruguay,URY,men,15-24,2014,12.08
+Uruguay,URY,men,25-34,2014,57.11
+Uruguay,URY,men,35-44,2014,77.28
+Uruguay,URY,women,15-24,2015,20.75
+Uruguay,URY,women,25-34,2015,65.99
+Uruguay,URY,women,35-44,2015,76.34
+Uruguay,URY,men,15-24,2015,11.27
+Uruguay,URY,men,25-34,2015,57.34
+Uruguay,URY,men,35-44,2015,75.44
+Uruguay,URY,women,15-24,2016,20.99
+Uruguay,URY,women,25-34,2016,65.75
+Uruguay,URY,women,35-44,2016,76.56
+Uruguay,URY,men,15-24,2016,11.6
+Uruguay,URY,men,25-34,2016,56.23
+Uruguay,URY,men,35-44,2016,76.33
+Uruguay,URY,women,15-24,2017,19.25
+Uruguay,URY,women,25-34,2017,65.83
+Uruguay,URY,women,35-44,2017,76.18
+Uruguay,URY,men,15-24,2017,10.07
+Uruguay,URY,men,25-34,2017,55.89
+Uruguay,URY,men,35-44,2017,75.66
+Uruguay,URY,women,15-24,2018,17.96
+Uruguay,URY,women,25-34,2018,63.71
+Uruguay,URY,women,35-44,2018,76.33
+Uruguay,URY,men,15-24,2018,9.45
+Uruguay,URY,men,25-34,2018,54.88
+Uruguay,URY,men,35-44,2018,75.79
+Uruguay,URY,women,15-24,2019,18.61
+Uruguay,URY,women,25-34,2019,63.9
+Uruguay,URY,women,35-44,2019,76.33
+Uruguay,URY,men,15-24,2019,9.69
+Uruguay,URY,men,25-34,2019,54.32
+Uruguay,URY,men,35-44,2019,74.89
+Venezuela,VEN,women,15-24,2005,27.11
+Venezuela,VEN,women,25-34,2005,63.43
+Venezuela,VEN,women,35-44,2005,69.51
+Venezuela,VEN,men,15-24,2005,15.74
+Venezuela,VEN,men,25-34,2005,59.34
+Venezuela,VEN,men,35-44,2005,74.21
+Venezuela,VEN,women,15-24,2006,26.9
+Venezuela,VEN,women,25-34,2006,62.94
+Venezuela,VEN,women,35-44,2006,69.02
+Venezuela,VEN,men,15-24,2006,15.85
+Venezuela,VEN,men,25-34,2006,58.3
+Venezuela,VEN,men,35-44,2006,74.08
+Venezuela,VEN,women,15-24,2007,26.02
+Venezuela,VEN,women,25-34,2007,62.26
+Venezuela,VEN,women,35-44,2007,68.06
+Venezuela,VEN,men,15-24,2007,15.45
+Venezuela,VEN,men,25-34,2007,57.41
+Venezuela,VEN,men,35-44,2007,73.48
+Venezuela,VEN,women,15-24,2008,26.46
+Venezuela,VEN,women,25-34,2008,62.24
+Venezuela,VEN,women,35-44,2008,68.69
+Venezuela,VEN,men,15-24,2008,15.91
+Venezuela,VEN,men,25-34,2008,57.8
+Venezuela,VEN,men,35-44,2008,73.01
+Venezuela,VEN,women,15-24,2009,26.14
+Venezuela,VEN,women,25-34,2009,61.32
+Venezuela,VEN,women,35-44,2009,67.46
+Venezuela,VEN,men,15-24,2009,15.1
+Venezuela,VEN,men,25-34,2009,57.33
+Venezuela,VEN,men,35-44,2009,72.64
+Venezuela,VEN,women,15-24,2010,26.23
+Venezuela,VEN,women,25-34,2010,60.41
+Venezuela,VEN,women,35-44,2010,66.73
+Venezuela,VEN,men,15-24,2010,15.46
+Venezuela,VEN,men,25-34,2010,56.7
+Venezuela,VEN,men,35-44,2010,71.55
+Venezuela,VEN,women,15-24,2011,26.38
+Venezuela,VEN,women,25-34,2011,59.05
+Venezuela,VEN,women,35-44,2011,66.35
+Venezuela,VEN,men,15-24,2011,15.44
+Venezuela,VEN,men,25-34,2011,56.38
+Venezuela,VEN,men,35-44,2011,70.41
+Venezuela,VEN,women,15-24,2012,26.46
+Venezuela,VEN,women,25-34,2012,58.55
+Venezuela,VEN,women,35-44,2012,65.47
+Venezuela,VEN,men,15-24,2012,15.74
+Venezuela,VEN,men,25-34,2012,55.18
+Venezuela,VEN,men,35-44,2012,69.84
+Venezuela,VEN,women,15-24,2016,23.84
+Venezuela,VEN,women,25-34,2016,57.35
+Venezuela,VEN,women,35-44,2016,65.0
+Venezuela,VEN,men,15-24,2016,14.3
+Venezuela,VEN,men,25-34,2016,54.12
+Venezuela,VEN,men,35-44,2016,69.44
+Venezuela,VEN,women,15-24,2017,23.18
+Venezuela,VEN,women,25-34,2017,57.36
+Venezuela,VEN,women,35-44,2017,64.73
+Venezuela,VEN,men,15-24,2017,12.86
+Venezuela,VEN,men,25-34,2017,53.5
+Venezuela,VEN,men,35-44,2017,70.08
+Viet Nam,VNM,women,15-24,2010,26.52
+Viet Nam,VNM,women,25-34,2010,83.05
+Viet Nam,VNM,women,35-44,2010,87.34
+Viet Nam,VNM,men,15-24,2010,11.63
+Viet Nam,VNM,men,25-34,2010,73.07
+Viet Nam,VNM,men,35-44,2010,93.57
+Viet Nam,VNM,women,15-24,2011,24.44
+Viet Nam,VNM,women,25-34,2011,83.16
+Viet Nam,VNM,women,35-44,2011,87.65
+Viet Nam,VNM,men,15-24,2011,10.65
+Viet Nam,VNM,men,25-34,2011,70.59
+Viet Nam,VNM,men,35-44,2011,93.05
+Viet Nam,VNM,women,15-24,2012,25.18
+Viet Nam,VNM,women,25-34,2012,82.81
+Viet Nam,VNM,women,35-44,2012,88.2
+Viet Nam,VNM,men,15-24,2012,10.23
+Viet Nam,VNM,men,25-34,2012,69.71
+Viet Nam,VNM,men,35-44,2012,92.28
+Viet Nam,VNM,women,15-24,2013,26.73
+Viet Nam,VNM,women,25-34,2013,82.92
+Viet Nam,VNM,women,35-44,2013,88.03
+Viet Nam,VNM,men,15-24,2013,10.87
+Viet Nam,VNM,men,25-34,2013,69.46
+Viet Nam,VNM,men,35-44,2013,92.24
+Viet Nam,VNM,women,15-24,2014,27.12
+Viet Nam,VNM,women,25-34,2014,83.76
+Viet Nam,VNM,women,35-44,2014,88.27
+Viet Nam,VNM,men,15-24,2014,10.48
+Viet Nam,VNM,men,25-34,2014,68.77
+Viet Nam,VNM,men,35-44,2014,92.04
+Viet Nam,VNM,women,15-24,2015,28.91
+Viet Nam,VNM,women,25-34,2015,84.57
+Viet Nam,VNM,women,35-44,2015,88.77
+Viet Nam,VNM,men,15-24,2015,12.17
+Viet Nam,VNM,men,25-34,2015,69.74
+Viet Nam,VNM,men,35-44,2015,91.84
+Viet Nam,VNM,women,15-24,2016,27.52
+Viet Nam,VNM,women,25-34,2016,83.51
+Viet Nam,VNM,women,35-44,2016,88.63
+Viet Nam,VNM,men,15-24,2016,11.04
+Viet Nam,VNM,men,25-34,2016,67.6
+Viet Nam,VNM,men,35-44,2016,91.2
+Viet Nam,VNM,women,15-24,2017,26.69
+Viet Nam,VNM,women,25-34,2017,83.21
+Viet Nam,VNM,women,35-44,2017,88.97
+Viet Nam,VNM,men,15-24,2017,11.21
+Viet Nam,VNM,men,25-34,2017,65.73
+Viet Nam,VNM,men,35-44,2017,91.05
+Viet Nam,VNM,women,15-24,2018,27.01
+Viet Nam,VNM,women,25-34,2018,82.21
+Viet Nam,VNM,women,35-44,2018,88.9
+Viet Nam,VNM,men,15-24,2018,11.15
+Viet Nam,VNM,men,25-34,2018,64.6
+Viet Nam,VNM,men,35-44,2018,90.43
+Viet Nam,VNM,women,15-24,2019,27.88
+Viet Nam,VNM,women,25-34,2019,82.98
+Viet Nam,VNM,women,35-44,2019,88.38
+Viet Nam,VNM,men,15-24,2019,11.45
+Viet Nam,VNM,men,25-34,2019,66.0
+Viet Nam,VNM,men,35-44,2019,89.35
+Viet Nam,VNM,women,15-24,2020,24.67
+Viet Nam,VNM,women,25-34,2020,82.17
+Viet Nam,VNM,women,35-44,2020,88.43
+Viet Nam,VNM,men,15-24,2020,9.96
+Viet Nam,VNM,men,25-34,2020,63.01
+Viet Nam,VNM,men,35-44,2020,88.67
+Viet Nam,VNM,women,15-24,2021,19.71
+Viet Nam,VNM,women,25-34,2021,80.52
+Viet Nam,VNM,women,35-44,2021,89.13
+Viet Nam,VNM,men,15-24,2021,7.65
+Viet Nam,VNM,men,25-34,2021,60.82
+Viet Nam,VNM,men,35-44,2021,88.14
+Viet Nam,VNM,women,15-24,2022,16.69
+Viet Nam,VNM,women,25-34,2022,78.61
+Viet Nam,VNM,women,35-44,2022,88.64
+Viet Nam,VNM,men,15-24,2022,6.47
+Viet Nam,VNM,men,25-34,2022,56.85
+Viet Nam,VNM,men,35-44,2022,86.11
+Viet Nam,VNM,women,15-24,2023,16.0
+Viet Nam,VNM,women,25-34,2023,76.01
+Viet Nam,VNM,women,35-44,2023,88.64
+Viet Nam,VNM,men,15-24,2023,5.64
+Viet Nam,VNM,men,25-34,2023,52.27
+Viet Nam,VNM,men,35-44,2023,84.62
+Viet Nam,VNM,women,15-24,2024,15.25
+Viet Nam,VNM,women,25-34,2024,77.44
+Viet Nam,VNM,women,35-44,2024,88.6
+Viet Nam,VNM,men,15-24,2024,6.02
+Viet Nam,VNM,men,25-34,2024,53.61
+Viet Nam,VNM,men,35-44,2024,84.52
+South Africa,ZAF,women,15-24,2001,11.41
+South Africa,ZAF,women,25-34,2001,48.25
+South Africa,ZAF,women,35-44,2001,68.35
+South Africa,ZAF,men,15-24,2001,3.06
+South Africa,ZAF,men,25-34,2001,37.35
+South Africa,ZAF,men,35-44,2001,70.59
+South Africa,ZAF,women,15-24,2002,11.07
+South Africa,ZAF,women,25-34,2002,49.21
+South Africa,ZAF,women,35-44,2002,68.45
+South Africa,ZAF,men,15-24,2002,3.09
+South Africa,ZAF,men,25-34,2002,37.62
+South Africa,ZAF,men,35-44,2002,70.16
+South Africa,ZAF,women,15-24,2003,10.85
+South Africa,ZAF,women,25-34,2003,47.61
+South Africa,ZAF,women,35-44,2003,67.98
+South Africa,ZAF,men,15-24,2003,2.82
+South Africa,ZAF,men,25-34,2003,37.09
+South Africa,ZAF,men,35-44,2003,69.55
+South Africa,ZAF,women,15-24,2004,10.85
+South Africa,ZAF,women,25-34,2004,47.13
+South Africa,ZAF,women,35-44,2004,63.95
+South Africa,ZAF,men,15-24,2004,2.64
+South Africa,ZAF,men,25-34,2004,36.84
+South Africa,ZAF,men,35-44,2004,69.84
+South Africa,ZAF,women,15-24,2005,10.1
+South Africa,ZAF,women,25-34,2005,44.88
+South Africa,ZAF,women,35-44,2005,60.22
+South Africa,ZAF,men,15-24,2005,2.69
+South Africa,ZAF,men,25-34,2005,36.8
+South Africa,ZAF,men,35-44,2005,66.98
+South Africa,ZAF,women,15-24,2006,9.98
+South Africa,ZAF,women,25-34,2006,43.6
+South Africa,ZAF,women,35-44,2006,58.66
+South Africa,ZAF,men,15-24,2006,2.23
+South Africa,ZAF,men,25-34,2006,33.93
+South Africa,ZAF,men,35-44,2006,66.21
+South Africa,ZAF,women,15-24,2007,9.77
+South Africa,ZAF,women,25-34,2007,42.88
+South Africa,ZAF,women,35-44,2007,59.23
+South Africa,ZAF,men,15-24,2007,2.54
+South Africa,ZAF,men,25-34,2007,33.77
+South Africa,ZAF,men,35-44,2007,65.21
+South Africa,ZAF,women,15-24,2008,10.34
+South Africa,ZAF,women,25-34,2008,43.33
+South Africa,ZAF,women,35-44,2008,58.78
+South Africa,ZAF,men,15-24,2008,3.67
+South Africa,ZAF,men,25-34,2008,32.45
+South Africa,ZAF,men,35-44,2008,64.59
+South Africa,ZAF,women,15-24,2009,9.33
+South Africa,ZAF,women,25-34,2009,42.85
+South Africa,ZAF,women,35-44,2009,59.0
+South Africa,ZAF,men,15-24,2009,2.51
+South Africa,ZAF,men,25-34,2009,31.39
+South Africa,ZAF,men,35-44,2009,62.88
+South Africa,ZAF,women,15-24,2010,8.63
+South Africa,ZAF,women,25-34,2010,41.09
+South Africa,ZAF,women,35-44,2010,58.58
+South Africa,ZAF,men,15-24,2010,2.12
+South Africa,ZAF,men,25-34,2010,30.2
+South Africa,ZAF,men,35-44,2010,60.99
+South Africa,ZAF,women,15-24,2011,8.36
+South Africa,ZAF,women,25-34,2011,40.4
+South Africa,ZAF,women,35-44,2011,56.66
+South Africa,ZAF,men,15-24,2011,2.08
+South Africa,ZAF,men,25-34,2011,28.76
+South Africa,ZAF,men,35-44,2011,59.89
+South Africa,ZAF,women,15-24,2012,7.98
+South Africa,ZAF,women,25-34,2012,41.49
+South Africa,ZAF,women,35-44,2012,56.54
+South Africa,ZAF,men,15-24,2012,2.4
+South Africa,ZAF,men,25-34,2012,29.26
+South Africa,ZAF,men,35-44,2012,60.16
+South Africa,ZAF,women,15-24,2013,7.8
+South Africa,ZAF,women,25-34,2013,39.75
+South Africa,ZAF,women,35-44,2013,55.98
+South Africa,ZAF,men,15-24,2013,2.39
+South Africa,ZAF,men,25-34,2013,27.74
+South Africa,ZAF,men,35-44,2013,57.91
+South Africa,ZAF,women,15-24,2014,7.84
+South Africa,ZAF,women,25-34,2014,38.43
+South Africa,ZAF,women,35-44,2014,55.47
+South Africa,ZAF,men,15-24,2014,2.35
+South Africa,ZAF,men,25-34,2014,25.98
+South Africa,ZAF,men,35-44,2014,57.02
+South Africa,ZAF,women,15-24,2015,8.01
+South Africa,ZAF,women,25-34,2015,39.38
+South Africa,ZAF,women,35-44,2015,54.34
+South Africa,ZAF,men,15-24,2015,2.37
+South Africa,ZAF,men,25-34,2015,27.22
+South Africa,ZAF,men,35-44,2015,58.37
+South Africa,ZAF,women,15-24,2016,7.98
+South Africa,ZAF,women,25-34,2016,37.88
+South Africa,ZAF,women,35-44,2016,55.06
+South Africa,ZAF,men,15-24,2016,2.57
+South Africa,ZAF,men,25-34,2016,26.22
+South Africa,ZAF,men,35-44,2016,55.88
+South Africa,ZAF,women,15-24,2017,7.4
+South Africa,ZAF,women,25-34,2017,38.22
+South Africa,ZAF,women,35-44,2017,53.43
+South Africa,ZAF,men,15-24,2017,2.38
+South Africa,ZAF,men,25-34,2017,24.95
+South Africa,ZAF,men,35-44,2017,54.75
+South Africa,ZAF,women,15-24,2018,7.49
+South Africa,ZAF,women,25-34,2018,37.26
+South Africa,ZAF,women,35-44,2018,53.24
+South Africa,ZAF,men,15-24,2018,2.38
+South Africa,ZAF,men,25-34,2018,24.42
+South Africa,ZAF,men,35-44,2018,52.53
+South Africa,ZAF,women,15-24,2019,6.98
+South Africa,ZAF,women,25-34,2019,36.06
+South Africa,ZAF,women,35-44,2019,52.84
+South Africa,ZAF,men,15-24,2019,2.09
+South Africa,ZAF,men,25-34,2019,23.96
+South Africa,ZAF,men,35-44,2019,51.44
+South Africa,ZAF,women,15-24,2020,5.2
+South Africa,ZAF,women,25-34,2020,33.98
+South Africa,ZAF,women,35-44,2020,52.5
+South Africa,ZAF,men,15-24,2020,1.22
+South Africa,ZAF,men,25-34,2020,21.32
+South Africa,ZAF,men,35-44,2020,49.5
+South Africa,ZAF,women,15-24,2021,4.57
+South Africa,ZAF,women,25-34,2021,32.3
+South Africa,ZAF,women,35-44,2021,51.68
+South Africa,ZAF,men,15-24,2021,1.48
+South Africa,ZAF,men,25-34,2021,20.25
+South Africa,ZAF,men,35-44,2021,48.24
+South Africa,ZAF,women,15-24,2022,5.67
+South Africa,ZAF,women,25-34,2022,31.65
+South Africa,ZAF,women,35-44,2022,48.52
+South Africa,ZAF,men,15-24,2022,1.76
+South Africa,ZAF,men,25-34,2022,20.79
+South Africa,ZAF,men,35-44,2022,45.7
+South Africa,ZAF,women,15-24,2023,5.8
+South Africa,ZAF,women,25-34,2023,30.43
+South Africa,ZAF,women,35-44,2023,47.9
+South Africa,ZAF,men,15-24,2023,1.71
+South Africa,ZAF,men,25-34,2023,20.48
+South Africa,ZAF,men,35-44,2023,44.55
+South Africa,ZAF,women,15-24,2024,5.6
+South Africa,ZAF,women,25-34,2024,30.24
+South Africa,ZAF,women,35-44,2024,47.08
+South Africa,ZAF,men,15-24,2024,1.68
+South Africa,ZAF,men,25-34,2024,20.32
+South Africa,ZAF,men,35-44,2024,44.34
+South Africa,ZAF,women,15-24,2025,5.31
+South Africa,ZAF,women,25-34,2025,28.63
+South Africa,ZAF,women,35-44,2025,45.47
+South Africa,ZAF,men,15-24,2025,1.35
+South Africa,ZAF,men,25-34,2025,19.42
+South Africa,ZAF,men,35-44,2025,41.34
+Zambia,ZMB,women,15-24,2017,32.83
+Zambia,ZMB,women,25-34,2017,68.77
+Zambia,ZMB,women,35-44,2017,70.91
+Zambia,ZMB,men,15-24,2017,11.97
+Zambia,ZMB,men,25-34,2017,66.33
+Zambia,ZMB,men,35-44,2017,85.59
+Zambia,ZMB,women,15-24,2018,29.92
+Zambia,ZMB,women,25-34,2018,68.38
+Zambia,ZMB,women,35-44,2018,69.57
+Zambia,ZMB,men,15-24,2018,10.19
+Zambia,ZMB,men,25-34,2018,66.73
+Zambia,ZMB,men,35-44,2018,86.03
+Zambia,ZMB,women,15-24,2019,27.01
+Zambia,ZMB,women,25-34,2019,66.61
+Zambia,ZMB,women,35-44,2019,72.04
+Zambia,ZMB,men,15-24,2019,9.31
+Zambia,ZMB,men,25-34,2019,64.85
+Zambia,ZMB,men,35-44,2019,85.1
+Zambia,ZMB,women,15-24,2020,28.01
+Zambia,ZMB,women,25-34,2020,66.43
+Zambia,ZMB,women,35-44,2020,71.62
+Zambia,ZMB,men,15-24,2020,10.47
+Zambia,ZMB,men,25-34,2020,63.04
+Zambia,ZMB,men,35-44,2020,85.0
+Zambia,ZMB,women,15-24,2021,28.55
+Zambia,ZMB,women,25-34,2021,67.4
+Zambia,ZMB,women,35-44,2021,67.65
+Zambia,ZMB,men,15-24,2021,11.77
+Zambia,ZMB,men,25-34,2021,66.53
+Zambia,ZMB,men,35-44,2021,84.96
+Zambia,ZMB,women,15-24,2022,28.8
+Zambia,ZMB,women,25-34,2022,65.08
+Zambia,ZMB,women,35-44,2022,68.23
+Zambia,ZMB,men,15-24,2022,10.15
+Zambia,ZMB,men,25-34,2022,62.37
+Zambia,ZMB,men,35-44,2022,84.11
+Zambia,ZMB,women,15-24,2023,26.32
+Zambia,ZMB,women,25-34,2023,65.58
+Zambia,ZMB,women,35-44,2023,67.84
+Zambia,ZMB,men,15-24,2023,10.06
+Zambia,ZMB,men,25-34,2023,61.15
+Zambia,ZMB,men,35-44,2023,83.71
+Zambia,ZMB,women,15-24,2024,26.04
+Zambia,ZMB,women,25-34,2024,64.37
+Zambia,ZMB,women,35-44,2024,69.16
+Zambia,ZMB,men,15-24,2024,9.3
+Zambia,ZMB,men,25-34,2024,62.88
+Zambia,ZMB,men,35-44,2024,84.43

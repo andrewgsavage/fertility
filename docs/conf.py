@@ -40,6 +40,10 @@ _OUTPUT_DIRS = {
     "housing": _REPO_ROOT / "housing" / "outputs",
     "gss": _REPO_ROOT / "GSS" / "outputs",
     "hcmst": _REPO_ROOT / "HCMST" / "outputs",
+    "ilo": _REPO_ROOT / "ILO" / "outputs",
+    "ft": _REPO_ROOT / "FT" / "outputs",
+    "un": _REPO_ROOT / "UN" / "outputs",
+    "nso": _REPO_ROOT / "NSO" / "outputs",
 }
 
 
