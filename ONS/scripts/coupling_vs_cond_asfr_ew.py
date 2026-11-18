@@ -34,23 +34,38 @@ Y_RANGES = {"21-24": (21, 24), "25-29": (25, 29), "30-34": (30, 34), "35-39": (3
             "40-44": (40, 44), "21-29": (21, 29), "30-39": (30, 39)}
 X_GROUPS = {"16 to 29": "16-29", "30 to 34": "30-34", "35 to 39": "35-39", "40 to 44": "40-44",
             "45 to 49": "45-49"}
-CHILDLESS_AGES = [30, 35, 40]
+CHILDLESS_AGES = [25, 30, 35, 40]
+# 5-year age groups for "% of women aged X with a child" (the measure surveys such as DHS report).
+MOTHER_GROUPS = {"20-24": (20, 24), "25-29": (25, 29), "30-34": (30, 34), "35-39": (35, 39)}
 RATE_LABEL = "First births per childless woman"
 
 
 def y_options(ranges):
-    """y dropdown: key -> axis label. First-birth rates by age range, then % childless."""
+    """y dropdown: key -> axis label. First-birth rates by age range, then % with a child."""
     opts = {k: f"{RATE_LABEL}, {k}" for k in ranges}
-    opts |= {f"childless {a}": f"% of women childless at {a}" for a in CHILDLESS_AGES}
+    opts |= {f"mother {a}": f"% of women with a child by {a}" for a in CHILDLESS_AGES}
     return opts
 
 
-def childless_ew():
-    """year -> % of women childless at exact ages 30/35/40 (ONS table 3, year = cohort + age)."""
-    rows = [{"year": cohort + age, f"childless {age}": 100 - p1}
-            for cohort, ages in load_table3().items() for age, (p1, _) in ages.items()
-            if age in CHILDLESS_AGES]
-    return pd.DataFrame(rows).groupby("year").first()
+GROUP_OPTS = {f"mothers {g}": f"% of women aged {g} with a child" for g in MOTHER_GROUPS}
+
+
+def mothers_ew():
+    """year -> % of women with at least one child by exact ages 25/30/35/40 (100 - childless;
+    ONS table 3, year = cohort + age), and among women in 5-year age groups (unweighted mean
+    over single ages; a group needs all its ages)."""
+    rows = [{"year": cohort + age, "age": age, "p1": p1}
+            for cohort, ages in load_table3().items() for age, (p1, _) in ages.items()]
+    d = pd.DataFrame(rows).drop_duplicates(["year", "age"])
+    out = d[d.age.isin(CHILDLESS_AGES)].pivot(index="year", columns="age", values="p1")
+    out.columns = [f"mother {a}" for a in out.columns]
+    # Women aged a (last birthday) are on average a + 0.5: use the mean of p1 at exact a and a + 1.
+    nxt = d.assign(age=d.age - 1).set_index(["year", "age"]).p1
+    d["mid"] = (d.set_index(["year", "age"]).p1 + nxt).reindex(d.set_index(["year", "age"]).index).values / 2
+    for g, (lo, hi) in MOTHER_GROUPS.items():
+        s = d[d.age.between(lo, hi)].dropna(subset=["mid"]).groupby("year").mid.agg(["mean", "size"])
+        out[f"mothers {g}"] = s["mean"].where(s["size"] == hi - lo + 1)
+    return out
 
 
 def first_birth_rates(ranges=Y_RANGES):
@@ -73,14 +88,19 @@ def first_birth_rates(ranges=Y_RANGES):
 
 
 def dual_dropdown_fig(series, x_opts, y_opts, x_default, y_default, title, x_label,
-                      color_by_year=False):
+                      color_by_year=False, auto_hide=False):
     """Connected scatter, one trace per series, with independent x and y dropdowns.
 
     series: list of dicts with name, color, years (list), x {option: values aligned to years},
-    y {option: values}. Points where x or y is missing are left out (gaps), so switching one
+    y {option: values}, optional hidden (start in the legend only). With auto_hide, a series
+    with no data for the selected y option is moved to the legend. Points where x or y is missing are left out (gaps), so switching one
     axis never misaligns years. x_opts values are suffixed to x_label; y_opts values are the
     full y-axis labels.
     """
+    def visible(s, k):
+        has = not auto_hide or any(v is not None for v in s["y"][k])
+        return "legendonly" if s.get("hidden") or not has else True
+
     fig = go.Figure()
     all_years = sorted({y for s in series for y in s["years"]})
     caxis = period_axis(all_years[0], all_years[-1])
@@ -99,14 +119,16 @@ def dual_dropdown_fig(series, x_opts, y_opts, x_default, y_default, title, x_lab
             mode="lines+markers+text" if text else "lines+markers", text=text,
             textposition="top center", textfont=dict(size=10),
             line=dict(color="#bbbbbb" if color_by_year else s["color"], width=1.2),
-            marker=marker, connectgaps=False,
+            marker=marker, connectgaps=False, visible=visible(s, y_default),
             hovertemplate=f"{s['name']} %{{customdata}}<br>x %{{x:.1f}}%<br>y %{{y:.2f}}%<extra></extra>"))
 
     x_buttons = [dict(label=f"{x_label}: {lab}", method="update",
                       args=[{"x": [s["x"][k] for s in series]}, {"xaxis.title.text": f"{x_label}, {lab}"}])
                  for k, lab in x_opts.items()]
     y_buttons = [dict(label=lab, method="update",
-                      args=[{"y": [s["y"][k] for s in series]}, {"yaxis.title.text": lab}])
+                      args=[{"y": [s["y"][k] for s in series]}
+                            | ({"visible": [visible(s, k) for s in series]} if auto_hide else {}),
+                            {"yaxis.title.text": lab}])
                  for k, lab in y_opts.items()]
     fig.update_layout(
         template="plotly_white", title=dict(text=title, x=0.01),
@@ -125,7 +147,7 @@ def dual_dropdown_fig(series, x_opts, y_opts, x_default, y_default, title, x_lab
 
 
 def load():
-    rates = first_birth_rates().join(childless_ew(), how="outer")
+    rates = first_birth_rates().join(mothers_ew(), how="outer")
     c = coupling_by_age_ew.load()
     c = c[c.sex == "Women"]
     years = sorted(set(rates.index) & set(c.year))

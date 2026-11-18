@@ -64,6 +64,24 @@ People aged 25–49 living in a couple household (married or cohabiting, with or
 
 The EU27 share is flat between 2010 and 2024 and moves in both directions across countries: down in France, Finland, the Netherlands, Spain and Italy, up in Czechia and Poland. Fertility fell in all of them. At ages 25–49 there is no common fall in couple formation that would account for the fall in births. The age band is wide: it can't show whether couples form later within the 20s and early 30s, which is where the mechanism acts. Eurostat's [household composition table](https://ec.europa.eu/eurostat/databrowser/view/lfst_hhindws/default/table) (EU Labour Force Survey) has no 25–34 group.
 
+## Young adults in a couple against first-birth rates
+
+Share of people aged 18–24 (or 20–49, 25–49) living in a couple household, against first births per childless woman or the share of women with a child by 25, 30, 35 or 40, one point per year from 2006. The left dropdown picks sex and age group; the right one picks the y measure. Markers grow with the year. Denmark, Sweden and Norway start hidden: their series have breaks (Denmark falls to 1% at 18–24; Norway starts in 2021 at about 3%).
+
+```{raw} html
+<iframe src="../_static/eurostat/coupling_vs_cond_asfr_eurostat.html" style="width: 100%; height: 600px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+
+| | Year | Women 18–24 in a couple | First-birth rate 20–24 | With a child by 30 | Year | Women 18–24 in a couple | First-birth rate 20–24 | With a child by 30 |
+|---|---|--:|--:|--:|---|--:|--:|--:|
+| Finland | 2006 | 31.9% | 4.3% | 54.4% | 2024 | 18.1% | 1.9% | 37.8% |
+| Netherlands | 2006 | 22.6% | 3.0% | 50.7% | 2023 | 10.4% | 1.5% | 41.3% |
+| Portugal | 2006 | 10.3% | 4.2% | 65.1% | 2024 | 4.1% | 2.5% | 43.0% |
+| Spain | 2006 | 7.3% | 2.6% | 36.8% | 2023 | 2.2% | 1.5% | 28.7% |
+| Czechia | 2006 | 12.8% | 3.8% | 68.7% | 2021 | 18.4% | 3.7% | 55.5% |
+
+Coverage: Eurostat [household composition table](https://ec.europa.eu/eurostat/databrowser/view/lfst_hhindws/default/table) (EU Labour Force Survey), adults living in a couple (married or cohabiting, in their own couple household) over all persons in the group; people living with their parents are not counted as in a couple. First-birth rates and % with a child from the Human Fertility Database as in the charts below; UK births are England and Wales (ONS reconstruction, ages 21 and over, so no first-birth rate at 20–24). 20 countries have both. EU-LFS household data has a methodology break in 2021.
+
 ## Coupling rate at 25–34, by country
 
 Share of people aged 25–34 who are married or cohabiting, as published in the FT's [The relationship recession is going global](https://www.ft.com/content/43e2b4f6-5ab7-4c47-b9fd-d611c36dad74) (John Burn-Murdoch, 11 January 2025). Values were read from the article's chart data. Ten countries are shown by default; click names to add the rest.
@@ -216,7 +234,7 @@ Coverage: ONS [population estimates by marital status and living arrangements](h
 
 ## Coupling against conditional birth rates, England and Wales
 
-First births per childless woman against the share of women living in a couple, one point per year from 2002. The left dropdown picks the coupling age group (in a couple, or cohabiting only); the right one picks the age range of the first-birth rate, or switches the y axis to the share of women childless at 30, 35 or 40 in that year.
+First births per childless woman against the share of women living in a couple, one point per year from 2002. The left dropdown picks the coupling age group (in a couple, or cohabiting only); the right one picks the age range of the first-birth rate, or switches the y axis to the share of women with a child by 25, 30, 35 or 40 in that year.
 
 ```{raw} html
 <iframe src="../_static/ons/coupling_vs_cond_asfr_ew.html" style="width: 100%; height: 560px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
@@ -233,7 +251,7 @@ Coverage: conditional rates reconstructed from ONS [cohort fertility table 3](ht
 
 ## Coupling against first-birth rates, by country
 
-The same chart for every country with both a coupling series and conditional first-birth rates: 13 countries. Markers grow with the year. The y dropdown also offers the share of women childless at 30, 35 or 40. The coupling dropdown also has 5-year groups, which exist only for the register countries (Denmark, Finland, Netherlands); the US, Spain, Poland and the UK have 25–34 only.
+The same chart for every country with both a coupling series and conditional first-birth rates: 13 countries. Markers grow with the year. The y dropdown also offers the share of women with a child by 25, 30, 35 or 40. The coupling dropdown also has 5-year groups, which exist only for the register countries (Denmark, Finland, Netherlands); the US, Spain, Poland and the UK have 25–34 only.
 
 ```{raw} html
 <iframe src="../_static/ilo/coupling_vs_cond_asfr.html" style="width: 100%; height: 600px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
@@ -249,17 +267,51 @@ The same chart for every country with both a coupling series and conditional fir
 | Poland | FT, both sexes, 25–34 | 2001–2017 |
 | UK | FT, both sexes, 25–34; births England and Wales | 1992–2019 |
 
-Coverage: first births per childless woman from the [Human Fertility Database](https://www.humanfertility.org/) (conditional fertility rates `mi`, pooled over the chosen ages with childless-women exposures `exposRRpa` as weights; % childless = childless women's share of all female exposure at that age and year, from `exposRRpa`); UK from the ONS reconstruction above (ages 21 and over only; % childless from cohort table 3). Coupling from ILOSTAT where it records cohabitation, from the national sources above for Denmark, Finland, the Netherlands and the US, otherwise from the FT. HFD countries with no coupling series (e.g. France, Germany, Sweden) are left out.
+Coverage: first births per childless woman from the [Human Fertility Database](https://www.humanfertility.org/) (conditional fertility rates `mi`, pooled over the chosen ages with childless-women exposures `exposRRpa` as weights; % with a child = 100 minus childless women's share of all female exposure at that age and year, from `exposRRpa`); UK from the ONS reconstruction above (ages 21 and over only; % with a child from cohort table 3). Coupling from ILOSTAT where it records cohabitation, from the national sources above for Denmark, Finland, the Netherlands and the US, otherwise from the FT. HFD countries with no coupling series (e.g. France, Germany, Sweden) are left out.
 
 ## Coupling by 5-year age against first-birth rates, UN data
 
-The same chart with the UN coupling series: women married or in a union, by 5-year age group, against first births per childless woman. 17 countries; one point per census or survey year, so most lines have 3–6 points. Markers grow with the year. The y dropdown also offers the share of women childless at 30, 35 or 40.
+The same chart with the UN coupling series: women married or in a union, by 5-year age group, against first births per childless woman. 17 countries; one point per census or survey year, so most lines have 3–6 points. Markers grow with the year. The y dropdown also offers the share of women with a child by 25, 30, 35 or 40.
 
 ```{raw} html
 <iframe src="../_static/un/coupling_vs_cond_asfr_un.html" style="width: 100%; height: 600px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
 Coverage: coupling from UN World Marriage Data 2019 (section above, women); first-birth rates from the Human Fertility Database, pooled as in the chart above. Countries: Austria, Belarus, Bulgaria, Canada, Chile, Czechia, Denmark, Estonia, Hungary, Japan, S Korea, Lithuania, Norway, Poland, Russia, Sweden, Ukraine. Finland, Iceland, Ireland and Taiwan have UN and HFD data but fewer than two years in common.
+
+## Coupling against % of women with a child, survey countries
+
+Share of women in a 5-year age group with at least one child against the coupling rate, adding countries with Demographic and Health Surveys (DHS), which have no conditional birth rates. Grey lines are the HFD countries and the UK from the charts above, on the same measure. The left dropdown picks the coupling age group; the right one picks the motherhood age group (20–24 to 35–39). Markers grow with the year.
+
+::::{tab-set}
+
+:::{tab-item} ILO, national and FT coupling
+```{raw} html
+<iframe src="../_static/dhs/coupling_vs_mothers.html" style="width: 100%; height: 600px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+:::
+
+:::{tab-item} UN coupling, 5-year ages
+```{raw} html
+<iframe src="../_static/dhs/coupling_vs_mothers_un.html" style="width: 100%; height: 600px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+:::
+
+::::
+
+| Latest survey, women aged 25–29 | Married or in a union | With a child |
+|---|--:|--:|
+| South Africa 2016 | 35.7% | 84.7% |
+| Namibia 2013 | 37.5% | 82.7% |
+| Colombia 2010 | 60.2% | 75.2% |
+| Philippines 2017 | 70.7% | 70.4% |
+| Ukraine 2012 (HFD) | 70.0% | 61.2% |
+| Sweden 2012 (HFD) | 73.3% | 35.0% |
+| Japan 2015 (HFD) | 38.0% | 25.2% |
+
+At the same coupling rate, DHS countries have far more mothers than HFD countries. In South Africa and Namibia at least 45% of women aged 25–29 are mothers who are not married or in a union (mothers minus coupled), so coupling there says little about first births.
+
+Coverage: % with a child from the [DHS Program API](https://api.dhsprogram.com/) (indicator `FE_CEBA_W_CH0`, women with no children ever born, by 5-year age group), DHS surveys of all women only; surveys of ever-married women (most of Egypt, Jordan, Pakistan and Bangladesh) are left out. HFD and UK: childless women's share of all women in the age group, as above. Coupling as in the two charts above: ILO (women) for 14 DHS countries, FT (both sexes, 25–34) for Angola, Cambodia, Ghana, India, Kenya and Nigeria; UN tab: 30 DHS countries, one point per survey year, usually from the same DHS survey.
 
 ## Coupling by education, UK and US
 
@@ -303,6 +355,15 @@ Coupling sources with finer age detail than ILOSTAT's 10-year bands, not yet add
 | [Statistics Canada 17-10-0060](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710006001) (married and common-law by age) | Single year | Annual | Yes | Manual download; blocks scripted access |
 
 UN World Marriage Data is already on this page (5-year bands, census and survey years).
+
+Sources of % of women with a child by age, for countries with coupling data but no HFD parity data, not yet added:
+
+| Source | Countries | Ages | Years | Access |
+|---|---|---|---|---|
+| Destatis Mikrozensus, [GENESIS 12612-0050 to -0052](https://genesis.destatis.de/datenbank/online?sequenz=statistikTabellen&selectionname=12612&language=en) | Germany | 5-year | 2008, 2012, 2016, 2018, 2022 | GENESIS-Online |
+| [IPUMS International](https://international.ipums.org/) (children ever born) | France, Italy, Mexico, Brazil and most census countries | Single year | Census samples | Free registration |
+| HFD order-specific births (`asfrRRbo`) for Italy (2004–) and Germany (2009–) | Italy, Germany | Single year | Too few years to build cohort shares at 25–40; no parity exposures | Free registration |
+| National censuses (ABS, INEGI, IBGE, INSEE) | Australia, Mexico, Brazil, France | 5-year | Census years | Free |
 
 ## Causal evidence
 
