@@ -147,7 +147,7 @@ Coverage: ONS [population estimates by marital status and living arrangements](h
 
 ## Coupling against conditional birth rates, England and Wales
 
-Conditional ASFR (first births per childless woman, second births per one-child woman) against the share of women living in a couple, one point per year from 2002. Use the dropdowns to pick the age band and to switch the x axis to the cohabiting share alone.
+First births per childless woman against the share of women living in a couple, one point per year from 2002. The left dropdown picks the coupling age group (in a couple, or cohabiting only); the right one picks the age range of the first-birth rate.
 
 ```{raw} html
 <iframe src="../_static/ons/coupling_vs_cond_asfr_ew.html" style="width: 100%; height: 560px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
@@ -160,7 +160,25 @@ Conditional ASFR (first births per childless woman, second births per one-child 
 | 35–39 | 73.6% | 77.3% | 7.7% | 7.8% |
 | 40–44 | 71.9% | 77.1% | 2.5% | 3.0% |
 
-Coverage: conditional rates reconstructed from ONS [cohort fertility table 3](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/datasets/childbearingforwomenbornindifferentyearsreferencetable) (parity distribution by age and year of birth), as on the [conditional ASFR page](../uk/cond-asfr.md); single ages pooled into each band, weighted by the share of the cohort at risk. Rates start at age 21, so the youngest band is 21–29 for births and 16–29 (18–29 in 2025) for living arrangements.
+Coverage: conditional rates reconstructed from ONS [cohort fertility table 3](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/datasets/childbearingforwomenbornindifferentyearsreferencetable) (parity distribution by age and year of birth), as on the [conditional ASFR page](../uk/cond-asfr.md); single ages pooled over the chosen range, weighted by the share of the cohort still childless. Rates start at age 21. The youngest living-arrangements group is 16–29 (18–29 in 2025).
+
+## Coupling against first-birth rates, by country
+
+The same chart for every country with both a coupling series and conditional first-birth rates: 13 countries. Markers grow with the year. Coupling at 15–24 and 35–44 exists only for the ILO countries; the FT countries have 25–34 only.
+
+```{raw} html
+<iframe src="../_static/ilo/coupling_vs_cond_asfr.html" style="width: 100%; height: 600px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+
+| Country | Coupling source | Years |
+|---|---|---|
+| Canada, Japan, S Korea | ILO, women | 2000–2023/24 |
+| Chile, Russia, Belarus | ILO, women | 2010–2020, 2010–2018, 2016–2018 |
+| Denmark, Finland, Netherlands, Spain, US | FT, both sexes, 25–34 | 1990s–2021/24 |
+| Poland | FT, both sexes, 25–34 | 2001–2017 |
+| UK | FT, both sexes, 25–34; births England and Wales | 1992–2019 |
+
+Coverage: first births per childless woman from the [Human Fertility Database](https://www.humanfertility.org/) (conditional fertility rates `mi`, pooled over the chosen ages with childless-women exposures `exposRRpa` as weights); UK from the ONS reconstruction above (ages 21 and over only). Coupling from ILOSTAT (section above) where it records cohabitation, otherwise from the FT. HFD countries with no coupling series (e.g. France, Germany, Sweden) are left out.
 
 ## Coupling by education, UK and US
 
