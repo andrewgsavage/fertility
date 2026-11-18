@@ -42,6 +42,8 @@ _OUTPUT_DIRS = {
     "hcmst": _REPO_ROOT / "HCMST" / "outputs",
     "ilo": _REPO_ROOT / "ILO" / "outputs",
     "ft": _REPO_ROOT / "FT" / "outputs",
+    "un": _REPO_ROOT / "UN" / "outputs",
+    "nso": _REPO_ROOT / "NSO" / "outputs",
 }
 
 

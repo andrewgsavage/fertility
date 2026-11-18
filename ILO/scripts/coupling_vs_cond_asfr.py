@@ -7,7 +7,9 @@ y: first births per childless woman (HFD mi.txt, m1x), pooled over the chosen si
    Wales reconstruction from ONS cohort table 3 (ages 21-45 only).
 x: % married or cohabiting.
    - ILO, women, 15-24 / 25-34 / 35-44 (coupling_ilo.py), where ILO records cohabitation.
-   - FT, both sexes, 25-34 only (FT/scripts/ft_coupling.py), for HFD countries ILO lacks.
+   - National statistics offices, women, any age band (NSO/scripts/coupling_nso.py): Denmark,
+     Finland, Netherlands (registers, single-year ages) and the US (CPS, 25-34 only).
+   - FT, both sexes, 25-34 only (FT/scripts/ft_coupling.py), for the rest.
 
 Inputs (not tracked in git): HFD/data/HFD/mi.txt and exposRRpa.txt (humanfertility.org),
 plus the CSV outputs of coupling_ilo.py and ft_coupling.py.
@@ -29,10 +31,11 @@ import coupling_vs_cond_asfr_ew as ew  # noqa: E402
 OUTDIR = ROOT / "outputs"
 Y_RANGES = {"15-19": (15, 19), "20-24": (20, 24), "25-29": (25, 29), "30-34": (30, 34), "35-39": (35, 39),
             "40-44": (40, 44), "20-29": (20, 29), "30-39": (30, 39)}
-X_AGES = ["15-24", "25-34", "35-44"]
+Y_OPTS = ew.y_options(Y_RANGES)
+X_AGES = ["15-24", "25-34", "35-44", "20-24", "25-29", "30-34", "35-39"]
 ILO_CODES = {"CAN": "Canada", "CHL": "Chile", "JPN": "Japan", "KOR": "S Korea", "RUS": "Russia", "BLR": "Belarus"}
-FT_CODES = {"DNK": "Denmark", "FIN": "Finland", "NLD": "Netherlands", "POL": "Poland", "ESP": "Spain",
-            "USA": "US", "UK": "UK"}
+NSO_CODES = {"DNK": "Denmark", "FIN": "Finland", "NLD": "Netherlands", "USA": "US"}
+FT_CODES = {"POL": "Poland", "ESP": "Spain", "UK": "UK"}
 FIRST_YEAR = 1990
 
 
@@ -53,11 +56,15 @@ def hfd_first_birth_rates():
             births=("births", "sum"), E0x=("E0x", "sum"), n=("age", "size"))
         g = g[g.n == hi - lo + 1]
         out.append((100 * g.births / g.E0x).rename(name))
+    # % childless at an age: childless women's share of all exposure at that age and year.
+    e["childless"] = 100 * e.E0x / e[["E0x", "E1x", "E2x", "E3x", "E4px"]].sum(axis=1)
+    for a in ew.CHILDLESS_AGES:
+        out.append(e[e.age == a].set_index(["code", "year"]).childless.rename(f"childless {a}"))
     return pd.concat(out, axis=1).reset_index()
 
 
 def uk_first_birth_rates():
-    r = ew.first_birth_rates({k: v for k, v in Y_RANGES.items() if v[0] >= 21})
+    r = ew.first_birth_rates({k: v for k, v in Y_RANGES.items() if v[0] >= 21}).join(ew.childless_ew(), how="outer")
     return r.reset_index().rename(columns={"index": "year"}).assign(code="UK")
 
 
@@ -68,14 +75,20 @@ def coupling():
     ft = ft[ft.country.isin(FT_CODES.values())].rename(columns={"value": "share"})
     ft["code"] = ft.country.map({v: k for k, v in FT_CODES.items()})
     ft["age"] = "25-34"
-    return pd.concat([ilo[["code", "year", "age", "share"]], ft[["code", "year", "age", "share"]]])
+    nso = pd.read_csv(REPO / "NSO" / "outputs" / "coupling_nso.csv")
+    nso = nso[(nso.sex == "Women") & nso.country.isin(NSO_CODES.values())].copy()
+    nso["code"] = nso.country.map({v: k for k, v in NSO_CODES.items()})
+    return pd.concat([ilo[["code", "year", "age", "share"]], ft[["code", "year", "age", "share"]],
+                      nso[["code", "year", "age", "share"]]])
 
 
 def build_series():
     rates = pd.concat([hfd_first_birth_rates(), uk_first_birth_rates()], ignore_index=True)
     cp = coupling()
     names = {**{k: f"{v} (ILO, women)" for k, v in ILO_CODES.items()},
+             **{k: f"{v} (register, women)" for k, v in NSO_CODES.items()},
              **{k: f"{v} (FT, both sexes)" for k, v in FT_CODES.items()}}
+    names["USA"] = "US (CPS, women)"
     names["UK"] = "UK (FT, both sexes; births E&W)"
     colors = pc.qualitative.D3 + ["#000000", "#e6ab02", "#1b9e77"]
     series = []
@@ -89,7 +102,7 @@ def build_series():
         x = {a: [c[(c.age == a) & (c.year == y)].share.squeeze() if ((c.age == a) & (c.year == y)).any()
                  else None for y in years] for a in X_AGES}
         y = {k: [None if k not in r or pd.isna(r.at[yr, k]) else float(r.at[yr, k]) for yr in years]
-             for k in Y_RANGES}
+             for k in Y_OPTS}
         series.append({"name": names[code], "code": code, "color": colors[i % len(colors)],
                        "years": years, "x": x, "y": y})
     return series
@@ -98,13 +111,13 @@ def build_series():
 if __name__ == "__main__":
     series = build_series()
     rows = [{"country": s["name"], "year": yr, **{f"coupling_{a}": s["x"][a][i] for a in X_AGES},
-             **{f"first_birth_{k}": s["y"][k][i] for k in Y_RANGES}}
+             **{f"y_{k}": s["y"][k][i] for k in Y_OPTS}}
             for s in series for i, yr in enumerate(s["years"])]
     pd.DataFrame(rows).round(3).to_csv(OUTDIR / "coupling_vs_cond_asfr.csv", index=False)
     fig = ew.dual_dropdown_fig(
-        series, {a: a for a in X_AGES}, {k: k for k in Y_RANGES}, "25-34", "25-29",
-        "First-birth rate vs coupling rate, by country (marker grows with year)",
-        "% married or cohabiting", "First births per childless woman")
+        series, {a: a for a in X_AGES}, Y_OPTS, "25-34", "25-29",
+        "First-birth rate or childlessness vs coupling rate, by country (marker grows with year)",
+        "% married or cohabiting")
     ew.coupling_by_age_ew.OUTDIR = OUTDIR
     ew.coupling_by_age_ew.write_html(fig, "coupling_vs_cond_asfr.html")
     for s in series:

@@ -93,6 +93,43 @@ The share fell after 2010 in all 41 countries with a 2010 value. In eight it fel
 
 Coverage: FT analysis of ILO harmonised labour force microdata ([ILO data explorer](https://rshiny.ilo.org/dataexplorer5/)), [Arab Barometer](https://www.arabbarometer.org/survey-data/), [Demographic and Health Surveys](https://dhsprogram.com/) and national statistics agencies. Both sexes; 25–34 only.
 
+## Coupling by single-year age, national sources
+
+The FT's Western series traced back to the national statistics offices that publish them openly: share of women and men living with a spouse or cohabiting partner. Registers for Denmark, Finland and the Netherlands give single years of age; the US Census Bureau's CPS tables give 18–24 and 25–34 only. The dropdown picks the age or age group.
+
+::::{tab-set}
+
+:::{tab-item} Women
+```{raw} html
+<iframe src="../_static/nso/coupling_nso_women.html" style="width: 100%; height: 520px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+:::
+
+:::{tab-item} Men
+```{raw} html
+<iframe src="../_static/nso/coupling_nso_men.html" style="width: 100%; height: 520px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+:::
+
+::::
+
+| 25–34, both sexes | National source 2010 | FT 2010 | National source 2021 | FT 2021 |
+|---|--:|--:|--:|--:|
+| Denmark | 61.6% | 61.3% | 57.6% | 57.7% |
+| US | 58.8% | 58.7% | 54.6% | 53.6% |
+| Finland | 62.0% | 65.8% | 54.6% | 58.3% |
+| Netherlands | 60.3% | 62.4% | 56.2% | 61.4% |
+
+Denmark and the US match the FT to within 2 points in every year, so those are the FT's sources. Finland's register runs a steady 4 points below the FT with the same trend, and the Netherlands 2–9 points below, so for those two the FT probably used survey data. Both sexes here is the mean of the women's and men's shares.
+
+| Women | Aged 25–29, 1995 | 2023 | Aged 30–34, 1995 | 2023 |
+|---|--:|--:|--:|--:|
+| Denmark | 67.1% | 54.6% | 75.9% | 69.7% |
+| Finland | 63.4% | 53.0% | 72.6% | 64.6% |
+| Netherlands | 68.1% | 53.2% | 78.8% | 69.1% |
+
+Coverage: [CBS StatLine 37620](https://opendata.cbs.nl/statline/#/CBS/nl/dataset/37620/table) (persons in households by position, 1 January 1995–2025; married and unmarried partners over all persons in households); Statistics Denmark [FAM100N](https://www.statbank.dk/FAM100N) (adults by family type, 1 January 1986–2026; married, registered, consensual-union and cohabiting couples) over [BEFOLK1](https://www.statbank.dk/BEFOLK1) (population); Statistics Finland [12c6](https://pxdata.stat.fi/PxWeb/pxweb/en/StatFin/StatFin__perh/statfin_perh_pxt_12c6.px/) (population by family status, 31 December 1992–2025; spouses and cohabiting partners over population); US Census Bureau [Table AD-3](https://www.census.gov/data/tables/time-series/demo/families/adults.html) (CPS ASEC, living with spouse or with partner, 1967–2023; partners are measured indirectly before 1996 and only where one partner is the householder in 1996–2006). The FT's other national sources are not open: UK Household Longitudinal Study and Family Resources Survey microdata need a UK Data Service account, and Statistics Canada blocks scripted downloads (Canada is covered by ILO above). Spain, Poland, France and Germany are still from the FT.
+
 ## Coupling by sex and age band
 
 Share of women and men married or in a union, by 10-year age band, from ILOSTAT. Surveys in Europe, the US, Canada and Australia that record legal marital status only count cohabiting couples as single, so those country-years are dropped. Each series is cut at its largest coding break (a jump of 10 points or more in one year, e.g. Thailand 2020–21).
@@ -126,6 +163,38 @@ Share of women and men married or in a union, by 10-year age band, from ILOSTAT.
 
 Coverage: ILOSTAT [working-age population by sex, age and marital status](https://ilostat.ilo.org/data/) (`POP_XWAP_SEX_AGE_MTS_NB_A`), annual, from national labour force surveys; 52 countries with 8 or more usable years. Married + union / cohabiting as a share of all persons in the band. The finest age split ILOSTAT publishes is 10 years.
 
+## Coupling by 5-year age, long run
+
+Share of women and men married or in a consensual union, by 5-year age group, from 1970, for 116 countries. The dropdown picks the age group. Points are census, survey or register years, so most countries have one every 5–10 years; hover shows the source.
+
+::::{tab-set}
+
+:::{tab-item} Women
+```{raw} html
+<iframe src="../_static/un/coupling_un_women.html" style="width: 100%; height: 540px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+:::
+
+:::{tab-item} Men
+```{raw} html
+<iframe src="../_static/un/coupling_un_men.html" style="width: 100%; height: 540px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+:::
+
+::::
+
+| Women, first and last year | 20–24 | 25–29 | 30–34 |
+|---|--:|--:|--:|
+| S Korea 1970 → 2015 | 42.3% → 2.9% | 88.4% → 22.0% | 94.6% → 60.4% |
+| Japan 1970 → 2015 | 27.7% → 8.3% | 80.3% → 38.0% | 89.9% → 62.9% |
+| Canada 1979 → 2016 | 46.6% → 18.8% | 77.3% → 50.5% | 84.9% → 68.8% |
+| Denmark 1970 → 2011 | 52.2% → 33.5% | 79.7% → 60.1% | 85.3% → 75.4% |
+| Costa Rica 1973 → 2018 | 49.8% → 25.2% | 70.5% → 43.2% | 77.8% → 55.5% |
+| Mexico 1970 → 2019 | 58.6% → 44.7% | 78.4% → 63.1% | 83.8% → 72.1% |
+| Iran 1971 → 2016 | 82.4% → 55.1% | 94.4% → 74.0% | 96.3% → 81.1% |
+
+Coverage: UN DESA Population Division, [World Marriage Data 2019](https://www.un.org/development/desa/pd/data/world-marriage-data) (marital status by age, CC BY 3.0 IGO). A source counts only if it reports cohabitation, either as "married or in consensual union" or as a separate consensual-union category of at least 2%. In East and South Asia, the Middle East and North Africa, where cohabitation is rare, married alone is used. Register estimates that record only registered partnerships (most of northern and western Europe after 2000) and the US are therefore missing. Census and survey figures for the same country can differ by 10–20 points (Hungary 2001 census 56%, 2002 GGS survey 73%, women 25–29). Countries need 3 or more years at 25–29.
+
 ## Living in a couple by age, England and Wales
 
 Share of women and men living in a couple (married, civil partnered or cohabiting), by 5-year age group, 2002–2025. Dotted lines are the cohabiting share alone.
@@ -147,7 +216,7 @@ Coverage: ONS [population estimates by marital status and living arrangements](h
 
 ## Coupling against conditional birth rates, England and Wales
 
-First births per childless woman against the share of women living in a couple, one point per year from 2002. The left dropdown picks the coupling age group (in a couple, or cohabiting only); the right one picks the age range of the first-birth rate.
+First births per childless woman against the share of women living in a couple, one point per year from 2002. The left dropdown picks the coupling age group (in a couple, or cohabiting only); the right one picks the age range of the first-birth rate, or switches the y axis to the share of women childless at 30, 35 or 40 in that year.
 
 ```{raw} html
 <iframe src="../_static/ons/coupling_vs_cond_asfr_ew.html" style="width: 100%; height: 560px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
@@ -164,7 +233,7 @@ Coverage: conditional rates reconstructed from ONS [cohort fertility table 3](ht
 
 ## Coupling against first-birth rates, by country
 
-The same chart for every country with both a coupling series and conditional first-birth rates: 13 countries. Markers grow with the year. Coupling at 15–24 and 35–44 exists only for the ILO countries; the FT countries have 25–34 only.
+The same chart for every country with both a coupling series and conditional first-birth rates: 13 countries. Markers grow with the year. The y dropdown also offers the share of women childless at 30, 35 or 40. The coupling dropdown also has 5-year groups, which exist only for the register countries (Denmark, Finland, Netherlands); the US, Spain, Poland and the UK have 25–34 only.
 
 ```{raw} html
 <iframe src="../_static/ilo/coupling_vs_cond_asfr.html" style="width: 100%; height: 600px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
@@ -174,11 +243,23 @@ The same chart for every country with both a coupling series and conditional fir
 |---|---|---|
 | Canada, Japan, S Korea | ILO, women | 2000–2023/24 |
 | Chile, Russia, Belarus | ILO, women | 2010–2020, 2010–2018, 2016–2018 |
-| Denmark, Finland, Netherlands, Spain, US | FT, both sexes, 25–34 | 1990s–2021/24 |
+| Denmark, Finland, Netherlands | National registers, women, any age | 1990–2025, 1992–2024, 1995–2023 |
+| US | CPS (Census AD-3), women, 25–34 | 1990–2023 |
+| Spain | FT, both sexes, 25–34 | 1991–2022 |
 | Poland | FT, both sexes, 25–34 | 2001–2017 |
 | UK | FT, both sexes, 25–34; births England and Wales | 1992–2019 |
 
-Coverage: first births per childless woman from the [Human Fertility Database](https://www.humanfertility.org/) (conditional fertility rates `mi`, pooled over the chosen ages with childless-women exposures `exposRRpa` as weights); UK from the ONS reconstruction above (ages 21 and over only). Coupling from ILOSTAT (section above) where it records cohabitation, otherwise from the FT. HFD countries with no coupling series (e.g. France, Germany, Sweden) are left out.
+Coverage: first births per childless woman from the [Human Fertility Database](https://www.humanfertility.org/) (conditional fertility rates `mi`, pooled over the chosen ages with childless-women exposures `exposRRpa` as weights; % childless = childless women's share of all female exposure at that age and year, from `exposRRpa`); UK from the ONS reconstruction above (ages 21 and over only; % childless from cohort table 3). Coupling from ILOSTAT where it records cohabitation, from the national sources above for Denmark, Finland, the Netherlands and the US, otherwise from the FT. HFD countries with no coupling series (e.g. France, Germany, Sweden) are left out.
+
+## Coupling by 5-year age against first-birth rates, UN data
+
+The same chart with the UN coupling series: women married or in a union, by 5-year age group, against first births per childless woman. 17 countries; one point per census or survey year, so most lines have 3–6 points. Markers grow with the year. The y dropdown also offers the share of women childless at 30, 35 or 40.
+
+```{raw} html
+<iframe src="../_static/un/coupling_vs_cond_asfr_un.html" style="width: 100%; height: 600px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+
+Coverage: coupling from UN World Marriage Data 2019 (section above, women); first-birth rates from the Human Fertility Database, pooled as in the chart above. Countries: Austria, Belarus, Bulgaria, Canada, Chile, Czechia, Denmark, Estonia, Hungary, Japan, S Korea, Lithuania, Norway, Poland, Russia, Sweden, Ukraine. Finland, Iceland, Ireland and Taiwan have UN and HFD data but fewer than two years in common.
 
 ## Coupling by education, UK and US
 
@@ -207,6 +288,21 @@ Sources linked from the FT article and the Resolution Foundation report, as they
 | Eurostat, [household composition statistics](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Household_composition_statistics) | EU 2025: 20.2% of men and 12.2% of women aged 25–54 living as single adults without children, up from 16.5% and 10.1% in 2016. Eurostat has no annual table of de facto partnership by age band narrower than 25–49; censuses (`cens_21m`) give legal marital status only. |
 | [GSMA Mobile Gender Gap](https://www.gsma.com/r/gender-gap/) | Mobile internet use by sex and region; the FT's explanation, not coupling data. See [smartphones](smartphones.md). |
 | Resolution Foundation, [Bye bye baby](https://www.resolutionfoundation.org/publications/bye-bye-baby/) | Figure 7 numbers above. Also: 6% of non-graduates aged 25–29 living with parents are cohabiting or married, against 68% of private renters and 89% of homeowners; a third of the 1989–90 cohort not trying for children at 32 said they had no suitable partner. No chart data download. |
+
+## To do
+
+Coupling sources with finer age detail than ILOSTAT's 10-year bands, not yet added:
+
+| Source | Ages | Years | Cohabitation | Access |
+|---|---|---|---|---|
+| [IPUMS International](https://international.ipums.org/) | Single year | Census samples, about every 10 years, ~100 countries | Yes | Free registration |
+| [IPUMS CPS](https://cps.ipums.org/) (US) | Single year | Annual | Yes, from 1995 | Free registration |
+| [EU-LFS microdata](https://ec.europa.eu/eurostat/web/microdata/european-union-labour-force-survey) | 5-year | Annual | Yes, via household relationships | Research application to Eurostat |
+| Japan and Korea national statistics (e-Stat, KOSIS) | 5-year | Census years, some annual surveys | Marriage only; cohabitation rare | Free |
+| [UK Data Service](https://ukdataservice.ac.uk/): UK Household Longitudinal Study, Family Resources Survey (the FT's UK sources) | Single year | Annual | Yes | Free registration |
+| [Statistics Canada 17-10-0060](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710006001) (married and common-law by age) | Single year | Annual | Yes | Manual download; blocks scripted access |
+
+UN World Marriage Data is already on this page (5-year bands, census and survey years).
 
 ## Causal evidence
 

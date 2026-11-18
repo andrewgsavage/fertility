@@ -34,6 +34,23 @@ Y_RANGES = {"21-24": (21, 24), "25-29": (25, 29), "30-34": (30, 34), "35-39": (3
             "40-44": (40, 44), "21-29": (21, 29), "30-39": (30, 39)}
 X_GROUPS = {"16 to 29": "16-29", "30 to 34": "30-34", "35 to 39": "35-39", "40 to 44": "40-44",
             "45 to 49": "45-49"}
+CHILDLESS_AGES = [30, 35, 40]
+RATE_LABEL = "First births per childless woman"
+
+
+def y_options(ranges):
+    """y dropdown: key -> axis label. First-birth rates by age range, then % childless."""
+    opts = {k: f"{RATE_LABEL}, {k}" for k in ranges}
+    opts |= {f"childless {a}": f"% of women childless at {a}" for a in CHILDLESS_AGES}
+    return opts
+
+
+def childless_ew():
+    """year -> % of women childless at exact ages 30/35/40 (ONS table 3, year = cohort + age)."""
+    rows = [{"year": cohort + age, f"childless {age}": 100 - p1}
+            for cohort, ages in load_table3().items() for age, (p1, _) in ages.items()
+            if age in CHILDLESS_AGES]
+    return pd.DataFrame(rows).groupby("year").first()
 
 
 def first_birth_rates(ranges=Y_RANGES):
@@ -55,13 +72,14 @@ def first_birth_rates(ranges=Y_RANGES):
     return pd.DataFrame(out)
 
 
-def dual_dropdown_fig(series, x_opts, y_opts, x_default, y_default, title, x_label, y_label,
+def dual_dropdown_fig(series, x_opts, y_opts, x_default, y_default, title, x_label,
                       color_by_year=False):
     """Connected scatter, one trace per series, with independent x and y dropdowns.
 
     series: list of dicts with name, color, years (list), x {option: values aligned to years},
     y {option: values}. Points where x or y is missing are left out (gaps), so switching one
-    axis never misaligns years.
+    axis never misaligns years. x_opts values are suffixed to x_label; y_opts values are the
+    full y-axis labels.
     """
     fig = go.Figure()
     all_years = sorted({y for s in series for y in s["years"]})
@@ -87,8 +105,8 @@ def dual_dropdown_fig(series, x_opts, y_opts, x_default, y_default, title, x_lab
     x_buttons = [dict(label=f"{x_label}: {lab}", method="update",
                       args=[{"x": [s["x"][k] for s in series]}, {"xaxis.title.text": f"{x_label}, {lab}"}])
                  for k, lab in x_opts.items()]
-    y_buttons = [dict(label=f"{y_label}: {lab}", method="update",
-                      args=[{"y": [s["y"][k] for s in series]}, {"yaxis.title.text": f"{y_label}, {lab}"}])
+    y_buttons = [dict(label=lab, method="update",
+                      args=[{"y": [s["y"][k] for s in series]}, {"yaxis.title.text": lab}])
                  for k, lab in y_opts.items()]
     fig.update_layout(
         template="plotly_white", title=dict(text=title, x=0.01),
@@ -102,12 +120,12 @@ def dual_dropdown_fig(series, x_opts, y_opts, x_default, y_default, title, x_lab
         margin=dict(t=130, r=150), hovermode="closest",
     )
     fig.update_xaxes(title_text=f"{x_label}, {x_opts[x_default]}", ticksuffix="%")
-    fig.update_yaxes(title_text=f"{y_label}, {y_opts[y_default]}", ticksuffix="%", rangemode="tozero")
+    fig.update_yaxes(title_text=y_opts[y_default], ticksuffix="%", rangemode="tozero")
     return fig
 
 
 def load():
-    rates = first_birth_rates()
+    rates = first_birth_rates().join(childless_ew(), how="outer")
     c = coupling_by_age_ew.load()
     c = c[c.sex == "Women"]
     years = sorted(set(rates.index) & set(c.year))
@@ -117,7 +135,7 @@ def load():
         g = c[c.age == group].set_index("year")
         x[f"couple {lab}"] = [g.couple.get(y) for y in years]
         x[f"cohab {lab}"] = [g.cohab.get(y) for y in years]
-    y = {k: [None if pd.isna(v) else v for v in rates[k].reindex(years)] for k in Y_RANGES}
+    y = {k: [None if pd.isna(v) else v for v in rates[k].reindex(years)] for k in y_options(Y_RANGES)}
     return {"name": "England and Wales", "color": "#444444", "years": years, "x": x, "y": y}
 
 
@@ -125,14 +143,14 @@ def plot(s):
     x_opts = {f"couple {lab}": f"in a couple {lab}" for lab in X_GROUPS.values()}
     x_opts |= {f"cohab {lab}": f"cohabiting {lab}" for lab in X_GROUPS.values()}
     return dual_dropdown_fig(
-        [s], x_opts, {k: k for k in Y_RANGES}, "couple 30-34", "30-34",
+        [s], x_opts, y_options(Y_RANGES), "couple 30-34", "30-34",
         "First-birth rate vs women in a couple, England and Wales",
-        "% of women", "First births per childless woman", color_by_year=True)
+        "% of women", color_by_year=True)
 
 
 if __name__ == "__main__":
     s = load()
-    pd.DataFrame({"year": s["years"], **s["x"], **{f"first_birth_{k}": v for k, v in s["y"].items()}}).round(3) \
+    pd.DataFrame({"year": s["years"], **s["x"], **{f"y_{k}": v for k, v in s["y"].items()}}).round(3) \
         .to_csv(OUTDIR / "coupling_vs_cond_asfr_ew.csv", index=False)
     coupling_by_age_ew.OUTDIR = OUTDIR
     coupling_by_age_ew.write_html(plot(s), "coupling_vs_cond_asfr_ew.html")
