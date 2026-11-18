@@ -64,7 +64,7 @@ if __name__ == "__main__":
     pd.DataFrame(rows).round(3).to_csv(OUTDIR / "coupling_vs_cond_asfr_un.csv", index=False)
     fig = ew.dual_dropdown_fig(
         series, {a: a for a in X_AGES}, ilo.Y_OPTS, "25-29", "25-29",
-        "First-birth rate or childlessness vs women married or in a union, UN data (marker grows with year)",
+        "First-birth rate or % with a child vs women married or in a union, UN data (marker grows with year)",
         "% of women married or in a union")
     ew.coupling_by_age_ew.OUTDIR = OUTDIR
     ew.coupling_by_age_ew.write_html(fig, "coupling_vs_cond_asfr_un.html")

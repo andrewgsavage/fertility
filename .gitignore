@@ -30,6 +30,7 @@ docs/_static/ilo/
 docs/_static/ft/
 docs/_static/un/
 docs/_static/nso/
+docs/_static/dhs/
 
 # Python
 __pycache__/
@@ -43,3 +44,4 @@ __pycache__/
 
 # Office lock files
 **/.~lock.*
+DHS/data/

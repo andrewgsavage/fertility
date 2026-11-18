@@ -44,6 +44,7 @@ _OUTPUT_DIRS = {
     "ft": _REPO_ROOT / "FT" / "outputs",
     "un": _REPO_ROOT / "UN" / "outputs",
     "nso": _REPO_ROOT / "NSO" / "outputs",
+    "dhs": _REPO_ROOT / "DHS" / "outputs",
 }
 
 
