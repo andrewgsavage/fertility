@@ -107,4 +107,7 @@ A `.txt` from an accepted or submitted manuscript can differ from the published 
    a factor page. Done: `docs/_ext/sources_registry.py` adds the `{sources}` directive
    (`:factor:`, `:measurable:`, `:type:`, `:filter:`); `docs/sources.md` lists the whole registry and
    each factor page ends with its findings. `pixi run docs-serve` watches `sources/`.
-7. Optional: generate the factor-evidence tables, or the factor-table ticks, from `findings`.
+7. Import the papers, reports and web pages cited on `docs/factors/*.md` that no import had picked
+   up. Done: 50 (36 with a DOI), tagged by hand from the citing row, without findings; the pages'
+   summaries are not carried over. Data portals and table links are left out.
+8. Optional: generate the factor-evidence tables, or the factor-table ticks, from `findings`.

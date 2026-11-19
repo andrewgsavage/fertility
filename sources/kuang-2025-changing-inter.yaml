@@ -1,0 +1,22 @@
+id: kuang-2025-changing-inter
+type: paper
+title: 'The changing inter-relationship between partnership dynamics and fertility trends in Europe and
+  the United States: A review'
+authors:
+- Kuang, B.
+- Berrington, A.
+- Vasireddy, S.
+- Kulu, H.
+year: 2025
+doi: 10.4054/DemRes.2025.52.7
+oa: gold
+oa_url: https://www.demographic-research.org/volumes/vol52/7/52-7.pdf
+factors:
+- partnership-stability
+measurables:
+- share-in-couple
+- separation
+- tfr
+notes: Imported from the citation on docs/factors/partnership-formation.md; the page's summary of the
+  finding is not carried over (AI-written, unreviewed). Metadata from Crossref/OpenAlex. Published in
+  Demographic Research.

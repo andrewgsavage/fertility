@@ -1,0 +1,23 @@
+id: raymo-2015-marriage-family
+type: paper
+title: 'Marriage and Family in East Asia: Continuity and Change'
+authors:
+- Raymo, J. M.
+- Park, H.
+- Xie, Y.
+- Yeung, W. J. J.
+year: 2015
+doi: 10.1146/annurev-soc-073014-112428
+oa: bronze
+oa_url: https://www.annualreviews.org/doi/pdf/10.1146/annurev-soc-073014-112428
+countries:
+- CHN
+- JPN
+- KOR
+- TWN
+measurables:
+- marriage
+- tfr
+notes: Imported from the citation on docs/factors/partnership-formation.md; the page's summary of the
+  finding is not carried over (AI-written, unreviewed). Metadata from Crossref/OpenAlex. Published in
+  Annual Review of Sociology.

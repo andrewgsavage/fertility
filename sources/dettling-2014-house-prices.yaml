@@ -1,0 +1,19 @@
+id: dettling-2014-house-prices
+type: paper
+title: 'House prices and birth rates: The impact of the real estate market on the decision to have a baby'
+authors:
+- Dettling, L. J.
+- Kearney, M. S.
+year: 2014
+doi: 10.1016/j.jpubeco.2013.09.009
+oa: green
+oa_url: http://www.nber.org/papers/w17485.pdf
+countries:
+- USA
+measurables:
+- house-price-index
+- housing-tenure
+- births
+notes: 'Imported from the citation on docs/factors/explaining-the-2010s-drop.md; the page''s summary of
+  the finding is not carried over (AI-written, unreviewed). Metadata from Crossref/OpenAlex. Published
+  in Journal of Public Economics. NBER working paper version: https://www.nber.org/papers/w17485'

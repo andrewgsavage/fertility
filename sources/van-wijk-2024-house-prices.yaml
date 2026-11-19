@@ -1,0 +1,17 @@
+id: van-wijk-2024-house-prices
+type: paper
+title: 'House prices and fertility: Can the Dutch housing crisis explain the post‐2010 fertility decline?'
+authors:
+- van Wijk, D.
+year: 2024
+doi: 10.1002/psp.2787
+oa: hybrid
+oa_url: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/psp.2787
+countries:
+- NLD
+measurables:
+- house-price-index
+- tfr
+notes: Imported from the citation on docs/factors/housing.md; the page's summary of the finding is not
+  carried over (AI-written, unreviewed). Metadata from Crossref/OpenAlex. Published in Population, Space
+  and Place.

@@ -1,0 +1,21 @@
+id: rahnu-2023-partnership-dynamics
+type: paper
+title: 'Partnership dynamics and entry into parenthood: Comparison of Finnish birth cohorts 1969–2000'
+authors:
+- Rahnu, L.
+- Jalovaara, M.
+year: 2023
+doi: 10.1016/j.alcr.2023.100548
+oa: hybrid
+oa_url: https://doi.org/10.1016/j.alcr.2023.100548
+countries:
+- FIN
+factors:
+- partnership-stability
+measurables:
+- share-in-couple
+- separation
+- ppr-0-1
+notes: Imported from the citation on docs/factors/partnership-formation.md; the page's summary of the
+  finding is not carried over (AI-written, unreviewed). Metadata from Crossref/OpenAlex. Published in
+  Advances in Life Course Research.

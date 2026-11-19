@@ -1,0 +1,20 @@
+id: ohlsson-wijk-2022-disentangling-swedish
+type: paper
+title: Disentangling the Swedish fertility decline of the 2010s
+authors:
+- Ohlsson-Wijk, S.
+- Andersson, G.
+year: 2022
+doi: 10.4054/DemRes.2022.47.12
+oa: gold
+oa_url: https://www.demographic-research.org/volumes/vol47/12/47-12.pdf
+countries:
+- SWE
+factors:
+- partnership-formation
+measurables:
+- tfr
+- cond-asfr-1
+notes: Imported from the citation on docs/factors/partnership-formation.md; the page's summary of the
+  finding is not carried over (AI-written, unreviewed). Metadata from Crossref/OpenAlex. Published in
+  Demographic Research.

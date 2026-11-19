@@ -1,0 +1,19 @@
+id: cohen-2013-financial-incentives
+type: paper
+title: Financial Incentives and Fertility
+authors:
+- Cohen, A.
+- Dehejia, R.
+- Romanov, D.
+year: 2013
+doi: 10.1162/REST_a_00342
+oa: closed
+countries:
+- ISR
+factors:
+- child-benefits
+measurables:
+- births
+notes: 'Imported from the citation on docs/factors/explaining-the-2010s-drop.md; the page''s summary of
+  the finding is not carried over (AI-written, unreviewed). Metadata from Crossref/OpenAlex. Published
+  in Review of Economics and Statistics. The page links the NBER working paper version: https://www.nber.org/papers/w13700'

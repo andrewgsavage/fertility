@@ -1,0 +1,15 @@
+id: couillard-2026-build-baby
+type: paper
+title: 'Build, Baby, Build: How Housing Shapes Fertility'
+authors:
+- Couillard, B.K.
+year: 2026
+url: https://sites.google.com/view/ben-couillard/home
+factors:
+- house-prices
+- home-size
+measurables:
+- births
+notes: Imported from the citation on docs/factors/housing.md; the page's summary of the finding is not
+  carried over (AI-written, unreviewed). Metadata from the page's citation; no DOI. Job market paper,
+  University of Toronto. The URL is the author's home page.

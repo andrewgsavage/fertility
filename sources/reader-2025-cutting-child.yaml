@@ -1,0 +1,21 @@
+id: reader-2025-cutting-child
+type: paper
+title: Does Cutting Child Benefits Reduce Fertility in Larger Families? Evidence from the UK’s Two-Child
+  Limit
+authors:
+- Reader, M.
+- Portes, J.
+- Patrick, R.
+year: 2025
+doi: 10.1007/s11113-025-09935-5
+oa: hybrid
+oa_url: https://doi.org/10.1007/s11113-025-09935-5
+countries:
+- GBR
+factors:
+- child-benefits
+measurables:
+- cond-asfr-2plus
+notes: Imported from the citation on docs/factors/explaining-the-2010s-drop.md; the page's summary of
+  the finding is not carried over (AI-written, unreviewed). Metadata from Crossref/OpenAlex. Published
+  in Population Research and Policy Review.

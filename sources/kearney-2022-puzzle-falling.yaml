@@ -1,0 +1,20 @@
+id: kearney-2022-puzzle-falling
+type: paper
+title: The Puzzle of Falling US Birth Rates since the Great Recession
+authors:
+- Kearney, M. S.
+- Levine, P. B.
+- Pardue, L.
+year: 2022
+doi: 10.1257/jep.36.1.151
+oa: gold
+oa_url: https://doi.org/10.1257/jep.36.1.151
+countries:
+- USA
+factors:
+- economic-uncertainty
+measurables:
+- asfr
+notes: 'Imported from the citation on docs/factors/explaining-the-2010s-drop.md; the page''s summary of
+  the finding is not carried over (AI-written, unreviewed). Metadata from Crossref/OpenAlex. Published
+  in Journal of Economic Perspectives. The page links the NBER working paper version: https://www.nber.org/papers/w29286'

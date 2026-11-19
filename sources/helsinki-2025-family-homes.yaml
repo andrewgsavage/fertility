@@ -1,0 +1,15 @@
+id: helsinki-2025-family-homes
+type: web
+title: 'Study: Birth rate higher in areas with more family homes'
+authors:
+- City of Helsinki
+year: 2025
+url: https://www.hel.fi/en/news/study-birth-rate-higher-in-areas-with-more-family-homes
+publisher: City of Helsinki
+countries:
+- FIN
+measurables:
+- dwelling-size
+- births
+notes: Imported from the citation on docs/factors/housing.md; the page's summary of the finding is not
+  carried over (AI-written, unreviewed). Metadata from the page's citation; no DOI.

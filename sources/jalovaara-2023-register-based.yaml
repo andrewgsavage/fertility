@@ -1,0 +1,22 @@
+id: jalovaara-2023-register-based
+type: paper
+title: A register-based account of period trends in union prevalence, entries, and exits by educational
+  level for men and women in Finland
+authors:
+- Jalovaara, M.
+- Andersson, L.
+year: 2023
+doi: 10.4054/DemRes.2023.48.14
+oa: gold
+oa_url: https://www.demographic-research.org/volumes/vol48/14/48-14.pdf
+countries:
+- FIN
+factors:
+- partnership-stability
+measurables:
+- share-in-couple
+- separation
+- educational-attainment
+notes: Imported from the citation on docs/factors/partnership-formation.md; the page's summary of the
+  finding is not carried over (AI-written, unreviewed). Metadata from Crossref/OpenAlex. Published in
+  Demographic Research.
