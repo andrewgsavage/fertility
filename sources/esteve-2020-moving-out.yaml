@@ -17,9 +17,9 @@ findings:
   measure: share-in-couple
   verdict: no-evidence
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: OpenAlex abstract is only a table of contents; no result readable. Page `leaving-home.md` may
-    hold its own evidence.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: Five-page debate piece arguing that leaving home and partnership formation are under-studied determinants
+    of low fertility; no new estimates.
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Vienna Yearbook of Population Research.

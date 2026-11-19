@@ -11,7 +11,7 @@ outputs = "python -m common.run_all"
 docs-build = "sphinx-build -b html docs docs/_build/html"
 # Ignore files that builds and editors write into docs/ (generated _static/<name>/
 # copies, __pycache__, editor temp files) so they don't trigger a rebuild + page reload.
-docs-serve = "sphinx-autobuild docs docs/_build/html --re-ignore '/docs/_static/[^/]+/' --re-ignore '__pycache__' --re-ignore '(~|\\.swp|\\.tmp)$'"
+docs-serve = "sphinx-autobuild docs docs/_build/html --watch sources --re-ignore '/docs/_static/[^/]+/' --re-ignore '__pycache__' --re-ignore '(~|\\.swp|\\.tmp)$'"
 sources-check = "python sources/sources.py"
 sources-fetch = "python sources/fetch_fulltexts.py"
 

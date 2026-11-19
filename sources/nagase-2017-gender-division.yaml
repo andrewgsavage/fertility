@@ -13,10 +13,15 @@ factors:
 findings:
 - factor: working-hours
   measure: cond-asfr-2plus
-  verdict: no-evidence
+  verdict: supports
+  direction: '-'
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: Japan, workplace norms and second births; abstract truncated before results.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'Japan (Longitudinal Survey of Adults, 2002 cohort, fixed effects): workplace norms in large firms
+    cut male graduates'' share of housework, and a husband''s housework share predicts the second birth,
+    especially in dual-earner couples.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demographic Research.
+measurables:
+- cond-asfr-2plus

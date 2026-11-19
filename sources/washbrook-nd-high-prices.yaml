@@ -18,8 +18,8 @@ findings:
   tick: 'yes'
   basis: abstract
   ref: research/factor-evidence/costs-and-housing.md
-  note: 'England & Wales, BHPS 1995–2008: owners'' fertility rises 2.4% per 10% price rise (wealth effect);
-    renters show no positive response.'
+  note: 'England & Wales, BHPS 1995-2008: homeowners'' fertility rises 2.4% per 10% house-price rise (wealth
+    effect).'
 - factor: house-prices
   measure: ppr-1-2plus
   verdict: mixed
@@ -35,6 +35,14 @@ findings:
   basis: abstract
   ref: research/factor-evidence/costs-and-housing.md
   note: 'Positive for owners'' higher-order births (wealth effect): sign depends on tenure.'
+- factor: rents
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: '?'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: 'England & Wales (BHPS 1995-2008), renters: no positive fertility response to house-price rises.
+    Rents themselves are not tested.'
 - factor: rents
   measure: cond-asfr-2plus
   verdict: mixed

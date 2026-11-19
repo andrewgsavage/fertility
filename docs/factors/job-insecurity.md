@@ -75,3 +75,11 @@ From a second judging pass over the studies above.
 | Column | Current | Recommendation | Confidence | Reason |
 |---|:-:|---|---|---|
 | Young first births | ✓ | qualify (not for low-educated) | medium | Miettinen 2019 (Finland) and Engdahl 2022 (Sweden): no delay, or earlier births, among young low-educated / vocational women |
+
+## Findings in the source registry
+
+Each row is one source's verdict on one cell of the [factor table](index.md), against the tick the cell had when it was judged. "Read" says whether the verdict came from the abstract or the full text. Entries live in the [source registry](../sources.md).
+
+```{sources}
+:factor: job-insecurity
+```

@@ -1,0 +1,16 @@
+id: billari-2002-patterns-lowest
+type: report
+title: Patterns of Lowest-Low Fertility in Europe
+authors:
+- Billari, F.C.
+- Kohler, H.-P.
+year: 2002
+url: https://www.demogr.mpg.de/papers/working/wp-2002-040.pdf
+publisher: MPIDR Working Paper WP-2002-040
+factors:
+- leaving-home
+measurables:
+- tfr
+- leaving-home-timing
+notes: Imported from the literature review page (docs/literature-review.md, removed). Metadata from the
+  citation on the former literature review page; no DOI found. MPIDR Working Paper WP-2002-040.

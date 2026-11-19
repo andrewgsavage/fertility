@@ -18,8 +18,9 @@ findings:
   measure: ppr-1-2plus
   verdict: mixed
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: Says current literature gives mixed evidence for a fertility-child-survival trade-off.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: '27 sub-Saharan African countries (DHS): robust negative link between fertility and child survival,
+    driven mainly by sibling competition (more births lower survival), not by mortality raising births.'
 notes: 'Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Proceedings of the Royal Society B: Biological Sciences.'

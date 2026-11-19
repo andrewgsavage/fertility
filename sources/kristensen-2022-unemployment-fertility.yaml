@@ -25,10 +25,12 @@ findings:
     men and women.'
 - factor: left-behind-young-men
   measure: cond-asfr-2plus
-  verdict: mixed
+  verdict: supports
+  direction: '0'
   tick: 'no'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: Fathers' unemployment link to births faded over time; consistent with blank.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'Norway registers 1994-2014: fathers'' individual unemployment was negatively linked to further
+    births early on, but the link disappeared over time. Consistent with the blank.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demographic Research.

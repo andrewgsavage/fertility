@@ -18,17 +18,18 @@ findings:
   measure: cond-asfr-2plus
   verdict: mixed
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: 'ESS, 23 countries: effect of timing of first child on second births is mediated by education
-    and child-care enrolment.'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'European Social Survey, 23 countries: second-birth rates are highest when the first birth came
+    at the locally ''expected'' age (under 25 near the Hajnal line, 25-30 further west), so later first
+    births do not uniformly lower second births; the authors favour norms over the biological clock.'
 - factor: education
   measure: cond-asfr-2plus
   verdict: mixed
   tick: 'no'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: 'Highly educated second-birth rates depend on child-care enrolment. Jalovaara 2021: highly educated
-    more often have exactly two children.'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'As above: the education gradient in second births varies by country; where many young children
+    are in formal childcare, highly educated women have much higher second-birth rates.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Vienna Yearbook of Population Research.

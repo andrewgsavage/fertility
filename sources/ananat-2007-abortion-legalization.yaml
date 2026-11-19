@@ -16,11 +16,13 @@ measurables:
 findings:
 - factor: abortion
   measure: ppr-0-1
-  verdict: mixed
+  verdict: supports
+  direction: '-'
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: Poses exactly the question (delay vs permanent drop; US cohorts exposed to early-1970s legalisation).
-    Abstract was truncated before the result, so the answer is not read.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'US 1930s-60s cohorts, early-repeal states vs others: legal abortion lowered completed fertility
+    permanently (−0.054 children), mostly by raising childlessness (odds +3.6%). Accounts for about half
+    the rise in childlessness.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Journal of Human Resources.

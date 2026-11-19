@@ -17,10 +17,11 @@ findings:
 - factor: economic-uncertainty
   measure: cond-asfr-1
   verdict: mixed
+  direction: '-'
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/costs-and-housing.md
-  note: '251 EU regions 2002–14: fertility decline strongly related to unemployment rise, significant
-    at different reproductive ages.'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: '251 EU regions 2002-14: rising unemployment strongly tied to fertility decline at several reproductive
+    ages, more so during the recession. Age-specific rates, not first births.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Institut für Demographie - VID.

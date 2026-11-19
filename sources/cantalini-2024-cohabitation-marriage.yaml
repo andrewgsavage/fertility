@@ -15,11 +15,14 @@ factors:
 findings:
 - factor: partnership-formation
   measure: share-in-couple
-  verdict: no-evidence
+  verdict: mixed
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: Sweden 21st century cohabitation/marriage formation during fertility decline; abstract truncated
-    before results.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'Sweden registers: first-marriage formation fell from the early 2010s, but cohabitation formation
+    was stable 2012-2022 while first births fell; cohabiting couples became less likely to marry or have
+    a child. Coupling itself did not fall.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in European Journal of Population.
+measurables:
+- share-in-couple

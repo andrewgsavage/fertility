@@ -12,10 +12,13 @@ factors:
 findings:
 - factor: child-benefits
   measure: cond-asfr-1
-  verdict: no-evidence
+  verdict: mixed
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/policy-and-the-state.md
-  note: Abstract truncated before results; not read.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'Poland, Family 500+ (Household Budget Survey 2010-18): annual birth probability +1.5 pp overall,
+    up for women 31-40 but down 2.2-2.6 pp for women 21-30. Births of all orders; no first-birth estimate.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demographic Research.
+measurables:
+- cond-asfr-1

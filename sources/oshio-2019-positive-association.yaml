@@ -14,11 +14,13 @@ measurables:
 findings:
 - factor: female-employment
   measure: cond-asfr-2plus
-  verdict: mixed
+  verdict: contradicts
+  direction: +
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: Cross-country association in developed countries turned positive in the mid-1980s; whether it
-    is spurious is the debate. Abstracts truncated, conclusions not read.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: '24 OECD countries to 2017, country fixed effects: the positive association between female labour-force
+    participation and TFR holds within countries and strengthens in recent data, so it is not spurious.
+    TFR only, not parity-specific.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demographic Research.

@@ -25,18 +25,21 @@ findings:
     childless couples in the labour force.'
 - factor: childcare-provision
   measure: ppr-1-2plus
-  verdict: mixed
+  verdict: contradicts
+  direction: '0'
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/policy-and-the-state.md
-  note: 'Germany: no significant effect of childcare expansion on the second-birth transition (period
-    transition; cannot settle a completed-fertility column).'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'West Germany''s under-3 childcare expansion (SOEP 1998-2012, county variation, Cox model): no
+    significant effect on the second-birth transition (first births +11.9% for employed native couples).
+    Period hazards only.'
 - factor: childcare-provision
   measure: cond-asfr-2plus
-  verdict: mixed
+  verdict: contradicts
+  direction: '0'
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/policy-and-the-state.md
-  note: Positive in the cross-country study; null in the German quasi-experiment.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'As above: no significant second-birth effect of childcare expansion in Germany.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Bulletin of Economic Research.

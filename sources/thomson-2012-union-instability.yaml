@@ -19,18 +19,21 @@ findings:
 - factor: partnership-stability
   measure: ppr-1-2plus
   verdict: mixed
+  direction: '-'
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: 'France microsimulation (1999 survey): women whose first unions dissolve in childbearing years
-    end with smaller families, but repartnering largely closes the gap; differences are small when family
-    formation is postponed.'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'France, 1999 Etude de l''Histoire Familiale, microsimulation: women whose first unions dissolve
+    in the childbearing years end with smaller families, but repartnering narrows the gap, and it nearly
+    vanishes when union formation or first birth comes after 30.'
 - factor: partnership-stability
   measure: cond-asfr-2plus
   verdict: mixed
+  direction: '-'
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: New partnerships encourage higher parity progression, offsetting dissolution.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'As above: new partnerships raise higher-parity progression, offsetting much of the loss from
+    dissolution.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demography.

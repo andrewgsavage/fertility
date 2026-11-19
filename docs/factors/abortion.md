@@ -82,3 +82,11 @@ Studies found by searching OpenAlex, read from abstracts only. The verdict says 
 No study found for: Coupling, PPR 1→2+.
 
 Source: [`research/factor-evidence/social-cultural-and-population.md`](https://github.com/andrewgsavage/fertility/blob/main/research/factor-evidence/social-cultural-and-population.md).
+
+## Findings in the source registry
+
+Each row is one source's verdict on one cell of the [factor table](index.md), against the tick the cell had when it was judged. "Read" says whether the verdict came from the abstract or the full text. Entries live in the [source registry](../sources.md).
+
+```{sources}
+:factor: abortion
+```

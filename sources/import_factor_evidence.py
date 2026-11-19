@@ -3,7 +3,8 @@
 Each row of an evidence table (Factor | Column | Tick | Verdict | Paper | Finding)
 becomes a `findings` item on every paper named in its Paper cell. "(above)" and
 "(lit-review)" references are resolved to the paper's first full citation in the
-evidence files, or to its row in docs/literature-review.md.
+evidence files, or to its row in docs/literature-review.md (removed; its papers are now
+registry entries, so those references resolve only from git history).
 
 Metadata comes from Crossref (authors, title) and OpenAlex (year, open-access
 status and link), cached in sources/.cache/ (gitignored). An existing source with
@@ -128,6 +129,8 @@ def evidence_rows():
 
 def lit_review_index() -> dict:
     idx = {}
+    if not LIT_REVIEW.exists():
+        return idx
     for line in LIT_REVIEW.read_text(encoding="utf-8").splitlines():
         m = re.match(r"\|\s*(.+?)\s*(?:\((\d{4})\))?,\s*\[\*?(.+?)\*?\]\((\S+?)\)", line)
         if not m:
@@ -170,7 +173,9 @@ def metadata(doi: str, offline: bool) -> dict:
         m = cr["message"]
         out["title"] = (m.get("title") or [None])[0]
         authors = []
-        for a in m.get("author", []):
+        # Some records list affiliations as name-only "authors"; keep named people when there are any.
+        people = [a for a in m.get("author", []) if a.get("family")]
+        for a in people or m.get("author", []):
             if a.get("family"):
                 family = a["family"].title() if a["family"].isupper() else a["family"]
                 initials = " ".join(p[0].upper() + "." for p in re.split(r"[\s.-]+", a.get("given", "")) if p)

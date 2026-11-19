@@ -23,8 +23,10 @@ findings:
   measure: cond-asfr-2plus
   verdict: no-evidence
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: Vignette study in eight countries; abstract truncated before result.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'Vignettes in urban China, Japan, Korea, Singapore, US, Italy, Spain, Norway: childlessness always
+    rated as worse, but families with several children are not preferred over one-child families. Ideals
+    only; no fertility outcome.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Proceedings of the National Academy of Sciences.

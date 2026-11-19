@@ -17,8 +17,10 @@ findings:
   measure: cond-asfr-2plus
   verdict: mixed
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: Links gender-role attitudes to intentions (2020-22); abstract truncated before result.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'Denmark, Finland, Norway (2020-22 survey): people with egalitarian gender-role attitudes (~70%)
+    report lower fertility intentions than non-egalitarians, the opposite of the factor''s mechanism.
+    Intentions only, not births, and not split by parity.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Population and Development Review.

@@ -64,3 +64,11 @@ Couillard, B.K. (2026), [*Build, Baby, Build: How Housing Shapes Fertility*](htt
 City of Helsinki (2025), [*Study: Birth rate higher in areas with more family homes*](https://www.hel.fi/en/news/study-birth-rate-higher-in-areas-with-more-family-homes).
 Kulu, H. and Vikat, A. (2007), [*Fertility differences by housing type: The effect of housing conditions or of selective moves?*](https://www.demographic-research.org/volumes/vol17/26/17-26.pdf), *Demographic Research* 17(26).
 ```
+
+## Findings in the source registry
+
+Each row is one source's verdict on one cell of the [factor table](index.md), against the tick the cell had when it was judged. "Read" says whether the verdict came from the abstract or the full text. Entries live in the [source registry](../sources.md).
+
+```{sources}
+:factor: house-prices, rents, home-size
+```

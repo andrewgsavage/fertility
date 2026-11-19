@@ -14,11 +14,15 @@ factors:
 findings:
 - factor: low-fertility-trap
   measure: ppr-1-2plus
-  verdict: no-evidence
+  verdict: mixed
+  direction: '-'
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: Fuzzy RD on the 1980 one-child policy asks whether growing up an only child lowers fertility ideals;
-    abstract truncated before the finding. Ideals, not births.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'Urban China, fuzzy RD on the 1980 one-child policy: being an only child lowers one''s ideal number
+    of children and the chance of wanting two or more. Supports the trap''s ideals mechanism; births not
+    measured.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in European Journal of Population.
+measurables:
+- ppr-1-2plus

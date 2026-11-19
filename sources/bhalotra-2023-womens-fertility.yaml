@@ -19,27 +19,32 @@ measurables:
 findings:
 - factor: child-mortality
   measure: ppr-0-1
-  verdict: mixed
+  verdict: contradicts
+  direction: '-'
   tick: 'no'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: Mortality fall (especially child mortality) led to delayed childbearing, lower intensive and extensive
-    margin fertility and a lower chance of ever marrying. Suggests the blank may be wrong. Country/period
-    not read.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'US, decline in pneumonia (child) mortality after sulfa drugs: falling child mortality raised
+    childlessness and cut completed fertility (fewer women with 3+ children). Supports a tick where the
+    cell is blank.'
 - factor: child-mortality
   measure: cond-asfr-1
-  verdict: mixed
+  verdict: contradicts
+  direction: '-'
   tick: 'no'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: Delayed childbearing.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'Same study: child-mortality decline led women to delay the start of childbearing. Supports a
+    tick where the cell is blank.'
 - factor: child-mortality
   measure: young-first-births
-  verdict: mixed
+  verdict: contradicts
+  direction: '-'
   tick: 'no'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: Same.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'Same study: delay of first births implies fewer births at young ages. Supports a tick where the
+    cell is blank.'
 - factor: child-mortality
   measure: ppr-1-2plus
   verdict: supports

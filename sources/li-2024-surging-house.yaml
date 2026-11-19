@@ -1,0 +1,15 @@
+id: li-2024-surging-house
+type: paper
+title: Do surging house prices discourage fertility? Global evidence, 1870–2012
+authors:
+- Li, W.
+year: 2024
+doi: 10.1016/j.labeco.2024.102572
+oa: closed
+factors:
+- house-prices
+measurables:
+- house-price-index
+- tfr
+notes: Imported from the literature review page (docs/literature-review.md, removed). Published in Labour
+  Economics.

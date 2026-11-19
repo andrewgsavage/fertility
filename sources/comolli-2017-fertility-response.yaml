@@ -15,11 +15,13 @@ measurables:
 findings:
 - factor: economic-uncertainty
   measure: cond-asfr-1
-  verdict: mixed
+  verdict: supports
+  direction: '-'
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/costs-and-housing.md
-  note: '31 European countries + US 2000–13: age-, parity-, education-specific rates respond to unemployment
-    and uncertainty measures.'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: '31 European countries and the US, 2000-13: higher female unemployment lowers first-birth rates
+    at all ages up to 40 (elasticity about −0.15%), and falling consumer confidence tracks the fertility
+    decline. Aggregate data.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demographic Research.

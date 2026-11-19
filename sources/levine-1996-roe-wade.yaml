@@ -18,10 +18,11 @@ findings:
 - factor: abortion
   measure: cond-asfr-1
   verdict: supports
+  direction: '-'
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: US states legalising abortion saw a 4% fertility decline relative to others; reductions in births
-    to teens and other groups (list truncated). Not first-birth specific.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: US states legalising abortion before Roe saw births fall 5% relative to others (8% vs distant
+    states); 13% for teens. Births of all orders.
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in American Journal of Public Health.

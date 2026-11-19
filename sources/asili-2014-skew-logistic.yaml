@@ -1,0 +1,15 @@
+id: asili-2014-skew-logistic
+type: paper
+title: Using Skew-Logistic Probability Density Function as a Model for Age-Specific Fertility Rate Pattern
+authors:
+- Asili, S.
+- Rezaei, S.
+- Najjar, L.
+year: 2014
+doi: 10.1155/2014/790294
+oa: hybrid
+oa_url: https://downloads.hindawi.com/journals/bmri/2014/790294.pdf
+measurables:
+- asfr
+notes: Imported from the literature review page (docs/literature-review.md, removed). Published in BioMed
+  Research International.

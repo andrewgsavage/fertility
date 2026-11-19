@@ -1,0 +1,12 @@
+id: willetts-2017-university-education
+type: book
+title: A University Education
+authors:
+- Willetts, D.
+year: 2017
+url: https://www.davidwilletts.co.uk/books
+factors:
+- education
+- student-debt
+notes: Imported from the literature review page (docs/literature-review.md, removed). Metadata from the
+  citation on the former literature review page; no DOI found.

@@ -13,10 +13,16 @@ factors:
 findings:
 - factor: age-at-first-birth
   measure: ppr-0-1
-  verdict: no-evidence
+  verdict: supports
+  direction: '0'
   tick: 'no'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: Abstract truncated before results; may link postponement to childlessness. Worth checking.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'British cohorts born 1958 (NCDS) and 1970 (BCS70): first births postponed sharply (childless
+    at 34 rose, e.g. graduate women 39% to 56%), but projected final childlessness of 1970-born graduate
+    women is about a quarter, not the 40% conjectured. Postponement raised childlessness less than feared:
+    consistent with the blank.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demographic Research.
+measurables:
+- ppr-0-1

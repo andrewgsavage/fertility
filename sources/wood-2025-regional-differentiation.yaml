@@ -24,8 +24,10 @@ findings:
   measure: cond-asfr-1
   verdict: no-evidence
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: Admin data, N and W Europe; abstract truncated before urban-rural result.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'Registers from Belgium, Denmark, Finland, France, the Netherlands, Norway and Sweden around 2000:
+    regional variation in education gradients of birth hazards; more urbanised areas with more foreign-born
+    women show more negative gradients. Urbanisation''s own effect on first births not estimated.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Vienna Yearbook of Population Research.

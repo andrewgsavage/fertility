@@ -2,11 +2,8 @@ id: matysiak-2025-short-term
 type: paper
 title: 'The Short-Term Fertility Impact of Abortion Law Restrictions:  A Research Note'
 authors:
-- 1Interdisciplinary Center for Labour Market and Family Dynamics (LabFam), University of  Warsaw
 - Matysiak, A.
 - van der Velde, L.
-- Institute of Statistics and Demography, Warsaw School of Economics;  Group for Research in  Applied
-  Economics, GRAPE
 year: 2025
 doi: 10.33138/2957-0506.2025.12.475
 oa: bronze
@@ -18,11 +15,13 @@ measurables:
 findings:
 - factor: abortion
   measure: young-first-births
-  verdict: supports
+  verdict: contradicts
+  direction: +
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: 'Poland 2020: after the ruling effectively outlawed nearly all legal abortions, births fell immediately
-    by about 6.6%, strongest among younger women (abstract truncated at "first-").'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'Poland''s 2020 ruling banning nearly all legal abortions cut births about 6.6%, most among younger
+    women and first-time mothers: restricting abortion lowered young first births, the opposite of the
+    factor''s mechanism. Working paper.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Working Papers.

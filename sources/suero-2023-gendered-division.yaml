@@ -15,10 +15,11 @@ findings:
 - factor: gender-equality-home
   measure: ppr-1-2plus
   verdict: mixed
+  direction: '-'
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: 'Spain: tests housework/childcare split against intention to have a second child; abstract truncated
-    before result. Intentions, not completed parity.'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'Spain, Fertility Survey 2018, one-child mothers: a highly unequal split of housework lowers intention
+    to have a second child (inverted-U in women''s share); the childcare split does not. Intentions only.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Genus.

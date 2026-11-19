@@ -13,10 +13,14 @@ factors:
 findings:
 - factor: partnership-stability
   measure: cond-asfr-2plus
-  verdict: no-evidence
+  verdict: mixed
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: Finland/Austria dissolution and second-union fertility; abstracts give no result.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'Austria (FFS): half of couples in a second union had a shared child, most within two years; a
+    union-commitment effect holds when partners have fewer than two pre-union children. Repartnering recovers
+    some births lost to separation; net effect on second+ rates not estimated.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demographic Research.
+measurables:
+- cond-asfr-2plus

@@ -16,9 +16,9 @@ findings:
   measure: ppr-1-2plus
   verdict: mixed
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/costs-and-housing.md
-  note: 'Theory: aggregate income–fertility is negative via education, but within an education level higher
-    income raises fertility.'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'Theory calibrated to the US 1950-2010: within an education level higher income raises fertility;
+    the negative aggregate link comes from more people taking higher education. No parity-specific evidence.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Journal of Population Economics.
