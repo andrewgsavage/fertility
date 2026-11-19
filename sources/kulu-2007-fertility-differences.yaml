@@ -18,16 +18,18 @@ findings:
   measure: ppr-1-2plus
   verdict: mixed
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/costs-and-housing.md
-  note: 'Finland: fertility varies by housing type and after housing changes. Abstract truncated; direction
-    not read.'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'Finland registers: fertility highest in single-family houses, lowest in apartments, but mostly
+    due to selective moves; couples several years into a single-family house have a higher third-birth
+    risk.'
 - factor: home-size
   measure: cond-asfr-2plus
   verdict: mixed
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/costs-and-housing.md
-  note: As above; no direct bedrooms/space-shortage test found.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'As above: housing type matters mainly through selective moves; some genuine effect on the second-to-third
+    transition.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demographic Research.

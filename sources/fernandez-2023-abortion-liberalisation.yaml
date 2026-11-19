@@ -15,11 +15,12 @@ measurables:
 findings:
 - factor: abortion
   measure: cond-asfr-2plus
-  verdict: mixed
+  verdict: supports
+  direction: '0'
   tick: 'no'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: Worldwide time series; abstract only sets out two opposing predictions (truncated); result not
-    read.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: '185 states 1970-2019, two-way fixed effects with three abortion-policy indices: liberalisation
+    has no robust association with TFR change. Consistent with the blank; TFR only.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in European Journal of Population.

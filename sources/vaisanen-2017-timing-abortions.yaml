@@ -14,8 +14,9 @@ findings:
   measure: cond-asfr-2plus
   verdict: no-evidence
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: Finland/Austria dissolution and second-union fertility; abstracts give no result.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'Finnish women born 1965-69 (registers, N=17,666), joint models: the same unobserved traits drive
+    union dissolution, abortion and childbearing. No estimate of dissolution''s effect on second+ births.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demographic Research.

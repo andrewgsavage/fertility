@@ -15,10 +15,14 @@ factors:
 findings:
 - factor: secularisation
   measure: cond-asfr-1
-  verdict: no-evidence
+  verdict: mixed
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: Longitudinal design (2003-13); abstract truncated before results.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'US adolescents followed 2003-13 (three waves): weekly religious attendance raises fertility eight
+    years later for men only, small and imprecise; no effect for women, despite strong cross-sectional
+    associations. Births of any order by the mid-20s.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Scientific Reports.
+measurables:
+- cond-asfr-1

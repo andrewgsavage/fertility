@@ -142,6 +142,16 @@ def extract_text(pdf: bytes) -> str:
     return "".join(pages).strip() + "\n"
 
 
+def is_appendix(pdf: bytes) -> bool:
+    """True when the first page is an appendix or supplement rather than the paper itself."""
+    try:
+        first = PdfReader(io.BytesIO(pdf)).pages[0].extract_text() or ""
+    except Exception:
+        return False
+    head = " ".join(first[:600].split())
+    return bool(re.search(r"(online|web|supplementary) appendix|supplementary (material|information)", head, re.I))
+
+
 def write_missing(pdir, papers: list[dict], log: dict) -> None:
     """Checklist of papers with no local text, for downloading by hand as <id>.pdf."""
     rows = []
@@ -201,6 +211,9 @@ def main() -> int:
             counts["skipped"] += 1
             continue
         pdf, info = fetch_pdf(src)
+        if pdf and is_appendix(pdf):
+            info = {"tried": [f"{info['url']}: appendix or supplement, not the paper"]}
+            pdf = None
         pmc = None if pdf else pmcid(src)
         epmc = europepmc_text(pmc) if pmc else None
         if epmc:

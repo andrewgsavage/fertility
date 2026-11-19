@@ -101,7 +101,10 @@ A `.txt` from an accepted or submitted manuscript can differ from the published 
 4. Download the open-access PDFs into `$PAPERS_DIR` and extract text. Done: 72 of 131 papers
    (Europe PMC XML for PMC-hosted ones). The rest are paywalled or behind hosts' bot checks;
    `$PAPERS_DIR/_missing.md` lists them with links, for adding by hand.
-5. Re-check "abstract truncated" and "mixed" findings against full texts.
+5. Re-check "abstract truncated" and "mixed" findings against full texts. Done: 59 findings on 50
+   papers, 35 verdicts changed; see `research/factor-evidence/fulltext-recheck.md`.
 6. Sphinx: a generated Sources page filterable by tag, and a directive that lists matching sources on
-   a factor page.
+   a factor page. Done: `docs/_ext/sources_registry.py` adds the `{sources}` directive
+   (`:factor:`, `:measurable:`, `:type:`, `:filter:`); `docs/sources.md` lists the whole registry and
+   each factor page ends with its findings. `pixi run docs-serve` watches `sources/`.
 7. Optional: generate the factor-evidence tables, or the factor-table ticks, from `findings`.

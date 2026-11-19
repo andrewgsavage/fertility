@@ -18,12 +18,13 @@ measurables:
 findings:
 - factor: parental-leave
   measure: ppr-1-2plus
-  verdict: mixed
+  verdict: supports
+  direction: +
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/policy-and-the-state.md
-  note: 'Estonia 2004 earnings-related leave reform, mixture cure model: second/third births accelerated
-    in response to a speed premium. Abstract truncated before the quantum result, so the effect on final
-    progression is not read.'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'Estonia''s 2004 earnings-related parental leave (registers, mixture cure model): second and third
+    births came sooner (speed premium) and progression to both rose substantially, a quantum effect as
+    well as tempo.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in European Journal of Population.

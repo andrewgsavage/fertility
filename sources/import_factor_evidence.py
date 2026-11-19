@@ -170,7 +170,9 @@ def metadata(doi: str, offline: bool) -> dict:
         m = cr["message"]
         out["title"] = (m.get("title") or [None])[0]
         authors = []
-        for a in m.get("author", []):
+        # Some records list affiliations as name-only "authors"; keep named people when there are any.
+        people = [a for a in m.get("author", []) if a.get("family")]
+        for a in people or m.get("author", []):
             if a.get("family"):
                 family = a["family"].title() if a["family"].isupper() else a["family"]
                 initials = " ".join(p[0].upper() + "." for p in re.split(r"[\s.-]+", a.get("given", "")) if p)

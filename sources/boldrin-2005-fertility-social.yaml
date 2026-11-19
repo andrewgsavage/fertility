@@ -16,11 +16,13 @@ measurables:
 findings:
 - factor: pensions-welfare
   measure: ppr-1-2plus
-  verdict: supports
+  verdict: mixed
+  direction: '-'
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/policy-and-the-state.md
-  note: Data show a strong correlation between government pensions and lower fertility (cross-country,
-    descriptive); the paper tests which model fits. Abstract truncated.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'Cross-country and over time: larger public pensions correlate with lower TFR; an old-age-security
+    model accounts for 40-60% of US-Europe fertility differences. TFR only, so no evidence on progression
+    to second births.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Journal of Demographic Economics.

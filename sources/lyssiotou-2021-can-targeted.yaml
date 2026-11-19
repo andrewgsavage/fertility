@@ -15,11 +15,11 @@ findings:
 - factor: child-benefits
   measure: cond-asfr-2plus
   verdict: supports
+  direction: +
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/policy-and-the-state.md
-  note: 'Quasi-experiment: a cash benefit for families with 4+ children; abstract says "robust evidence"
-    of a significant increase but is truncated, so size and country (not stated in the part seen) are
-    unread. Higher-order only.'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'Quasi-experiment, cash benefit only for families with 4+ children: probability of a fourth child
+    rose about 5%; no effect on fifth+ births. Higher-order only.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in The B.E. Journal of Economic Analysis &amp; Policy.

@@ -12,10 +12,14 @@ factors:
 findings:
 - factor: dating-apps
   measure: share-in-couple
-  verdict: no-evidence
+  verdict: mixed
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: Swiss 2018 survey profile of couples who met via apps; abstract truncated, no fertility link seen.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'Switzerland 2018 survey: couples who met on dating apps have stronger cohabitation intentions,
+    and women in them stronger fertility intentions, than couples who met offline. Covers couples already
+    formed, not how many people form couples.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in PLOS ONE.
+measurables:
+- share-in-couple

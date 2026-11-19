@@ -17,8 +17,10 @@ findings:
   measure: cond-asfr-2plus
   verdict: mixed
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: Calls the pill's demographic significance "ambiguous"; abstract truncated before results.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'Finland 1960s-70s: pill use peaked at no more than 15% of women 15-44; its spread coincided with
+    fertility decline (younger women postponing, older women stopping earlier), but no causal link could
+    be established.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Finnish Yearbook of Population Research.

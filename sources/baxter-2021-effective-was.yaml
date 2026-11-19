@@ -17,11 +17,13 @@ measurables:
 findings:
 - factor: sex-education
   measure: young-first-births
-  verdict: mixed
+  verdict: contradicts
+  direction: '0'
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: Rates fell >50% from 1998 to 2014; abstract truncated before the comparison with other countries,
-    so attribution to the strategy is not read.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'Interrupted time series vs Scotland and Wales and synthetic control vs high-income countries:
+    England''s under-18 pregnancy and birth rates fell no faster than comparators, so the fall is not
+    attributable to the strategy.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Social Science &amp; Medicine.

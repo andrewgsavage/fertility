@@ -9,16 +9,14 @@ oa: hybrid
 oa_url: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/1467-923X.13301
 factors:
 - population-ageing
-measurables:
-- cond-asfr-2plus
 findings:
 - factor: population-ageing
   measure: cond-asfr-2plus
-  verdict: mixed
+  verdict: no-evidence
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: Japan local governments prioritise elderly policies over youth investment; ageing electorates
-    favour pensions. Policy bias shown, effect on births not tested.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'Argument essay: ageing electorates push governments towards pensions and low inflation over social
+    investment and growth. Fertility not analysed.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in The Political Quarterly.

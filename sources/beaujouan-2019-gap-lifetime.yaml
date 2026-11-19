@@ -18,9 +18,10 @@ findings:
   measure: ppr-1-2plus
   verdict: mixed
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: '19 European countries + US cohort approach: compares intended with completed fertility; abstract
-    truncated before the size of the gap.'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: '19 European countries and the US, women born early 1970s: completed fertility fell short of intentions
+    at 20-24 everywhere, and childlessness exceeded intended childlessness. Outcomes are below ideals,
+    so ideals are not the binding constraint; ideals themselves are not shown to fall.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Population Research and Policy Review.

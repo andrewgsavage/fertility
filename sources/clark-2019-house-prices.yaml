@@ -15,11 +15,13 @@ measurables:
 findings:
 - factor: house-prices
   measure: cond-asfr-1
-  verdict: mixed
+  verdict: contradicts
+  direction: +
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/costs-and-housing.md
-  note: 'Canada panel (SLID); theory: negative for renters, ambiguous for owners. Abstract truncated before
-    results.'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'Canada (SLID panel with real-estate-board prices), women 18-45: higher lagged house prices raise
+    owners'' fertility and possibly completed fertility; no significant effect for renters. Births of
+    any order.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Economics.

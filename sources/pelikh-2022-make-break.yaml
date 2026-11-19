@@ -16,9 +16,10 @@ findings:
   measure: share-in-couple
   verdict: no-evidence
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/costs-and-housing.md
-  note: Found housing→fertility studies, not housing→partnership. Pelikh, Mikolai & Kulu 2022 ([10.1016/j.alcr.2022.100475](https://doi.org/10.1016/j.alcr.2022.100475))
-    cover partnership transitions in England & Wales cohorts 1974–90 but the abstract does not test housing.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'England & Wales cohorts born 1974-90 (BHPS and Understanding Society): first unions postponed,
+    cohabitation near-universal, and in the youngest cohorts first cohabitations usually end in separation.
+    No housing variable.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Advances in Life Course Research.

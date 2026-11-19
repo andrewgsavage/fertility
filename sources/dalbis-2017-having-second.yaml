@@ -17,18 +17,22 @@ measurables:
 findings:
 - factor: childcare-provision
   measure: ppr-1-2plus
-  verdict: mixed
+  verdict: supports
+  direction: '-'
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/policy-and-the-state.md
-  note: 'European cross-country: low-fertility countries differ mainly in fewer women having two children;
-    childcare services are an important determinant of the second-child transition.'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'EU-SILC, European countries: fertility differences come mainly from fewer women having a second
+    child in low-fertility countries; where childcare coverage is low, middle-educated women are least
+    likely to have a second. Cross-sectional.'
 - factor: childcare-provision
   measure: cond-asfr-2plus
-  verdict: mixed
+  verdict: supports
+  direction: '-'
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/policy-and-the-state.md
-  note: Positive in the cross-country study; null in the German quasi-experiment.
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-recheck.md
+  note: 'As above: easier access to childcare raises the transition to a second child, especially for
+    middle- and high-educated women. Cross-sectional.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Journal of Demographic Economics.
