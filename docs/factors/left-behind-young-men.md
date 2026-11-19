@@ -46,6 +46,28 @@ Women were ahead of men in tertiary attainment among 25–34s in 29 of 32 countr
 
 Coverage: Eurostat [attainment by sex and age](https://ec.europa.eu/eurostat/databrowser/view/edat_lfse_03/default/table) (edat_lfse_03; 38 countries, 1992–2025) and [NEET rates](https://ec.europa.eu/eurostat/databrowser/view/lfsi_neet_a/default/table) (lfsi_neet_a; 37 countries, 2003–2025, most from 2013 or later).
 
+## Labour market activity and first births: Sweden
+
+[Ohlsson-Wijk & Andersson (2022)](https://doi.org/10.4054/DemRes.2022.47.12) model first-birth rates of Swedish-born men and women aged 16–45 from population registers, 1991–2018, by their main activity in the previous year:
+
+| Group | Definition |
+|---|---|
+| Non-participants | Earnings below a subsistence base (36,600 SEK in 2000) and not a student or unemployed; the closest group to NEET |
+| Unemployed | Unemployment benefits exceed student allowances, earnings below the second quintile |
+| Students | Student grants or loans exceed unemployment benefits, earnings below the second quintile |
+| Low to high earners | Earnings quintiles of all 16–59s in 2000, inflation-adjusted; not sex-specific |
+
+Their findings:
+
+- **The 2010s decline in first births happened in every group**, including the high earners.
+- **It was steepest, relative to 2010, among non-participants**, followed by the unemployed and the lowest earners, and weakest among medium-high and high earners. Groups that already had the lowest first-birth rates fell furthest, so the gap by labour-market position widened.
+- **Men and women follow almost the same pattern.**
+- **The decline is not explained by more people falling behind.** Over the 2010s the shares unemployed or studying fell and the share of high earners rose, for men and for women. First births fell during an economic upturn.
+
+The paper reports these results only as charts (its Figure 4), so no rates are quoted here. It covers Sweden, and only a person's own labour-market position, not that of potential partners. It doesn't analyse second and later births by activity, because a birth also changes a parent's activity.
+
+For this factor: a weak labour-market position goes with fewer first births for men as well as women, and that link strengthened in the 2010s. But in Sweden fewer men, not more, were outside work and study, so a growing left-behind group did not drive the decline. This matches the Eurostat NEET rates above.
+
 ## Causal evidence
 
 From the [causal analysis](causal-analysis.md), graded by research design (A quasi-experiment, B panel or register, C correlation or simulation, T theory):
