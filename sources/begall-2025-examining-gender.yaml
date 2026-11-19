@@ -1,0 +1,24 @@
+id: begall-2025-examining-gender
+type: paper
+title: Examining the Gender Equality–Fertility Paradox in Three Nordic Countries
+authors:
+- Begall, K.
+- Hiekel, N.
+year: 2025
+doi: 10.1111/padr.12721
+oa: hybrid
+oa_url: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/padr.12721
+factors:
+- gender-equality-home
+measurables:
+- cond-asfr-2plus
+findings:
+- factor: gender-equality-home
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: Links gender-role attitudes to intentions (2020-22); abstract truncated before result.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Population and Development Review.

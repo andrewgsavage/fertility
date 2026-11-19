@@ -1,0 +1,25 @@
+id: ons-childbearing-cohort
+type: dataset
+title: Childbearing for women born in different years, England and Wales (reference table)
+publisher: Office for National Statistics
+url: https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/datasets/childbearingforwomenbornindifferentyearsreferencetable
+oa: gold
+local:
+- ONS/data/
+countries:
+- GBRTENW
+scripts:
+- ONS/scripts/cond_asfr_uk_ons.py
+- ONS/scripts/mdf_uk_ons.py
+- ONS/scripts/births_per_mother_uk_ons.py
+- ONS/scripts/childlessness_by_age_uk.py
+measurables:
+- childlessness
+- completed-fertility
+- cond-asfr-1
+- cond-asfr-2plus
+- tmr
+- cpm
+- tfr
+notes: 'Table 3: % distribution of women by number of live-born children, by age and year of birth. Used
+  to reconstruct conditional rates HFD lacks for the UK.'

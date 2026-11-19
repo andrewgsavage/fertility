@@ -1,0 +1,21 @@
+id: gss
+type: survey
+title: General Social Survey, cumulative file 1972-2024
+publisher: NORC at the University of Chicago
+url: https://gss.norc.org/content/dam/gss/get-the-data/documents/stata/GSS_stata.zip
+oa: gold
+local:
+- GSS/data/
+countries:
+- USA
+period:
+- 1972
+- 2024
+scripts:
+- GSS/scripts/political_gender_gap_us.py
+- GSS/scripts/young_adults_no_sex_us.py
+measurables:
+- political-gender-gap
+- sexual-inactivity
+- marriage
+notes: Variables polviews, sexfreq (from 1989), marital; weight wtssps.

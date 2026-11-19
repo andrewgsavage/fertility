@@ -1,0 +1,22 @@
+id: kneale-2008-postponement-childlessness
+type: paper
+title: Postponement and childlessness - Evidence from two British cohorts
+authors:
+- Kneale, D.
+- Joshi, H.
+year: 2008
+doi: 10.4054/demres.2008.19.58
+oa: gold
+oa_url: https://www.demographic-research.org/volumes/vol19/58/19-58.pdf
+factors:
+- age-at-first-birth
+findings:
+- factor: age-at-first-birth
+  measure: ppr-0-1
+  verdict: no-evidence
+  tick: 'no'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: Abstract truncated before results; may link postponement to childlessness. Worth checking.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Demographic Research.

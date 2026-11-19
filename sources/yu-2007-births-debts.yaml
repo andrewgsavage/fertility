@@ -1,0 +1,23 @@
+id: yu-2007-births-debts
+type: paper
+title: 'Births, debts and mirages: The impact of the Higher Education Contribution Scheme (HECS) and other
+  factors on Australian fertility expectations'
+authors:
+- Yu, P.
+- Kippen, R.
+- Chapman, B.
+year: 2007
+doi: 10.1007/bf03031879
+oa: closed
+factors:
+- student-debt
+findings:
+- factor: student-debt
+  measure: cond-asfr-1
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: Australia/US; abstracts were empty.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Journal of Population Research.

@@ -1,0 +1,29 @@
+id: jouannet-2001-semen-quality
+type: paper
+title: "Semen quality and male reproductive health: the controversy about human sperm concentration decline\n\
+  \                    Note"
+authors:
+- Jouannet, P.
+- Wang, C.
+- Eustache, F.
+- Kold‐Jensen, T.
+- Auger, J.
+year: 2001
+doi: 10.1034/j.1600-0463.2001.090502.x
+oa: closed
+factors:
+- sperm-counts
+measurables:
+- cond-asfr-1
+findings:
+- factor: sperm-counts
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: Declines reported in some places (Spanish students) and contested elsewhere (geographic variation).
+    No fertility-rate link in abstracts. Zinaman 2000 ([10.1002/j.1939-4640.2000.tb03284.x](https://doi.org/10.1002/j.1939-4640.2000.tb03284.x))
+    tests semen quality vs fertility in 210 couples; abstract truncated before result.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in APMIS.

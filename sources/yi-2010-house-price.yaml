@@ -1,0 +1,24 @@
+id: yi-2010-house-price
+type: paper
+title: 'THE EFFECT OF HOUSE PRICE ON FERTILITY: EVIDENCE FROM HONG KONG'
+authors:
+- Yi, J.
+- Zhang, J.
+year: 2010
+doi: 10.1111/j.1465-7295.2009.00213.x
+oa: closed
+factors:
+- house-prices
+measurables:
+- cond-asfr-2plus
+findings:
+- factor: house-prices
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: 'Hong Kong aggregate cointegration: negative effect of house prices on number of children (not
+    parity-specific).'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Economic Inquiry.

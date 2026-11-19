@@ -1,0 +1,36 @@
+id: thomson-2012-union-instability
+type: paper
+title: Union Instability as an Engine of Fertility? A Microsimulation Model for France
+authors:
+- Thomson, E.
+- Winkler-Dworak, M.
+- Spielauer, M.
+- Prskawetz, A.
+year: 2012
+doi: 10.1007/s13524-011-0085-5
+oa: hybrid
+oa_url: https://read.dukeupress.edu/demography/article-pdf/49/1/175/881111/175thomson.pdf
+factors:
+- partnership-stability
+measurables:
+- cond-asfr-2plus
+- ppr-1-2plus
+findings:
+- factor: partnership-stability
+  measure: ppr-1-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: 'France microsimulation (1999 survey): women whose first unions dissolve in childbearing years
+    end with smaller families, but repartnering largely closes the gap; differences are small when family
+    formation is postponed.'
+- factor: partnership-stability
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: New partnerships encourage higher parity progression, offsetting dissolution.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Demography.

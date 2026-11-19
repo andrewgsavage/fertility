@@ -1,0 +1,15 @@
+id: statfin-12c6
+type: dataset
+title: Population by family status, sex and age (12c6)
+publisher: Statistics Finland
+url: https://pxdata.stat.fi/PxWeb/api/v1/en/StatFin/perh/12c6.px
+oa: gold
+local:
+- NSO/data/
+countries:
+- FIN
+scripts:
+- NSO/scripts/download.py
+- NSO/scripts/coupling_nso.py
+measurables:
+- share-in-couple

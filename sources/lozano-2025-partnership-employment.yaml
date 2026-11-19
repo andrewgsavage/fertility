@@ -1,0 +1,24 @@
+id: lozano-2025-partnership-employment
+type: paper
+title: Partnership and Employment Pathways to Childlessness in Spain
+authors:
+- Lozano, M.
+- Vidal, S.
+- Adserà, A.
+year: 2025
+doi: 10.46710/ced.pd.eng.38
+oa: bronze
+oa_url: https://doi.org/10.46710/ced.pd.eng.38
+factors:
+- partnership-formation
+findings:
+- factor: partnership-formation
+  measure: ppr-0-1
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: Spanish Fertility Survey 2018, cohorts born late 1970s; abstract truncated before results. Tanturri
+    2008 ([10.1111/j.1728-4457.2008.00205.x](https://doi.org/10.1111/j.1728-4457.2008.00205.x)) also truncated.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Perspectives Demogràfiques.

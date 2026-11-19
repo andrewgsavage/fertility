@@ -1,0 +1,21 @@
+id: bokun-2024-cash-transfers
+type: paper
+title: 'Cash transfers and fertility: Evidence from Poland’s Family 500+ Policy'
+authors:
+- Bokun, A.
+year: 2024
+doi: 10.4054/demres.2024.51.28
+oa: gold
+oa_url: https://www.demographic-research.org/volumes/vol51/28/51-28.pdf
+factors:
+- child-benefits
+findings:
+- factor: child-benefits
+  measure: cond-asfr-1
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/policy-and-the-state.md
+  note: Abstract truncated before results; not read.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Demographic Research.

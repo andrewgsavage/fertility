@@ -1,0 +1,26 @@
+id: baudin-2015-fertility-childlessness
+type: paper
+title: Fertility and Childlessness in the United States
+authors:
+- Baudin, T.
+- de la Croix, D.
+- Gobbi, P. E.
+year: 2015
+doi: 10.1257/aer.20120926
+oa: green
+oa_url: https://www.aeaweb.org/aer/app/10506/20120926_app.pdf
+factors:
+- income
+measurables:
+- ppr-0-1
+findings:
+- factor: income
+  measure: ppr-0-1
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: 'Calibrated model on 1990 US Census: ~2.5% of women childless because of poverty, 8.1% because
+    of the opportunity cost of childrearing. Both low and high income matter.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in American Economic Review.

@@ -1,0 +1,23 @@
+id: bozick-2014-student-loans
+type: paper
+title: Do student loans delay marriage? Debt repayment and family formation in young adulthood
+authors:
+- Bozick, R.
+- Estacion, A.
+year: 2014
+doi: 10.4054/demres.2014.30.69
+oa: gold
+oa_url: https://www.demographic-research.org/volumes/vol30/69/30-69.pdf
+factors:
+- student-debt
+findings:
+- factor: student-debt
+  measure: share-in-couple
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: US; abstract truncated before results. Kuperberg 2021 ([10.1111/soin.12416](https://doi.org/10.1111/soin.12416))
+    find only stated norms (a significant minority say marriage should be delayed).
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Demographic Research.

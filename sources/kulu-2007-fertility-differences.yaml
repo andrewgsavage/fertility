@@ -1,0 +1,33 @@
+id: kulu-2007-fertility-differences
+type: paper
+title: Fertility differences by housing type
+authors:
+- Kulu, H.
+- Vikat, A.
+year: 2007
+doi: 10.4054/demres.2007.17.26
+oa: gold
+oa_url: https://www.demographic-research.org/volumes/vol17/26/17-26.pdf
+factors:
+- home-size
+measurables:
+- cond-asfr-2plus
+- ppr-1-2plus
+findings:
+- factor: home-size
+  measure: ppr-1-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: 'Finland: fertility varies by housing type and after housing changes. Abstract truncated; direction
+    not read.'
+- factor: home-size
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: As above; no direct bedrooms/space-shortage test found.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Demographic Research.

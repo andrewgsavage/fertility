@@ -1,0 +1,30 @@
+id: kalabikhina-2020-high-speed
+type: paper
+title: The impact of high speed internet on reproductive behavior in Russia
+authors:
+- Kalabikhina, I.
+- Abduselimov, I.
+- Klimenko, G.
+year: 2020
+doi: 10.38050/01300105202065
+oa: closed
+factors:
+- smartphones
+findings:
+- factor: smartphones
+  measure: ppr-1-2plus
+  verdict: no-evidence
+  tick: 'no'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: 'Adjacent: Russia RLMS 2014-18, broadband use raises fertility of women 25-49 and second+ births
+    are more affected.'
+- factor: smartphones
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'no'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: As above.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Moscow University Economics Bulletin.

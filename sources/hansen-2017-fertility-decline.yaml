@@ -1,0 +1,24 @@
+id: hansen-2017-fertility-decline
+type: paper
+title: 'THE FERTILITY DECLINE IN THE UNITED STATES: SCHOOLING AND INCOME'
+authors:
+- Hansen, C. W.
+- Jensen, P. S.
+- Lønstrup, L.
+year: 2017
+doi: 10.1017/s136510051600081x
+oa: green
+oa_url: https://portal.findresearcher.sdu.dk/da/publications/41f69a65-904e-4b65-b8eb-532edfbaf0de
+factors:
+- income
+findings:
+- factor: income
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: 'US 1850–2000: no robust relation between income per capita and fertility; schooling explains
+    ~60% of the decline.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Macroeconomic Dynamics.

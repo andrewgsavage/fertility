@@ -1,0 +1,51 @@
+id: bhalotra-2023-womens-fertility
+type: paper
+title: Women’s Fertility and Labor Market Responses to a Health Innovation
+authors:
+- Bhalotra, S.
+- Venkataramani, A.
+- Walther, S.
+year: 2023
+doi: 10.1093/jeea/jvac072
+oa: hybrid
+oa_url: https://academic.oup.com/jeea/advance-article-pdf/doi/10.1093/jeea/jvac072/48805705/jvac072.pdf
+factors:
+- child-mortality
+measurables:
+- cond-asfr-1
+- ppr-0-1
+- ppr-1-2plus
+- young-first-births
+findings:
+- factor: child-mortality
+  measure: ppr-0-1
+  verdict: mixed
+  tick: 'no'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: Mortality fall (especially child mortality) led to delayed childbearing, lower intensive and extensive
+    margin fertility and a lower chance of ever marrying. Suggests the blank may be wrong. Country/period
+    not read.
+- factor: child-mortality
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'no'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: Delayed childbearing.
+- factor: child-mortality
+  measure: young-first-births
+  verdict: mixed
+  tick: 'no'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: Same.
+- factor: child-mortality
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: Intensive-margin fertility falls after mortality decline.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Journal of the European Economic Association.

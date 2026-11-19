@@ -1,0 +1,12 @@
+id: fred-sloas
+type: dataset
+title: Student Loans Owned and Securitized (SLOAS)
+publisher: Board of Governors of the Federal Reserve System, via FRED
+url: https://fred.stlouisfed.org/series/SLOAS
+oa: gold
+countries:
+- USA
+scripts:
+- ONS/scripts/student_loan_debt_england_us.py
+measurables:
+- student-loan-debt

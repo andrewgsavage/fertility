@@ -1,0 +1,34 @@
+id: dalbis-2017-having-second
+type: paper
+title: 'HAVING A SECOND CHILD AND ACCESS TO CHILDCARE: EVIDENCE FROM EUROPEAN COUNTRIES'
+authors:
+- d’Albis, H.
+- Gobbi, P. E.
+- Greulich, A.
+year: 2017
+doi: 10.1017/dem.2017.2
+oa: green
+oa_url: https://hal.science/hal-01298943v1/file/16017.pdf
+factors:
+- childcare-provision
+measurables:
+- cond-asfr-2plus
+- ppr-1-2plus
+findings:
+- factor: childcare-provision
+  measure: ppr-1-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/policy-and-the-state.md
+  note: 'European cross-country: low-fertility countries differ mainly in fewer women having two children;
+    childcare services are an important determinant of the second-child transition.'
+- factor: childcare-provision
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/policy-and-the-state.md
+  note: Positive in the cross-country study; null in the German quasi-experiment.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Journal of Demographic Economics.

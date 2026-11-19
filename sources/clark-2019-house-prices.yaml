@@ -1,0 +1,25 @@
+id: clark-2019-house-prices
+type: paper
+title: 'The effect of house prices on fertility: evidence from Canada'
+authors:
+- Clark, J.
+- Ferrer, A.
+year: 2019
+doi: 10.5018/economics-ejournal.ja.2019-38
+oa: gold
+oa_url: http://www.economics-ejournal.org/dataset/PDFs/journalarticles_2019-38.pdf
+factors:
+- house-prices
+measurables:
+- cond-asfr-1
+findings:
+- factor: house-prices
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: 'Canada panel (SLID); theory: negative for renters, ambiguous for owners. Abstract truncated before
+    results.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Economics.

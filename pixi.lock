@@ -215,6 +215,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/pycparser-3.12-pyh5ded981_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pygments-2.21.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pyparsing-3.3.3-pyh5ded981_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/pypdf-7.1.1-pyh5ded981_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pyside6-6.12.0-py313hd9d88b3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/python-3.13.18-hf47f18c_100_cp313.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/python-abi3-3.13-h9bebd56_3.conda
@@ -498,6 +499,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/pycparser-3.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pygments-2.20.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pyparsing-3.3.2-pyhcf101f3_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/pypdf-7.1.1-pyh5ded981_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/pyside6-6.11.1-py314h447aaf0_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pysocks-1.7.1-pyh09c184e_7.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/python-3.14.6-h4b44e0e_100_cp314.conda
@@ -5046,6 +5048,18 @@ packages:
   license_family: MIT
   size: 114046
   timestamp: 1790063282695
+- conda: https://conda.anaconda.org/conda-forge/noarch/pypdf-7.1.1-pyh5ded981_0.conda
+  sha256: 66e0db8fcd5e2e984097cf7dec6bb1f327d64b3780a44bc98edb8a21b5c4aa4d
+  md5: 9b184db9ac6359ff59053e4c69cdf2ec
+  depends:
+  - python >=3.11
+  - typing_extensions >=4.0
+  - python
+  constrains:
+  - brotli-python >=1.2.0
+  license: BSD-3-Clause
+  size: 345181
+  timestamp: 1795037654669
 - conda: https://conda.anaconda.org/conda-forge/linux-64/pyside6-6.12.0-py313hd9d88b3_0.conda
   sha256: 1d976d750d5f93eb488061323c3552a67518a1e9052a9bb7ddf4b0cc85cd3fe4
   md5: 65330d1bc1ddb8e41d832511bf4b1783

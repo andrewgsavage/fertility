@@ -1,0 +1,23 @@
+id: palloni-1999-infant-mortality
+type: paper
+title: 'The effects of infant mortality on fertility revisited: new evidence from latin america'
+authors:
+- Palloni, A.
+- Rafalimanana, H.
+year: 1999
+doi: 10.2307/2648133
+oa: bronze
+oa_url: https://read.dukeupress.edu/demography/article-pdf/36/1/41/888120/41palloni.pdf
+factors:
+- child-mortality
+findings:
+- factor: child-mortality
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: 1920-90 aggregate and yearly series; abstract truncated before result. Schellekens (Netherlands
+    1860-1939, [10.1007/s13524-012-0112-1](https://doi.org/10.1007/s13524-012-0112-1)) also truncated.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Demography.

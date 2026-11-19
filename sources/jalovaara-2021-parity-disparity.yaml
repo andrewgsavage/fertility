@@ -1,0 +1,27 @@
+id: jalovaara-2021-parity-disparity
+type: paper
+title: 'Parity disparity: Educational differences in Nordic fertility across parities and number of reproductive
+  partners'
+authors:
+- Jalovaara, M.
+- Andersson, L.
+- Miettinen, A.
+year: 2021
+doi: 10.1080/00324728.2021.1887506
+oa: hybrid
+oa_url: https://doi.org/10.1080/00324728.2021.1887506
+factors:
+- education
+measurables:
+- ppr-0-1
+findings:
+- factor: education
+  measure: ppr-0-1
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: 'Finland/Sweden cohorts 1940-73/78: childlessness rising among low and medium educated. Gradient
+    is narrowing or reversing.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Population Studies.

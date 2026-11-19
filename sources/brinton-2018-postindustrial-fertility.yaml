@@ -1,0 +1,44 @@
+id: brinton-2018-postindustrial-fertility
+type: paper
+title: 'Postindustrial Fertility Ideals, Intentions, and Gender Inequality: A Comparative Qualitative
+  Analysis'
+authors:
+- Brinton, M. C.
+- Bueno, X.
+- Oláh, L.
+- Hellum, M.
+year: 2018
+doi: 10.1111/padr.12128
+oa: green
+oa_url: https://ddd.uab.cat/pub/artpub/2018/200914/popdevrev_a2018v44n2p281iENG_postprint.pdf
+factors:
+- ideal-family-size
+measurables:
+- cond-asfr-1
+- cond-asfr-2plus
+- ppr-0-1
+findings:
+- factor: ideal-family-size
+  measure: ppr-0-1
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: 'Interviews in four countries: ideals remain centred on two children; the gap is between ideals
+    and intentions, not smaller ideals.'
+- factor: ideal-family-size
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: As above.
+- factor: ideal-family-size
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: As above.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Population and Development Review.

@@ -1,0 +1,25 @@
+id: girma-2015-education-best
+type: paper
+title: 'Is education the best contraception: The case of teenage pregnancy in England?'
+authors:
+- Girma, S.
+- Paton, D.
+year: 2015
+doi: 10.1016/j.socscimed.2015.02.040
+oa: green
+oa_url: https://nottingham-repository.worktribe.com/preview/749777/SSM%20%20ore%20print.pdf
+factors:
+- sex-education
+measurables:
+- cond-asfr-1
+findings:
+- factor: sex-education
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: 'English regions: promotion of long-acting contraception has a negative but generally small and
+    insignificant effect on teen pregnancy.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Social Science &amp; Medicine.

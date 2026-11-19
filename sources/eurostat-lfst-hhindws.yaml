@@ -1,0 +1,15 @@
+id: eurostat-lfst-hhindws
+type: dataset
+title: Population by sex, age and household composition (EU-LFS) (lfst_hhindws)
+publisher: Eurostat
+url: https://ec.europa.eu/eurostat/databrowser/view/lfst_hhindws/default/table
+oa: gold
+local:
+- eurostat/data/
+scripts:
+- eurostat/scripts/partnered_share_europe.py
+- eurostat/scripts/couples_firstbirth_age_europe.py
+- eurostat/scripts/coupling_vs_cond_asfr_eurostat.py
+measurables:
+- share-in-couple
+notes: Couple households (married or cohabiting, own household); people living with parents not counted.

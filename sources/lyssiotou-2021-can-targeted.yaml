@@ -1,0 +1,25 @@
+id: lyssiotou-2021-can-targeted
+type: paper
+title: Can Targeted Child Benefits Affect Fertility? Evidence from a Natural Experiment
+authors:
+- Lyssiotou, P.
+year: 2021
+doi: 10.1515/bejeap-2020-0165
+oa: green
+oa_url: https://papers.econ.ucy.ac.cy/RePEc/papers/02-2021.pdf
+factors:
+- child-benefits
+measurables:
+- cond-asfr-2plus
+findings:
+- factor: child-benefits
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/policy-and-the-state.md
+  note: 'Quasi-experiment: a cash benefit for families with 4+ children; abstract says "robust evidence"
+    of a significant increase but is truncated, so size and country (not stated in the part seen) are
+    unread. Higher-order only.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in The B.E. Journal of Economic Analysis &amp; Policy.

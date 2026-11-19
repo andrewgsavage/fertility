@@ -1,0 +1,26 @@
+id: guner-2024-labor-market
+type: paper
+title: LABOR MARKET INSTITUTIONS AND FERTILITY
+authors:
+- Guner, N.
+- Kaya, E.
+- Sánchez‐Marcos, V.
+year: 2024
+doi: 10.1111/iere.12708
+oa: bronze
+oa_url: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/iere.12708
+factors:
+- job-insecurity
+measurables:
+- cond-asfr-1
+findings:
+- factor: job-insecurity
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: 'Spain admin data: temporary contracts correlate with lower first-birth rates; model says reform
+    of duality raises fertility.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in International Economic Review.

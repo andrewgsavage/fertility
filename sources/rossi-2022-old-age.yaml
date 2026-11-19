@@ -1,0 +1,33 @@
+id: rossi-2022-old-age
+type: paper
+title: 'The Old-Age Security Motive for Fertility: Evidence from the Extension of Social Pensions in Namibia'
+authors:
+- Rossi, P.
+- Godard, M.
+year: 2022
+doi: 10.1257/pol.20200466
+oa: green
+oa_url: https://hal.science/hal-03922295/document
+factors:
+- pensions-welfare
+measurables:
+- cond-asfr-2plus
+- ppr-1-2plus
+findings:
+- factor: pensions-welfare
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/policy-and-the-state.md
+  note: 'Namibia 1990s quasi-experiment: pensions substantially reduce fertility, especially in late reproductive
+    life (so mainly higher-order). A high-fertility setting, not a low-fertility OECD one.'
+- factor: pensions-welfare
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/policy-and-the-state.md
+  note: Late-reproductive-life reduction implies higher-order births fall.
+notes: 'Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in American Economic Journal: Economic Policy.'

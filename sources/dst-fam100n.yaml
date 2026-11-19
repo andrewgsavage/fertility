@@ -1,0 +1,16 @@
+id: dst-fam100n
+type: dataset
+title: Adults by family type, sex and age (FAM100N)
+publisher: Statistics Denmark
+url: https://api.statbank.dk/v1/data/FAM100N/CSV
+oa: gold
+local:
+- NSO/data/
+countries:
+- DNK
+scripts:
+- NSO/scripts/download.py
+- NSO/scripts/coupling_nso.py
+measurables:
+- share-in-couple
+notes: Denominator from BEFOLK1.

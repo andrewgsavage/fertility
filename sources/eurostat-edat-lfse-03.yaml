@@ -1,0 +1,13 @@
+id: eurostat-edat-lfse-03
+type: dataset
+title: Population by educational attainment level, sex and age (edat_lfse_03)
+publisher: Eurostat
+url: https://ec.europa.eu/eurostat/databrowser/view/edat_lfse_03/default/table
+oa: gold
+local:
+- eurostat/data/
+scripts:
+- eurostat/scripts/tertiary_gender_gap_europe.py
+measurables:
+- educational-attainment
+notes: European countries; see the script for the download query.

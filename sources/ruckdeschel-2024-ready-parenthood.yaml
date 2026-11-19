@@ -1,0 +1,40 @@
+id: ruckdeschel-2024-ready-parenthood
+type: paper
+title: Ready for Parenthood? On Intensive Parenting Ideals and Fertility
+authors:
+- Ruckdeschel, K.
+year: 2024
+doi: 10.1177/0192513x241227872
+oa: closed
+factors:
+- intensive-parenting
+measurables:
+- cond-asfr-1
+- cond-asfr-2plus
+- ppr-1-2plus
+findings:
+- factor: intensive-parenting
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'no'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: 'Germany panel: transition to a first birth is negatively influenced by fatherhood norms among
+    the childless.'
+- factor: intensive-parenting
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: 'Germany: financial norms (and, per truncated abstract, child-centred norms) lower transitions
+    to further births among parents of one or two. Intentions/decisions in a panel, not completed parity.'
+- factor: intensive-parenting
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: As above.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Journal of Family Issues.

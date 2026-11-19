@@ -1,0 +1,35 @@
+id: wood-2026-local-house
+type: paper
+title: 'Local house prices and first births in Belgium: Subgroup variation by education and migration
+  background'
+authors:
+- Wood, J.
+- Maes, J.
+year: 2026
+doi: 10.4054/demres.2026.55.19
+oa: gold
+oa_url: https://www.demographic-research.org/volumes/vol55/19/55-19.pdf
+factors:
+- house-prices
+measurables:
+- cond-asfr-1
+- young-first-births
+findings:
+- factor: house-prices
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: 'Belgium 2012–20 register data, municipality fixed-effects hazard models: higher local prices
+    lower first-birth hazards at 18–34.'
+- factor: house-prices
+  measure: young-first-births
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: Negative association is among young adults 18–34; varies by education and migration background,
+    linked to ownership rates.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Demographic Research.

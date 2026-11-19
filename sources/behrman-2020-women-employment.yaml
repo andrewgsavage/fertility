@@ -1,0 +1,25 @@
+id: behrman-2020-women-employment
+type: paper
+title: Women's employment and fertility in a global perspective (1960–2015)
+authors:
+- Behrman, J.
+- Gonalons-Pons, P.
+year: 2020
+doi: 10.4054/demres.2020.43.25
+oa: gold
+oa_url: https://www.demographic-research.org/volumes/vol43/25/43-25.pdf
+factors:
+- female-employment
+measurables:
+- cond-asfr-2plus
+findings:
+- factor: female-employment
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: 'Global country panel: women''s wage employment negatively correlated with TFR in every region,
+    holds for nonagricultural employment only. Aggregate, not parity-specific.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Demographic Research.

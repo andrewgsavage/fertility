@@ -1,0 +1,34 @@
+id: van-bavel-2010-second-birth
+type: paper
+title: 'Second birth rates across europe: interactions between women''s level of education and child care
+  enrolment'
+authors:
+- Van Bavel, J.
+year: 2010
+doi: 10.1553/populationyearbook2010s107
+oa: bronze
+oa_url: https://austriaca.at/0xc1aa5576_0x0024fc42.pdf
+factors:
+- age-at-first-birth
+- education
+measurables:
+- cond-asfr-2plus
+findings:
+- factor: age-at-first-birth
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: 'ESS, 23 countries: effect of timing of first child on second births is mediated by education
+    and child-care enrolment.'
+- factor: education
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: 'no'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: 'Highly educated second-birth rates depend on child-care enrolment. Jalovaara 2021: highly educated
+    more often have exactly two children.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Vienna Yearbook of Population Research.

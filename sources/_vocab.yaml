@@ -1,0 +1,112 @@
+# Controlled tag vocabulary for sources/*.yaml. sources.py rejects any tag not listed here.
+#
+# factors:     rows of the factor table in docs/factors/index.md (same order and groups).
+#              `page` is relative to docs/; omit it when the factor has no page yet.
+# measurables: things a source measures.
+#              kind: outcome  -> a fertility outcome (the factor table's columns and the
+#                                theory pages' quantities)
+#              kind: exposure -> a measure of a factor; `factor` names it, and tagging the
+#                                measurable implies that factor tag.
+#              Keep these at the level of the theory pages. Age bands, sex and parity
+#              details go in a source's notes, not new tags.
+# Countries are not listed here: sources use HFD population codes (GBR_NP, GBR_SCO, DEUTE,
+# ...) where HFD has one, otherwise ISO 3166-1 alpha-3, or `all` for global coverage.
+
+factors:
+  # Life-course timing
+  leaving-home:            {label: Leaving home, group: life-course, page: factors/leaving-home.md}
+  partnership-formation:   {label: Partnership formation, group: life-course, page: factors/partnership-formation.md}
+  partnership-stability:   {label: Partnership stability, group: life-course}
+  age-at-first-birth:      {label: Age at first birth, group: life-course}
+  female-infertility:      {label: Female age-related infertility, group: life-course}
+  sperm-counts:            {label: Falling sperm counts, group: life-course}
+  # Education and work
+  education:               {label: Education, group: education-work, page: factors/education.md}
+  student-debt:            {label: Student debt, group: education-work, page: factors/student-debt.md}
+  female-employment:       {label: Female employment, group: education-work}
+  motherhood-penalty:      {label: Motherhood earnings penalty, group: education-work}
+  working-hours:           {label: Long working hours, group: education-work}
+  job-insecurity:          {label: Job insecurity, group: education-work, page: factors/job-insecurity.md}
+  left-behind-young-men:   {label: Left-behind young men, group: education-work, page: factors/left-behind-young-men.md}
+  # Costs and housing
+  house-prices:            {label: House prices and home ownership, group: costs-housing, page: factors/housing.md}
+  rents:                   {label: Rents, group: costs-housing, page: factors/housing.md}
+  home-size:               {label: Home size, group: costs-housing, page: factors/housing.md}
+  childcare-costs:         {label: Childcare costs, group: costs-housing}
+  child-costs:             {label: Cost of raising children, group: costs-housing}
+  income:                  {label: Income level, group: costs-housing}
+  economic-uncertainty:    {label: Economic uncertainty, group: costs-housing}
+  # Policy and the state
+  parental-leave:          {label: Parental leave, group: policy}
+  child-benefits:          {label: Child benefits and tax credits, group: policy}
+  childcare-provision:     {label: Childcare provision, group: policy}
+  tax-system:              {label: Tax system, group: policy}
+  pensions-welfare:        {label: Pensions and welfare state, group: policy}
+  car-seat-rules:          {label: Car-seat rules, group: policy}
+  childcare-ratios:        {label: Childcare staff ratios, group: policy}
+  planning-rules:          {label: Planning rules, group: policy}
+  # Social and cultural
+  contraception:           {label: Contraception, group: social-cultural}
+  abortion:                {label: Abortion, group: social-cultural, page: factors/abortion.md}
+  sex-education:           {label: Sex education and teen pregnancy campaigns, group: social-cultural}
+  fertility-awareness:     {label: Low fertility awareness, group: social-cultural}
+  secularisation:          {label: Secularisation, group: social-cultural}
+  gender-equality-home:    {label: Gender equality at home, group: social-cultural}
+  ideal-family-size:       {label: Ideal family size, group: social-cultural}
+  intensive-parenting:     {label: Intensive parenting norms, group: social-cultural}
+  smartphones:             {label: Smartphones, group: social-cultural, page: factors/smartphones.md}
+  dating-apps:             {label: Dating apps, group: social-cultural, page: factors/dating-apps.md}
+  social-media:            {label: Social media, group: social-cultural, page: factors/social-media.md}
+  political-divide:        {label: Political divide between young men and women, group: social-cultural, page: factors/political-divide-between-young-men-and-women.md}
+  low-fertility-trap:      {label: Low-fertility trap, group: social-cultural, page: owid/the-low-fertility-trap.md}
+  # Population structure
+  urbanisation:            {label: Urbanisation, group: population}
+  child-mortality:         {label: Child mortality decline, group: population}
+  population-ageing:       {label: Population ageing and politics, group: population, page: democracy/index.md}
+
+measurables:
+  # Outcomes
+  tfr:                {label: Total fertility rate (TFR), kind: outcome}
+  asfr:               {label: Age-specific fertility rate (ASFR), kind: outcome}
+  cond-asfr-1:        {label: First-birth conditional ASFR, kind: outcome, page: uk/cond-asfr.md}
+  cond-asfr-2plus:    {label: Second+ conditional ASFR, kind: outcome, page: uk/cond-asfr.md}
+  ppr-0-1:            {label: PPR 0→1, kind: outcome, page: theory/mdf.md}
+  ppr-1-2plus:        {label: PPR 1→2+, kind: outcome, page: theory/mdf.md}
+  tmr:                {label: Total motherhood rate (TMR), kind: outcome, page: theory/mdf.md}
+  cpm:                {label: Children per mother (CPM), kind: outcome, page: theory/mdf.md}
+  completed-fertility: {label: Completed cohort fertility, kind: outcome}
+  childlessness:      {label: Childlessness, kind: outcome}
+  young-first-births: {label: First births at young ages (teens and twenties), kind: outcome}
+  mab1:               {label: Mean age at first birth, kind: outcome}
+  births:             {label: Birth counts, kind: outcome}
+  art-births:         {label: Births after assisted reproduction (IVF/ART), kind: outcome, page: hfd/ivf-births.md}
+  conceptions:        {label: Conceptions or pregnancies, kind: outcome}
+  ideal-children:     {label: Desired or intended number of children, kind: outcome}
+
+  # Exposures (each belongs to a factor)
+  leaving-home-timing: {label: Age at leaving home or share living with parents, kind: exposure, factor: leaving-home}
+  share-in-couple:    {label: Share married or cohabiting, kind: exposure, factor: partnership-formation}
+  marriage:           {label: Marriage rate or share married, kind: exposure, factor: partnership-formation}
+  sexual-inactivity:  {label: Share sexually inactive, kind: exposure, factor: partnership-formation}
+  separation:         {label: Separation or divorce, kind: exposure, factor: partnership-formation}
+  how-couples-met:    {label: How couples met (incl. online), kind: exposure, factor: dating-apps}
+  he-participation:   {label: Higher-education participation, kind: exposure, factor: education}
+  educational-attainment: {label: Educational attainment, kind: exposure, factor: education}
+  student-loan-debt:  {label: Student loan debt, kind: exposure, factor: student-debt}
+  employment:         {label: Employment rate, kind: exposure, factor: female-employment}
+  temporary-contracts: {label: Temporary or insecure employment, kind: exposure, factor: job-insecurity}
+  male-earnings:      {label: Young men's earnings or NEET status, kind: exposure, factor: left-behind-young-men}
+  house-price-index:  {label: House price index or price-to-income ratio, kind: exposure, factor: house-prices}
+  housing-tenure:     {label: Housing tenure (owner, renter, with parents), kind: exposure, factor: house-prices}
+  rent-cost:          {label: Rent level or rent-to-income ratio, kind: exposure, factor: rents}
+  dwelling-size:      {label: Dwelling size or bedrooms, kind: exposure, factor: home-size}
+  childcare-price:    {label: Childcare price, kind: exposure, factor: childcare-costs}
+  household-income:   {label: Household income, kind: exposure, factor: income}
+  abortions:          {label: Abortion counts or rates, kind: exposure, factor: abortion}
+  contraceptive-use:  {label: Contraceptive use, kind: exposure, factor: contraception}
+  religiosity:        {label: Religious attendance or affiliation, kind: exposure, factor: secularisation}
+  political-gender-gap: {label: Political or ideological gap between young men and women, kind: exposure, factor: political-divide}
+  screen-time:        {label: Smartphone or mobile internet use, kind: exposure, factor: smartphones}
+  social-media-use:   {label: Social media use, kind: exposure, factor: social-media}
+  population-by-age:  {label: Population by age, kind: exposure, factor: population-ageing}
+  turnout-by-age:     {label: Voter turnout by age, kind: exposure, factor: population-ageing}

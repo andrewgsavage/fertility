@@ -1,0 +1,26 @@
+id: boldrin-2005-fertility-social
+type: paper
+title: FERTILITY AND SOCIAL SECURITY
+authors:
+- Boldrin, M.
+- De Nardi, M.
+- Jones, L. E.
+year: 2005
+doi: 10.1017/dem.2014.14
+oa: bronze
+oa_url: https://www.cambridge.org/core/services/aop-cambridge-core/content/view/4FA674742794BC43650452A21CBD1C0D/S2054089214000145a.pdf/div-class-title-fertility-and-social-security-div.pdf
+factors:
+- pensions-welfare
+measurables:
+- ppr-1-2plus
+findings:
+- factor: pensions-welfare
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/policy-and-the-state.md
+  note: Data show a strong correlation between government pensions and lower fertility (cross-country,
+    descriptive); the paper tests which model fits. Abstract truncated.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Journal of Demographic Economics.

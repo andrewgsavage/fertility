@@ -1,0 +1,17 @@
+id: ilostat-marital-status
+type: dataset
+title: Working-age population by sex, age and marital status (POP_XWAP_SEX_AGE_MTS_NB_A)
+publisher: International Labour Organization (ILOSTAT)
+url: https://rplumber.ilo.org/data/indicator/?id=POP_XWAP_SEX_AGE_MTS_NB_A&format=.csv.gz
+oa: gold
+local:
+- ILO/data/
+countries:
+- all
+scripts:
+- ILO/scripts/coupling_ilo.py
+- ILO/scripts/coupling_vs_cond_asfr.py
+measurables:
+- share-in-couple
+- marriage
+notes: Many European and US surveys code legal marital status only, so cohabiting couples count as single.

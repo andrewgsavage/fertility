@@ -1,0 +1,34 @@
+id: wang-2024-student-loan
+type: paper
+title: Student loan debt and family formation of youth in Japan
+authors:
+- Wang, J.
+- Akabayashi, H.
+- Kobayashi, M.
+- Sano, S.
+year: 2024
+doi: 10.1080/03075079.2024.2307972
+oa: closed
+factors:
+- student-debt
+measurables:
+- cond-asfr-1
+- share-in-couple
+findings:
+- factor: student-debt
+  measure: share-in-couple
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: 'Japan, 2017 graduate survey: 2-year-college women with loans more likely to delay marriage.'
+- factor: student-debt
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: Loans negatively correlated with childbearing (count model), stronger for 2-year-college women.
+    Correlation, one country.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Studies in Higher Education.

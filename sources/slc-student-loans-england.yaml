@@ -1,0 +1,15 @@
+id: slc-student-loans-england
+type: dataset
+title: 'Student Loans in England: Financial Year 2024-25'
+publisher: Student Loans Company
+url: https://assets.publishing.service.gov.uk/media/6a44cbd66c5c6d8122b81573/slcsp012025.xlsx
+oa: gold
+local:
+- ONS/data/
+countries:
+- GBR
+scripts:
+- ONS/scripts/student_loan_debt_england_us.py
+measurables:
+- student-loan-debt
+notes: 'England only. Table 5A: average balance per income-contingent borrower.'

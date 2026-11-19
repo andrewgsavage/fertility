@@ -1,0 +1,25 @@
+id: gauthier-2024-family-policies
+type: paper
+title: 'Family Policies in Low Fertility Countries: Evidence and Reflections'
+authors:
+- Gauthier, A. H.
+- Gietel‐Basten, S.
+year: 2024
+doi: 10.1111/padr.12691
+oa: hybrid
+oa_url: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/padr.12691
+factors:
+- parental-leave
+measurables:
+- cond-asfr-2plus
+findings:
+- factor: parental-leave
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/policy-and-the-state.md
+  note: Review of the policy-fertility literature; the abstract frames policy impact on fertility as limited
+    but states no leave-specific result. Also covers cash benefits and childcare rows below.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Population and Development Review.

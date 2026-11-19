@@ -1,0 +1,27 @@
+id: levine-1996-roe-wade
+type: paper
+title: Roe v Wade and American fertility.
+authors:
+- Levine, P. B.
+- Staiger, D.
+- Kane, T. J.
+- Zimmerman, D. J.
+year: 1996
+doi: 10.2105/ajph.89.2.199
+oa: green
+oa_url: https://doi.org/10.3386/w5615
+factors:
+- abortion
+measurables:
+- cond-asfr-1
+findings:
+- factor: abortion
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: US states legalising abortion saw a 4% fertility decline relative to others; reductions in births
+    to teens and other groups (list truncated). Not first-birth specific.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in American Journal of Public Health.

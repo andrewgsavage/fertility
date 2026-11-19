@@ -1,0 +1,26 @@
+id: daniluk-2014-fertility-awareness
+type: paper
+title: 'Fertility awareness online: the efficacy of a fertility education website in increasing knowledge
+  and changing fertility beliefs'
+authors:
+- Daniluk, J. C.
+- Koert, E.
+year: 2014
+doi: 10.1093/humrep/deu328
+oa: bronze
+oa_url: https://academic.oup.com/humrep/article-pdf/30/2/353/2167100/deu328.pdf
+factors:
+- fertility-awareness
+measurables:
+- cond-asfr-1
+findings:
+- factor: fertility-awareness
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: An online education tool raised knowledge and shifted beliefs about ideal timing of parenthood;
+    no birth outcomes.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Human Reproduction.

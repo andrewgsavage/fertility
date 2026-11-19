@@ -1,0 +1,21 @@
+id: hcmst-2017-2022
+type: survey
+title: How Couples Meet and Stay Together 2017-2022, v2.2
+authors:
+- Rosenfeld, Michael J.
+- Thomas, Reuben J.
+- Hausen, Sonia
+publisher: Stanford University
+year: 2023
+url: https://data.stanford.edu/hcmst2017
+oa: gold
+local:
+- HCMST/data/
+countries:
+- USA
+scripts:
+- HCMST/scripts/how_couples_meet_us.py
+measurables:
+- how-couples-met
+notes: Wave 1 (2017) partnered respondents; retrospective, so couples that split before 2017 are missing.
+  Year is the v2.2 release; check.

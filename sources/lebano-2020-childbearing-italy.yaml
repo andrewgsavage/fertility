@@ -1,0 +1,22 @@
+id: lebano-2020-childbearing-italy
+type: paper
+title: 'Childbearing in Italy and Spain: Postponement Narratives'
+authors:
+- Lebano, A.
+- Jamieson, L.
+year: 2020
+doi: 10.1111/padr.12313
+oa: bronze
+oa_url: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/padr.12313
+factors:
+- fertility-awareness
+findings:
+- factor: fertility-awareness
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: Qualitative study of childless partnered women 30-35; abstract does not test awareness.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Population and Development Review.

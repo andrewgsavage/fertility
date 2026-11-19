@@ -1,0 +1,26 @@
+id: spitzer-2021-subjective-cost
+type: paper
+title: 'The Subjective Cost of Young Children: A European Comparison'
+authors:
+- Spitzer, S.
+- Greulich, A.
+- Hammer, B.
+year: 2021
+doi: 10.1553/0x003ccd30
+oa: gold
+oa_url: https://epub.oeaw.ac.at/0xc1aa5576_0x003ccd30.pdf
+factors:
+- child-costs
+measurables:
+- ppr-1-2plus
+findings:
+- factor: child-costs
+  measure: ppr-1-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: 'EU-SILC, 30 countries 2004–15: a birth lowers subjective economic wellbeing, mainly via direct
+    costs, with economies of scale across children.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Institut für Demographie - VID.

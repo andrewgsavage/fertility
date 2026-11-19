@@ -1,0 +1,33 @@
+id: neels-2010-postponement-recuperation
+type: paper
+title: 'Postponement and recuperation of Belgian fertility: how are they related to rising female educational
+  attainment?'
+authors:
+- Neels, K.
+year: 2010
+doi: 10.1553/populationyearbook2010s77
+oa: bronze
+oa_url: https://austriaca.at/0xc1aa5576_0x0024fc41.pdf
+factors:
+- education
+measurables:
+- cond-asfr-1
+- young-first-births
+findings:
+- factor: education
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: 'Belgium: 40-50% of the fall in cumulated fertility at 25 (cohorts 1951-75 vs 1946-50) is attributable
+    to rising education.'
+- factor: education
+  measure: young-first-births
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: Effect concentrated at young ages; recuperation at older ages differs by education and context.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Vienna Yearbook of Population Research.

@@ -1,0 +1,25 @@
+id: comolli-2017-fertility-response
+type: paper
+title: 'The fertility response to the Great Recession in Europe and the United States: Structural economic
+  conditions and perceived economic uncertainty'
+authors:
+- Comolli, C. L.
+year: 2017
+doi: 10.4054/demres.2017.36.51
+oa: gold
+oa_url: https://www.demographic-research.org/volumes/vol36/51/36-51.pdf
+factors:
+- economic-uncertainty
+measurables:
+- cond-asfr-1
+findings:
+- factor: economic-uncertainty
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: '31 European countries + US 2000–13: age-, parity-, education-specific rates respond to unemployment
+    and uncertainty measures.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Demographic Research.

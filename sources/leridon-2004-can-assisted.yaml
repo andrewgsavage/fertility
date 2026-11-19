@@ -1,0 +1,48 @@
+id: leridon-2004-can-assisted
+type: paper
+title: Can assisted reproduction technology compensate for the natural decline in fertility with age?
+  A model assessment
+authors:
+- Leridon, H.
+year: 2004
+doi: 10.1093/humrep/deh304
+oa: closed
+factors:
+- female-infertility
+measurables:
+- cond-asfr-1
+- cond-asfr-2plus
+- ppr-0-1
+- ppr-1-2plus
+findings:
+- factor: female-infertility
+  measure: ppr-0-1
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: 'Monte Carlo model: live birth within 1 year of trying 75% at 30, 66% at 35, 44% at 40; within
+    4 years 91, 84, 64%. Model, not observed cohort data.'
+- factor: female-infertility
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: Fecundability falls with age at which couples start trying.
+- factor: female-infertility
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: Same age gradient applies to any attempt to conceive; not parity-specific.
+- factor: female-infertility
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: As above.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Human Reproduction.

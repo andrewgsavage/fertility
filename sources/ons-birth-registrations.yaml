@@ -1,0 +1,17 @@
+id: ons-birth-registrations
+type: dataset
+title: 'Births in England and Wales: birth registrations'
+publisher: Office for National Statistics
+url: https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/datasets/birthsinenglandandwalesbirthregistrations
+oa: gold
+local:
+- ONS/data/
+countries:
+- GBRTENW
+scripts:
+- housing/scripts/house_prices_vs_tfr.py
+- eurostat/scripts/abortion_by_age.py
+measurables:
+- births
+- asfr
+- tfr

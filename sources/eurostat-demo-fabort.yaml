@@ -1,0 +1,14 @@
+id: eurostat-demo-fabort
+type: dataset
+title: Legally induced abortions by mother's age (demo_fabort)
+publisher: Eurostat
+url: https://ec.europa.eu/eurostat/databrowser/view/demo_fabort/default/table
+oa: gold
+local:
+- eurostat/data/
+scripts:
+- eurostat/scripts/abortion_by_age.py
+- eurostat/scripts/abortion_share_europe.py
+measurables:
+- abortions
+notes: European countries; see the script for the download query.

@@ -1,0 +1,13 @@
+id: eurostat-demo-nind
+type: dataset
+title: Marriage indicators (demo_nind)
+publisher: Eurostat
+url: https://ec.europa.eu/eurostat/databrowser/view/demo_nind/default/table
+oa: gold
+local:
+- eurostat/data/
+scripts:
+- eurostat/scripts/first_marriage_birth_age_europe.py
+measurables:
+- marriage
+notes: European countries; see the script for the download query.

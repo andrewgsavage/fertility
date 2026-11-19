@@ -1,0 +1,24 @@
+id: strulik-2024-higher-education
+type: paper
+title: Higher education and the income-fertility nexus
+authors:
+- Strulik, H.
+year: 2024
+doi: 10.1007/s00148-024-01017-8
+oa: hybrid
+oa_url: https://link.springer.com/content/pdf/10.1007/s00148-024-01017-8.pdf
+factors:
+- income
+measurables:
+- ppr-1-2plus
+findings:
+- factor: income
+  measure: ppr-1-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: 'Theory: aggregate income–fertility is negative via education, but within an education level higher
+    income raises fertility.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Journal of Population Economics.

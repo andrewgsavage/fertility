@@ -1,0 +1,24 @@
+id: biro-2026-motherhood-timing
+type: paper
+title: Motherhood timing and the child penalty
+authors:
+- Bíró, A.
+- Dieterle, S.
+- Steinhauer, A.
+year: 2026
+doi: 10.1007/s00148-026-01189-5
+oa: hybrid
+oa_url: https://link.springer.com/content/pdf/10.1007/s00148-026-01189-5.pdf
+factors:
+- motherhood-penalty
+findings:
+- factor: motherhood-penalty
+  measure: cond-asfr-1
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: 'Austria admin data: delaying motherhood has small to moderate effects on earnings, small relative
+    to age effects. So postponement buys little.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Journal of Population Economics.

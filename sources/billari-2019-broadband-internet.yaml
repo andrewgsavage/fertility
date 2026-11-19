@@ -1,0 +1,24 @@
+id: billari-2019-broadband-internet
+type: paper
+title: Does broadband Internet affect fertility?
+authors:
+- Billari, F. C.
+- Giuntella, O.
+- Stella, L.
+year: 2019
+doi: 10.1080/00324728.2019.1584327
+oa: hybrid
+oa_url: https://www.tandfonline.com/doi/pdf/10.1080/00324728.2019.1584327?needAccess=true
+factors:
+- smartphones
+findings:
+- factor: smartphones
+  measure: cond-asfr-1
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: 'Adjacent evidence only (broadband, not smartphones): German panel IV design finds positive effects
+    of broadband availability on fertility of the highly educated (rest truncated).'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Population Studies.

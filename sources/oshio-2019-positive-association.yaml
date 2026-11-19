@@ -1,0 +1,24 @@
+id: oshio-2019-positive-association
+type: paper
+title: Is a positive association between female employment and fertility still spurious in developed countries?
+authors:
+- Oshio, T.
+year: 2019
+doi: 10.4054/demres.2019.41.45
+oa: gold
+oa_url: https://www.demographic-research.org/volumes/vol41/45/41-45.pdf
+factors:
+- female-employment
+measurables:
+- cond-asfr-2plus
+findings:
+- factor: female-employment
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: Cross-country association in developed countries turned positive in the mid-1980s; whether it
+    is spurious is the debate. Abstracts truncated, conclusions not read.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Demographic Research.

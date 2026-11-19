@@ -1,0 +1,42 @@
+id: schuss-2022-expansion-early
+type: paper
+title: The expansion of early childcare and transitions to first and second birth in Germany
+authors:
+- Schuss, E.
+- Azaouagh, M.
+year: 2022
+doi: 10.1111/boer.12367
+oa: hybrid
+oa_url: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/boer.12367
+factors:
+- childcare-provision
+measurables:
+- cond-asfr-1
+- cond-asfr-2plus
+- ppr-1-2plus
+findings:
+- factor: childcare-provision
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/policy-and-the-state.md
+  note: 'Germany SOEP 1998–2012, county-level quasi-experiment: +11.9% first-birth transition for native
+    childless couples in the labour force.'
+- factor: childcare-provision
+  measure: ppr-1-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/policy-and-the-state.md
+  note: 'Germany: no significant effect of childcare expansion on the second-birth transition (period
+    transition; cannot settle a completed-fertility column).'
+- factor: childcare-provision
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/policy-and-the-state.md
+  note: Positive in the cross-country study; null in the German quasi-experiment.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Bulletin of Economic Research.

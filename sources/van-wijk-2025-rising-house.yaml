@@ -1,0 +1,35 @@
+id: van-wijk-2025-rising-house
+type: paper
+title: Rising House Prices, Falling Fertility? How Rising House Prices Widen Fertility Differences between
+  Tenure Groups
+authors:
+- van Wijk, D.
+- Feijten, P.
+year: 2025
+doi: 10.1007/s10680-025-09754-6
+oa: hybrid
+oa_url: https://link.springer.com/content/pdf/10.1007/s10680-025-09754-6.pdf
+factors:
+- house-prices
+- rents
+measurables:
+- cond-asfr-1
+- young-first-births
+findings:
+- factor: house-prices
+  measure: young-first-births
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: 'Netherlands register data 2012–23: rising regional prices → lower conception risk, widening tenure
+    gaps.'
+- factor: rents
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: 'Netherlands: price rises widen fertility gaps between tenure groups (renters worse off).'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in European Journal of Population.

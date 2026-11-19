@@ -1,0 +1,14 @@
+id: eurostat-yth-demo-030
+type: dataset
+title: Estimated average age of young people leaving the parental household (yth_demo_030)
+publisher: Eurostat
+url: https://ec.europa.eu/eurostat/databrowser/view/yth_demo_030/default/table
+oa: gold
+local:
+- eurostat/data/
+scripts:
+- eurostat/scripts/leaving_home_vs_tfr.py
+- eurostat/scripts/leaving_home_cohort.py
+measurables:
+- leaving-home-timing
+notes: LFS-based; series breaks in some countries; UK ends 2019.

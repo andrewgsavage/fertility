@@ -1,0 +1,22 @@
+id: kornstad-2017-womens-wages
+type: paper
+title: Women’s Wages and Fertility Revisited Evidence from Norway
+authors:
+- Kornstad, T.
+- Rønsen, M.
+year: 2017
+doi: 10.1007/s10680-017-9435-3
+oa: bronze
+oa_url: https://link.springer.com/content/pdf/10.1007/s10680-017-9435-3.pdf
+factors:
+- income
+findings:
+- factor: income
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: Abstract empty; not read. Listed for later check.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in European Journal of Population.

@@ -1,0 +1,24 @@
+id: chvaja-2026-investigating-causal
+type: paper
+title: Investigating the causal effects of religiosity on childbearing among U.S. adolescents using a
+  three-wave longitudinal design
+authors:
+- Chvaja, R.
+- Shaver, J. H.
+- Bulbulia, J. A.
+year: 2026
+doi: 10.1038/s41598-025-34358-9
+oa: gold
+oa_url: https://www.nature.com/articles/s41598-025-34358-9.pdf
+factors:
+- secularisation
+findings:
+- factor: secularisation
+  measure: cond-asfr-1
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: Longitudinal design (2003-13); abstract truncated before results.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Scientific Reports.

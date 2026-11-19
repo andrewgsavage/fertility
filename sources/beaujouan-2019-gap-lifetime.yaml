@@ -1,0 +1,26 @@
+id: beaujouan-2019-gap-lifetime
+type: paper
+title: 'The Gap Between Lifetime Fertility Intentions and Completed Fertility in Europe and the United
+  States: A Cohort Approach'
+authors:
+- Beaujouan, E.
+- Berghammer, C.
+year: 2019
+doi: 10.1007/s11113-019-09516-3
+oa: hybrid
+oa_url: https://link.springer.com/content/pdf/10.1007/s11113-019-09516-3.pdf
+factors:
+- ideal-family-size
+measurables:
+- ppr-1-2plus
+findings:
+- factor: ideal-family-size
+  measure: ppr-1-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: '19 European countries + US cohort approach: compares intended with completed fertility; abstract
+    truncated before the size of the gap.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Population Research and Policy Review.

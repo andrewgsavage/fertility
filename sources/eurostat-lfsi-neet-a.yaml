@@ -1,0 +1,13 @@
+id: eurostat-lfsi-neet-a
+type: dataset
+title: Young people neither in employment nor in education and training (NEET) (lfsi_neet_a)
+publisher: Eurostat
+url: https://ec.europa.eu/eurostat/databrowser/view/lfsi_neet_a/default/table
+oa: gold
+local:
+- eurostat/data/
+scripts:
+- eurostat/scripts/neet_by_sex_europe.py
+measurables:
+- male-earnings
+notes: European countries; see the script for the download query.

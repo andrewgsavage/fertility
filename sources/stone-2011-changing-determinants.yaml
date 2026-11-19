@@ -1,0 +1,24 @@
+id: stone-2011-changing-determinants
+type: paper
+title: The changing determinants of UK young adults' living arrangements
+authors:
+- Stone, J.
+- Berrington, A.
+- Falkingham, J.
+year: 2011
+doi: 10.4054/demres.2011.25.20
+oa: gold
+oa_url: https://www.demographic-research.org/volumes/vol25/20/25-20.pdf
+factors:
+- leaving-home
+findings:
+- factor: leaving-home
+  measure: cond-asfr-1
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: Stone 2011 ([10.4054/demres.2011.25.20](https://doi.org/10.4054/demres.2011.25.20)) describes
+    UK living-arrangement postponement; no fertility test in the abstract.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Demographic Research.

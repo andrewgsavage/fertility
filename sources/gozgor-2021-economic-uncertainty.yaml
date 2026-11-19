@@ -1,0 +1,26 @@
+id: gozgor-2021-economic-uncertainty
+type: paper
+title: Economic Uncertainty and Fertility
+authors:
+- Gozgor, G.
+- Bilgin, M. H.
+- Rangazas, P.
+year: 2021
+doi: 10.1086/715020
+oa: green
+oa_url: https://www.cesifo.org/DocDL/cesifo1_wp9025.pdf
+factors:
+- economic-uncertainty
+measurables:
+- cond-asfr-2plus
+findings:
+- factor: economic-uncertainty
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: '126 countries 1996–2017: higher World Uncertainty Index lowers fertility rate (aggregate, not
+    parity-specific).'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Journal of Human Capital.

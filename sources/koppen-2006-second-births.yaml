@@ -1,0 +1,23 @@
+id: koppen-2006-second-births
+type: paper
+title: Second births in western Germany and France
+authors:
+- Köppen, K.
+year: 2006
+doi: 10.4054/demres.2006.14.14
+oa: gold
+oa_url: https://www.demographic-research.org/volumes/vol14/14/14-14.pdf
+factors:
+- education
+measurables:
+- ppr-1-2plus
+findings:
+- factor: education
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: 'no'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: 'West Germany and France: second birth risks higher for more educated women (consistent with blank).'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Demographic Research.

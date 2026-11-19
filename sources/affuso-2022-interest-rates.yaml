@@ -1,0 +1,25 @@
+id: affuso-2022-interest-rates
+type: paper
+title: Interest Rates, House Prices, Fertility, and the Macroeconomy
+authors:
+- Affuso, E.
+- Istiak, K.
+- Swofford, J.
+year: 2022
+doi: 10.3390/jrfm15090403
+oa: hybrid
+oa_url: https://www.mdpi.com/1911-8074/15/9/403/pdf?version=1663746917
+factors:
+- house-prices
+measurables:
+- cond-asfr-2plus
+findings:
+- factor: house-prices
+  measure: cond-asfr-2plus
+  verdict: contradicts
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: 'US aggregate 1975–2020, structural VAR: house price rises have a positive effect on fertility.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Journal of Risk and Financial Management.

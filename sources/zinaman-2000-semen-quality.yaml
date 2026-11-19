@@ -1,0 +1,25 @@
+id: zinaman-2000-semen-quality
+type: paper
+title: 'Semen Quality and Human Fertility: A Prospective Study With Healthy Couples'
+authors:
+- Zinaman, M. J.
+- Brown, C. C.
+- Selevan, S. G.
+- Clegg, E. D.
+year: 2000
+doi: 10.1002/j.1939-4640.2000.tb03284.x
+oa: bronze
+oa_url: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/j.1939-4640.2000.tb03284.x
+factors:
+- sperm-counts
+findings:
+- factor: sperm-counts
+  measure: cond-asfr-1
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: Declines reported in some places (Spanish students) and contested elsewhere (geographic variation).
+    No fertility-rate link in abstracts. Zinaman 2000 ([10.1002/j.1939-4640.2000.tb03284.x](https://doi.org/10.1002/j.1939-4640.2000.tb03284.x))
+    tests semen quality vs fertility in 210 couples; abstract truncated before result.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Journal of Andrology.

@@ -1,0 +1,25 @@
+id: esteve-2020-moving-out
+type: paper
+title: Moving out the parental home and partnership formation as social determinants of low fertility
+authors:
+- Esteve, A.
+- Boertien, D.
+- Mogi, R.
+- Lozano, M.
+year: 2020
+doi: 10.1553/populationyearbook2020.deb02
+oa: gold
+oa_url: https://austriaca.at/0xc1aa5576_0x003ba80b.pdf
+factors:
+- leaving-home
+findings:
+- factor: leaving-home
+  measure: share-in-couple
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: OpenAlex abstract is only a table of contents; no result readable. Page `leaving-home.md` may
+    hold its own evidence.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Vienna Yearbook of Population Research.

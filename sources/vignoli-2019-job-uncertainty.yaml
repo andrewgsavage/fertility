@@ -1,0 +1,26 @@
+id: vignoli-2019-job-uncertainty
+type: paper
+title: The impact of job uncertainty on first-birth postponement
+authors:
+- Vignoli, D.
+- Tocchioni, V.
+- Mattei, A.
+year: 2019
+doi: 10.1016/j.alcr.2019.100308
+oa: hybrid
+oa_url: https://www.sciencedirect.com/science/article/pii/S1040260818300923/pdf
+factors:
+- job-insecurity
+measurables:
+- cond-asfr-1
+findings:
+- factor: job-insecurity
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: 'Italy, potential-outcome design: 7% of women''s and 5% of men''s potential first-birth postponement
+    due to uncertain first jobs.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Advances in Life Course Research.

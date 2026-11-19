@@ -1,0 +1,33 @@
+id: sandner-2023-fertility-response
+type: paper
+title: The Fertility Response to Cutting Child-Related Welfare Benefits
+authors:
+- Sandner, M.
+- Wiynck, F.
+year: 2023
+doi: 10.1007/s11113-023-09757-3
+oa: hybrid
+oa_url: https://link.springer.com/content/pdf/10.1007/s11113-023-09757-3.pdf
+factors:
+- child-benefits
+measurables:
+- cond-asfr-1
+- cond-asfr-2plus
+findings:
+- factor: child-benefits
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/policy-and-the-state.md
+  note: 'Germany: reform cutting household income of welfare families by 18% in year 1 after a birth lowered
+    fertility 6.8% (social-security data, 460,000+ women). Not parity-specific in the abstract.'
+- factor: child-benefits
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/policy-and-the-state.md
+  note: Benefit cut reduced births (6.8%), see above.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Population Research and Policy Review.

@@ -1,0 +1,25 @@
+id: seltzer-2019-beyond-great
+type: paper
+title: 'Beyond the Great Recession: Labor Market Polarization and Ongoing Fertility Decline in the United
+  States'
+authors:
+- Seltzer, N.
+year: 2019
+doi: 10.1007/s13524-019-00790-6
+oa: bronze
+oa_url: https://read.dukeupress.edu/demography/article-pdf/56/4/1463/844385/1463seltzer.pdf
+factors:
+- economic-uncertainty
+measurables:
+- cond-asfr-2plus
+findings:
+- factor: economic-uncertainty
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: 'US metro areas: structural labour-market polarisation prolongs financial uncertainty and fertility
+    decline beyond the cycle.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Demography.

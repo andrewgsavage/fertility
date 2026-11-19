@@ -1,0 +1,26 @@
+id: wesselink-2017-age-fecundability
+type: paper
+title: Age and fecundability in a North American preconception cohort study
+authors:
+- Wesselink, A. K.
+- Rothman, K. J.
+- Hatch, E. E.
+- Mikkelsen, E. M.
+- Sørensen, H. T.
+- Wise, L. A.
+year: 2017
+doi: 10.1016/j.ajog.2017.09.002
+oa: bronze
+oa_url: http://www.ajog.org/article/S0002937817311079/pdf
+factors:
+- female-infertility
+findings:
+- factor: female-infertility
+  measure: ppr-0-1
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: Cohort fecundability studies; abstracts were empty, results not read.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in American Journal of Obstetrics and Gynecology.

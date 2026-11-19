@@ -1,0 +1,26 @@
+id: engdahl-2022-early-labor
+type: paper
+title: Early Labor Market Prospects and Family Formation
+authors:
+- Engdahl, M.
+- Godard, M.
+- Skans, O. N.
+year: 2022
+doi: 10.3368/jhr.1220-11387r1
+oa: hybrid
+oa_url: http://jhr.uwpress.org/content/early/2022/05/02/jhr.1220-11387R1.full.pdf
+factors:
+- job-insecurity
+measurables:
+- young-first-births
+findings:
+- factor: job-insecurity
+  measure: young-first-births
+  verdict: contradicts
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: 'Sweden: vocational-school women graduating into a deep recession married and had children earlier,
+    especially low-GPA women (quasi-random).'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Journal of Human Resources.

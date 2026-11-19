@@ -1,0 +1,14 @@
+id: eurostat-isoc-ci-im-i
+type: dataset
+title: Individuals - mobile internet access (isoc_ci_im_i)
+publisher: Eurostat
+url: https://ec.europa.eu/eurostat/databrowser/view/isoc_ci_im_i/default/table
+oa: gold
+local:
+- eurostat/data/
+scripts:
+- eurostat/scripts/smartphone_adoption_timeline.py
+- eurostat/scripts/smartphone_vs_young_fertility.py
+measurables:
+- screen-time
+notes: Indicator I_IUMP, ages 16-24.

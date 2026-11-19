@@ -1,0 +1,22 @@
+id: wilkoszewski-2009-age-trajectories
+type: paper
+title: 'Age Trajectories of Social Policy Preferences: Support for Intergenerational Transfers from a
+  Demographic Perspective'
+authors:
+- Wilkoszewski, H.
+year: 2009
+url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1451738
+factors:
+- population-ageing
+measurables:
+- ppr-1-2plus
+findings:
+- factor: population-ageing
+  measure: ppr-1-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: Older respondents less supportive of transfers to families. Only the first link (voters to policy)
+    is covered.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).

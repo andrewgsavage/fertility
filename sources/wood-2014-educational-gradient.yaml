@@ -1,0 +1,23 @@
+id: wood-2014-educational-gradient
+type: paper
+title: The educational gradient of childlessness and cohort parity progression in 14 low fertility countries
+authors:
+- Wood, J.
+- Neels, K.
+- Kil, T.
+year: 2014
+doi: 10.4054/demres.2014.31.46
+oa: gold
+oa_url: https://www.demographic-research.org/volumes/vol31/46/31-46.pdf
+factors:
+- education
+findings:
+- factor: education
+  measure: ppr-0-1
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: 14 low-fertility countries; abstract truncated before results.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Demographic Research.
