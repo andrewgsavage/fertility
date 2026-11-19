@@ -9,7 +9,8 @@ Options (all optional; values are comma-separated tags from sources/_vocab.yaml)
 
 With `:factor:` the directive renders that factor's findings (one row per finding, grouped by
 outcome column) followed by the other matching sources. Without it, it renders one row per
-source. Every registry file is a build dependency of the page, so editing a YAML rebuilds it.
+source. Every registry file is a build dependency of the page, so editing a YAML rebuilds it;
+adding or deleting one rebuilds every page that uses the directive.
 """
 
 from __future__ import annotations
@@ -211,6 +212,23 @@ document.addEventListener("DOMContentLoaded", () => {{
 """
 
 
+def _outdated_on_new_files(app, env, added, changed, removed):
+    """Rebuild pages using {sources} when a registry file is added or deleted.
+
+    note_dependency only covers files that existed at the last build, so a new YAML file
+    would otherwise leave those pages stale until they were edited. The file list is kept
+    on the environment, so it is compared against the previous build's.
+    """
+    files = sorted(p.name for p in _LIB.source_paths())
+    previous = getattr(env, "sources_registry_files", None)
+    env.sources_registry_files = files
+    if previous == files:
+        return []
+    return [d for d in env.found_docs
+            if "{sources}" in pathlib.Path(env.doc2path(d)).read_text(encoding="utf-8")]
+
+
 def setup(app: Sphinx):
     app.add_directive("sources", SourcesDirective)
+    app.connect("env-get-outdated", _outdated_on_new_files)
     return {"version": "0.1", "parallel_read_safe": True, "parallel_write_safe": True}
