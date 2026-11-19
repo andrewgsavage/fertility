@@ -10,11 +10,87 @@ oa: gold
 oa_url: https://www.demographic-research.org/volumes/vol47/12/47-12.pdf
 countries:
 - SWE
+period:
+- 1991
+- 2018
 factors:
 - partnership-formation
+- job-insecurity
+- economic-uncertainty
+- income
+- urbanisation
 measurables:
-- tfr
 - cond-asfr-1
-notes: Imported from the citation on docs/factors/partnership-formation.md; the page's summary of the
-  finding is not carried over (AI-written, unreviewed). Metadata from Crossref/OpenAlex. Published in
-  Demographic Research.
+- cond-asfr-2plus
+- employment
+- male-earnings
+findings:
+- factor: job-insecurity
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: sources/ohlsson-wijk-2022-disentangling-swedish.yaml
+  note: 'Sweden registers 1991-2018, Swedish-born men and women 16-45, age-standardised first-birth risks by
+    labour market activity in the previous year: first-birth risks fell during the 2010s in every group, with
+    the steepest relative fall among non-participants, then the unemployed and the lowest earners (Fig 4b).
+    But the share unemployed or students fell over the 2010s, so a shift into weak labour market positions
+    does not explain the aggregate fall.'
+- factor: left-behind-young-men
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: sources/ohlsson-wijk-2022-disentangling-swedish.yaml
+  note: 'Sweden registers 1991-2018: men outside the labour market or on low earnings had the lowest first-birth
+    risks and the steepest relative fall in the 2010s (Fig 4). But the pattern is "remarkably similar" for
+    women, and the share of men outside the labour market fell while the share of high earners rose. All ages
+    16-45 together; young men are not split out.'
+- factor: income
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  direction: '+'
+  basis: fulltext
+  ref: sources/ohlsson-wijk-2022-disentangling-swedish.yaml
+  note: 'Sweden registers 1991-2018: first-birth risks rise with individual earnings (inflation-adjusted
+    quintiles of the 2000 distribution), and high and medium-high earners had the smallest relative fall in
+    the 2010s (Fig 4). Over time the gradient does not carry through: the share of high earners rose and
+    first-birth risks still fell in every earnings group. Individual pre-tax earnings, not household income.'
+- factor: economic-uncertainty
+  measure: cond-asfr-1
+  verdict: contradicts
+  tick: 'yes'
+  basis: fulltext
+  ref: sources/ohlsson-wijk-2022-disentangling-swedish.yaml
+  note: 'Sweden registers 1991-2018: first-birth risks fell through the 2010s during an economic upturn, as the
+    shares unemployed or students fell and the share of high earners rose, unlike the 1990s fall, which
+    followed a recession. Contradicts objective economic conditions as the driver; the authors suggest
+    perceived uncertainty instead but do not measure it.'
+- factor: urbanisation
+  measure: cond-asfr-1
+  verdict: contradicts
+  tick: 'yes'
+  basis: fulltext
+  ref: sources/ohlsson-wijk-2022-disentangling-swedish.yaml
+  note: 'Sweden registers 1991-2018, six municipality types from large cities to rural areas: the 2010s fall in
+    first-birth risks was "quite uniform" across all of them, for men and women (Fig 2). Parities 2-4 show no
+    clear regional differences either (results not shown).'
+- factor: partnership-formation
+  measure: cond-asfr-1
+  verdict: no-evidence
+  tick: 'yes'
+  basis: fulltext
+  ref: sources/ohlsson-wijk-2022-disentangling-swedish.yaml
+  note: 'Partnering is not examined: Swedish partnership data are incomplete before 2011. The authors cite
+    ongoing Swedish work (Neyer et al. 2022) finding that most of the first-birth decline was lower fertility
+    within unions, with only a minor part from changing partner dynamics, as in Finland (Hellstrand et al.
+    2022).'
+notes: Findings read from the full text (published version), not reviewed. Event-history models of first to
+  fourth births for all Swedish-born men and women aged 16-45, 1991-2018. Only first-birth risks fell in the
+  2010s; second- to fourth-birth risks did not (Fig 1). The fall was similar for men and women, across region
+  types and parental migration backgrounds (women with non-Nordic European parents fell somewhat less), and
+  across labour market groups, so the authors conclude it was not compositional. First-generation migrants
+  excluded. Published in Demographic Research.
