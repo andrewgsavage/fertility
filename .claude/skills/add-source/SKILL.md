@@ -43,9 +43,24 @@ commands from the repo root.
    ```
 
    If it reports `fail`, tell the user: the paper is listed in `$PAPERS_DIR/_missing.md` for a manual
-   download.
+   download, and step 6 waits until it is there.
 
-6. **Check.** `pixi run sources-check` passes with 0 errors and prints no warning for your file.
+6. **Sweep the full text with a cheaper model.** Once a full text is local, hand the exhaustive
+   read-through to a subagent on a cheaper model (Agent tool, `model: "sonnet"`; `"haiku"` for a short
+   paper) instead of reading every page yourself. Give it the `.txt` path, the factor table in
+   `docs/factors/index.md` and `_vocab.yaml`, and ask it to return, without editing any file:
+   - **every country** the source reports results for, as HFD codes or ISO3, with the years and data
+     for each, and per country the result for each factor-table cell it bears on (direction, size,
+     page or table number);
+   - **every cited source** the paper leans on for a factor-table cell: author, year, title, DOI if
+     printed, and the claim it supports.
+
+   Check what it returns against the text before writing: spot-check its page and table numbers, and
+   drop anything it cannot point to. Then fill `countries`, add the per-country findings
+   (`basis: fulltext`), and list the cited sources for the user as candidates to add. Done when every
+   country and cited source the subagent found is either recorded or reported.
+
+7. **Check.** `pixi run sources-check` passes with 0 errors and prints no warning for your file.
 
 ## Tags
 
