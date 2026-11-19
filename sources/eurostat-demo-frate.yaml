@@ -1,0 +1,13 @@
+id: eurostat-demo-frate
+type: dataset
+title: Fertility rates by age (demo_frate)
+publisher: Eurostat
+url: https://ec.europa.eu/eurostat/databrowser/view/demo_frate/default/table
+oa: gold
+local:
+- eurostat/data/
+scripts:
+- eurostat/scripts/young_fertility.py
+measurables:
+- asfr
+notes: European countries; see the script for the download query.

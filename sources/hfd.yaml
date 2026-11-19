@@ -1,0 +1,25 @@
+id: hfd
+type: dataset
+title: Human Fertility Database
+publisher: Max Planck Institute for Demographic Research and Vienna Institute of Demography
+url: https://www.humanfertility.org
+oa: gold
+local:
+- HFD/data/
+scripts:
+- HFD/scripts/asfr_uk.py
+- HFD/scripts/births_per_mother_facet.py
+- ILO/scripts/coupling_vs_cond_asfr.py
+measurables:
+- asfr
+- cond-asfr-1
+- cond-asfr-2plus
+- tfr
+- tmr
+- cpm
+- mab1
+- completed-fertility
+- childlessness
+- births
+notes: Free registration. Files used include birthsRR, ccfrVH, cft, cpfrVVbo, mi, pft, tfrRRbo, mabRRbo,
+  exposRRpa. About 30 countries; UK birth-order data only from 2013.

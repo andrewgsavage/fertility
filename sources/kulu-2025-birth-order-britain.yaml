@@ -1,0 +1,22 @@
+id: kulu-2025-birth-order-britain
+type: paper
+title: 'Long-term fertility trends by birth order in Britain: Comparison between England & Wales and Scotland'
+authors:
+- Kulu, H.
+- Kuang, B.
+- Christison, S.
+- Berrington, A.
+year: 2025
+doi: 10.1080/00324728.2025.2491354
+oa: gold
+countries:
+- GBRTENW
+- GBR_SCO
+scripts:
+- ONS/scripts/first_birth_rates_by_education_uk.py
+factors:
+- education
+measurables:
+- cond-asfr-1
+- educational-attainment
+notes: Population Studies 80(1):1-23. Figure 11 reproduced.

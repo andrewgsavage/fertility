@@ -1,0 +1,22 @@
+id: resolution-foundation-2026-bye-bye-baby
+type: report
+title: Bye Bye Baby
+authors:
+- Resolution Foundation
+publisher: Resolution Foundation
+year: 2026
+url: https://www.resolutionfoundation.org/publications/bye-bye-baby/
+oa: gold
+local:
+- resolution/data/
+countries:
+- GBR
+scripts:
+- resolution/scripts/plot_mashup.py
+- resolution/scripts/plot_grads_nongrads.py
+measurables:
+- childlessness
+- completed-fertility
+- housing-tenure
+- educational-attainment
+notes: 'Figures digitised by this repo. PDF: https://www.resolutionfoundation.org/app/uploads/2026/03/Bye-bye-baby.pdf'

@@ -1,0 +1,14 @@
+id: eurostat-isoc-ci-ac-i
+type: dataset
+title: Individuals - internet activities (isoc_ci_ac_i)
+publisher: Eurostat
+url: https://ec.europa.eu/eurostat/databrowser/view/isoc_ci_ac_i/default/table
+oa: gold
+local:
+- eurostat/data/
+scripts:
+- eurostat/scripts/social_media_use_timeline.py
+- eurostat/scripts/social_media_vs_young_fertility.py
+measurables:
+- social-media-use
+notes: Indicator I_IUSNET (social networks), ages 16-24.

@@ -1,0 +1,16 @@
+id: dhs-fe-ceba-w-ch0
+type: dataset
+title: 'DHS indicator FE_CEBA_W_CH0: women with no children ever born, by age'
+publisher: The DHS Program (ICF / USAID)
+url: https://api.dhsprogram.com/rest/dhs/data?indicatorIds=FE_CEBA_W_CH0&breakdown=all&f=json&perpage=20000
+oa: gold
+local:
+- DHS/data/
+countries:
+- all
+scripts:
+- DHS/scripts/dhs_mothers.py
+- DHS/scripts/coupling_vs_mothers.py
+measurables:
+- childlessness
+notes: 'Ever-married-only surveys dropped: they overstate motherhood.'

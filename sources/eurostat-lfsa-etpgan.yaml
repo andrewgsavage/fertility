@@ -1,0 +1,14 @@
+id: eurostat-lfsa-etpgan
+type: dataset
+title: Temporary employees as % of employees, by age (lfsa_etpgan)
+publisher: Eurostat
+url: https://ec.europa.eu/eurostat/databrowser/view/lfsa_etpgan/default/table
+oa: gold
+local:
+- eurostat/data/
+scripts:
+- eurostat/scripts/temp_contracts_youth_europe.py
+- eurostat/scripts/temp_contracts_vs_first_birth_age.py
+measurables:
+- temporary-contracts
+notes: European countries; see the script for the download query.

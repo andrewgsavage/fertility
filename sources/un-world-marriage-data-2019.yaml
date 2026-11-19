@@ -1,0 +1,20 @@
+id: un-world-marriage-data-2019
+type: dataset
+title: World Marriage Data 2019
+publisher: UN DESA Population Division
+url: https://www.un.org/development/desa/pd/data/world-marriage-data
+oa: gold
+local:
+- UN/data/
+countries:
+- all
+period:
+- 1950
+- 2019
+scripts:
+- UN/scripts/coupling_un.py
+- UN/scripts/coupling_vs_cond_asfr_un.py
+measurables:
+- share-in-couple
+- marriage
+notes: Censuses, surveys and registers. Consensual unions often missing in Europe/US (legal marriage only).

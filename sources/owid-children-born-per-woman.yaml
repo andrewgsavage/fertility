@@ -1,0 +1,16 @@
+id: owid-children-born-per-woman
+type: dataset
+title: 'Fertility rate: children per woman'
+publisher: Our World in Data
+url: https://ourworldindata.org/grapher/children-born-per-woman
+oa: gold
+local:
+- OWID/data/
+countries:
+- all
+scripts:
+- OWID/scripts/tfr_derivative.py
+- OWID/scripts/tfr_threshold_year.py
+measurables:
+- tfr
+notes: Mostly UN World Population Prospects underneath.

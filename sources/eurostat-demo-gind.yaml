@@ -1,0 +1,13 @@
+id: eurostat-demo-gind
+type: dataset
+title: Population change - demographic balance and crude rates (demo_gind)
+publisher: Eurostat
+url: https://ec.europa.eu/eurostat/databrowser/view/demo_gind/default/table
+oa: gold
+local:
+- eurostat/data/
+scripts:
+- eurostat/scripts/abortion_share_europe.py
+measurables:
+- births
+notes: European countries; see the script for the download query.

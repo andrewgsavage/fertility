@@ -1,0 +1,15 @@
+id: census-cps-ad3
+type: dataset
+title: 'CPS ASEC Table AD-3: living arrangements of adults 18 and over'
+publisher: US Census Bureau
+url: https://www2.census.gov/programs-surveys/demo/tables/families/time-series/adults
+oa: gold
+local:
+- NSO/data/
+countries:
+- USA
+scripts:
+- NSO/scripts/download.py
+- NSO/scripts/coupling_nso.py
+measurables:
+- share-in-couple

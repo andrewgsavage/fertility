@@ -1,0 +1,13 @@
+id: oecd-analytical-house-prices
+type: dataset
+title: Analytical house price indicators
+publisher: OECD
+url: https://sdmx.oecd.org/public/rest/data/OECD.ECO.MPD,DSD_AN_HOUSE_PRICES@DF_HOUSE_PRICES,1.0/.A..?format=csvfilewithlabels
+oa: gold
+local:
+- housing/data/
+scripts:
+- housing/scripts/house_prices_vs_tfr.py
+measurables:
+- house-price-index
+- rent-cost

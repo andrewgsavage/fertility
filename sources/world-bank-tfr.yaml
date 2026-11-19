@@ -1,0 +1,14 @@
+id: world-bank-tfr
+type: dataset
+title: Fertility rate, total (births per woman), SP.DYN.TFRT.IN
+publisher: World Bank
+url: https://data.worldbank.org/indicator/SP.DYN.TFRT.IN
+oa: gold
+local:
+- housing/data/
+countries:
+- all
+scripts:
+- housing/scripts/house_prices_vs_tfr.py
+measurables:
+- tfr

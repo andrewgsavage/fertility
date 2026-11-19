@@ -1,0 +1,18 @@
+id: cbs-37620
+type: dataset
+title: Persons in households by position, sex and age (StatLine 37620)
+publisher: Statistics Netherlands (CBS)
+url: https://opendata.cbs.nl/ODataApi/odata/37620
+oa: gold
+local:
+- NSO/data/
+countries:
+- NLD
+period:
+- 1995
+- 2025
+scripts:
+- NSO/scripts/download.py
+- NSO/scripts/coupling_nso.py
+measurables:
+- share-in-couple

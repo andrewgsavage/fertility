@@ -1,0 +1,20 @@
+id: ons-living-arrangements
+type: dataset
+title: Population estimates by marital status and living arrangements, England and Wales
+publisher: Office for National Statistics
+url: https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesbymaritalstatusandlivingarrangements
+oa: gold
+local:
+- ONS/data/
+countries:
+- GBRTENW
+period:
+- 2002
+- 2025
+scripts:
+- ONS/scripts/coupling_by_age_ew.py
+- ONS/scripts/coupling_vs_cond_asfr_ew.py
+measurables:
+- share-in-couple
+- marriage
+notes: Labour Force Survey weighted to mid-year estimates. Couple = married/civil partnered + cohabiting.

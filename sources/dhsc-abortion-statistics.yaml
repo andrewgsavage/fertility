@@ -1,0 +1,19 @@
+id: dhsc-abortion-statistics
+type: dataset
+title: Abortion statistics, England and Wales
+publisher: Department of Health and Social Care
+url: https://www.gov.uk/government/collections/abortion-statistics-in-england-and-wales
+oa: gold
+local:
+- ONS/data/
+countries:
+- GBRTENW
+period:
+- 1968
+- 2023
+scripts:
+- ONS/scripts/abortion_share_uk.py
+- ONS/scripts/dhsc_parity_by_age.py
+measurables:
+- abortions
+notes: Table 1 (all ages), Table 2 (age by parity, from each year's own tables), Table 3b (by age).

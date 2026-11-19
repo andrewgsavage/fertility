@@ -1,0 +1,29 @@
+id: kuang-2024-educational-trends
+type: paper
+title: 'Educational trends in cohort fertility by birth order: A comparison of England and Wales, Scotland,
+  and Northern Ireland'
+authors:
+- Kuang, X.
+- Berrington, A.
+- Falkingham, J.
+year: 2024
+doi: 10.4054/demres.2024.51.36
+url: https://www.demographic-research.org/volumes/vol51/36/
+oa: gold
+countries:
+- GBRTENW
+- GBR_SCO
+- GBR_NIR
+scripts:
+- ONS/scripts/childless_at_40_by_education_uk.py
+- ONS/scripts/education_attainment_by_cohort_uk.py
+- ONS/scripts/family_size_by_education_uk.py
+- ONS/scripts/mean_age_first_birth_by_education_uk.py
+factors:
+- education
+measurables:
+- childlessness
+- completed-fertility
+- mab1
+- educational-attainment
+notes: Demographic Research 51(36):1121-1168. Figures 2-5 reproduced. Scripts cite it as 2025.

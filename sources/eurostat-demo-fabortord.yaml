@@ -1,0 +1,13 @@
+id: eurostat-demo-fabortord
+type: dataset
+title: Legally induced abortions by age and number of previous live births (demo_fabortord)
+publisher: Eurostat
+url: https://ec.europa.eu/eurostat/databrowser/view/demo_fabortord/default/table
+oa: gold
+local:
+- eurostat/data/
+scripts:
+- eurostat/scripts/abortion_parity.py
+measurables:
+- abortions
+notes: European countries; see the script for the download query.

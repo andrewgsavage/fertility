@@ -1,0 +1,17 @@
+id: eurostat-demo-find
+type: dataset
+title: Fertility indicators (demo_find)
+publisher: Eurostat
+url: https://ec.europa.eu/eurostat/databrowser/view/demo_find/default/table
+oa: gold
+local:
+- eurostat/data/
+scripts:
+- eurostat/scripts/leaving_home_vs_tfr.py
+- eurostat/scripts/temp_contracts_vs_first_birth_age.py
+- eurostat/scripts/couples_firstbirth_age_europe.py
+- eurostat/scripts/first_marriage_birth_age_europe.py
+measurables:
+- tfr
+- mab1
+notes: European countries; see the script for the download query.

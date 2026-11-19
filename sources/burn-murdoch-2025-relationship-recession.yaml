@@ -1,0 +1,18 @@
+id: burn-murdoch-2025-relationship-recession
+type: web
+title: The relationship recession is going global
+authors:
+- Burn-Murdoch, John
+publisher: Financial Times
+year: 2025
+url: https://www.ft.com/content/43e2b4f6-5ab7-4c47-b9fd-d611c36dad74
+oa: closed
+local:
+- FT/data/
+scripts:
+- FT/scripts/ft_coupling.py
+measurables:
+- share-in-couple
+- tfr
+notes: 'Series read from the article''s Flourish chart embeds: % of 25-34s in couples, 44 countries; UK/US
+  by degree; US TFR change split into fewer couples vs fewer births per couple.'
