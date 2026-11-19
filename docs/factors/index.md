@@ -74,7 +74,7 @@ The ticks mark where each factor's proposed mechanism mainly acts. They are a st
 | **Education and work** | | | | | | | |
 | [Education](education.md) | Longer schooling delays family formation; graduates have higher childlessness (coupling: delays marriage rather than preventing it) | ✓ | ✓ | ✓ | ✓ |  |  |
 | [Student debt](student-debt.md) | Repayments reduce disposable income during prime childbearing years | ✓ | ✓ | ✓ | ✓ |  |  |
-| Female employment | More women in paid work raises the cost of time out of work for children |  | ✓ | ? | ✓ | ✓ | ✓ |
+| Female employment | More women in paid work raises the cost of time out of work for children |  | ✓ | ? | ✓ | ✓ | ? |
 | Motherhood earnings penalty | Mothers' lasting loss of earnings after a birth raises the price of each child |  | ✓ | ✓ |  | ✓ | ✓ |
 | Long working hours | Little time left for children, especially a second |  |  |  |  | ✓ | ✓ |
 | [Job insecurity](job-insecurity.md) | Temporary contracts and unstable early careers delay partnership and first births (young first births: not for low-educated groups) | ✓ | ✓ | ✓ | ✓ |  |  |
@@ -98,7 +98,7 @@ The ticks mark where each factor's proposed mechanism mainly acts. They are a st
 | Planning rules | Restricting housing supply raises house prices and rents | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | **Social and cultural** | | | | | | | |
 | Contraception | Reliable contraception (the pill, then long-acting methods) prevents unintended births and lets couples delay |  | ✓ | ✓ | ✓ | ✓ | ✓ |
-| [Abortion](abortion.md) | Legal access ends unintended pregnancies, most of them among young women |  | ✓ | ✓ | ✓ |  |  |
+| [Abortion](abortion.md) | Legal access ends unintended pregnancies, most of them among young women |  | ✓ | ✓ | ? |  |  |
 | Sex education and teen pregnancy campaigns | Teaching contraception and campaigns against teenage pregnancy cut unintended births among teenagers, mostly delaying rather than preventing motherhood |  |  | ? | ? |  |  |
 | Low fertility awareness | People overestimate how late they can conceive and how well IVF works, so they postpone past the point where births are realised |  | ✓ | ✓ |  | ✓ | ✓ |
 | Secularisation | Decline in religious practice, which is associated with marriage and larger families | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |

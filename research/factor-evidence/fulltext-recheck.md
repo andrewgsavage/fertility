@@ -21,6 +21,15 @@ Verdicts changed on 35 findings: mixed → contradicts (11); mixed → supports 
 - **Childcare provision × PPR 1→2+** (tick: yes), `schuss-2022-expansion-early`: West Germany's under-3 childcare expansion (SOEP 1998-2012, county variation, Cox model): no significant effect on the second-birth transition (first births +11.9% for employed native couples). Period hazards only.
 - **Childcare provision × Second+ conditional ASFR** (tick: yes), `schuss-2022-expansion-early`: As above: no significant second-birth effect of childcare expansion in Germany.
 
+## Tick decisions
+
+Reviewed with the user. Most contradicted cells were already `?` in the factor table (changed on `main` after the earlier verdict review); only three still had a ✓.
+
+- **Female employment × Second+ cond. ASFR:** ✓ → `?`. Oshio 2019 (positive within-country link, OECD) against Behrman 2020 (negative, global); all aggregate TFR, none parity-specific.
+- **Abortion × Young first births:** ✓ → `?`. Matysiak & van der Velde 2025 (Poland's ban lowered young first births) against Levine 1996 and Ananat 2007 (US legalisation cut teen births).
+- **House prices × First-birth cond. ASFR:** stays ✓, judged on owners and buyers only. The renter-side results of Clark & Ferrer 2019 and Washbrook are now findings under **Rents × First-birth cond. ASFR** (`?`).
+- The 10 cells already at `?` (child mortality ×3, ideal family size ×3, childcare provision ×2, sex education × young first births) stay `?`.
+
 ## All re-checked findings
 
 | paper | factor | column | tick | before | after | finding |
