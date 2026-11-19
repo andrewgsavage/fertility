@@ -3,7 +3,8 @@
 Each row of an evidence table (Factor | Column | Tick | Verdict | Paper | Finding)
 becomes a `findings` item on every paper named in its Paper cell. "(above)" and
 "(lit-review)" references are resolved to the paper's first full citation in the
-evidence files, or to its row in docs/literature-review.md.
+evidence files, or to its row in docs/literature-review.md (removed; its papers are now
+registry entries, so those references resolve only from git history).
 
 Metadata comes from Crossref (authors, title) and OpenAlex (year, open-access
 status and link), cached in sources/.cache/ (gitignored). An existing source with
@@ -128,6 +129,8 @@ def evidence_rows():
 
 def lit_review_index() -> dict:
     idx = {}
+    if not LIT_REVIEW.exists():
+        return idx
     for line in LIT_REVIEW.read_text(encoding="utf-8").splitlines():
         m = re.match(r"\|\s*(.+?)\s*(?:\((\d{4})\))?,\s*\[\*?(.+?)\*?\]\((\S+?)\)", line)
         if not m:

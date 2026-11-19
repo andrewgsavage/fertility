@@ -263,6 +263,6 @@ Parametric models of the age-specific fertility curve (Hadwiger, Coale-Trussell,
 - Asili, Rezaei and Najjar (2014), ["Using Skew-Logistic Probability Density Function as a Model for Age-Specific Fertility Rate Pattern"](https://pmc.ncbi.nlm.nih.gov/articles/PMC4055447/).
 - Srivastava et al. (2021), ["Experiments in Modeling Recent Indian Fertility Pattern"](https://www.nature.com/articles/s41598-021-85959-z): modified Gompertz, Peristera-Kostaki and Gamma-Pearson models beat Hadwiger on AICc.
 
-See the [literature review](../literature-review.md).
+These and other sources are in the [source registry](../sources.md).
 ```
 

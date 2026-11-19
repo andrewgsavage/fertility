@@ -11,6 +11,5 @@ uk/index
 countries/index
 dataisugly/index
 democracy/index
-literature-review
 sources
 ```
