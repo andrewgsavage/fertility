@@ -1,0 +1,18 @@
+id: csj-2025-baby-bust-update
+type: report
+title: Baby Bust Update
+authors:
+- Centre for Social Justice
+year: 2025
+url: https://www.centreforsocialjustice.org.uk/library/baby-bust-update
+publisher: Centre for Social Justice
+countries:
+- GBR
+factors:
+- population-ageing
+measurables:
+- tfr
+notes: 'Moved from the See Also page (docs/see-also.md, removed). Follow-up: UK TFR fell to a record 1.39 in
+  2025 (-22% in a decade), warning of workforce and ageing pressures and the potential closure of ~1,150 primary
+  schools by 2030. Has a Stillbirths/Marriage section plotting variables that shouldn''t be plotted together;
+  check before reusing.'

@@ -1,0 +1,18 @@
+id: schmertmann-2014-bayesian-forecasting
+type: paper
+title: Bayesian Forecasting of Cohort Fertility
+authors:
+- Schmertmann, C.
+- Zagheni, E.
+- Goldstein, J. R.
+- Myrskylä, M.
+year: 2014
+doi: 10.1080/01621459.2014.881738
+oa: closed
+oa_url: http://statmodeling.stat.columbia.edu/wp-content/uploads/2017/06/Schimtermann_2014_Bayesian_Forecasting-fo-Cohort_Fertility.pdf
+measurables:
+- completed-fertility
+- asfr
+notes: Moved from the See Also page (docs/see-also.md, removed). Hierarchical Bayesian model that forecasts
+  still-incomplete cohorts' fertility by borrowing the age pattern of more advanced cohorts. Volume 109(506).
+  Published in Journal of the American Statistical Association.
