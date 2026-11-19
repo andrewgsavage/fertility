@@ -9,5 +9,18 @@ url: https://ifstudies.org/blog/new-report-for-fertility-marriage-still-matters
 publisher: Institute for Family Studies
 measurables:
 - marriage
+findings:
+- factor: partnership-formation
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  direction: +
+  basis: abstract
+  ref: sources/stone-2022-marriage-matters.yaml
+  note: 'US cohorts (NSFG): the odds of a birth rise on marriage and the odds of marriage rise on a birth;
+    across OECD countries later marriage goes with lower fertility, and nonmarital births do not make up the
+    difference; in Asia marital fertility is also unusually low, so nonmarital stigma alone does not explain
+    low fertility. Causation runs both ways. Read from the authors'' summary post, not the full report; not
+    parity-specific.'
 notes: 'Cited in stone-2023-not-having-baby (Cardus) for: marriage is correlated with higher fertility. Cited
   in an endnote only, not in the report''s bibliography.'

@@ -10,5 +10,17 @@ oa: closed
 measurables:
 - ideal-children
 - completed-fertility
+findings:
+- factor: ideal-family-size
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: '?'
+  basis: abstract
+  ref: sources/bumpass-1969-prediction-completed.yaml
+  note: 'US Princeton Fertility Study, women interviewed after their second birth and followed ~8 years: average
+    desired family size matched average completed family size, overall and within religion and education groups;
+    wife''s desires explain a third of the variance in completed fertility (two-fifths with husband''s desires
+    and birth spacing). Only 41% had exactly the number desired. Points toward a tick, in a high-fertility
+    1950s-60s cohort.'
 notes: 'Cited in stone-2023-not-having-baby (Cardus) for: survey-reported fertility preferences are among the
   strongest predictors of later fertility. Published in Demography.'
