@@ -1,0 +1,13 @@
+id: gla-fertility-rate-estimation
+type: web
+title: fertility_rate_estimation
+authors:
+- Greater London Authority
+url: https://github.com/Greater-London-Authority/fertility_rate_estimation
+publisher: Greater London Authority
+countries:
+- GBR
+measurables:
+- asfr
+notes: 'Moved from the See Also page (docs/see-also.md, removed). GitHub repo: open-source code and methodology
+  the GLA uses to calculate age-specific fertility rates from public birth and population data. Year unknown.'

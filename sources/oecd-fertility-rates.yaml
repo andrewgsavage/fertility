@@ -1,0 +1,11 @@
+id: oecd-fertility-rates
+type: dataset
+title: Fertility rates
+url: https://data.oecd.org/pop/fertility-rates.htm
+publisher: OECD
+countries:
+- all
+measurables:
+- tfr
+notes: 'Cited in stone-2023-not-having-baby (Cardus) for: the TFR definition and Canada''s falling fertility
+  rate. The data.oecd.org URL may no longer resolve.'

@@ -1,0 +1,18 @@
+id: sheppard-2024-uk-late
+type: web
+title: 'Expert comment: Why are people in the UK leaving it so late to have children?'
+authors:
+- Sheppard, P.
+year: 2024
+url: https://www.ox.ac.uk/news/2024-12-10-expert-comment-why-are-people-uk-leaving-it-so-late-have-children
+publisher: University of Oxford
+countries:
+- GBR
+factors:
+- age-at-first-birth
+measurables:
+- ideal-children
+- tfr
+notes: Moved from the See Also page (docs/see-also.md, removed). Oxford evolutionary anthropologist on why
+  UK fertility (1.6 in 2020) sits ~0.3 children below stated desired family size, driven largely by delayed
+  childbearing.

@@ -1,0 +1,23 @@
+id: ellison-2023-bayesian-parity
+type: paper
+title: Combining individual- and population-level data to develop a Bayesian parity-specific fertility projection
+  model
+authors:
+- Ellison, J.
+- Berrington, A.
+- Dodd, E.
+- Forster, J. J.
+year: 2023
+doi: 10.1093/jrsssc/qlad095
+oa: hybrid
+oa_url: https://academic.oup.com/jrsssc/advance-article-pdf/doi/10.1093/jrsssc/qlad095/52824392/qlad095.pdf
+countries:
+- GBRTENW
+measurables:
+- cond-asfr-1
+- cond-asfr-2plus
+- educational-attainment
+notes: 'Moved from the See Also page (docs/see-also.md, removed). Combines individual-level survey data (Understanding
+  Society) with population-level aggregates to project parity-specific fertility for England & Wales, including
+  breakdowns by education. Online 2023; issue 73(2), 2024. Accepted manuscript: https://eprints.soton.ac.uk/503488/1/Parity-specific_fertility_projections_accepted_manuscript.pdf
+  Published in Journal of the Royal Statistical Society Series C: Applied Statistics.'

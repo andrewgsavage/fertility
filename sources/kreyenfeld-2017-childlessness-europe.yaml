@@ -1,0 +1,25 @@
+id: kreyenfeld-2017-childlessness-europe
+type: book
+title: 'Childlessness in Europe: Contexts, Causes, and Consequences'
+authors:
+- Kreyenfeld, M.
+- Konietzka, D.
+year: 2017
+doi: 10.1007/978-3-319-44667-7
+oa: hybrid
+oa_url: https://doi.org/10.1007/978-3-319-44667-7
+countries:
+- DEUTNP
+- FRATNP
+- GBR
+- FIN
+- SWE
+- AUT
+- CHE
+- USA
+measurables:
+- childlessness
+notes: 'Moved from the See Also page (docs/see-also.md, removed). Edited volume (Kreyenfeld and Konietzka,
+  eds.; Crossref lists chapter authors). Surveys childlessness across Germany, France, the UK, Finland, Sweden,
+  Austria, Switzerland and the US: determinants, social-strata differences, and whether governments can or
+  should counteract it. Published in Demographic Research Monographs.'

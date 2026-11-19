@@ -1,0 +1,19 @@
+id: csj-2023-baby-bust
+type: report
+title: Baby Bust
+authors:
+- Centre for Social Justice
+year: 2023
+url: https://www.centreforsocialjustice.org.uk/newsroom/baby-bust
+publisher: Centre for Social Justice
+countries:
+- GBR
+factors:
+- house-prices
+measurables:
+- childlessness
+- ideal-children
+- marriage
+notes: Moved from the See Also page (docs/see-also.md, removed). Estimates ~600,000 UK women may miss out on
+  motherhood versus previous generations, despite nine in ten young women wanting children; attributes the
+  gap to housing costs, delayed marriage, and career and economic uncertainty.

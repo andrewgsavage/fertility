@@ -1,0 +1,15 @@
+id: gla-fertility-rate-estimates
+type: web
+title: Fertility rate estimates
+authors:
+- Greater London Authority
+url: https://data.london.gov.uk/blog/fertility-rate-estimates
+publisher: Greater London Authority
+countries:
+- GBR
+measurables:
+- asfr
+- tfr
+notes: Moved from the See Also page (docs/see-also.md, removed). Companion blog to gla-fertility-rate-estimation,
+  publishing the resulting estimates and noting sharper declines in Inner London than the rest of England &
+  Wales. Year unknown.
