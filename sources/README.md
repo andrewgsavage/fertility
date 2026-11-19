@@ -77,6 +77,19 @@ redistributed. A folder inside the repo wouldn't work either, because gitignored
 new worktrees. Agents read the `.txt`. The check reports how many papers have a local full text, and how
 many findings rest on abstracts only.
 
+`pixi run sources-fetch` downloads the open-access PDFs and writes their `.txt` extracts. It tries
+each open-access location OpenAlex lists (direct PDF links, then the landing page's
+`citation_pdf_url`), keeps a download only if it is a real PDF, and logs the result, the URL used and
+the version (published, accepted or submitted manuscript) to `$PAPERS_DIR/_fetch_log.json`. Some
+hosts answer automated requests with a bot check; those papers are logged as `failed` and are not
+retried unless you pass `--retry-failed`. For PMC-hosted papers it falls back to the Europe PMC
+full-text API and saves `<id>.xml` instead of a PDF. Each run rewrites `$PAPERS_DIR/_missing.md`, a
+checklist of papers still without text. To add a paper by hand (paywalled, or blocked), save it as
+`$PAPERS_DIR/<id>.pdf` and rerun: the script writes the missing `.txt`.
+
+A `.txt` from an accepted or submitted manuscript can differ from the published paper; check
+`_fetch_log.json` before quoting page numbers or exact figures.
+
 ## Plan
 
 1. Tag list (`_vocab.yaml`). Done.
@@ -85,8 +98,9 @@ many findings rest on abstracts only.
 3. Import the papers in `research/factor-evidence/*.md`, each verdict row becoming a `findings`
    item. Done: 129 papers. Two DOIs mentioned only in the files' search notes, not in a table, are
    left out.
-4. Download the open-access PDFs (`oa_url`, filled from OpenAlex in phase 3) into `$PAPERS_DIR` and
-   extract text. Add paywalled ones by hand.
+4. Download the open-access PDFs into `$PAPERS_DIR` and extract text. Done: 72 of 131 papers
+   (Europe PMC XML for PMC-hosted ones). The rest are paywalled or behind hosts' bot checks;
+   `$PAPERS_DIR/_missing.md` lists them with links, for adding by hand.
 5. Re-check "abstract truncated" and "mixed" findings against full texts.
 6. Sphinx: a generated Sources page filterable by tag, and a directive that lists matching sources on
    a factor page.

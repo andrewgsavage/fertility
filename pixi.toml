@@ -13,6 +13,7 @@ docs-build = "sphinx-build -b html docs docs/_build/html"
 # copies, __pycache__, editor temp files) so they don't trigger a rebuild + page reload.
 docs-serve = "sphinx-autobuild docs docs/_build/html --re-ignore '/docs/_static/[^/]+/' --re-ignore '__pycache__' --re-ignore '(~|\\.swp|\\.tmp)$'"
 sources-check = "python sources/sources.py"
+sources-fetch = "python sources/fetch_fulltexts.py"
 
 [dependencies]
 pandas = ">=2.3.1,<3"
@@ -36,6 +37,7 @@ python-kaleido = ">=1.3.0,<2"
 sphinx-autobuild = "*"
 xlrd = ">=2.0.2,<3"
 pyyaml = ">=6.0.3,<7"
+pypdf = ">=7.1.1,<8"
 
 # Repo root on the import path, so scripts in any folder can `from common import ...`
 # whatever the working directory. Activation runs in cmd on win-64 and bash on linux-64.
