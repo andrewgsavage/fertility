@@ -1,0 +1,32 @@
+id: ragan-2025-power-pill
+type: paper
+title: 'The Power of the Pill: Evidence from Oral Contraceptive Sales'
+authors:
+- Ragan, K. S.
+year: 2025
+doi: 10.1093/ej/ueaf017
+oa: hybrid
+oa_url: https://academic.oup.com/ej/advance-article-pdf/doi/10.1093/ej/ueaf017/62017272/ueaf017.pdf
+factors:
+- contraception
+measurables:
+- cond-asfr-1
+- young-first-births
+findings:
+- factor: contraception
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: 'Sweden: pill sales respond to teens'' pharmacy access, and teen fertility responds strongly to
+    pill sales.'
+- factor: contraception
+  measure: young-first-births
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: Teen fertility falls with pill access (Sweden). Abstract not parity-specific.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in The Economic Journal.

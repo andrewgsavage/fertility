@@ -1,0 +1,26 @@
+id: matysiak-2020-great-recession
+type: paper
+title: 'The Great Recession and Fertility in Europe: A Sub-National Analysis'
+authors:
+- Matysiak, A.
+- Sobotka, T.
+- Vignoli, D.
+year: 2020
+doi: 10.1553/0x003ccd44
+oa: hybrid
+oa_url: https://link.springer.com/content/pdf/10.1007/s10680-020-09556-y.pdf
+factors:
+- economic-uncertainty
+measurables:
+- cond-asfr-1
+findings:
+- factor: economic-uncertainty
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: '251 EU regions 2002–14: fertility decline strongly related to unemployment rise, significant
+    at different reproductive ages.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Institut für Demographie - VID.

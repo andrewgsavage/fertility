@@ -1,0 +1,24 @@
+id: pelikh-2022-make-break
+type: paper
+title: Make up or break up? Partnership transitions among young adults in England and Wales
+authors:
+- Pelikh, A.
+- Mikolai, J.
+- Kulu, H.
+year: 2022
+doi: 10.1016/j.alcr.2022.100475
+oa: hybrid
+oa_url: https://www.sciencedirect.com/science/article/pii/S1040260822000156/pdf
+factors:
+- house-prices
+findings:
+- factor: house-prices
+  measure: share-in-couple
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: Found housing→fertility studies, not housing→partnership. Pelikh, Mikolai & Kulu 2022 ([10.1016/j.alcr.2022.100475](https://doi.org/10.1016/j.alcr.2022.100475))
+    cover partnership transitions in England & Wales cohorts 1974–90 but the abstract does not test housing.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Advances in Life Course Research.

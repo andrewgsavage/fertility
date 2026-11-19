@@ -1,0 +1,22 @@
+id: nagase-2017-gender-division
+type: paper
+title: 'The gender division of labor and second births: Labor market institutions and fertility in Japan'
+authors:
+- Nagase, N.
+- Brinton, M. C.
+year: 2017
+doi: 10.4054/demres.2017.36.11
+oa: gold
+oa_url: https://www.demographic-research.org/volumes/vol36/11/36-11.pdf
+factors:
+- working-hours
+findings:
+- factor: working-hours
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: Japan, workplace norms and second births; abstract truncated before results.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Demographic Research.

@@ -1,0 +1,24 @@
+id: abendroth-2014-parity-penalty
+type: paper
+title: The Parity Penalty in Life Course Perspective
+authors:
+- Abendroth, A. K.
+- Huffman, M. L.
+- Treas, J.
+year: 2014
+doi: 10.1177/0003122414545986
+oa: green
+oa_url: https://escholarship.org/content/qt7c07t51x/qt7c07t51x.pdf
+factors:
+- motherhood-penalty
+findings:
+- factor: motherhood-penalty
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: '13 European countries: occupational status penalty by parity; abstract truncated; no fertility
+    response.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in American Sociological Review.

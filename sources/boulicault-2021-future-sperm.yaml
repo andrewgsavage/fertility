@@ -1,0 +1,28 @@
+id: boulicault-2021-future-sperm
+type: paper
+title: 'The future of sperm: a biovariability framework for understanding global sperm count trends'
+authors:
+- Boulicault, M.
+- Perret, M.
+- Galka, J.
+- Borsa, A.
+- Gompers, A.
+- Reiches, M.
+- Richardson, S.
+year: 2021
+doi: 10.1080/14647273.2021.1917778
+oa: hybrid
+oa_url: https://www.tandfonline.com/doi/pdf/10.1080/14647273.2021.1917778?needAccess=true
+factors:
+- sperm-counts
+findings:
+- factor: sperm-counts
+  measure: ppr-0-1
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: Discusses Levine et al. 2017 meta-regression (reported 59.3% fall in sperm concentration among
+    Western men since 1973) and critiques assumptions behind it; no link to births.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Human Fertility.

@@ -1,0 +1,34 @@
+id: kristensen-2022-unemployment-fertility
+type: paper
+title: 'Unemployment and fertility: The relationship between individual and aggregated unemployment and
+  fertility during 1994–2014 in Norway'
+authors:
+- Kristensen, A. P.
+- Lappegård, T.
+year: 2022
+doi: 10.4054/demres.2022.46.35
+oa: gold
+oa_url: https://www.demographic-research.org/volumes/vol46/35/46-35.pdf
+factors:
+- left-behind-young-men
+measurables:
+- cond-asfr-1
+- cond-asfr-2plus
+findings:
+- factor: left-behind-young-men
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: 'Norway register 1994-2014: individual unemployment negatively associated with births for childless
+    men and women.'
+- factor: left-behind-young-men
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: 'no'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: Fathers' unemployment link to births faded over time; consistent with blank.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Demographic Research.

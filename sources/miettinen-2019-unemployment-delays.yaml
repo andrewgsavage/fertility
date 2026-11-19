@@ -1,0 +1,34 @@
+id: miettinen-2019-unemployment-delays
+type: paper
+title: Unemployment delays first birth but not for all. Life stage and educational differences in the
+  effects of employment uncertainty on first births
+authors:
+- Miettinen, A.
+- Jalovaara, M.
+year: 2019
+doi: 10.1016/j.alcr.2019.100320
+oa: hybrid
+oa_url: https://www.sciencedirect.com/science/article/pii/S1040260818301783/pdf
+factors:
+- job-insecurity
+- left-behind-young-men
+measurables:
+- young-first-births
+findings:
+- factor: job-insecurity
+  measure: young-first-births
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: 'Finland register 1988-2009: unemployment delays first births, but not for young low-educated
+    women or men.'
+- factor: left-behind-young-men
+  measure: young-first-births
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: The negative unemployment association does not apply to young, low-educated men.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Advances in Life Course Research.

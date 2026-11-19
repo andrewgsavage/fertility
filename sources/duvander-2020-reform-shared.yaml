@@ -1,0 +1,26 @@
+id: duvander-2020-reform-shared
+type: paper
+title: Impact of a Reform Towards Shared Parental Leave on Continued Fertility in Norway and Sweden
+authors:
+- Duvander, A. Z.
+- Lappegard, T.
+- Johansson, M.
+year: 2020
+doi: 10.1007/s11113-020-09574-y
+oa: hybrid
+oa_url: https://link.springer.com/content/pdf/10.1007/s11113-020-09574-y.pdf
+factors:
+- parental-leave
+measurables:
+- cond-asfr-2plus
+findings:
+- factor: parental-leave
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/policy-and-the-state.md
+  note: 'Father''s quota: no fertility effect in Norway; a temporary higher third-birth risk for lower-income
+    Swedish couples.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Population Research and Policy Review.

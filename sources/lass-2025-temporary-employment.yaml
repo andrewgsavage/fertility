@@ -1,0 +1,28 @@
+id: lass-2025-temporary-employment
+type: paper
+title: 'Temporary Employment and First Births: A Path Analysis of the Underlying Mechanisms Using Australian
+  and German Panel Data'
+authors:
+- Laß, I.
+- Mooi-Reci, I.
+- Bujard, M.
+- Wooden, M.
+year: 2025
+doi: 10.1215/00703370-12234731
+oa: gold
+oa_url: https://doi.org/10.1215/00703370-12234731
+factors:
+- job-insecurity
+measurables:
+- cond-asfr-1
+findings:
+- factor: job-insecurity
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: 'Panels (HILDA, SOEP, 19 years): casual work (Australia, both sexes) and fixed-term contracts
+    (Germany, women) lower first-birth likelihood; lower wages mediate much of it.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Demography.

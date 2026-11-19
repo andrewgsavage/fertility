@@ -1,0 +1,26 @@
+id: donohue-2009-legalized-abortion
+type: paper
+title: The Impact of Legalized Abortion on Teen Childbearing
+authors:
+- Donohue, J. J.
+- Grogger, J.
+- Levitt, S. D.
+year: 2009
+doi: 10.1093/aler/ahp006
+oa: green
+oa_url: https://openyls.law.yale.edu/bitstream/20.500.13051/2911/2/impact_of_legalized_abortion_on_teen_childbearing_Donohue.pdf
+factors:
+- abortion
+measurables:
+- young-first-births
+findings:
+- factor: abortion
+  measure: young-first-births
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: 'US: exposure to legalised abortion in utero for the cohort that became teenagers in the 1990s
+    is one factor in the decline in out-of-wedlock teen childbearing.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in American Law and Economics Review.

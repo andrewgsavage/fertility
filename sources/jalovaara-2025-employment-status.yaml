@@ -1,0 +1,27 @@
+id: jalovaara-2025-employment-status
+type: paper
+title: 'Employment status and entry into parenthood: Weaker labor market status an unlikely driver of
+  cohort fertility decline in a Nordic welfare state'
+authors:
+- Jalovaara, M.
+- Rahnu, L.
+- Miettinen, A.
+year: 2025
+doi: 10.1177/00016993251403380
+oa: closed
+factors:
+- left-behind-young-men
+measurables:
+- cond-asfr-1
+findings:
+- factor: left-behind-young-men
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: 'Finland: stable employment promotes entry into parenthood for both sexes, stronger for men; long-term
+    unemployment link intensified in recent cohorts. Title argues weaker labour status is unlikely to
+    drive the cohort decline.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Acta Sociologica.

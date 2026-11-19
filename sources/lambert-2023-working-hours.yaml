@@ -1,0 +1,35 @@
+id: lambert-2023-working-hours
+type: paper
+title: 'Working Hours and Fertility: The Impact of Nonstandard Work Schedules on Childbearing in France'
+authors:
+- Lambert, A.
+- Segú, M.
+- Tiwari, C.
+year: 2023
+doi: 10.1177/0192513x221150975
+oa: closed
+factors:
+- working-hours
+measurables:
+- cond-asfr-1
+- ppr-1-2plus
+findings:
+- factor: working-hours
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'no'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: 'France panel 2013-19, fixed effects: nonstandard schedules (esp. night) lower propensity of a
+    new child, mainly the first. Nonstandard schedules, not long hours; hints blank should arguably be
+    ticked.'
+- factor: working-hours
+  measure: ppr-1-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: Effect is mainly on first child compared with second (not absent on second); period data on nonstandard
+    schedules, not long hours.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Journal of Family Issues.

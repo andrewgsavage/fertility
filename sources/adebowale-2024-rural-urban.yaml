@@ -1,0 +1,35 @@
+id: adebowale-2024-rural-urban
+type: paper
+title: 'Rural-Urban Fertility Disparity in The Gambia: Standardized Rate, Decomposition, Parity Progression,
+  and Determinants'
+authors:
+- Adebowale, A. S.
+- Department of Epidemiology and Medical Statistics, Faculty of Public Health, College of Medicine, University
+  of Ibadan, Nigeria
+- Afolabi, A.
+- Haita, N.
+- Palamuleni, M. E.
+- Strategic Research and Knowledge Management Unit, Technical Services Directorate, MSI Nigeria, Abuja
+  Support Office, Nigeria
+- Department of Epidemiology and Medical Statistics, Faculty of Public Health, College of Medicine, University
+  of Ibadan, Nigeria
+- Population and Health Research Entity, North-West University, Mafikeng, South Africa
+year: 2024
+doi: 10.25133/jpssv332025.011
+oa: gold
+oa_url: https://so03.tci-thaijo.org/index.php/jpss/article/download/270147/184305/1164060
+factors:
+- urbanisation
+measurables:
+- cond-asfr-2plus
+findings:
+- factor: urbanisation
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: 'DHS 2019-20: mean children ever born higher rural than urban (3.25 rural). Parity-progression
+    result not read.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Journal of Population and Social Studies.

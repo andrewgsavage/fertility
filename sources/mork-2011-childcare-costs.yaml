@@ -1,0 +1,23 @@
+id: mork-2011-childcare-costs
+type: paper
+title: Childcare costs and the demand for children—evidence from a nationwide reform
+authors:
+- Mörk, E.
+- Sjögren, A.
+- Svaleryd, H.
+year: 2011
+doi: 10.1007/s00148-011-0399-z
+oa: green
+oa_url: https://doi.org/10.2139/ssrn.1752111
+factors:
+- childcare-costs
+findings:
+- factor: childcare-costs
+  measure: cond-asfr-1
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: Sweden fee reform (natural experiment). Abstract was empty; result not read. Worth checking.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Journal of Population Economics.

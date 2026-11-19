@@ -1,0 +1,33 @@
+id: lalive-2009-parental-leave
+type: paper
+title: How does Parental Leave Affect Fertility and Return to Work? Evidence from Two Natural Experiments*
+authors:
+- Lalive, R.
+- Zweimüller, J.
+year: 2009
+doi: 10.1162/qjec.2009.124.3.1363
+oa: bronze
+oa_url: https://academic.oup.com/qje/article-pdf/124/3/1363/5377856/124-3-1363.pdf
+factors:
+- parental-leave
+measurables:
+- cond-asfr-2plus
+- ppr-1-2plus
+findings:
+- factor: parental-leave
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/policy-and-the-state.md
+  note: 'Austria, 1990 reform extending paid job-protected leave from 1 to 2 years (natural experiment):
+    mothers whose first birth fell just after the reform had more second children.'
+- factor: parental-leave
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/policy-and-the-state.md
+  note: 'As above: higher second-birth rates after leave extension.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Quarterly Journal of Economics.

@@ -1,0 +1,24 @@
+id: mahler-2025-policy-concerns
+type: paper
+title: 'Policy Concerns in an Era of Low Fertility: The Role of Social Comparisons and Intensive Parenting'
+authors:
+- Mahler, L.
+- Tertilt, M.
+- Yum, M.
+year: 2025
+doi: 10.1353/eca.2025.a994511
+oa: closed
+factors:
+- intensive-parenting
+measurables:
+- cond-asfr-2plus
+findings:
+- factor: intensive-parenting
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: 'Theory: strong comparison motives raise parental investment and lower fertility.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Brookings Papers on Economic Activity.

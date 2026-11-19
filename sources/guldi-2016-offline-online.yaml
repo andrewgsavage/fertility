@@ -1,0 +1,22 @@
+id: guldi-2016-offline-online
+type: paper
+title: 'Offline effects of online connecting: the impact of broadband diffusion on teen fertility decisions'
+authors:
+- Guldi, M.
+- Herbst, C. M.
+year: 2016
+doi: 10.1007/s00148-016-0605-0
+oa: green
+oa_url: https://stars.library.ucf.edu/scopus2015/6142
+factors:
+- smartphones
+findings:
+- factor: smartphones
+  measure: young-first-births
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: Abstract empty; title only. Broadband, not smartphones.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Journal of Population Economics.

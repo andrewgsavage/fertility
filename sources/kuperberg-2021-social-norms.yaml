@@ -1,0 +1,23 @@
+id: kuperberg-2021-social-norms
+type: paper
+title: Social Norms and Expectations about Student Loans and Family Formation
+authors:
+- Kuperberg, A.
+- Mazelis, J. M.
+year: 2021
+doi: 10.1111/soin.12416
+oa: green
+oa_url: https://doi.org/10.13016/m2zcmu-8ykd
+factors:
+- student-debt
+findings:
+- factor: student-debt
+  measure: share-in-couple
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: US; abstract truncated before results. Kuperberg 2021 ([10.1111/soin.12416](https://doi.org/10.1111/soin.12416))
+    find only stated norms (a significant minority say marriage should be delayed).
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Sociological Inquiry.

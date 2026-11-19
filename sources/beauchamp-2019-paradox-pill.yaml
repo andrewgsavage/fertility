@@ -1,0 +1,42 @@
+id: beauchamp-2019-paradox-pill
+type: paper
+title: 'THE PARADOX OF THE PILL: HETEROGENEOUS EFFECTS OF ORAL CONTRACEPTIVE ACCESS'
+authors:
+- Beauchamp, A.
+- Pakaluk, C. R.
+year: 2019
+doi: 10.1111/ecin.12757
+oa: hybrid
+oa_url: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/ecin.12757
+factors:
+- contraception
+measurables:
+- cond-asfr-1
+- cond-asfr-2plus
+- ppr-1-2plus
+findings:
+- factor: contraception
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: 'US state laws on pill access (1960s-70s): marital pill access raised the nonmarital birth rate
+    by 15-18%, concentrated among women from low-education and minority backgrounds. Not first-birth specific.'
+- factor: contraception
+  measure: ppr-1-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: Abstract states the pill also increased spacing between first and second births; remainder truncated,
+    so effect on completed second births not read.
+- factor: contraception
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: 'As above: spacing effect on higher-order births; direction on the rate not read.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Economic Inquiry.

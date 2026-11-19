@@ -1,0 +1,52 @@
+id: skirbekk-2004-birth-month
+type: paper
+title: Birth month, school graduation, and the timing of births and marriages
+authors:
+- Skirbekk, V.
+- Kohler, H. P.
+- Prskawetz, A.
+year: 2004
+doi: 10.1353/dem.2004.0028
+oa: closed
+factors:
+- age-at-first-birth
+- education
+measurables:
+- cond-asfr-2plus
+- ppr-1-2plus
+- share-in-couple
+- young-first-births
+findings:
+- factor: age-at-first-birth
+  measure: ppr-1-2plus
+  verdict: contradicts
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: 'Sweden, natural experiment on birth-month school cut-off: an 11-month later graduation delays
+    first birth by 4.9 months and persists into second births, but completed fertility is unaffected.
+    Delay affects timing, not quantum.'
+- factor: age-at-first-birth
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: Delay persists for second-birth timing.
+- factor: education
+  measure: share-in-couple
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: 'Sweden: later graduation delays first marriage but not the probability of marrying before 45.
+    Timing, not quantum.'
+- factor: education
+  measure: young-first-births
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: Exogenous 11-month later school leaving postpones first birth by 4.9 months.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Demography.

@@ -1,0 +1,23 @@
+id: mariani-2021-immigrant-supply
+type: paper
+title: Immigrant Supply of Marketable Child Care and Native Fertility in Italy
+authors:
+- Mariani, R. D.
+- Rosati, F. C.
+year: 2021
+doi: 10.2139/ssrn.4114276
+oa: green
+oa_url: https://doi.org/10.2139/ssrn.4114276
+factors:
+- childcare-provision
+findings:
+- factor: childcare-provision
+  measure: cond-asfr-2plus
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/policy-and-the-state.md
+  note: 'Italy: positive short-term effects on parity progression, limited. Another Italian study, Mariani
+    & Rosati 2021 ([10.2139/ssrn.4114276](https://doi.org/10.2139/ssrn.4114276)), finds immigrant child-care
+    supply raised native births 2–4% (all births).'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in SSRN Electronic Journal.

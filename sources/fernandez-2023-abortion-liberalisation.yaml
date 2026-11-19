@@ -1,0 +1,25 @@
+id: fernandez-2023-abortion-liberalisation
+type: paper
+title: Does Abortion Liberalisation Accelerate Fertility Decline? A Worldwide Time-Series Analysis
+authors:
+- Fernández, J. J.
+- Juif, D.
+year: 2023
+doi: 10.1007/s10680-023-09687-y
+oa: hybrid
+oa_url: https://link.springer.com/content/pdf/10.1007/s10680-023-09687-y.pdf
+factors:
+- abortion
+measurables:
+- cond-asfr-2plus
+findings:
+- factor: abortion
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: 'no'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: Worldwide time series; abstract only sets out two opposing predictions (truncated); result not
+    read.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in European Journal of Population.

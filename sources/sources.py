@@ -27,7 +27,10 @@ TYPES = {"paper", "report", "book", "dataset", "web", "survey"}
 CITED_TYPES = {"paper", "report", "book"}  # need authors and a year
 OA = {"gold", "green", "hybrid", "bronze", "closed"}
 DIRECTIONS = {"+", "-", "0", "mixed"}
-VERDICTS = {"supports", "mixed", "contradicts"}
+VERDICTS = {"supports", "mixed", "contradicts", "no-evidence"}
+TICKS = {"yes", "no", "?"}
+BASES = {"abstract", "fulltext"}
+FINDING_FIELDS = {"factor", "measure", "direction", "verdict", "tick", "basis", "ref", "note"}
 FIELDS = {
     "id", "type", "title", "authors", "publisher", "year", "doi", "url", "oa", "oa_url",
     "local", "scripts", "countries", "period", "factors", "measurables", "findings",
@@ -96,8 +99,10 @@ def check_source(path: pathlib.Path, src: dict, vocab: dict) -> tuple[list[str],
     if stype in CITED_TYPES:
         if not src.get("authors"):
             errors.append(f"authors required for type {stype}")
-        if not isinstance(src.get("year"), int):
-            errors.append(f"year (int) required for type {stype}")
+        if src.get("year") is None:
+            warnings.append("year unknown")
+        elif not isinstance(src["year"], int):
+            errors.append("year must be an integer")
     if stype == "dataset" and not src.get("publisher"):
         errors.append("publisher required for type dataset")
 
@@ -130,6 +135,8 @@ def check_source(path: pathlib.Path, src: dict, vocab: dict) -> tuple[list[str],
         if not isinstance(fd, dict):
             errors.append(f"{where} must be a mapping")
             continue
+        if set(fd) - FINDING_FIELDS:
+            errors.append(f"{where}: unknown fields {sorted(set(fd) - FINDING_FIELDS)}")
         if fd.get("factor") not in factors:
             errors.append(f"{where}: unknown factor {fd.get('factor')!r}")
         if fd.get("measure") is not None and fd["measure"] not in measurables:
@@ -138,6 +145,12 @@ def check_source(path: pathlib.Path, src: dict, vocab: dict) -> tuple[list[str],
             errors.append(f"{where}: direction must be one of {sorted(DIRECTIONS)}")
         if fd.get("verdict") is not None and fd["verdict"] not in VERDICTS:
             errors.append(f"{where}: verdict must be one of {sorted(VERDICTS)}")
+        if fd.get("tick") is not None and fd["tick"] not in TICKS:
+            errors.append(f"{where}: tick must be one of {sorted(TICKS)}")
+        if fd.get("basis") is not None and fd["basis"] not in BASES:
+            errors.append(f"{where}: basis must be one of {sorted(BASES)}")
+        if fd.get("ref") and not (REPO / fd["ref"]).is_file():
+            errors.append(f"{where}: ref {fd['ref']!r} not found")
 
     for s in _as_list(src.get("scripts")):
         if not (REPO / s).is_file():

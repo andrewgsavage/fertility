@@ -1,0 +1,36 @@
+id: schubert-2026-secularization-low
+type: paper
+title: 'Secularization and low fertility: How declining church membership changes couples’ childbearing'
+authors:
+- Schubert, H. A.
+- Skirbekk, V.
+- Nisén, J.
+year: 2026
+doi: 10.1016/j.ssresearch.2026.103371
+oa: hybrid
+oa_url: https://doi.org/10.1016/j.ssresearch.2026.103371
+factors:
+- secularisation
+measurables:
+- cond-asfr-1
+- cond-asfr-2plus
+findings:
+- factor: secularisation
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: 'Finnish registers 1995-2019: secularisation can exert a self-reinforcing negative effect on fertility
+    via church membership and childbearing of religiously mixed vs homogeneous couples. Parity detail
+    not read.'
+- factor: secularisation
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: Couple-level negative effect on childbearing; whether it is concentrated at higher orders not
+    read.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Social Science Research.

@@ -76,6 +76,7 @@ measurables:
   cpm:                {label: Children per mother (CPM), kind: outcome, page: theory/mdf.md}
   completed-fertility: {label: Completed cohort fertility, kind: outcome}
   childlessness:      {label: Childlessness, kind: outcome}
+  young-first-births: {label: First births at young ages (teens and twenties), kind: outcome}
   mab1:               {label: Mean age at first birth, kind: outcome}
   births:             {label: Birth counts, kind: outcome}
   art-births:         {label: Births after assisted reproduction (IVF/ART), kind: outcome, page: hfd/ivf-births.md}

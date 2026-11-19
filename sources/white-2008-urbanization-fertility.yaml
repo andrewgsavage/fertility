@@ -1,0 +1,29 @@
+id: white-2008-urbanization-fertility
+type: paper
+title: 'Urbanization and fertility: An event-history analysis of Coastal Ghana'
+authors:
+- White, M. J.
+- Muhidin, S.
+- Andrzejewski, C.
+- Tagoe, E.
+- Knight, R.
+- Reed, H.
+year: 2008
+doi: 10.1353/dem.0.0035
+oa: green
+oa_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2834382/
+factors:
+- urbanisation
+measurables:
+- cond-asfr-2plus
+findings:
+- factor: urbanisation
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: Notes urbanisation is generally associated with lower fertility in developing countries; its own
+    result is truncated.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Demography.

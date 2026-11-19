@@ -1,0 +1,22 @@
+id: lutz-2008-low-fertility
+type: paper
+title: The Low Fertility Trap Hypothesis. Forces that May Lead to Further Postponement and Fewer Births
+  in Europe
+authors:
+- Lutz, W.
+year: 2008
+doi: 10.1553/populationyearbook2006s167
+oa: bronze
+oa_url: https://www.austriaca.at/0xc1aa5576_0x00144e25.pdf
+factors:
+- low-fertility-trap
+findings:
+- factor: low-fertility-trap
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: Abstract is a contents list of the volume; no test seen.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Evidence file cites it as 2006; OpenAlex gives 2008. Published in Vienna Yearbook of Population Research.

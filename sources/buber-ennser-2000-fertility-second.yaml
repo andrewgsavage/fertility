@@ -1,0 +1,22 @@
+id: buber-ennser-2000-fertility-second
+type: paper
+title: Fertility in second unions in Austria
+authors:
+- Buber-Ennser, I.
+- Prskawetz, A.
+year: 2000
+doi: 10.4054/demres.2000.3.2
+oa: gold
+oa_url: https://www.demographic-research.org/volumes/vol3/2/3-2.pdf
+factors:
+- partnership-stability
+findings:
+- factor: partnership-stability
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: Finland/Austria dissolution and second-union fertility; abstracts give no result.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Demographic Research.

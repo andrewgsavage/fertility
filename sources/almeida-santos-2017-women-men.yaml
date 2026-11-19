@@ -1,0 +1,28 @@
+id: almeida-santos-2017-women-men
+type: paper
+title: Are women and men well informed about fertility? Childbearing intentions, fertility knowledge and
+  information-gathering sources in Portugal
+authors:
+- Almeida-Santos, T.
+- Melo, C.
+- Macedo, A.
+- Moura-Ramos, M.
+year: 2017
+doi: 10.1186/s12978-017-0352-z
+oa: gold
+oa_url: https://reproductive-health-journal.biomedcentral.com/track/pdf/10.1186/s12978-017-0352-z
+factors:
+- fertility-awareness
+measurables:
+- cond-asfr-1
+findings:
+- factor: fertility-awareness
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: 'Portugal: childless people poorly informed about fertility; abstract truncated before link to
+    intentions.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Reproductive Health.

@@ -1,0 +1,27 @@
+id: pronzato-2017-fertility-decisions
+type: paper
+title: Fertility decisions and alternative types of childcare
+authors:
+- University of Turin
+- Pronzato, C.
+- Picco, S.
+- University of Florence
+- Ottone, S.
+- University of Turin
+year: 2017
+doi: 10.15185/izawol.382.v2
+oa: gold
+oa_url: https://doi.org/10.15185/izawol.382.v2
+factors:
+- childcare-costs
+findings:
+- factor: childcare-costs
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: Relative costs and family characteristics determine effectiveness of childcare types; no parity
+    detail.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in IZA World of Labor.

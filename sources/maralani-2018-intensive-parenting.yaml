@@ -1,0 +1,25 @@
+id: maralani-2018-intensive-parenting
+type: paper
+title: 'Intensive Parenting: Fertility and Breastfeeding Duration in the United States'
+authors:
+- Maralani, V.
+- Stabler, S.
+year: 2018
+doi: 10.1007/s13524-018-0710-7
+oa: bronze
+oa_url: https://read.dukeupress.edu/demography/article-pdf/55/5/1681/842182/1681maralani.pdf
+factors:
+- intensive-parenting
+measurables:
+- cond-asfr-2plus
+findings:
+- factor: intensive-parenting
+  measure: cond-asfr-2plus
+  verdict: contradicts
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: 'US cohort: women who breastfeed first child 5+ months (a proxy for intensive parenting) have
+    more children overall and higher odds of 3+ vs 2. Selection into the behaviour not resolved.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Demography.

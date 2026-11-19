@@ -1,0 +1,26 @@
+id: paton-2020-sex-education
+type: paper
+title: 'The impact of sex education mandates on teenage pregnancy: International evidence'
+authors:
+- Paton, D.
+- Bullivant, S.
+- Soto, J.
+year: 2020
+doi: 10.1002/hec.4021
+oa: hybrid
+oa_url: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/hec.4021
+factors:
+- sex-education
+measurables:
+- cond-asfr-1
+findings:
+- factor: sex-education
+  measure: cond-asfr-1
+  verdict: contradicts
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: 'Cross-country panel: some evidence that sex-education mandates are associated with higher teen
+    fertility; opt-out laws may limit this; robust to some but not all specifications.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Health Economics.

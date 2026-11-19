@@ -1,0 +1,29 @@
+id: puur-2023-parental-leave
+type: paper
+title: 'Parental Leave and Fertility: Individual-Level Responses in the Tempo and Quantum of Second and
+  Third Births'
+authors:
+- Puur, A.
+- Abdullayev, S.
+- Klesment, M.
+- Gortfelder, M.
+year: 2023
+doi: 10.1007/s10680-023-09669-0
+oa: hybrid
+oa_url: https://link.springer.com/content/pdf/10.1007/s10680-023-09669-0.pdf
+factors:
+- parental-leave
+measurables:
+- ppr-1-2plus
+findings:
+- factor: parental-leave
+  measure: ppr-1-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/policy-and-the-state.md
+  note: 'Estonia 2004 earnings-related leave reform, mixture cure model: second/third births accelerated
+    in response to a speed premium. Abstract truncated before the quantum result, so the effect on final
+    progression is not read.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in European Journal of Population.

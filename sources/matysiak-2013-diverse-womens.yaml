@@ -1,0 +1,25 @@
+id: matysiak-2013-diverse-womens
+type: paper
+title: 'Diverse Effects of Women’s Employment on Fertility: Insights From Italy and Poland'
+authors:
+- Matysiak, A.
+- Vignoli, D.
+year: 2013
+doi: 10.1007/s10680-013-9287-4
+oa: hybrid
+oa_url: https://link.springer.com/content/pdf/10.1007%2Fs10680-013-9287-4.pdf
+factors:
+- female-employment
+measurables:
+- cond-asfr-1
+findings:
+- factor: female-employment
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: 'Italy: employment clearly conflicts with childbearing; Poland: women combine the two. Effect
+    depends on country.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in European Journal of Population / Revue européenne de Démographie.

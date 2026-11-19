@@ -1,0 +1,24 @@
+id: apps-2017-optimal-family
+type: paper
+title: Optimal family taxation and income inequality
+authors:
+- Apps, P.
+- Rees, R.
+year: 2017
+doi: 10.1007/s10797-018-9492-5
+oa: hybrid
+oa_url: https://link.springer.com/content/pdf/10.1007/s10797-018-9492-5.pdf
+factors:
+- tax-system
+findings:
+- factor: tax-system
+  measure: ppr-1-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/policy-and-the-state.md
+  note: 'Tax studies found concern female labour supply, not fertility: Colonna & Marcassa 2015 ([10.1186/s40173-015-0030-0](https://doi.org/10.1186/s40173-015-0030-0)),
+    Italy, tax system burdens two-earner households; Apps & Rees 2017 ([10.1007/s10797-018-9492-5](https://doi.org/10.1007/s10797-018-9492-5)),
+    theory favouring individual taxation. Neither tests births.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in International Tax and Public Finance.

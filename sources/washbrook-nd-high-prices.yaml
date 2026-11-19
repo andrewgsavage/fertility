@@ -1,0 +1,46 @@
+id: washbrook-nd-high-prices
+type: paper
+title: Do High Prices Deter Fertility? Evidence from England and Wales
+authors:
+- Washbrook, E.
+url: https://www.bristol.ac.uk/cmm/research/housing/publications/do-high-prices-deter-fertility.html
+factors:
+- house-prices
+- rents
+measurables:
+- cond-asfr-1
+- cond-asfr-2plus
+- ppr-1-2plus
+findings:
+- factor: house-prices
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: 'England & Wales, BHPS 1995–2008: owners'' fertility rises 2.4% per 10% price rise (wealth effect);
+    renters show no positive response.'
+- factor: house-prices
+  measure: ppr-1-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: Owner price effect concentrated in second+ births but fades within two years (timing, not completed
+    family size).
+- factor: house-prices
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: 'Positive for owners'' higher-order births (wealth effect): sign depends on tenure.'
+- factor: rents
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: 'no'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: Washbrook records only no positive response for renters; Buh finds no clear relation. Neither
+    supports nor refutes a blank.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).

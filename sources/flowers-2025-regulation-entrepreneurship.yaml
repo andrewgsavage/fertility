@@ -1,0 +1,23 @@
+id: flowers-2025-regulation-entrepreneurship
+type: paper
+title: Regulation and entrepreneurship in the U.S. child care market
+authors:
+- Flowers, A. C.
+year: 2025
+doi: 10.1007/s11138-025-00693-3
+oa: hybrid
+oa_url: https://link.springer.com/content/pdf/10.1007/s11138-025-00693-3.pdf
+factors:
+- childcare-ratios
+findings:
+- factor: childcare-ratios
+  verdict: no-evidence
+  tick: '?'
+  basis: abstract
+  ref: research/factor-evidence/policy-and-the-state.md
+  note: Search on staff-child ratio regulation returned childcare availability, child-development and
+    market-regulation papers; none links ratios to fertility. Flowers 2025 ([10.1007/s11138-025-00693-3](https://doi.org/10.1007/s11138-025-00693-3))
+    argues US childcare regulation creates entry barriers, but the abstract has no price or fertility
+    result.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in The Review of Austrian Economics.

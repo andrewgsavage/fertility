@@ -1,0 +1,21 @@
+id: potarca-2020-demography-swiping
+type: paper
+title: The demography of swiping right. An overview of couples who met through dating apps in Switzerland
+authors:
+- Potarca, G.
+year: 2020
+doi: 10.1371/journal.pone.0243733
+oa: gold
+oa_url: https://doi.org/10.1371/journal.pone.0243733
+factors:
+- dating-apps
+findings:
+- factor: dating-apps
+  measure: share-in-couple
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: Swiss 2018 survey profile of couples who met via apps; abstract truncated, no fertility link seen.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in PLOS ONE.

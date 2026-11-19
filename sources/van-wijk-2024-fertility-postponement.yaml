@@ -1,0 +1,49 @@
+id: van-wijk-2024-fertility-postponement
+type: paper
+title: Fertility Postponement, Economic Uncertainty, and the Increasing Income Prerequisites of Parenthood
+authors:
+- van Wijk, D.
+- Billari, F. C.
+year: 2024
+doi: 10.1111/padr.12624
+oa: hybrid
+oa_url: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/padr.12624
+factors:
+- child-costs
+- economic-uncertainty
+- income
+measurables:
+- cond-asfr-1
+- young-first-births
+findings:
+- factor: child-costs
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'no'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: 'Seven-country panel: rising income prerequisites for a first child, rather than uncertainty,
+    may explain postponement.'
+- factor: child-costs
+  measure: young-first-births
+  verdict: mixed
+  tick: 'no'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: Higher prerequisites for parenthood push first births later.
+- factor: income
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: Income thresholds for first births have risen; income–fertility link depends on them.
+- factor: economic-uncertainty
+  measure: young-first-births
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: Perceived uncertainty not consistently associated with postponement of parenthood.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Population and Development Review.

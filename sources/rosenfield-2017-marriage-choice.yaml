@@ -1,0 +1,23 @@
+id: rosenfield-2017-marriage-choice
+type: paper
+title: Marriage, Choice, and Couplehood in the Age of the Internet
+authors:
+- Rosenfield, M.
+year: 2017
+doi: 10.15195/v4.a20
+oa: gold
+oa_url: https://www.sociologicalscience.com/download/vol-4/september/SocSci_v4_490to510.pdf
+factors:
+- dating-apps
+findings:
+- factor: dating-apps
+  measure: share-in-couple
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: 'US longitudinal data: meeting online does not predict breakup and predicts faster transitions
+    to marriage for heterosexual couples. Conditional on forming a couple; says nothing about how many
+    form.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Sociological Science.

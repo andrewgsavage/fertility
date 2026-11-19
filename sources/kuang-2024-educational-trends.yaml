@@ -26,4 +26,14 @@ measurables:
 - completed-fertility
 - mab1
 - educational-attainment
+- ppr-0-1
 notes: Demographic Research 51(36):1121-1168. Figures 2-5 reproduced. Scripts cite it as 2025.
+findings:
+- factor: education
+  measure: ppr-0-1
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: 'UK admin data, cohorts 1956-78: childlessness persistently higher among the more educated in
+    every UK country.'

@@ -1,0 +1,35 @@
+id: mendiola-2013-sperm-counts
+type: paper
+title: Sperm counts may have declined in young university students in Southern Spain
+authors:
+- Mendiola, J.
+- Jørgensen, N.
+- Mínguez‐Alarcón, L.
+- Sarabia‐Cos, L.
+- López‐Espín, J. J.
+- Vivero‐Salmerón, G.
+- Ruiz‐Ruiz, K. J.
+- Fernández, M. F.
+- Olea, N.
+- Swan, S. H.
+- Torres‐Cantero, A. M.
+year: 2013
+doi: 10.1111/j.2047-2927.2012.00058.x
+oa: bronze
+oa_url: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.2047-2927.2012.00058.x
+factors:
+- sperm-counts
+measurables:
+- cond-asfr-1
+findings:
+- factor: sperm-counts
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: Declines reported in some places (Spanish students) and contested elsewhere (geographic variation).
+    No fertility-rate link in abstracts. Zinaman 2000 ([10.1002/j.1939-4640.2000.tb03284.x](https://doi.org/10.1002/j.1939-4640.2000.tb03284.x))
+    tests semen quality vs fertility in 210 couples; abstract truncated before result.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Andrology.

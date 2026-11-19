@@ -1,0 +1,24 @@
+id: lerch-2018-fertility-decline
+type: paper
+title: Fertility Decline in Urban and Rural Areas of Developing Countries
+authors:
+- Lerch, M.
+year: 2018
+doi: 10.1111/padr.12220
+oa: hybrid
+oa_url: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/padr.12220
+factors:
+- urbanisation
+measurables:
+- ppr-1-2plus
+findings:
+- factor: urbanisation
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: '60 developing countries, multiple surveys: inverted-U in rural excess fertility. Lower urban
+    fertility is general but this is developing-country evidence, not the housing-cost mechanism.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Population and Development Review.

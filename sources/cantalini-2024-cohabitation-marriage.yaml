@@ -1,0 +1,25 @@
+id: cantalini-2024-cohabitation-marriage
+type: paper
+title: 'Cohabitation and Marriage Formation in Times of Fertility Decline: The Case of Sweden in the Twenty-First
+  Century'
+authors:
+- Cantalini, S.
+- Ohlsson-Wijk, S.
+- Andersson, G.
+year: 2024
+doi: 10.1007/s10680-024-09703-9
+oa: hybrid
+oa_url: https://doi.org/10.1007/s10680-024-09703-9
+factors:
+- partnership-formation
+findings:
+- factor: partnership-formation
+  measure: share-in-couple
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: Sweden 21st century cohabitation/marriage formation during fertility decline; abstract truncated
+    before results.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in European Journal of Population.

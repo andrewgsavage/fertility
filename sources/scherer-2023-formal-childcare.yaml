@@ -1,0 +1,45 @@
+id: scherer-2023-formal-childcare
+type: paper
+title: 'Formal childcare services and fertility: the case of Italy'
+authors:
+- Scherer, S.
+- Pavolini, E.
+- Brini, E.
+year: 2023
+doi: 10.1186/s41118-023-00208-7
+oa: gold
+oa_url: https://genus.springeropen.com/counter/pdf/10.1186/s41118-023-00208-7
+factors:
+- childcare-provision
+measurables:
+- cond-asfr-1
+- cond-asfr-2plus
+- ppr-0-1
+findings:
+- factor: childcare-provision
+  measure: ppr-0-1
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/policy-and-the-state.md
+  note: 'Includes a systematic review of ECEC and fertility in high-income countries (its findings not
+    in the part seen) plus Italian regional data 2003–20: limited but positive short-term effects on the
+    transition to parenthood, only for some groups. Short-term, not completed childlessness.'
+- factor: childcare-provision
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/policy-and-the-state.md
+  note: 'Italy: positive short-term effect on first births, limited.'
+- factor: childcare-provision
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/policy-and-the-state.md
+  note: 'Italy: positive short-term effects on parity progression, limited. Another Italian study, Mariani
+    & Rosati 2021 ([10.2139/ssrn.4114276](https://doi.org/10.2139/ssrn.4114276)), finds immigrant child-care
+    supply raised native births 2–4% (all births).'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Genus.

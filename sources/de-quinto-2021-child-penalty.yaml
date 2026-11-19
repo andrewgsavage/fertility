@@ -1,0 +1,24 @@
+id: de-quinto-2021-child-penalty
+type: paper
+title: 'The child penalty: evidence from Spain'
+authors:
+- de Quinto, A.
+- Hospido, L.
+- Sanz, C.
+year: 2021
+doi: 10.1007/s13209-021-00241-9
+oa: hybrid
+oa_url: https://link.springer.com/content/pdf/10.1007/s13209-021-00241-9.pdf
+factors:
+- motherhood-penalty
+findings:
+- factor: motherhood-penalty
+  measure: ppr-1-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: 'Spain: mothers'' annual earnings drop 11% in year after first birth, long-run penalty 28%. Penalty
+    measured, fertility response not tested.'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in SERIEs.

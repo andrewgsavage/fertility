@@ -1,0 +1,25 @@
+id: blau-1989-fertility-employment
+type: paper
+title: Fertility, Employment, and Child-Care Costs
+authors:
+- Blau, D. M.
+- Robins, P. K.
+year: 1989
+doi: 10.2307/2061526
+oa: bronze
+oa_url: https://read.dukeupress.edu/demography/article-pdf/26/2/287/907518/287blau.pdf
+factors:
+- childcare-costs
+measurables:
+- cond-asfr-1
+findings:
+- factor: childcare-costs
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/costs-and-housing.md
+  note: 'US: higher childcare costs lower the birth rate for non-employed women but not employed women
+    (not first-birth specific).'
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Demography.

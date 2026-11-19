@@ -1,0 +1,24 @@
+id: skinner-2016-england-teenage
+type: paper
+title: 'England''s Teenage Pregnancy Strategy: a hard-won success'
+authors:
+- Skinner, S. R.
+- Marino, J. L.
+year: 2016
+doi: 10.1016/s0140-6736(16)30589-x
+oa: hybrid
+oa_url: https://doi.org/10.1016/s0140-6736(16)30589-x
+factors:
+- sex-education
+measurables:
+- young-first-births
+findings:
+- factor: sex-education
+  measure: young-first-births
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: Commentary; abstract gives no result.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in The Lancet.

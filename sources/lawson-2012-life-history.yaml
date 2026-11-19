@@ -1,0 +1,25 @@
+id: lawson-2012-life-history
+type: paper
+title: The life-history trade-off between fertility and child survival
+authors:
+- Lawson, D. W.
+- Alvergne, A.
+- Gibson, M. A.
+year: 2012
+doi: 10.1098/rspb.2012.1635
+oa: hybrid
+oa_url: https://royalsocietypublishing.org/doi/pdf/10.1098/rspb.2012.1635
+factors:
+- child-mortality
+measurables:
+- ppr-1-2plus
+findings:
+- factor: child-mortality
+  measure: ppr-1-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: Says current literature gives mixed evidence for a fertility-child-survival trade-off.
+notes: 'Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Proceedings of the Royal Society B: Biological Sciences.'

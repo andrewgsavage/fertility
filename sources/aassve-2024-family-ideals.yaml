@@ -1,0 +1,30 @@
+id: aassve-2024-family-ideals
+type: paper
+title: Family ideals in an era of low fertility
+authors:
+- Aassve, A.
+- Adserà, A.
+- Chang, P. Y.
+- Mencarini, L.
+- Park, H.
+- Peng, C.
+- Plach, S.
+- Raymo, J. M.
+- Wang, S.
+- Jean Yeung, W. J.
+year: 2024
+doi: 10.1073/pnas.2311847121
+oa: hybrid
+oa_url: https://doi.org/10.1073/pnas.2311847121
+factors:
+- ideal-family-size
+findings:
+- factor: ideal-family-size
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/social-cultural-and-population.md
+  note: Vignette study in eight countries; abstract truncated before result.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Proceedings of the National Academy of Sciences.

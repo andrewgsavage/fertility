@@ -1,0 +1,21 @@
+id: vaisanen-2017-timing-abortions
+type: paper
+title: The timing of abortions, births, and union dissolutions in Finland
+authors:
+- Vaisanen, H.
+year: 2017
+doi: 10.4054/demres.2017.37.28
+oa: gold
+oa_url: https://www.demographic-research.org/volumes/vol37/28/37-28.pdf
+factors:
+- partnership-stability
+findings:
+- factor: partnership-stability
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: Finland/Austria dissolution and second-union fertility; abstracts give no result.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Demographic Research.

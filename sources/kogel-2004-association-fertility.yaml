@@ -1,0 +1,25 @@
+id: kogel-2004-association-fertility
+type: paper
+title: Did the association between fertility and female employment within OECD countries really change
+  its sign?
+authors:
+- Kögel, T.
+year: 2004
+doi: 10.1007/s00148-003-0180-z
+oa: green
+oa_url: https://dspace.lboro.ac.uk/2134/2068
+factors:
+- female-employment
+measurables:
+- cond-asfr-2plus
+findings:
+- factor: female-employment
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: Cross-country association in developed countries turned positive in the mid-1980s; whether it
+    is spurious is the debate. Abstracts truncated, conclusions not read.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Journal of Population Economics.

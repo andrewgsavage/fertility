@@ -1,0 +1,22 @@
+id: steiner-2016-female-age
+type: paper
+title: Impact of female age and nulligravidity on fecundity in an older reproductive age cohort
+authors:
+- Steiner, A. Z.
+- Jukic, A. M. Z.
+year: 2016
+doi: 10.1016/j.fertnstert.2016.02.028
+oa: bronze
+oa_url: http://www.fertstert.org/article/S0015028216001527/pdf
+factors:
+- female-infertility
+findings:
+- factor: female-infertility
+  measure: ppr-0-1
+  verdict: no-evidence
+  tick: 'yes'
+  basis: abstract
+  ref: research/factor-evidence/life-course-and-education-work.md
+  note: Cohort fecundability studies; abstracts were empty, results not read.
+notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
+  Published in Fertility and Sterility.
