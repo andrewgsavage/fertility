@@ -16,13 +16,14 @@ saved to ONS/data/projection_rounds/ (gitignored, not redistributed):
 """
 
 import csv
-import pathlib
 
 import plotly.colors as pc
 import plotly.graph_objects as go
 
-_SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
-DATA_DIR = _SCRIPT_DIR.parent / "data" / "projection_rounds"
+from common.paths import data_dir, outputs_dir
+from common.plotting import write_html
+
+DATA_DIR = data_dir("ONS") / "projection_rounds"
 
 ROUNDS = ["2012", "2014", "2016", "2018", "2022", "2024"]
 
@@ -281,21 +282,10 @@ def build_asfr_figure():
 
 
 def _write(fig, output_path):
-    fig.write_html(
-        output_path,
-        include_plotlyjs="cdn",
-        full_html=True,
-        default_width="100%",
-        default_height="100%",
-        config={"responsive": True},
-    )
-    html = open(output_path, "r", encoding="utf-8").read()
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    open(output_path, "w", encoding="utf-8").write(html)
-    print(f"Saved {output_path}")
+    write_html(fig, output_path)
 
 
 if __name__ == "__main__":
-    _write(build_tfr_figure(), "outputs/projections_tfr.html")
-    _write(build_cfs_figure(), "outputs/projections_cfs.html")
-    _write(build_asfr_figure(), "outputs/projections_asfr.html")
+    _write(build_tfr_figure(), outputs_dir("ONS") / "projections_tfr.html")
+    _write(build_cfs_figure(), outputs_dir("ONS") / "projections_cfs.html")
+    _write(build_asfr_figure(), outputs_dir("ONS") / "projections_asfr.html")

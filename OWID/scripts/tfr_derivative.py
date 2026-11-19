@@ -17,8 +17,11 @@ import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
 
-INPUT = "data/children-born-per-woman.csv"
-OUTPUT = "outputs/tfr_derivative.html"
+from common.paths import data_dir, outputs_dir
+from common.plotting import write_html
+
+INPUT = data_dir("OWID") / "children-born-per-woman.csv"
+OUTPUT = outputs_dir("OWID") / "tfr_derivative.html"
 
 # Same default selection OWID itself uses for this chart (see the grapher's
 # own "selection" list in its metadata).
@@ -223,15 +226,7 @@ document.addEventListener('DOMContentLoaded', function () {{
 }});
 """
 
-fig.write_html(
-    OUTPUT,
-    include_plotlyjs="cdn",
-    full_html=True,
-    post_script=post_script,
-    default_width="100%",
-    default_height="100%",
-    config={"responsive": True},
-)
+write_html(fig, OUTPUT, post_script=post_script, full_page=False, log=False)
 
 html = open(OUTPUT, "r", encoding="utf-8").read()
 html = html.replace(

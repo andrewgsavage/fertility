@@ -10,23 +10,17 @@ year, so each line traces one cohort's fertility across its own lifetime
 instead of one calendar year's snapshot across all ages.
 """
 
-import json
-import pathlib
-
-import pandas as pd
 import plotly.colors as pc
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-from country_names import COUNTRY_NAMES
-from plot_colors import COHORT_CAXIS, COHORT_COLORSCALE
+from common.country_names import COUNTRY_NAMES
+from common.hfd import load_asfr
+from common.paths import outputs_dir
+from common.plot_colors import COHORT_CAXIS, COHORT_COLORSCALE
+from common.plotting import range_post_script, write_html
 
-# Resolved relative to this file (not cwd) so load_data() works whether
-# this module is run directly (cwd=HFD/) or imported from elsewhere (e.g.
-# ONS/scripts/historic_trends_uk.py, cwd=ONS/).
-_SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
-INPUT = _SCRIPT_DIR.parent / "data" / "HFD" / "asfrRR.txt"
-OUTPUT = "outputs/asfr_uk.html"
+OUTPUT = outputs_dir("HFD") / "asfr_uk.html"
 CODES = ["GBRTENW"]
 
 # Shared with the ONS-derived conditional/cumulative charts this one sits
@@ -35,31 +29,9 @@ CODES = ["GBRTENW"]
 # external range control) covers a wider span. See plot_colors.py.
 CAXIS_MIN, CAXIS_MAX = COHORT_CAXIS
 
-# No in-iframe UI — matches ONS/scripts/cond_asfr_uk_ons.py's RANGE_POST_SCRIPT,
-# so the same external cohort-range control on docs/uk/later-births.md can
-# drive this chart too via its own window.setRange(lo, hi).
-RANGE_POST_SCRIPT = """
-var gd = document.getElementById('{plot_id}');
-var traceGroups = __TRACE_GROUPS__;
-window.setRange = function (lo, hi) {
-    var visible = traceGroups.map(function (g) { return g === null ? true : (g >= lo && g <= hi); });
-    Plotly.restyle(gd, {visible: visible});
-};
-"""
-
 
 def load_data():
-    df = pd.read_csv(
-        INPUT,
-        sep=r"\s+",
-        skiprows=3,
-        names=["code", "year", "age", "asfr"],
-        na_values=".",
-    )
-    df["age"] = df["age"].astype(str).str.replace("-", "", regex=False).str.replace("+", "", regex=False).astype(int)
-    df["cohort"] = df["year"] - df["age"]
-    df = df[df["code"].isin(CODES)]
-    return df
+    return load_asfr(CODES)
 
 
 def plot(df):
@@ -123,17 +95,6 @@ def _cohort_color(cohort, cmin, cmax):
 if __name__ == "__main__":
     df = load_data()
     fig, trace_groups = plot(df)
-    post_script = RANGE_POST_SCRIPT.replace("__TRACE_GROUPS__", json.dumps(trace_groups))
-    fig.write_html(
-        OUTPUT,
-        include_plotlyjs="cdn",
-        full_html=True,
-        post_script=post_script,
-        default_width="100%",
-        default_height="100%",
-        config={"responsive": True},
-    )
-    html = open(OUTPUT, "r", encoding="utf-8").read()
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    open(OUTPUT, "w", encoding="utf-8").write(html)
-    print(f"Saved {OUTPUT}")
+    # No in-iframe UI: the same external cohort-range control on docs/uk/later-births.md
+    # as the ONS charts drives this one via window.setRange(lo, hi).
+    write_html(fig, OUTPUT, post_script=range_post_script(trace_groups))

@@ -3,18 +3,18 @@
 The ART part of each rate is the rate times the share of births in that age
 band and birth order whose birth certificate records ART (CDC WONDER Natality
 2016-2024 expanded). Second+ ART shares are applied to the second-birth rate.
-Run from the HFD directory.
 """
-
-import pathlib
 
 import pandas as pd
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-_REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
-WONDER_CSV = _REPO_ROOT / "research" / "data" / "us_natality_2016_2024_age_order_art.csv"
-OUTPUT = "outputs/us_art_cond_asfr.html"
+from common.hfd import age_to_int, read_hfd
+from common.paths import REPO, outputs_dir
+from common.plotting import write_html
+
+WONDER_CSV = REPO / "research" / "data" / "us_natality_2016_2024_age_order_art.csv"
+OUTPUT = outputs_dir("HFD") / "us_art_cond_asfr.html"
 
 YEARS = list(range(2016, 2025))
 BANDS = [(20, 24), (25, 29), (30, 34), (35, 39), (40, 44)]
@@ -29,11 +29,8 @@ def band_label(lo, hi):
 
 
 def load_rates():
-    df = pd.read_csv(
-        "data/HFD/mi.txt", sep=r"\s+", skiprows=3,
-        names=["code", "year", "age", "m1x", "m2x", "m3x", "m4x", "m5px"], na_values=".",
-    )
-    df["age"] = df["age"].astype(str).str.strip("-+").astype(int)
+    df = read_hfd("mi.txt", ["code", "year", "age", "m1x", "m2x", "m3x", "m4x", "m5px"])
+    df["age"] = age_to_int(df["age"])
     df = df[(df["code"] == "USA") & df["year"].isin(YEARS)]
     rows = []
     for lo, hi in BANDS:
@@ -98,11 +95,7 @@ def main():
     df["art"] = df["rate"] * df["art_share"]
     df["non_art"] = df["rate"] - df["art"]
     fig = build(df)
-    fig.write_html(OUTPUT, include_plotlyjs="cdn", full_html=True, config={"responsive": True})
-    html = open(OUTPUT, "r", encoding="utf-8").read()
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    open(OUTPUT, "w", encoding="utf-8").write(html)
-    print(f"Saved {OUTPUT}")
+    write_html(fig, OUTPUT)
 
     table = df[df["year"].isin([2016, 2024])].pivot_table(index=["order", "band"], columns="year",
                                                            values=["rate", "art", "non_art"])

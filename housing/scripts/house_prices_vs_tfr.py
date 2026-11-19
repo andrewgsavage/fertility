@@ -23,8 +23,6 @@ Outputs:
   outputs/price_change_vs_tfr_change.csv   the data behind it
   outputs/country_prices_tfr.html          real house prices and TFR over time,
       country dropdown (UK default)
-
-Run from the housing/ directory.
 """
 
 import json
@@ -32,6 +30,9 @@ import json
 import pandas as pd
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+
+from common.paths import data_dir, outputs_dir
+from common.plotting import write_html
 
 START, END = 2013, 2024
 
@@ -71,13 +72,13 @@ def load_oecd(path, freq="A"):
 
 
 def load_ons_tfr():
-    s = pd.read_excel("data/birthssummary2022.xlsx", "Table_1", header=8)
+    s = pd.read_excel(data_dir("housing") / "birthssummary2022.xlsx", "Table_1", header=8)
     s = s.rename(columns={s.columns[0]: "year", s.columns[6]: "tfr"})[["year", "tfr"]]
     s = s[pd.to_numeric(s["year"], errors="coerce").notna()]
     s["year"] = s["year"].astype(int)
     rows = []
     for y in (2023, 2024, 2025):
-        t = pd.read_excel(f"data/{y}birthregistrations.xlsx", "Table_1", header=5)
+        t = pd.read_excel(data_dir("housing") / f"{y}birthregistrations.xlsx", "Table_1", header=5)
         col = [c for c in t.columns if str(c).startswith("Total Fertility Rate")][0]
         rows.append({"year": y, "tfr": float(t.loc[t.iloc[:, 1] == "ENGLAND AND WALES", col].iloc[0])})
     s = pd.concat([s, pd.DataFrame(rows)])
@@ -88,12 +89,12 @@ def load_tfr():
     """TFR by ISO3 x year: Eurostat for Europe, ONS (England & Wales) for the
     UK, World Bank otherwise. World Bank figures are UN estimates and run
     ~0.1 above ONS for the UK, so they are only the fallback."""
-    w = json.load(open("data/wb_tfr.csv"))[1]
+    w = json.load(open(data_dir("housing") / "wb_tfr.csv"))[1]
     wb = pd.DataFrame([{"iso": d["countryiso3code"], "year": int(d["date"]), "tfr": d["value"]} for d in w])
     wb = wb[wb["iso"] != ""].dropna().pivot_table(index="iso", columns="year", values="tfr")
     wb["source"] = "World Bank"
 
-    es = pd.read_csv("data/demo_find.csv").pivot_table(index="geo", columns="TIME_PERIOD", values="OBS_VALUE")
+    es = pd.read_csv(data_dir("housing") / "demo_find.csv").pivot_table(index="geo", columns="TIME_PERIOD", values="OBS_VALUE")
     es = es.reindex([ISO2.get(i) for i in wb.index])
     es.index = wb.index
     es["source"] = "Eurostat"
@@ -157,15 +158,14 @@ def scatter(d):
         margin=dict(t=100, r=20, l=60, b=50),
         updatemenus=[dict(buttons=buttons, direction="down", x=0, xanchor="left", y=1.02, yanchor="bottom")],
     )
-    fig.write_html("outputs/price_change_vs_tfr_change.html", include_plotlyjs="cdn",
-                   default_width="100%", default_height="100%", config={"responsive": True})
+    write_html(fig, outputs_dir("housing") / "price_change_vs_tfr_change.html", full_page=False, log=False)
 
 
 COUNTRIES = ["GBR", "NLD", "FIN", "ITA", "KOR", "USA", "DEU", "FRA", "ESP", "SWE"]
 
 
 def country_chart(tfr):
-    qm, names = load_oecd("data/oecd_hpi_all.csv", freq="Q")
+    qm, names = load_oecd(data_dir("housing") / "oecd_hpi_all.csv", freq="Q")
 
     def qdate(cols):
         return pd.PeriodIndex([c.replace("-", "") for c in cols], freq="Q").to_timestamp(how="end")
@@ -216,15 +216,14 @@ def country_chart(tfr):
         hovermode="x unified",
         updatemenus=[dict(buttons=buttons, direction="down", x=0, xanchor="left", y=1.07, yanchor="bottom")],
     )
-    fig.write_html("outputs/country_prices_tfr.html", include_plotlyjs="cdn",
-                   default_width="100%", default_height="100%", config={"responsive": True})
+    write_html(fig, outputs_dir("housing") / "country_prices_tfr.html", full_page=False, log=False)
 
 
 def main():
-    measures, names = load_oecd("data/oecd_hpi.csv")
+    measures, names = load_oecd(data_dir("housing") / "oecd_hpi.csv")
     tfr, ons = load_tfr()
     d = change_table(measures, names, tfr)
-    d.round(3).sort_values("price").to_csv("outputs/price_change_vs_tfr_change.csv")
+    d.round(3).sort_values("price").to_csv(outputs_dir("housing") / "price_change_vs_tfr_change.csv")
     print(d.round(2).sort_values("price").to_string())
     for k in MEASURES:
         g = d.dropna(subset=[k])

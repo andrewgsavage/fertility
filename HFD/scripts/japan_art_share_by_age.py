@@ -2,17 +2,18 @@
 
 Numerator: JSOG registry cycles resulting in a live birth, by woman's age at treatment
 (summary reports, Table 4). Denominator: HFD live births by mother's age (birthsRR.txt),
-same calendar year. Run from the HFD directory.
+same calendar year.
 """
-
-import pathlib
 
 import pandas as pd
 import plotly.graph_objects as go
 
-_REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
-JSOG = _REPO_ROOT / "research" / "data" / "jsog_japan_art_livebirth_cycles_by_age_2015_2023.csv"
-OUTPUT = "outputs/japan_art_share_by_age.html"
+from common.hfd import read_hfd
+from common.paths import REPO, outputs_dir
+from common.plotting import write_html
+
+JSOG = REPO / "research" / "data" / "jsog_japan_art_livebirth_cycles_by_age_2015_2023.csv"
+OUTPUT = outputs_dir("HFD") / "japan_art_share_by_age.html"
 
 BANDS = [("25-29", 25, 29), ("30-34", 30, 34), ("35-39", 35, 39), ("40-44", 40, 44), ("All ages", 0, 99)]
 COLORS = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4"]
@@ -20,7 +21,7 @@ COLORS = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4"]
 
 def load():
     art = pd.read_csv(JSOG)
-    births = pd.read_csv("data/HFD/birthsRR.txt", sep=r"\s+", skiprows=2)
+    births = read_hfd("birthsRR.txt", na_values=None)
     births = births[births["Code"] == "JPN"].copy()
     births["age"] = births["Age"].astype(str).str.strip("-+").astype(int)
     rows = []
@@ -51,11 +52,7 @@ def main():
         yaxis=dict(title="ART share of births", tickformat=".0%", rangemode="tozero"),
         xaxis=dict(dtick=1), legend=dict(orientation="h", x=0, y=1.1, xanchor="left"), hovermode="closest",
     )
-    fig.write_html(OUTPUT, include_plotlyjs="cdn", full_html=True, config={"responsive": True})
-    html = open(OUTPUT, "r", encoding="utf-8").read()
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    open(OUTPUT, "w", encoding="utf-8").write(html)
-    print(f"Saved {OUTPUT}")
+    write_html(fig, OUTPUT)
     print(df.pivot(index="band", columns="year", values="share").map(lambda v: f"{v:.1%}").to_string())
 
 

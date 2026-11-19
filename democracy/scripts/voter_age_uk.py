@@ -30,14 +30,16 @@ Turnout by age:
 """
 
 import csv
-import pathlib
 
 import openpyxl
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-DATA_DIR = pathlib.Path("data")
-OUTPUT_DIR = pathlib.Path("outputs")
+from common.paths import data_dir, outputs_dir
+from common.plotting import write_html
+
+DATA_DIR = data_dir("democracy")
+OUTPUT_DIR = outputs_dir("democracy")
 MYE_FILE = DATA_DIR / "ukpopulationestimates18382025.xlsx"
 NPP_FILE = DATA_DIR / "npp2024_uk_ppp_machine_readable.xlsx"
 
@@ -340,15 +342,7 @@ def _figure(rows, stat):
 
 def _save_html(fig, name):
     output = OUTPUT_DIR / name
-    fig.write_html(
-        output, include_plotlyjs="cdn", full_html=True,
-        default_width="100%", default_height="100%",
-        config={"responsive": True},
-    )
-    html = output.read_text(encoding="utf-8")
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    output.write_text(html, encoding="utf-8")
-    print(f"Saved {output}")
+    write_html(fig, output)
 
 
 BAND_LABELS = ["18-24", "25-34", "35-44", "45-54", "55-64", "65+"]

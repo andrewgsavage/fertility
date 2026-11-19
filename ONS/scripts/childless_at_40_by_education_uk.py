@@ -33,7 +33,10 @@ asymmetric error_y). Values are approximate to roughly +/-0.005
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-OUTPUT = "outputs/childless_at_40_by_education_uk.html"
+from common.paths import outputs_dir
+from common.plotting import write_html
+
+OUTPUT = outputs_dir("ONS") / "childless_at_40_by_education_uk.html"
 
 COUNTRIES = ["England & Wales", "Scotland", "Northern Ireland"]
 SERIES = ["Low", "Medium", "High", "All"]
@@ -105,15 +108,4 @@ def plot():
 
 if __name__ == "__main__":
     fig = plot()
-    fig.write_html(
-        OUTPUT,
-        include_plotlyjs="cdn",
-        full_html=True,
-        default_width="100%",
-        default_height="100%",
-        config={"responsive": True},
-    )
-    html = open(OUTPUT, "r", encoding="utf-8").read()
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    open(OUTPUT, "w", encoding="utf-8").write(html)
-    print(f"Saved {OUTPUT}")
+    write_html(fig, OUTPUT)

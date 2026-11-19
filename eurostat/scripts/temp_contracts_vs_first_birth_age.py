@@ -10,7 +10,8 @@ into eurostat/data/ (not tracked in git):
 import pandas as pd
 import plotly.express as px
 
-from _common import DATA, NAMES, write_html
+from _common import DATA, NAMES, OUTDIR
+from common.plotting import write_html
 
 
 def load():
@@ -40,4 +41,4 @@ def plot(d):
 
 
 if __name__ == "__main__":
-    write_html(plot(load()), "temp_contracts_vs_first_birth_age.html")
+    write_html(plot(load()), OUTDIR / "temp_contracts_vs_first_birth_age.html")

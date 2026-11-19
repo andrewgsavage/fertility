@@ -6,17 +6,17 @@ explain can be read off the same cohort scale.
 """
 
 import bisect
-import pathlib
 
 import plotly.colors as pc
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 import pupils_leaving_age_uk as staying_on
-from cond_asfr_uk_ons import load_table3
+from common.ons_table3 import load_table3
+from common.paths import outputs_dir
+from common.plotting import write_html
 
-_SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
-OUTPUT = "outputs/childlessness_by_age_uk.html"
+OUTPUT = outputs_dir("ONS") / "childlessness_by_age_uk.html"
 
 AGES = [20, 25, 30, 35, 40, 45]
 
@@ -194,15 +194,4 @@ def plot(childless_by_age):
 
 if __name__ == "__main__":
     fig = plot(childlessness_by_age())
-    fig.write_html(
-        OUTPUT,
-        include_plotlyjs="cdn",
-        full_html=True,
-        default_width="100%",
-        default_height="100%",
-        config={"responsive": True},
-    )
-    html = open(OUTPUT, "r", encoding="utf-8").read()
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    open(OUTPUT, "w", encoding="utf-8").write(html)
-    print(f"Saved {OUTPUT}")
+    write_html(fig, OUTPUT)

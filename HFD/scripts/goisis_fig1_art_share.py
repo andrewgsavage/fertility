@@ -1,15 +1,15 @@
 """ART share of births, 2000-2019, for Denmark, France, Spain, the UK and the US,
-digitised from Goisis et al. (2024) Figure 1. Run from the HFD directory.
+digitised from Goisis et al. (2024) Figure 1.
 """
-
-import pathlib
 
 import pandas as pd
 import plotly.graph_objects as go
 
-_REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
-DATA = _REPO_ROOT / "research" / "data" / "goisis2024_fig1_art_share_births.csv"
-OUTPUT = "outputs/goisis_fig1_art_share.html"
+from common.paths import REPO, outputs_dir
+from common.plotting import write_html
+
+DATA = REPO / "research" / "data" / "goisis2024_fig1_art_share_births.csv"
+OUTPUT = outputs_dir("HFD") / "goisis_fig1_art_share.html"
 
 COUNTRY_COLORS = {
     "Denmark": "#2a78d6",
@@ -35,11 +35,7 @@ def main():
         yaxis=dict(title="ART share of births", tickformat=".0%", rangemode="tozero"),
         legend=dict(orientation="h", x=0, y=1.1, xanchor="left"), hovermode="closest",
     )
-    fig.write_html(OUTPUT, include_plotlyjs="cdn", full_html=True, config={"responsive": True})
-    html = open(OUTPUT, "r", encoding="utf-8").read()
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    open(OUTPUT, "w", encoding="utf-8").write(html)
-    print(f"Saved {OUTPUT}")
+    write_html(fig, OUTPUT)
 
 
 if __name__ == "__main__":

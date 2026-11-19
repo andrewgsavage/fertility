@@ -3,6 +3,8 @@ import math
 
 import plotly.graph_objects as go
 
+from common.paths import intermediate_dir, outputs_dir
+from common.plotting import write_html
 from metrics import (
     ASFR_BASE_KEYS,
     DIV_COLORSCALE,
@@ -18,10 +20,10 @@ from metrics import (
     dropdown_buttons,
 )
 
-FERTILITY_IN = "outputs/fertility_by_lad.json"
-POPULATION_IN = "outputs/population_by_lad.json"
-HOUSING_IN = "outputs/housing_by_lad.json"
-OUTPUT = "outputs/scatter_plotly.html"
+FERTILITY_IN = intermediate_dir("ONS") / "fertility_by_lad.json"
+POPULATION_IN = intermediate_dir("ONS") / "population_by_lad.json"
+HOUSING_IN = intermediate_dir("ONS") / "housing_by_lad.json"
+OUTPUT = outputs_dir("ONS") / "scatter_plotly.html"
 
 HOUSING_LABELS = {
     "house_price": "Average house price",
@@ -733,19 +735,7 @@ window.setYear = function (yr) {{
 }};
 """
 
-fig.write_html(
-    OUTPUT,
-    include_plotlyjs="cdn",
-    full_html=True,
-    post_script=post_script,
-    default_width="100%",
-    default_height="100%",
-    config={"responsive": True},
-)
-
-html = open(OUTPUT, "r", encoding="utf-8").read()
-html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-open(OUTPUT, "w", encoding="utf-8").write(html)
+write_html(fig, OUTPUT, post_script=post_script, log=False)
 
 print(f"Wrote {OUTPUT} ({len(codes)} LADs, {year}, {len(metric_values)} metrics)")
 
@@ -826,7 +816,7 @@ for asfr_key in STATIC_COHORTS:
         shapes=shapes,
         annotations=annotations,
     )
-    static_out = f"outputs/scatter_{asfr_key}.png"
+    static_out = outputs_dir("ONS") / f"scatter_{asfr_key}.png"
     fig_static.write_image(static_out, scale=2)
     print(f"Wrote {static_out}")
 
@@ -871,6 +861,6 @@ for asfr_key in STATIC_COHORTS:
         xaxis={"title": {"text": f"{house_price_meta['title']} ({year})"}, "type": "log", "range": house_price_meta["log_range"]},
         yaxis={"title": {"text": f"{METRIC_LABELS[asfr_key]} ({year})"}, "range": y_meta["range"]},
     )
-    housing_out = f"outputs/scatter_housing_{asfr_key}.png"
+    housing_out = outputs_dir("ONS") / f"scatter_housing_{asfr_key}.png"
     fig_housing.write_image(housing_out, scale=2)
     print(f"Wrote {housing_out}")

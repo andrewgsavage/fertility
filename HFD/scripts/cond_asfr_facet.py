@@ -7,26 +7,21 @@ in pairs of (first birth, second birth) subplots, three country-pairs
 """
 
 import math
-import pathlib
-import sys
 
 import pandas as pd
 import plotly.colors as pc
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-from country_names import COUNTRY_REGIONS, country_title
-from plot_colors import PERIOD_COLORSCALE, period_axis
+from common.country_names import COUNTRY_REGIONS, country_title
+from common.hfd import age_to_int, read_hfd
+from common.ons_table3 import load_period_rates
+from common.paths import outputs_dir
+from common.plot_colors import PERIOD_COLORSCALE, period_axis
+from common.plotting import write_html
 
-_REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
-_ONS_SCRIPTS = _REPO_ROOT / "ONS" / "scripts"
-if str(_ONS_SCRIPTS) not in sys.path:
-    sys.path.insert(0, str(_ONS_SCRIPTS))
-
-from cond_asfr_uk_ons import load_period_rates  # noqa: E402
-
-OUTPUT = "outputs/cond_asfr_facet.html"
-OUTPUT_CHANGE = "outputs/cond_asfr_facet_change.html"
+OUTPUT = outputs_dir("HFD") / "cond_asfr_facet.html"
+OUTPUT_CHANGE = outputs_dir("HFD") / "cond_asfr_facet_change.html"
 
 SHARED_YRANGE = (0, 0.25)
 # Change-since-baseline chart: each rate is divided by the same country's
@@ -52,14 +47,8 @@ BIRTH_ORDERS = [(1, "m1x", "First birth"), (2, "m2x", "Second birth")]
 
 
 def load_data():
-    df = pd.read_csv(
-        "data/HFD/mi.txt",
-        sep=r"\s+",
-        skiprows=3,
-        names=["code", "year", "age", "m1x", "m2x", "m3x", "m4x", "m5px"],
-        na_values=".",
-    )
-    df["age"] = df["age"].astype(str).str.replace("-", "", regex=False).str.replace("+", "", regex=False).astype(int)
+    df = read_hfd("mi.txt", ["code", "year", "age", "m1x", "m2x", "m3x", "m4x", "m5px"])
+    df["age"] = age_to_int(df["age"])
     df = df[df["year"] >= 2005]
 
     # HFD has no conditional-ASFR tables for the UK — reconstruct it from
@@ -235,15 +224,4 @@ if __name__ == "__main__":
     df = add_change_since_baseline(df)
     for output, change in [(OUTPUT, False), (OUTPUT_CHANGE, True)]:
         fig = make_facet(df, all_countries, change=change)
-        fig.write_html(
-            output,
-            include_plotlyjs="cdn",
-            full_html=True,
-            default_width="100%",
-            default_height=f"{fig.layout.height}px",
-            config={"responsive": True},
-        )
-        html = open(output, "r", encoding="utf-8").read()
-        html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-        open(output, "w", encoding="utf-8").write(html)
-        print(f"Saved {output}")
+        write_html(fig, output, height=f"{fig.layout.height}px")

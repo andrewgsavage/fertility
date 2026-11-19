@@ -12,9 +12,12 @@ import re
 import pandas as pd
 import plotly.graph_objects as go
 
-INPUT = "data/children-born-per-woman.csv"
-POPULATION_INPUT = "data/population.csv"
-OUTPUT = "outputs/tfr_threshold_year.html"
+from common.paths import data_dir, outputs_dir
+from common.plotting import write_html
+
+INPUT = data_dir("OWID") / "children-born-per-woman.csv"
+POPULATION_INPUT = data_dir("OWID") / "population.csv"
+OUTPUT = outputs_dir("OWID") / "tfr_threshold_year.html"
 
 DEFAULT_THRESHOLD = 1.4
 THRESHOLD_MIN, THRESHOLD_MAX, THRESHOLD_STEP = 1.0, 6.0, 0.1
@@ -170,15 +173,7 @@ gd.on('plotly_click', function (eventData) {{
 }});
 """
 
-fig.write_html(
-    OUTPUT,
-    include_plotlyjs="cdn",
-    full_html=True,
-    post_script=post_script,
-    default_width="100%",
-    default_height="100%",
-    config={"responsive": True},
-)
+write_html(fig, OUTPUT, post_script=post_script, full_page=False, log=False)
 
 html = open(OUTPUT, "r", encoding="utf-8").read()
 html = html.replace(

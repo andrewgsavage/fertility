@@ -2,10 +2,12 @@
 authors = ["Andrew <andrewgsavage@gmail.com>"]
 channels = ["conda-forge"]
 name = "fertility"
-platforms = ["win-64"]
+platforms = ["win-64", "linux-64"]
 version = "0.1.0"
 
 [tasks]
+# Rerun every <SOURCE>/scripts entry point (optionally only some folders: `pixi run outputs ONS HFD`).
+outputs = "python -m common.run_all"
 docs-build = "sphinx-build -b html docs docs/_build/html"
 # Ignore files that builds and editors write into docs/ (generated _static/<name>/
 # copies, __pycache__, editor temp files) so they don't trigger a rebuild + page reload.
@@ -34,3 +36,11 @@ python-kaleido = ">=1.3.0,<2"
 sphinx-autobuild = "*"
 xlrd = ">=2.0.2,<3"
 pyyaml = ">=6.0.3,<7"
+
+# Repo root on the import path, so scripts in any folder can `from common import ...`
+# whatever the working directory. Activation runs in cmd on win-64 and bash on linux-64.
+[target.win-64.activation.env]
+PYTHONPATH = "%PIXI_PROJECT_ROOT%"
+
+[target.linux-64.activation.env]
+PYTHONPATH = "$PIXI_PROJECT_ROOT"

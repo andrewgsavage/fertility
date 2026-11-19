@@ -44,8 +44,11 @@ import math
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-OUTPUT = "outputs/first_birth_rates_by_education_uk.html"
-OUTPUT_LOGY = "outputs/first_birth_rates_by_education_uk_logy.html"
+from common.paths import outputs_dir
+from common.plotting import write_html
+
+OUTPUT = outputs_dir("ONS") / "first_birth_rates_by_education_uk.html"
+OUTPUT_LOGY = outputs_dir("ONS") / "first_birth_rates_by_education_uk_logy.html"
 
 COUNTRIES = ["England & Wales", "Scotland"]
 AGE_GROUPS = [("15-29", "Women aged 15-29"), ("30-49", "Women aged 30-49")]
@@ -138,18 +141,7 @@ def plot(log_y=False):
 
 
 def _save(fig, path):
-    fig.write_html(
-        path,
-        include_plotlyjs="cdn",
-        full_html=True,
-        default_width="100%",
-        default_height="100%",
-        config={"responsive": True},
-    )
-    html = open(path, "r", encoding="utf-8").read()
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    open(path, "w", encoding="utf-8").write(html)
-    print(f"Saved {path}")
+    write_html(fig, path)
 
 
 if __name__ == "__main__":

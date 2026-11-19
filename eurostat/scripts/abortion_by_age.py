@@ -21,22 +21,20 @@ Outputs:
   eurostat/outputs/abortion_by_age.html  chart with a country dropdown
 """
 
-import pathlib
 import re
-import sys
 
 import pandas as pd
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-_SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
-_ROOT = _SCRIPT_DIR.parent.parent
-DATA = _SCRIPT_DIR.parent / "data"
-OUTDIR = _SCRIPT_DIR.parent / "outputs"
-HFD_BIRTHS = _ROOT / "HFD" / "data" / "HFD" / "birthsRR.txt"
+import abortion_by_age_national as nat_src
+from common.hfd import HFD_DIR
+from common.paths import data_dir, outputs_dir
+from common.plotting import write_html
 
-sys.path.insert(0, str(_SCRIPT_DIR))
-import abortion_by_age_national as nat_src  # noqa: E402
+DATA = data_dir("eurostat")
+OUTDIR = outputs_dir("eurostat")
+HFD_BIRTHS = HFD_DIR / "birthsRR.txt"
 
 NAMES = {
     "AL": "Albania", "AM": "Armenia", "AZ": "Azerbaijan", "BE": "Belgium", "BG": "Bulgaria",
@@ -221,10 +219,8 @@ if __name__ == "__main__":
     out["abortions_unknown_age"] = (100 * out.abortions_unknown_age).round(1)
     out = out.rename(columns={"abortions_unknown_age": "abortions_unknown_age_pct"})
     out.to_csv(OUTDIR / "abortion_by_age.csv", index=False)
-    sys.path.insert(0, str(_SCRIPT_DIR))
-    from _common import write_html
-    write_html(plot(d), "abortion_by_age.html")
-    write_html(plot_small_multiples(d), "abortion_by_age_small_multiples.html")
+    write_html(plot(d), OUTDIR / "abortion_by_age.html")
+    write_html(plot_small_multiples(d), OUTDIR / "abortion_by_age_small_multiples.html")
 
     latest = d[d.year == d.groupby("country").year.transform("max")]
     p = latest.pivot_table(index=["country", "year"], columns="age",

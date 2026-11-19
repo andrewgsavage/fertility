@@ -12,7 +12,7 @@ if str(_ONS_SCRIPTS) not in sys.path:
 
 from metrics import ASFR_BASE_KEYS, METRIC_LABELS, POPULATION_ORDER  # noqa: E402
 
-_FERTILITY_JSON = _REPO_ROOT / "ONS" / "outputs" / "fertility_by_lad.json"
+_FERTILITY_JSON = _REPO_ROOT / "ONS" / "intermediate" / "fertility_by_lad.json"
 
 
 def _cohort_label(asfr_key):
@@ -38,7 +38,7 @@ class ScatterControlsDirective(SphinxDirective):
     """The Explore page's cohort-preset buttons, sync-axes checkbox, and
     year/play controls above the scatter iframe. Built live at Sphinx
     build time from ONS/scripts/metrics.py's ASFR/population key lists and
-    outputs/fertility_by_lad.json's year range, so the buttons and the
+    ONS/intermediate/fertility_by_lad.json's year range, so the buttons and the
     slider's min/max always match what scatter_plotly.html actually
     contains rather than being hand-copied into this page."""
 

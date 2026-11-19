@@ -13,86 +13,23 @@ Plotted lines are period years (calendar year the transition occurred:
 cohort + age). The standalone HTML output is unfiltered — a pair of
 min/max range-slider inputs in the page let the viewer restrict which
 years are shown client-side, via Plotly.restyle on trace visibility.
-load_period_rates()'s own MIN_PERIOD_YEAR default (used by callers like
-HFD/scripts/cond_asfr_region_grid.py) is unchanged.
+The Table 3 loaders and hazard calculation live in common/ons_table3.py,
+shared with HFD/scripts/cond_asfr_facet.py and the coupling charts.
 """
 
-import json
-import pathlib
-import sys
-
-import openpyxl
 import plotly.colors as pc
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-# Resolved relative to this file (not cwd) so load_table3()/load_period_rates()
-# work whether this module is run directly (cwd=ONS/) or imported from
-# elsewhere (e.g. HFD/scripts/cond_asfr_region_grid.py, cwd=HFD/) to fold the
-# UK into the Western Europe region grid as an extra column.
-_SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
-_HFD_SCRIPTS = _SCRIPT_DIR.parent.parent / "HFD" / "scripts"
-if str(_HFD_SCRIPTS) not in sys.path:
-    sys.path.insert(0, str(_HFD_SCRIPTS))
+from common.ons_table3 import load_cohort_cumulative, load_cohort_rates, load_period_rates
+from common.paths import outputs_dir
+from common.plot_colors import COHORT_COLORSCALE, PERIOD_COLORSCALE, cohort_axis, period_axis
+from common.plotting import range_post_script, write_html
 
-from plot_colors import COHORT_COLORSCALE, PERIOD_COLORSCALE, cohort_axis, period_axis  # noqa: E402
-
-SOURCE = _SCRIPT_DIR.parent / "data" / "finalisingcohorttables2024finalforupload.xlsx"
-OUTPUT = "outputs/cond_asfr_uk_ons.html"
-COHORT_OUTPUT = "outputs/cond_asfr_uk_ons_cohort.html"
-CUMULATIVE_OUTPUT = "outputs/cond_asfr_uk_ons_cumulative.html"
-MIN_PERIOD_YEAR = 2005
-
-
-def load_table3():
-    wb = openpyxl.load_workbook(SOURCE, read_only=True, data_only=True)
-    ws = wb["Table 3"]
-    rows = list(ws.iter_rows(values_only=True))[9:]
-
-    by_cohort = {}
-    for year, age, pct0, pct1, pct2, pct3, pct4plus, *_ in rows:
-        if year is None or age == "Final":
-            continue
-        p1 = 100 - pct0
-        p2 = pct2 + pct3 + pct4plus
-        by_cohort.setdefault(year, {})[age] = (p1, p2)
-    return by_cohort
-
-
-def conditional_rates(by_cohort):
-    """cohort -> {age: (cond1, cond2)}, skipping the first age each cohort has."""
-    result = {}
-    for cohort, ages in by_cohort.items():
-        sorted_ages = sorted(ages)
-        cohort_rates = {}
-        for prev_age, age in zip(sorted_ages, sorted_ages[1:]):
-            if age != prev_age + 1:
-                continue
-            p1_prev, p2_prev = ages[prev_age]
-            p1, p2 = ages[age]
-            childless_prev = 100 - p1_prev
-            one_child_prev = p1_prev - p2_prev
-            c1 = max(0.0, (p1 - p1_prev) / childless_prev) if childless_prev > 0 else None
-            c2 = max(0.0, (p2 - p2_prev) / one_child_prev) if one_child_prev > 0 else None
-            cohort_rates[age] = (c1, c2)
-        result[cohort] = cohort_rates
-    return result
-
-
-def to_period(rates, min_period_year):
-    """Reslice the cohort-hazard Lexis diagram into period-year lines: for
-    period year Y and age A, the transition happened to cohort (Y - A).
-    Gives one age-profile line per calendar year, like HFD's period charts,
-    even though the underlying hazard is still computed along each cohort.
-    """
-    by_period = {}
-    for cohort, ages in rates.items():
-        for age, (c1, c2) in ages.items():
-            period_year = cohort + age
-            if period_year < min_period_year:
-                continue
-            by_period.setdefault(period_year, {})[age] = (c1, c2)
-    return by_period
+OUTDIR = outputs_dir("ONS")
+OUTPUT = OUTDIR / "cond_asfr_uk_ons.html"
+COHORT_OUTPUT = OUTDIR / "cond_asfr_uk_ons_cohort.html"
+CUMULATIVE_OUTPUT = OUTDIR / "cond_asfr_uk_ons_cumulative.html"
 
 
 def plot(
@@ -207,64 +144,8 @@ def _year_color(year, ymin, ymax, colorscale):
     return pc.sample_colorscale(colorscale, [t])[0]
 
 
-def load_period_rates(min_period_year=MIN_PERIOD_YEAR):
-    """{period_year: {age: (cond1, cond2)}} — the reusable entry point for
-    other scripts (see HFD/scripts/cond_asfr_region_grid.py, which folds
-    this into the Western Europe region grid as a "UK_ONS" column)."""
-    by_cohort = load_table3()
-    rates = conditional_rates(by_cohort)
-    return to_period(rates, min_period_year)
-
-
-def load_cohort_cumulative():
-    """{cohort: {age: (P1, P2)}} — the cumulative % of the cohort with
-    >=1 / >=2 children, i.e. load_table3()'s raw values directly (already
-    cohort-indexed, like load_cohort_rates()). For plot_cumulative_cohort().
-    """
-    return load_table3()
-
-
-def load_cohort_rates():
-    """{cohort: {age: (cond1, cond2)}} — the cohort-indexed counterpart to
-    load_period_rates(), for plot_cohort()."""
-    by_cohort = load_table3()
-    return conditional_rates(by_cohort)
-
-
-# No in-iframe UI — the range control lives in the containing docs page
-# (outside the iframe, see docs/uk/cond-asfr.md / later-births.md) so one
-# control can drive several of these charts at once. This just exposes the
-# filtering itself as window.setRange(lo, hi) for that external control to
-# call via each iframe's contentWindow.
-RANGE_POST_SCRIPT = """
-var gd = document.getElementById('{plot_id}');
-var traceGroups = __TRACE_GROUPS__;
-window.setRange = function (lo, hi) {
-    var visible = traceGroups.map(function (g) { return g === null ? true : (g >= lo && g <= hi); });
-    Plotly.restyle(gd, {visible: visible});
-};
-"""
-
-
 def _write_range_chart(fig, trace_groups, output_path):
-    post_script = RANGE_POST_SCRIPT.replace("__TRACE_GROUPS__", json.dumps(trace_groups))
-    fig.write_html(
-        output_path,
-        include_plotlyjs="cdn",
-        full_html=True,
-        post_script=post_script,
-        default_width="100%",
-        default_height="100%",
-        config={"responsive": True},
-    )
-    # write_html's own template doesn't stretch <html>/<body> to fill the
-    # iframe — without an external UI panel pushing content down (unlike
-    # before), height:100% now works the same way build_plotly_map.py uses
-    # it. See that script for the fuller explanation.
-    html = open(output_path, "r", encoding="utf-8").read()
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    open(output_path, "w", encoding="utf-8").write(html)
-    print(f"Saved {output_path}")
+    write_html(fig, output_path, post_script=range_post_script(trace_groups))
 
 
 if __name__ == "__main__":

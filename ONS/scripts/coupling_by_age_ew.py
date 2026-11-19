@@ -16,6 +16,8 @@ import pandas as pd
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
+from common.plotting import write_html
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 XLSX = ROOT / "data" / "families" / "maritalstatuslivingarrangements2002to2025englandandwales.xlsx"
 OUTDIR = ROOT / "outputs"
@@ -72,20 +74,10 @@ def plot(d):
     return fig
 
 
-def write_html(fig, name):
-    out = OUTDIR / name
-    fig.write_html(out, include_plotlyjs="cdn", full_html=True, default_width="100%",
-                   default_height="100%", config={"responsive": True})
-    html = out.read_text(encoding="utf-8")
-    out.write_text(html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1),
-                   encoding="utf-8")
-    print(f"Saved {out}")
-
-
 if __name__ == "__main__":
     d = load()
     d.round(2).to_csv(OUTDIR / "coupling_by_age_ew.csv", index=False)
-    write_html(plot(d), "coupling_by_age_ew.html")
+    write_html(plot(d), OUTDIR / "coupling_by_age_ew.html")
     print(d[d.year.isin([2002, 2010, 2019, 2025])].pivot_table(
         index=["sex", "age"], columns="year", values="couple").round(1).to_string())
     print(d[d.year.isin([2002, 2010, 2019, 2025])].pivot_table(

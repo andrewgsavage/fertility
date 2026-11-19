@@ -3,8 +3,9 @@
 Eurostat isoc_ci_ac_i (I_IUSNET) and demo_frate. See young_fertility.py for download URLs.
 """
 
+from common.plotting import write_html
 from scatter_chart import changes, scatter
-from young_fertility import OUTDIR, internet_use, write_html
+from young_fertility import OUTDIR, internet_use
 
 Y0, Y1 = 2011, 2019
 

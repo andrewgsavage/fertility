@@ -10,7 +10,6 @@ Inputs (download into ONS/data/ - not tracked in git):
   slc_england_2025.xlsx, fred_SLOAS.csv
 """
 
-import pathlib
 import shutil
 
 import openpyxl
@@ -18,10 +17,12 @@ import pandas as pd
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-_SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
-DATA = _SCRIPT_DIR.parent / "data"
-OUTPUT = _SCRIPT_DIR.parent / "outputs" / "student_loan_debt_england_us.html"
-DOCS = _SCRIPT_DIR.parent.parent / "docs" / "_static" / "ons" / "student_loan_debt_england_us.html"
+from common.paths import REPO, data_dir, outputs_dir
+from common.plotting import write_html
+
+DATA = data_dir("ONS")
+OUTPUT = outputs_dir("ONS") / "student_loan_debt_england_us.html"
+DOCS = REPO / "docs" / "_static" / "ons" / "student_loan_debt_england_us.html"
 
 
 def england():
@@ -66,11 +67,7 @@ def plot(e, u):
 if __name__ == "__main__":
     e, u = england(), us()
     fig = plot(e, u)
-    fig.write_html(OUTPUT, include_plotlyjs="cdn", full_html=True, default_width="100%",
-                   default_height="100%", config={"responsive": True})
-    html = OUTPUT.read_text(encoding="utf-8")
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    OUTPUT.write_text(html, encoding="utf-8")
+    write_html(fig, OUTPUT, log=False)
     DOCS.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy(OUTPUT, DOCS)
     print(f"Saved {OUTPUT}")

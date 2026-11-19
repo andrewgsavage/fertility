@@ -23,18 +23,14 @@ Transcribed below: DHSC 2014 tables (England & Wales 2004-2012), Destatis
 (Japan FY2003-2024), each with its source.
 """
 
-import pathlib
-import sys
-
 import openpyxl
 import pandas as pd
 
-_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
-NAT = _ROOT / "eurostat" / "data" / "national"
-ONS = _ROOT / "ONS" / "data"
+from common import ons_abortion as ew
+from common.paths import data_dir
 
-sys.path.insert(0, str(_ROOT / "ONS" / "scripts"))
-import abortion_share_uk as ew  # noqa: E402
+NAT = data_dir("eurostat") / "national"
+ONS = data_dir("ONS")
 
 AGES = ["Under 20", "20–24", "25–29", "30–34", "35+"]
 COLS = ["country", "year", "age", "abortions", "abortions_unknown_age"]
