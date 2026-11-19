@@ -1,0 +1,15 @@
+id: stone-2024-more-crowding
+type: report
+title: 'More Crowding, Fewer Babies: The Effects of Housing Density on Fertility'
+authors:
+- Stone, L.
+year: 2024
+url: https://ifstudies.org/ifs-admin/resources/research/lymanstonefertilityhousingbrief-june.pdf
+publisher: Institute for Family Studies
+countries:
+- USA
+measurables:
+- dwelling-size
+- tfr
+notes: Imported from the citation on docs/factors/housing.md; the page's summary of the finding is not
+  carried over (AI-written, unreviewed). Metadata from the page's citation; no DOI.

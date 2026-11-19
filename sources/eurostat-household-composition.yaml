@@ -1,0 +1,9 @@
+id: eurostat-household-composition
+type: web
+title: Household composition statistics
+url: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Household_composition_statistics
+publisher: Eurostat Statistics Explained
+measurables:
+- share-in-couple
+notes: Imported from the citation on docs/factors/partnership-formation.md; the page's summary of the
+  finding is not carried over (AI-written, unreviewed). Metadata from the page's citation; no DOI.

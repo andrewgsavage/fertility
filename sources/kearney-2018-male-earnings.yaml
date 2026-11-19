@@ -1,0 +1,20 @@
+id: kearney-2018-male-earnings
+type: paper
+title: 'Male Earnings, Marriageable Men, and Nonmarital Fertility: Evidence from the Fracking Boom'
+authors:
+- Kearney, M. S.
+- Wilson, R.
+year: 2018
+doi: 10.1162/rest_a_00739
+oa: closed
+countries:
+- USA
+factors:
+- left-behind-young-men
+measurables:
+- male-earnings
+- marriage
+- births
+notes: Imported from the citation on docs/factors/partnership-formation.md; the page's summary of the
+  finding is not carried over (AI-written, unreviewed). Metadata from Crossref/OpenAlex. Published in
+  The Review of Economics and Statistics.

@@ -1,0 +1,16 @@
+id: feijten-2025-stijgende-woningprijzen
+type: report
+title: Stijgende woningprijzen, minder geboorten
+authors:
+- Feijten, P.
+- van Wijk, D.
+year: 2025
+url: https://www.cbs.nl/nl-nl/longread/statistische-trends/2025/stijgende-woningprijzen-minder-geboorten
+publisher: CBS Statistische Trends
+countries:
+- NLD
+measurables:
+- house-price-index
+- births
+notes: Imported from the citation on docs/factors/housing.md; the page's summary of the finding is not
+  carried over (AI-written, unreviewed). Metadata from the page's citation; no DOI.

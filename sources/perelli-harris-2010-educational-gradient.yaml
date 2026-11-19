@@ -1,0 +1,21 @@
+id: perelli-harris-2010-educational-gradient
+type: paper
+title: The Educational Gradient of Childbearing within Cohabitation in Europe
+authors:
+- Perelli-Harris, B.
+- Sigle-Rushton, W.
+- Kreyenfeld, M.
+- Lappegård, T.
+- Keizer, R.
+- Berghammer, C.
+year: 2010
+doi: 10.1111/j.1728-4457.2010.00357.x
+oa: green
+oa_url: https://pure.rug.nl/ws/files/14480430/2010-PerelliHarrisB-Educational.pdf
+measurables:
+- share-in-couple
+- marriage
+- educational-attainment
+notes: Imported from the citation on docs/factors/partnership-formation.md; the page's summary of the
+  finding is not carried over (AI-written, unreviewed). Metadata from Crossref/OpenAlex. Published in
+  Population and Development Review.

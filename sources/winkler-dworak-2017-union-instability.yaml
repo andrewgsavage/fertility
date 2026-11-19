@@ -1,0 +1,21 @@
+id: winkler-dworak-2017-union-instability
+type: report
+title: 'Union instability and fertility: a microsimulation model for Italy and Great Britain'
+authors:
+- Winkler-Dworak, M.
+- Beaujouan, E.
+- Di Giulio, P.
+- Spielauer, M.
+year: 2017
+url: https://www.oeaw.ac.at/fileadmin/subsites/Institute/VID/PDF/Publications/Working_Papers/WP2017_08.pdf
+publisher: VID Working Paper 08/2017, Vienna Institute of Demography
+countries:
+- ITA
+- GBR
+factors:
+- partnership-stability
+measurables:
+- separation
+- completed-fertility
+notes: Imported from the citation on docs/factors/partnership-formation.md; the page's summary of the
+  finding is not carried over (AI-written, unreviewed). Metadata from the page's citation; no DOI.

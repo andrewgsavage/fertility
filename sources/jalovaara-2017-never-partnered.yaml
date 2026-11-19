@@ -1,0 +1,21 @@
+id: jalovaara-2017-never-partnered
+type: paper
+title: 'From never partnered to serial cohabitors: Union trajectories to childlessness'
+authors:
+- Jalovaara, M.
+- Fasang, A.
+year: 2017
+doi: 10.4054/DemRes.2017.36.55
+oa: gold
+oa_url: https://doi.org/10.4054/demres.2017.36.55
+countries:
+- FIN
+factors:
+- partnership-stability
+measurables:
+- share-in-couple
+- separation
+- childlessness
+notes: Imported from the citation on docs/factors/partnership-formation.md; the page's summary of the
+  finding is not carried over (AI-written, unreviewed). Metadata from Crossref/OpenAlex. Published in
+  Demographic Research.

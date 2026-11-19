@@ -1,0 +1,17 @@
+id: chiocchio-2026-fewer-couples
+type: paper
+title: Fewer couples, fewer births
+authors:
+- Chiocchio, F.
+- Garstenauer, T.
+year: 2026
+url: https://fchiocchio.github.io/files/Papers/FewerCouplesFewerBirths.pdf
+countries:
+- USA
+measurables:
+- marriage
+- share-in-couple
+- tfr
+notes: Imported from the citation on docs/factors/partnership-formation.md; the page's summary of the
+  finding is not carried over (AI-written, unreviewed). Metadata from the page's citation; no DOI. Preprint,
+  April 2026; Covers the US (ACS) and eight European countries (EU-SILC).

@@ -1,0 +1,22 @@
+id: andersson-2022-less-more
+type: paper
+title: Less Is More? Repartnering and Completed Cohort Fertility in Finland
+authors:
+- Andersson, L.
+- Jalovaara, M.
+- Uggla, C.
+- Saarela, J.
+year: 2022
+doi: 10.1215/00703370-10351787
+oa: gold
+oa_url: https://doi.org/10.1215/00703370-10351787
+countries:
+- FIN
+factors:
+- partnership-stability
+measurables:
+- separation
+- completed-fertility
+notes: Imported from the citation on docs/factors/partnership-formation.md; the page's summary of the
+  finding is not carried over (AI-written, unreviewed). Metadata from Crossref/OpenAlex. Published in
+  Demography.

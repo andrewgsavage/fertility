@@ -1,0 +1,20 @@
+id: berrington-2015-educational-differences
+type: paper
+title: Educational differences in timing and quantum of childbearing in Britain
+authors:
+- Berrington, A.
+- Stone, J.
+- Beaujouan, E.
+year: 2015
+doi: 10.4054/DemRes.2015.33.26
+oa: gold
+oa_url: https://www.demographic-research.org/volumes/vol33/26/33-26.pdf
+countries:
+- GBR
+measurables:
+- educational-attainment
+- completed-fertility
+- mab1
+notes: Imported from the citation on docs/factors/partnership-formation.md; the page's summary of the
+  finding is not carried over (AI-written, unreviewed). Metadata from Crossref/OpenAlex. Published in
+  Demographic Research.

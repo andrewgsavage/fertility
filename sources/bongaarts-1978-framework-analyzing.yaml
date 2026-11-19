@@ -1,0 +1,14 @@
+id: bongaarts-1978-framework-analyzing
+type: paper
+title: A Framework for Analyzing the Proximate Determinants of Fertility
+authors:
+- Bongaarts, J.
+year: 1978
+doi: 10.2307/1972149
+oa: closed
+measurables:
+- marriage
+- tfr
+notes: Imported from the citation on docs/factors/partnership-formation.md; the page's summary of the
+  finding is not carried over (AI-written, unreviewed). Metadata from Crossref/OpenAlex. Published in
+  Population and Development Review.

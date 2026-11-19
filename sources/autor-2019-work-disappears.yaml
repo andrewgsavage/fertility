@@ -1,0 +1,22 @@
+id: autor-2019-work-disappears
+type: paper
+title: 'When Work Disappears: Manufacturing Decline and the Falling Marriage Market Value of Young Men'
+authors:
+- Autor, D.
+- Dorn, D.
+- Hanson, G.
+year: 2019
+doi: 10.1257/aeri.20180010
+oa: bronze
+oa_url: https://www.aeaweb.org/articles/pdf/doi/10.1257/aeri.20180010
+countries:
+- USA
+factors:
+- left-behind-young-men
+measurables:
+- male-earnings
+- marriage
+- births
+notes: 'Imported from the citation on docs/factors/partnership-formation.md; the page''s summary of the
+  finding is not carried over (AI-written, unreviewed). Metadata from Crossref/OpenAlex. Published in
+  American Economic Review: Insights.'

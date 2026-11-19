@@ -1,0 +1,19 @@
+id: goldstein-2013-fertility-reactions
+type: paper
+title: Fertility Reactions to the "Great Recession" in Europe
+authors:
+- Goldstein, J. R.
+- Kreyenfeld, M.
+- Jasilioniene, A.
+- Karaman Örsal, D. D.
+year: 2013
+doi: 10.4054/DemRes.2013.29.4
+oa: gold
+oa_url: https://www.demographic-research.org/volumes/vol29/4/29-4.pdf
+factors:
+- economic-uncertainty
+measurables:
+- asfr
+notes: Imported from the citation on docs/factors/explaining-the-2010s-drop.md; the page's summary of
+  the finding is not carried over (AI-written, unreviewed). Metadata from Crossref/OpenAlex. Published
+  in Demographic Research.
