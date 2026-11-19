@@ -58,3 +58,11 @@ Studies found by searching OpenAlex, read from abstracts only. The verdict says 
 No study found for: PPR 0→1, Young first births, PPR 1→2+, Second+ cond. ASFR.
 
 Source: [`research/factor-evidence/life-course-and-education-work.md`](https://github.com/andrewgsavage/fertility/blob/main/research/factor-evidence/life-course-and-education-work.md).
+
+## Findings in the source registry
+
+Each row is one source's verdict on one cell of the [factor table](index.md), against the tick the cell had when it was judged. "Read" says whether the verdict came from the abstract or the full text. Entries live in the [source registry](../sources.md).
+
+```{sources}
+:factor: student-debt
+```

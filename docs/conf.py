@@ -13,6 +13,7 @@ extensions = [
     "myst_parser",
     "sphinx_design",
     "scatter_controls",
+    "sources_registry",
 ]
 
 myst_enable_extensions = [

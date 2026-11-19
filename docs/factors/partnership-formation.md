@@ -451,3 +451,11 @@ Studies found by searching OpenAlex, read from abstracts only. The verdict says 
 | Second+ cond. ASFR | mixed | Perelli-Harris 2014, [10.1007/s10680-014-9320-2](https://doi.org/10.1007/s10680-014-9320-2) | 15 countries: cohabiting mothers have lower second-conception risks than married mothers where cohabitation is uncommon; the gap narrows as it spreads. |
 
 Source: [`research/factor-evidence/life-course-and-education-work.md`](https://github.com/andrewgsavage/fertility/blob/main/research/factor-evidence/life-course-and-education-work.md).
+
+## Findings in the source registry
+
+Each row is one source's verdict on one cell of the [factor table](index.md), against the tick the cell had when it was judged. "Read" says whether the verdict came from the abstract or the full text. Entries live in the [source registry](../sources.md).
+
+```{sources}
+:factor: partnership-formation
+```
