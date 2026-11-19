@@ -9,5 +9,14 @@ oa: closed
 measurables:
 - ideal-children
 - completed-fertility
+findings:
+- factor: ideal-family-size
+  verdict: mixed
+  tick: '?'
+  basis: abstract
+  ref: sources/coombs-1979-reproductive-goals.yaml
+  note: 'Detroit married women, 1962 baseline, 15-year follow-up to completed fertility: a scale of underlying
+    family-size preference predicts fertility net of the usual covariates, most strongly among the just-married
+    (before any births), where it beats stated expected family size. Points toward a tick; 1960s US, not parity-specific.'
 notes: 'Cited in stone-2023-not-having-baby (Cardus) for: stated reproductive goals predict achieved fertility.
   Published in Demography.'

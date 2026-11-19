@@ -12,6 +12,18 @@ oa: green
 oa_url: https://researchonline.lshtm.ac.uk/id/eprint/4657501/1/Cleland-etal-2020_Fertility_preferences_and%20subsequent-childbearing.pdf
 measurables:
 - ideal-children
+findings:
+- factor: ideal-family-size
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: '?'
+  basis: fulltext
+  ref: sources/cleland-2019-fertility-preferences.yaml
+  note: 'Synthesis of longitudinal studies in 28 Asian and African populations: a baseline desire to stop childbearing
+    predicts lower subsequent fertility in every population, more strongly where contraceptive use is higher;
+    a desire to delay does not consistently predict fertility. Preferences and behaviour often diverge (weak
+    contraceptive implementation, unstable preferences). Points toward a tick for higher-order births, in high-
+    and middle-fertility settings.'
 notes: 'Cited in stone-2023-not-having-baby (Cardus) for: preferences predict later fertility, and near-term
   (two-year) expectations are fairly accurate projections. Online 2019; issue 74(1), 2020. The report misnames
   the journal as Journal of Population Studies. Published in Population Studies.'
