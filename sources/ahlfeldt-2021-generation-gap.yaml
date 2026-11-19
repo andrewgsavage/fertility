@@ -13,3 +13,8 @@ factors:
 - population-ageing
 notes: Imported from the literature review page (docs/literature-review.md, removed). Published in European
   Journal of Political Economy. Literature review cited 2022; OpenAlex gives 2021.
+countries:
+- CHE
+period:
+- 1981
+- 2017

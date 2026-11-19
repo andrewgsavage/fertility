@@ -15,8 +15,37 @@ findings:
   measure: cond-asfr-2plus
   verdict: no-evidence
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: Abstract is a contents list of the volume; no test seen.
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Self-reinforcing demographic (negative momentum), sociological (ideal family size) and
+    economic (relative income) mechanisms proposed; no test against birth-order or parity-specific rates.'
+- factor: ideal-family-size
+  measure: ideal-children
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Cross-sectional 2001 regional data; ideal family size is the outcome here (a link from
+    actual fertility to ideals), not from ideals to births. Authors note one cross-section only.'
+- factor: income
+  verdict: mixed
+  tick: '?'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Descriptive Easterlin relative-income ratio against fertility trends in four countries;
+    no regression, and authors say the measure may be a poor proxy.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Evidence file cites it as 2006; OpenAlex gives 2008. Published in Vienna Yearbook of Population Research.
+countries:
+- ITA
+- ESP
+- NLD
+- AUT
+- CZE
+- SWE
+- JPN
+- GBR_NP
+period:
+- 1935
+- 2005

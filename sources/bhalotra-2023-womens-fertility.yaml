@@ -47,10 +47,36 @@ findings:
     cell is blank.'
 - factor: child-mortality
   measure: ppr-1-2plus
+  verdict: mixed
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'USA: Intensive-margin fertility falls, but the effect is concentrated in 3+ children, not a measured
+    fall in the 1-to-2 progression. Net fertility; women aged 18-50 at census.'
+- factor: child-mortality
+  measure: cond-asfr-2plus
   verdict: supports
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: Intensive-margin fertility falls after mortality decline.
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'USA: Fall in child mortality lowered transitions to higher-order births, a smaller effect than
+    on first births.'
+- factor: female-employment
+  measure: ppr-0-1
+  verdict: mixed
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'USA: Mortality decline raised women''s labour force participation 2.6 pp and the share both childless
+    and working by 2.7 pp (13%); authors say participation, not marriage, mediated childlessness. Employment
+    is a co-outcome of the health shock, not separately identified as a cause.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Journal of the European Economic Association.
+countries:
+- USA
+period:
+- 1930
+- 1970

@@ -22,5 +22,50 @@ findings:
   ref: research/factor-evidence/fulltext-recheck.md
   note: '185 states 1970-2019, two-way fixed effects with three abortion-policy indices: liberalisation
     has no robust association with TFR change. Consistent with the blank; TFR only.'
+- factor: abortion
+  measure: ppr-0-1
+  verdict: contradicts
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: No robust association of abortion liberalisation with TFR change; the only significant
+    coefficients are positive and vanish with imputation or country trends. TFR only; cannot separate
+    childlessness.'
+- factor: abortion
+  measure: cond-asfr-1
+  verdict: contradicts
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Same TFR null; no first-birth measure.'
+- factor: abortion
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: 'no'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: TFR null is consistent with a blank cell but does not test parity-specific effects.'
+- factor: contraception
+  measure: tfr
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Countries with larger increases in contraceptive use see significantly larger fertility
+    falls (all-column; TFR only).'
+- factor: education
+  measure: tfr
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Women''s mean years of education robustly lowers TFR within countries (all-column; TFR
+    only).'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in European Journal of Population.
+countries:
+- all
+period:
+- 1970
+- 2019

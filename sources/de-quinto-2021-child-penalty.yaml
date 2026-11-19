@@ -22,3 +22,8 @@ findings:
     measured, fertility response not tested.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in SERIEs.
+countries:
+- ESP
+period:
+- 1990
+- 2018

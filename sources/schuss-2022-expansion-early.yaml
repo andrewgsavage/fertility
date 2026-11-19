@@ -19,10 +19,13 @@ findings:
   measure: cond-asfr-1
   verdict: supports
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/policy-and-the-state.md
-  note: 'Germany SOEP 1998–2012, county-level quasi-experiment: +11.9% first-birth transition for native
-    childless couples in the labour force.'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'DEUTW: Positive first-birth effect only in the target group (native, both employed before childbearing);
+    full-sample and native-couple estimates in Table 2 are not significant. Effect holds for non-movers
+    (Table 5) and is strongest for highly educated (Table 7 HR 3.2). Coverage rose from 2.2% (2002) to
+    18.8% (2012).'
 - factor: childcare-provision
   measure: ppr-1-2plus
   verdict: contradicts
@@ -41,5 +44,29 @@ findings:
   basis: fulltext
   ref: research/factor-evidence/fulltext-recheck.md
   note: 'As above: no significant second-birth effect of childcare expansion in Germany.'
+- factor: education
+  measure: cond-asfr-1
+  verdict: no-evidence
+  tick: 'yes'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'DEUTW: Highly educated couples respond most to childcare expansion; does not test the education
+    delay mechanism itself.'
+- factor: female-employment
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'DEUTW: Childcare expansion raises first births among employed couples, suggesting that easing
+    the work-family conflict matters; employment is the eligibility condition, not an estimated cause
+    of births.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Bulletin of Economic Research.
+countries:
+- DEUTW
+period:
+- 1998
+- 2012

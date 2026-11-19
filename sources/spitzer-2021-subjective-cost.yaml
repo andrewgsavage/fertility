@@ -20,5 +20,66 @@ findings:
   ref: research/factor-evidence/fulltext-recheck.md
   note: 'EU-SILC, 30 countries 2004-15: a birth lowers parents'' reported ability to make ends meet, mostly
     through direct costs; the first child costs most and each further child less. No fertility outcome.'
+- factor: child-costs
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Economies of scale in number of children (Nordic exception, almost linear); no fertility
+    outcome.'
+- factor: parental-leave
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Leave length raises short-term indirect cost; Nordic mothers return full-time after leave.
+    Cost outcome only.'
+- factor: motherhood-penalty
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Short-run maternal labour-income losses are small next to direct costs and mostly compensated
+    by transfers or fathers'' income; panel too short for long-run penalty.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Institut für Demographie - VID.
+countries:
+- DNK
+- FIN
+- ISL
+- NOR
+- SWE
+- BEL
+- FRATNP
+- NLD
+- AUT
+- CHE
+- IRL
+- GBR_NP
+- CYP
+- GRC
+- ESP
+- ITA
+- MLT
+- PRT
+- BGR
+- CZE
+- EST
+- HRV
+- HUN
+- LTU
+- LVA
+- POL
+- ROU
+- SRB
+- SVN
+- SVK
+period:
+- 2004
+- 2015

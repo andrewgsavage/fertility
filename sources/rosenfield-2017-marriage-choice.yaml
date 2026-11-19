@@ -19,5 +19,25 @@ findings:
   note: 'US longitudinal data: meeting online does not predict breakup and predicts faster transitions
     to marriage for heterosexual couples. Conditional on forming a couple; says nothing about how many
     form.'
+- factor: dating-apps
+  measure: marriage
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'USA: US HCMST 2009-15, heterosexual couples who met 1995 or later: couples who met online (esp.
+    dating sites) transition to marriage faster. Conditional on having a couple; selection not ruled out;
+    says nothing on how many form couples.'
+- factor: dating-apps
+  measure: separation
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'USA: No difference in breakup between couples who met online and offline (US HCMST 2009-15).
+    Breakup is partnership stability, not a dating-apps cell.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Sociological Science.
+countries:
+- USA
+period:
+- 2009
+- 2015

@@ -25,5 +25,22 @@ findings:
   note: 'Interrupted time series vs Scotland and Wales and synthetic control vs high-income countries:
     England''s under-18 pregnancy and birth rates fell no faster than comparators, so the fall is not
     attributable to the strategy.'
+- factor: sex-education
+  measure: cond-asfr-1
+  verdict: no-evidence
+  tick: '?'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBRTENW: Teenage pregnancy and birth rates only; first-birth conditional rates not examined.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Social Science &amp; Medicine.
+countries:
+- GBRTENW
+- GBR_SCO
+- PRT
+- USA
+- NZL
+period:
+- 1987
+- 2016

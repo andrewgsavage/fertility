@@ -23,5 +23,52 @@ findings:
   ref: research/factor-evidence/fulltext-recheck.md
   note: '251 EU regions 2002-14: rising unemployment strongly tied to fertility decline at several reproductive
     ages, more so during the recession. Age-specific rates, not first births.'
+- factor: economic-uncertainty
+  measure: young-first-births
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Rising unemployment lowers fertility at ages under 30, strongest at young ages. Age-specific
+    rates of all parities, not first births.'
+- factor: economic-uncertainty
+  measure: ppr-0-1
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Total and age-specific rates only; the authors say they cannot separate postponement
+    from lower final fertility.'
+- factor: economic-uncertainty
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: No birth-order split.'
+- factor: economic-uncertainty
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Associations with unemployment are stronger in the recession, which the authors attribute
+    to broader uncertainty not captured in their indicators. Nordic and Central European fertility was
+    not closely tied to the indicators.'
+- factor: job-insecurity
+  measure: cond-asfr-1
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Unemployment and long-term unemployment are regional labour-market conditions, not temporary
+    contracts; no birth-order split.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Institut für Demographie - VID.
+period:
+- 2002
+- 2014

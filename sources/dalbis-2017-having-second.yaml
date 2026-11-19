@@ -34,5 +34,35 @@ findings:
   ref: research/factor-evidence/fulltext-recheck.md
   note: 'As above: easier access to childcare raises the transition to a second child, especially for
     middle- and high-educated women. Cross-sectional.'
+- factor: childcare-provision
+  measure: cond-asfr-1
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Study concerns the second child; first-birth link to childcare not tested.'
+- factor: education
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: 'no'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Education gradient in second births is U-shaped where childcare coverage is below 31%
+    and increasing where it is high, so it depends on childcare access. Partnered women 15-45 with one
+    child, 19 countries.'
+- factor: income
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: '?'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Couple joint labour income has no significant effect on second-birth probability once
+    education is controlled.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Journal of Demographic Economics.
+period:
+- 2003
+- 2011

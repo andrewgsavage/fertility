@@ -22,5 +22,30 @@ findings:
   note: '24 OECD countries to 2017, country fixed effects: the positive association between female labour-force
     participation and TFR holds within countries and strengthens in recent data, so it is not spurious.
     TFR only, not parity-specific.'
+- factor: female-employment
+  measure: tfr
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Within-country FLFP-TFR association turns from negative to positive in later windows.
+    No causal claim, and TFR is not parity-specific.'
+- factor: female-employment
+  measure: ppr-1-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Period TFR only; no parity-specific outcome examined.'
+- factor: child-benefits
+  measure: tfr
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Family spending is related to FLFP, not to fertility; the link to TFR is only cited from
+    Kalwij (2010).'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demographic Research.
+period:
+- 1970
+- 2017

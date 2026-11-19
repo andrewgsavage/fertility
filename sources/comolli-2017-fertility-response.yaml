@@ -23,5 +23,79 @@ findings:
   note: '31 European countries and the US, 2000-13: higher female unemployment lowers first-birth rates
     at all ages up to 40 (elasticity about −0.15%), and falling consumer confidence tracks the fertility
     decline. Aggregate data.'
+- factor: economic-uncertainty
+  measure: young-first-births
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Largest negative responses to unemployment (-0.17% at 15-19), EPU (-0.11%), CCI (about
+    -0.7% teen fertility) and sovereign risk (-0.18% at 20-24) are among the youngest women; milder above
+    40. All-parity ASFR, so not strictly first births.'
+- factor: economic-uncertainty
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Mothers in late 30s/early 40s postpone second and third births when female unemployment
+    rises (response as large as for younger women). CCI decline cuts 2nd/3rd births of mothers in their
+    30s by about 1% per 1%; mothers under 30 do not respond.'
+- factor: economic-uncertainty
+  measure: tfr
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: TFR elasticity: -0.08% to unemployment, -0.09% to female unemployment, -0.04% to EPU
+    (halves to -0.02% controlling for unemployment), -0.37% to CCI decline (-0.08%, n.s., net of unemployment),
+    -0.025% (n.s.) to sovereign risk. Unemployment is the stronger and more robust predictor.'
+- factor: female-employment
+  measure: cond-asfr-1
+  verdict: contradicts
+  tick: '?'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Female unemployment lowers fertility more than general unemployment, read as women not
+    using time out of work to have children; high-educated women cut fertility when female unemployment
+    rises. Unemployment is a proxy for employment, not a direct employment-rate test.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demographic Research.
+countries:
+- AUT
+- BEL
+- BGR
+- HRV
+- CYP
+- CZE
+- DNK
+- EST
+- FIN
+- FRATNP
+- DEUTNP
+- GRC
+- HUN
+- IRL
+- ITA
+- LVA
+- LTU
+- LUX
+- MLT
+- NLD
+- POL
+- PRT
+- ROU
+- SVK
+- SVN
+- ESP
+- SWE
+- GBR_NP
+- ISL
+- NOR
+- CHE
+- USA
+period:
+- 2000
+- 2013

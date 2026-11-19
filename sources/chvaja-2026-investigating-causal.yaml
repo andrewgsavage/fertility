@@ -22,7 +22,21 @@ findings:
   note: 'US adolescents followed 2003-13 (three waves): weekly religious attendance raises fertility eight
     years later for men only, small and imprecise; no effect for women, despite strong cross-sectional
     associations. Births of any order by the mid-20s.'
+- factor: secularisation
+  measure: young-first-births
+  verdict: mixed
+  tick: 'yes'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'USA: Births by mid-20s are the outcome, so this is the young-births end; small positive effect
+    for men only.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Scientific Reports.
 measurables:
 - cond-asfr-1
+countries:
+- USA
+period:
+- 2003
+- 2013

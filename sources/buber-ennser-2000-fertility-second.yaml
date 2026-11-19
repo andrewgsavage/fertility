@@ -20,7 +20,21 @@ findings:
   note: 'Austria (FFS): half of couples in a second union had a shared child, most within two years; a
     union-commitment effect holds when partners have fewer than two pre-union children. Repartnering recovers
     some births lost to separation; net effect on second+ rates not estimated.'
+- factor: partnership-stability
+  measure: ppr-1-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'AUT: Studies conception of a shared child in second unions, not parity progression ratios; shows
+    childbearing continues across unions but gives no PPR.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demographic Research.
 measurables:
 - cond-asfr-2plus
+countries:
+- AUT
+period:
+- 1960
+- 1996

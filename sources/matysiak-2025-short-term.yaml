@@ -23,5 +23,18 @@ findings:
   note: 'Poland''s 2020 ruling banning nearly all legal abortions cut births about 6.6%, most among younger
     women and first-time mothers: restricting abortion lowered young first births, the opposite of the
     factor''s mechanism. Working paper.'
+- factor: abortion
+  measure: ppr-0-1
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'POL: Only a transient fall in first births; final proportion of mothers not examined.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Working Papers.
+countries:
+- POL
+period:
+- 2018
+- 2022

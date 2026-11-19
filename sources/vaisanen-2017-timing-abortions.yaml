@@ -18,5 +18,48 @@ findings:
   ref: research/factor-evidence/fulltext-recheck.md
   note: 'Finnish women born 1965-69 (registers, N=17,666), joint models: the same unobserved traits drive
     union dissolution, abortion and childbearing. No estimate of dissolution''s effect on second+ births.'
+- factor: partnership-stability
+  measure: ppr-1-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FIN: No parity progression outcome. Finds no sign that dissolution-prone women compensate with
+    higher fertility in new unions (correlation negative, not positive).'
+- factor: abortion
+  measure: ppr-0-1
+  verdict: mixed
+  tick: 'yes'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FIN: Of ever-pregnant women 4.7% had abortions only and 12.2% had abortion(s) then birth(s):
+    abortion delays far more often than it ends childbearing. Having had an abortion carries 20% higher
+    odds of a later conception leading to birth (OR 1.20), not lower. 23% of women ever had an abortion.'
+- factor: abortion
+  measure: young-first-births
+  verdict: mixed
+  tick: '?'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FIN: Abortions occur at younger ages than births (mean 25.8 vs 29.5) and 45.8% of abortions are
+    to women with low education at the time (vs 16.9% of births); low education raises abortion odds (OR
+    1.40) and lowers birth odds (OR 0.90). Parity-specific first-birth effects of abortion not estimated.'
+- factor: abortion
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'no'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FIN: Abortion hazard is about 3 times higher among women with a child under 18 months, consistent
+    with abortion used for spacing/stopping; effect on second+ birth rates not estimated by parity.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demographic Research.
+countries:
+- FIN
+period:
+- 1980
+- 2010

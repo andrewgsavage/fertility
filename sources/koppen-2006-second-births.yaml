@@ -16,8 +16,93 @@ findings:
   measure: ppr-1-2plus
   verdict: supports
   tick: 'no'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: 'West Germany and France: second birth risks higher for more educated women (consistent with blank).'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'DEUTW: University-educated mothers have a 44% higher second-birth risk. Falls to 1.30 and is
+    insignificant once partner''s education is added (Model 3). Consistent with the blank tick.'
+- factor: education
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'no'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'DEUTW: Same hazard model; positive education effect, partly via partner''s education. Consistent
+    with the blank tick.'
+- factor: age-at-first-birth
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'DEUTW: Mothers with relatively late first births have a ~24% lower second-birth risk; those with
+    relatively early first births also lower (0.78), so not monotonic in West Germany.'
+- factor: female-employment
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: '?'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'DEUTW: Employed mothers have a lower second-birth risk, read by the author as work and family
+    being incompatible in West Germany.'
+- factor: partnership-stability
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'DEUTW: Divorced mothers have far lower second-birth risk.'
+- factor: education
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: 'no'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FRATNP: University-educated mothers have 51% higher second-birth risk, unchanged after controlling
+    for partner''s education; effect largest soon after first birth (Figure 6), so partly tempo.'
+- factor: education
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'no'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FRATNP: Same model; the positive effect holds in all six specifications.'
+- factor: age-at-first-birth
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FRATNP: Relatively late first mothers have a lower second-birth risk.'
+- factor: female-employment
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: '?'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FRATNP: Ever-employed mothers have a lower second-birth risk (employment measured only as ever/never
+    in the French file).'
+- factor: partnership-stability
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FRATNP: Divorced mothers have far lower second-birth risk.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demographic Research.
+countries:
+- DEUTW
+- FRATNP
+period:
+- 1960
+- 1994

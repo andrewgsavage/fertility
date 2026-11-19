@@ -26,8 +26,26 @@ findings:
   measure: cond-asfr-2plus
   verdict: supports
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/policy-and-the-state.md
-  note: Benefit cut reduced births (6.8%), see above.
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'DEUTE: Making 300 EUR/month parental-leave benefit deductible from welfare (about -18% household
+    income in first year) cut births to welfare mothers 6.8%, elasticity 0.38; effect persisted 5 years.
+    Welfare recipients only, not general population.'
+- factor: parental-leave
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'DEUTE: The cut was to the minimum parental-leave benefit (300 EUR for 14 months) of non-working
+    welfare parents; fertility fell 6.8% (second -4.9%, third+ -8.7%). Same estimate as the child-benefit
+    cell; the benefit is a leave payment but acts as an income cut.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Population Research and Policy Review.
+countries:
+- DEUTE
+period:
+- 2005
+- 2016
