@@ -3,19 +3,19 @@
 ESHRE "ART in Europe" reports (open-access years 2007, 2015-2019; ART infants per national
 births, only given for countries with complete clinic coverage), plus Goisis et al. (2024)
 Figure 1 for Denmark, France, Spain and the UK in other years (that figure plots the same
-ESHRE series). Run from the HFD directory.
+ESHRE series).
 """
-
-import pathlib
 
 import pandas as pd
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-_REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
-EIM = _REPO_ROOT / "research" / "data" / "eim_art_infants_by_country.csv"
-GOISIS = _REPO_ROOT / "research" / "data" / "goisis2024_fig1_art_share_births.csv"
-OUTPUT = "outputs/eshre_art_share_by_country.html"
+from common.paths import REPO, outputs_dir
+from common.plotting import write_html
+
+EIM = REPO / "research" / "data" / "eim_art_infants_by_country.csv"
+GOISIS = REPO / "research" / "data" / "goisis2024_fig1_art_share_births.csv"
+OUTPUT = outputs_dir("HFD") / "eshre_art_share_by_country.html"
 
 # ESHRE country name -> display name, HFD countries only
 NAMES = {
@@ -70,10 +70,7 @@ def main():
         template="plotly_white", height=170 * rows + 80, margin=dict(l=50, r=15, t=50, b=30),
         legend=dict(orientation="h", x=0, y=1.0, yanchor="bottom", xanchor="left"), hovermode="closest",
     )
-    fig.write_html(OUTPUT, include_plotlyjs="cdn", full_html=True, config={"responsive": True})
-    html = open(OUTPUT, "r", encoding="utf-8").read()
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    open(OUTPUT, "w", encoding="utf-8").write(html)
+    write_html(fig, OUTPUT, log=False)
     print(f"Saved {OUTPUT} ({len(countries)} countries, {rows} rows)")
     print(df[df["source"] == "ESHRE"].pivot(index="country", columns="year", values="pct").to_string())
 

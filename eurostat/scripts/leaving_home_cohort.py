@@ -21,8 +21,6 @@ Outputs:
   outputs/leaving_home_cohort_ccf35.html
   outputs/leaving_home_cohort_ccf1_30.html
   outputs/leaving_home_cohort_corr.csv
-
-Run from the eurostat/ directory.
 """
 
 import os
@@ -31,12 +29,16 @@ import pathlib
 import pandas as pd
 import plotly.graph_objects as go
 
+from common.hfd import HFD_DIR as _HFD_DIR
+from common.hfd import read_hfd as _read_hfd
+from common.paths import data_dir, outputs_dir
+from common.plotting import write_html
 from leaving_home_vs_tfr import CODE_REGION, NAMES, REGION_COLOR, SEX, fit_line
 
 LEAVE_AGE = 25
 MIN_COUNTRIES = 10
 
-HFD_DIR = pathlib.Path(os.environ.get("HFD_DIR", "../HFD/data/HFD"))
+HFD_DIR = pathlib.Path(os.environ["HFD_DIR"]) if "HFD_DIR" in os.environ else _HFD_DIR
 
 # HFD population code -> Eurostat geo code
 HFD_TO_GEO = {
@@ -49,14 +51,14 @@ HFD_TO_GEO = {
 # y metric -> (file, column, HFD age, axis title, hover label, hover format, padding, output)
 METRICS = {
     "ccf35": ("ccfrVH.txt", "CCFR", 34, "Children per woman by age 35", "By 35", ".2f", 0.1,
-              "outputs/leaving_home_cohort_ccf35.html"),
+              outputs_dir("eurostat") / "leaving_home_cohort_ccf35.html"),
     "ccf1_30": ("ccfrVHbo.txt", "CCFR1", 29, "Share of women who are mothers by age 30", "Mothers by 30",
-                ".0%", 0.05, "outputs/leaving_home_cohort_ccf1_30.html"),
+                ".0%", 0.05, outputs_dir("eurostat") / "leaving_home_cohort_ccf1_30.html"),
 }
 
 
 def read_hfd(fname, column, age):
-    df = pd.read_csv(HFD_DIR / fname, sep=r"\s+", skiprows=2, na_values=".", dtype={"Age": str})
+    df = _read_hfd(fname, directory=HFD_DIR, dtype={"Age": str})
     df = df[(df["Age"] == str(age)) & df["Code"].isin(HFD_TO_GEO)]
     return pd.DataFrame({
         "geo": df["Code"].map(HFD_TO_GEO),
@@ -66,7 +68,7 @@ def read_hfd(fname, column, age):
 
 
 def load_leaving():
-    age = pd.read_csv("data/yth_demo_030.csv")
+    age = pd.read_csv(data_dir("eurostat") / "yth_demo_030.csv")
     age = age[(age["sex"] == SEX) & age["geo"].isin(NAMES)]
     return pd.DataFrame({
         "geo": age["geo"],
@@ -139,8 +141,7 @@ def scatter(df, corr, metric):
         sliders=[dict(active=len(cohorts) - 1, currentvalue=dict(prefix="Cohort: "), pad=dict(t=40),
                       steps=[step(c) for c in cohorts])],
     )
-    fig.write_html(output, include_plotlyjs="cdn", default_width="100%", default_height="100%",
-                   config={"responsive": True})
+    write_html(fig, output, full_page=False, log=False)
 
 
 if __name__ == "__main__":
@@ -155,4 +156,4 @@ if __name__ == "__main__":
         last = df[df["cohort"] == corr["cohort"].max()]
         print(last.sort_values("age")[["name", "region", "age", metric]].round(3).to_string(index=False))
     combined = corrs[0].merge(corrs[1], on="cohort", how="outer").sort_values("cohort")
-    combined.to_csv("outputs/leaving_home_cohort_corr.csv", index=False)
+    combined.to_csv(outputs_dir("eurostat") / "leaving_home_cohort_corr.csv", index=False)

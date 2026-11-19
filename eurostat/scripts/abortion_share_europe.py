@@ -9,19 +9,16 @@ Inputs (download into eurostat/data/ — not tracked in git):
   demo_gind_lbirth.csv   https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/demo_gind/A.LBIRTH.?format=SDMX-CSV
 """
 
-import pathlib
-import sys
-
 import pandas as pd
 import plotly.colors as pc
 import plotly.graph_objects as go
 
-_SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
-DATA = _SCRIPT_DIR.parent / "data"
-OUTPUT = _SCRIPT_DIR.parent / "outputs" / "abortion_share_europe.html"
+from common import ons_abortion as ew
+from common.paths import data_dir, outputs_dir
+from common.plotting import write_html
 
-sys.path.insert(0, str(_SCRIPT_DIR.parent.parent / "ONS" / "scripts"))
-import abortion_share_uk as ew  # noqa: E402
+DATA = data_dir("eurostat")
+OUTPUT = outputs_dir("eurostat") / "abortion_share_europe.html"
 
 NAMES = {
     "AL": "Albania", "AM": "Armenia", "AT": "Austria", "AZ": "Azerbaijan", "BE": "Belgium",
@@ -81,15 +78,4 @@ def plot(d):
 
 if __name__ == "__main__":
     fig = plot(load())
-    fig.write_html(
-        OUTPUT,
-        include_plotlyjs="cdn",
-        full_html=True,
-        default_width="100%",
-        default_height="100%",
-        config={"responsive": True},
-    )
-    html = OUTPUT.read_text(encoding="utf-8")
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    OUTPUT.write_text(html, encoding="utf-8")
-    print(f"Saved {OUTPUT}")
+    write_html(fig, OUTPUT)

@@ -10,16 +10,17 @@ Input (download into HCMST/data/hcmst_2017_2022.dta - not tracked in git):
   (landing page: https://data.stanford.edu/hcmst2017)
 """
 
-import pathlib
 import warnings
 
 import pandas as pd
 import plotly.graph_objects as go
 
+from common.paths import data_dir, outputs_dir
+from common.plotting import write_html
+
 warnings.simplefilter("ignore")
-_SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
-DATA = _SCRIPT_DIR.parent / "data" / "hcmst_2017_2022.dta"
-OUTPUT = _SCRIPT_DIR.parent / "outputs" / "how_couples_meet_us.html"
+DATA = data_dir("HCMST") / "hcmst_2017_2022.dta"
+OUTPUT = outputs_dir("HCMST") / "how_couples_meet_us.html"
 
 BINS = [1939, 1959, 1969, 1979, 1989, 1999, 2004, 2009, 2014, 2017]
 LABELS = ["<1960", "1960-69", "1970-79", "1980-89", "1990-99", "2000-04", "2005-09", "2010-14", "2015-17"]
@@ -68,9 +69,4 @@ def plot(d):
 
 if __name__ == "__main__":
     fig = plot(load())
-    fig.write_html(OUTPUT, include_plotlyjs="cdn", full_html=True, default_width="100%",
-                   default_height="100%", config={"responsive": True})
-    html = OUTPUT.read_text(encoding="utf-8")
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    OUTPUT.write_text(html, encoding="utf-8")
-    print(f"Saved {OUTPUT}")
+    write_html(fig, OUTPUT)

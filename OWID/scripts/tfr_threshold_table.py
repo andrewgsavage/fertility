@@ -12,9 +12,11 @@ following the trough.
 import pandas as pd
 import re
 
-INPUT = "data/children-born-per-woman.csv"
-POPULATION_INPUT = "data/population.csv"
-OUTPUT = "outputs/tfr_threshold_table.csv"
+from common.paths import data_dir, outputs_dir
+
+INPUT = data_dir("OWID") / "children-born-per-woman.csv"
+POPULATION_INPUT = data_dir("OWID") / "population.csv"
+OUTPUT = outputs_dir("OWID") / "tfr_threshold_table.csv"
 
 THRESHOLDS = [1.1, 1.2, 1.3, 1.4, 1.5]
 MIN_POPULATION = 1_000_000

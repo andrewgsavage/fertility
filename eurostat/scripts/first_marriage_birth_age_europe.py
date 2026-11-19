@@ -7,17 +7,18 @@ Inputs (download into eurostat/data/ - not tracked in git):
   demo_find_all.csv  https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/demo_find/?format=SDMX-CSV
 """
 
-import pathlib
 import shutil
 
 import pandas as pd
 import plotly.colors as pc
 import plotly.graph_objects as go
 
-_SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
-DATA = _SCRIPT_DIR.parent / "data"
-OUTPUT = _SCRIPT_DIR.parent / "outputs" / "first_marriage_birth_age_europe.html"
-DOCS = _SCRIPT_DIR.parent.parent / "docs" / "_static" / "eurostat" / "first_marriage_birth_age_europe.html"
+from common.paths import REPO, data_dir, outputs_dir
+from common.plotting import write_html
+
+DATA = data_dir("eurostat")
+OUTPUT = outputs_dir("eurostat") / "first_marriage_birth_age_europe.html"
+DOCS = REPO / "docs" / "_static" / "eurostat" / "first_marriage_birth_age_europe.html"
 
 NAMES = {
     "AL": "Albania", "AM": "Armenia", "AT": "Austria", "AZ": "Azerbaijan", "BE": "Belgium",
@@ -70,11 +71,7 @@ def plot(d):
 if __name__ == "__main__":
     d = load()
     fig = plot(d)
-    fig.write_html(OUTPUT, include_plotlyjs="cdn", full_html=True, default_width="100%",
-                   default_height="100%", config={"responsive": True})
-    html = OUTPUT.read_text(encoding="utf-8")
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    OUTPUT.write_text(html, encoding="utf-8")
+    write_html(fig, OUTPUT, log=False)
     DOCS.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy(OUTPUT, DOCS)
     print(f"Saved {OUTPUT}")

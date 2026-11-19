@@ -15,23 +15,24 @@ Outputs:
   outputs/leaving_home_vs_tfr.html    scatter, women's leaving age vs TFR, year slider
   outputs/leaving_home_vs_mab1.html   scatter, women's leaving age vs mean age at first birth
   outputs/leaving_home_corr.csv       per-year Pearson r and country count, per y metric
-
-Run from the eurostat/ directory.
 """
 
 import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
 
-AGE_INPUT = "data/yth_demo_030.csv"
-TFR_INPUT = "data/demo_find.csv"
-MAB_INPUT = "data/demo_find_agemoth1.csv"
+from common.paths import data_dir, outputs_dir
+from common.plotting import write_html
+
+AGE_INPUT = data_dir("eurostat") / "yth_demo_030.csv"
+TFR_INPUT = data_dir("eurostat") / "demo_find.csv"
+MAB_INPUT = data_dir("eurostat") / "demo_find_agemoth1.csv"
 
 # y metric -> (axis title, hover label, hover format, axis padding, output file)
 METRICS = {
-    "tfr": ("Total fertility rate", "TFR", ".2f", 0.1, "outputs/leaving_home_vs_tfr.html"),
+    "tfr": ("Total fertility rate", "TFR", ".2f", 0.1, outputs_dir("eurostat") / "leaving_home_vs_tfr.html"),
     "mab1": ("Mean age of mothers at first birth", "Age at first birth", ".1f", 0.5,
-             "outputs/leaving_home_vs_mab1.html"),
+             outputs_dir("eurostat") / "leaving_home_vs_mab1.html"),
 }
 
 SEX = "F"  # women, matching Billari & Kohler (2002) Figure 6
@@ -157,8 +158,7 @@ def scatter(df, corr, ycol):
             steps=[step(y) for y in years],
         )],
     )
-    fig.write_html(output, include_plotlyjs="cdn",
-                   default_width="100%", default_height="100%", config={"responsive": True})
+    write_html(fig, output, full_page=False, log=False)
 
 
 if __name__ == "__main__":
@@ -168,7 +168,7 @@ if __name__ == "__main__":
         corrs[ycol] = correlations(df, ycol)
         scatter(df, corrs[ycol], ycol)
     combined = corrs["tfr"].merge(corrs["mab1"], on="year", how="outer", suffixes=("_tfr", "_mab1"))
-    combined.to_csv("outputs/leaving_home_corr.csv", index=False)
+    combined.to_csv(outputs_dir("eurostat") / "leaving_home_corr.csv", index=False)
     print(combined.to_string(index=False))
     for ycol in METRICS:
         y = corrs[ycol]["year"].max()

@@ -10,13 +10,12 @@ filtered to the slim CSVs below by _slim() on first use):
   isoc_ci_im_i.csv      https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/isoc_ci_im_i/?format=SDMX-CSV   (I_IUMP)
 """
 
-import pathlib
-
 import pandas as pd
 
-SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
-DATA = SCRIPT_DIR.parent / "data"
-OUTDIR = SCRIPT_DIR.parent / "outputs"
+from common.paths import data_dir, outputs_dir
+
+DATA = data_dir("eurostat")
+OUTDIR = outputs_dir("eurostat")
 
 NAMES = {
     "AL": "Albania", "AT": "Austria", "BA": "Bosnia and Herzegovina", "BE": "Belgium",
@@ -68,12 +67,3 @@ def young_fertility():
     d["country"] = d.geo.map(NAMES)
     return d.pivot(index="TIME_PERIOD", columns="country", values="v")
 
-
-def write_html(fig, output):
-    output.parent.mkdir(parents=True, exist_ok=True)
-    fig.write_html(output, include_plotlyjs="cdn", full_html=True,
-                   default_width="100%", default_height="100%", config={"responsive": True})
-    html = output.read_text(encoding="utf-8")
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    output.write_text(html, encoding="utf-8")
-    print(f"Saved {output}")

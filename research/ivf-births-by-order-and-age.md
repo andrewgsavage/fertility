@@ -1,6 +1,6 @@
 # IVF / ART births by birth order and maternal age — HFD page countries
 
-Scope: the 25 countries on the HFD first-vs-second-birth page (`HFD/scripts/country_names.py`
+Scope: the 25 countries on the HFD first-vs-second-birth page (`common/country_names.py`
 `COUNTRY_REGIONS`). Researched 2026-11-17.
 
 ## Bottom line

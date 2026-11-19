@@ -14,11 +14,13 @@ and half_life_years = GENERATION_YEARS = 30.
 """
 
 import math
-import pathlib
 
 import plotly.graph_objects as go
 
-OUTPUT_DIR = pathlib.Path("outputs")
+from common.paths import outputs_dir
+from common.plotting import write_html
+
+OUTPUT_DIR = outputs_dir("democracy")
 
 REPLACEMENT_TFR = 2.1
 GENERATION_YEARS = 30  # mean age of childbirth, per stability.md
@@ -108,15 +110,7 @@ def _table_markdown(n_cols=4):
 
 def _save(fig, name):
     output = OUTPUT_DIR / name
-    fig.write_html(
-        output, include_plotlyjs="cdn", full_html=True,
-        default_width="100%", default_height="100%",
-        config={"responsive": True},
-    )
-    html = output.read_text(encoding="utf-8")
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    output.write_text(html, encoding="utf-8")
-    print(f"Saved {output}")
+    write_html(fig, output)
 
 
 if __name__ == "__main__":

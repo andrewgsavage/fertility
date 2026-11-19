@@ -25,26 +25,19 @@ html_static_path = ["_static"]
 
 # --- Copy generated outputs into _static so pages can reference them ---
 #
-# HFD/outputs, ONS/outputs, resolution/outputs, and OWID/outputs are the
-# git-tracked, canonical outputs of the analysis scripts. They are copied
-# into docs/_static/<name> at build time (not duplicated in git) so pages
-# can reference them as ordinary static assets.
+# Each top-level <SOURCE>/outputs folder (HFD, ONS, OWID, eurostat, ...) holds
+# the git-tracked, canonical outputs of that source's analysis scripts. At
+# build time every one is mirrored into docs/_static/<source, lowercased>/
+# (e.g. HFD/outputs -> _static/hfd/) so pages can reference the files as
+# ordinary static assets. The copies are gitignored, not duplicated in git.
+# A new source folder with an outputs/ dir is picked up automatically.
 _REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent
 _OUTPUT_DIRS = {
-    "hfd": _REPO_ROOT / "HFD" / "outputs",
-    "ons": _REPO_ROOT / "ONS" / "outputs",
-    "resolution": _REPO_ROOT / "resolution" / "outputs",
-    "owid": _REPO_ROOT / "OWID" / "outputs",
-    "democracy": _REPO_ROOT / "democracy" / "outputs",
-    "eurostat": _REPO_ROOT / "eurostat" / "outputs",
-    "housing": _REPO_ROOT / "housing" / "outputs",
-    "gss": _REPO_ROOT / "GSS" / "outputs",
-    "hcmst": _REPO_ROOT / "HCMST" / "outputs",
-    "ilo": _REPO_ROOT / "ILO" / "outputs",
-    "ft": _REPO_ROOT / "FT" / "outputs",
-    "un": _REPO_ROOT / "UN" / "outputs",
-    "nso": _REPO_ROOT / "NSO" / "outputs",
-    "dhs": _REPO_ROOT / "DHS" / "outputs",
+    src.parent.name.lower(): src
+    for src in sorted(_REPO_ROOT.glob("*/outputs"))
+    if src.is_dir()
+    and src.parent.name != "docs"
+    and not src.parent.name.startswith((".", "_"))
 }
 
 
@@ -74,8 +67,7 @@ def _sync_dir(src, dest):
 def _copy_outputs(app, config):
     static_dir = pathlib.Path(app.confdir) / "_static"
     for name, src in _OUTPUT_DIRS.items():
-        if src.exists():
-            _sync_dir(src, static_dir / name)
+        _sync_dir(src, static_dir / name)
 
 
 def setup(app):

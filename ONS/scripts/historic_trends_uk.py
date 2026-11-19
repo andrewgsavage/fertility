@@ -6,25 +6,18 @@ the underlying scale matches (see PANEL_GROUPS).
 """
 
 import datetime
-import json
-import pathlib
-import sys
 
 import plotly.colors as pc
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-_SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
-_HFD_SCRIPTS = _SCRIPT_DIR.parent.parent / "HFD" / "scripts"
-if str(_HFD_SCRIPTS) not in sys.path:
-    sys.path.insert(0, str(_HFD_SCRIPTS))
+from common.hfd import load_asfr as load_hfd_asfr
+from common.ons_table3 import load_cohort_cumulative, load_cohort_rates
+from common.paths import outputs_dir
+from common.plot_colors import COHORT_CAXIS, COHORT_COLORSCALE, cohort_axis, sample_color
+from common.plotting import range_post_script, write_html
 
-from asfr_uk import load_data as load_hfd_asfr  # noqa: E402
-from plot_colors import COHORT_CAXIS, COHORT_COLORSCALE, cohort_axis, sample_color  # noqa: E402
-
-from cond_asfr_uk_ons import load_cohort_cumulative, load_cohort_rates  # noqa: E402
-
-OUTPUT = "outputs/historic_trends_uk.html"
+OUTPUT = outputs_dir("ONS") / "historic_trends_uk.html"
 
 # Same cohort color axis as every other chart on Later Births, so the same
 # color means the same cohort here too. See plot_colors.py.
@@ -489,16 +482,6 @@ def build_figure(cohort_range=None, trend_arrows=False):
     return fig, trace_groups
 
 
-RANGE_POST_SCRIPT = """
-var gd = document.getElementById('{plot_id}');
-var traceGroups = __TRACE_GROUPS__;
-window.setRange = function (lo, hi) {
-    var visible = traceGroups.map(function (g) { return g === null ? true : (g >= lo && g <= hi); });
-    Plotly.restyle(gd, {visible: visible});
-};
-"""
-
-
 # Fixed-era copies of the same chart (e.g. for side-by-side generational
 # comparison) — each pre-filtered to its own cohort range, no range control
 # needed since there's nothing left to slide. "1989-" has no upper bound of
@@ -513,20 +496,7 @@ ERA_RANGES = {
 
 
 def _write(fig, trace_groups, output_path):
-    post_script = RANGE_POST_SCRIPT.replace("__TRACE_GROUPS__", json.dumps(trace_groups))
-    fig.write_html(
-        output_path,
-        include_plotlyjs="cdn",
-        full_html=True,
-        post_script=post_script,
-        default_width="100%",
-        default_height="100%",
-        config={"responsive": True},
-    )
-    html = open(output_path, "r", encoding="utf-8").read()
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    open(output_path, "w", encoding="utf-8").write(html)
-    print(f"Saved {output_path}")
+    write_html(fig, output_path, post_script=range_post_script(trace_groups))
 
 
 if __name__ == "__main__":
@@ -536,5 +506,5 @@ if __name__ == "__main__":
     ARROW_ERAS = {"1945_1965", "1965_1979", "1979_1989", "1989_"}
     for suffix, era in ERA_RANGES.items():
         era_fig, era_trace_groups = build_figure(cohort_range=era, trend_arrows=(suffix in ARROW_ERAS))
-        era_output = OUTPUT.replace(".html", f"_{suffix}.html")
+        era_output = OUTPUT.with_name(OUTPUT.name.replace(".html", f"_{suffix}.html"))
         _write(era_fig, era_trace_groups, era_output)

@@ -16,8 +16,7 @@ concurrency:
 
 jobs:
   build:
-    # pixi.lock only has a win-64 solve, so build on Windows to match it.
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
@@ -27,7 +26,7 @@ jobs:
 
       - run: pixi run docs-build
 
-      - run: New-Item -ItemType File -Path docs/_build/html/.nojekyll -Force
+      - run: touch docs/_build/html/.nojekyll
 
       - uses: actions/upload-pages-artifact@v3
         with:

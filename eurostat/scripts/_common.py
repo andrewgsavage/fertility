@@ -1,6 +1,6 @@
 """Shared helpers for the Eurostat factor-page charts."""
 
-import pathlib
+from common.paths import data_dir, outputs_dir
 
 NAMES = {
     "AL": "Albania", "AT": "Austria", "BA": "Bosnia & Herzegovina", "BE": "Belgium",
@@ -14,21 +14,5 @@ NAMES = {
     "EU27_2020": "EU27",
 }
 
-DATA = pathlib.Path(__file__).resolve().parent.parent / "data"
-OUTDIR = pathlib.Path(__file__).resolve().parent.parent / "outputs"
-
-
-def write_html(fig, name):
-    out = OUTDIR / name
-    fig.write_html(
-        out,
-        include_plotlyjs="cdn",
-        full_html=True,
-        default_width="100%",
-        default_height="100%",
-        config={"responsive": True},
-    )
-    html = out.read_text(encoding="utf-8")
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    out.write_text(html, encoding="utf-8")
-    print(f"Saved {out}")
+DATA = data_dir("eurostat")
+OUTDIR = outputs_dir("eurostat")

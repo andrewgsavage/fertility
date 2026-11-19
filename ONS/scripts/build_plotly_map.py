@@ -2,6 +2,8 @@ import json
 
 import plotly.graph_objects as go
 
+from common.paths import intermediate_dir, outputs_dir
+from common.plotting import write_html
 from metrics import (
     DIV_COLORSCALE,
     DIV_RANGE,
@@ -14,9 +16,9 @@ from metrics import (
     fmt_value,
 )
 
-GEOJSON_IN = "outputs/lad_boundaries_simplified.geojson"
-FERTILITY_IN = "outputs/fertility_by_lad.json"
-OUTPUT = "outputs/map_plotly.html"
+GEOJSON_IN = intermediate_dir("ONS") / "lad_boundaries_simplified.geojson"
+FERTILITY_IN = intermediate_dir("ONS") / "fertility_by_lad.json"
+OUTPUT = outputs_dir("ONS") / "map_plotly.html"
 
 DEFAULT_METRIC = "asfr_25_29_rel2013"
 
@@ -48,7 +50,12 @@ with open(FERTILITY_IN, "r", encoding="utf-8") as f:
 years = fertility["years"]
 lad_names = fertility["lad_names"]
 data = fertility["data"]
+# Plotly's choroplethmap doesn't draw a location whose z is null, so the
+# boundaries outside the data (Scotland, Northern Ireland) never show; dropping
+# them roughly halves the page's embedded geometry without changing the map.
+geojson["features"] = [feat for feat in geojson["features"] if feat["properties"]["code"] in lad_names]
 codes = [feat["properties"]["code"] for feat in geojson["features"]]
+names = [lad_names[code] for code in codes]
 
 # metric_frames[metric] = list of {name, data:[{z, text}]} per year, in the
 # shape Plotly.addFrames() expects. metric_meta[metric] = colorscale/range/
@@ -66,7 +73,7 @@ for metric in METRIC_ORDER + REL_METRIC_ORDER:
             record = year_rows.get(code)
             value = record.get(metric) if record else None
             z.append(value)
-            text.append(f"<b>{fmt_value(value, metric)}</b><br>{lad_names.get(code, code)}")
+            text.append(fmt_value(value, metric))  # the LAD name comes from customdata
             if value is not None:
                 pooled.append(value)
         frames.append({"name": year, "data": [{"z": z, "text": text}]})
@@ -98,7 +105,7 @@ metric_buttons, metric_active = dropdown_buttons(DEFAULT_METRIC)
 # measuring the rendered geolayer at several container sizes and finding it
 # locked at exactly 2.0 every time. go.Choroplethmap (MapLibre-based) has no
 # such constraint and genuinely fills whatever box it's given.
-data_geoms = [feat["geometry"] for feat in geojson["features"] if feat["properties"]["code"] in lad_names]
+data_geoms = [feat["geometry"] for feat in geojson["features"]]
 west, south, east, north = geometry_bounds(data_geoms)
 pad_lon = (east - west) * 0.03
 pad_lat = (north - south) * 0.03
@@ -109,7 +116,8 @@ fig = go.Figure(
             locations=codes,
             z=initial_frame["data"][0]["z"],
             text=initial_frame["data"][0]["text"],
-            hoverinfo="text",
+            customdata=names,
+            hovertemplate="<b>%{text}</b><br>%{customdata}<extra></extra>",
             geojson=geojson,
             featureidkey="properties.code",
             coloraxis="coloraxis",
@@ -180,8 +188,8 @@ fig.frames = [
 
 post_script = f"""
 var gd = document.getElementById('{{plot_id}}');
-var METRIC_FRAMES = {json.dumps(metric_frames)};
-var METRIC_META = {json.dumps(metric_meta)};
+var METRIC_FRAMES = {json.dumps(metric_frames, separators=(",", ":"))};
+var METRIC_META = {json.dumps(metric_meta, separators=(",", ":"))};
 
 function applyMetric(metric) {{
     if (!metric || !METRIC_FRAMES[metric]) return;
@@ -210,24 +218,11 @@ gd.on('plotly_buttonclicked', function (ev) {{
 Plotly.animate(gd, ['{years[-1]}'], {{frame: {{duration: 0, redraw: true}}, mode: 'immediate', transition: {{duration: 0}}}});
 """
 
-fig.write_html(
-    OUTPUT,
-    include_plotlyjs="cdn",
-    full_html=True,
-    post_script=post_script,
-    default_width="100%",
-    default_height="100%",
-    config={"responsive": True},
-)
-
-# write_html's own template doesn't stretch <html>/<body> to fill the
-# iframe — without that, the plot div's height:100% resolves against an
-# auto-height body (i.e. 0) instead of the actual iframe viewport. The
-# containing page locks the iframe's box to a fixed aspect ratio (see
-# docs/uk/fertility-map.md); this makes the plot itself fill that box
-# and redraw responsively as it's resized.
-html = open(OUTPUT, "r", encoding="utf-8").read()
-html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-open(OUTPUT, "w", encoding="utf-8").write(html)
+# full_page (the default) stretches <html>/<body> to fill the iframe — without
+# that, the plot div's height:100% resolves against an auto-height body (i.e. 0)
+# instead of the actual iframe viewport. The containing page locks the iframe's
+# box to a fixed aspect ratio (see docs/uk/fertility-map.md); this makes the plot
+# itself fill that box and redraw responsively as it's resized.
+write_html(fig, OUTPUT, post_script=post_script, log=False)
 
 print(f"Wrote {OUTPUT} ({len(codes)} LADs, {len(years)} years, {len(metric_frames)} metrics)")

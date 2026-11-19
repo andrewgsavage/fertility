@@ -2,9 +2,11 @@ import csv
 import json
 import re
 
-HOUSE_PRICE_IN = "data/average-house-price-line.csv"
-AFFORDABILITY_IN = "data/housing-affordability-ratio-line.csv"
-OUTPUT = "outputs/housing_by_lad.json"
+from common.paths import data_dir, intermediate_dir
+
+HOUSE_PRICE_IN = data_dir("ONS") / "average-house-price-line.csv"
+AFFORDABILITY_IN = data_dir("ONS") / "housing-affordability-ratio-line.csv"
+OUTPUT = intermediate_dir("ONS") / "housing_by_lad.json"
 
 # Both are simple long-format ONS "Explore Local Statistics" exports
 # (areacd, areanm, period, value) rather than the wide Nomis layout used

@@ -35,8 +35,10 @@ from plotly.subplots import make_subplots
 
 from births_per_mother_period_grid import load_data
 from births_per_mother_region_grid import X_LIM, Y_LIM
+from common.paths import outputs_dir
+from common.plotting import write_html
 
-OUTPUT = "outputs/finland_paper_comparison.html"
+OUTPUT = outputs_dir("HFD") / "finland_paper_comparison.html"
 LABEL_FONT = dict(size=12, family='"Open Sans", verdana, arial, sans-serif', color="#2a3f5f")
 
 # Digitized at gridline resolution (every 2 years / 0.5 children) from
@@ -157,15 +159,4 @@ if __name__ == "__main__":
     df = load_data()
     fig = plot(df)
 
-    fig.write_html(
-        OUTPUT,
-        include_plotlyjs="cdn",
-        full_html=True,
-        default_width="100%",
-        default_height=f"{fig.layout.height}px",
-        config={"responsive": True},
-    )
-    html = open(OUTPUT, "r", encoding="utf-8").read()
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    open(OUTPUT, "w", encoding="utf-8").write(html)
-    print(f"Saved {OUTPUT}")
+    write_html(fig, OUTPUT, height=f"{fig.layout.height}px")

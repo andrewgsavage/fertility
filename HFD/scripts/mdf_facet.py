@@ -16,26 +16,18 @@ those who become mothers.
 """
 
 import datetime
-import pathlib
-import sys
 
 import pandas as pd
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-_SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
-if str(_SCRIPT_DIR) not in sys.path:
-    sys.path.insert(0, str(_SCRIPT_DIR))
-_REPO_ROOT = _SCRIPT_DIR.parent.parent
-_ONS_SCRIPTS = _REPO_ROOT / "ONS" / "scripts"
-if str(_ONS_SCRIPTS) not in sys.path:
-    sys.path.insert(0, str(_ONS_SCRIPTS))
+from common.country_names import COUNTRY_REGIONS, country_title
+from common.hfd import read_hfd
+from common.ons_mdf import load_period_metrics as load_uk_ons_metrics
+from common.paths import outputs_dir
+from common.plotting import write_html
 
-from country_names import COUNTRY_REGIONS, country_title  # noqa: E402
-from mdf_uk_ons import load_period_metrics as load_uk_ons_metrics  # noqa: E402
-
-INPUT = _SCRIPT_DIR.parent / "data" / "HFD" / "tfrRRbo.txt"
-OUTPUT = "outputs/mdf_facet.html"
+OUTPUT = outputs_dir("HFD") / "mdf_facet.html"
 
 XLIM = (1950, datetime.date.today().year)
 COUNTRIES_PER_ROW = 6
@@ -63,16 +55,13 @@ MDF_REGIONS = COUNTRY_REGIONS
 
 
 def load_data():
-    df = pd.read_csv(
-        INPUT,
-        sep=r"\s+",
-        engine="python",
-        skiprows=3,
-        names=[
+    df = read_hfd(
+        "tfrRRbo.txt",
+        [
             "code", "year", "TFR", "TFR1", "TFR2", "TFR3", "TFR4", "TFR5p",
             "TFR40", "TFR40_1", "TFR40_2", "TFR40_3", "TFR40_4", "TFR40_5p",
         ],
-        na_values=".",
+        engine="python",
     )
     df = df.dropna(subset=["TFR", "TFR1"])
     df["TMR"] = df["TFR1"]
@@ -191,15 +180,5 @@ if __name__ == "__main__":
     all_countries = [code for codes in MDF_REGIONS.values() for code in codes]
     fig = make_facet(df, all_countries)
 
-    fig.write_html(
-        OUTPUT,
-        include_plotlyjs="cdn",
-        full_html=True,
-        default_width="100%",
-        default_height=f"{fig.layout.height}px",
-        config={"responsive": True},
-    )
-    html = open(OUTPUT, "r", encoding="utf-8").read()
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    open(OUTPUT, "w", encoding="utf-8").write(html)
+    write_html(fig, OUTPUT, height=f"{fig.layout.height}px", log=False)
     print(f"Saved {OUTPUT} (height={fig.layout.height}px)")

@@ -14,6 +14,7 @@ cohort-based).
 import pandas as pd
 
 from births_per_mother_region_grid import _expected_children_curve as expected_children_curve
+from common.hfd import read_hfd
 
 COLS = ["code", "year", "x", "w0x", "m1x", "q1x", "l0x", "b1x", "L0x", "Sb1x",
         "w1x", "m2x", "q2x", "l1x", "b2x", "L1x", "Sb2x",
@@ -23,7 +24,7 @@ COLS = ["code", "year", "x", "w0x", "m1x", "q1x", "l0x", "b1x", "L0x", "Sb1x",
 
 
 def load_data():
-    df = pd.read_csv("data/HFD/pft.txt", sep=r"\s+", skiprows=3, names=COLS, na_values=".")
+    df = read_hfd("pft.txt", COLS)
     df = df[pd.to_numeric(df["x"], errors="coerce").notna()].copy()
     df["x"] = df["x"].astype(int)
 

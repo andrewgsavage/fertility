@@ -15,22 +15,15 @@ Inputs: DHS/outputs/dhs_mothers.csv, the coupling CSV outputs of the ILO, FT, NS
 scripts, HFD/data/HFD/mi.txt and exposRRpa.txt.
 """
 
-import pathlib
-import sys
-
 import pandas as pd
 import plotly.colors as pc
 
-ROOT = pathlib.Path(__file__).resolve().parent.parent
-REPO = ROOT.parent
-OUTDIR = ROOT / "outputs"
-sys.path.insert(0, str(REPO / "ILO" / "scripts"))
-sys.path.insert(0, str(REPO / "ONS" / "scripts"))
-sys.path.insert(0, str(REPO / "UN" / "scripts"))
+from common import coupling_ew as ew
+from common import coupling_hfd as ilo
+from common.paths import outputs_dir
+from common.plotting import write_html
 
-import coupling_vs_cond_asfr as ilo  # noqa: E402
-import coupling_vs_cond_asfr_ew as ew  # noqa: E402
-import coupling_vs_cond_asfr_un as un_hfd  # noqa: E402
+OUTDIR = outputs_dir("DHS")
 
 Y_OPTS = ew.GROUP_OPTS
 Y_DEFAULT = "mothers 25-29"
@@ -49,7 +42,7 @@ HFD_COLOR = "#999999"
 
 def dhs_wide(key):
     """DHS % with a child, one row per (key, year), columns 'mothers 20-24' ..."""
-    m = pd.read_csv(ROOT / "outputs" / "dhs_mothers.csv")
+    m = pd.read_csv(OUTDIR / "dhs_mothers.csv")
     m = m[m.age.isin(ew.MOTHER_GROUPS)]
     w = m.pivot_table(index=[key, "year"], columns="age", values="mother")
     w.columns = [f"mothers {a}" for a in w.columns]
@@ -91,24 +84,24 @@ def series_ilo_ft():
 
 
 def series_un():
-    un = pd.read_csv(REPO / "UN" / "outputs" / "coupling_un.csv")
+    un = pd.read_csv(outputs_dir("UN") / "coupling_un.csv")
     un = un[un.sex == "Women"]
     dhs = dhs_wide("country")
     dhs_codes = {c: DHS_NAMES.get(c, c) for c in sorted(set(un.country))
-                 if c not in un_hfd.HFD_CODES and DHS_NAMES.get(c, c) in set(dhs.code)}
+                 if c not in ilo.UN_HFD_CODES and DHS_NAMES.get(c, c) in set(dhs.code)}
     rates = pd.concat([ilo.hfd_first_birth_rates(), dhs], ignore_index=True)
     colors = pc.qualitative.Dark24 + pc.qualitative.Alphabet
     series = []
-    for country, code in (un_hfd.HFD_CODES | dhs_codes).items():
+    for country, code in (ilo.UN_HFD_CODES | dhs_codes).items():
         is_dhs = country in dhs_codes
         r = rates[rates.code == code].set_index("year")
         c = un[un.country == country].pivot_table(index="year", columns="age", values="share")
         years = sorted(set(r.index) & set(c.index))
-        if len(years) < un_hfd.MIN_POINTS:
+        if len(years) < ilo.UN_MIN_POINTS:
             print("too few overlapping years:", country, years)
             continue
         x = {a: [None if a not in c or pd.isna(c.at[y, a]) else float(c.at[y, a]) for y in years]
-             for a in un_hfd.X_AGES}
+             for a in ilo.UN_X_AGES}
         n_dhs = len([s for s in series if s["dhs"]])
         s = make_series(country + (" DHS" if is_dhs else ""), colors[n_dhs % len(colors)] if is_dhs else HFD_COLOR,
                         years, x, r)
@@ -123,8 +116,7 @@ def write(series, x_ages, x_default, title, x_label, fname):
     pd.DataFrame(rows).round(3).to_csv(OUTDIR / fname.replace(".html", ".csv"), index=False)
     fig = ew.dual_dropdown_fig(series, {a: a for a in x_ages}, Y_OPTS, x_default, Y_DEFAULT, title, x_label,
                                auto_hide=True)
-    ew.coupling_by_age_ew.OUTDIR = OUTDIR
-    ew.coupling_by_age_ew.write_html(fig, fname)
+    write_html(fig, OUTDIR / fname)
     print(fname, len(series), "series,", sum(s["dhs"] for s in series), "DHS")
 
 
@@ -133,6 +125,6 @@ if __name__ == "__main__":
     write(series_ilo_ft(), ilo.X_AGES, "25-34",
           "% of women with a child vs coupling rate, DHS and HFD countries (grey: HFD; marker grows with year)",
           "% married or cohabiting", "coupling_vs_mothers.html")
-    write(series_un(), un_hfd.X_AGES, "25-29",
+    write(series_un(), ilo.UN_X_AGES, "25-29",
           "% of women with a child vs women married or in a union, UN data (grey: HFD; marker grows with year)",
           "% of women married or in a union", "coupling_vs_mothers_un.html")

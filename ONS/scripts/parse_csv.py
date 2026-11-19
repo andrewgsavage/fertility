@@ -2,8 +2,10 @@ import csv
 import json
 import re
 
-INPUT = "data/359847807070781.csv"
-OUTPUT = "outputs/fertility_by_lad.json"
+from common.paths import data_dir, intermediate_dir
+
+INPUT = data_dir("ONS") / "359847807070781.csv"
+OUTPUT = intermediate_dir("ONS") / "fertility_by_lad.json"
 
 METRIC_KEYS = [
     "live_births",

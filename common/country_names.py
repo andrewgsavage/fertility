@@ -2,6 +2,8 @@ import functools
 
 import pandas as pd
 
+from common.hfd import age_to_int, read_hfd
+
 COUNTRY_NAMES = {
     "AUT": "Austria",
     "BEL": "Belgium",
@@ -123,12 +125,9 @@ def country_title(code, year_min=None, year_max=None, suffix=None, cpfr1=None, a
 
 @functools.lru_cache(maxsize=None)
 def _cpfr1_max_by_country(year):
-    cpfr = pd.read_csv(
-        "data/HFD/cpfrVVbo.txt",
-        sep=r"\s+",
-        skiprows=3,
-        names=["code", "year", "age", "cohort", "cpfr", "cpfr1", "cpfr2", "cpfr3", "cpfr4", "cpfr5p"],
-        na_values=".",
+    cpfr = read_hfd(
+        "cpfrVVbo.txt",
+        ["code", "year", "age", "cohort", "cpfr", "cpfr1", "cpfr2", "cpfr3", "cpfr4", "cpfr5p"],
     )
     return cpfr[cpfr["year"] == year].groupby("code")["cpfr1"].max()
 
@@ -158,14 +157,8 @@ def cpfr1_value(code, year=2015):
 
 @functools.lru_cache(maxsize=None)
 def _asfr1_at_age_by_country(age, year):
-    mi = pd.read_csv(
-        "data/HFD/mi.txt",
-        sep=r"\s+",
-        skiprows=3,
-        names=["code", "year", "age", "m1x", "m2x", "m3x", "m4x", "m5px"],
-        na_values=".",
-    )
-    mi["age"] = mi["age"].astype(str).str.replace("-", "", regex=False).str.replace("+", "", regex=False).astype(int)
+    mi = read_hfd("mi.txt", ["code", "year", "age", "m1x", "m2x", "m3x", "m4x", "m5px"])
+    mi["age"] = age_to_int(mi["age"])
     subset = mi[(mi["year"] == year) & (mi["age"] == age)]
     return subset.set_index("code")["m1x"]
 
