@@ -9,7 +9,8 @@ import pandas as pd
 import plotly.colors as pc
 import plotly.graph_objects as go
 
-from _common import DATA, NAMES, write_html
+from _common import DATA, NAMES, OUTDIR
+from common.plotting import write_html
 
 SHOWN = ["Spain", "Italy", "France", "Germany", "Netherlands", "Poland", "Portugal", "Sweden"]
 
@@ -45,4 +46,4 @@ def plot(d):
 
 
 if __name__ == "__main__":
-    write_html(plot(load()), "temp_contracts_youth_europe.html")
+    write_html(plot(load()), OUTDIR / "temp_contracts_youth_europe.html")

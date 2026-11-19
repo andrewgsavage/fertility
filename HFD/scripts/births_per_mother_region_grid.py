@@ -1,14 +1,7 @@
-import pathlib
-import sys
-
 import pandas as pd
 
-_REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
-_ONS_SCRIPTS = _REPO_ROOT / "ONS" / "scripts"
-if str(_ONS_SCRIPTS) not in sys.path:
-    sys.path.insert(0, str(_ONS_SCRIPTS))
-
-from births_per_mother_uk_ons import load_expected_children_curves as load_uk_curves  # noqa: E402
+from common.hfd import read_hfd
+from common.ons_births_per_mother import load_expected_children_curves as load_uk_curves
 
 # HFD's cft.txt caps its birth-order breakdown at "5th or higher order" (a
 # woman who reaches it is folded into a single q5px hazard with no further
@@ -33,16 +26,13 @@ Y_LIM = (1.0, 4.0)
 
 
 def load_data():
-    cft = pd.read_csv(
-        "data/HFD/cft.txt",
-        sep=r"\s+",
-        skiprows=3,
-        names=["code", "cohort", "x", "b1x", "l0x", "m1x", "q1x", "Sb1x",
-               "b2x", "l1x", "m2x", "q2x", "Sb2x",
-               "b3x", "l2x", "m3x", "q3x", "Sb3x",
-               "b4x", "l3x", "m4x", "q4x", "Sb4x",
-               "b5px", "l4x", "m5px", "q5px", "Sb5px", "chix"],
-        na_values=".",
+    cft = read_hfd(
+        "cft.txt",
+        ["code", "cohort", "x", "b1x", "l0x", "m1x", "q1x", "Sb1x",
+         "b2x", "l1x", "m2x", "q2x", "Sb2x",
+         "b3x", "l2x", "m3x", "q3x", "Sb3x",
+         "b4x", "l3x", "m4x", "q4x", "Sb4x",
+         "b5px", "l4x", "m5px", "q5px", "Sb5px", "chix"],
     )
     cft = cft[pd.to_numeric(cft["x"], errors="coerce").notna()].copy()
     cft["x"] = cft["x"].astype(int)

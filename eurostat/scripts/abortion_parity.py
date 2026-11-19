@@ -25,21 +25,18 @@ Outputs:
   eurostat/outputs/abortion_parity_by_age.html         one small chart per country, a line per age
 """
 
-import pathlib
-import sys
-
 import pandas as pd
 import plotly.colors as pc
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-_SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
-_ROOT = _SCRIPT_DIR.parent.parent
-DATA = _SCRIPT_DIR.parent / "data"
-OUTDIR = _SCRIPT_DIR.parent / "outputs"
-sys.path.insert(0, str(_SCRIPT_DIR))
-from _common import write_html  # noqa: E402
-from abortion_by_age import AGES, COLORS, EUROSTAT_AGE, NAMES  # noqa: E402
+from abortion_by_age import AGES, COLORS, EUROSTAT_AGE, NAMES
+from common.hfd import HFD_DIR
+from common.paths import data_dir, outputs_dir
+from common.plotting import write_html
+
+DATA = data_dir("eurostat")
+OUTDIR = outputs_dir("eurostat")
 
 # England & Wales by age uses DHSC's groups (Under 20, 20–34, 35+), so 20–34 gets its own line.
 AGES_X = ["Under 20", "20–24", "25–29", "30–34", "20–34", "35+"]
@@ -85,7 +82,7 @@ def load():
     rows = [("England & Wales", y, v, None) for y, v in EW.items()]
     rows += [("Germany", y, 100 * (1 - n / t), t) for y, (n, t) in DE.items()]
     rows += [("Netherlands", y, 100 - v - 0.7, None) for y, v in NL.items()]
-    s = pd.read_csv(_ROOT / "ONS" / "data" / "scotland" / "parity_2022.csv")
+    s = pd.read_csv(data_dir("ONS") / "scotland" / "parity_2022.csv")
     s = s[s.HBR != "RA2704"]
     s["n"] = pd.to_numeric(s.NumberofTerminations, errors="coerce")
     for y, g in s.groupby("YearofTermination"):
@@ -155,7 +152,7 @@ def plot_by_age(cols=4):
 
 
 # --- Abortions per 100 births of the same order ---------------------------------
-HFD_BO = _ROOT / "HFD" / "data" / "HFD" / "birthsRRbo.txt"
+HFD_BO = HFD_DIR / "birthsRRbo.txt"
 
 
 def bad_age_years(e=None):
@@ -178,7 +175,7 @@ def age_parity():
 
 def ew_age_parity():
     """England & Wales, DHSC Table 2 by age group and parity, 2013-2023 (ONS/scripts/dhsc_parity_by_age.py)."""
-    d = pd.read_csv(_ROOT / "ONS" / "outputs" / "dhsc_parity_by_age.csv")
+    d = pd.read_csv(outputs_dir("ONS") / "dhsc_parity_by_age.csv")
     d = d[d.age != "All ages"].pivot_table(index=["year", "age"], columns="parity", values="abortions")
     d = d.reset_index().rename(columns={"0": "none"})
     d["known"] = d["none"] + d["1+"]
@@ -229,7 +226,7 @@ def order_ratios():
     rows = [("England & Wales", y, "All ages", tot[y] * (1 - v / 100), tot[y] * v / 100)
             for y, v in EW.items() if y in tot]
     rows += [("Germany", y, "All ages", n0, t - n0) for y, (n0, t) in DE.items()]
-    s = pd.read_csv(_ROOT / "ONS" / "data" / "scotland" / "parity_2022.csv")
+    s = pd.read_csv(data_dir("ONS") / "scotland" / "parity_2022.csv")
     s = s[s.HBR != "RA2704"]
     s["n"] = pd.to_numeric(s.NumberofTerminations, errors="coerce")
     for y, g in s.groupby("YearofTermination"):
@@ -372,7 +369,7 @@ def abs_counts():
     rows += [("Germany", y, n0, t - n0) for y, (n0, t) in DE.items()]
     rows += [("Netherlands", y, nat.NL_RESIDENT[y] * v / 100, nat.NL_RESIDENT[y] * (1 - v / 100))
              for y, v in NL.items()]
-    s = pd.read_csv(_ROOT / "ONS" / "data" / "scotland" / "parity_2022.csv")
+    s = pd.read_csv(data_dir("ONS") / "scotland" / "parity_2022.csv")
     s = s[s.HBR != "RA2704"]
     s["n"] = pd.to_numeric(s.NumberofTerminations, errors="coerce")
     for y, g in s.groupby("YearofTermination"):
@@ -449,7 +446,7 @@ def parity_step_ratios():
     # Germany 2021+ (all ages) from Destatis; Scotland from PHS + HFD
     ab = ab[~((ab.country == "Germany") & (ab.year >= 2021))]
     extra = [("Germany", y, "All ages", v[0], v[1], sum(v[2:])) for y, v in DE_PARITY.items()]
-    s = pd.read_csv(_ROOT / "ONS" / "data" / "scotland" / "parity_2022.csv")
+    s = pd.read_csv(data_dir("ONS") / "scotland" / "parity_2022.csv")
     s = s[s.HBR != "RA2704"]
     s["n"] = pd.to_numeric(s.NumberofTerminations, errors="coerce")
     for y, g in s.groupby("YearofTermination"):
@@ -480,9 +477,9 @@ def plot_order_second_by_age(d):
 
 if __name__ == "__main__":
     d = load()
-    write_html(plot_trend(d), "abortion_parity_trend.html")
+    write_html(plot_trend(d), OUTDIR / "abortion_parity_trend.html")
     fig, e = plot_by_age()
-    write_html(fig, "abortion_parity_by_age.html")
+    write_html(fig, OUTDIR / "abortion_parity_by_age.html")
     out = pd.concat([d.assign(age="All ages"), e[["country", "year", "age", "share_with_child", "known"]]])
     out["share_with_child"] = out.share_with_child.round(1)
     out.to_csv(OUTDIR / "abortion_parity.csv", index=False)
@@ -494,10 +491,10 @@ if __name__ == "__main__":
     print(a[[c for c in a.columns if c in (2008, 2013, 2019, 2022, 2024)]].to_string())
 
     o = order_ratios()
-    write_html(plot_order_all_ages(o), "abortion_order_ratio.html")
-    write_html(plot_order_first_by_age(o), "abortion_order_ratio_first_by_age.html")
-    write_html(plot_order_later_by_age(o), "abortion_order_ratio_later_by_age.html")
-    write_html(plot_abs_by_age(), "abortion_parity_abs_by_age.html")
+    write_html(plot_order_all_ages(o), OUTDIR / "abortion_order_ratio.html")
+    write_html(plot_order_first_by_age(o), OUTDIR / "abortion_order_ratio_first_by_age.html")
+    write_html(plot_order_later_by_age(o), OUTDIR / "abortion_order_ratio_later_by_age.html")
+    write_html(plot_abs_by_age(), OUTDIR / "abortion_parity_abs_by_age.html")
     lt = o[o.age.isin(["20–24", "25–29", "30–34", "35+"])].pivot_table(
         index=["country", "age"], columns="year", values="later_pregnancies").round(0)
     print("later by age")
@@ -520,14 +517,14 @@ if __name__ == "__main__":
         index=["country", "age"], columns="year", values="first_pregnancies").round(0)
     print(f[[c for c in f.columns if c in (2008, 2013, 2019, 2022, 2024)]].to_string())
     a = abs_counts()
-    write_html(plot_abs(a), "abortion_parity_abs.html")
+    write_html(plot_abs(a), OUTDIR / "abortion_parity_abs.html")
     a.round(0).to_csv(OUTDIR / "abortion_parity_abs.csv", index=False)
     for col in ("ab_none", "ab_mother"):
         q = a.pivot_table(index="country", columns="year", values=col).round(-2)
         print(col)
         print(q[[y for y in (2004, 2008, 2013, 2019, 2021, 2022, 2023, 2024) if y in q.columns]].to_string())
     st = parity_step_ratios()
-    write_html(plot_order_second_by_age(st), "abortion_order_ratio_second_by_age.html")
+    write_html(plot_order_second_by_age(st), OUTDIR / "abortion_order_ratio_second_by_age.html")
     st.round(1).to_csv(OUTDIR / "abortion_parity_step_ratio.csv", index=False)
     q = st[st.age.isin(["20–24", "25–29", "30–34", "35+"])].pivot_table(
         index=["country", "age"], columns="year", values="2nd").round(0)

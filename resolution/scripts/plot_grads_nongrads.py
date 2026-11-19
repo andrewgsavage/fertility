@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
+from common.paths import data_dir, outputs_dir
+
 AGE_GROUPS = ["25-29", "30-34", "35-39", "40-44"]
 MEDIAN_AGE = {"25-29": 27, "30-34": 32, "35-39": 37, "40-44": 42}
 # Youngest -> oldest: purple, cyan, yellow, red, so the same age group always
@@ -50,19 +52,19 @@ def plot_all(datasets, xlabel, suptitle, out_path, birth_year=False):
 
 if __name__ == "__main__":
     datasets = {
-        "Graduates": load_series("data/grads.csv"),
-        "Non-graduates": load_series("data/nongrads.csv"),
+        "Graduates": load_series(data_dir("resolution") / "grads.csv"),
+        "Non-graduates": load_series(data_dir("resolution") / "nongrads.csv"),
     }
     plot_all(
         datasets,
         "Year",
         "Proportion of women without a biological child, by age and education",
-        "outputs/grads_nongrads.png",
+        outputs_dir("resolution") / "grads_nongrads.png",
     )
     plot_all(
         datasets,
         "Mother's birth year",
         "Proportion of women without a biological child, by age and education",
-        "outputs/grads_nongrads_birth_year.png",
+        outputs_dir("resolution") / "grads_nongrads_birth_year.png",
         birth_year=True,
     )

@@ -27,20 +27,19 @@ extends further (to ~2022) than Kulu et al.'s own period coverage (ending
 """
 
 import bisect
-import pathlib
 
 import pandas as pd
 import plotly.colors as pc
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
+from common.paths import data_dir, outputs_dir
+from common.plotting import write_html
 from first_birth_rates_by_education_uk import FIRST_BIRTH_RATES, PERIODS
 
-_SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
-_REPO_ROOT = _SCRIPT_DIR.parent.parent
-RF_DATA_DIR = _REPO_ROOT / "resolution" / "data"
+RF_DATA_DIR = data_dir("resolution")
 
-OUTPUT = "outputs/childlessness_age_colour_comparison_uk.html"
+OUTPUT = outputs_dir("ONS") / "childlessness_age_colour_comparison_uk.html"
 
 # Only the under-30 age group from each source -- see module docstring.
 KULU_AGE_GROUPS = ["15-29"]
@@ -206,15 +205,4 @@ def plot():
 
 if __name__ == "__main__":
     fig = plot()
-    fig.write_html(
-        OUTPUT,
-        include_plotlyjs="cdn",
-        full_html=True,
-        default_width="100%",
-        default_height="100%",
-        config={"responsive": True},
-    )
-    html = open(OUTPUT, "r", encoding="utf-8").read()
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    open(OUTPUT, "w", encoding="utf-8").write(html)
-    print(f"Saved {OUTPUT}")
+    write_html(fig, OUTPUT)

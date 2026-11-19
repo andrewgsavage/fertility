@@ -10,12 +10,13 @@ highlights the country-years it was fitted to.
 
 Inputs: as leaving_home_vs_tfr.py (eurostat/data/).
 Outputs: outputs/leaving_home_tfr_fitted.html, outputs/leaving_home_mab1_fitted.html
-Run from the eurostat/ directory.
 """
 
 import numpy as np
 import plotly.graph_objects as go
 
+from common.paths import outputs_dir
+from common.plotting import write_html
 from leaving_home_vs_tfr import CODE_REGION, NAMES, REGION_COLOR, load
 
 START_YEAR = 2010
@@ -23,9 +24,9 @@ XTITLE = "Women's average age at leaving the parental home"
 
 # y metric -> (axis title, hover label, hover format, axis padding, output file)
 METRICS = {
-    "tfr": ("Total fertility rate", "TFR", ".2f", 0.05, "outputs/leaving_home_tfr_fitted.html"),
+    "tfr": ("Total fertility rate", "TFR", ".2f", 0.05, outputs_dir("eurostat") / "leaving_home_tfr_fitted.html"),
     "mab1": ("Mean age of mothers at first birth", "Age at first birth", ".1f", 0.3,
-             "outputs/leaving_home_mab1_fitted.html"),
+             outputs_dir("eurostat") / "leaving_home_mab1_fitted.html"),
 }
 
 
@@ -145,9 +146,7 @@ def fitted(df, ycol):
     y = [min(y[0], min(ends_y) - ypad), max(y[1], max(ends_y) + ypad)]
     fig = layout(fig, df, f"Each country's linear trend, {START_YEAR} to latest year (points: every country-year)",
                  xaxis=dict(title=XTITLE, range=x), yaxis=dict(title=ytitle, range=y), hovermode="closest")
-    fig.write_html(output, include_plotlyjs="cdn",
-                   default_width="100%", default_height="100%", config={"responsive": True},
-                   post_script=FITTED_HOVER_JS)
+    write_html(fig, output, post_script=FITTED_HOVER_JS, full_page=False, log=False)
 
 
 if __name__ == "__main__":

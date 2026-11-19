@@ -11,10 +11,12 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 from births_per_mother_region_grid import X_LIM, Y_LIM, load_data
-from country_names import COUNTRY_REGIONS, country_title
-from plot_colors import COHORT_CAXIS, COHORT_COLORSCALE
+from common.country_names import COUNTRY_REGIONS, country_title
+from common.plot_colors import COHORT_CAXIS, COHORT_COLORSCALE
+from common.paths import outputs_dir
+from common.plotting import write_html
 
-OUTPUT = "outputs/births_per_mother_facet.html"
+OUTPUT = outputs_dir("HFD") / "births_per_mother_facet.html"
 
 COUNTRIES_PER_ROW = 6
 ROW_HEIGHT = 190
@@ -114,15 +116,5 @@ if __name__ == "__main__":
     countries = [code for code in all_codes if code in present]
     fig = make_facet(df, countries)
 
-    fig.write_html(
-        OUTPUT,
-        include_plotlyjs="cdn",
-        full_html=True,
-        default_width="100%",
-        default_height=f"{fig.layout.height}px",
-        config={"responsive": True},
-    )
-    html = open(OUTPUT, "r", encoding="utf-8").read()
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    open(OUTPUT, "w", encoding="utf-8").write(html)
+    write_html(fig, OUTPUT, height=f"{fig.layout.height}px", log=False)
     print(f"Saved {OUTPUT} (height={fig.layout.height}px)")

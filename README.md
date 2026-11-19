@@ -1,1 +1,52 @@
 # fertility
+
+Analysis of falling fertility: what is driving it (coupling, timing, family size, education, housing, abortion, ART and more), measured across countries from demographic databases, statistics offices and surveys. Scripts turn the raw data into charts and tables; a Sphinx site presents them with commentary.
+
+Site: <https://andrewgsavage.github.io/fertility/>
+
+## Setup
+
+Uses [pixi](https://pixi.sh) (environment is pinned in `pixi.toml` / `pixi.lock`).
+
+```sh
+pixi install            # create the environment
+pixi run docs-serve     # live-reloading docs at http://127.0.0.1:8000
+pixi run docs-build     # one-off build into docs/_build/html
+pixi run python HFD/scripts/mdf_facet.py   # run a single analysis script
+pixi run outputs        # rerun every analysis script (or `pixi run outputs ONS` for one folder)
+```
+
+The docs build only needs the tracked `*/outputs/`; raw data is needed only to regenerate them, with `pixi run outputs` (scripts whose data isn't downloaded are skipped and listed in its summary).
+
+## Data sources
+
+Raw inputs go in `<folder>/data/` (gitignored, not redistributed). Every path below is relative to the repo root. "Auto" = the repo has code that downloads it; "Manual" = download it yourself (most scripts give the exact URL in their docstring).
+
+| Folder | Source | Where to get it | Where to put it |
+|---|---|---|---|
+| `HFD` | Human Fertility Database | <https://www.humanfertility.org/> (free registration and login required). Manual: bulk "all countries" zip of the text files. Files used: `asfrRR.txt`, `birthsRR.txt`, `birthsRRbo.txt`, `ccfrVH.txt`, `ccfrVHbo.txt`, `cft.txt`, `cpfrVVbo.txt`, `exposRRpa.txt`, `mi.txt`, `pft.txt`, `tfrRRbo.txt` | `HFD/data/HFD/<file>.txt` (also read by ONS, ILO, DHS, eurostat scripts) |
+| `ONS` | Office for National Statistics (plus DHSC, SLC, FRED, PHS/NRS for Scotland) | Manual. Cohort tables: [Childbearing for women born in different years](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/datasets/childbearingforwomenbornindifferentyearsreferencetable); living arrangements: [Population estimates by marital status and living arrangements](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesbymaritalstatusandlivingarrangements); abortions: [DHSC abortion statistics](https://www.gov.uk/government/collections/abortion-statistics-in-england-and-wales) (per-year file list in `ONS/scripts/dhsc_parity_by_age.py`); births: [Births in E&W: birth registrations](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/datasets/birthsinenglandandwalesbirthregistrations); LAD map/scatter: [Nomis lebirthrates](https://www.nomisweb.co.uk/datasets/lebirthrates), [Nomis pestnew](https://www.nomisweb.co.uk/datasets/pestnew), [ONS local indicators](https://www.ons.gov.uk/explore-local-statistics/indicators); student loans: [SLC xlsx](https://assets.publishing.service.gov.uk/media/6a44cbd66c5c6d8122b81573/slcsp012025.xlsx), [FRED SLOAS](https://fred.stlouisfed.org/graph/fredgraph.csv?id=SLOAS); NPP projection-round charts: "Download as csv" on each round's ONS page (URLs not recorded, unverified); LAD boundaries geojson (source not recorded, unverified) | `ONS/data/finalisingcohorttables2024finalforupload.xlsx`, `ONS/data/families/maritalstatuslivingarrangements2002to2025englandandwales.xlsx`, `ONS/data/abortion-statistics-2023-england-and-wales-residents.ods`, `ONS/data/dhsc/<year>.{xls,xlsx,ods}` (2013-2023), `ONS/data/2025birthregistrations.xlsx`, `ONS/data/scotland/{residence_age.csv,parity_2022.csv,nrs_births_ts_2024.xlsx}`, `ONS/data/359847807070781.csv` (LAD births), `ONS/data/2820211563520880.csv` (LAD population), `ONS/data/average-house-price-line.csv`, `ONS/data/housing-affordability-ratio-line.csv`, `ONS/data/LAD_MAY_2025_UK_BFE_V2_5966901361471275117.geojson`, `ONS/data/slc_england_2025.xlsx`, `ONS/data/fred_SLOAS.csv`, `ONS/data/projection_rounds/{round}_{tfr_cfs,tfr_multiround,asfr}.csv` |
+| `eurostat` | Eurostat (plus national abortion registers) | Manual. SDMX-CSV API URLs are in each script's docstring, e.g. `https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/<code>/...?format=SDMX-CSV`. Datasets: `demo_find`, `demo_frate`, `demo_fabort`, `demo_fasec`, `demo_fabortord`, `demo_fordagec`, `demo_gind`, `demo_nind`, `lfst_hhindws`, `yth_demo_030`, `lfsi_neet_a`, `lfsa_etpgan`, `edat_lfse_03`, `isoc_ci_ac_i`, `isoc_ci_im_i`. National files: Socialstyrelsen (SE), FHI (NO), CDC (US) - URLs in `eurostat/scripts/abortion_by_age_national.py` and `abortion_parity.py` | `eurostat/data/<name>.csv` with the names the scripts expect: `demo_find.csv`, `demo_find_all.csv`, `demo_find_agemoth1.csv`, `demo_find_firstbirth_age.csv`, `demo_frate.csv`, `demo_fabort_age.csv`, `demo_fabort_total.csv`, `demo_fasec.csv`, `demo_fabortord.csv`, `demo_fordagec.csv`, `demo_gind_lbirth.csv`, `demo_nind.csv`, `lfst_hhindws_pop.csv`, `lfst_hhindws_couples.csv`, `lfst_hhindws_couple_ages.json`, `yth_demo_030.csv`, `lfsi_neet_a.csv`, `lfsa_etpgan.csv`, `edat_lfse_03.csv`, `isoc_ci_ac_i.csv`, `isoc_ci_im_i.csv`; `eurostat/data/national/{se_aborter_2025.xlsx,no_abr_a2.csv,us_cdc_parity.csv}` |
+| `NSO` | National statistics offices: CBS (NL), Statistics Denmark, Statistics Finland, US Census Bureau (CPS ASEC AD-3) | **Auto**: `pixi run python NSO/scripts/download.py` | `NSO/data/` (`nl_37620_*.json`, `dk_fam100n.csv`, `dk_befolk1.csv`, `fi_12c6.json`, `us_*.xls`) |
+| `ILO` | ILOSTAT, `POP_XWAP_SEX_AGE_MTS_NB_A` (population by marital status) | Manual: <https://rplumber.ilo.org/data/indicator/?id=POP_XWAP_SEX_AGE_MTS_NB_A&format=.csv.gz> and <https://rplumber.ilo.org/metadata/dic/?var=ref_area&lang=en&format=.csv> | `ILO/data/POP_XWAP_SEX_AGE_MTS_NB_A.csv.gz`, `ILO/data/ref_area.csv` |
+| `UN` | UN DESA Population Division, World Marriage Data 2019 | Manual: <https://www.un.org/development/desa/pd/data/world-marriage-data> | `UN/data/undesa_pd_2019_wmd_marital_status.xlsx` |
+| `FT` | Financial Times, "The relationship recession is going global" (Burn-Murdoch, 11 Jan 2025) | Manual: save the article page ("Save page as, complete") and copy the Flourish embeds from its `_files` folder | `FT/data/coupling_regions.html` (`embed(2).html`), `coupling_education.html` (`embed(1).html`), `us_counterfactual.html` (`embed.html`) |
+| `DHS` | Demographic and Health Surveys (DHS Program API) | Manual: <https://api.dhsprogram.com/rest/dhs/data?indicatorIds=FE_CEBA_W_CH0&breakdown=all&f=json&perpage=20000> and <https://api.dhsprogram.com/rest/dhs/surveys?f=json&perpage=2000> | `DHS/data/FE_CEBA_W_CH0.json`, `DHS/data/surveys.json` |
+| `GSS` | General Social Survey (NORC) | Manual: <https://gss.norc.org/content/dam/gss/get-the-data/documents/stata/GSS_stata.zip>, unzip | `GSS/data/GSS_stata/gss7224_r3a.dta` |
+| `HCMST` | How Couples Meet and Stay Together 2017-2022 (Stanford) | Manual: <https://data.stanford.edu/hcmst2017> (small public version 2.2 `.dta`) | `HCMST/data/hcmst_2017_2022.dta` |
+| `OWID` | Our World in Data | Manual: [children-born-per-woman](https://ourworldindata.org/grapher/children-born-per-woman) CSV; population CSV (exact grapher unverified) | `OWID/data/children-born-per-woman.csv`, `OWID/data/population.csv` |
+| `housing` | OECD analytical house price indicators, Eurostat, World Bank, ONS | Manual: OECD SDMX and World Bank API URLs in `housing/scripts/house_prices_vs_tfr.py`; ONS [birth summary tables](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/datasets/birthsummarytables) and birth registrations | `housing/data/{oecd_hpi.csv,oecd_hpi_all.csv,demo_find.csv,wb_tfr.csv,birthssummary2022.xlsx,2023birthregistrations.xlsx,2024birthregistrations.xlsx,2025birthregistrations.xlsx}` |
+| `democracy` | ONS population estimates and projections (turnout by age is transcribed in the script) | Manual: [UK population estimates 1838-2025](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland), [2024-based NPP zipped files](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/datasets/z1zippedpopulationprojectionsdatafilesuk) | `democracy/data/ukpopulationestimates18382025.xlsx`, `democracy/data/npp2024_uk_ppp_machine_readable.xlsx` |
+| `resolution` | Resolution Foundation, [Bye bye baby](https://www.resolutionfoundation.org/publications/bye-bye-baby/) (2026) | Manual: figures digitised by hand from the report; no download | `resolution/data/{grads.csv,nongrads.csv,fig7a_nongrad.csv,fig8_nongrad.csv}` |
+| `research` | Literature-derived tables (ESHRE, Goisis et al. 2024, JSOG, HFEA, CDC WONDER) | Tracked in git | `research/data/*.csv` (read by `HFD/scripts/*art*.py`) |
+| `university` | Greenaway & Haynes (2000), Age Participation Index 1961-1997 | Tracked in git (see `university/metadata.txt`) | `university/Age Participation Index.csv` |
+
+Some ONS scripts (`historic_trends_uk.py`, `pupils_leaving_age_uk.py`, the `*_by_education_uk.py` set) carry their figures transcribed inline and need no data file.
+
+## Layout and conventions
+
+- `<folder>/scripts/*.py` read `<folder>/data/` and write `<folder>/outputs/` (HTML charts, PNGs, CSVs). Outputs are tracked in git.
+- `ONS/intermediate/` holds tracked derived inputs that aren't published: the LAD boundaries, fertility, population and housing files written by `ONS/scripts/simplify_geojson.py` and `parse_*.py` and read by `build_plotly_map.py`, `build_plotly_scatter.py` and `docs/_ext/scatter_controls.py`.
+- `docs/conf.py` mirrors every `*/outputs/` into `docs/_static/<folder lowercased>/` at build time; pages reference `../_static/<folder>/<file>`. Don't commit `docs/_static/<folder>/`.
+- Shared code lives in `common/` (repo-anchored paths, `write_html`, HFD reader, plot colours, country names, loaders shared across sources). pixi puts the repo root on `PYTHONPATH`, so run scripts with `pixi run python <folder>/scripts/<x>.py` from any directory.
+- Chart conventions: [agents-plotting.md](agents-plotting.md). Docs-writing rules for agents: [AGENTS.md](AGENTS.md).

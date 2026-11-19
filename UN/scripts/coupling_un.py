@@ -23,6 +23,8 @@ import pandas as pd
 import plotly.colors as pc
 import plotly.graph_objects as go
 
+from common.plotting import write_html
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 OUTDIR = ROOT / "outputs"
@@ -135,22 +137,12 @@ def plot(d, sex):
     return fig
 
 
-def write_html(fig, name):
-    out = OUTDIR / name
-    fig.write_html(out, include_plotlyjs="cdn", full_html=True, default_width="100%",
-                   default_height="100%", config={"responsive": True})
-    html = out.read_text(encoding="utf-8")
-    out.write_text(html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1),
-                   encoding="utf-8")
-    print(f"Saved {out}")
-
-
 if __name__ == "__main__":
     OUTDIR.mkdir(exist_ok=True)
     d = load()
     d.round(2).to_csv(OUTDIR / "coupling_un.csv", index=False)
     for sex in ["Women", "Men"]:
-        write_html(plot(d, sex), f"coupling_un_{sex.lower()}.html")
+        write_html(plot(d, sex), OUTDIR / f"coupling_un_{sex.lower()}.html")
     print(d.country.nunique(), "countries")
     s = d[(d.age == "25-29") & (d.sex == "Women")]
     print(s.groupby("country").year.agg(["min", "max", "count"]).sort_values("count").tail(30).to_string())

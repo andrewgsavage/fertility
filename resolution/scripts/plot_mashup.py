@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
+from common.paths import data_dir, outputs_dir
+
 TENURES = ["homeowner", "social_rent", "private_rent", "other", "living_with_parents"]
 TENURE_COLORS = {
     "homeowner": "#6A3D9A",
@@ -19,17 +21,17 @@ TENURE_LABELS = {
 
 
 def load_childless_25_29():
-    header = pd.read_csv("data/nongrads.csv", header=None, nrows=2)
+    header = pd.read_csv(data_dir("resolution") / "nongrads.csv", header=None, nrows=2)
     top = header.iloc[0].ffill()
     columns = pd.MultiIndex.from_arrays([top, header.iloc[1]])
-    df = pd.read_csv("data/nongrads.csv", header=None, skiprows=2, names=columns)
+    df = pd.read_csv(data_dir("resolution") / "nongrads.csv", header=None, skiprows=2, names=columns)
     sub = df["25-29"].dropna().sort_values("X")
     return sub["X"], sub["Y"] * 100
 
 
 def plot_mashup(out_path, stacked_tenure=True, mark_2011=False):
-    fig8 = pd.read_csv("data/fig8_nongrad.csv")
-    fig7a = pd.read_csv("data/fig7a_nongrad.csv")
+    fig8 = pd.read_csv(data_dir("resolution") / "fig8_nongrad.csv")
+    fig7a = pd.read_csv(data_dir("resolution") / "fig7a_nongrad.csv")
     childless_x, childless_y = load_childless_25_29()
 
     fig, axes = plt.subplots(3, 1, figsize=(8, 9), sharex=True, gridspec_kw={"hspace": 0})
@@ -77,5 +79,5 @@ def plot_mashup(out_path, stacked_tenure=True, mark_2011=False):
 
 
 if __name__ == "__main__":
-    plot_mashup("outputs/mashup.png", stacked_tenure=True, mark_2011=False)
-    plot_mashup("outputs/mashup_analysis.png", stacked_tenure=False, mark_2011=True)
+    plot_mashup(outputs_dir("resolution") / "mashup.png", stacked_tenure=True, mark_2011=False)
+    plot_mashup(outputs_dir("resolution") / "mashup_analysis.png", stacked_tenure=False, mark_2011=True)

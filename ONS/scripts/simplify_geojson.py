@@ -1,10 +1,12 @@
 import json
 
-INPUT = "data/LAD_MAY_2025_UK_BFE_V2_5966901361471275117.geojson"
-OUTPUT = "outputs/lad_boundaries_simplified.geojson"
+from common.paths import data_dir, intermediate_dir
+
+INPUT = data_dir("ONS") / "LAD_MAY_2025_UK_BFE_V2_5966901361471275117.geojson"
+OUTPUT = intermediate_dir("ONS") / "lad_boundaries_simplified.geojson"
 
 EPSILON = 0.0015  # degrees (~150m) minimum spacing kept between consecutive ring points
-ROUND = 5  # decimal places (~1.1m precision)
+ROUND = 4  # decimal places (~11m precision, well under EPSILON)
 
 
 def dist2(a, b):

@@ -1,6 +1,6 @@
 # Plotting conventions (for agents)
 
-Colors for every Plotly chart that colors lines by birth cohort or calendar year. All of it lives in `HFD/scripts/plot_colors.py` — import from there, never hardcode a colorscale name or a year range in a chart script.
+Colors for every Plotly chart that colors lines by birth cohort or calendar year. All of it lives in `common/plot_colors.py` (`from common.plot_colors import ...`) — import from there, never hardcode a colorscale name or a year range in a chart script.
 
 ## Colormaps
 

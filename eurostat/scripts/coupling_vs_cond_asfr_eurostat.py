@@ -16,21 +16,17 @@ Input (download into eurostat/data/ - not tracked in git):
 """
 
 import json
-import pathlib
-import sys
 
 import pandas as pd
 import plotly.colors as pc
 
-ROOT = pathlib.Path(__file__).resolve().parent.parent
-REPO = ROOT.parent
-DATA = ROOT / "data"
-OUTDIR = ROOT / "outputs"
-sys.path.insert(0, str(REPO / "ILO" / "scripts"))
-sys.path.insert(0, str(REPO / "ONS" / "scripts"))
+from common import coupling_hfd as hfd
+from common.coupling_ew import dual_dropdown_fig
+from common.paths import data_dir, outputs_dir
+from common.plotting import write_html
 
-import coupling_vs_cond_asfr as hfd  # noqa: E402
-import coupling_vs_cond_asfr_ew as ew  # noqa: E402
+DATA = data_dir("eurostat")
+OUTDIR = outputs_dir("eurostat")
 
 HFD_CODES = {
     "AT": "AUT", "BE": "BEL", "BG": "BGR", "CZ": "CZE", "DK": "DNK", "EE": "EST", "IE": "IRL", "ES": "ESP",
@@ -90,12 +86,11 @@ if __name__ == "__main__":
     rows = [{"country": s["name"], "year": yr, **{f"couple_{k}": s["x"][k][i] for k in x_opts},
              **{f"y_{k}": s["y"][k][i] for k in hfd.Y_OPTS}} for s in series for i, yr in enumerate(s["years"])]
     pd.DataFrame(rows).round(3).to_csv(OUTDIR / "coupling_vs_cond_asfr_eurostat.csv", index=False)
-    fig = ew.dual_dropdown_fig(
+    fig = dual_dropdown_fig(
         series, {k: k for k in x_opts}, hfd.Y_OPTS, X_DEFAULT, "20-24",
         "First-birth rate or % with a child vs young adults living in a couple, EU-LFS (marker grows with year)",
         "% living in a couple")
-    ew.coupling_by_age_ew.OUTDIR = OUTDIR
-    ew.coupling_by_age_ew.write_html(fig, "coupling_vs_cond_asfr_eurostat.html")
+    write_html(fig, OUTDIR / "coupling_vs_cond_asfr_eurostat.html")
     for s in series:
         v = [v for v in s["x"][X_DEFAULT] if v is not None]
         print(f"{s['name']:12s} {s['years'][0]}-{s['years'][-1]}  women 18-24: {v[0]:.1f} -> {v[-1]:.1f}" if v else s["name"])

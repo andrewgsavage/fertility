@@ -9,17 +9,18 @@ Input (download into GSS/data/ and unzip - not tracked in git):
   -> GSS/data/GSS_stata/gss7224_r3a.dta
 """
 
-import pathlib
 import warnings
 
 import pandas as pd
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
+from common.paths import data_dir, outputs_dir
+from common.plotting import write_html
+
 warnings.simplefilter("ignore")
-_SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
-DATA = _SCRIPT_DIR.parent / "data" / "GSS_stata" / "gss7224_r3a.dta"
-OUTPUT = _SCRIPT_DIR.parent / "outputs" / "young_adults_no_sex_us.html"
+DATA = data_dir("GSS") / "GSS_stata" / "gss7224_r3a.dta"
+OUTPUT = outputs_dir("GSS") / "young_adults_no_sex_us.html"
 
 EDGES = [1988, 1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020, 2024]
 
@@ -72,9 +73,4 @@ def plot(d):
 
 if __name__ == "__main__":
     fig = plot(load())
-    fig.write_html(OUTPUT, include_plotlyjs="cdn", full_html=True, default_width="100%",
-                   default_height="100%", config={"responsive": True})
-    html = OUTPUT.read_text(encoding="utf-8")
-    html = html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1)
-    OUTPUT.write_text(html, encoding="utf-8")
-    print(f"Saved {OUTPUT}")
+    write_html(fig, OUTPUT)

@@ -20,6 +20,8 @@ import plotly.colors as pc
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
+from common.plotting import write_html
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 OUTDIR = ROOT / "outputs"
@@ -44,16 +46,6 @@ def flourish(path):
             if v not in (None, ""):
                 rows.append({"facet": r["facet"], "year": int(r["label"]), "series": s, "value": float(v)})
     return pd.DataFrame(rows)
-
-
-def write_html(fig, name):
-    out = OUTDIR / name
-    fig.write_html(out, include_plotlyjs="cdn", full_html=True, default_width="100%",
-                   default_height="100%", config={"responsive": True})
-    html = out.read_text(encoding="utf-8")
-    out.write_text(html.replace("<head>", "<head>\n<style>html, body { height: 100%; margin: 0; }</style>", 1),
-                   encoding="utf-8")
-    print(f"Saved {out}")
 
 
 def plot_countries(d):
@@ -110,6 +102,6 @@ if __name__ == "__main__":
     education.to_csv(OUTDIR / "ft_coupling_education.csv", index=False)
     us.to_csv(OUTDIR / "ft_us_tfr_decomposition.csv", index=False)
     write_html(plot_countries(countries.rename(columns={"region": "facet", "country": "series"})),
-               "ft_coupling_25_34.html")
-    write_html(plot_education(education.rename(columns={"country": "facet"})), "ft_coupling_education.html")
+               OUTDIR / "ft_coupling_25_34.html")
+    write_html(plot_education(education.rename(columns={"country": "facet"})), OUTDIR / "ft_coupling_education.html")
     print(us[us.year.isin([1980, 2022])].to_string())

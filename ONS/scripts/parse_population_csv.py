@@ -2,8 +2,10 @@ import csv
 import json
 import re
 
-INPUT = "data/2820211563520880.csv"
-OUTPUT = "outputs/population_by_lad.json"
+from common.paths import data_dir, intermediate_dir
+
+INPUT = data_dir("ONS") / "2820211563520880.csv"
+OUTPUT = intermediate_dir("ONS") / "population_by_lad.json"
 
 # Female population estimates by 5-year age band (Nomis export). Unlike the
 # births CSV (one "Date:" block per year, wide by metric), this file has one
