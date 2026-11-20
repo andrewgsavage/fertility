@@ -19,16 +19,68 @@ findings:
   measure: young-first-births
   verdict: mixed
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: 'Finland register 1988-2009: unemployment delays first births, but not for young low-educated
-    women or men.'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FIN: Unemployment delays first births overall but not for young low-educated women or men; stronger
+    around and after the median age at first birth.'
 - factor: left-behind-young-men
   measure: young-first-births
   verdict: mixed
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: The negative unemployment association does not apply to young, low-educated men.
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FIN: Negative association does not apply to young low-educated men; above age 25 unemployment
+    lowers first-birth hazards in all educational groups.'
+- factor: job-insecurity
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FIN: Unemployment delays first birth for women, but the effect disappears once income is controlled,
+    so it works largely through low income; with union status long unemployment is slightly positive.'
+- factor: left-behind-young-men
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FIN: Men''s unemployment lowers first-birth rate more than women''s and persists after income
+    and union controls.'
+- factor: job-insecurity
+  measure: ppr-0-1
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FIN: Only timing of first birth to age 39 studied; completed childlessness not estimated.'
+- factor: income
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FIN: First-birth rate rises monotonically with income above a low threshold, similarly for men
+    and women.'
+- factor: education
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FIN: Being enrolled in education lowers first-birth rate by about half, while holders of tertiary
+    degrees have higher rates once enrolment is controlled.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Advances in Life Course Research.
+countries:
+- FIN
+period:
+- 1988
+- 2009

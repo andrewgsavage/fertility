@@ -19,17 +19,26 @@ findings:
   measure: cond-asfr-1
   verdict: supports
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/costs-and-housing.md
-  note: 'Belgium 2012–20 register data, municipality fixed-effects hazard models: higher local prices
-    lower first-birth hazards at 18–34.'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'BEL: Rising local prices lower first-birth hazards at 18-34, robust to calendar-year and municipality-specific
+    trends; aged 35-39 neutral for men and positive for women. Homeowners (under 0.3% at 18-24, 6-7% at
+    25-29) are less negatively affected.'
 - factor: house-prices
   measure: young-first-births
   verdict: supports
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/costs-and-housing.md
-  note: Negative association is among young adults 18–34; varies by education and migration background,
-    linked to ownership rates.
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'BEL: Effect is largest at ages 18-24 and fades with age, so it falls mostly on young first births;
+    lower-educated groups more negatively affected (medium/high-educated women 18-24 have 4.7%/8.7% higher
+    odds than low-educated, bigger gradient at 25-34), non-European origin groups less negatively.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demographic Research.
+countries:
+- BEL
+period:
+- 2012
+- 2020

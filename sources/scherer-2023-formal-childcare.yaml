@@ -30,17 +30,24 @@ findings:
   measure: cond-asfr-1
   verdict: supports
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/policy-and-the-state.md
-  note: 'Italy: positive short-term effect on first births, limited.'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'ITA: Italy: small positive effects on first births, only women 20-29 (and men 45-49 for usage);
+    no strong effect elsewhere. Effect sizes very small.'
 - factor: childcare-provision
   measure: cond-asfr-2plus
-  verdict: supports
-  tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/policy-and-the-state.md
-  note: 'Italy: positive short-term effects on parity progression, limited. Another Italian study, Mariani
-    & Rosati 2021 ([10.2139/ssrn.4114276](https://doi.org/10.2139/ssrn.4114276)), finds immigrant child-care
-    supply raised native births 2–4% (all births).'
+  verdict: mixed
+  tick: '?'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'ITA: Italy: private childcare availability tied to second/third births in some age-education
+    groups; public usage mostly null for higher parity. Very small effects.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Genus.
+countries:
+- ITA
+period:
+- 2003
+- 2020

@@ -21,5 +21,28 @@ findings:
   ref: research/factor-evidence/fulltext-recheck.md
   note: 'Quasi-experiment, cash benefit only for families with 4+ children: probability of a fourth child
     rose about 5%; no effect on fifth+ births. Higher-order only.'
+- factor: income
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: '?'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'CYP: Control-variable coefficient (income excluding wife''s earnings and child benefits) in the
+    Cyprus sample of families with 2-3 children; not the paper''s focus and not by parity.'
+- factor: female-employment
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: '?'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'CYP: Control-variable coefficient in families with 2-3 children; author notes simultaneity bias,
+    recursive probit rho insignificant.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in The B.E. Journal of Economic Analysis &amp; Policy.
+countries:
+- CYP
+period:
+- 1984
+- 1997

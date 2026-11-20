@@ -29,5 +29,70 @@ findings:
   note: 'Registers from Belgium, Denmark, Finland, France, the Netherlands, Norway and Sweden around 2000:
     regional variation in education gradients of birth hazards; more urbanised areas with more foreign-born
     women show more negative gradients. Urbanisation''s own effect on first births not estimated.'
+- factor: urbanisation
+  measure: ppr-0-1
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Tests how urbanisation shapes the education gradient, not the level of first-birth progression.
+    Denser regions show weaker positive or more negative gradients, mostly through more foreign-born women
+    with low education and higher fertility.'
+- factor: urbanisation
+  measure: ppr-1-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Education gradients in second-birth progression, not the urban-rural level. Reverses
+    sign among native-born women after excluding Brussels.'
+- factor: urbanisation
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Hazards by education only; no urban-rural level comparison.'
+- factor: education
+  measure: ppr-0-1
+  verdict: contradicts
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Around 2002-05 in northern and western Europe, higher-educated women''s first-birth progression
+    is mostly higher than low-educated women''s, not lower. Varies by region and country.'
+- factor: education
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: 'no'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Education does not lower progression to a second birth; gradients mostly positive, weakest
+    in capital regions.'
+- factor: education
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: 'no'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Second-birth gradients positive, third-birth gradients mostly negative (U-shaped or reverse-U
+    in places).'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Vienna Yearbook of Population Research.
+countries:
+- BEL
+- DNK
+- FIN
+- FRATNP
+- NLD
+- NOR
+- SWE
+period:
+- 2001
+- 2005

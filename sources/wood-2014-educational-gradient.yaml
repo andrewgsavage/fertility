@@ -22,7 +22,140 @@ findings:
   note: '14 low-fertility countries, cohorts born 1940-61 (event-history models turned into cohort parity
     progression ratios): childlessness is higher among highly educated women in every country; the gradient
     varies across countries more than over time.'
+- factor: education
+  measure: ppr-1-2plus
+  verdict: mixed
+  tick: 'no'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'NOR: CPPR2 by education: negative 1945-49, neutral 1950-55, positive 1956-61 (high vs low HR
+    1.317, p<.05).'
+- factor: education
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: 'no'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'AUS: CPPR2 by education: neutral in the two youngest cohorts.'
+- factor: education
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: 'no'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBR: CPPR2 by education: neutral, no significant educational effect in any cohort.'
+- factor: education
+  measure: ppr-1-2plus
+  verdict: contradicts
+  tick: 'no'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'NLD: CPPR2 by education: positive in 1950-55 and 1956-61.'
+- factor: education
+  measure: ppr-1-2plus
+  verdict: contradicts
+  tick: 'no'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'BEL: CPPR2 by education: positive and strengthening; odds of 2nd birth +63% for high-educated
+    born 1950-61.'
+- factor: education
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: 'no'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FRATNP: CPPR2 by education: mostly neutral; slightly lower for middle-educated (significant only
+    1950-55).'
+- factor: education
+  measure: ppr-1-2plus
+  verdict: mixed
+  tick: 'no'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'ITA: CPPR2 by education: neutral 1940-44 and 1956-61, negative 1945-55.'
+- factor: education
+  measure: ppr-1-2plus
+  verdict: mixed
+  tick: 'no'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'ESP: CPPR2 by education: negative or U-shaped in recent cohorts after uneven declines.'
+- factor: education
+  measure: ppr-1-2plus
+  verdict: contradicts
+  tick: 'no'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'BGR: CPPR2 by education: strong negative, stable (high vs low HR 0.287 in 1956-61).'
+- factor: education
+  measure: ppr-1-2plus
+  verdict: mixed
+  tick: 'no'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'EST: CPPR2 by education: negative 1945-55, neutral in oldest and youngest cohorts.'
+- factor: education
+  measure: ppr-1-2plus
+  verdict: contradicts
+  tick: 'no'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GEO: CPPR2 by education: negative, strongest in younger cohorts (high vs low HR 0.418 in 1956-61).'
+- factor: education
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: 'no'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'HUN: CPPR2 by education: neutral overall (change to U-shape not significant).'
+- factor: education
+  measure: ppr-1-2plus
+  verdict: contradicts
+  tick: 'no'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'ROU: CPPR2 by education: strong negative, stable (high vs low HR 0.261 in 1956-61).'
+- factor: education
+  measure: ppr-1-2plus
+  verdict: contradicts
+  tick: 'no'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'RUS: CPPR2 by education: negative, stable (high vs low HR 0.565 in 1956-61).'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demographic Research.
 measurables:
 - ppr-0-1
+countries:
+- NOR
+- AUS
+- GBR_NP
+- NLD
+- BEL
+- FRATNP
+- ITA
+- ESP
+- BGR
+- EST
+- GEO
+- HUN
+- ROU
+- RUS
+period:
+- 1940
+- 1961

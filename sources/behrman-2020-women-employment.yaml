@@ -21,5 +21,26 @@ findings:
   ref: research/factor-evidence/life-course-and-education-work.md
   note: 'Global country panel: women''s wage employment negatively correlated with TFR in every region,
     holds for nonagricultural employment only. Aggregate, not parity-specific.'
+- factor: female-employment
+  measure: tfr
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Within-country negative association between women''s employment and aggregate TFR in
+    every region, smallest in Europe/N. America. Associations only, no direction of causality, TFR not
+    split by parity, so it cannot separate first from second+ births; no measure given since all columns.'
+- factor: female-employment
+  measure: tfr
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Agricultural employment is positively associated with TFR; only nonagricultural employment
+    is negatively associated, so the headline association depends on job type. Not all regional coefficients
+    significant at p<0.05.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demographic Research.
+countries:
+- all
+period:
+- 1960
+- 2015

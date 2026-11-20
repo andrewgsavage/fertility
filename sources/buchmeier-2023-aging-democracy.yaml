@@ -13,3 +13,17 @@ factors:
 - population-ageing
 notes: Imported from the literature review page (docs/literature-review.md, removed). Literature review
   cited 2024; OpenAlex gives 2023. Published in Perspectives on Politics.
+countries:
+- JPN
+period:
+- 1989
+- 2022
+findings:
+- factor: population-ageing
+  measure: tfr
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'JPN: Documents older-electorate policy bias toward the elderly over families in Japan (and US),
+    and that policy has not raised TFR (1.33 in 2020); no link from this bias to fertility outcomes is
+    tested.'

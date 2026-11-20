@@ -14,11 +14,31 @@ measurables:
 findings:
 - factor: urbanisation
   measure: ppr-1-2plus
-  verdict: supports
+  verdict: no-evidence
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: '60 developing countries, multiple surveys: inverted-U in rural excess fertility. Lower urban
-    fertility is general but this is developing-country evidence, not the housing-cost mechanism.'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Parity-specific ratios used internally but no separate urban-rural PPR results shown
+    in the text read.'
+- factor: urbanisation
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: No conditional ASFR or order-specific results.'
+- factor: child-mortality
+  measure: tfr
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Context only; child mortality not modelled.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Population and Development Review.
+countries:
+- all
+period:
+- 1896
+- 2017

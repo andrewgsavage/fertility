@@ -17,9 +17,25 @@ findings:
 - factor: house-prices
   measure: cond-asfr-2plus
   verdict: contradicts
+  tick: '?'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'USA: Same aggregate TFR result, not separated by birth order; robust to general fertility rate
+    and crude birth rate, homeownership control and alternative orderings (Figs 6-13).'
+- factor: house-prices
+  measure: cond-asfr-1
+  verdict: contradicts
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/costs-and-housing.md
-  note: 'US aggregate 1975–2020, structural VAR: house price rises have a positive effect on fertility.'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'USA: Positive house price shock raises TFR, one-way causality from prices to TFR. Aggregate TFR
+    only, not by parity or age; authors read it as a housing-wealth effect for owners (67% ownership).'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Journal of Risk and Financial Management.
+countries:
+- USA
+period:
+- 1975
+- 2020

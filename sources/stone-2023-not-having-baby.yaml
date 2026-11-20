@@ -27,10 +27,10 @@ findings:
   direction: '-'
   basis: fulltext
   ref: sources/stone-2023-not-having-baby.yaml
-  note: 'Canada 2022 (Angus Reid, women under 30 who want more children, n=487): those citing "I still live
-    with my parents" were 19.2 points less likely to expect a child in the next two years (4.5 after weighting
-    by how common the concern is; Figs 12-13). Self-rated expectation, unadjusted bivariate gap, parity not
-    split.'
+  note: 'Canada 2022 (Angus Reid, women under 30 who want more children, n=487): those citing "I still
+    live with my parents" were 19.2 points less likely to expect a child in the next two years (4.5 after
+    weighting by how common the concern is; Figs 12-13). Self-rated expectation, unadjusted bivariate
+    gap, parity not split.'
 - factor: partnership-formation
   measure: cond-asfr-1
   verdict: supports
@@ -38,9 +38,10 @@ findings:
   direction: '-'
   basis: fulltext
   ref: sources/stone-2023-not-having-baby.yaml
-  note: 'Canada 2022 (Angus Reid, women under 30 who want more children, n=487): those citing having no suitable
-    partner were 19.9 points less likely to expect a child in the next two years (4.9 after weighting by how
-    common the concern is; Figs 12-13). Self-rated expectation, unadjusted bivariate gap, parity not split.'
+  note: 'Canada 2022 (Angus Reid, women under 30 who want more children, n=487): those citing having no
+    suitable partner were 19.9 points less likely to expect a child in the next two years (4.9 after weighting
+    by how common the concern is; Figs 12-13). Self-rated expectation, unadjusted bivariate gap, parity
+    not split.'
 - factor: education
   measure: cond-asfr-1
   verdict: supports
@@ -48,10 +49,10 @@ findings:
   direction: '-'
   basis: fulltext
   ref: sources/stone-2023-not-having-baby.yaml
-  note: 'Canada 2022 (Angus Reid, women under 30 who want more children, n=487): those citing still being in
-    school were 19.1 points less likely to expect a child in the next two years (7.3 after weighting by how
-    common the concern is; Figs 12-13). Self-rated expectation, unadjusted bivariate gap, parity not split.
-    Career focus (21.0, adjusted 8.9) is the second-largest concern after self-development.'
+  note: 'Canada 2022 (Angus Reid, women under 30 who want more children, n=487): those citing still being
+    in school were 19.1 points less likely to expect a child in the next two years (7.3 after weighting
+    by how common the concern is; Figs 12-13). Self-rated expectation, unadjusted bivariate gap, parity
+    not split. Career focus (21.0, adjusted 8.9) is the second-largest concern after self-development.'
 - factor: job-insecurity
   measure: cond-asfr-1
   verdict: supports
@@ -70,10 +71,10 @@ findings:
   direction: '-'
   basis: fulltext
   ref: sources/stone-2023-not-having-baby.yaml
-  note: 'Canada 2022 (Angus Reid, women under 30 who want more children, n=487): those citing debt were 6.1
-    points less likely to expect a child in the next two years (0.9 after weighting by how common the concern
-    is; Figs 12-13). Self-rated expectation, unadjusted bivariate gap, parity not split. The weakest financial
-    concern and second-weakest of 34; the item is debt in general, not student loans.'
+  note: 'Canada 2022 (Angus Reid, women under 30 who want more children, n=487): those citing debt were
+    6.1 points less likely to expect a child in the next two years (0.9 after weighting by how common
+    the concern is; Figs 12-13). Self-rated expectation, unadjusted bivariate gap, parity not split. The
+    weakest financial concern and second-weakest of 34; the item is debt in general, not student loans.'
 - factor: house-prices
   measure: cond-asfr-1
   verdict: supports
@@ -81,10 +82,11 @@ findings:
   direction: '-'
   basis: fulltext
   ref: sources/stone-2023-not-having-baby.yaml
-  note: 'Canada 2022 (Angus Reid, women under 30 who want more children, n=487): those citing housing costs
-    were 11.5 points less likely to expect a child in the next two years (4.0 after weighting by how common
-    the concern is; Figs 12-13). Self-rated expectation, unadjusted bivariate gap, parity not split. Smaller
-    than life-stage concerns (self-development 25.2, saving 21.4, career 21.0) but widely shared.'
+  note: 'Canada 2022 (Angus Reid, women under 30 who want more children, n=487): those citing housing
+    costs were 11.5 points less likely to expect a child in the next two years (4.0 after weighting by
+    how common the concern is; Figs 12-13). Self-rated expectation, unadjusted bivariate gap, parity not
+    split. Smaller than life-stage concerns (self-development 25.2, saving 21.4, career 21.0) but widely
+    shared.'
 - factor: childcare-costs
   measure: cond-asfr-1
   verdict: supports
@@ -92,9 +94,10 @@ findings:
   direction: '-'
   basis: fulltext
   ref: sources/stone-2023-not-having-baby.yaml
-  note: 'Canada 2022 (Angus Reid, women under 30 who want more children, n=487): those citing childcare costs
-    were 14.5 points less likely to expect a child in the next two years (4.5 after weighting by how common
-    the concern is; Figs 12-13). Self-rated expectation, unadjusted bivariate gap, parity not split.'
+  note: 'Canada 2022 (Angus Reid, women under 30 who want more children, n=487): those citing childcare
+    costs were 14.5 points less likely to expect a child in the next two years (4.5 after weighting by
+    how common the concern is; Figs 12-13). Self-rated expectation, unadjusted bivariate gap, parity not
+    split.'
 - factor: childcare-provision
   measure: cond-asfr-1
   verdict: supports
@@ -104,8 +107,8 @@ findings:
   ref: sources/stone-2023-not-having-baby.yaml
   note: 'Canada 2022 (Angus Reid, women under 30 who want more children, n=487): those citing no childcare
     availability were 14.9 points less likely to expect a child in the next two years (1.7 after weighting
-    by how common the concern is; Figs 12-13). Self-rated expectation, unadjusted bivariate gap, parity not
-    split.'
+    by how common the concern is; Figs 12-13). Self-rated expectation, unadjusted bivariate gap, parity
+    not split.'
 - factor: parental-leave
   measure: cond-asfr-1
   verdict: supports
@@ -113,10 +116,10 @@ findings:
   direction: '-'
   basis: fulltext
   ref: sources/stone-2023-not-having-baby.yaml
-  note: 'Canada 2022 (Angus Reid, women under 30 who want more children, n=487): those citing lack of paid
-    leave were 16.3 points less likely to expect a child in the next two years (2.4 after weighting by how
-    common the concern is; Figs 12-13). Self-rated expectation, unadjusted bivariate gap, parity not split.
-    Large for those affected but an uncommon concern.'
+  note: 'Canada 2022 (Angus Reid, women under 30 who want more children, n=487): those citing lack of
+    paid leave were 16.3 points less likely to expect a child in the next two years (2.4 after weighting
+    by how common the concern is; Figs 12-13). Self-rated expectation, unadjusted bivariate gap, parity
+    not split. Large for those affected but an uncommon concern.'
 - factor: economic-uncertainty
   measure: cond-asfr-1
   verdict: supports
@@ -125,9 +128,9 @@ findings:
   basis: fulltext
   ref: sources/stone-2023-not-having-baby.yaml
   note: 'Canada 2022 (Angus Reid, women under 30 who want more children, n=487): those citing the economy,
-    inflation or inequality were 12.1 points less likely to expect a child in the next two years (3.9 after
-    weighting by how common the concern is; Figs 12-13). Self-rated expectation, unadjusted bivariate gap,
-    parity not split.'
+    inflation or inequality were 12.1 points less likely to expect a child in the next two years (3.9
+    after weighting by how common the concern is; Figs 12-13). Self-rated expectation, unadjusted bivariate
+    gap, parity not split.'
 - factor: working-hours
   measure: cond-asfr-1
   verdict: contradicts
@@ -135,11 +138,11 @@ findings:
   direction: '-'
   basis: fulltext
   ref: sources/stone-2023-not-having-baby.yaml
-  note: 'Canada 2022 (Angus Reid, women under 30 who want more children, n=487): those citing working long
-    hours were 14.9 points less likely to expect a child in the next two years (1.9 after weighting by how
-    common the concern is; Figs 12-13). Self-rated expectation, unadjusted bivariate gap, parity not split.
-    The cell is blank (long hours act on second births), but the gap shows up before most first births; uncommon
-    concern.'
+  note: 'Canada 2022 (Angus Reid, women under 30 who want more children, n=487): those citing working
+    long hours were 14.9 points less likely to expect a child in the next two years (1.9 after weighting
+    by how common the concern is; Figs 12-13). Self-rated expectation, unadjusted bivariate gap, parity
+    not split. The cell is blank (long hours act on second births), but the gap shows up before most first
+    births; uncommon concern.'
 - factor: gender-equality-home
   measure: cond-asfr-1
   verdict: mixed
@@ -147,10 +150,11 @@ findings:
   direction: '-'
   basis: fulltext
   ref: sources/stone-2023-not-having-baby.yaml
-  note: 'Canada 2022 (Angus Reid, women under 30 who want more children, n=487): those citing a partner who
-    won''t share care duties were 14.1 points less likely to expect a child in the next two years (1.6 after
-    weighting by how common the concern is; Figs 12-13). Self-rated expectation, unadjusted bivariate gap,
-    parity not split. Smaller than the desire for leisure time (19.2); single cross-sectional survey.'
+  note: 'Canada 2022 (Angus Reid, women under 30 who want more children, n=487): those citing a partner
+    who won''t share care duties were 14.1 points less likely to expect a child in the next two years
+    (1.6 after weighting by how common the concern is; Figs 12-13). Self-rated expectation, unadjusted
+    bivariate gap, parity not split. Smaller than the desire for leisure time (19.2); single cross-sectional
+    survey.'
 - factor: intensive-parenting
   measure: cond-asfr-1
   verdict: mixed
@@ -158,11 +162,12 @@ findings:
   direction: '-'
   basis: fulltext
   ref: sources/stone-2023-not-having-baby.yaml
-  note: 'Canada 2022 (Angus Reid, women under 30 who want more children, n=487): those citing "Children simply
-    require lots of intense care, and I don''t have time for that" were 20.1 points less likely to expect a
-    child in the next two years (6.4 after weighting by how common the concern is; Figs 12-13). Self-rated
-    expectation, unadjusted bivariate gap, parity not split. The largest time and balance concern, above leave,
-    childcare availability and hours; points toward a tick, but one cross-sectional survey of expectations.'
+  note: 'Canada 2022 (Angus Reid, women under 30 who want more children, n=487): those citing "Children
+    simply require lots of intense care, and I don''t have time for that" were 20.1 points less likely
+    to expect a child in the next two years (6.4 after weighting by how common the concern is; Figs 12-13).
+    Self-rated expectation, unadjusted bivariate gap, parity not split. The largest time and balance concern,
+    above leave, childcare availability and hours; points toward a tick, but one cross-sectional survey
+    of expectations.'
 - factor: income
   measure: cond-asfr-1
   verdict: supports
@@ -172,19 +177,19 @@ findings:
   ref: sources/stone-2023-not-having-baby.yaml
   note: 'Canada 2022 (Angus Reid, 2,700 women 18-44): ideal and intended family size both rise with household
     income, and the gap between them is largest for the poorest women. Among under-30s who want more children,
-    low income cuts the two-year birth expectation by 13.6 points (5.3 adjusted) and inability to pay for basic
-    needs by 15.0 (5.0). Children ever born: poorer women have more under 30, no gradient in the 30s, richer
-    women more by 40-44 (Figs 7-9). Cross-sectional.'
+    low income cuts the two-year birth expectation by 13.6 points (5.3 adjusted) and inability to pay
+    for basic needs by 15.0 (5.0). Children ever born: poorer women have more under 30, no gradient in
+    the 30s, richer women more by 40-44 (Figs 7-9). Cross-sectional.'
 - factor: ideal-family-size
   verdict: mixed
   tick: '?'
   direction: mixed
   basis: fulltext
   ref: sources/stone-2023-not-having-baby.yaml
-  note: 'Canada 2022 (Angus Reid, 2,700 women 18-44): desired family size ~2.2 and intended ~1.85, the lowest
-    of 26 Canadian surveys since 1945, so ideals have fallen; but both sit well above the TFR of 1.4, and at
-    40-44 45% have fewer children than their ideal versus 14% more (about 0.5 children short on average). Falling
-    ideals explain part of the decline; most of the gap is unrealised desires.'
+  note: 'Canada 2022 (Angus Reid, 2,700 women 18-44): desired family size ~2.2 and intended ~1.85, the
+    lowest of 26 Canadian surveys since 1945, so ideals have fallen; but both sit well above the TFR of
+    1.4, and at 40-44 45% have fewer children than their ideal versus 14% more (about 0.5 children short
+    on average). Falling ideals explain part of the decline; most of the gap is unrealised desires.'
 - factor: female-infertility
   measure: ppr-0-1
   verdict: no-evidence
@@ -192,11 +197,19 @@ findings:
   direction: '0'
   basis: fulltext
   ref: sources/stone-2023-not-having-baby.yaml
-  note: 'Canada 2022 (Angus Reid, 2,700 women 18-44): few respondents at any age gave infertility or poor health
-    as a reason for not having (more) children, and one wrote in IVF availability. Stated reasons only; no
-    measure of realised childlessness.'
-notes: 'Angus Reid survey of 2,700 Canadian women aged 18-44 (July 2022): intended family size ~1.85 and desired
-  ~2.2, both the lowest of 26 Canadian surveys back to 1945, against a TFR of 1.4. Among women aged 40-44,
-  45% have fewer children than their ideal versus 14% more, about 0.5 children short on average. Among under-30s
-  who want children, life-stage sequencing (self-development, career first) predicts delay more strongly than
-  housing or childcare costs; fertility desires and intentions rise with income. PDF: https://www.cardus.ca/wp-content/uploads/2023/01/Shes-Not-Having-a-Baby.pdf'
+  note: 'Canada 2022 (Angus Reid, 2,700 women 18-44): few respondents at any age gave infertility or poor
+    health as a reason for not having (more) children, and one wrote in IVF availability. Stated reasons
+    only; no measure of realised childlessness.'
+- factor: ideal-family-size
+  measure: tfr
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'CAN: Ideals have fallen but remain above TFR 1.4; most of gap is unrealised desires (about 0.5
+    children short at 40-44).'
+notes: 'Angus Reid survey of 2,700 Canadian women aged 18-44 (July 2022): intended family size ~1.85 and
+  desired ~2.2, both the lowest of 26 Canadian surveys back to 1945, against a TFR of 1.4. Among women
+  aged 40-44, 45% have fewer children than their ideal versus 14% more, about 0.5 children short on average.
+  Among under-30s who want children, life-stage sequencing (self-development, career first) predicts delay
+  more strongly than housing or childcare costs; fertility desires and intentions rise with income. PDF:
+  https://www.cardus.ca/wp-content/uploads/2023/01/Shes-Not-Having-a-Baby.pdf'

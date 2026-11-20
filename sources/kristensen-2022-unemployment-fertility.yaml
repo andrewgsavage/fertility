@@ -19,10 +19,12 @@ findings:
   measure: cond-asfr-1
   verdict: supports
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: 'Norway register 1994-2014: individual unemployment negatively associated with births for childless
-    men and women.'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'NOR: Individually unemployed childless men have 21% lower first-birth odds than employed men
+    (women 9%), consistently over 1994-2014. Students 0.32 and ''other'' 0.35 for men. Unemployment is
+    not education-specific or NEET-specific.'
 - factor: left-behind-young-men
   measure: cond-asfr-2plus
   verdict: supports
@@ -32,5 +34,56 @@ findings:
   ref: research/factor-evidence/fulltext-recheck.md
   note: 'Norway registers 1994-2014: fathers'' individual unemployment was negatively linked to further
     births early on, but the link disappeared over time. Consistent with the blank.'
+- factor: economic-uncertainty
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'NOR: Individual unemployment lowers first births; aggregate municipal unemployment is slightly
+    positive overall and turns negative after 2005 (and negative without municipality fixed effects, p.
+    1055).'
+- factor: economic-uncertainty
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'NOR: Higher local unemployment lowers second and further births, strongly in the 1990s, weakly
+    or not after 2005. Mothers'' own unemployment is slightly positive (1.02).'
+- factor: female-employment
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: '?'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'NOR: Non-employed mothers have only slightly higher higher-order birth odds than employed mothers
+    (2-5%), fading after the 1990s; authors cite substitution effect.'
+- factor: education
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'NOR: Being a student cuts first-birth odds by about 70%, but after leaving, higher-educated Norwegians
+    (age-controlled) have higher first-birth odds than those with compulsory schooling only.'
+- factor: education
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'no'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'NOR: Higher education raises higher-order birth odds, so no negative education effect on second+
+    births.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demographic Research.
+countries:
+- NOR
+period:
+- 1994
+- 2014

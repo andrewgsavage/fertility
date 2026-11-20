@@ -21,7 +21,39 @@ findings:
   note: 'US community cohort of women 30-44 trying to conceive: fecundability 14% lower at 34-35, 30%
     at 38-39, 53% at 40-41 and 59% at 42-44 than at 30-31; lower again for women never pregnant. Mechanism
     evidence, not childlessness rates.'
+- factor: female-infertility
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'USA: All women: fecundability falls from the late thirties; no difference at 32-33 (FR 1.06).
+    Pregnancy, not live birth; miscarriage rises with age (Discussion).'
+- factor: female-infertility
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'USA: Women with a prior pregnancy (proven fertility) show a later, less steep decline; ''prior
+    pregnancy'' is not the same as prior birth, and partner may be new (Discussion).'
+- factor: female-infertility
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'USA: Same prior-pregnancy subgroup as above; pregnancy rather than second birth, and small samples
+    at 40+ (31 and 10 women).'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Fertility and Sterility.
 measurables:
 - ppr-0-1
+countries:
+- USA
+period:
+- 2008
+- 2015

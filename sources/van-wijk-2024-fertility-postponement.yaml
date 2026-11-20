@@ -18,12 +18,13 @@ measurables:
 findings:
 - factor: child-costs
   measure: cond-asfr-1
-  verdict: mixed
+  verdict: no-evidence
   tick: 'no'
-  basis: abstract
-  ref: research/factor-evidence/costs-and-housing.md
-  note: 'Seven-country panel: rising income prerequisites for a first child, rather than uncertainty,
-    may explain postponement.'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'USA: Rising child-related costs proposed as the reason income prerequisites increased; not tested
+    directly (all countries).'
 - factor: child-costs
   measure: young-first-births
   verdict: mixed
@@ -33,11 +34,13 @@ findings:
   note: Higher prerequisites for parenthood push first births later.
 - factor: income
   measure: cond-asfr-1
-  verdict: mixed
+  verdict: supports
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/costs-and-housing.md
-  note: Income thresholds for first births have risen; income–fertility link depends on them.
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'AUS: Both sexes more likely to conceive first child with higher income, and the income gradient
+    steepened over 1998-2019.'
 - factor: economic-uncertainty
   measure: young-first-births
   verdict: mixed
@@ -45,5 +48,117 @@ findings:
   basis: abstract
   ref: research/factor-evidence/costs-and-housing.md
   note: Perceived uncertainty not consistently associated with postponement of parenthood.
+- factor: economic-uncertainty
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'AUS: Perceived job insecurity lowers first births for women only; other uncertainty measure goes
+    the opposite way. No change over time (Table 2).'
+- factor: economic-uncertainty
+  measure: cond-asfr-1
+  verdict: contradicts
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'DEUTNP: Perceived economic uncertainty not associated with first births; German men''s economic
+    concerns matter only later in the period (p=0.047).'
+- factor: income
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'DEUTNP: Positive income effect for both sexes, increasing over time.'
+- factor: economic-uncertainty
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'KOR: Job insecurity lowers first births among men only; no change over time (Table 2).'
+- factor: income
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'KOR: Positive income effect for both sexes; interaction with year not reported as significant
+    (no LR statistic).'
+- factor: economic-uncertainty
+  measure: cond-asfr-1
+  verdict: contradicts
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'RUS: No negative association; Russian men with economic concerns have more first births.'
+- factor: income
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'RUS: Income raises first births for men only; interaction with year not significant.'
+- factor: economic-uncertainty
+  measure: cond-asfr-1
+  verdict: contradicts
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'CHE: No significant negative association of perceived job insecurity with first births.'
+- factor: income
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'CHE: Positive, imprecise income effect; income gradient steepened for women.'
+- factor: economic-uncertainty
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBR_NP: Perceived job insecurity effects not statistically significant.'
+- factor: income
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBR_NP: Both sexes more likely to conceive first child with higher income, with the gradient
+    steepening over time.'
+- factor: income
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'USA: Both sexes more likely to conceive a first child with more income; gradient steepened over
+    time for women only, men''s unchanged.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Population and Development Review.
+countries:
+- AUS
+- DEUTNP
+- KOR
+- RUS
+- CHE
+- GBR_NP
+- USA
+period:
+- 1998
+- 2020

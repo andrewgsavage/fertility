@@ -16,9 +16,60 @@ findings:
   measure: cond-asfr-2plus
   verdict: no-evidence
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/costs-and-housing.md
-  note: Relative costs and family characteristics determine effectiveness of childcare types; no parity
-    detail.
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: No parity-specific estimate for childcare prices. Notes the net effect of childcare on
+    fertility may be lower than expected because easier childcare lets women work more (p. 1, Cons).'
+- factor: childcare-provision
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Norway, register data: raising formal childcare coverage by 25 pp raises the probability
+    that a woman aged 25-29 has a first child by about 1 pp (11.3% to 12.3% for 50% to 75% coverage).
+    The author calls this among the most robust evidence.'
+- factor: childcare-provision
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: '?'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Across EU studies a positive correlation between public childcare coverage and the probability
+    of a birth is generally found, but in most cases only for second or third children. Local-level, mostly
+    pre-2010 studies with endogeneity concerns.'
+- factor: childcare-costs
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Sweden, register data: a 10,000 euro reduction in the present value of future childcare
+    costs raises fertility by about 10%. A handful of US studies find lower childcare costs raise fertility.
+    Review states a positive link between low childcare prices and fertility but the overall evidence
+    on formal childcare is called mixed.'
+- factor: pensions-welfare
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Italian pension reforms raising retirement ages cut potential grandmothers'' childcare
+    but raised their daughters'' likelihood of having children (attributed to higher income). Tests childcare/income
+    channels, not old-age security as a motive for children; parity not specified.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in IZA World of Labor.
+countries:
+- NOR
+- SWE
+- ITA
+- DEUTNP
+- USA
+- NLD
+period:
+- 1980
+- 2015

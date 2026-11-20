@@ -22,5 +22,17 @@ findings:
   ref: research/factor-evidence/fulltext-recheck.md
   note: 'Portugal, 2,404 people aged 18-45: fertility knowledge poor, yet 95.5% want children. No measure
     of births or of knowledge''s effect on them.'
+- factor: ideal-family-size
+  measure: ideal-children
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'PRT: Desired family size is near replacement among the childless, with a large gap to planned;
+    no realised fertility, so does not test whether lower ideals lower births.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Reproductive Health.
+countries:
+- PRT
+period:
+- 2014
+- 2014

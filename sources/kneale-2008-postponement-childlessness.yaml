@@ -22,7 +22,48 @@ findings:
     at 34 rose, e.g. graduate women 39% to 56%), but projected final childlessness of 1970-born graduate
     women is about a quarter, not the 40% conjectured. Postponement raised childlessness less than feared:
     consistent with the blank.'
+- factor: age-at-first-birth
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'no'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBR_NP: Observed first-birth rates are lower to age 34 in the later cohort (that is the postponement),
+    but this is the outcome of the first-birth rate, not an effect on it; paper argues rates recuperate.'
+- factor: education
+  measure: ppr-0-1
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBR_NP: Higher education goes with higher childlessness among 1958-born women; for men those
+    with no qualifications were most childless (24.3% vs 21.7% tertiary). Descriptive, no causal model.'
+- factor: education
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBR_NP: Educated women enter motherhood later; descriptive.'
+- factor: partnership-formation
+  measure: cond-asfr-1
+  verdict: no-evidence
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBR_NP: Little change between cohorts in share of childless 33/34-year-olds in a relationship
+    (e.g. 24.6% vs 26.2% not in relationship, tertiary women); partner age gap narrowed. Partnership effects
+    not reported as a finding.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demographic Research.
 measurables:
 - ppr-0-1
+countries:
+- GBR_NP
+period:
+- 1974
+- 2004

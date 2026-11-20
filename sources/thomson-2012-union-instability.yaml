@@ -35,5 +35,43 @@ findings:
   ref: research/factor-evidence/fulltext-recheck.md
   note: 'As above: new partnerships raise higher-parity progression, offsetting much of the loss from
     dissolution.'
+- factor: partnership-stability
+  measure: completed-fertility
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FRATNP: Net effect of union instability is smaller completed family size, though the reduction
+    is smaller for younger cohorts with delayed union formation and childbearing.'
+- factor: partnership-stability
+  measure: cond-asfr-1
+  verdict: contradicts
+  tick: 'no'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FRATNP: Union dissolution before a first birth is the most costly case for fertility, so it affects
+    first births (tick is blank here). Simulation scenario, not an observed trend.'
+- factor: partnership-formation
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FRATNP: Time out of union during childbearing years lowers expected births; delayed union formation
+    lowers fertility.'
+- factor: age-at-first-birth
+  measure: completed-fertility
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FRATNP: Delayed union and childbearing cut the cost of dissolution but fecundity limits bind
+    after 30 (Beaujouan and Solaz 2008); if mean age at birth went well above 30 smaller families would
+    result.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demography.
+countries:
+- FRATNP
+period:
+- 1930
+- 1998

@@ -18,7 +18,40 @@ findings:
   ref: research/factor-evidence/fulltext-recheck.md
   note: 'Poland, Family 500+ (Household Budget Survey 2010-18): annual birth probability +1.5 pp overall,
     up for women 31-40 but down 2.2-2.6 pp for women 21-30. Births of all orders; no first-birth estimate.'
+- factor: child-benefits
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'POL: Annual birth probability of women already with a child rose 1.5 pp after the 500+ transfer
+    (births of order 2+; no year fixed effects, so not a clean causal estimate). Author calls it a small
+    short-term effect.'
+- factor: child-benefits
+  measure: young-first-births
+  verdict: no-evidence
+  tick: 'no'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'POL: Birth probability fell for eligible women aged 21-30 and rose for 31-40 (+0.018, +0.007);
+    these are births of parity 2+, so not a test of first births at young ages.'
+- factor: income
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: '?'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'POL: Transfer effect was smaller (negative) for higher-income households; education interaction
+    not significant (Table 3: postsecondary -0.002, p=.704).'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demographic Research.
 measurables:
 - cond-asfr-1
+countries:
+- POL
+period:
+- 2010
+- 2018

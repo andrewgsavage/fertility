@@ -43,5 +43,29 @@ findings:
   ref: research/factor-evidence/fulltext-recheck.md
   note: 'As above: ideals not falling; intentions lowered by work-family conflict and gender inequality.
     Qualitative.'
+- factor: ideal-family-size
+  measure: ppr-1-2plus
+  verdict: contradicts
+  tick: '?'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Interview ideals stay at two (Japanese women lower); the shortfall is in intentions (work-family
+    conflict, gender inequality), not in smaller ideals. Qualitative, no fertility outcome measured.'
+- factor: gender-equality-home
+  measure: ppr-1-2plus
+  verdict: mixed
+  tick: 'yes'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: US and Swedish women cite work-family conflict for the ideals-intentions gap as often
+    as Japanese and Spanish women, which sits oddly with gender-equity theory; gender inequality matters
+    more for low intentions in Japan than Spain. Qualitative intentions, not births.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Population and Development Review.
+countries:
+- JPN
+- ESP
+- USA
+- SWE

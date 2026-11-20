@@ -15,10 +15,25 @@ findings:
   measure: ppr-1-2plus
   verdict: no-evidence
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/policy-and-the-state.md
-  note: 'Tax studies found concern female labour supply, not fertility: Colonna & Marcassa 2015 ([10.1186/s40173-015-0030-0](https://doi.org/10.1186/s40173-015-0030-0)),
-    Italy, tax system burdens two-earner households; Apps & Rees 2017 ([10.1007/s10797-018-9492-5](https://doi.org/10.1007/s10797-018-9492-5)),
-    theory favouring individual taxation. Neither tests births.'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'ITA: Outcome is married women''s labour-force participation, not births. Tax credits and child
+    transfers that fall with household income raise the second-earner tax rate on low-income wives (peak
+    about 40% for mothers); joint taxation would cut participation. Fertility not analysed.'
+- factor: tax-system
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'ITA: No fertility or birth outcome; the paper does not test the second-earner tax channel for
+    higher-order births.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in IZA Journal of Labor Policy.
+countries:
+- ITA
+period:
+- 2007
+- 2011

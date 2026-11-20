@@ -25,5 +25,47 @@ findings:
   ref: research/factor-evidence/fulltext-recheck.md
   note: 'Gambia DHS 2019-20: among women 45-49 with three children, 82.8% (urban) vs 95.1% (rural) went
     on to a fourth; parity progression lower in urban areas. High-fertility setting.'
+- factor: urbanisation
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GMB: Urban women progress to higher-order births less often than rural women. Cross-sectional
+    DHS, high-fertility setting (mean children ever born 2.19 urban vs 3.25 rural); progression is among
+    women 45-49, parity 3 and above.'
+- factor: urbanisation
+  measure: ppr-0-1
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GMB: Proportion ever having a birth by 45-49 is lower in urban areas, but already above 95% in
+    both.'
+- factor: urbanisation
+  measure: young-first-births
+  verdict: no-evidence
+  tick: 'no'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GMB: Authors say only very few urban women give birth under 25 whereas rural women mostly have
+    their first birth by 25, but no first-birth rates by residence are tested.'
+- factor: contraception
+  measure: ppr-1-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GMB: Reverse causation likely: women use contraception after reaching desired family size. Not
+    a test of contraception''s effect.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Journal of Population and Social Studies.
+countries:
+- GMB
+period:
+- 2019
+- 2020

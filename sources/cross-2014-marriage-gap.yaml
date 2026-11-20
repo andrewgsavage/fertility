@@ -20,8 +20,12 @@ findings:
   direction: +
   basis: fulltext
   ref: sources/cross-2014-marriage-gap.yaml
-  note: 'Canada, SLID 1976-2011: share of families (including single people) with a married or common-law spouse
-    was 12.1% in the lowest income quartile, 48.8% in the middle and 86.3% in the top in 2011 (7.5% for under-35s
-    in the lowest); the gap widened as coupling fell most in the lower quartiles. Family income counts both
-    partners, so couples rank higher partly by construction; no causal design, no fertility outcome.'
+  note: 'Canada, SLID 1976-2011: share of families (including single people) with a married or common-law
+    spouse was 12.1% in the lowest income quartile, 48.8% in the middle and 86.3% in the top in 2011 (7.5%
+    for under-35s in the lowest); the gap widened as coupling fell most in the lower quartiles. Family
+    income counts both partners, so couples rank higher partly by construction; no causal design, no fertility
+    outcome.'
 notes: 'Cited in stone-2023-not-having-baby (Cardus) for: lower-income Canadians are less likely to marry.'
+period:
+- 1976
+- 2011

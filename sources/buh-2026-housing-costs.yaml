@@ -17,18 +17,69 @@ findings:
 - factor: rents
   measure: cond-asfr-1
   verdict: mixed
-  tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/costs-and-housing.md
-  note: 'UK 1992–2021: higher housing spending shows no clear relation with births among private/social
-    renters; read as financial pressure.'
+  tick: '?'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBR_NP: Higher rent payments show no clear association with first-birth hazard among private
+    or social renters, conditional on income; no negative effect found.'
 - factor: home-size
   measure: ppr-1-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBR_NP: No size measure and hazard not PPR.'
+- factor: house-prices
+  measure: cond-asfr-1
   verdict: mixed
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/costs-and-housing.md
-  note: 'UK owners: higher housing expenditure (family-suited housing) positively linked to 2nd and 3rd
-    births. Expenditure, not size.'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBR_NP: Owner-occupiers have higher first-birth odds than renters, but among owners higher housing
+    expenditure goes with more first births, contrary to an affordability constraint. Expenditure, not
+    house prices.'
+- factor: house-prices
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: '?'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBR_NP: Same tenure pattern for second and third births: owners with higher housing costs have
+    more births, renters no association.'
+- factor: home-size
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBR_NP: Dwelling size not measured; positive link of expenditure with second births among owners
+    is read as willingness to pay for family housing, not tested as size.'
+- factor: income
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBR_NP: Equalised household income positively linked to first-birth hazard, net of housing costs.'
+- factor: income
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: '?'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBR_NP: Positive income gradient at second and third births; Table 4 finds no difference in the
+    housing cost association across income quartiles.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in European Journal of Population.
+countries:
+- GBR_NP
+period:
+- 1992
+- 2021

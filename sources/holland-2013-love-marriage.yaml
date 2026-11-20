@@ -11,5 +11,30 @@ countries:
 - SWE
 measurables:
 - marriage
-notes: 'Cited in stone-2023-not-having-baby (Cardus) for: the capstone-marriage argument. Published in Demographic
-  Research.'
+notes: 'Cited in stone-2023-not-having-baby (Cardus) for: the capstone-marriage argument. Published in
+  Demographic Research.'
+period:
+- 1968
+- 2007
+findings:
+- factor: partnership-formation
+  measure: cond-asfr-1
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'SWE: Later cohorts marry later and less; share with neither marriage nor a birth by 30 nearly
+    doubled (tabulations not shown). Descriptive marriage timing, no fertility rate or model. Marriage
+    is not a precondition for births: Capstone marriage (after 2+ births) rose from 8.7% to 12.7-14.0%
+    of first marriages by 30 (Table 3).'
+- factor: education
+  measure: share-in-couple
+  verdict: mixed
+  tick: 'yes'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'SWE: Tertiary-educated women marry later but more often, and mostly before or around the first
+    birth (about 3/4 of marriages Family Forming or Legitimizing); matches the table''s note that education
+    delays rather than prevents partnership. No birth outcomes.'
