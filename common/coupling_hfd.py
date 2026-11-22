@@ -44,7 +44,10 @@ def hfd_first_birth_rates():
         out.append((100 * g.births / g.E0x).rename(name))
     # % with a child at an age: 100 - childless women's share of all exposure at that age and year.
     e["mother"] = 100 - 100 * e.E0x / e[["E0x", "E1x", "E2x", "E3x", "E4px"]].sum(axis=1)
-    for a in ew.CHILDLESS_AGES:
+    # Every age 15-49 (the % with a child grids use the middle and end of each coupling age
+    # group, e.g. 17 and 20 for 15-19). The E&W reconstruction (uk_first_birth_rates) has
+    # only 25, 30, 35 and 40.
+    for a in range(15, 50):
         out.append(e[e.age == a].set_index(["code", "year"]).mother.rename(f"mother {a}"))
     # % of women in a 5-year age group with a child: pooled exposures.
     e["all"] = e[["E0x", "E1x", "E2x", "E3x", "E4px"]].sum(axis=1)

@@ -10,6 +10,7 @@ scripts:
 - HFD/scripts/asfr_uk.py
 - HFD/scripts/births_per_mother_facet.py
 - ILO/scripts/coupling_vs_cond_asfr.py
+- NSO/scripts/coupling_mothers_lexis.py
 measurables:
 - asfr
 - cond-asfr-1

@@ -7,7 +7,6 @@ oa: gold
 local:
 - eurostat/data/
 scripts:
-- eurostat/scripts/partnered_share_europe.py
 - eurostat/scripts/couples_firstbirth_age_europe.py
 - eurostat/scripts/coupling_vs_cond_asfr_eurostat.py
 measurables:

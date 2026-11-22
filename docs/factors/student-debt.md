@@ -36,7 +36,9 @@ In England the average balance rose about four-fold and the number of borrowers 
 
 No comparable cross-country series (debt per borrower or share of graduates with debt) was found in a downloadable form, so only England and the US are shown.
 
-Coverage: Student Loans Company, [Student Loans in England: Financial Year 2024-25](https://www.gov.uk/government/statistics/student-loans-in-england-2024-to-2025), Table 5A, income-contingent borrowers who were England-domiciled or EU-domiciled studying in England, 2006-07 to 2023-24 (2024-25 is suppressed). US: Federal Reserve, [Student Loans Owned and Securitized, Outstanding](https://fred.stlouisfed.org/series/SLOAS), 2006–2024.
+```{note}
+Student Loans Company, [Student Loans in England: Financial Year 2024-25](https://www.gov.uk/government/statistics/student-loans-in-england-2024-to-2025), Table 5A, income-contingent borrowers who were England-domiciled or EU-domiciled studying in England, 2006-07 to 2023-24 (2024-25 is suppressed). US: Federal Reserve, [Student Loans Owned and Securitized, Outstanding](https://fred.stlouisfed.org/series/SLOAS), 2006–2024.
+```
 
 ## Causal evidence
 

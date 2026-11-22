@@ -1,5 +1,6 @@
 """% of women in a 5-year age group with a child against the coupling rate: Demographic and
-Health Survey (DHS) countries alongside the HFD countries. Connected time series, with separate
+Health Survey (DHS) countries (the HFD countries are built here too but left off the charts:
+they are on the other charts of docs/factors/coupling-vs-mothers.md). Connected time series, with separate
 dropdowns for the coupling age group (x) and the motherhood age group (y).
 
 y: % of women aged 20-24 / 25-29 / 30-34 / 35-39 with at least one child.
@@ -22,6 +23,8 @@ from common import coupling_ew as ew
 from common import coupling_hfd as ilo
 from common.paths import outputs_dir
 from common.plotting import write_html
+from common.ratio_lines import write_ratio_lines
+from common.trend_arrows import write_trend_arrows
 
 OUTDIR = outputs_dir("DHS")
 
@@ -38,12 +41,14 @@ DHS_FT = {"AGO": "Angola", "KHM": "Cambodia", "IND": "India", "GHA": "Ghana", "K
 DHS_NAMES = {"Democratic Republic of the Congo": "Congo Democratic Republic", "Côte d'Ivoire": "Cote d'Ivoire",
              "Viet Nam": "Vietnam"}
 HFD_COLOR = "#999999"
+# UN/DHS grid: one panel per 5-year age group, coupling and % with a child in the same group.
+GRID_AGES = ["15-19", "20-24", "25-29", "30-34"]
+GRID_Y = {f"mothers {a}": f"% of women aged {a} with a child" for a in GRID_AGES}
 
 
 def dhs_wide(key):
     """DHS % with a child, one row per (key, year), columns 'mothers 20-24' ..."""
     m = pd.read_csv(OUTDIR / "dhs_mothers.csv")
-    m = m[m.age.isin(ew.MOTHER_GROUPS)]
     w = m.pivot_table(index=[key, "year"], columns="age", values="mother")
     w.columns = [f"mothers {a}" for a in w.columns]
     return w.reset_index().rename(columns={key: "code"})
@@ -51,7 +56,7 @@ def dhs_wide(key):
 
 def make_series(name, color, years, x, y_rows):
     y = {k: [None if k not in y_rows or pd.isna(y_rows.at[yr, k]) else float(y_rows.at[yr, k]) for yr in years]
-         for k in Y_OPTS}
+         for k in {**Y_OPTS, **GRID_Y}}
     return {"name": name, "color": color, "years": years, "x": x, "y": y}
 
 
@@ -79,6 +84,7 @@ def series_ilo_ft():
         color = colors[len([s for s in series if s["dhs"]]) % len(colors)] if is_dhs else HFD_COLOR
         s = make_series(name + (" DHS" if is_dhs else ""), color, years, x, r)
         s["dhs"] = is_dhs
+        s["label"] = code
         series.append(s)
     return series
 
@@ -106,8 +112,29 @@ def series_un():
         s = make_series(country + (" DHS" if is_dhs else ""), colors[n_dhs % len(colors)] if is_dhs else HFD_COLOR,
                         years, x, r)
         s["dhs"] = is_dhs
+        s["label"] = ISO3.get(code, code)
         series.append(s)
     return series
+
+
+ISO3 = pd.read_csv(OUTDIR / "dhs_mothers.csv").drop_duplicates("country").set_index("country").iso3.to_dict()
+
+
+def write_grid(series):
+    """UN coupling against DHS % with a child, one panel per age group (2 x 2), all panels on
+    one 0-100% range; trend arrows as on docs/factors/coupling-vs-mothers.md's other grids."""
+    write_trend_arrows(
+        OUTDIR / "coupling_vs_mothers_un_grid.html", series,
+        {a: f"% married or in a union, {a}" for a in GRID_AGES}, GRID_Y,
+        title="% of women with a child against % married or in a union, same age group, DHS countries (UN)",
+        x_suffix="%", y_suffix="%", min_points=ilo.UN_MIN_POINTS, equal=True,
+        panels=[{"x": a, "y": f"mothers {a}", "title": f"Women aged {a}"} for a in GRID_AGES],
+        layout=dict(showlegend=False, height=850,
+                    **{f"xaxis{'' if i == 0 else i + 1}": dict(title_text=f"% married or in a union, {a}",
+                                                               showticklabels=True)
+                       for i, a in enumerate(GRID_AGES)},
+                    **{f"yaxis{'' if i == 0 else i + 1}": dict(title_text="% with a child", showticklabels=True)
+                       for i in range(len(GRID_AGES))}))
 
 
 def write(series, x_ages, x_default, title, x_label, fname):
@@ -122,9 +149,23 @@ def write(series, x_ages, x_default, title, x_label, fname):
 
 if __name__ == "__main__":
     OUTDIR.mkdir(exist_ok=True)
-    write(series_ilo_ft(), ilo.X_AGES, "25-34",
-          "% of women with a child vs coupling rate, DHS and HFD countries (grey: HFD; marker grows with year)",
+    # DHS countries only: the HFD countries are on the other charts of the page.
+    write([s for s in series_ilo_ft() if s["dhs"]], ilo.X_AGES, "25-34",
+          "% of women with a child vs coupling rate, DHS countries (marker grows with year)",
           "% married or cohabiting", "coupling_vs_mothers.html")
-    write(series_un(), ilo.UN_X_AGES, "25-29",
-          "% of women with a child vs women married or in a union, UN data (grey: HFD; marker grows with year)",
+    un_dhs = [s for s in series_un() if s["dhs"]]
+    write_grid(un_dhs)
+    write_ratio_lines(
+        OUTDIR / "coupling_vs_mothers_un_grid_ratio.html", un_dhs,
+        [{"x": a, "y": f"mothers {a}", "title": f"Women aged {a}"} for a in GRID_AGES],
+        title="% of women with a child ÷ % married or in a union, same age group, DHS countries (UN), by year",
+        height=850)
+    ilo_dhs = [s for s in series_ilo_ft() if s["dhs"]]
+    write_ratio_lines(
+        OUTDIR / "coupling_vs_mothers_ratio.html", ilo_dhs,
+        [{"x": xa, "y": f"mothers {ya}", "title": f"child {ya} ÷ couple {xa}"}
+         for xa, ya in [("15-24", "20-24"), ("25-34", "25-29"), ("25-34", "30-34"), ("35-44", "35-39")]],
+        title="% of women with a child ÷ % married or cohabiting, DHS countries (ILO, FT), by year", height=850)
+    write(un_dhs, ilo.UN_X_AGES, "25-29",
+          "% of women with a child vs women married or in a union, UN data, DHS countries (marker grows with year)",
           "% of women married or in a union", "coupling_vs_mothers_un.html")

@@ -34,7 +34,7 @@ age and year of birth). Available at
 [ons.gov.uk](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/datasets/childbearingforwomenbornindifferentyearsreferencetable).
 
 UK column reconstructed from Table 3 (HFD has no UK parity-progression tables): cumulative
-% of the cohort with >=1/2/3/4 children, differenced by age into the same kind of discrete
+\% of the cohort with >=1/2/3/4 children, differenced by age into the same kind of discrete
 hazard, capped at 4+ (coarser than HFD's 5+).
 ```
 

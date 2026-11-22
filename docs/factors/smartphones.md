@@ -49,7 +49,9 @@ Adoption was fast and nearly universal: among 28 countries with both years, use 
 
 Across 28 countries, a larger rise in mobile internet use between 2011 and 2019 goes with a smaller fall in 20–29 fertility (r = 0.51), the opposite sign to the proposed mechanism. The late adopters (Romania, Bulgaria, Czechia, Hungary) are also where 20–29 fertility recovered after earlier postponement, so adoption speed mostly tracks a catch-up in fertility.
 
-Coverage: Eurostat [isoc_ci_im_i](https://ec.europa.eu/eurostat/databrowser/view/isoc_ci_im_i/default/table) (mobile internet, 2011–2019) and [demo_frate](https://ec.europa.eu/eurostat/databrowser/view/demo_frate/default/table) (fertility rates by age; the UK ends in 2018 and Germany's 2023 value is missing). This series ends in 2019 and measures mobile internet use, not smartphone ownership. Not included: ITU/World Bank mobile subscriptions (phones, not smartphones), Pew ownership surveys, and time-use data on in-person socialising (ATUS, HETUS), which have no consistent multi-country annual series.
+```{note}
+Eurostat [isoc_ci_im_i](https://ec.europa.eu/eurostat/databrowser/view/isoc_ci_im_i/default/table) (mobile internet, 2011–2019) and [demo_frate](https://ec.europa.eu/eurostat/databrowser/view/demo_frate/default/table) (fertility rates by age; the UK ends in 2018 and Germany's 2023 value is missing). This series ends in 2019 and measures mobile internet use, not smartphone ownership. Not included: ITU/World Bank mobile subscriptions (phones, not smartphones), Pew ownership surveys, and time-use data on in-person socialising (ATUS, HETUS), which have no consistent multi-country annual series.
+```
 
 ## Causal evidence
 

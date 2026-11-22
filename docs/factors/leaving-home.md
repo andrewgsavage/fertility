@@ -25,7 +25,7 @@ Drag the slider to change year.
 ```{raw} html
 <iframe src="../_static/eurostat/leaving_home_tfr_fitted.html" style="width: 100%; aspect-ratio: 1 / 1; max-height: 720px; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
-Faint points are every country-year. Each arrow follows the country's straight-line trend in both variables from 2010 to its latest year. Hover an arrow to highlight the points it was fitted to.
+Faint points are every country-year. Each arrow follows the country's straight-line trend in both variables from 2010 to its latest year. Hover an arrow to highlight the points it was fitted to; click a region in the legend to hide it.
 :::
 
 ::::
@@ -58,7 +58,7 @@ Drag the slider to change year.
 ```{raw} html
 <iframe src="../_static/eurostat/leaving_home_mab1_fitted.html" style="width: 100%; aspect-ratio: 1 / 1; max-height: 720px; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
-Faint points are every country-year. Each arrow follows the country's straight-line trend in both variables from 2010 to its latest year, which smooths out year-to-year noise such as Sweden's 2019-20 dip. Hover an arrow to highlight the points it was fitted to.
+Faint points are every country-year. Each arrow follows the country's straight-line trend in both variables from 2010 to its latest year, which smooths out year-to-year noise such as Sweden's 2019-20 dip. Hover an arrow to highlight the points it was fitted to; click a region in the legend to hide it.
 :::
 
 :::{tab-item} By region, 2024
