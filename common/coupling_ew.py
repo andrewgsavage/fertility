@@ -120,6 +120,6 @@ def dual_dropdown_fig(series, x_opts, y_opts, x_default, y_default, title, x_lab
         legend=dict(x=1.02, y=1.0, xanchor="left", yanchor="top"),
         margin=dict(t=130, r=150), hovermode="closest",
     )
-    fig.update_xaxes(title_text=f"{x_label}, {x_opts[x_default]}", ticksuffix="%")
+    fig.update_xaxes(title_text=f"{x_label}, {x_opts[x_default]}", ticksuffix="%", rangemode="tozero")
     fig.update_yaxes(title_text=y_opts[y_default], ticksuffix="%", rangemode="tozero")
     return fig

@@ -44,7 +44,9 @@ Two measures of young men's position: the tertiary-educated share of 25–34s (w
 
 Women were ahead of men in tertiary attainment among 25–34s in 29 of 32 countries with data in 2005 and in all 35 in 2024. The gap has widened since 2000 in most countries shown, but not in Finland, where it was already about 16 points. NEET rates tell a different story: in 2024 men's rate was below women's in 30 of 35 countries, and men's rate fell from 2013 in most of those shown. So the data supports an education gap in women's favour, not a rising share of young men outside work and study. It cannot show whether women see the average man as a less suitable partner, nor how the lowest-educated men fare; NEET is not split by education here. Male childlessness and young men's partnership rates were not fetched.
 
-Coverage: Eurostat [attainment by sex and age](https://ec.europa.eu/eurostat/databrowser/view/edat_lfse_03/default/table) (edat_lfse_03; 38 countries, 1992–2025) and [NEET rates](https://ec.europa.eu/eurostat/databrowser/view/lfsi_neet_a/default/table) (lfsi_neet_a; 37 countries, 2003–2025, most from 2013 or later).
+```{note}
+Eurostat [attainment by sex and age](https://ec.europa.eu/eurostat/databrowser/view/edat_lfse_03/default/table) (edat_lfse_03; 38 countries, 1992–2025) and [NEET rates](https://ec.europa.eu/eurostat/databrowser/view/lfsi_neet_a/default/table) (lfsi_neet_a; 37 countries, 2003–2025, most from 2013 or later).
+```
 
 ## Causal evidence
 

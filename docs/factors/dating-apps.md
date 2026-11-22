@@ -58,7 +58,9 @@ Online meeting went from 0.0% of couples formed in the 1980s (2.2% in the 1990s)
 
 The EU share of 25–49 year-olds in couple households was flat (50.9% to 51.2%) while the first-birth age rose in every country shown. The couple share fell in 12 of 30 countries between 2012 and 2024 (median change +1.2 points), so there is no general fall in partnering over the app era. Spain, France, the Netherlands and Finland fell; Poland and Sweden rose, and the Spanish and Swedish series show apparent breaks. The measure counts cohabiting and married couples at ages 25–49, not young adults or relationship formation, and it can't separate apps from other causes.
 
-Coverage: Eurostat [couple households](https://ec.europa.eu/eurostat/databrowser/view/lfst_hhindws/default/table) (EU-LFS, 2006–2025; the UK ends in 2019) and [mean age at first birth](https://ec.europa.eu/eurostat/databrowser/view/demo_find/default/table), 35 and 34 countries.
+```{note}
+Eurostat [couple households](https://ec.europa.eu/eurostat/databrowser/view/lfst_hhindws/default/table) (EU-LFS, 2006–2025; the UK ends in 2019) and [mean age at first birth](https://ec.europa.eu/eurostat/databrowser/view/demo_find/default/table), 35 and 34 countries.
+```
 
 ### US young adults
 

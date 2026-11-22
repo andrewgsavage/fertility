@@ -11,6 +11,7 @@ countries:
 scripts:
 - NSO/scripts/download.py
 - NSO/scripts/coupling_nso.py
+- NSO/scripts/coupling_mothers_lexis.py
 measurables:
 - share-in-couple
 notes: Denominator from BEFOLK1.
