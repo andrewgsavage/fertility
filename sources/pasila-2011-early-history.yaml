@@ -22,5 +22,29 @@ findings:
   note: 'Finland 1960s-70s: pill use peaked at no more than 15% of women 15-44; its spread coincided with
     fertility decline (younger women postponing, older women stopping earlier), but no causal link could
     be established.'
+- factor: contraception
+  measure: young-first-births
+  verdict: mixed
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FIN: Pill diffusion coincided with postponement of first births among young, often married, urban
+    educated women; the author says no causal link can be established, and abortion law (1970) and the
+    IUD (1973) overlap.'
+- factor: abortion
+  measure: young-first-births
+  verdict: no-evidence
+  tick: '?'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FIN: Abortion law is described as a competing factor in Finland''s 1970s fertility decline; no
+    estimated effect.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Finnish Yearbook of Population Research.
+countries:
+- FIN
+period:
+- 1960
+- 1980

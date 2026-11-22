@@ -22,7 +22,50 @@ findings:
   note: 'Sweden registers: first-marriage formation fell from the early 2010s, but cohabitation formation
     was stable 2012-2022 while first births fell; cohabiting couples became less likely to marry or have
     a child. Coupling itself did not fall.'
+- factor: partnership-formation
+  measure: cond-asfr-1
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'SWE: Sweden 2010s first-birth decline happened with stable cohabitation formation 2012-2022;
+    inference from union-formation trends alongside previously documented first-birth trends, not a direct
+    first-birth model.'
+- factor: education
+  measure: share-in-couple
+  verdict: contradicts
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'SWE: Higher educated Swedes have higher first-marriage hazards (age-standardised), against education
+    preventing coupling; the table does not show cumulative delay. Cohabitation by education not shown.'
+- factor: job-insecurity
+  measure: share-in-couple
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'SWE: Weaker labour-market attachment goes with lower marriage and cohabitation formation in Swedish
+    registers; level differences only, trends were similar across labour-market groups, and the 2010s
+    decline occurred despite improving labour market composition.'
+- factor: dating-apps
+  measure: share-in-couple
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'SWE: Discussion statement, not a test: cohabitation formation stable 2012-2022 while internet
+    dating spread, so no fall in coupling that dating apps could explain.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in European Journal of Population.
 measurables:
 - share-in-couple
+countries:
+- SWE
+period:
+- 1991
+- 2022

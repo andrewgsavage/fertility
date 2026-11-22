@@ -23,5 +23,29 @@ findings:
   note: 'Father''s-quota reforms, Norway and Sweden (registers): no effect on continued childbearing in
     Norway; in Sweden a temporary rise in third-birth risk among couples where the father had low income,
     the group whose leave use rose most.'
+- factor: parental-leave
+  measure: ppr-1-2plus
+  verdict: contradicts
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'NOR: No effect on second-birth intensity over 10 years after the reform (births, not final progression
+    ratios).'
+- factor: parental-leave
+  measure: ppr-1-2plus
+  verdict: contradicts
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'SWE: No effect on second-birth intensity, overall or by income. Quota coincided with a cut in
+    earnings replacement from 90% to 80%.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Population Research and Policy Review.
+countries:
+- NOR
+- SWE
+period:
+- 1993
+- 2005

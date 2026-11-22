@@ -16,9 +16,45 @@ findings:
   measure: cond-asfr-1
   verdict: no-evidence
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: Stone 2011 ([10.4054/demres.2011.25.20](https://doi.org/10.4054/demres.2011.25.20)) describes
-    UK living-arrangement postponement; no fertility test in the abstract.
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBR_NP: Describes later co-residence with parents and fewer men partnered in late twenties; fertility
+    not observed, so no test of leaving home on first births.'
+- factor: job-insecurity
+  measure: share-in-couple
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBR_NP: UK men with unemployment, non-permanent or part-time work are more likely to live with
+    parents and less likely in a couple/lone-parent family, with the gap widening 1998-2008; cross-sectional,
+    women excluded from the analysis for causality reasons.'
+- factor: left-behind-young-men
+  measure: share-in-couple
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBR_NP: Unemployed, inactive and unqualified men are more often still with parents by age 30
+    and less often partnered; those in their early twenties without qualifications are more likely in
+    a new family (Sec 5).'
+- factor: education
+  measure: share-in-couple
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBR_NP: Degree holders more often live with parents at 22-24 and outside a family (sharing, alone)
+    into late twenties, delaying couple formation; inference from living arrangements, no partnership
+    transitions.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demographic Research.
+countries:
+- GBR_NP
+period:
+- 1998
+- 2008

@@ -21,5 +21,18 @@ findings:
   ref: research/factor-evidence/fulltext-recheck.md
   note: 'Spain, Fertility Survey 2018, one-child mothers: a highly unequal split of housework lowers intention
     to have a second child (inverted-U in women''s share); the childcare split does not. Intentions only.'
+- factor: gender-equality-home
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'ESP: Intentions only; no observed second births, so the cond-ASFR cell is not tested.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Genus.
+countries:
+- ESP
+period:
+- 2018
+- 2018

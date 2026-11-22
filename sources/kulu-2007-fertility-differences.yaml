@@ -31,5 +31,28 @@ findings:
   ref: research/factor-evidence/fulltext-recheck.md
   note: 'As above: housing type matters mainly through selective moves; some genuine effect on the second-to-third
     transition.'
+- factor: home-size
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'no'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FIN: First-conception risk is higher in houses than apartments after controls, but movers have
+    much higher risk (1.46 in houses) and timing after a move peaks about a year later (Fig. 1), indicating
+    selective moves by couples planning a child. Housing type, not dwelling size.'
+- factor: house-prices
+  measure: ppr-1-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'FIN: Tenure and prices not analysed; housing type only.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demographic Research.
+countries:
+- FIN
+period:
+- 1988
+- 2000

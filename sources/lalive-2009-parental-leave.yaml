@@ -26,8 +26,23 @@ findings:
   measure: cond-asfr-2plus
   verdict: supports
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/policy-and-the-state.md
-  note: 'As above: higher second-birth rates after leave extension.'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'AUT: Extending paid job-protected leave from 1 to 2 years raised the second-birth rate within
+    3 years by 4.5 pp, mainly via the automatic-renewal window.'
+- factor: parental-leave
+  measure: cond-asfr-1
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'AUT: Only births after the first are studied.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Quarterly Journal of Economics.
+countries:
+- AUT
+period:
+- 1990
+- 2000

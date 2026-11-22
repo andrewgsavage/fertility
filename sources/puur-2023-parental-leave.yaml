@@ -26,5 +26,36 @@ findings:
   note: 'Estonia''s 2004 earnings-related parental leave (registers, mixture cure model): second and third
     births came sooner (speed premium) and progression to both rose substantially, a quantum effect as
     well as tempo.'
+- factor: parental-leave
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'EST: Duration-specific second and third birth rates rose sharply within the 30-month speed-premium
+    window, building up over about five years; partly tempo.'
+- factor: parental-leave
+  measure: ppr-0-1
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'EST: First births not analysed. Section 7 notes childlessness rose in Estonian cohorts exposed
+    to the reform while cohort fertility recovered via higher second/third progression.'
+- factor: parental-leave
+  measure: cond-asfr-1
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'EST: First births not analysed.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in European Journal of Population.
+countries:
+- EST
+period:
+- 1993
+- 2019

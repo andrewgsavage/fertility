@@ -18,16 +18,44 @@ findings:
   measure: ppr-1-2plus
   verdict: supports
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/policy-and-the-state.md
-  note: 'Namibia 1990s quasi-experiment: pensions substantially reduce fertility, especially in late reproductive
-    life (so mainly higher-order). A high-fertility setting, not a low-fertility OECD one.'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'NAM: Cohorts exposed to the extended pensions had fewer children, via stopping earlier (completed
+    fertility, ideal family size and desire to stop converged). Parity progression ratios not computed;
+    effect is on higher-order births by construction.'
 - factor: pensions-welfare
   measure: cond-asfr-2plus
   verdict: supports
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/policy-and-the-state.md
-  note: Late-reproductive-life reduction implies higher-order births fall.
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'NAM: Equalising and extending social pensions cut annual birth probability mainly after age 25-30
+    (about 0.45-0.65 children between low- and high-needs groups); age at last birth fell, age at first
+    birth did not. Sub-Saharan, TFR 5-6, not parity-specific.'
+- factor: pensions-welfare
+  measure: ppr-0-1
+  verdict: supports
+  tick: 'no'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'NAM: No pension effect on the start of childbearing: age at first birth converged in the opposite
+    direction; blank tick consistent.'
+- factor: income
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: '?'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'NAM: Pension income may offset the old-age-security effect where benefits are shared with younger
+    generations; income effect alone fails to explain the fall in completed fertility.'
 notes: 'Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in American Economic Journal: Economic Policy.'
+countries:
+- NAM
+period:
+- 1985
+- 2013

@@ -21,5 +21,38 @@ findings:
   note: 'England & Wales cohorts born 1974-90 (BHPS and Understanding Society): first unions postponed,
     cohabitation near-universal, and in the youngest cohorts first cohabitations usually end in separation.
     No housing variable.'
+- factor: education
+  measure: ppr-0-1
+  verdict: contradicts
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBRTENW: Coupling column only (no vocab tag): highly educated have higher rates of entry into
+    first cohabitation than lower educated in all cohorts; in the oldest cohort (1974-79) they enter unions
+    later, in the youngest earlier. Union formation to age 27, not births.'
+- factor: partnership-formation
+  measure: share-in-couple
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBRTENW: Coupling column: first union postponed across cohorts; cohabitation near-universal first
+    union. No fertility outcome.'
+- factor: partnership-stability
+  measure: share-in-couple
+  verdict: no-evidence
+  tick: 'no'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBRTENW: First cohabitations became less stable across cohorts and repartnering became quicker;
+    no fertility outcome analysed (27% of first cohabiters had a child in the union, Discussion limitations).'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Advances in Life Course Research.
+countries:
+- GBRTENW
+period:
+- 1991
+- 2016

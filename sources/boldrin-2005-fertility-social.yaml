@@ -24,5 +24,38 @@ findings:
   note: 'Cross-country and over time: larger public pensions correlate with lower TFR; an old-age-security
     model accounts for 40-60% of US-Europe fertility differences. TFR only, so no evidence on progression
     to second births.'
+- factor: child-mortality
+  measure: tfr
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Higher infant mortality goes with higher TFR (cross-country 1997; 8-country panel 1960-2000);
+    infant mortality is a control, not the paper''s target. TFR only.'
+- factor: pensions-welfare
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Model-based, not an estimate from micro data: old-age-security motive makes pension size
+    lower fertility; the dynastic model gives almost no effect. Abstract says 55-65% of Europe-US difference;
+    Sec 5.2 text says 40% for 1950-2000 US-Europe change, 50-60% for France/Germany.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Journal of Demographic Economics.
+countries:
+- all
+- USA
+- GBR_NP
+- FRATNP
+- DEUTNP
+- ITA
+- AUT
+- BEL
+- DNK
+- FIN
+- IRL
+- NOR
+- ESP
+period:
+- 1950
+- 2000

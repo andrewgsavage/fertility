@@ -31,5 +31,28 @@ findings:
   ref: research/factor-evidence/fulltext-recheck.md
   note: 'Canada (SLID), renters: no significant fertility response to local house prices. Rents themselves
     are not measured.'
+- factor: house-prices
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: '?'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'CAN: Same results; any-order births with parity controlled, so reads as positive for higher-order
+    births among owners. Not split by parity.'
+- factor: house-prices
+  measure: young-first-births
+  verdict: mixed
+  tick: 'yes'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'CAN: Owners only: no significant effect at 18-22, positive 23-37, weaker at 38+. Authors say
+    part of the effect may be timing. Births of any order.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Economics.
+countries:
+- CAN
+period:
+- 1993
+- 2010

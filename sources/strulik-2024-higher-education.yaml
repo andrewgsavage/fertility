@@ -20,5 +20,20 @@ findings:
   ref: research/factor-evidence/fulltext-recheck.md
   note: 'Theory calibrated to the US 1950-2010: within an education level higher income raises fertility;
     the negative aggregate link comes from more people taking higher education. No parity-specific evidence.'
+- factor: income
+  verdict: mixed
+  tick: 'yes'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'USA: Within an education level higher income raises fertility (high-skilled only); across the
+    population and over time higher income lowers fertility via more people taking higher education. Model
+    output on completed fertility per adult, not parity progression; PPR 0-1 and first-birth columns not
+    separately modelled.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Journal of Population Economics.
+countries:
+- USA
+period:
+- 1950
+- 2010

@@ -28,5 +28,44 @@ findings:
   note: 'Vignettes in urban China, Japan, Korea, Singapore, US, Italy, Spain, Norway: childlessness always
     rated as worse, but families with several children are not preferred over one-child families. Ideals
     only; no fertility outcome.'
+- factor: ideal-family-size
+  measure: ppr-0-1
+  verdict: contradicts
+  tick: '?'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Childlessness is always rated worse, so ideals do not support voluntary childlessness.
+    Ideals only, no fertility outcome.'
+- factor: ideal-family-size
+  measure: cond-asfr-1
+  verdict: contradicts
+  tick: '?'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Parenthood valued in all eight countries; no sign that ideals deter a first birth.'
+- factor: ideal-family-size
+  measure: ppr-1-2plus
+  verdict: mixed
+  tick: '?'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Indifference between one and several children is consistent with ideals not pushing couples
+    to a second child; authors speculate couples trade this off for other family attributes. Ratings of
+    hypothetical families, not own intentions.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Proceedings of the National Academy of Sciences.
+countries:
+- CHN
+- JPN
+- KOR
+- SGP
+- USA
+- ITA
+- ESP
+- NOR
+period:
+- 2021
+- 2022

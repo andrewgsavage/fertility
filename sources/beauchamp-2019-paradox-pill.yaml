@@ -17,26 +17,34 @@ measurables:
 findings:
 - factor: contraception
   measure: cond-asfr-1
-  verdict: mixed
+  verdict: no-evidence
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: 'US state laws on pill access (1960s-70s): marital pill access raised the nonmarital birth rate
-    by 15-18%, concentrated among women from low-education and minority backgrounds. Not first-birth specific.'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'USA: Outcome is nonmarital births per 1,000 women 15-44 (rose 15-18%, about a third of the rise),
+    not first-birth conditional rates; does not test the cell.'
 - factor: contraception
   measure: ppr-1-2plus
-  verdict: mixed
+  verdict: no-evidence
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: Abstract states the pill also increased spacing between first and second births; remainder truncated,
-    so effect on completed second births not read.
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'USA: Spacing between births examined; proportion progressing to a second child not estimated.'
 - factor: contraception
   measure: cond-asfr-2plus
-  verdict: mixed
+  verdict: supports
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/social-cultural-and-population.md
-  note: 'As above: spacing effect on higher-order births; direction on the rate not read.'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'USA: Marital pill access lengthened birth spacing (NSFH, US); concentrated among low-SES and
+    minority women. Spacing, not completed second births.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Economic Inquiry.
+countries:
+- USA
+period:
+- 1952
+- 1988

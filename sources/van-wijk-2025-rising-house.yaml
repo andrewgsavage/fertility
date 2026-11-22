@@ -18,18 +18,67 @@ measurables:
 findings:
 - factor: house-prices
   measure: young-first-births
-  verdict: supports
+  verdict: no-evidence
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/costs-and-housing.md
-  note: 'Netherlands register data 2012–23: rising regional prices → lower conception risk, widening tenure
-    gaps.'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'NLD: No age-specific house-price estimates; paper argues the housing crisis explains declining
+    first-birth rates of younger cohorts, using age-controlled models.'
 - factor: rents
+  measure: cond-asfr-1
+  verdict: no-evidence
+  tick: '?'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'NLD: Rent levels not measured; renters'' first-birth risk falls where house prices rose. Authors
+    list rent levels as future research.'
+- factor: house-prices
   measure: cond-asfr-1
   verdict: supports
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/costs-and-housing.md
-  note: 'Netherlands: price rises widen fertility gaps between tenure groups (renters worse off).'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'NLD: Rising regional house prices lower first-conception risk; mediated by childless women being
+    less likely to own. Renters -4.8% vs owners +2.1% per EUR 100k (Table 2 Model 3, p. 17).'
+- factor: house-prices
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: '?'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'NLD: House prices have little effect on second births, negative effect on third+ births; effects
+    weaker than for first births.'
+- factor: house-prices
+  measure: tfr
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'NLD: All parities pooled, women: higher regional prices lower conception risk; authors say prices
+    likely contributed to post-2010 decline (Discussion). Only 11% mediated by ownership.'
+- factor: house-prices
+  measure: completed-fertility
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'NLD: Home-equity effect: long-term owners (>3 yrs) conceive more (+5.3% per EUR 100k) when prices
+    rose, while renters and recent owners conceive less. Conception risk not completed fertility; authors
+    flag postponement vs completed fertility as open.'
+- factor: home-size
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'NLD: Dwelling size not measured; speculation only.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in European Journal of Population.
+countries:
+- NLD
+period:
+- 2012
+- 2023

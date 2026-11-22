@@ -13,5 +13,48 @@ factors:
 - gender-equality-home
 measurables:
 - tfr
+findings:
+- factor: gender-equality-home
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: sources/garcia-manglano-2014-gender-time-use.yaml
+  note: 'Review plus cross-country time diaries (MTUS, 8 countries, 2000-04, partnered parents 20-59):
+    in near-replacement countries (US, Norway, Denmark, Finland) men do over half as much housework as
+    women; in lowest-low countries (Germany, Japan, Italy, Spain) under half, with little difference in
+    childcare time. TFR recovered in the US and Norway after the men/women domestic-work ratio passed
+    ~0.5. Descriptive, outcome is TFR; the review cites household studies linking equal division to second
+    births.'
+- factor: gender-equality-home
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Cross-country association between men''s share of housework and TFR; US and Norway recovered
+    TFR after the men/women domestic-work ratio passed about 0.5 (Figure 2). Outcome is period TFR, not
+    parity progression; childcare ratios differ little (0.41-0.52 excluding Japan 0.17).'
+- factor: female-employment
+  measure: tfr
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Cross-country female employment-fertility link has turned positive; Figure 2 shows FLFP
+    alongside TFR and the domestic-work ratio.'
 notes: 'Cited in stone-2023-not-having-baby (Cardus) for: childcare hours vary enormously within and across
   countries. IZA Discussion Paper 8613. Published in SSRN Electronic Journal.'
+countries:
+- USA
+- NOR
+- DNK
+- FIN
+- DEUTNP
+- JPN
+- ITA
+- ESP
+period:
+- 1960
+- 2004

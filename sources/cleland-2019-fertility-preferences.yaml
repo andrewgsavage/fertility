@@ -1,7 +1,7 @@
 id: cleland-2019-fertility-preferences
 type: paper
-title: 'Fertility preferences and subsequent childbearing in Africa and Asia: A synthesis of evidence from
-  longitudinal studies in 28 populations'
+title: 'Fertility preferences and subsequent childbearing in Africa and Asia: A synthesis of evidence
+  from longitudinal studies in 28 populations'
 authors:
 - Cleland, J.
 - Machiyama, K.
@@ -12,6 +12,79 @@ oa: green
 oa_url: https://researchonline.lshtm.ac.uk/id/eprint/4657501/1/Cleland-etal-2020_Fertility_preferences_and%20subsequent-childbearing.pdf
 measurables:
 - ideal-children
+findings:
+- factor: ideal-family-size
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: '?'
+  basis: fulltext
+  ref: sources/cleland-2019-fertility-preferences.yaml
+  note: 'Synthesis of longitudinal studies in 28 Asian and African populations: a baseline desire to stop
+    childbearing predicts lower subsequent fertility in every population, more strongly where contraceptive
+    use is higher; a desire to delay does not consistently predict fertility. Preferences and behaviour
+    often diverge (weak contraceptive implementation, unstable preferences). Points toward a tick for
+    higher-order births, in high- and middle-fertility settings.'
+- factor: ideal-family-size
+  measure: cond-asfr-1
+  verdict: no-evidence
+  tick: '?'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: No split by parity; childless women are not examined separately.'
+- factor: ideal-family-size
+  measure: ppr-1-2plus
+  verdict: no-evidence
+  tick: '?'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Outcome is any birth in a 2-12 year window, not parity progression to completion.'
+- factor: ideal-family-size
+  measure: ppr-0-1
+  verdict: no-evidence
+  tick: '?'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: No parity-0 results.'
+- factor: contraception
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Stated stop-preferences are implemented better where contraceptive use is high, so births
+    among women wanting no more fall; weak implementation is the main cause of preference-behaviour gaps.'
+- factor: contraception
+  measure: young-first-births
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Spacers vs non-spacers differ little in several populations; no age or parity focus.'
 notes: 'Cited in stone-2023-not-having-baby (Cardus) for: preferences predict later fertility, and near-term
-  (two-year) expectations are fairly accurate projections. Online 2019; issue 74(1), 2020. The report misnames
-  the journal as Journal of Population Studies. Published in Population Studies.'
+  (two-year) expectations are fairly accurate projections. Online 2019; issue 74(1), 2020. The report
+  misnames the journal as Journal of Population Studies. Published in Population Studies.'
+countries:
+- IND
+- NGA
+- TWN
+- MOZ
+- KOR
+- BGD
+- EGY
+- PAK
+- SEN
+- GHA
+- MYS
+- MAR
+- IDN
+- MWI
+- KEN
+- LKA
+period:
+- 1967
+- 2013

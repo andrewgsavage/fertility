@@ -23,5 +23,60 @@ findings:
   note: '19 European countries and the US, women born early 1970s: completed fertility fell short of intentions
     at 20-24 everywhere, and childlessness exceeded intended childlessness. Outcomes are below ideals,
     so ideals are not the binding constraint; ideals themselves are not shown to fall.'
+- factor: ideal-family-size
+  measure: ppr-0-1
+  verdict: mixed
+  tick: '?'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Intention to stay childless is very low everywhere (almost none in Central/Eastern Europe)
+    but actual childlessness at 40-42 is higher: excess childlessness about 20 pp in Spain and Italy (about
+    22% childless), 14.1 pp in Austria (5.8% intended vs 19.9% actual), 12-14 pp elsewhere in Western
+    Europe, below 11 pp in Central/Eastern Europe.'
+- factor: education
+  measure: ppr-0-1
+  verdict: supports
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Highly educated women have higher childlessness at 40-42 (except Czech Republic, Norway),
+    and the largest excess childlessness (18-26 pp) in German-speaking and Southern European countries;
+    intentions barely differ by education. 11 countries + US, cohorts born c.1965-1979.'
+- factor: education
+  measure: ppr-1-2plus
+  verdict: mixed
+  tick: 'no'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Educational gradient in completed fertility is clearly negative (highly educated have
+    fewer children, except Belgium and Norway); gap by education ranges from 0.6-0.7 in all groups in
+    Italy to under 0.3 in Norway, Germany, Austria. Mean children, not PPR 1-2+; cell tick is blank.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Population Research and Policy Review.
+countries:
+- AUT
+- BEL
+- BGR
+- CZE
+- EST
+- FRATNP
+- DEUTNP
+- GRC
+- HUN
+- ITA
+- LVA
+- LTU
+- NLD
+- NOR
+- PRT
+- SVN
+- ESP
+- CHE
+- GBR_NP
+- USA
+period:
+- 1965
+- 2013

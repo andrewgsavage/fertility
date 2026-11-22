@@ -21,7 +21,31 @@ findings:
   note: 'Japan (Longitudinal Survey of Adults, 2002 cohort, fixed effects): workplace norms in large firms
     cut male graduates'' share of housework, and a husband''s housework share predicts the second birth,
     especially in dual-earner couples.'
+- factor: gender-equality-home
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'JPN: Each extra weekly hour of husband''s housework and childcare raises next-year second-birth
+    probability by about 1 point, only significantly in dual-earner couples. Wife''s housework hours negative,
+    not significant (-0.003, se 0.002).'
+- factor: female-employment
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: '?'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'JPN: Wife being in the labour force the previous year lowers next-year second-birth probability
+    by about 5.5 points; employed mothers also have much longer spacing (births rise only after 4-9 years).'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demographic Research.
 measurables:
 - cond-asfr-2plus
+countries:
+- JPN
+period:
+- 2002
+- 2012

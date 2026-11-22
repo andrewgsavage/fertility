@@ -33,7 +33,64 @@ findings:
   measure: ppr-0-1
   verdict: supports
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: 'UK admin data, cohorts 1956-78: childlessness persistently higher among the more educated in
-    every UK country.'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBRTENW: Childlessness at 40 positively graded by education in all cohorts; overall childlessness
+    peaked about 23% then fell slightly. Descriptive, no coefficients.'
+- factor: education
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: 'no'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBRTENW: No clear or consistent educational gradient in one-child share or PPR 1 to 2. Gradient
+    does appear at third and fourth births (low-educated higher).'
+- factor: education
+  measure: young-first-births
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBRTENW: More-educated women have later first births; little rise in mean age among the least
+    educated. Inferred from MAB1, not from young-birth rates.'
+- factor: education
+  measure: ppr-0-1
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBR_SCO: Same positive educational gradient of childlessness; overall childlessness reached about
+    23%, similar to England and Wales. Lower Scottish fertility is not due to childlessness or later first
+    births but to smaller families (more one-child) across all educational groups.'
+- factor: education
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: 'no'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBR_SCO: PPR 1 to 2 fell for all educational groups; no stable educational gradient.'
+- factor: education
+  measure: ppr-0-1
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBR_NIR: Positive childlessness gradient but smaller than in Britain; narrowing because childlessness
+    fell among the highly educated. Within each educational group childlessness is flat or falling.'
+- factor: education
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: 'no'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'GBR_NIR: No consistent educational gradient; PPR 1 to 2 higher than in Britain.'
+period:
+- 1956
+- 2017

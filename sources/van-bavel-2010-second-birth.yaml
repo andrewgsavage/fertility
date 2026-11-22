@@ -31,5 +31,62 @@ findings:
   ref: research/factor-evidence/fulltext-recheck.md
   note: 'As above: the education gradient in second births varies by country; where many young children
     are in formal childcare, highly educated women have much higher second-birth rates.'
+- factor: age-at-first-birth
+  measure: ppr-1-2plus
+  verdict: mixed
+  tick: '?'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Postponement penalty on second births is much larger for low-educated women: first birth
+    at 35, about 45% of high-educated vs 25% of low-educated have a second birth within 5 years. Authors
+    note partly selection (late low-educated mothers more often subfecund). Second-birth hazard, not completed
+    PPR.'
+- factor: childcare-provision
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: '?'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Country day-care enrolment (age 0-2, c. 2004) goes with higher second-birth rates among
+    high-educated women but not low-educated (16 countries). Enrolment is a crude proxy of provision;
+    endogeneity acknowledged, not causal.'
+- factor: childcare-provision
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: '?'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Same result; authors say child care lowers the opportunity cost of parity progression
+    for the highly educated. Second-birth hazard within 5 years, not completed PPR.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Vienna Yearbook of Population Research.
+countries:
+- AUT
+- BEL
+- BGR
+- CHE
+- CYP
+- DEUTNP
+- DNK
+- ESP
+- EST
+- FIN
+- FRATNP
+- GBR_NP
+- HUN
+- IRL
+- LVA
+- NLD
+- NOR
+- POL
+- PRT
+- ROU
+- SVK
+- SVN
+- SWE
+period:
+- 1960
+- 2007

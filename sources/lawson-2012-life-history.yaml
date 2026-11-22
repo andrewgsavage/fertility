@@ -22,5 +22,55 @@ findings:
   ref: research/factor-evidence/fulltext-recheck.md
   note: '27 sub-Saharan African countries (DHS): robust negative link between fertility and child survival,
     driven mainly by sibling competition (more births lower survival), not by mortality raising births.'
+- factor: child-mortality
+  measure: cond-asfr-2plus
+  verdict: mixed
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Each additional maternal birth cuts odds of child survival to age 5 by 14% (ExpB 0.86,
+    CI 0.85-0.87), from 11% in Chad to 19% in Lesotho; the cost is larger where mortality is lower (r
+    = -0.74 between country survival odds and the fertility effect), consistent with falling mortality
+    raising the payoff to fewer births. Cross-sectional, higher-order birth rates not modelled.'
+- factor: child-mortality
+  measure: tfr
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Authors read the results as supporting the view that development lowers extrinsic child
+    mortality and so favours smaller families; they report only a within-country fertility/survival gradient
+    and national correlations (Table S1, not in text), not a time series of mortality decline and fertility.'
 notes: 'Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Proceedings of the Royal Society B: Biological Sciences.'
+countries:
+- BEN
+- BFA
+- CMR
+- TCD
+- COG
+- COD
+- ETH
+- GHA
+- GIN
+- KEN
+- LSO
+- LBR
+- MDG
+- MWI
+- MLI
+- MOZ
+- NAM
+- NER
+- NGA
+- RWA
+- SEN
+- SLE
+- SWZ
+- TZA
+- UGA
+- ZMB
+- ZWE
+period:
+- 1993
+- 2008

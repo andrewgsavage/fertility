@@ -21,5 +21,29 @@ findings:
   ref: research/factor-evidence/fulltext-recheck.md
   note: 'Italy vs Poland (event-history): women''s employment conflicts with childbearing in Italy, but
     Polish women combine the two despite similar obstacles.'
+- factor: female-employment
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: '?'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'ITA: Italian mothers who re-entered work and are working have a 33% lower second-conception hazard
+    (35% per text); effect similar in size to the first-birth effect.'
+- factor: female-employment
+  measure: cond-asfr-2plus
+  verdict: contradicts
+  tick: '?'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'POL: Working Polish mothers are not less likely to have a second child; those who entered then
+    left work after the first birth have a 38% lower hazard (possible involuntary job loss).'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in European Journal of Population / Revue européenne de Démographie.
+countries:
+- ITA
+- POL
+period:
+- 1983
+- 2006

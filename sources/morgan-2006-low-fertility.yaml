@@ -12,3 +12,63 @@ measurables:
 - tfr
 notes: Imported from the literature review page (docs/literature-review.md, removed). Published in Annual
   Review of Sociology.
+countries:
+- all
+period:
+- 1950
+- 2005
+findings:
+- factor: gender-equality-home
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Review: fertility falls to very low levels where gender equity is high in individual
+    institutions but low in the family (Italy, Spain, Japan) and stays near replacement in more egalitarian
+    contexts (Scandinavia, US). Rindfuss et al. also list men''s housework and childcare contributions.
+    Argument, not a test.'
+- factor: age-at-first-birth
+  measure: completed-fertility
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Review: later childbearing leaves fewer years at risk of unintended births, raises sub/infecundity
+    risk, and lets intentions be revised downward; the strength of the link is disputed (footnote 3).'
+- factor: female-infertility
+  measure: ppr-0-1
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Review: impaired fecundity rises with age (especially after 35) and lowers realised fertility
+    below intentions; assisted reproduction and small desired family size reduce the effect (footnote
+    3).'
+- factor: contraception
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Review: contraception seen by some as fundamental to sub-replacement fertility; Goldin
+    and Katz argue the pill shifted US career and marriage timing; weakness is low fertility in Japan
+    and Italy where the pill matters less.'
+- factor: ideal-family-size
+  measure: ideal-children
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Review: intended parity treated as the starting point of the Bongaarts framework (TFR
+    = Ft x IP x Fu x Fg x Fi x Fc); no test of ideal size as a driver.'
+- factor: child-costs
+  measure: cond-asfr-2plus
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Review: high direct and indirect (mother''s foregone earnings) costs make high-parity
+    births non-normative; rising costs described as a fact not in dispute.'

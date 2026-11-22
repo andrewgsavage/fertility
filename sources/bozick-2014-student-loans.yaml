@@ -21,7 +21,20 @@ findings:
   note: 'US bachelor''s graduates 1993 (B&B, N=9,410): each extra $1,000 of debt lowers women''s monthly
     odds of first marriage by 2% in the first four years after graduation; no effect for men; fades over
     time. Marriage only, not cohabitation.'
+- factor: student-debt
+  measure: cond-asfr-1
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'USA: Childbearing is not measured; cohabitation also not measured (Conclusion).'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demographic Research.
 measurables:
 - share-in-couple
+countries:
+- USA
+period:
+- 1993
+- 1997

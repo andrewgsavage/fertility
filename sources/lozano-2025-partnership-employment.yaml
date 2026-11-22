@@ -21,7 +21,40 @@ findings:
   ref: research/factor-evidence/fulltext-recheck.md
   note: 'Spain, women born before 1980 (Fertility Survey 2018): childlessness after 40 is highest for
     women who stayed single or had breakups; partnership trajectories matter more than employment.'
+- factor: partnership-stability
+  measure: ppr-0-1
+  verdict: contradicts
+  tick: 'no'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'ESP: Childlessness (PPR 0 to 1) is higher after unstable partnerships, although the stability
+    tick is blank for this column. Trajectories mix cohabitation and breakups, so stability not isolated.'
+- factor: female-employment
+  measure: ppr-0-1
+  verdict: mixed
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'ESP: Strong labour-market attachment slightly raises childlessness within partnership categories;
+    employment weaker predictor than partnership. Cohorts entered the labour market in mid-1980s.'
+- factor: education
+  measure: ppr-0-1
+  verdict: mixed
+  tick: 'yes'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'ESP: Education effect on childlessness reverses by partnership trajectory: protective in marriage
+    trajectories, raising childlessness among single or unstable women (above 80% for university-educated
+    singles).'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Perspectives Demogràfiques.
 measurables:
 - ppr-0-1
+countries:
+- ESP
+period:
+- 1980
+- 2018

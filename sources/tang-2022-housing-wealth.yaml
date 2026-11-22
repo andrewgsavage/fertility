@@ -19,5 +19,37 @@ findings:
   note: 'Nothing links land-use or planning rules directly to fertility or partnership. Related housing-wealth
     result: Tang & Coulson 2022 ([10.53383/100334](https://doi.org/10.53383/100334)), China, house-price
     wealth gains do not raise urban fertility. See the Costs and housing note for house-price evidence.'
+- factor: house-prices
+  measure: cond-asfr-1
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'CHN: Tests a wealth gain for existing owners (self-reported home value minus purchase cost),
+    not the cost of buying; wealth gain does not raise births of childless women in cities or villages.'
+- factor: house-prices
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: '?'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'CHN: Housing-wealth gains almost never raise births (urban none; rural +1.78% of base rate before
+    2015, vanishing once a child exists); wealth-for-owners design, not price-as-barrier.'
+- factor: income
+  measure: cond-asfr-1
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'CHN: Household income is a control, not the target; no effect among childless women, small negative
+    for rural women overall.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in International Real Estate Review.
+countries:
+- CHN
+period:
+- 2010
+- 2016

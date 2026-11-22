@@ -18,9 +18,52 @@ findings:
   measure: young-first-births
   verdict: contradicts
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: 'Sweden: vocational-school women graduating into a deep recession married and had children earlier,
-    especially low-GPA women (quasi-random).'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'SWE: Worse labour-market entry (higher unemployment at graduation) made low-GPA women have first
+    births earlier, not later; no significant effect for median/top quintiles or full sample (-0.090,
+    se 0.064).'
+- factor: job-insecurity
+  measure: cond-asfr-1
+  verdict: contradicts
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'SWE: First births accelerated for low-GPA women (timing, not rate directly measured); effect
+    reverses by about age 27 and vanishes in completed outcomes.'
+- factor: job-insecurity
+  measure: ppr-0-1
+  verdict: contradicts
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'SWE: No effect on the share ever having a child by age 38, in any GPA group.'
+- factor: job-insecurity
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: 'no'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'SWE: No lasting effect on number of children by 38 (small weak positive in full sample); consistent
+    with blank.'
+- factor: job-insecurity
+  measure: share-in-couple
+  verdict: contradicts
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'SWE: Coupling column (no outcome tag): low-GPA women formed first partnership (marriage or cohabitation
+    with common child) about 2 years earlier after a recession graduation; no effect on ever partnering;
+    Table 9: lower-earning partners, divorce +10.6% per 1pp.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Journal of Human Resources.
+countries:
+- SWE
+period:
+- 1987
+- 2013

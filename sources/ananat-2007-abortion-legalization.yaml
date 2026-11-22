@@ -24,5 +24,44 @@ findings:
   note: 'US 1930s-60s cohorts, early-repeal states vs others: legal abortion lowered completed fertility
     permanently (−0.054 children), mostly by raising childlessness (odds +3.6%). Accounts for about half
     the rise in childlessness.'
+- factor: abortion
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'USA: Period birth rate fell about 4-5 percent; the lifetime result (more childless) implies lost
+    first births were not recovered. First-birth hazard itself is not estimated.'
+- factor: abortion
+  measure: young-first-births
+  verdict: mixed
+  tick: '?'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'USA: Births at young ages fell sharply while abortion was legal in only some states, and were
+    not made up later, so these were not merely postponed. Direct split of first births by age is not
+    reported.'
+- factor: abortion
+  measure: completed-fertility
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'USA: Completed fertility permanently lower; most of the period fall was not recovered later.'
+- factor: abortion
+  measure: ppr-1-2plus
+  verdict: no-evidence
+  tick: 'no'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'USA: Authors say the effect on women with one or two children cannot be attributed to legalisation
+    because later cohorts show the same pattern; consistent with blank but not a clean test.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Journal of Human Resources.
+countries:
+- USA
+period:
+- 1930
+- 1999

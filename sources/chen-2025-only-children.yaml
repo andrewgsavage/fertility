@@ -22,7 +22,19 @@ findings:
   note: 'Urban China, fuzzy RD on the 1980 one-child policy: being an only child lowers one''s ideal number
     of children and the chance of wanting two or more. Supports the trap''s ideals mechanism; births not
     measured.'
+- factor: ideal-family-size
+  measure: ideal-children
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'CHN: Sibship size (only-child status) causes lower personal ideal family size in urban China;
+    mean ideal 1.68 for births 1969-1990. Does not test births.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in European Journal of Population.
 measurables:
 - ppr-1-2plus
+countries:
+- CHN
+period:
+- 1969
+- 2021

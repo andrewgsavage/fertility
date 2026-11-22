@@ -22,5 +22,35 @@ findings:
   note: 'Denmark, Finland, Norway (2020-22 survey): people with egalitarian gender-role attitudes (~70%)
     report lower fertility intentions than non-egalitarians, the opposite of the factor''s mechanism.
     Intentions only, not births, and not split by parity.'
+- factor: gender-equality-home
+  measure: ideal-children
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Childless: egalitarian gender-role attitudes (71% of sample) go with lower intentions
+    for a first child than non-egalitarian (gap 9 pp, narrowing to 4 pp after controlling for parenthood
+    as life goal). Attitudes, not household division; intentions, not births.'
+- factor: gender-equality-home
+  measure: ideal-children
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Among childless egalitarians, satisfaction with the housework division raises intentions
+    for a first child; no effect in other classes. Satisfaction is high (0.78 of 1) everywhere.'
+- factor: gender-equality-home
+  measure: ideal-children
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'pooled: Parents: no association between attitude profile and intention to have another child
+    within 3 years; housework satisfaction slopes n.s. (egalitarian 0.10, se 0.03 positive, others n.s.).
+    Intentions only.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Population and Development Review.
+countries:
+- DNK
+- FIN
+- NOR
+period:
+- 2020
+- 2022

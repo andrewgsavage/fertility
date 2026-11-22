@@ -13,3 +13,8 @@ factors:
 - population-ageing
 notes: Imported from the literature review page (docs/literature-review.md, removed). Published in Political
   Research Exchange.
+countries:
+- all
+period:
+- 2000
+- 2019

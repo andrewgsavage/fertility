@@ -24,5 +24,29 @@ findings:
   ref: research/factor-evidence/fulltext-recheck.md
   note: US states legalising abortion before Roe saw births fall 5% relative to others (8% vs distant
     states); 13% for teens. Births of all orders.
+- factor: abortion
+  measure: young-first-births
+  verdict: supports
+  tick: '?'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'USA: Teen birth rates (all birth orders, not first births only) fell most after legalisation;
+    the gap closed after Roe. Teen trend differs between state groups, so the authors call the teen estimate
+    harder to assess (Fig. 4).'
+- factor: abortion
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'no'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'USA: Cannot separate higher-order from first births; older-age fall is consistent with some effect
+    on later births, but not tested by parity.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in American Journal of Public Health.
+countries:
+- USA
+period:
+- 1965
+- 1980

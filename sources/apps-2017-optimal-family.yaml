@@ -15,10 +15,23 @@ findings:
   measure: ppr-1-2plus
   verdict: no-evidence
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/policy-and-the-state.md
-  note: 'Tax studies found concern female labour supply, not fertility: Colonna & Marcassa 2015 ([10.1186/s40173-015-0030-0](https://doi.org/10.1186/s40173-015-0030-0)),
-    Italy, tax system burdens two-earner households; Apps & Rees 2017 ([10.1007/s10797-018-9492-5](https://doi.org/10.1007/s10797-018-9492-5)),
-    theory favouring individual taxation. Neither tests births.'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'AUS: Compares joint and individual taxation on efficiency and equity. Number of children is fixed,
+    so no fertility or parity outcome is tested.'
+- factor: tax-system
+  measure: cond-asfr-2plus
+  verdict: no-evidence
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'AUS: As above: no fertility outcome.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in International Tax and Public Finance.
+countries:
+- AUS
+period:
+- 2009
+- 2010

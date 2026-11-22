@@ -18,16 +18,81 @@ findings:
   measure: cond-asfr-1
   verdict: supports
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: 'Belgium: 40-50% of the fall in cumulated fertility at 25 (cohorts 1951-75 vs 1946-50) is attributable
-    to rising education.'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'BEL: Standardising for education removes 37-54% of the first-birth postponement at age 25 in
+    cohorts 1951-75 relative to 1946-50; onset of postponement in the early 1970s occurred in every education
+    group, so period factors also matter.'
 - factor: education
   measure: young-first-births
   verdict: supports
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: Effect concentrated at young ages; recuperation at older ages differs by education and context.
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'BEL: Education effect is on cumulated fertility at 25; the first-birth deficit grows from -0.040
+    to -0.342 across cohorts 1951-55 to 1971-75, but recuperation after 25 sets in for cohorts 1951-65
+    (p. 93).'
+- factor: education
+  measure: ppr-0-1
+  verdict: contradicts
+  tick: 'yes'
+  direction: +
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'BEL: Highly educated Belgian women''s chance of ever becoming mothers rose across cohorts despite
+    later first births, reversing the negative education gradient; motherhood fell among less educated
+    women (p. 103).'
+- factor: education
+  measure: ppr-1-2plus
+  verdict: supports
+  tick: 'no'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'BEL: Highly educated mothers keep a high, stable second-birth progression; no negative education
+    effect on PPR 1-2+.'
+- factor: age-at-first-birth
+  measure: ppr-1-2plus
+  verdict: contradicts
+  tick: '?'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'BEL: Belgian cohorts 1930-61: later first births did not lower parity progression to second birth,
+    especially among tertiary-educated women.'
+- factor: partnership-formation
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'BEL: Childless women living in a single-person household or unmarried cohabitation in 1991 had
+    markedly lower first-birth odds over 1992-94 than married women, more so at higher education.'
+- factor: leaving-home
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'BEL: Childless women still in the parental home (never partnered) have 80-90% lower first-birth
+    odds than married women; highly educated women leave home later (Table 2, p. 98, p. 96).'
+- factor: economic-uncertainty
+  measure: cond-asfr-1
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'BEL: Individually unemployed childless women have 8-40% lower first-birth odds than full-time
+    workers, stronger at higher education; period unemployment contributed to the 1970s onset of postponement.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Vienna Yearbook of Population Research.
+countries:
+- BEL
+period:
+- 1960
+- 2001

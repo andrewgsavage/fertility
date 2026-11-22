@@ -15,6 +15,34 @@ factors:
 measurables:
 - tfr
 - cond-asfr-1
+- male-earnings
+- employment
+period:
+- 1991
+- 2018
+findings:
+- factor: left-behind-young-men
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: docs/factors/left-behind-young-men.md
+  note: 'Sweden, registers 1991-2018, Swedish-born men and women 16-45: first-birth rates fell in the
+    2010s in every labour-market group, most in relative terms among non-participants, then the unemployed
+    and lowest earners, least among high earners, so the gap by labour-market position widened; men and
+    women alike. But the shares unemployed or studying fell and high earners rose, so a growing left-behind
+    group did not drive the decline. Own position only, not partners''; results shown in charts only (Fig.
+    4).'
+- factor: economic-uncertainty
+  measure: cond-asfr-1
+  verdict: contradicts
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'SWE: Labour-market position did not deteriorate after 2008, yet first-birth rates fell even among
+    strongest groups; authors point to perceived uncertainty/preferences, not tested.'
 notes: Imported from the citation on docs/factors/partnership-formation.md; the page's summary of the
   finding is not carried over (AI-written, unreviewed). Metadata from Crossref/OpenAlex. Published in
   Demographic Research.

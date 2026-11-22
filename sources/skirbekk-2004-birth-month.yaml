@@ -20,33 +20,60 @@ findings:
 - factor: age-at-first-birth
   measure: ppr-1-2plus
   verdict: contradicts
-  tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: 'Sweden, natural experiment on birth-month school cut-off: an 11-month later graduation delays
-    first birth by 4.9 months and persists into second births, but completed fertility is unaffected.
-    Delay affects timing, not quantum.'
+  tick: '?'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'SWE: Birth-month-induced later first births (4.9 months) do not change the probability of a second
+    child by 45.'
 - factor: age-at-first-birth
   measure: cond-asfr-2plus
   verdict: mixed
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: Delay persists for second-birth timing.
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'SWE: Delay in first birth carries through to second-birth timing (36% of graduation gap) with
+    no catch-up in spacing; second-birth rate shifts later rather than falling.'
 - factor: education
   measure: share-in-couple
   verdict: mixed
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: 'Sweden: later graduation delays first marriage but not the probability of marrying before 45.
-    Timing, not quantum.'
+  direction: mixed
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'SWE: Later graduation delays first marriage but not, or only weakly, ever marrying by 45.'
 - factor: education
   measure: young-first-births
   verdict: supports
   tick: 'yes'
-  basis: abstract
-  ref: research/factor-evidence/life-course-and-education-work.md
-  note: Exogenous 11-month later school leaving postpones first birth by 4.9 months.
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'SWE: Later school graduation (11 months) delays first birth by 4.9 months; first-birth risk at
+    young ages is lower for the older school cohort. Timing only.'
+- factor: education
+  measure: ppr-0-1
+  verdict: contradicts
+  tick: 'yes'
+  direction: '0'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'SWE: Later graduation does not change the probability of ever having a first child by 37 or 45;
+    delay is tempo, not quantum.'
+- factor: education
+  measure: cond-asfr-1
+  verdict: mixed
+  tick: 'yes'
+  direction: '-'
+  basis: fulltext
+  ref: research/factor-evidence/fulltext-sweep.md
+  note: 'SWE: First-birth rate shifts to older ages (lower early, higher later) with no net change in
+    the proportion having a first birth.'
 notes: Imported from research/factor-evidence; findings are from abstracts only (AI-generated, not reviewed).
   Published in Demography.
+countries:
+- SWE
+period:
+- 1946
+- 1999
