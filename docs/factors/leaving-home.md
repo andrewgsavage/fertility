@@ -41,6 +41,8 @@ The collapse comes from fertility falling in the early-leaving countries, not fr
 
 Finland, Denmark, France and the Netherlands kept leaving home at 21-23 but lost 0.36-0.62 children per woman. Southern Europe left home later still and fell by less. Much of Central and Eastern Europe left home earlier, with smaller falls in fertility. Late home-leaving still goes with low fertility in Southern Europe, but early home-leaving no longer goes with high fertility.
 
+For how the share of young adults living with their parents changed alongside the fall in coupling, see [Living arrangements](living-arrangements.md).
+
 ## Leaving age and age at first birth
 
 If leaving home late delayed families, countries where women leave later would also have later first births. They don't. Across countries, women's leaving age has almost no relation to mothers' mean age at first birth: r stayed between -0.25 and +0.17 from 2002 to 2024, and was +0.01 in 2024. Leaving ages span 9 years (20.8 in Finland to 29.8 in Croatia), while mean age at first birth spans 5 (26.9 in Bulgaria to 31.9 in Italy).
