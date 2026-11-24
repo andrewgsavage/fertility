@@ -11,6 +11,6 @@ uk/index
 countries/index
 dataisugly/index
 democracy/index
-unused-plots
+research/index
 sources
 ```
