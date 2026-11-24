@@ -1,0 +1,21 @@
+# Andersson & Philipov (2002), Demographic Research 7(4), Appendix 2: women's median age (whole years) at first union
+# (Table 6, cohabitation or marriage) and at first becoming a parent (Table 8), synthetic cohorts.
+# Medians at exact whole-year ages as printed, so the gap is only accurate to about a year.
+country,period_union,median_age_union,median_age_parent
+Sweden,1978-93,21,27
+Norway,1974-89,22,26
+Finland,1979-89,22,27
+France,1988-94,23,28
+USA,1989-95,22,26
+Austria,1990-96,23,26
+West Germany,1986-92,26,31
+Flanders,1985-92,24,28
+Italy,1990-95,28,30
+Spain,1989-95,26,29
+East Germany,1984-89,22,23
+Hungary,1988-93,22,24
+Czech Republic,1992-97,22,24
+Slovenia,1989-95,23,24
+Latvia,1989-95,21,23
+Lithuania,1989-95,22,23
+Poland,1986-91,23,24

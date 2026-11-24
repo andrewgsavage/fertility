@@ -39,6 +39,8 @@ Part of [Partnership formation](partnership-formation.md). The share of women wi
 
 An arrow pointing straight at the origin (0%, 0%) means fewer couples with the same share of them having a child; since fewer than all couples have a child, that line is shallower than 45° when the share with a child is below the share in a couple. Arrows steeper than that mean the share of couples having a child fell as well. Shares of all women do not say whether the mothers are the women in couples; the lines above are the simplest reading, not the only one.
 
+Each chart has a *middle of age range* panel (with a child by the middle of the coupling age range) and an *end of age range* panel (by its end). The measured lag from coupling to a first birth, on [Couple to first birth](union-to-first-birth.md), is 2–5 years, which favours the end-of-range panels.
+
 The **Ratio over time** tab on each chart plots % with a child divided by % in a couple, year by year. A flat line is an arrow aimed at the origin; a falling line is an arrow steeper than that. It is mothers per coupled woman, not the share of couples with a child: mothers outside a couple raise it, and it can exceed 1. The y axis is logarithmic, so a halving and a doubling are the same distance from the dotted line at 1.
 
 ## HFD
