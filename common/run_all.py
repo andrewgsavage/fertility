@@ -46,6 +46,8 @@ RUN_FIRST = [
     "ONS/scripts/parse_housing_csv.py",  # -> build_plotly_scatter.py
     "ONS/scripts/parse_population_csv.py",  # -> build_plotly_scatter.py
     "ONS/scripts/simplify_geojson.py",  # -> build_plotly_map.py
+    "ILO/scripts/separated_ilo.py",  # -> ILO/scripts/separation_vs_second_birth.py
+    "eurostat/scripts/lone_parents_divorce_europe.py",  # -> ILO/scripts/separation_vs_second_birth.py
 ]
 
 # A script that reads its own source's data folder this way is skipped up front

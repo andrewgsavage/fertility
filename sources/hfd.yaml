@@ -12,6 +12,7 @@ scripts:
 - HFD/scripts/births_per_mother_facet.py
 - ILO/scripts/coupling_vs_cond_asfr.py
 - NSO/scripts/coupling_mothers_lexis.py
+- ILO/scripts/separation_vs_second_birth.py
 measurables:
 - asfr
 - cond-asfr-1

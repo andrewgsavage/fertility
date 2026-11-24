@@ -79,7 +79,7 @@ In the table:
 | **Life-course timing** | | | | | | | |
 | [Leaving home](leaving-home.md) | Later departure from the parental home delays partnership and first birth | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ |
 | [Partnership formation](partnership-formation.md) | Fewer and later partnerships delay or prevent first births | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ |
-| Partnership stability | Separation and divorce end relationships before later births happen (PPR 1→2+: small net effect once repartnering is counted) | ✗ | ✗ | ✗ | ✗ | ✓ | ✓ |
+| [Partnership stability](union-stability.md) | Separation and divorce end relationships before later births happen (PPR 1→2+: small net effect once repartnering is counted) | ✗ | ✗ | ✗ | ✗ | ✓ | ✓ |
 | Age at first birth | Later first births leave less time for higher-order births | ✗ | ✗ | ✗ | ✗ | ? | ✓ |
 | Female age-related infertility | Fecundity falls with age; postponed births are more often not realised | ✗ | ✓ | ✗ | ✓ | ✓ | ✓ |
 | Falling sperm counts | Reported declines in semen quality may lower conception rates at all ages | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ |

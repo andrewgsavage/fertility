@@ -20,7 +20,7 @@ The split follows the motivation → intention → realisation chain used in fer
 
 ## Using the grid
 
-Check which cells moved before asking which factors explain a fall. A factor only explains a decline if it acts on a cell that actually moved in that country and period. A factor that acts only on age explains the part of the delay that is never made up at older ages, not the delay itself.
+Check which cells moved before asking which factors explain a fall. A factor only explains a decline if it acts on a cell that actually moved in that country and period. A factor that acts only on age explains the part of the delay that is never made up at older ages, not the delay itself. Whether couples at 30–44 split more often or re-partner less, which would act on the second+ child row, is checked on [Union stability](union-stability.md).
 
 The cells need different data:
 
