@@ -18,5 +18,5 @@ scripts:
 measurables:
 - asfr
 - young-first-births
-notes: Cumulative first-birth rates (CPFR1) by age, used for women with a child by age. Years repeat across collections and age definitions; the change matrix uses vital registration (Collection HFD), age in completed years (ACY).
+notes: Cumulative first-birth rates (CPFR1) by age, used for women with a child by age. Years repeat across collections and age definitions; the country comparison uses vital registration (Collection HFD), age in completed years (ACY).
 accessed: 2026-11-23

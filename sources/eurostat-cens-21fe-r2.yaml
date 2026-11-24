@@ -11,5 +11,5 @@ period:
 - 2021
 scripts:
 - eurostat/scripts/change_matrix.py
-notes: Women in a couple by 5-year age, including consensual unions. Census methods changed between the 2011 and 2021 rounds, so the change matrix uses only countries that pass a check against EU-LFS or a national register.
+notes: Women in a couple by 5-year age, including consensual unions. Census methods changed between the 2011 and 2021 rounds, so the country comparison uses only countries that pass a check against EU-LFS or a national register.
 accessed: 2026-11-23

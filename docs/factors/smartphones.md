@@ -61,7 +61,7 @@ Mobile internet use rose in every country; it rose slightly more where the share
 <iframe src="../_static/eurostat/change_scatter_mobile_internet.html" style="width: 100%; height: 440px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
-Each dot is a country. See the [change matrix](change-matrix.md) for all factors side by side.
+Each dot is a country. See the [country comparison](country-comparison.md) for all factors side by side.
 
 ## Causal evidence
 
