@@ -6,6 +6,117 @@ This page was written by AI and has not been fully reviewed. Check figures and c
 
 Back to [Abortion](abortion.md).
 
+## First and later pregnancies by age
+
+These charts compare abortions with births of the same order. Abortions to women with no children are set against first births, abortions to women with one child against second births, and abortions to mothers against second and later births. A value of 20 means that for every 100 first pregnancies carried to a birth, 20 others ended in abortion. Unlike the share of abortions to mothers [further down](#abortions-to-women-who-already-have-a-child), the ratio doesn't move just because fewer women are mothers.
+
+::::{tab-set}
+
+:::{tab-item} First pregnancies by age
+```{raw} html
+<iframe src="../_static/eurostat/abortion_order_ratio_first_by_age.html" style="width: 100%; height: 900px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+
+Abortions to women with no children per 100 first births, by age. England & Wales runs to 2022, when HFD births by order end, and uses DHSC's age groups (Under 20, 20–34, 35+, with 20–34 as a grey line), so its panel isn't directly comparable with the five-group panels.
+
+| Country | 20–24, 2013 | 20–24, latest | 25–29, 2013 | 25–29, latest | 30–34, 2013 | 30–34, latest |
+|---|--:|--:|--:|--:|--:|--:|
+| Spain | 68 | 110 (2024) | 22 | 41 (2024) | 8 | 14 (2024) |
+| Portugal | 24 (2008) | 56 (2024) | 9 (2008) | 18 (2024) | 5 (2008) | 8 (2024) |
+| Finland | 40 | 58 (2024) | 11 | 17 (2024) | 6 | 9 (2024) |
+| Estonia | 39 | 50 (2024) | 13 | 17 (2024) | 8 | 13 (2024) |
+| Italy | 43 | 55 (2024) | 13 | 15 (2024) | 6 | 7 (2024) |
+| Slovenia | 24 | 27 (2024) | 9 | 9 (2024) | 6 | 6 (2024) |
+| Czechia | 26 | 23 (2024) | 8 | 8 (2024) | 5 | 6 (2024) |
+| Slovakia | 19 | 13 (2024) | 10 | 5 (2024) | 10 | 5 (2024) |
+| Hungary | 42 | 27 (2023) | 13 | 6 (2023) | 7 | 4 (2023) |
+
+In England & Wales the ratio at 20–34 held at 26–32 from 2013 to 2021, then rose to 42 in 2022; under 20 it rose from 117 to 188. In Spain, women aged 20–24 now end more first pregnancies in abortion than in a birth.
+:::
+
+:::{tab-item} Second pregnancies by age
+```{raw} html
+<iframe src="../_static/eurostat/abortion_order_ratio_second_by_age.html" style="width: 100%; height: 900px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+
+Abortions to women with exactly one child per 100 second births, by age: roughly how many pregnancies that would have been a second child end in abortion for every 100 that end in a birth. This is the pregnancy-level counterpart of the share of mothers who go on to a second child (PPR 1→2). Eurostat countries only; England & Wales splits out women with one child only from 2021, too few years to show.
+
+| Country | Age | 2013 | Latest |
+|---|---|--:|--:|
+| Spain | 20–24 | 71 | 59 (2024) |
+| Spain | 30–34 | 13 | 17 (2024) |
+| Spain | 35+ | 11 | 14 (2024) |
+| Portugal | 20–24 | 33 (2008) | 54 (2024) |
+| Portugal | 25–29 | 18 (2008) | 29 (2024) |
+| Finland | 25–29 | 8 | 13 (2024) |
+| Italy | 25–29 | 16 | 14 (2024) |
+| Hungary | 35+ | 29 | 14 (2022) |
+| Czechia | 35+ | 17 | 13 (2024) |
+
+All ages, the ratio rose in Spain (19 to 21, 2013–2024) and Finland (9 to 11), held in Portugal, Scotland and Germany, and fell in Italy and Central Europe. By age the clearest rises are in Portugal at 20–29, Finland at 25–34 and Spain at 30 and over: more women with one child at the ages a second child usually comes are ending that pregnancy. In Hungary and Slovakia it halved at 35+, as in the later-pregnancy chart.
+:::
+
+:::{tab-item} Later pregnancies by age
+```{raw} html
+<iframe src="../_static/eurostat/abortion_order_ratio_later_by_age.html" style="width: 100%; height: 900px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+
+Abortions to mothers per 100 second-or-later births, by age, Eurostat countries plus England & Wales (to 2022). England & Wales uses DHSC's own age groups (Under 20, 20–34, 35+, with 20–34 as a grey line), so its panel isn't directly comparable with the five-group panels.
+
+| Country | Age | 2013 | Latest |
+|---|---|--:|--:|
+| Spain | 20–24 | 79 | 66 (2024) |
+| Spain | 30–34 | 23 | 27 (2024) |
+| Portugal | 20–24 | 37 (2008) | 53 (2024) |
+| Finland | 25–29 | 13 | 19 (2024) |
+| Italy | 30–34 | 19 | 16 (2024) |
+| Hungary | 35+ | 59 | 27 (2023) |
+| Slovakia | 35+ | 46 | 23 (2024) |
+| England & Wales | 20–34 | 22 | 40 (2022) |
+| England & Wales | 35+ | 22 | 38 (2022) |
+
+In Spain the later-pregnancy ratio fell for young mothers and rose slightly at 30+, the opposite of the first-pregnancy trend. England & Wales rose steadily at every age from 2013, unlike its first-pregnancy ratio, which only moved after 2021.
+:::
+::::
+
+```{note}
+Abortions by parity: Eurostat [demo_fabortord](https://ec.europa.eu/eurostat/databrowser/view/demo_fabortord/default/table), 2007–2024, and for England & Wales DHSC Table 2 by age and parity, 2013–2023 ([collection](https://www.gov.uk/government/collections/abortion-statistics-in-england-and-wales)). Births by order: Eurostat [demo_fordagec](https://ec.europa.eu/eurostat/databrowser/view/demo_fordagec/default/table), and the [Human Fertility Database](https://www.humanfertility.org/) for England & Wales (to 2022). Births of unknown order and abortions of unknown parity are spread in proportion. Country-years with 15% or more of abortions of unknown parity are dropped, as are Serbia, Albania and Croatia. Only countries that publish abortions by previous live births are shown. Sweden's abortion tables give previous abortions, not previous births; Denmark's give no parity; Norway's statistics bank couldn't be read.
+```
+
+### What these show
+
+**Where the first-pregnancy ratio held or fell, women who got pregnant with a first child still kept it.** The fall in first births there is a fall in first pregnancies. At 25–29, the age at which most first births used to happen, the ratio was flat from 2013 to 2024 in Czechia (8 per 100 first births), Slovenia (9) and Italy (13 to 15), and halved in Hungary (13 to 6) and Slovakia (10 to 5). First births at 25–29 fell 30–37% in Czechia, Slovenia and Italy, and first pregnancies (abortions plus first births) fell by almost the same: 33%, 30% and 36%. Once conceived, a first child is kept as often as before. What changed is how many women conceive one. That can be partnership, contraception or postponement, and these charts can't separate them.
+
+**Where the ratio rose, fewer pregnancies still explain most of the fall.** It rose at 20–29 in Spain, Portugal, Finland and Estonia. Spain moved fastest: at 20–24 from 68 to 110 (about +4 a year) and at 25–29 from 22 to 41 (+1.7 a year). Even there, two-thirds of the fall in first births at 25–29 is fewer pregnancies: first births fell 36% and first pregnancies 26%. In Finland at 20–24, first births fell 51% and first pregnancies 44%, so about 80% of the fall is fewer pregnancies. In Portugal at 20–24 it is about half (births −39%, pregnancies −23%, 2008–2024).
+
+**At 30–34 almost every first pregnancy is kept.** The ratio is 4–9 per 100 first births in every country but Spain (14) and Estonia (13), and it barely moved. Women who conceive a first child at the ages most now do mostly carry it to term.
+
+**Since 2020 the ratio has been rising at young ages almost everywhere.** At 20–24 it rose from 2020 to 2024 in every country with data except Hungary: Czechia 17 to 23, Estonia 38 to 50, Finland 44 to 58, Italy 42 to 55, Portugal 36 to 56, Slovakia 10 to 13, Slovenia 22 to 27 and Spain 73 to 110. At 25–29 it rose by 2–6 points in most of them and by 15 in Spain. Up to 2019, first pregnancies were kept as often as before in most of Europe. Since 2020 more are being ended, so far mostly at ages where first births are now uncommon.
+
+**Later pregnancies show family limitation falling in Central Europe and rising in Britain.** For mothers the ratio is highest at the youngest ages and again at 35+, where women stop after the children they want. At 35+ it halved in Hungary (59 to 27, 2013–2023) and Slovakia (46 to 23), and fell in Czechia (43 to 31) and Estonia (64 to 41). It rose at every age in England & Wales (23 to 40, all ages, 2013–2022), and at 25–34 in Finland and Portugal.
+
+These ratios are also rows in the [country comparison](country-comparison.md), against the change in the share of women with a child by 30.
+
+### Abrupt changes and policy
+
+Most of these series move smoothly. The steps below are larger than the usual year-to-year noise. Only some line up with a change in the law or in how abortion is provided.
+
+| Country | Year | What moved | At the same time |
+|---|--:|---|---|
+| England & Wales | 2020 | Later pregnancies 31 → 36 per 100 later births; first pregnancies flat (34 → 32) | Both abortion pills could be taken at home after a phone or video consultation from 30 March 2020, as a temporary COVID measure. |
+| Scotland | 2020 | Later pregnancies 26 → 31; first pregnancies flat (28 → 28) | The same home-use approval, from 31 March 2020. |
+| England & Wales | 2022 | First pregnancies 34 → 44; abortions to women with no children up 26% in one year (92,100 → 115,600) while first births fell 1% | Home use was made permanent from 30 August 2022, but it had been available since 2020, so it doesn't explain a 2022 step on its own. |
+| Germany | 2022 | First pregnancies 10 → 13, later 13 → 15 (all ages) | The ban on doctors advertising abortion (§219a) was repealed in July 2022. First births also fell 6% after the 2021 rebound, which raises the ratio on its own; abortions to women with no children rose 13%. |
+| Finland | 2021, 2023–24 | All ages dipped from 20 to 17 in 2021, then rose to 22 by 2024; 20–24 rose 47 → 58 from 2022 to 2024 | The 2021 dip is the post-COVID rise in births. Abortion on request up to 12 weeks came into force on 1 September 2023, but the rise at 20–24 began in 2022. |
+| Spain | 2023 | No step: 20–24 went 101 → 107 → 110 over 2022–2024 | A reform in force from March 2023 dropped the three-day waiting period and let 16–17-year-olds consent alone. The rise has been steady since 2015. |
+| Hungary | 2022 | No step: all ages 13 in 2022 and 2023 | A decree from September 2022 requires women to be shown the fetal heartbeat before an abortion. |
+| Portugal | 2008–2012 | First pregnancies 13 → 16, and at 20–24 24 → 36 | Abortion on request up to 10 weeks became legal in July 2007, and services were still expanding. |
+| Slovakia | 2019 | First pregnancies 11 → 8, later 20 → 15; induced abortions reported to Eurostat fell 26% in one year while births were flat | No change in abortion law took effect that year. The step is more likely in recording, and 2019 is the end year of the country comparison. |
+
+COVID also moves the 2020 and 2021 ratios: births dipped in 2020 and rebounded in 2021 in several countries, which shifts the ratio for a year with no change in abortions.
+
+## All pregnancies by age
+
 Abortions and live births by the woman's age, for 31 European countries (England & Wales and Scotland counted separately), the United States and Japan, and abortions per 100 live births. A value above 100 means more pregnancies at that age ended in abortion than in a birth. Miscarriages aren't counted.
 
 ```{raw} html
@@ -216,7 +327,7 @@ Eurostat countries plus England & Wales. England & Wales uses DHSC's own age gro
 :::
 
 :::{tab-item} Per 100 births of the same order
-The share above moves when the number of women who are mothers changes. This version doesn't. It compares abortions to women with no children with first births, and abortions to mothers with second and later births. That gives roughly how many first pregnancies, and how many later ones, end in abortion for every 100 that end in a birth.
+The share above moves when the number of women who are mothers changes. This version, the all-ages form of the [charts at the top](#first-and-later-pregnancies-by-age), doesn't. It compares abortions to women with no children with first births, and abortions to mothers with second and later births.
 
 ```{raw} html
 <iframe src="../_static/eurostat/abortion_order_ratio.html" style="width: 100%; height: 980px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
@@ -240,57 +351,6 @@ In Spain the rise is almost all in first pregnancies: 22 to 35 abortions per 100
 Births by order come from Eurostat [demo_fordagec](https://ec.europa.eu/eurostat/databrowser/view/demo_fordagec/default/table), and for England & Wales and Scotland from the Human Fertility Database (to 2022). Births of unknown order and abortions of unknown parity are spread in proportion. Scotland has all ages only. Germany is covered 2009–2020 from Eurostat (with three years missing) and, for all ages only, 2021–2024 from Destatis. England & Wales by age uses DHSC Table 2 (below) against HFD births grouped the same way. The US is left out: CDC's abortion counts cover a changing 40–45 areas, so there are no matching births. The data is in [`abortion_order_ratio.csv`](../_static/eurostat/abortion_order_ratio.csv).
 :::
 
-:::{tab-item} First pregnancies by age
-```{raw} html
-<iframe src="../_static/eurostat/abortion_order_ratio_first_by_age.html" style="width: 100%; height: 900px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
-```
-
-Abortions to women with no children per 100 first births, by age, Eurostat countries plus England & Wales (to 2022, when HFD births by order end). England & Wales uses DHSC's own age groups (Under 20, 20–34, 35+, with 20–34 as a grey line), so its panel isn't directly comparable with the five-group panels. In England & Wales the first-pregnancy ratio at 20–34 held at 26–32 from 2013 to 2021, then rose to 42 in 2022; under 20 it rose from 117 to 188. At 20–24 the ratio rose steeply in Spain (68 to 111 per 100 first births, 2013–2024), Portugal (24 to 55, 2008–2024), Finland (34 to 57), Italy (44 to 55) and Estonia (34 to 50). In Spain, women aged 20–24 now end more first pregnancies in abortion than in a birth. At 25–29 it rose in Spain (22 to 41) and Portugal (9 to 18), the ages where most first births used to happen. In Hungary and Slovakia it fell at every age.
-:::
-
-:::{tab-item} Second pregnancies by age
-```{raw} html
-<iframe src="../_static/eurostat/abortion_order_ratio_second_by_age.html" style="width: 100%; height: 900px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
-```
-
-Abortions to women with exactly one child per 100 second births, by age: roughly how many pregnancies that would have been a second child end in abortion for every 100 that end in a birth. This is the pregnancy-level counterpart of the share of mothers who go on to a second child (PPR 1→2). Eurostat countries only; England & Wales splits out women with one child only from 2021, too few years to show.
-
-| Country | Age | 2013 | Latest |
-|---|---|--:|--:|
-| Spain | 20–24 | 71 | 59 (2024) |
-| Spain | 30–34 | 13 | 17 (2024) |
-| Spain | 35+ | 11 | 14 (2024) |
-| Portugal | 20–24 | 33 (2008) | 54 (2024) |
-| Portugal | 25–29 | 18 (2008) | 29 (2024) |
-| Finland | 25–29 | 8 | 13 (2024) |
-| Italy | 25–29 | 16 | 14 (2024) |
-| Hungary | 35+ | 29 | 14 (2022) |
-| Czechia | 35+ | 17 | 13 (2024) |
-
-All ages, the ratio rose in Spain (19 to 21, 2013–2024) and Finland (9 to 11), held in Portugal, Scotland and Germany, and fell in Italy and Central Europe. By age the clearest rises are in Portugal at 20–29, Finland at 25–34 and Spain at 30 and over: more women with one child at the ages a second child usually comes are ending that pregnancy. In Hungary and Slovakia it halved at 35+, as in the later-pregnancy chart.
-:::
-
-:::{tab-item} Later pregnancies by age
-```{raw} html
-<iframe src="../_static/eurostat/abortion_order_ratio_later_by_age.html" style="width: 100%; height: 900px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
-```
-
-Abortions to mothers per 100 second-or-later births, by age, Eurostat countries plus England & Wales (to 2022). England & Wales uses DHSC's own age groups (Under 20, 20–34, 35+, with 20–34 as a grey line), so its panel isn't directly comparable with the five-group panels.
-
-| Country | Age | 2013 | Latest |
-|---|---|--:|--:|
-| Spain | 20–24 | 79 | 66 (2024) |
-| Spain | 30–34 | 23 | 27 (2024) |
-| Portugal | 20–24 | 37 (2008) | 53 (2024) |
-| Finland | 25–29 | 13 | 19 (2024) |
-| Italy | 30–34 | 19 | 16 (2024) |
-| Hungary | 35+ | 59 | 29 (2022) |
-| Slovakia | 35+ | 46 | 23 (2024) |
-| England & Wales | 20–34 | 22 | 40 (2022) |
-| England & Wales | 35+ | 22 | 38 (2022) |
-
-For later pregnancies the ratio is highest at the youngest ages and again at 35+, where women stop after the children they want. In Central Europe it halved at 35+. In Spain it fell for young mothers and rose slightly at 30+, the opposite of the first-pregnancy trend. Portugal and Finland rose at most ages. England & Wales rose steadily at every age from 2013, unlike its first-pregnancy ratio, which only moved after 2021.
-:::
 ::::
 
 Sources: Eurostat [demo_fabortord](https://ec.europa.eu/eurostat/databrowser/view/demo_fabortord/default/table) (abortions by age and number of previous live births, 2007–2024); DHSC Table 3a for England & Wales (a previous pregnancy ending in a live birth or stillbirth), and by age DHSC Table 2 from each year's data tables, 2013–2023 ([collection](https://www.gov.uk/government/collections/abortion-statistics-in-england-and-wales)); Public Health Scotland's archived parity table (2000–2021); Destatis for Germany from 2021; IGJ Tabel F for the Netherlands (2022–2024); CDC Abortion Surveillance reports for the US (2014–2015 and 2018–2022; the 40–45 reporting areas change from year to year, and California, Illinois, Maryland, New Hampshire, New York State and Wisconsin are always missing). Abortions with unknown parity are left out. Country-years with 15% or more unknown are dropped, as are Serbia (break in the series in 2021), Albania and Croatia (too patchy), Italy 2012 (50% against 59–61% either side) and Germany 2019 by age (the age cells cover only 60% of abortions). The data is in [`abortion_parity.csv`](../_static/eurostat/abortion_parity.csv).
