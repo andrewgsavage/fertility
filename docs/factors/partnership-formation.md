@@ -12,7 +12,7 @@ There's a few difficulties here:
 
 - Studies and articles relating coupling rates and fertility rates often use TFR. TFR is difficult to reason around as it includes second and n-th births, which makes it sensitive to when couples form AND the desire for multiple children. My preference is to use metrics like % with child which does not suffer these issues, however this requires birth order data which is not always available.
 
-Data and studies on marriage alone (age at first marriage, marriage decline in East Asia) are on the [Marriage](marriage.md) subpage, and coupling rates by year on [Coupling over time](coupling-trends.md). This page counts married and cohabiting couples together. The share of women with a child against coupling rates, by age, is on [Coupling and motherhood](coupling-vs-mothers.md).
+Data and studies on marriage alone (age at first marriage, marriage decline in East Asia) are on the [Marriage](marriage.md) subpage, and coupling rates by year on [Coupling over time](coupling-trends.md). This page counts married and cohabiting couples together. The share of women with a child against coupling rates, by age, is on [Coupling and motherhood](coupling-vs-mothers.md). How long couples take to have a first child is on [Couple to first birth](union-to-first-birth.md).
 
 
 ## Literature
@@ -143,6 +143,7 @@ Each row is one source's verdict on one cell of the [factor table](index.md), ag
 :hidden:
 
 coupling-vs-mothers
+union-to-first-birth
 coupling-trends
 marriage
 ```

@@ -1,0 +1,62 @@
+# Mean years from the start of living together to a first birth, from birth registrations.
+# Japan: MHLW, Specified Report of Vital Statistics on births, 2021 (syussyo07 gaikyou, Table 1 and Table 6): marital
+#   first births; "marriage duration" runs from the start of co-residence reported on the birth registration.
+#   wife_first_marriage_age = mean age of wives at first marriage (registered that year); mab1 = mother's mean age at first birth.
+#   premarital_conception_pct = births with marriage shorter than gestation, as % of marital first births (MHLW estimate).
+# Korea: Statistics Korea birth statistics; duration from the actual start of married life regardless of legal
+#   registration. 2000-2010 from 2010 Birth Statistics (final), Tables 6-7; 2015, 2018, 2022, 2024 from press coverage
+#   of each year's final release; 2023 duration from the 2024 release ("same level as 2023").
+#   within_2y_pct for 2017 is the prior-year value quoted in 2018 coverage; 2021 and 2023 are derived from the
+#   printed year-on-year change (flag = derived).
+country,year,mean_years,within_2y_pct,wife_first_marriage_age,mab1,premarital_conception_pct,flag
+Japan,1975,1.55,,24.7,25.7,,
+Japan,1980,1.61,,25.2,26.4,,
+Japan,1985,1.61,,25.5,26.7,,
+Japan,1990,1.66,,25.9,27.0,,
+Japan,1991,1.67,,25.9,27.1,,
+Japan,1992,1.70,,26.0,27.1,,
+Japan,1993,1.72,,26.1,27.2,,
+Japan,1994,1.75,,26.2,27.4,,
+Japan,1995,1.78,,26.3,27.5,22.5,
+Japan,1996,1.82,,26.4,27.6,22.2,
+Japan,1997,1.85,,26.6,27.7,22.6,
+Japan,1998,1.87,,26.7,27.8,23.9,
+Japan,1999,1.88,,26.8,27.9,25.0,
+Japan,2000,1.89,,27.0,28.0,26.3,
+Japan,2001,1.89,,27.2,28.2,27.5,
+Japan,2002,1.92,,27.4,28.3,27.9,
+Japan,2003,2.00,,27.6,28.6,26.9,
+Japan,2004,2.06,,27.8,28.9,26.7,
+Japan,2005,2.09,,28.0,29.1,26.6,
+Japan,2006,2.10,,28.2,29.2,26.9,
+Japan,2007,2.13,,28.3,29.4,26.4,
+Japan,2008,2.15,,28.5,29.5,26.2,
+Japan,2009,2.19,,28.6,29.7,25.3,
+Japan,2010,2.24,,28.8,29.9,24.3,
+Japan,2011,2.26,,29.0,30.1,23.7,
+Japan,2012,2.33,,29.2,30.3,22.6,
+Japan,2013,2.37,,29.3,30.4,21.8,
+Japan,2014,2.39,,29.4,30.6,21.3,
+Japan,2015,2.41,,29.4,30.7,20.3,
+Japan,2016,2.42,,29.4,30.7,20.2,
+Japan,2017,2.43,,29.4,30.7,19.5,
+Japan,2018,2.44,,29.4,30.7,18.9,
+Japan,2019,2.45,,29.6,30.7,18.4,
+S Korea,2000,1.66,77.5,,,,
+S Korea,2001,1.69,76.8,,,,
+S Korea,2002,1.74,74.5,,,,
+S Korea,2003,1.79,72.7,,,,
+S Korea,2004,1.78,72.2,,,,
+S Korea,2005,1.79,71.5,,,,
+S Korea,2006,1.78,71.9,,,,
+S Korea,2007,1.78,73.0,,,,
+S Korea,2008,1.75,74.0,,,,
+S Korea,2009,1.76,72.4,,,,
+S Korea,2010,1.79,71.7,,,,
+S Korea,2015,1.83,,,,,
+S Korea,2017,,65.8,,,,
+S Korea,2018,2.16,60.6,,,,
+S Korea,2021,,51.7,,,,derived
+S Korea,2022,2.7,46.8,,,,
+S Korea,2023,2.5,52.1,,,,derived
+S Korea,2024,2.5,52.6,,,,
