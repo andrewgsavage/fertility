@@ -1,0 +1,19 @@
+id: abs-census-tsp-t07
+type: dataset
+title: 2021 Census Time Series Profile, table T07, number of children ever born by age of parent
+publisher: Australian Bureau of Statistics
+url: https://www.abs.gov.au/census/find-census-data/datapacks/download/2021_TSP_AUS_for_AUS_short-header.zip
+oa: gold
+local:
+- eurostat/data/change_matrix/
+countries:
+- AUS
+period:
+- 2011
+- 2021
+scripts:
+- eurostat/scripts/change_matrix.py
+measurables:
+- childlessness
+notes: Women by 5-year age and children ever born, 2011, 2016 and 2021 Censuses. Not stated excluded.
+accessed: 2026-11-23

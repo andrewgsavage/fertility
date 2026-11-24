@@ -1,0 +1,15 @@
+id: eurostat-cens-11fs-r3
+type: dataset
+title: Population by family status and NUTS 3 region, Census 2011 (cens_11fs_r3)
+publisher: Eurostat
+url: https://ec.europa.eu/eurostat/databrowser/view/cens_11fs_r3/default/table
+oa: gold
+local:
+- eurostat/data/change_matrix/
+period:
+- 2011
+- 2011
+scripts:
+- eurostat/scripts/change_matrix.py
+notes: Women in a couple by 5-year age, including consensual unions. Census methods changed between the 2011 and 2021 rounds, so the change matrix uses only countries that pass a check against EU-LFS or a national register.
+accessed: 2026-11-23

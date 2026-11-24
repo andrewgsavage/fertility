@@ -1,0 +1,14 @@
+id: eurostat-ilc-caindformal
+type: dataset
+title: Children in formal childcare by age group and duration (ilc_caindformal)
+publisher: Eurostat
+url: https://ec.europa.eu/eurostat/databrowser/view/ilc_caindformal/default/table
+oa: gold
+local:
+- eurostat/data/change_matrix/
+scripts:
+- eurostat/scripts/change_matrix.py
+factors:
+- childcare-provision
+notes: Children under 3 in formal childcare (EU-SILC).
+accessed: 2026-11-23

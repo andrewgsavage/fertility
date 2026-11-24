@@ -31,6 +31,16 @@ Use the dropdown to switch between real house prices, real rents and price-to-in
 
 Within the Netherlands the relationship is clearer. Van Wijk (2024) finds that after 2010, fertility fell more in Dutch regions where house prices rose more, enough to account for a substantial part of the national decline; before 2010 the regional link ran slightly the other way. Feijten and van Wijk (2025) split this by tenure for 2012-2022: a €100,000 higher regional house price goes with a 3.1 percentage point lower chance of having a child, partly because fewer young people in expensive regions own their home. For renters, high prices go with fewer births; for owners, with more. This matches UK survey evidence that rising prices raise births among owners and not among renters (Washbrook; Buh 2026). Cross-country comparisons mix owners and renters and can't separate the two.
 
+## Across countries, 2010–2019
+
+Changes in the price-to-income ratio have a weak relation to changes in the share of women with a child by 30.
+
+```{raw} html
+<iframe src="../_static/eurostat/change_scatter_price_to_income.html" style="width: 100%; height: 440px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+
+Each dot is a country. See the [change matrix](change-matrix.md) for all factors side by side.
+
 ## The UK since 2022
 
 UK real house prices peaked in early 2022 and by mid-2026 were 10% lower, back to their 2007 level. The house price to income ratio fell 14% from its 2022 peak. Over the same period England and Wales TFR fell from 1.55 (2021) to 1.39 (2025), a record low.

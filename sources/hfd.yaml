@@ -7,6 +7,7 @@ oa: gold
 local:
 - HFD/data/
 scripts:
+- eurostat/scripts/change_matrix.py
 - HFD/scripts/asfr_uk.py
 - HFD/scripts/births_per_mother_facet.py
 - ILO/scripts/coupling_vs_cond_asfr.py

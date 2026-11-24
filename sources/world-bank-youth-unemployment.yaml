@@ -1,0 +1,18 @@
+id: world-bank-youth-unemployment
+type: dataset
+title: Unemployment, youth total, ages 15-24, modelled ILO estimate (SL.UEM.1524.ZS)
+publisher: World Bank
+url: https://data.worldbank.org/indicator/SL.UEM.1524.ZS
+oa: gold
+local:
+- eurostat/data/change_matrix/
+period:
+- 2000
+- 2023
+scripts:
+- eurostat/scripts/change_matrix.py
+factors:
+- job-insecurity
+measurables:
+- employment
+accessed: 2026-11-23

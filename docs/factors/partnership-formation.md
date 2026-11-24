@@ -107,6 +107,20 @@ Sources of % of women with a child by age, for countries with coupling data but 
 | HFD order-specific births (`asfrRRbo`) for Italy (2004–) and Germany (2009–) | Italy, Germany | Single year | Too few years to build cohort shares at 25–40; no parity exposures | Free registration |
 | National censuses (ABS, INEGI, IBGE, INSEE) | Australia, Mexico, Brazil, France | 5-year | Census years | Free |
 
+## Across countries, 2010–2019
+
+The share of women in a couple fell in all 8 countries with data under 25 and 11 of 13 at 25–34.
+
+```{raw} html
+<iframe src="../_static/eurostat/change_scatter_couple_under_25.html" style="width: 100%; height: 440px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+
+```{raw} html
+<iframe src="../_static/eurostat/change_scatter_couple_25_34.html" style="width: 100%; height: 440px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+
+Each dot is a country. See the [change matrix](change-matrix.md) for all factors side by side.
+
 ## Causal evidence
 
 No study with a readable causal test was found for this factor. See the [causal analysis](causal-analysis.md).

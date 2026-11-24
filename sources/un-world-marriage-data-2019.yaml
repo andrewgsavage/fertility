@@ -12,6 +12,7 @@ period:
 - 1950
 - 2019
 scripts:
+- eurostat/scripts/change_matrix.py
 - UN/scripts/coupling_un.py
 - UN/scripts/coupling_vs_cond_asfr_un.py
 measurables:

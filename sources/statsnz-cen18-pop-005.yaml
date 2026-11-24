@@ -1,0 +1,17 @@
+id: statsnz-cen18-pop-005
+type: dataset
+title: Number of children born by age and ethnic group and birthplace of woman, 2006, 2013 and 2018 Censuses (CEN18_POP_005)
+publisher: Stats NZ
+url: https://explore.data.stats.govt.nz/vis?df[ds]=ds-nsiws-disseminate&df[id]=CEN18_POP_005&df[ag]=STATSNZ&df[vs]=1.0
+oa: gold
+countries:
+- NZL
+period:
+- 2006
+- 2018
+scripts:
+- eurostat/scripts/change_matrix.py
+measurables:
+- childlessness
+notes: No children and total stated by 5-year age are copied into NZ_CENSUS in the script. The 2018 question dropped the word "alive". Counts are randomly rounded.
+accessed: 2026-11-23

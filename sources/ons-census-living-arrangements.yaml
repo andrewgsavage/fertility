@@ -1,0 +1,15 @@
+id: ons-census-living-arrangements
+type: dataset
+title: Census living arrangements by sex by age, England and Wales (ST004 2001, LC1108EW 2011, RM067 2021)
+publisher: Office for National Statistics
+url: https://www.nomisweb.co.uk/sources/census
+oa: gold
+countries:
+- GBR
+period:
+- 2001
+- 2021
+scripts:
+- eurostat/scripts/change_matrix.py
+notes: Women 25-34 living in a couple (married, civil partnership or cohabiting) and all women 25-34, copied into EW_COUPLES in the script from the Nomis API (datasets NM_1804_1, NM_848_1, NM_2167_1). 2011 and 2021 publish 16-24, not 20-24; those 16-24 counts are copied too. Nomis CS004 (NM_1704_1) has mislabelled age codes and is not used.
+accessed: 2026-11-24

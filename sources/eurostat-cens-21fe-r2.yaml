@@ -1,0 +1,15 @@
+id: eurostat-cens-21fe-r2
+type: dataset
+title: Population by family status, age groups, educational attainment level and NUTS 2 region, Census 2021 (cens_21fe_r2)
+publisher: Eurostat
+url: https://ec.europa.eu/eurostat/databrowser/view/cens_21fe_r2/default/table
+oa: gold
+local:
+- eurostat/data/change_matrix/
+period:
+- 2021
+- 2021
+scripts:
+- eurostat/scripts/change_matrix.py
+notes: Women in a couple by 5-year age, including consensual unions. Census methods changed between the 2011 and 2021 rounds, so the change matrix uses only countries that pass a check against EU-LFS or a national register.
+accessed: 2026-11-23

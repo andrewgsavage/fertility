@@ -9,6 +9,7 @@ local:
 countries:
 - all
 scripts:
+- eurostat/scripts/change_matrix.py
 - ILO/scripts/coupling_ilo.py
 - ILO/scripts/coupling_vs_cond_asfr.py
 measurables:

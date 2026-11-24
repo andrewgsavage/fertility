@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Change matrix</title>
+<style>
+  :root { --ink: #1f2328; --muted: #6b7280; --line: #e5e7eb; --bg: #ffffff; --neutral: #f1f1ef; }
+  html, body { margin: 0; background: var(--bg); color: var(--ink); font: 12px/1.4 system-ui, sans-serif; }
+  .wrap { overflow-x: auto; padding: 8px 8px 4px; }
+  table { border-collapse: separate; border-spacing: 2px; }
+  th, td { padding: 0; }
+  th.row { text-align: left; font-weight: 400; white-space: nowrap; padding-right: 8px; max-width: 210px; overflow: hidden; text-overflow: ellipsis; }
+  th.row a { color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--muted); }
+  th.group { text-align: left; font-weight: 600; color: var(--muted); padding-top: 8px; font-size: 11px; }
+  th.col { font-weight: 500; font-size: 11px; width: 28px; min-width: 28px; }
+  th.col a { color: var(--ink); text-decoration: none; }
+  .bar { height: 46px; position: relative; }
+  .bar span { position: absolute; left: 6px; right: 6px; border-radius: 2px; }
+  .dt { color: var(--muted); font-size: 10px; text-align: center; }
+  td.cell { height: 22px; border-radius: 3px; cursor: default; }
+  td.cell.na { background: repeating-linear-gradient(45deg, #d1d5db 0 1.5px, transparent 1.5px 5px); }
+  td.num { text-align: right; padding: 0 6px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  th.num { font-weight: 500; font-size: 10px; color: var(--muted); padding: 0 4px; text-align: right; white-space: normal; width: 64px; line-height: 1.2; }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 16px; color: var(--muted); padding: 8px; font-size: 11px; }
+  .sw { display: inline-block; width: 12px; height: 12px; border-radius: 2px; vertical-align: -2px; margin-right: 4px; }
+  td.cell { text-align: center; color: #1f2328; font-size: 13px; line-height: 1; }
+  #tip { position: absolute; pointer-events: none; background: #fff; border: 1px solid var(--line); border-radius: 6px;
+         padding: 6px 8px; box-shadow: 0 2px 8px rgba(0,0,0,.08); display: none; max-width: 240px; z-index: 5; }
+</style>
+</head>
+<body>
+<div class="wrap"><table id="m"></table></div>
+<div class="legend">
+  <span><span class="sw" style="background:#eb6834"></span>moved towards fewer births (as the factor is proposed to act)</span>
+  <span><span class="sw" style="background:#1baf7a"></span>moved towards more births</span>
+  <span><span class="sw" style="background:repeating-linear-gradient(45deg,#d1d5db 0 1.5px,transparent 1.5px 5px);border:1px solid #e5e7eb"></span>no data</span>
+  <span>• start or end value is from a different year (hover for years)</span>
+  <span>f FT series, both sexes</span>
+  <span>~ survey change smaller than two standard errors</span>
+  <span>faded: census change not confirmed by another series, left out of counts</span>
+  <span>≈ child by 30 estimated from first births per woman</span>
+</div>
+<div id="tip"></div>
+<script>
+const D = __DATA__;
+const PAGES = "__PAGES__", PROFILE = "__PROFILE__";
+const ORANGE = [235, 104, 52], AQUA = [27, 175, 122], NEUTRAL = [241, 241, 239];
+const mix = (a, b, t) => `rgb(${a.map((x, i) => Math.round(x + (b[i] - x) * t)).join(",")})`;
+const fmt = (v, d = 1) => (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v).toFixed(d);
+const t = document.getElementById("m"), tip = document.getElementById("tip");
+const C = D.countries;
+const FALLING_NOTE = D.falling_note || "Falling countries (TFR down more than 0.1) where the factor moved towards fewer births";
+const maxDt = Math.max(...C.map(c => Math.abs(c.d_tfr)));
+
+let h = "<tr><th></th>" + C.map(c => {
+  const px = Math.abs(c.d_tfr) / maxDt * 22, up = c.d_tfr > 0;
+  const col = up ? "#1baf7a" : "#eb6834";
+  return `<th><div class="bar"><span style="background:${col};height:${px}px;${up ? `bottom:23px` : `top:23px`}"></span>` +
+         `<span style="background:#9ca3af;height:1px;top:23px"></span></div></th>`;
+}).join("") + `<th></th></tr>`;
+h += `<tr><th class="row" style="color:var(--muted)">TFR change ${D.base}–${D.end}</th>` +
+     C.map(c => `<td class="dt">${fmt(c.d_tfr, 2)}</td>`).join("") + "<th></th></tr>";
+h += `<tr><th class="row" style="color:var(--muted)">With a child by 30, change (pts)</th>` +
+     C.map(c => `<td class="dt">${c.d_m30 === null ? "–" : (c.m30_source ? "≈" : "") + fmt(c.d_m30, 0)}</td>`).join("") + "<th></th></tr>";
+h += "<tr><th></th>" + C.map(c => `<th class="col"><a href="${PROFILE}#${c.iso}" target="_top" title="${c.name}${c.m30_source ? ` (child by 30: ${c.m30_source})` : ""}">${c.iso}</a></th>`).join("") +
+     `<th class="num" title="${FALLING_NOTE}">Falling countries, towards fewer</th></tr>`;
+
+let group = null;
+D.rows.forEach((r, ri) => {
+  if (r.group !== group) {
+    group = r.group;
+    h += `<tr><th class="group" colspan="${C.length + 2}">${group}</th></tr>`;
+  }
+  const label = r.page ? `<a href="${PAGES}${r.page}.html" target="_top">${r.label}</a>` : r.label;
+  h += `<tr><th class="row" title="${r.label}">${label}</th>`;
+  C.forEach((c, ci) => {
+    const v = r.cells[c.iso];
+    if (v === null || v === undefined) { h += `<td class="cell na" data-r="${ri}" data-c="${ci}"></td>`; return; }
+    const s = Math.max(-1, Math.min(1, r.direction * v / (r.scale || 1)));
+    const yrs = r.years && r.years[c.iso];
+    const mark = (r.sources && (r.sources[c.iso] || "").startsWith("FT") ? "f" : "") +
+                 (yrs && (yrs[0] !== D.base || yrs[1] !== D.end) ? "•" : "") + (r.noisy && r.noisy[c.iso] ? "~" : "");
+    const low = r.low_confidence && r.low_confidence[c.iso];
+    h += `<td class="cell" style="background:${s >= 0 ? mix(NEUTRAL, ORANGE, s) : mix(NEUTRAL, AQUA, -s)}${low ? ";opacity:.35" : ""}" data-r="${ri}" data-c="${ci}">${mark}</td>`;
+  });
+  h += `<td class="num">${r.n_falling ? `${r.toward_fewer_in_falling}/${r.n_falling}` : "–"}</td></tr>`;
+});
+t.innerHTML = h;
+
+const series = (key, iso) => (D.series[key] || {})[iso] || {};
+const near = (s, y) => s[y] ?? s[y - 1] ?? s[y + 1];
+t.addEventListener("mousemove", e => {
+  const td = e.target.closest("td.cell");
+  if (!td) { tip.style.display = "none"; return; }
+  const r = D.rows[+td.dataset.r], c = C[+td.dataset.c];
+  const s = series(r.key, c.iso), yrs = r.years && r.years[c.iso];
+  const a = yrs ? s[yrs[0]] : near(s, D.base), b = yrs ? s[yrs[1]] : near(s, D.end);
+  const dp = r.dp ?? (r.pct ? 2 : 1);
+  const change = r.pct ? `${fmt(100 * (b / a - 1), 0)}%` : fmt(b - a, r.dp ?? 1);
+  const body = a === undefined || b === undefined ? "No data" :
+    `${a.toFixed(dp)}${r.unit} → ${b.toFixed(dp)}${r.unit} (${change})${yrs ? `<br><span style="color:var(--muted)">${yrs[0]} → ${yrs[1]}</span>` : ""}`;
+  const src = r.sources && r.sources[c.iso] ? `<br><span style="color:var(--muted)">${r.sources[c.iso]}</span>` : "";
+  tip.innerHTML = `<b>${c.name}</b><br>${r.label}<br>${body}${src}${r.low_confidence && r.low_confidence[c.iso] ? "<br>Low confidence: not confirmed by another series" : ""}`;
+  tip.style.display = "block";
+  const x = Math.min(e.pageX + 12, document.body.scrollWidth - 250);
+  tip.style.left = x + "px"; tip.style.top = (e.pageY + 12) + "px";
+});
+t.addEventListener("mouseleave", () => tip.style.display = "none");
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+id: ess-integrated
+type: dataset
+title: European Social Survey integrated files, rounds 1-11
+publisher: ESS ERIC
+url: https://ess.sikt.no/en/series/321b06ad-1b98-4b7d-93ad-ca8a24e8788a
+oa: gold
+local:
+- eurostat/data/ess/
+period:
+- 2002
+- 2024
+scripts:
+- eurostat/scripts/change_matrix.py
+notes: Downloaded after login, not redistributed. Editions ESS1e06_7, ESS2e03_6, ESS3e03_7, ESS4e04_6, ESS5e03_6, ESS6e02_7, ESS7e02_3, ESS8e02_3, ESS9e03_3, ESS10e03_3, ESS11e04_2. The change matrix uses rounds 2, 3, 5, 6, 8 and 9. Partner in household is partner (rounds 1-4), icpart1 (5-8) and rshpsts (9 onward).
+accessed: 2026-11-23
