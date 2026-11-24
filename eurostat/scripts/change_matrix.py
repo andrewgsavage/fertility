@@ -81,6 +81,14 @@ CHILD_AGES = (25, 30, 35, 40)
 CENSUS_TOL = {"AUS": 2, "NZL": 3, "FRA": 3}
 COUPLING_TOL = {"AUS": 2}  # ILO series for Australia ends in 2017
 COUPLING_TOL_ROWS = ("couple_under_25", "couple_25_34")
+# Abortions per 100 births of the same order (eurostat/scripts/abortion_parity.py). England & Wales and
+# Spain start in 2013, so their 2010 end may sit three years off.
+ABORTION_ORDER = OUT / "abortion_order_ratio.csv"
+ABORTION_AGES = {"all": "All ages", "20_24": "20–24", "25_29": "25–29", "30_34": "30–34", "35": "35+"}
+ABORTION_ROWS = {f"abort_{kind}_{a}": (col, age) for kind, col in (("first", "first_pregnancies"), ("later", "later_pregnancies"))
+                 for a, age in ABORTION_AGES.items()}
+ABORTION_TOL = {"GBR": 3, "ESP": 3}
+ABORTION_NAMES = {"England & Wales": "GBR"}
 # Census women in a couple. Every country is shown; a change counts in summaries only if another series confirms it:
 # within 3 points of EU-LFS at 25-49, a national register, the FT or ILO, and not contradicted by another of them.
 CENSUS_COUPLE_PASSED = {
@@ -369,11 +377,24 @@ def load_factors():
     return f
 
 
+def load_abortion_order():
+    """{row key: {iso: {year: abortions per 100 births of the same order}}}"""
+    d = pd.read_csv(ABORTION_ORDER)
+    iso = {**{v[1]: k for k, v in COUNTRIES.items()}, **ABORTION_NAMES}
+    d = d[d.country.isin(iso)].assign(iso=lambda x: x.country.map(iso))
+    out = {}
+    for key, (col, age) in ABORTION_ROWS.items():
+        out[key] = series(d[d.age == age].rename(columns={col: "value"}))
+    return out
+
+
 # (key, label, direction, factor page or None, group)
 # direction +1: a rise is proposed to lower fertility; -1: a fall is.
 COUPLE_GROUP = "Women in a couple"
 RATIO_GROUP = "Couples with a child"
+ABORTION_GROUP = "Pregnancies ended by abortion"
 GROUP_NOTES = {COUPLE_GROUP: "% of women living with a partner, married or not",
+               ABORTION_GROUP: "abortions per 100 births of the same order: no children vs first births, mothers vs later births",
                RATIO_GROUP: "% of women with a child by the given age ÷ % in a couple in the age band"}
 FACTORS = [
     ("couple_18_24", "18–24 · EU-LFS", -1, "partnership-formation", COUPLE_GROUP),
@@ -388,6 +409,8 @@ FACTORS = [
     ("couple_census_25_34", "25–34 · census", -1, "partnership-formation", COUPLE_GROUP),
     ("couple_census_35_39", "35–39 · census", -1, "partnership-formation", COUPLE_GROUP),
     ("couple_ess_25_34", "25–34 · ESS survey", -1, "partnership-formation", COUPLE_GROUP),
+    *[(k, ("First" if "first" in k else "Later") + " pregnancies, " + ABORTION_AGES[k.split("_", 2)[2]].lower(),
+       +1, "abortion-by-age", ABORTION_GROUP) for k in ABORTION_ROWS],
     ("leaving_home", "Women's age leaving home", +1, "leaving-home", "Life course"),
     ("tertiary_women", "Women 25–34 with a degree", +1, "education", "Life course"),
     ("youth_unemployment", "Unemployment, 15–24", +1, "job-insecurity", "Work and costs"),
@@ -909,6 +932,7 @@ def ratio_row(key, label, s, order, sources):
 def row_tols(key):
     """{iso: years} a row's start and end values may sit from the window's ends."""
     return (CENSUS_TOL if key.startswith("mothers_by_") else COUPLING_TOL if key in COUPLING_TOL_ROWS
+            else ABORTION_TOL if key in ABORTION_ROWS
             else CENSUS_COUPLE_TOL if key in CENSUS_COUPLE_ROWS else ESS_TOL if key == "couple_ess_25_34"
             else sparse_tols(key) if key in RATIO_OF_SPARSE else {})
 
@@ -988,6 +1012,7 @@ def build(reference=None):
     factors.update(new_rows)
     census, census_sources = load_census_couples()
     factors.update(census)
+    factors.update(load_abortion_order())
     sources.update(census_sources)
     factors["couple_ess_25_34"], ess_errors = load_ess_couples()
     sources["couple_ess_25_34"] = {c: "ESS, two rounds pooled" for c in factors["couple_ess_25_34"]}
@@ -1024,7 +1049,7 @@ def build(reference=None):
                          before=median(before), after=median(after)))
     for key, label, direction, page, group in FACTORS:
         s = factors[key]
-        tols = (COUPLING_TOL if key in COUPLING_TOL_ROWS else CENSUS_COUPLE_TOL if key in CENSUS_COUPLE_ROWS
+        tols = (COUPLING_TOL if key in COUPLING_TOL_ROWS else ABORTION_TOL if key in ABORTION_ROWS else CENSUS_COUPLE_TOL if key in CENSUS_COUPLE_ROWS
                 else ESS_TOL if key == "couple_ess_25_34" else None)
         cells = {c: child_change(s.get(c), c, tols) if tols else change(s.get(c)) for c in order}
         before = [direction * change(s.get(c), 2001, BASE) for c in order if change(s.get(c), 2001, BASE) is not None]
