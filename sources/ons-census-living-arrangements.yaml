@@ -11,5 +11,5 @@ period:
 - 2021
 scripts:
 - eurostat/scripts/change_matrix.py
-notes: Women 25-34 living in a couple (married, civil partnership or cohabiting) and all women 25-34, copied into EW_COUPLES in the script from the Nomis API (datasets NM_1804_1, NM_848_1, NM_2167_1). 2011 and 2021 publish 16-24, not 20-24; those 16-24 counts are copied too. Nomis CS004 (NM_1704_1) has mislabelled age codes and is not used.
+notes: Women 25-34 living in a couple (married, civil partnership or cohabiting) and all women 25-34, copied into EW_COUPLES in the script from the Nomis API (datasets NM_1804_1, NM_848_1, NM_2167_1). 2011 and 2021 publish 16-24, not 20-24; those 16-24 counts, and 35-49 for 2011 and 2021, are copied too. Nomis CS004 (NM_1704_1) has mislabelled age codes and is not used.
 accessed: 2026-11-24

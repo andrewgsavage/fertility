@@ -90,7 +90,8 @@ CENSUS_COUPLE_PASSED = {
     (2010, 2020): ("JPN", "KOR"),
     (2005, 2010): ("JPN", "KOR"),
 }
-CENSUS_COUPLE_ROWS = {"couple_census_20_24": ("Y20-24",), "couple_census_25_34": ("Y25-29", "Y30-34")}
+CENSUS_COUPLE_ROWS = {"couple_census_20_24": ("Y20-24",), "couple_census_25_34": ("Y25-29", "Y30-34"),
+                      "couple_census_35_39": ("Y35-39",)}
 # Lets 2005 reach the 2001 round. New Zealand's nearest censuses are 2013 and 2018.
 CENSUS_COUPLE_TOL = {**{c: 4 for c in COUNTRIES}, "NZL": 3}
 CENSUS_COUPLE_SOURCES = {"AUS": "ABS census", "CAN": "Statistics Canada census", "NZL": "Stats NZ census",
@@ -100,27 +101,27 @@ CENSUS_COUPLE_SOURCES = {"AUS": "ABS census", "CAN": "Statistics Canada census",
 # (not the 2015-20 imputed values, which IPSS table 6-24 uses). Korea: KOSIS census tables
 # DT_1IN1005 (2010) and DT_1IN2010 (2020), Korean nationals; 2005 table includes foreigners.
 JP_COUPLES = {
-    2005: {"Y20-24": (373193, 3594020), "Y25-29": (1559535, 4077733), "Y30-34": (3025065, 4814114)},
-    2010: {"Y20-24": (294389, 3096818), "Y25-29": (1303214, 3516523), "Y30-34": (2460055, 4044480)},
-    2020: {"Y20-24": (195541, 2748299), "Y25-29": (978633, 2756563), "Y30-34": (1842521, 3036367)},
+    2005: {"Y20-24": (373193, 3594020), "Y25-29": (1559535, 4077733), "Y30-34": (3025065, 4814114), "Y35-39": (3135144, 4249123)},
+    2010: {"Y20-24": (294389, 3096818), "Y25-29": (1303214, 3516523), "Y30-34": (2460055, 4044480), "Y35-39": (3317927, 4755116)},
+    2020: {"Y20-24": (195541, 2748299), "Y25-29": (978633, 2756563), "Y30-34": (1842521, 3036367), "Y35-39": (2447690, 3481229)},
 }
 KR_COUPLES = {
-    2005: {"Y20-24": (107851, 1746221), "Y25-29": (727599, 1813515), "Y30-34": (1592897, 2036369)},
-    2010: {"Y20-24": (55513, 1430049), "Y25-29": (521499, 1736144), "Y30-34": (1252830, 1828951)},
-    2020: {"Y20-24": (28197, 1522680), "Y25-29": (278457, 1609335), "Y30-34": (753196, 1452932)},
+    2005: {"Y20-24": (107851, 1746221), "Y25-29": (727599, 1813515), "Y30-34": (1592897, 2036369), "Y35-39": (1777875, 2047117)},
+    2010: {"Y20-24": (55513, 1430049), "Y25-29": (521499, 1736144), "Y30-34": (1252830, 1828951), "Y35-39": (1663574, 2038914)},
+    2020: {"Y20-24": (28197, 1522680), "Y25-29": (278457, 1609335), "Y30-34": (753196, 1452932), "Y35-39": (1267689, 1752500)},
 }
 # ONS census via Nomis, women 25-34 living in a couple and all women, England and Wales:
 # ST004 (2001), LC1108EW (2011), RM067 (2021). 2011 and 2021 publish 16-24, not 20-24: the UK's 20-24 cell
 # uses 16-24 for 2011-2021, faded and left out of counts, and Eurostat's whole-UK 20-24 for 2001-2011.
 EW_COUPLES = {2001: {"Y25-34": (2370854, 3753600)},
-              2011: {"Y25-34": (2243996, 3739779), "Y16-24": (519518, 3097772)},
-              2021: {"Y25-34": (2353019, 4108906), "Y16-24": (389167, 2878801)}}
-CENSUS_COUPLE_WIDER_BAND = {"couple_census_20_24": {"GBR": "Y16-24"}}
+              2011: {"Y25-34": (2243996, 3739779), "Y16-24": (519518, 3097772), "Y35-49": (4142440, 5999359)},
+              2021: {"Y25-34": (2353019, 4108906), "Y16-24": (389167, 2878801), "Y35-49": (4068921, 5868344)}}
+CENSUS_COUPLE_WIDER_BAND = {"couple_census_20_24": {"GBR": "Y16-24"}, "couple_census_35_39": {"GBR": "Y35-49"}}
 # Stats NZ CEN23_POP_010, women, partnered and non-partnered, New Zealand.
 NZ_COUPLES = {
-    2013: {"Y20-24": (42657, 90738), "Y25-29": (72933, 50901), "Y30-34": (89664, 36891)},
-    2018: {"Y20-24": (35487, 84417), "Y25-29": (80166, 55440), "Y30-34": (100236, 36660)},
-    2023: {"Y20-24": (34029, 108519), "Y25-29": (76917, 77382), "Y30-34": (114825, 63654)},
+    2013: {"Y20-24": (42657, 90738), "Y25-29": (72933, 50901), "Y30-34": (89664, 36891), "Y35-39": (98970, 34806)},
+    2018: {"Y20-24": (35487, 84417), "Y25-29": (80166, 55440), "Y30-34": (100236, 36660), "Y35-39": (100932, 31257)},
+    2023: {"Y20-24": (34029, 108519), "Y25-29": (76917, 77382), "Y30-34": (114825, 63654), "Y35-39": (116580, 51117)},
 }
 # European Social Survey integrated files, downloaded by hand after login to eurostat/data/ess/.
 # Two rounds are pooled at each point; a country needs both rounds and this many women aged 25-34.
@@ -196,10 +197,10 @@ def series(d):
 
 def census_couple_table(code, extra="&unit=NR", statuses=("TOTAL", "CPL", "UNK")):
     """{(geo, age, status): women} from a Eurostat census table."""
-    ages = "".join(f"&age={a}" for a in ("Y20-24", "Y25-29", "Y30-34"))
+    ages = "".join(f"&age={a}" for a in ("Y20-24", "Y25-29", "Y30-34", "Y35-39"))
     url = ("https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/" + code +
            "?lang=EN&sex=F&geoLevel=country" + extra + "".join(f"&hhstatus={h}" for h in statuses) + ages)
-    d = json.loads(fetch(f"{code}_couples.json", url).read_text(encoding="utf-8"))
+    d = json.loads(fetch(f"{code}_couples_20_39.json", url).read_text(encoding="utf-8"))
     cats = [sorted(d["dimension"][k]["category"]["index"], key=d["dimension"][k]["category"]["index"].get) for k in d["id"]]
     out = {}
     for pos, combo in enumerate(itertools.product(*cats)):
@@ -219,7 +220,7 @@ def australia_couples():
             if "_T05" in name and name.endswith(".csv"):
                 row.update(pd.read_csv(io.BytesIO(z.read(name))).iloc[0].to_dict())
     return {year: {f"Y{a}-{b}": (row[f"C{year % 100}_{a}_{b}_Mar_RegM_F"] + row[f"C{year % 100}_{a}_{b}_Mar_DFM_F"],
-                                 row[f"C{year % 100}_{a}_{b}_Tot_F"]) for a, b in ((20, 24), (25, 29), (30, 34))}
+                                 row[f"C{year % 100}_{a}_{b}_Tot_F"]) for a, b in ((20, 24), (25, 29), (30, 34), (35, 39))}
             for year in (2011, 2016, 2021)}
 
 
@@ -230,7 +231,8 @@ def canada_couples():
         with z.open("98100125.csv") as fh:
             d = pd.read_csv(fh, low_memory=False)
     d = d[(d.GEO == "Canada") & (d["Gender (3a)"] == "Women+")]
-    cols = {"Y20-24": "Age (16):20 to 24 years[3]", "Y25-29": "Age (16):25 to 29 years[4]", "Y30-34": "Age (16):30 to 34 years[5]"}
+    cols = {"Y20-24": "Age (16):20 to 24 years[3]", "Y25-29": "Age (16):25 to 29 years[4]", "Y30-34": "Age (16):30 to 34 years[5]",
+            "Y35-39": "Age (16):35 to 39 years[6]"}
     out = {}
     for year, x in d.groupby("Census year (4)"):
         x = x.set_index("Marital status (13)")
@@ -377,6 +379,7 @@ FACTORS = [
     ("couple_35_39", "Women 35–39 in a couple", -1, "partnership-formation", "Coupling"),
     ("couple_census_20_24", "Women 20–24 in a couple (census)", -1, "partnership-formation", "Coupling"),
     ("couple_census_25_34", "Women 25–34 in a couple (census)", -1, "partnership-formation", "Coupling"),
+    ("couple_census_35_39", "Women 35–39 in a couple (census)", -1, "partnership-formation", "Coupling"),
     ("couple_ess_25_34", "Women 25–34 in a couple (ESS survey)", -1, "partnership-formation", "Coupling"),
     ("leaving_home", "Women's age leaving home", +1, "leaving-home", "Life course"),
     ("tertiary_women", "Women 25–34 with a degree", +1, "education", "Life course"),
@@ -784,12 +787,14 @@ RATIO_ROWS = [
     ("ratio_35_39", "Child by 37 ÷ couple 35–39", 37, "couple_35_39"),
     ("ratio_census_20_24", "Child by 25 ÷ couple 20–24 (census)", 25, "couple_census_20_24"),
     ("ratio_census_25_34", "Child by 30 ÷ couple 25–34 (census)", 30, "couple_census_25_34"),
+    ("ratio_census_35_39", "Child by 35 ÷ couple 35–39 (census)", 35, "couple_census_35_39"),
     ("ratio_ess_25_34", "Child by 30 ÷ couple 25–34 (ESS)", 30, "couple_ess_25_34"),
 ]
 # Ratios over coupling measured only in some years: each coupling year takes the % with a child from the
 # with-a-child rows (HFD, estimates and censuses) within two years of it, and the change uses the coupling
 # row's tolerance, faded cells and noise flags.
 RATIO_OF_SPARSE = {"ratio_census_20_24": "couple_census_20_24", "ratio_census_25_34": "couple_census_25_34",
+                   "ratio_census_35_39": "couple_census_35_39",
                    "ratio_ess_25_34": "couple_ess_25_34"}
 
 

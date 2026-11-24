@@ -11,5 +11,5 @@ period:
 - 2020
 scripts:
 - eurostat/scripts/change_matrix.py
-notes: Marital status is the actual state regardless of registration; cohabiting counts as having a spouse (definition quoted at https://data.seoul.go.kr/dataList/DT201004O020005/S/2/datasetView.do). Women with a spouse and all women at 20-24, 25-29 and 30-34 copied into KR_COUPLES in the script. 2005 full-count table includes foreigners; DT_1IN1005 (2010) and DT_1IN2010 (2020, 20% sample) are Korean nationals.
+notes: Marital status is the actual state regardless of registration; cohabiting counts as having a spouse (definition quoted at https://data.seoul.go.kr/dataList/DT201004O020005/S/2/datasetView.do). Women with a spouse and all women at 20-24, 25-29, 30-34 and 35-39 copied into KR_COUPLES in the script. 2005 full-count table includes foreigners; DT_1IN1005 (2010) and DT_1IN2010 (2020, 20% sample) are Korean nationals.
 accessed: 2026-11-24
