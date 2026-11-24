@@ -11,7 +11,7 @@ Charts taken off their pages and kept here for reference.
 From [Coupling and motherhood](#with-child-15-24-25-34), where a 2x2 grid of fixed age pairs replaced it. Every country with both a coupling series and conditional first-birth rates: 13 countries. Each arrow is a country's straight-line trend from its first to its latest year, labelled with its country code; faint points are every year. The y dropdown also offers the share of women with a child by 25, 30, 35 or 40. The coupling dropdown also has 5-year groups, which exist only for the register countries (Denmark, Finland, Netherlands); the US, Spain, Poland and the UK have 25–34 only.
 
 ```{raw} html
-<iframe src="_static/ilo/coupling_vs_cond_asfr.html" style="width: 100%; height: 600px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/ilo/coupling_vs_cond_asfr.html" style="width: 100%; height: 600px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
 ```{note}
@@ -23,7 +23,7 @@ First births per childless woman from the [Human Fertility Database](https://www
 From [Coupling and motherhood](#with-child-eurostat-18-24), which now shows women 18–24 in a couple against % with a child by 21 and by 25. The dropdowns offer other coupling ages and sexes, and first-birth rates or % with a child at other ages.
 
 ```{raw} html
-<iframe src="_static/eurostat/coupling_vs_cond_asfr_eurostat_trends.html" style="width: 100%; height: 640px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/eurostat/coupling_vs_cond_asfr_eurostat_trends.html" style="width: 100%; height: 640px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
 ```{note}
@@ -33,14 +33,14 @@ Eurostat [household composition table](https://ec.europa.eu/eurostat/databrowser
 (coupling-un-first-birth)=
 ## Coupling by 5-year age against first-birth rates, UN data
 
-From [Partnership formation](factors/partnership-formation.md), removed from that page. Coupling from the UN series, women married or in a union, by 5-year age group, against first births per childless woman. 17 countries; one point per census or survey year, so most lines have 3–6 points. Each arrow is a country's straight-line trend from its first to its latest year, labelled with its country code; faint points are every year. The y dropdown also offers the share of women with a child by 25, 30, 35 or 40.
+From [Partnership formation](../factors/partnership-formation.md), removed from that page. Coupling from the UN series, women married or in a union, by 5-year age group, against first births per childless woman. 17 countries; one point per census or survey year, so most lines have 3–6 points. Each arrow is a country's straight-line trend from its first to its latest year, labelled with its country code; faint points are every year. The y dropdown also offers the share of women with a child by 25, 30, 35 or 40.
 
 ::::{tab-set}
 
 :::{tab-item} Chart
 
 ```{raw} html
-<iframe src="_static/un/coupling_vs_cond_asfr_un.html" style="width: 100%; height: 600px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/un/coupling_vs_cond_asfr_un.html" style="width: 100%; height: 600px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
 :::
@@ -48,7 +48,7 @@ From [Partnership formation](factors/partnership-formation.md), removed from tha
 :::{tab-item} Sources
 
 ```{note}
-Coupling from UN World Marriage Data 2019 ([Coupling over time](factors/coupling-trends.md), women); first-birth rates from the Human Fertility Database, pooled over the chosen single ages with childless-women exposures as weights. Countries: Austria, Belarus, Bulgaria, Canada, Chile, Czechia, Denmark, Estonia, Hungary, Japan, S Korea, Lithuania, Norway, Poland, Russia, Sweden, Ukraine. Finland, Iceland, Ireland and Taiwan have UN and HFD data but fewer than two years in common.
+Coupling from UN World Marriage Data 2019 ([Coupling over time](../factors/coupling-trends.md), women); first-birth rates from the Human Fertility Database, pooled over the chosen single ages with childless-women exposures as weights. Countries: Austria, Belarus, Bulgaria, Canada, Chile, Czechia, Denmark, Estonia, Hungary, Japan, S Korea, Lithuania, Norway, Poland, Russia, Sweden, Ukraine. Finland, Iceland, Ireland and Taiwan have UN and HFD data but fewer than two years in common.
 ```
 
 :::
