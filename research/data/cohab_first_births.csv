@@ -1,0 +1,44 @@
+# Union status at first birth: % of women's first births within cohabitation, marriage, or to single women.
+# Europe: Perelli-Harris, Sigle-Rushton, Kreyenfeld, Lappegard, Berghammer & Keizer (2010), "The educational gradient
+#   of nonmarital childbearing in Europe: emergence of a pattern of disadvantage?", MPIDR Working Paper WP-2010-004,
+#   https://www.demogr.mpg.de/papers/working/wp-2010-004.pdf, Table 1 ("Total" columns). Retrospective union and
+#   birth histories (Harmonized Histories surveys); periods are of the first birth. Published as Population and
+#   Development Review 36(4): 775-801. Austria is one figure for 1980-2009 and West Germany is cohorts 1971-73 only
+#   (small samples), so neither is a time series.
+# US: Martinez, Daniels & Chandra (2012), "Fertility of men and women aged 15-44 years in the United States: National
+#   Survey of Family Growth, 2006-2010", National Health Statistics Reports 51, https://www.cdc.gov/nchs/data/nhsr/nhsr051.pdf,
+#   Table 11, women 15-44 at interview, by year of first birth. Women interviewed at 15-44 in 2006-2010 were young
+#   when they had births before 1990, so the early periods are mostly young mothers.
+# mid_year = middle of the period, used only to place points on the x axis.
+country,period,mid_year,single_pct,cohab_pct,married_pct,source
+France,1970-79,1974.5,11,12,78,PH2010
+France,1980-89,1984.5,9,25,66,PH2010
+France,1990-99,1994.5,8,41,51,PH2010
+France,2000-04,2002,5,52,43,PH2010
+Italy,1970-79,1974.5,4,1,95,PH2010
+Italy,1980-89,1984.5,5,2,93,PH2010
+Italy,1990-99,1994.5,6,5,89,PH2010
+Italy,2000-04,2002,8,10,82,PH2010
+Netherlands,1970-79,1974.5,2,3,95,PH2010
+Netherlands,1980-89,1984.5,4,5,91,PH2010
+Netherlands,1990-99,1994.5,6,17,77,PH2010
+Netherlands,2000-03,2001.5,3,27,70,PH2010
+Norway,1970-79,1974.5,13,9,78,PH2010
+Norway,1980-89,1984.5,12,25,63,PH2010
+Norway,1990-99,1994.5,9,48,42,PH2010
+Norway,2000-04,2002,5,54,41,PH2010
+Russia,1970-79,1974.5,11,9,80,PH2010
+Russia,1980-89,1984.5,11,10,78,PH2010
+Russia,1990-99,1994.5,13,16,71,PH2010
+Russia,2000-04,2002,19,18,63,PH2010
+UK,1970-79,1974.5,6,2,93,PH2010
+UK,1980-89,1984.5,14,10,76,PH2010
+UK,1990-99,1994.5,18,23,60,PH2010
+UK,2000-04,2002,16,31,53,PH2010
+Austria,1980-2009,,14,36,50,PH2010
+West Germany,cohorts 1971-73,,10,21,69,PH2010
+US,before 1985,,45.2,9.4,45.3,NHSR51
+US,1985-89,1987,30.1,18.9,51.0,NHSR51
+US,1990-96,1993,24.9,19.0,56.1,NHSR51
+US,1997-2002,1999.5,20.0,23.2,56.8,NHSR51
+US,2003-10,2006.5,19.2,27.2,53.6,NHSR51

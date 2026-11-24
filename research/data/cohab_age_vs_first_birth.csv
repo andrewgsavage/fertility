@@ -1,0 +1,34 @@
+# Women's age at first cohabitation (or first union) and at first birth, for the cohabitation-timing charts.
+# US: Manning, Brown & Payne (2014), "Two decades of stability and change in age at first union formation", Journal of
+#   Marriage and Family 76(2): 247-260; working paper NCFMR WP-13-06,
+#   https://www.bgsu.edu/content/dam/BGSU/college-of-arts-and-sciences/NCFMR/documents/WP/Wp-13-06.pdf, Table 1A:
+#   women's median age at first cohabitation and at first union (cohabitation or marriage, whichever came first), by
+#   period the union was formed. NSFH 1987-88 for 1984-88; NSFG 1995, 2002, 2006-2010 for the later periods.
+#   age_first_birth = HFD period mean age at first birth (mabRRbo MAB1, USA), averaged over the same years. That is a
+#   mean among mothers, not a median, so the gap is approximate.
+# France: Costemalle (2016), "Changes in family and partnership life courses for men and women over cohorts in France",
+#   European Population Conference 2016, https://epc2016.eaps.nl/papers/160656 (INED-INSEE EPIC survey 2013-14): the gap
+#   between median age at first cohabitation and median age at first birth, men and women who began their first
+#   cohabitation before age 30, was 3 years for unions begun 1978-84 and 4.5 years "20 years later" (taken as 1998-2004).
+#   The paper gives the gap, not the two ages.
+# UK: Chao, Blom, Berrington & Perelli-Harris (2020), "How partnerships have changed in the UK over the last 30 years",
+#   ESRC Centre for Population Change Policy Briefing 50, https://eprints.soton.ac.uk/439249/ (Understanding Society,
+#   retrospective histories): women's median age at first cohabitation, 21 for partnerships begun in 1980 and 22 in 2009
+#   (whole years, from the text; Figure 2 has the years between but no labels).
+#   age_first_birth = ONS standardised mean age of mother at first birth (true birth order), England and Wales,
+#   "Births by parents' characteristics" 2022 workbook, Table 4,
+#   https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/datasets/birthsbyparentscharacteristics
+#   Before 2013 birth order was recorded only for births within marriage, so ONS estimates it for all births.
+country,series,period,mid_year,age_first_union,age_first_birth,gap_years
+US,first cohabitation,1984-88,1986,22.8,24.13,
+US,first cohabitation,1991-95,1993,21.9,24.38,
+US,first cohabitation,1998-2002,2000,22.2,25.19,
+US,first cohabitation,2006-10,2008,21.8,25.79,
+US,first union,1984-88,1986,21.9,24.13,
+US,first union,1991-95,1993,21.6,24.38,
+US,first union,1998-2002,2000,22.0,25.19,
+US,first union,2006-10,2008,22.2,25.79,
+France,first cohabitation,1978-84,1981,,,3.0
+France,first cohabitation,1998-2004,2001,,,4.5
+UK,first cohabitation,1980,1980,21,24.7,
+UK,first cohabitation,2009,2009,22,27.6,

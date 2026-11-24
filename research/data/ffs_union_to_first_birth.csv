@@ -1,0 +1,22 @@
+# Andersson & Philipov (2002), Demographic Research 7(4), Table 17 (main text p. 99 and Appendix 2 pp. 210-211):
+# cumulative percent parents by years since a childless person formed a union (cohabitation or marriage),
+# single-decrement life table censored at union dissolution; men's and women's reports pooled.
+# period = years the synthetic-cohort rates come from. Czech Republic: no value at 10 and 15 years.
+country,period,d1,d2,d3,d4,d5,d7,d10,d15,mean_years,median_years
+Sweden,1985-93,8,23,38,51,61,75,86,91,4,4
+Norway,1983-89,14,31,46,57,66,79,86,88,4,4
+Finland,1983-92,11,26,36,48,56,69,79,85,4,5
+France,1988-94,8,24,39,51,62,75,86,93,4,4
+USA,1989-95,14,30,41,52,62,74,82,86,4,4
+Austria,1990-96,16,32,47,57,66,79,86,90,4,4
+West Germany,1986-92,14,26,36,46,54,66,75,81,4,5
+Flanders,1985-92,7,25,44,58,68,81,89,91,4,4
+Italy,1990-95,19,44,61,71,79,87,91,94,3,3
+Spain,1989-95,21,43,59,70,79,86,91,94,3,3
+East Germany,1984-89,31,57,71,79,84,90,93,94,2,2
+Hungary,1988-93,28,56,72,81,86,90,93,95,2,2
+Czech Republic,1992-97,34,54,67,77,83,89,,,,2
+Slovenia,1989-95,46,69,80,85,88,92,94,96,2,2
+Latvia,1989-95,33,61,75,81,86,88,89,89,2,2
+Lithuania,1989-95,37,68,81,85,88,91,92,94,2,2
+Poland,1986-91,49,81,88,90,93,94,95,96,1,2
