@@ -86,7 +86,12 @@ COUPLING_TOL_ROWS = ("couple_under_25", "couple_25_34")
 # Abortions per 100 births of the same order (eurostat/scripts/abortion_parity.py). England & Wales and
 # Spain start in 2013, so their 2010 end may sit three years off.
 ABORTION_ORDER = OUT / "abortion_order_ratio.csv"
-ABORTION_AGES = {"all": "All ages", "20_24": "20–24", "25_29": "25–29", "30_34": "30–34", "35": "35+"}
+ABORTION_AGES = {"20_24": "20–24", "25_29": "25–29", "30_34": "30–34", "35": "35+"}
+# DHSC publishes parity for 20–34 as one group, so England & Wales's 20–34 ratio fills each of its
+# 5-year cells. Those cells are indicative: faded and left out of counts and fits.
+ABORTION_SPREAD = {"GBR": ("20–34", ("20–24", "25–29", "30–34"))}
+ABORTION_SPREAD_NOTE = ("Indicative: DHSC publishes parity for 20–34 as one group, so this is the 20–34 value. "
+                        "It averages the three 5-year groups and hides differences between them.")
 ABORTION_ROWS = {f"abort_{kind}_{a}": (col, age) for kind, col in (("first", "first_pregnancies"), ("later", "later_pregnancies"))
                  for a, age in ABORTION_AGES.items()}
 ABORTION_TOL = {"GBR": 3, "ESP": 3}
@@ -389,6 +394,9 @@ def load_abortion_order():
     d = pd.read_csv(ABORTION_ORDER)
     iso = {**{v[1]: k for k, v in COUNTRIES.items()}, **ABORTION_NAMES}
     d = d[d.country.isin(iso)].assign(iso=lambda x: x.country.map(iso))
+    for c, (wide, narrow) in ABORTION_SPREAD.items():
+        w = d[(d.iso == c) & (d.age == wide)]
+        d = pd.concat([d[~((d.iso == c) & d.age.isin(narrow))], *[w.assign(age=a) for a in narrow]])
     out = {}
     for key, (col, age) in ABORTION_ROWS.items():
         out[key] = series(d[d.age == age].rename(columns={col: "value"}))
@@ -399,9 +407,10 @@ def load_abortion_order():
 # direction +1: a rise is proposed to lower fertility; -1: a fall is.
 COUPLE_GROUP = "Women in a couple"
 RATIO_GROUP = "Couples with a child"
-ABORTION_GROUP = "Pregnancies ended by abortion"
+ABORTION_GROUPS = {"first": "First pregnancies ended by abortion", "later": "Later pregnancies ended by abortion"}
 GROUP_NOTES = {COUPLE_GROUP: "% of women living with a partner, married or not",
-               ABORTION_GROUP: "abortions per 100 births of the same order: no children vs first births, mothers vs later births",
+               ABORTION_GROUPS["first"]: "abortions to women with no children per 100 first births",
+               ABORTION_GROUPS["later"]: "abortions to mothers per 100 second or later births",
                RATIO_GROUP: "% of women with a child by the given age ÷ % in a couple in the age band"}
 FACTORS = [
     ("couple_18_24", "18–24 · EU-LFS", -1, "partnership-formation", COUPLE_GROUP),
@@ -416,8 +425,8 @@ FACTORS = [
     ("couple_census_25_34", "25–34 · census", -1, "partnership-formation", COUPLE_GROUP),
     ("couple_census_35_39", "35–39 · census", -1, "partnership-formation", COUPLE_GROUP),
     ("couple_ess_25_34", "25–34 · ESS survey", -1, "partnership-formation", COUPLE_GROUP),
-    *[(k, ("First" if "first" in k else "Later") + " pregnancies, " + ABORTION_AGES[k.split("_", 2)[2]].lower(),
-       +1, "abortion-by-age", ABORTION_GROUP) for k in ABORTION_ROWS],
+    *[(k, ABORTION_AGES[k.split("_", 2)[2]], +1, "abortion-by-age", ABORTION_GROUPS[k.split("_", 2)[1]])
+      for k in ABORTION_ROWS],
     ("leaving_home", "Women's age leaving home", +1, "leaving-home", "Life course"),
     ("tertiary_women", "Women 25–34 with a degree", +1, "education", "Life course"),
     ("youth_unemployment", "Unemployment, 15–24", +1, "job-insecurity", "Work and costs"),
@@ -1081,6 +1090,17 @@ def build(reference=None):
         if r["key"] in RATIO_OF_SPARSE and RATIO_OF_SPARSE[r["key"]] in CENSUS_COUPLE_ROWS:
             src_low = next(x for x in rows if x["key"] == RATIO_OF_SPARSE[r["key"]])["low_confidence"]
             r["low_confidence"] = {c: src_low.get(c, True) for c, v in r["cells"].items() if v is not None}
+            r["after"] = median([r["direction"] * v for c, v in r["cells"].items() if v is not None and not r["low_confidence"][c]])
+
+    for r in rows:  # spread 20–34 abortion cells: indicative, faded, out of counts and fits
+        if r["key"] not in ABORTION_ROWS:
+            continue
+        age = ABORTION_ROWS[r["key"]][1]
+        spread = [c for c, (_, narrow) in ABORTION_SPREAD.items() if age in narrow and r["cells"].get(c) is not None]
+        if spread:
+            r["low_confidence"] = {c: c in spread for c, v in r["cells"].items() if v is not None}
+            r["low_note"] = {c: ABORTION_SPREAD_NOTE for c in spread}
+            r["sources"] = {**(r.get("sources") or {}), **{c: "DHSC 20–34 value" for c in spread}}
             r["after"] = median([r["direction"] * v for c, v in r["cells"].items() if v is not None and not r["low_confidence"][c]])
 
     ts = {"tfr": tfr, **parity, **rates, **factors, **ratios}

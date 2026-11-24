@@ -40,7 +40,7 @@
   <span>• start or end value is from a different year (hover for years)</span>
   <span>f FT series, both sexes</span>
   <span>~ survey change smaller than two standard errors</span>
-  <span>faded: census change not confirmed by another series, left out of counts</span>
+  <span>faded: census change not confirmed by another series, or UK abortion cells filled from its 20–34 group; left out of counts</span>
   <span>≈ child by 30 estimated from first births per woman</span>
 </div>
 <div id="tip"></div>
@@ -116,7 +116,7 @@ t.addEventListener("mousemove", e => {
   const body = a === undefined || b === undefined ? "No data" :
     `${a.toFixed(dp)}${r.unit} → ${b.toFixed(dp)}${r.unit} (${change})${yrs ? `<br><span style="color:var(--muted)">${yrs[0]} → ${yrs[1]}</span>` : ""}`;
   const src = r.sources && r.sources[c.iso] ? `<br><span style="color:var(--muted)">${r.sources[c.iso]}</span>` : "";
-  tip.innerHTML = `<b>${c.name}</b><br>${r.long || r.label}<br>${body}${src}${r.low_confidence && r.low_confidence[c.iso] ? "<br>Low confidence: not confirmed by another series" : ""}`;
+  tip.innerHTML = `<b>${c.name}</b><br>${r.long || r.label}<br>${body}${src}${r.low_confidence && r.low_confidence[c.iso] ? "<br>" + ((r.low_note && r.low_note[c.iso]) || "Low confidence: not confirmed by another series") : ""}`;
   tip.style.display = "block";
   const x = Math.min(e.pageX + 12, document.body.scrollWidth - 250);
   tip.style.left = x + "px"; tip.style.top = (e.pageY + 12) + "px";
