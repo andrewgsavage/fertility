@@ -12,6 +12,7 @@ Columns are countries. The 33 with a 2010–2019 value for the share of women wi
 
 :::{tab-item} 2010–2019
 ```{raw} html
+<p><a href="../_static/eurostat/change_matrix.html" target="_blank" rel="noopener">Open the matrix on its own page ↗</a></p>
 <iframe src="../_static/eurostat/change_matrix.html" style="width: 100%; height: 1300px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 :::
@@ -20,6 +21,7 @@ Columns are countries. The 33 with a 2010–2019 value for the share of women wi
 The same countries in the same order. Falling countries are still the 19 where TFR fell in 2010–2019.
 
 ```{raw} html
+<p><a href="../_static/eurostat/change_matrix_2005_2010.html" target="_blank" rel="noopener">Open the matrix on its own page ↗</a></p>
 <iframe src="../_static/eurostat/change_matrix_2005_2010.html" style="width: 100%; height: 1300px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 :::
