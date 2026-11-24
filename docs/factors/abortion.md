@@ -92,3 +92,9 @@ Each row is one source's verdict on one cell of the [factor table](index.md), ag
 ```{sources}
 :factor: abortion
 ```
+
+```{toctree}
+:hidden:
+
+abortion-by-age
+```

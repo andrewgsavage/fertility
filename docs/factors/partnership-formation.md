@@ -158,8 +158,8 @@ Each row is one source's verdict on one cell of the [factor table](index.md), ag
 ```{toctree}
 :hidden:
 
-coupling-vs-mothers
-union-to-first-birth
 coupling-trends
 marriage
+coupling-vs-mothers
+union-to-first-birth
 ```
