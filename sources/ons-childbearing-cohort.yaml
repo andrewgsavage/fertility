@@ -9,6 +9,7 @@ local:
 countries:
 - GBRTENW
 scripts:
+- eurostat/scripts/change_matrix.py
 - ONS/scripts/cond_asfr_uk_ons.py
 - ONS/scripts/mdf_uk_ons.py
 - ONS/scripts/births_per_mother_uk_ons.py

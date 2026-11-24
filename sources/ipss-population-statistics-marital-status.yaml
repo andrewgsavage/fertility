@@ -1,0 +1,15 @@
+id: ipss-population-statistics-marital-status
+type: dataset
+title: Population by sex, age (5-year groups) and marital status, Population Statistics table 6-22 (2005, 2010, 2020 censuses)
+publisher: National Institute of Population and Social Security Research
+url: https://www.ipss.go.jp/syoushika/tohkei/Popular/P_Detail2025.asp?fname=T06-22.htm
+oa: gold
+countries:
+- JPN
+period:
+- 2005
+- 2020
+scripts:
+- eurostat/scripts/change_matrix.py
+notes: Reproduces Statistics Bureau of Japan census counts. Marital status is the actual state regardless of registration (e-Stat definition https://www.e-stat.go.jp/surveyitems/definitions/39981). Women with a spouse and women of stated status at 20-24, 25-29 and 30-34 copied into JP_COUPLES in the script from the 2009 (2005 census), 2012 (2010) and 2025 (2020) editions. Unknown status is excluded; table 6-24 instead uses imputed values for 2015 and 2020.
+accessed: 2026-11-24

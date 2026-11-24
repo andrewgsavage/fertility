@@ -1,0 +1,18 @@
+id: eurostat-demo-fordagec
+type: dataset
+title: Live births by mother's age and birth order (demo_fordagec)
+publisher: Eurostat
+url: https://ec.europa.eu/eurostat/databrowser/view/demo_fordagec/default/table
+oa: gold
+local:
+- eurostat/data/change_matrix/
+period:
+- 2000
+- 2024
+scripts:
+- eurostat/scripts/change_matrix.py
+measurables:
+- births
+- young-first-births
+notes: First births over women (demo_pjan), summed by age, estimate women with a child by age. France breaks between 2006 and 2013 (first births 58% to 42% of births, 2007-2012 missing), so only 2013 onward is used. Luxembourg breaks in 2006 (30% to 50%).
+accessed: 2026-11-23

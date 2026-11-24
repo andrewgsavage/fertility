@@ -12,6 +12,7 @@ period:
 - 2002
 - 2025
 scripts:
+- eurostat/scripts/change_matrix.py
 - ONS/scripts/coupling_by_age_ew.py
 - ONS/scripts/coupling_vs_cond_asfr_ew.py
 measurables:

@@ -7,6 +7,7 @@ oa: gold
 local:
 - eurostat/data/
 scripts:
+- eurostat/scripts/change_matrix.py
 - eurostat/scripts/leaving_home_vs_tfr.py
 - eurostat/scripts/temp_contracts_vs_first_birth_age.py
 - eurostat/scripts/couples_firstbirth_age_europe.py

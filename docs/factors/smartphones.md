@@ -53,6 +53,16 @@ Across 28 countries, a larger rise in mobile internet use between 2011 and 2019 
 Eurostat [isoc_ci_im_i](https://ec.europa.eu/eurostat/databrowser/view/isoc_ci_im_i/default/table) (mobile internet, 2011–2019) and [demo_frate](https://ec.europa.eu/eurostat/databrowser/view/demo_frate/default/table) (fertility rates by age; the UK ends in 2018 and Germany's 2023 value is missing). This series ends in 2019 and measures mobile internet use, not smartphone ownership. Not included: ITU/World Bank mobile subscriptions (phones, not smartphones), Pew ownership surveys, and time-use data on in-person socialising (ATUS, HETUS), which have no consistent multi-country annual series.
 ```
 
+## Across countries, 2010–2019
+
+Mobile internet use rose in every country; it rose slightly more where the share of women with a child by 30 fell least.
+
+```{raw} html
+<iframe src="../_static/eurostat/change_scatter_mobile_internet.html" style="width: 100%; height: 440px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+
+Each dot is a country. See the [change matrix](change-matrix.md) for all factors side by side.
+
 ## Causal evidence
 
 No study with a readable causal test was found for this factor. See the [causal analysis](causal-analysis.md).

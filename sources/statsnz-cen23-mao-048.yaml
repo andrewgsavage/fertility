@@ -1,0 +1,17 @@
+id: statsnz-cen23-mao-048
+type: dataset
+title: Maori descent indicator, number of children born, and age for women, 2013, 2018 and 2023 Censuses (CEN23_MAO_048)
+publisher: Stats NZ
+url: https://explore.data.stats.govt.nz/vis?df[ds]=ds-nsiws-disseminate&df[id]=CEN23_MAO_048&df[ag]=STATSNZ&df[vs]=1.0
+oa: gold
+countries:
+- NZL
+period:
+- 2013
+- 2023
+scripts:
+- eurostat/scripts/change_matrix.py
+measurables:
+- childlessness
+notes: Total across Maori descent. No children and total stated by 5-year age for 2023 are copied into NZ_CENSUS in the script.
+accessed: 2026-11-23

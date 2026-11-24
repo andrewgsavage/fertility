@@ -1,0 +1,17 @@
+id: eurostat-demo-pjan
+type: dataset
+title: Population on 1 January by age and sex (demo_pjan)
+publisher: Eurostat
+url: https://ec.europa.eu/eurostat/databrowser/view/demo_pjan/default/table
+oa: gold
+local:
+- eurostat/data/change_matrix/
+period:
+- 2000
+- 2024
+scripts:
+- eurostat/scripts/change_matrix.py
+measurables:
+- population-by-age
+notes: Women by single year of age. Exposure for a year is the mean of 1 January that year and the next.
+accessed: 2026-11-23

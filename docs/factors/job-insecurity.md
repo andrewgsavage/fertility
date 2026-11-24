@@ -48,6 +48,20 @@ Across countries the two are positively related: correlation 0.63 in 2005 (25 co
 Eurostat [temporary employees by age](https://ec.europa.eu/eurostat/databrowser/view/lfsa_etpgan/default/table) (38 countries, 1995–2025, many series start later) and [mean age at first birth](https://ec.europa.eu/eurostat/databrowser/view/demo_find/default/table) (34 countries in the scatter, 1995–2024). Youth unemployment is not shown.
 ```
 
+## Across countries, 2010–2019
+
+Temporary contracts have a weak relation to the change in women with a child by 30. Youth unemployment fell in 15 of the 19 countries where fertility fell.
+
+```{raw} html
+<iframe src="../_static/eurostat/change_scatter_temp_contracts.html" style="width: 100%; height: 440px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+
+```{raw} html
+<iframe src="../_static/eurostat/change_scatter_youth_unemployment.html" style="width: 100%; height: 440px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+
+Each dot is a country. See the [change matrix](change-matrix.md) for all factors side by side.
+
 ## Causal evidence
 
 From the [causal analysis](causal-analysis.md), graded by research design (A quasi-experiment, B panel or register, C correlation or simulation, T theory):

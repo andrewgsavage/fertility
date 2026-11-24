@@ -7,6 +7,7 @@ oa: gold
 local:
 - housing/data/
 scripts:
+- eurostat/scripts/change_matrix.py
 - housing/scripts/house_prices_vs_tfr.py
 measurables:
 - house-price-index

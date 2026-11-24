@@ -1,0 +1,17 @@
+id: statcan-98100125
+type: dataset
+title: Marital status, age group and gender, 2006 to 2021 Censuses (98-10-0125-01)
+publisher: Statistics Canada
+url: https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=9810012501
+oa: gold
+local:
+- eurostat/data/change_matrix/
+countries:
+- CAN
+period:
+- 2006
+- 2021
+scripts:
+- eurostat/scripts/change_matrix.py
+notes: Married or living common-law by 5-year age.
+accessed: 2026-11-23

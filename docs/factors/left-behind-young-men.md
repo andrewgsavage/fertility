@@ -70,6 +70,16 @@ The paper reports these results only as charts (its Figure 4), so no rates are q
 
 For this factor: a weak labour-market position goes with fewer first births for men as well as women, and that link strengthened in the 2010s. But in Sweden fewer men, not more, were outside work and study, so a growing left-behind group did not drive the decline. This matches the Eurostat NEET rates above.
 
+## Across countries, 2010–2019
+
+The share of young men not in work or study fell in 8 of the 13 countries with data where fertility fell, and its change has a weak relation to the change in women with a child by 30.
+
+```{raw} html
+<iframe src="../_static/eurostat/change_scatter_neet_men.html" style="width: 100%; height: 440px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+
+Each dot is a country. See the [change matrix](change-matrix.md) for all factors side by side.
+
 ## Causal evidence
 
 From the [causal analysis](causal-analysis.md), graded by research design (A quasi-experiment, B panel or register, C correlation or simulation, T theory):

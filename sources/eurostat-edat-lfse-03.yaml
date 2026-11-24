@@ -7,6 +7,7 @@ oa: gold
 local:
 - eurostat/data/
 scripts:
+- eurostat/scripts/change_matrix.py
 - eurostat/scripts/tertiary_gender_gap_europe.py
 measurables:
 - educational-attainment
