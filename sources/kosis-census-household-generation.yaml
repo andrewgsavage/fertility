@@ -1,0 +1,15 @@
+id: kosis-census-household-generation
+type: dataset
+title: Population by sex, age, marital status and household generation composition, Population and Housing Census (2010, 2020)
+publisher: Statistics Korea (KOSIS)
+url: https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1PM2005
+oa: gold
+countries:
+- KOR
+period:
+- 2010
+- 2020
+factors:
+- partnership-formation
+notes: Married women aged 20-39 in two-generation couple-and-unmarried-children households against one-generation couple-only households. DT_1IN1009 (2010, 10% sample) and DT_1PM2005 (2020, register-based); values read from the KOSIS grid. Extended households excluded. Used for the couples-with-children table on the partnership-formation page.
+accessed: 2026-11-24

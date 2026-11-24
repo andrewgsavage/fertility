@@ -1,0 +1,15 @@
+id: estat-jp-census-family-type
+type: dataset
+title: Census household members by sex, age, relationship to household head and family type (2005 table 02000, 2010 table 01500, 2020 table 13-1)
+publisher: Statistics Bureau of Japan (e-Stat)
+url: https://www.e-stat.go.jp/dbview?sid=0003445106
+oa: gold
+countries:
+- JPN
+period:
+- 2005
+- 2020
+factors:
+- partnership-formation
+notes: Women aged 20-39 who are household head or spouse in couple-and-children (夫婦と子供) against couple-only (夫婦のみ) households, nuclear households only. 2005 sid 0000033732 (2+ person households), 2010 sid 0003039918, 2020 sid 0003445106 (with-children derived as nuclear minus couple-only, married women). Used for the couples-with-children table on the partnership-formation page.
+accessed: 2026-11-24
