@@ -13,6 +13,7 @@ Part of [Partnership formation](partnership-formation.md). How long after moving
 - **Median time to a first child.** Around 1990, for childless couples in Fertility and Family Survey (FFS) countries, it was about **4 years** in Northern and Western Europe and the US (5 in Finland and West Germany), **3** in Italy and Spain, and **2** in Central and Eastern Europe.
 - **It has grown where there is a time series.** In Japan the mean time from moving in together to a first marital birth rose from 1.55 years in 1975 to 1.89 in 2000 and 2.45 in 2019. In S Korea, the mean time from starting married life to a first birth rose from 1.66 years in 2000 to 2.16 in 2018 and 2.5 in 2024, and the share of first births within 2 years fell from 77.5% to 52.6%. Fewer births conceived before marriage, which come soon after the couple moves in, account for some of the rise in Japan: these fell from 27.9% of marital first births in 2002 to 18.4% in 2019.
 - **Share with a child after 3, 5 and 10 years (FFS, around 1990).** Northern and Western Europe and the US: 36–47% after 3 years, 54–68% after 5 and 75–89% after 10. Italy and Spain: about 60%, 79% and 91%. Central and Eastern Europe: 67–88%, 83–93% and 89–95%. No source found repeats this measure for later periods. That would need the GGS microdata.
+- **Share of couples living with a child (censuses, 2010s).** Fell under 30 in New Zealand, Japan and South Korea. At 35–39 it rose in Japan (delay) and fell in South Korea by 7 points (fewer couples having a child at all).
 - **US, the other way.** In the NSFG, the share of women with a pregnancy (leading to a live birth) in the first year of their first premarital cohabitation *rose*: 15% in 1995, 18% in 2002 and 19% in 2006–2010. Within 2 years it rose from 26% to 31%. This measures cohabitations before marriage, not all unions.
 - **More first births happen with no marriage before them.** The share of first births within cohabitation rose from 12% or less in the 1970s to over half in Norway and France by 2000–04, and from 9% before 1985 to 27% in 2003–2010 in the US. Measured from marriage, the lag looks shorter than it is.
 - **Age gap.** Around 1990, women's median age at first union was 1–2 years below their median age at first child in Central and Eastern Europe, 2–3 years below in Italy and Spain, and 3–6 years below in the north and west (6 in Sweden). Age at first marriage is no longer a guide: since 1990 it has risen past the age at first birth in most of Europe (Sweden −5.0 years in 2024, Spain −3.4 in 2023). Japan is the exception, where the two stay within a year of each other. Age at first cohabitation has barely moved: the gap from it to first birth widened from about 1.3 to 4.0 years in the US (1984–88 to 2006–10), from 3.7 to 5.6 in the UK (1980 to 2009) and from 3 to 4.5 years in France.
@@ -110,6 +111,25 @@ Japan: Ministry of Health, Labour and Welfare, [Specified Report of Vital Statis
 :::
 
 ::::
+
+## Couples living with children, by age
+
+Of women living in a couple, the share who live with a child of their own fell after 2010 under age 30 in all three countries with census data at 5-year ages. Above 30 they differ. In Japan it held at 30–34 and rose at 35–39: couples had children later, as the longer time from moving in together to a first birth shows. In South Korea it also fell at 30–34 and 35–39, by 13 and 7 points, so fewer couples had a child at all, not only later. New Zealand fell slowly at 30–34 and 35–39, faster after 2018. In Japan the share barely moved between 2005 and 2010. Unlike the times above, these shares include couples who never have a child.
+
+| Country | Census | 20–24 | 25–29 | 30–34 | 35–39 |
+|---|---|---|---|---|---|
+| New Zealand | 2013 | 32% | 48% | 71% | 85% |
+| | 2018 | 26% | 44% | 70% | 85% |
+| | 2023 | 22% | 39% | 66% | 83% |
+| Japan | 2005 | 63% | 61% | 75% | 84% |
+| | 2010 | 63% | 61% | 74% | 82% |
+| | 2020 | 56% | 54% | 75% | 85% |
+| South Korea | 2010 | 54% | 57% | 81% | 93% |
+| | 2020 | 51% | 48% | 68% | 86% |
+
+```{note}
+Women in a couple living with at least one child, as a share of women in a couple with or without children. Stats NZ [CEN23_FHH_036](https://explore.data.stats.govt.nz/vis?df[ds]=ds-nsiws-disseminate&df[id]=CEN23_FHH_036&df[ag]=STATSNZ&df[vs]=1.0), parent and spouse or partner against spouse or partner only, including de facto couples; counts randomly rounded. Statistics Bureau of Japan census on [e-Stat](https://www.e-stat.go.jp/), tables 02000 (2005), 01500 (2010) and 13-1 (2020), women who are household head or spouse in couple-and-children against couple-only households, nuclear households only; 2020 includes a few married women heading lone-parent households. KOSIS census tables [DT_1IN1009](https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1IN1009) (2010, 10% sample) and [DT_1PM2005](https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1PM2005) (2020, registers), married women in couple-and-unmarried-children against couple-only households, excluding extended households. Children of any age, so couples whose children have left home count as without. EU censuses, Canada (10-year ages only), England and Wales (2011 only) and Australia have no comparable table.
+```
 
 ## First births within cohabitation
 

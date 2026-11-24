@@ -11,5 +11,5 @@ period:
 - 2020
 factors:
 - partnership-formation
-notes: Women aged 20-39 who are household head or spouse in couple-and-children (夫婦と子供) against couple-only (夫婦のみ) households, nuclear households only. 2005 sid 0000033732 (2+ person households), 2010 sid 0003039918, 2020 sid 0003445106 (with-children derived as nuclear minus couple-only, married women). Used for the couples-with-children table on the partnership-formation page.
+notes: Women aged 20-39 who are household head or spouse in couple-and-children (夫婦と子供) against couple-only (夫婦のみ) households, nuclear households only. 2005 sid 0000033732 (2+ person households), 2010 sid 0003039918, 2020 sid 0003445106 (with-children derived as nuclear minus couple-only, married women). Used for the couples-with-children table on the union-to-first-birth page.
 accessed: 2026-11-24

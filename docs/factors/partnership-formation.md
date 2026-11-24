@@ -121,24 +121,7 @@ The share of women in a couple fell in all 8 countries with data under 25 and 11
 
 Each dot is a country. See the [change matrix](change-matrix.md) for all factors side by side.
 
-## Couples living with children, by age
-
-Of women living in a couple, the share who live with a child of their own fell after 2010 under age 30 in all three countries with census data at 5-year ages. Above 30 they differ. In South Korea the share also fell at 30–34 and 35–39, by 13 and 7 points, so fewer couples had a child at all. In Japan it held at 30–34 and rose at 35–39, so couples there had children later. New Zealand fell slowly at 30–34 and 35–39, faster after 2018. In Japan the share barely moved between 2005 and 2010.
-
-| Country | Census | 20–24 | 25–29 | 30–34 | 35–39 |
-|---|---|---|---|---|---|
-| New Zealand | 2013 | 32% | 48% | 71% | 85% |
-| | 2018 | 26% | 44% | 70% | 85% |
-| | 2023 | 22% | 39% | 66% | 83% |
-| Japan | 2005 | 63% | 61% | 75% | 84% |
-| | 2010 | 63% | 61% | 74% | 82% |
-| | 2020 | 56% | 54% | 75% | 85% |
-| South Korea | 2010 | 54% | 57% | 81% | 93% |
-| | 2020 | 51% | 48% | 68% | 86% |
-
-```{note}
-Women in a couple living with at least one child, as a share of women in a couple with or without children. Stats NZ [CEN23_FHH_036](https://explore.data.stats.govt.nz/vis?df[ds]=ds-nsiws-disseminate&df[id]=CEN23_FHH_036&df[ag]=STATSNZ&df[vs]=1.0), parent and spouse or partner against spouse or partner only, including de facto couples; counts randomly rounded. Statistics Bureau of Japan census on [e-Stat](https://www.e-stat.go.jp/), tables 02000 (2005), 01500 (2010) and 13-1 (2020), women who are household head or spouse in couple-and-children against couple-only households, nuclear households only; 2020 includes a few married women heading lone-parent households. KOSIS census tables [DT_1IN1009](https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1IN1009) (2010, 10% sample) and [DT_1PM2005](https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1PM2005) (2020, registers), married women in couple-and-unmarried-children against couple-only households, excluding extended households. Children of any age, so couples whose children have left home count as without. EU censuses, Canada (10-year ages only), England and Wales (2011 only) and Australia have no comparable table.
-```
+How many couples go on to have a child, and when, is on [Couple to first birth](union-to-first-birth.md), including the share of women in a couple living with a child by age.
 
 ## Causal evidence
 

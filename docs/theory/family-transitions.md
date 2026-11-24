@@ -318,7 +318,7 @@ The falls shrink with age, which is what delay would produce. The share of women
 
 Following each birth cohort as it reaches 35–39 would settle this for the cohorts now in their early thirties.
 
-Censuses that split couples by whether they live with children point both ways ([Partnership formation](../factors/partnership-formation.md#couples-living-with-children-by-age)). In Japan the share of women in a couple living with a child fell under 30 between 2010 and 2020 but held at 30–34 and rose at 35–39, which fits delay. In South Korea it fell at every age, by 13 points at 30–34, which fits births forgone.
+Censuses that split couples by whether they live with children point both ways ([Couple to first birth](../factors/union-to-first-birth.md#couples-living-with-children-by-age)). In Japan the share of women in a couple living with a child fell under 30 between 2010 and 2020 but held at 30–34 and rose at 35–39, which fits delay. In South Korea it fell at every age, by 13 points at 30–34, which fits births forgone.
 
 ### The chain is not a single path
 
