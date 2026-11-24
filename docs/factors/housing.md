@@ -41,6 +41,64 @@ Changes in the price-to-income ratio have a weak relation to changes in the shar
 
 Each dot is a country. See the [country comparison](country-comparison.md) for all factors side by side.
 
+## Young adults' housing conditions
+
+Overcrowding at 25–29 in the latest year (2024 or 2025) ranges from 2.0% in Cyprus to 50.1% in Romania. Between 2010 and 2024 it fell steeply in the post-communist countries (Hungary −35.8 points, Slovenia −28.8, Latvia −20.7, Poland −17.1) and rose in Finland (+7.6), Sweden (+7.3), the Netherlands (+6.7), Spain (+6.7) and Germany (+4.4). Across 28 countries the median change was −1.0 point.
+
+Housing cost overburden at 25–29 is highest in Denmark (24.1%) and lowest in Croatia (1.1%). Over 2010–2024 it rose most in Greece (+12.8 points), Norway (+8.4), Portugal (+5.1) and Finland (+4.7); the median change across 27 countries was −0.4 points.
+
+```{raw} html
+<iframe src="../_static/eurostat/housing_young_levels.html" style="width: 100%; height: 780px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+
+```{note}
+Eurostat EU-SILC, [overcrowding rate by age](https://ec.europa.eu/eurostat/databrowser/view/ilc_lvho05a/default/table) (ilc_lvho05a) and [housing cost overburden rate by age](https://ec.europa.eu/eurostat/databrowser/view/ilc_lvho07a/default/table) (ilc_lvho07a), both sexes, 2010 and latest year (2023 or later). Neither table has a 25–34 band. Overcrowded: the household lacks the rooms the EU standard gives its composition. Overburden: housing costs net of allowances above 40% of disposable income. Values Eurostat flags as low reliability are dropped. UK data end in 2018.
+```
+
+Among 25–34 year olds, owner-occupation ranges from 19.5% in Switzerland (2024) to 92.3% in Slovakia. It fell by a median 1.5 points across 28 countries between 2015 and 2024, most in Malta (−12.7), Finland (−9.6, from 52.1% to 42.5%) and Romania (−7.9), and rose most in Ireland (+12.2) and Hungary (+8.2). The Netherlands has the largest share renting at a reduced rent or free (35.3%), mostly social housing.
+
+```{raw} html
+<iframe src="../_static/eurostat/housing_young_tenure.html" style="width: 100%; height: 800px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+
+```{note}
+Eurostat EU-SILC, [distribution of population by sex, age and tenure status](https://ec.europa.eu/eurostat/databrowser/view/ilc_lvps05/default/table) (ilc_lvps05), ages 25–34, latest year (2023 or later); the tick marks owners in 2015. The table starts in 2015. Tenure is that of the household the person lives in, so young adults living with owner-occupier parents count as owners.
+```
+
+## Housing conditions and coupling or births, across countries
+
+Over 2010–2019, overcrowding at 25–29 rose where the share of women with a child by 30 fell most: r = −0.40 across 29 countries. This is an East–West split rather than a relation within either group. Overcrowding fell 3–35 points in the 11 post-communist countries, where the share with a child by 30 fell by 4.7 points on average, against 11.1 in the other 18; without those 11 countries r = −0.11 (n = 18). Housing cost overburden at 25–29 gives r = −0.35 (n = 28), and −0.24 (n = 17) without the post-communist countries; Greece, where overburden rose 20.1 points, is an outlier.
+
+The change in either measure has no relation to the change in women 25–34 living in a couple between the 2011 and 2021 censuses: r = −0.06 for overcrowding and −0.12 for overburden (n = 29). In the 8 countries whose census change another source confirms, overcrowding gives r = −0.64 and overburden r = +0.34, too few countries to read either way.
+
+Against first-birth rates over 2010–2022, overcrowding gives r = −0.10 at 25–29 and −0.20 at 30–34 (n = 15). Overburden gives r = −0.04 at 25–29 and −0.46 at 30–34 (n = 14): first-birth rates at 30–34 fell more where overburden rose (Norway, Finland, Bulgaria, Portugal, the Netherlands). Dropping any one country leaves r between −0.57 and −0.37. Changes in tenure at 25–34 over 2015–2022 are unrelated to first-birth rates at either age (|r| ≤ 0.17, n = 15).
+
+::::{tab-set}
+
+:::{tab-item} Coupling and first births
+```{raw} html
+<iframe src="../_static/eurostat/housing_young_change_scatter.html" style="width: 100%; height: 500px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+:::
+
+:::{tab-item} Overcrowding vs child by 30
+```{raw} html
+<iframe src="../_static/eurostat/change_scatter_overcrowded_25_29.html" style="width: 100%; height: 440px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+:::
+
+:::{tab-item} Overburden vs child by 30
+```{raw} html
+<iframe src="../_static/eurostat/change_scatter_overburden_25_29.html" style="width: 100%; height: 440px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+:::
+
+::::
+
+```{note}
+Housing: Eurostat EU-SILC [ilc_lvho05a](https://ec.europa.eu/eurostat/databrowser/view/ilc_lvho05a/default/table), [ilc_lvho07a](https://ec.europa.eu/eurostat/databrowser/view/ilc_lvho07a/default/table) (ages 25–29) and [ilc_lvps05](https://ec.europa.eu/eurostat/databrowser/view/ilc_lvps05/default/table) (ages 25–34). Coupling: Eurostat 2011 and 2021 census rounds ([cens_11fs_r3](https://ec.europa.eu/eurostat/databrowser/view/cens_11fs_r3/default/table), [cens_21fe_r2](https://ec.europa.eu/eurostat/databrowser/view/cens_21fe_r2/default/table)), women 25–34 in a couple of those with a stated status; open markers are census changes no other series confirms. First-birth rates: [Human Fertility Database](https://www.humanfertility.org) conditional rates (mi) pooled with parity exposures (exposRRpa). With a child by 30: synthetic cohort through HFD period fertility tables by birth order, as on the [country comparison](country-comparison.md). Each end year takes the nearest year within one. EU-SILC has series breaks in some countries (Germany 2020). Correlations are Pearson across countries, unweighted.
+```
+
 ## The UK since 2022
 
 UK real house prices peaked in early 2022 and by mid-2026 were 10% lower, back to their 2007 level. The house price to income ratio fell 14% from its 2022 peak. Over the same period England and Wales TFR fell from 1.55 (2021) to 1.39 (2025), a record low.

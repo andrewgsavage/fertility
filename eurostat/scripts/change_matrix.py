@@ -22,6 +22,8 @@ Factors (downloaded on first run into eurostat/data/change_matrix/):
   contracts 15-29), lfsi_neet_a (NEET men 15-29), yth_demo_030 (women's
   age leaving home), ilc_caindformal (formal childcare under 3),
   edat_lfse_03 (tertiary attainment, women 25-34).
+- Eurostat EU-SILC: ilc_lvho05a (overcrowding rate 25-29), ilc_lvho07a
+  (housing cost overburden rate 25-29); no 25-34 band is published.
 - World Bank SL.UEM.1524.ZS (youth unemployment, ILO modelled).
 - OECD analytical house price indicators (price-to-income ratio).
 
@@ -157,6 +159,8 @@ EUROSTAT = {
     "yth_demo_030": "",
     "ilc_caindformal": "A.Y_LT3.H0.PC.",
     "edat_lfse_03": "A..Y25-34.PC.ED5-8.",
+    "ilc_lvho05a": "A.PC.TOTAL.Y25-29.T.",
+    "ilc_lvho07a": "A.PC.TOTAL.Y25-29.T.",
 }
 
 
@@ -353,6 +357,9 @@ def load_factors():
     d = eurostat("edat_lfse_03")
     f["tertiary_women"] = series(d[d.sex == "F"].rename(columns={"OBS_VALUE": "value"}))
 
+    for code, key in (("ilc_lvho05a", "overcrowded_25_29"), ("ilc_lvho07a", "overburden_25_29")):
+        f[key] = series(eurostat(code).rename(columns={"OBS_VALUE": "value"}))
+
     url = ("https://api.worldbank.org/v2/country/" + ";".join(COUNTRIES)
            + "/indicator/SL.UEM.1524.ZS?format=json&per_page=5000&date=2000:2023")
     rows = json.loads(fetch(f"wb_youth_unemployment_{len(COUNTRIES)}.json", url).read_text())[1]
@@ -394,6 +401,8 @@ FACTORS = [
     ("temp_contracts", "Temporary contracts, 15–29", +1, "job-insecurity", "Work and costs"),
     ("neet_men", "Young men not in work or study", +1, "left-behind-young-men", "Work and costs"),
     ("price_to_income", "House price to income", +1, "housing", "Work and costs"),
+    ("overcrowded_25_29", "Overcrowded, 25–29", +1, "housing", "Work and costs"),
+    ("overburden_25_29", "Housing cost overburden, 25–29", +1, "housing", "Work and costs"),
     ("childcare", "Under-3s in formal childcare", -1, None, "Policy"),
     ("mobile_internet", "Mobile internet use, 16–24", +1, "smartphones", "Technology"),
 ]

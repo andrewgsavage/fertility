@@ -41,6 +41,7 @@ Raw inputs go in `<folder>/data/` (gitignored, not redistributed). Every path be
 | `resolution` | Resolution Foundation, [Bye bye baby](https://www.resolutionfoundation.org/publications/bye-bye-baby/) (2026) | Manual: figures digitised by hand from the report; no download | `resolution/data/{grads.csv,nongrads.csv,fig7a_nongrad.csv,fig8_nongrad.csv}` |
 | `research` | Literature-derived tables (ESHRE, Goisis et al. 2024, JSOG, HFEA, CDC WONDER) | Tracked in git | `research/data/*.csv` (read by `HFD/scripts/*art*.py`) |
 | `university` | Greenaway & Haynes (2000), Age Participation Index 1961-1997 | Tracked in git (see `university/metadata.txt`) | `university/Age Participation Index.csv` |
+| `eurostat` (young adults' housing) | Eurostat EU-SILC `ilc_lvho05a` (overcrowding by age), `ilc_lvho07a` (housing cost overburden by age), `ilc_lvps05` (tenure by age) | **Auto** on first run of `eurostat/scripts/housing_conditions_young.py` (full-table SDMX-CSV URLs in its docstring, e.g. <https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/ilc_lvho05a?format=SDMX-CSV&compressed=false>); `change_matrix.py` downloads 25-29 slices of the first two | `eurostat/data/housing_young/{ilc_lvho05a,ilc_lvho07a,ilc_lvps05}.csv`, `eurostat/data/change_matrix/{ilc_lvho05a,ilc_lvho07a}.csv` |
 
 Some ONS scripts (`historic_trends_uk.py`, `pupils_leaving_age_uk.py`, the `*_by_education_uk.py` set) carry their figures transcribed inline and need no data file.
 

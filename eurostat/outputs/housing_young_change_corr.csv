@@ -1,0 +1,13 @@
+measure,outcome,base,end,n,r,n_confirmed,r_confirmed
+overcrowded_25_29,couple,2011,2021,29,-0.055,8,-0.638
+overcrowded_25_29,first_25_29,2010,2022,15,-0.099,,
+overcrowded_25_29,first_30_34,2010,2022,15,-0.202,,
+overburden_25_29,couple,2011,2021,29,-0.117,8,0.344
+overburden_25_29,first_25_29,2010,2022,14,-0.038,,
+overburden_25_29,first_30_34,2010,2022,14,-0.462,,
+owner_25_34,first_25_29,2015,2022,15,-0.119,,
+owner_25_34,first_30_34,2015,2022,15,-0.166,,
+rent_market_25_34,first_25_29,2015,2022,15,0.044,,
+rent_market_25_34,first_30_34,2015,2022,15,-0.005,,
+rent_reduced_25_34,first_25_29,2015,2022,15,0.027,,
+rent_reduced_25_34,first_30_34,2015,2022,15,0.107,,
