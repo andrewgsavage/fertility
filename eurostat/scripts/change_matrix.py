@@ -782,12 +782,13 @@ RATIO_ROWS = [
     ("ratio_25_34", "Child by 30 ÷ couple 25–34", 30, None),
     ("ratio_30_34", "Child by 32 ÷ couple 30–34", 32, "couple_30_34"),
     ("ratio_35_39", "Child by 37 ÷ couple 35–39", 37, "couple_35_39"),
-    ("ratio_census_20_24", "Child by 22 ÷ couple 20–24 (census)", 22, "couple_census_20_24"),
+    ("ratio_census_20_24", "Child by 25 ÷ couple 20–24 (census)", 25, "couple_census_20_24"),
     ("ratio_census_25_34", "Child by 30 ÷ couple 25–34 (census)", 30, "couple_census_25_34"),
     ("ratio_ess_25_34", "Child by 30 ÷ couple 25–34 (ESS)", 30, "couple_ess_25_34"),
 ]
-# Ratios over coupling measured only in some years: each coupling year takes the % with a child within a
-# year of it, and the change uses the coupling row's tolerance, faded cells and noise flags.
+# Ratios over coupling measured only in some years: each coupling year takes the % with a child from the
+# with-a-child rows (HFD, estimates and censuses) within two years of it, and the change uses the coupling
+# row's tolerance, faded cells and noise flags.
 RATIO_OF_SPARSE = {"ratio_census_20_24": "couple_census_20_24", "ratio_census_25_34": "couple_census_25_34",
                    "ratio_ess_25_34": "couple_ess_25_34"}
 
@@ -796,19 +797,20 @@ def sparse_tols(key):
     return ESS_TOL if key == "ratio_ess_25_34" else CENSUS_COUPLE_TOL
 
 
-def matrix_ratios(e, factors):
+def matrix_ratios(e, factors, parity):
     out = {}
     for key, _, age, band in RATIO_ROWS:
         if band:
-            mothers = mothers_at_age(e, age)
             if key in RATIO_OF_SPARSE:
+                mothers = parity[f"mothers_by_{age}"]
                 out[key] = {}
                 for c, s in factors[band].items():
                     m = mothers.get(c, {})
-                    r = {y: m[my] / v for y, v in s.items() if v > 0 and (my := near_year(m, y, 1)) is not None}
+                    r = {y: m[my] / v for y, v in s.items() if v > 0 and (my := near_year(m, y, 2)) is not None}
                     if r:
                         out[key][c] = r
             else:
+                mothers = mothers_at_age(e, age)
                 out[key] = {c: r for c, s in factors[band].items() if (r := divide(mothers.get(c, {}), s))}
     return out
 
@@ -898,7 +900,7 @@ def build(reference=None):
     factors["couple_ess_25_34"], ess_errors = load_ess_couples()
     sources["couple_ess_25_34"] = {c: "ESS, two rounds pooled" for c in factors["couple_ess_25_34"]}
     ratios, matched, profiles = load_ratios(factors)
-    ratios.update(matrix_ratios(exposures, factors))
+    ratios.update(matrix_ratios(exposures, factors, parity))
     ratio_src = ratio_sources(sources)
     m30 = parity["mothers_by_30"]
     d_tfr = {c: change(tfr.get(c)) for c in COUNTRIES}
