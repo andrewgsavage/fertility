@@ -782,7 +782,18 @@ RATIO_ROWS = [
     ("ratio_25_34", "Child by 30 ÷ couple 25–34", 30, None),
     ("ratio_30_34", "Child by 32 ÷ couple 30–34", 32, "couple_30_34"),
     ("ratio_35_39", "Child by 37 ÷ couple 35–39", 37, "couple_35_39"),
+    ("ratio_census_20_24", "Child by 22 ÷ couple 20–24 (census)", 22, "couple_census_20_24"),
+    ("ratio_census_25_34", "Child by 30 ÷ couple 25–34 (census)", 30, "couple_census_25_34"),
+    ("ratio_ess_25_34", "Child by 30 ÷ couple 25–34 (ESS)", 30, "couple_ess_25_34"),
 ]
+# Ratios over coupling measured only in some years: each coupling year takes the % with a child within a
+# year of it, and the change uses the coupling row's tolerance, faded cells and noise flags.
+RATIO_OF_SPARSE = {"ratio_census_20_24": "couple_census_20_24", "ratio_census_25_34": "couple_census_25_34",
+                   "ratio_ess_25_34": "couple_ess_25_34"}
+
+
+def sparse_tols(key):
+    return ESS_TOL if key == "ratio_ess_25_34" else CENSUS_COUPLE_TOL
 
 
 def matrix_ratios(e, factors):
@@ -790,7 +801,15 @@ def matrix_ratios(e, factors):
     for key, _, age, band in RATIO_ROWS:
         if band:
             mothers = mothers_at_age(e, age)
-            out[key] = {c: r for c, s in factors[band].items() if (r := divide(mothers.get(c, {}), s))}
+            if key in RATIO_OF_SPARSE:
+                out[key] = {}
+                for c, s in factors[band].items():
+                    m = mothers.get(c, {})
+                    r = {y: m[my] / v for y, v in s.items() if v > 0 and (my := near_year(m, y, 1)) is not None}
+                    if r:
+                        out[key][c] = r
+            else:
+                out[key] = {c: r for c, s in factors[band].items() if (r := divide(mothers.get(c, {}), s))}
     return out
 
 
@@ -852,8 +871,12 @@ COUPLING_LAST = "couple_ess_25_34"  # the relationships row follows the last cou
 
 
 def ratio_row(key, label, s, order, sources):
-    cells = {c: change(s.get(c)) for c in order}
-    before = [-v for c in order if (v := change(s.get(c), 2001, BASE)) is not None]
+    if key in RATIO_OF_SPARSE:
+        cells = {c: child_change(s.get(c), c, sparse_tols(key)) for c in order}
+        before = []
+    else:
+        cells = {c: change(s.get(c)) for c in order}
+        before = [-v for c in order if (v := change(s.get(c), 2001, BASE)) is not None]
     return dict(key=key, label=label, group="Relationships leading to a child", kind="ratio",
                 unit="", dp=2, direction=-1, cells=cells, sources=sources, before=median(before),
                 after=median([-v for v in cells.values() if v is not None]))
@@ -927,6 +950,10 @@ def build(reference=None):
                     wider = bool(band) and r["sources"][c].endswith(band[1:].replace("-", "–"))
                     r["low_confidence"][c] = wider or c not in CENSUS_COUPLE_PASSED.get(span, ())
             r["after"] = median([r["direction"] * v for c, v in r["cells"].items() if v is not None and not r["low_confidence"][c]])
+        if r["key"] in RATIO_OF_SPARSE and RATIO_OF_SPARSE[r["key"]] in CENSUS_COUPLE_ROWS:
+            src_low = next(x for x in rows if x["key"] == RATIO_OF_SPARSE[r["key"]])["low_confidence"]
+            r["low_confidence"] = {c: src_low.get(c, True) for c, v in r["cells"].items() if v is not None}
+            r["after"] = median([r["direction"] * v for c, v in r["cells"].items() if v is not None and not r["low_confidence"][c]])
         low = r.get("low_confidence", {})
         pairs = [(r["direction"] * v, -target[c]) for c, v in r["cells"].items()
                  if v is not None and target[c] is not None and not low.get(c)]
@@ -942,13 +969,19 @@ def build(reference=None):
                       m30_base=value_near(m30.get(c, {}), BASE), m30_end=value_near(m30.get(c, {}), END)) for c in order]
     ts = {"tfr": tfr, **parity, **rates, **factors, **ratios}
     for r in rows:  # the years each cell actually compares
-        tols = CENSUS_TOL if r["key"].startswith("mothers_by_") else COUPLING_TOL if r["key"] in COUPLING_TOL_ROWS else CENSUS_COUPLE_TOL if r["key"] in CENSUS_COUPLE_ROWS else ESS_TOL if r["key"] == "couple_ess_25_34" else {}
+        tols = (CENSUS_TOL if r["key"].startswith("mothers_by_") else COUPLING_TOL if r["key"] in COUPLING_TOL_ROWS
+                else CENSUS_COUPLE_TOL if r["key"] in CENSUS_COUPLE_ROWS else ESS_TOL if r["key"] == "couple_ess_25_34"
+                else sparse_tols(r["key"]) if r["key"] in RATIO_OF_SPARSE else {})
         tol = lambda c: tols.get(c, 1)
         r["years"] = {c: [near_year(ts[r["key"]].get(c, {}), BASE, tol(c)), near_year(ts[r["key"]].get(c, {}), END, tol(c))]
                       for c, v in r["cells"].items() if v is not None}
         if r["key"] == "couple_ess_25_34":  # change smaller than two standard errors
             r["noisy"] = {c: bool(abs(r["cells"][c]) < 2 * (ess_errors[c][y0] ** 2 + ess_errors[c][y1] ** 2) ** 0.5)
                           for c, (y0, y1) in r["years"].items()}
+    ess = next(x for x in rows if x["key"] == "couple_ess_25_34")
+    for r in rows:
+        if r["key"] == "ratio_ess_25_34":
+            r["noisy"] = {c: ess["noisy"].get(c, True) for c in r["years"]}
     extra = dict(profiles=profiles, ratio_dirs=ratio_directions(ratios, matched),
                  ratio_labels={k: label for k, _, _, label in RATIOS},
                  matched_bands=[f"{lo}–{hi}" for lo, hi in MATCHED_BANDS])
