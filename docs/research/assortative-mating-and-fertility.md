@@ -231,6 +231,10 @@ Southern Europe. The negative gradient is linked to agreement with "men have mor
   hypogamy carries a childlessness penalty, the shift could plausibly lower fertility, but nobody
   has quantified it.
 
+## Data in this repo
+
+[Partner matching by education](../factors/partner-matching.md) computes US couple shares (ACS microdata, 2008–2024; woman more educated in 25.7% of couples with the woman aged 25–39 in 2024, less educated in 13.8%) and single men per single woman by education for the US, 30 European countries and England & Wales (2021 census).
+
 ## Gaps
 
 1. UK: no published trend in couple-type shares from census or UKHLS found. Could be computed

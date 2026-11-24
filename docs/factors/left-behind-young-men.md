@@ -51,6 +51,7 @@ Eurostat [attainment by sex and age](https://ec.europa.eu/eurostat/databrowser/v
 ## Coupling by employment status
 
 Coupling fell among employed and non-employed men alike, and changes in the employment mix explain little of the fall: see [Coupling by employment status](coupling-by-employment.md).
+Single men per single woman by education, and who partners with whom, are on [Partner matching by education](partner-matching.md): in the US, non-tertiary single men per tertiary single woman aged 25–39 fell from 1.88 in 2008 to 1.35 in 2024.
 
 ## Labour market activity and first births: Sweden
 
