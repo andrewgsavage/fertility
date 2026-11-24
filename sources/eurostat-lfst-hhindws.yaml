@@ -10,6 +10,8 @@ scripts:
 - eurostat/scripts/change_matrix.py
 - eurostat/scripts/couples_firstbirth_age_europe.py
 - eurostat/scripts/coupling_vs_cond_asfr_eurostat.py
+- eurostat/scripts/lone_parents_divorce_europe.py
 measurables:
 - share-in-couple
+- separation
 notes: Couple households (married or cohabiting, own household); people living with parents not counted.

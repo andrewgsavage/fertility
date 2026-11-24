@@ -1,0 +1,13 @@
+id: eurostat-demo-ndivind
+type: dataset
+title: Divorce indicators (demo_ndivind)
+publisher: Eurostat
+url: https://ec.europa.eu/eurostat/databrowser/view/demo_ndivind/default/table
+oa: gold
+local:
+- eurostat/data/
+scripts:
+- eurostat/scripts/lone_parents_divorce_europe.py
+measurables:
+- separation
+notes: Crude divorce rate (per 1,000 population) and divorces per 100 marriages; legal marriages only.

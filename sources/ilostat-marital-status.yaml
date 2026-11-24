@@ -12,7 +12,9 @@ scripts:
 - eurostat/scripts/change_matrix.py
 - ILO/scripts/coupling_ilo.py
 - ILO/scripts/coupling_vs_cond_asfr.py
+- ILO/scripts/separated_ilo.py
 measurables:
 - share-in-couple
 - marriage
+- separation
 notes: Many European and US surveys code legal marital status only, so cohabiting couples count as single.

@@ -15,7 +15,9 @@ scripts:
 - eurostat/scripts/change_matrix.py
 - ONS/scripts/coupling_by_age_ew.py
 - ONS/scripts/coupling_vs_cond_asfr_ew.py
+- ONS/scripts/union_stability_ew.py
 measurables:
 - share-in-couple
 - marriage
+- separation
 notes: Labour Force Survey weighted to mid-year estimates. Couple = married/civil partnered + cohabiting.
