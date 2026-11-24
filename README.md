@@ -40,6 +40,7 @@ Raw inputs go in `<folder>/data/` (gitignored, not redistributed). Every path be
 | `resolution` | Resolution Foundation, [Bye bye baby](https://www.resolutionfoundation.org/publications/bye-bye-baby/) (2026) | Manual: figures digitised by hand from the report; no download | `resolution/data/{grads.csv,nongrads.csv,fig7a_nongrad.csv,fig8_nongrad.csv}` |
 | `research` | Literature-derived tables (ESHRE, Goisis et al. 2024, JSOG, HFEA, CDC WONDER) | Tracked in git | `research/data/*.csv` (read by `HFD/scripts/*art*.py`) |
 | `university` | Greenaway & Haynes (2000), Age Participation Index 1961-1997 | Tracked in git (see `university/metadata.txt`) | `university/Age Participation Index.csv` |
+| `ACS` | US Census Bureau, American Community Survey 1-year PUMS (person records) | Manual: `https://www2.census.gov/programs-surveys/acs/data/pums/<year>/1-Year/csv_pus.zip` for 2008, 2010, 2019, 2024 (about 600 MB each; no API key needed) | `ACS/data/acs_pus_<year>.zip` |
 
 Some ONS scripts (`historic_trends_uk.py`, `pupils_leaving_age_uk.py`, the `*_by_education_uk.py` set) carry their figures transcribed inline and need no data file.
 

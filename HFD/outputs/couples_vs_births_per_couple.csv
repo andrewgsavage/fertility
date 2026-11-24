@@ -1,0 +1,17 @@
+country,method,coupling_source,base,end,tfr_base,tfr_end,couples,within,outside,other,couples_pct,within_pct,outside_pct,other_pct,total_pct
+US,births split by union status,ACS,2008,2024,2.1861,1.7503,-0.0853,-0.0742,-0.2763,0.0,-3.9006,-3.3949,-12.6378,0.0,-19.9333
+US,all births to couples,ACS,2008,2024,2.1861,1.7503,-0.2202,-0.2156,0.0,0.0,-10.0718,-9.8615,0.0,0.0,-19.9333
+England and Wales,births split by union status,ONS LFS,2010,2024,1.9583,1.4382,-0.049,-0.3795,-0.0916,0.0,-2.5032,-19.3774,-4.6753,0.0,-26.5559
+England and Wales,all births to couples,ONS LFS,2010,2024,1.9583,1.4382,-0.0725,-0.4475,0.0,0.0,-3.7021,-22.8537,0.0,0.0,-26.5559
+Denmark,all births to couples,national register,2010,2025,1.8713,1.5068,-0.1667,-0.1984,0.0,0.0006,-8.907,-10.6006,0.0,0.0331,-19.4745
+Finland,all births to couples,national register,2010,2024,1.8701,1.251,-0.2416,-0.3778,0.0,0.0003,-12.9207,-20.2012,0.0,0.0155,-33.1064
+Netherlands,all births to couples,national register,2010,2023,1.7959,1.43,-0.1817,-0.1844,0.0,0.0002,-10.1179,-10.2666,0.0,0.01,-20.3745
+Canada,all births to couples,ILO,2010,2023,1.6468,1.2581,-0.166,-0.2251,0.0,0.0024,-10.0796,-13.6717,0.0,0.1476,-23.6038
+Chile,all births to couples,ILO,2010,2020,1.9556,1.459,-0.3717,-0.1203,0.0,-0.0047,-19.0048,-6.1496,0.0,-0.2408,-25.3953
+Japan,all births to couples,ILO,2010,2023,1.3802,1.1969,-0.1268,-0.0576,0.0,0.0011,-9.1874,-4.1721,0.0,0.0768,-13.2827
+S Korea,all births to couples,ILO,2010,2024,1.2231,0.749,-0.4781,0.004,0.0,0.0,-39.0903,0.3286,0.0,0.0,-38.7617
+Russia,all births to couples,ILO,2010,2018,1.5671,1.5795,-0.0228,0.034,0.0,0.0012,-1.4554,2.1681,0.0,0.0791,0.7919
+Bulgaria,all births to couples,UN,2001,2011,1.2359,1.4983,-0.2615,0.52,0.0,0.0039,-21.1603,42.0753,0.0,0.3188,21.2338
+Estonia,all births to couples,UN,2000,2012,1.356,1.5594,-0.0393,0.2429,0.0,-0.0002,-2.8949,17.9098,0.0,-0.017,14.998
+Hungary,all births to couples,UN,2001,2011,1.3101,1.2578,-0.1822,0.1298,0.0,-0.0,-13.9036,9.9109,0.0,-0.0031,-3.9958
+Ukraine,all births to couples,UN,2007,2012,1.3344,1.5313,0.0472,0.1491,0.0,0.0006,3.5348,11.175,0.0,0.045,14.7547
