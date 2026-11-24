@@ -6,5 +6,6 @@ Leaving home, forming a couple and going on to a first child.
 :maxdepth: 1
 
 leaving-home
+living-arrangements
 partnership-formation
 ```

@@ -6,6 +6,8 @@ This page was written by AI and has not been fully reviewed. Check figures and c
 
 Part of [Partnership formation](partnership-formation.md), which sets these coupling rates against first-birth rates. This page has the share of young adults in a couple, by year.
 
+Where young adults live instead of with a partner (with parents, alone or with others) is on [Living arrangements](living-arrangements.md).
+
 ## Coupling rate at 25–34, by country
 
 Share of people aged 25–34 who are married or cohabiting, as published in the FT's [The relationship recession is going global](https://www.ft.com/content/43e2b4f6-5ab7-4c47-b9fd-d611c36dad74) (John Burn-Murdoch, 11 January 2025). Values were read from the article's chart data. Ten countries are shown by default; click names to add the rest.
