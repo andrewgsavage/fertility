@@ -40,6 +40,8 @@ Raw inputs go in `<folder>/data/` (gitignored, not redistributed). Every path be
 | `resolution` | Resolution Foundation, [Bye bye baby](https://www.resolutionfoundation.org/publications/bye-bye-baby/) (2026) | Manual: figures digitised by hand from the report; no download | `resolution/data/{grads.csv,nongrads.csv,fig7a_nongrad.csv,fig8_nongrad.csv}` |
 | `research` | Literature-derived tables (ESHRE, Goisis et al. 2024, JSOG, HFEA, CDC WONDER) | Tracked in git | `research/data/*.csv` (read by `HFD/scripts/*art*.py`) |
 | `university` | Greenaway & Haynes (2000), Age Participation Index 1961-1997 | Tracked in git (see `university/metadata.txt`) | `university/Age Participation Index.csv` |
+| `NSO` (ACS PUMS) | US Census Bureau, American Community Survey 1-year PUMS person files, 2008, 2013, 2018, 2024 (read by `NSO/scripts/partner_matching_us.py`) | Manual: `https://www2.census.gov/programs-surveys/acs/data/pums/<year>/1-Year/csv_pus.zip` (about 600 MB each) | `NSO/data/acs_pums/csv_pus_<year>.zip` |
+| `eurostat` (census 2021) | Eurostat census 2021 `cens_21fe_r2` (family status by age and education) and ONS Census 2021 custom dataset for England and Wales (read by `eurostat/scripts/singles_sex_ratio_education_europe.py`) | Manual: SDMX and ONS API URLs in the script docstring | `eurostat/data/cens_21fe_r2.csv`, `ONS/data/census2021/ew_resident_age_18b.json` |
 
 Some ONS scripts (`historic_trends_uk.py`, `pupils_leaving_age_uk.py`, the `*_by_education_uk.py` set) carry their figures transcribed inline and need no data file.
 
