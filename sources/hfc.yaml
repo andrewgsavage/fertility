@@ -1,0 +1,22 @@
+id: hfc
+type: dataset
+title: Human Fertility Collection
+publisher: Max Planck Institute for Demographic Research and Vienna Institute of Demography
+url: https://www.fertilitydata.org/
+oa: gold
+local:
+- eurostat/data/change_matrix/
+countries:
+- ISL
+- ITA
+- POL
+period:
+- 2005
+- 2023
+scripts:
+- eurostat/scripts/change_matrix.py
+measurables:
+- asfr
+- young-first-births
+notes: Cumulative first-birth rates (CPFR1) by age, used for women with a child by age. Years repeat across collections and age definitions; the change matrix uses vital registration (Collection HFD), age in completed years (ACY).
+accessed: 2026-11-23

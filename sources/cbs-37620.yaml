@@ -12,6 +12,7 @@ period:
 - 1995
 - 2025
 scripts:
+- eurostat/scripts/change_matrix.py
 - NSO/scripts/download.py
 - NSO/scripts/coupling_nso.py
 - NSO/scripts/coupling_mothers_lexis.py

@@ -1,0 +1,17 @@
+id: abs-census-tsp-t05
+type: dataset
+title: 2021 Census Time Series Profile, table T05, social marital status by age by sex
+publisher: Australian Bureau of Statistics
+url: https://www.abs.gov.au/census/find-census-data/datapacks/download/2021_TSP_AUS_for_AUS_short-header.zip
+oa: gold
+local:
+- eurostat/data/change_matrix/
+countries:
+- AUS
+period:
+- 2011
+- 2021
+scripts:
+- eurostat/scripts/change_matrix.py
+notes: Registered and de facto marriages by 5-year age, 2011, 2016 and 2021 Censuses.
+accessed: 2026-11-23

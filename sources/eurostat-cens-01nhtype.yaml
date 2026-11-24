@@ -1,0 +1,15 @@
+id: eurostat-cens-01nhtype
+type: dataset
+title: Population by sex, age and household status, Census 2001 (cens_01nhtype)
+publisher: Eurostat
+url: https://ec.europa.eu/eurostat/databrowser/view/cens_01nhtype/default/table
+oa: gold
+local:
+- eurostat/data/change_matrix/
+period:
+- 2001
+- 2001
+scripts:
+- eurostat/scripts/change_matrix.py
+notes: Women in a couple is married couples plus consensual unions. Consensual unions are missing for some countries.
+accessed: 2026-11-23

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Country profiles</title>
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<style>
+  html, body { margin: 0; background: #fff; color: #1f2328; font: 13px/1.45 system-ui, sans-serif; }
+  .top { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; padding: 8px 10px; }
+  select { font: inherit; padding: 3px 6px; }
+  #summary { color: #6b7280; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 4px 8px; padding: 0 6px; }
+  .panel { height: 190px; }
+  h3 { font-size: 13px; font-weight: 600; margin: 12px 10px 4px; }
+  table { border-collapse: collapse; margin: 0 10px 10px; }
+  td { padding: 3px 10px 3px 0; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  td.chip span { display: inline-block; width: 64px; height: 12px; border-radius: 2px; background: #f1f1ef; position: relative; vertical-align: -1px; }
+  td.chip i { position: absolute; top: 0; bottom: 0; border-radius: 2px; }
+  .muted { color: #6b7280; }
+  .tall { height: 280px; }
+  .scroll { overflow-x: auto; margin: 0 10px 10px; }
+  #ratios { margin: 0; font-size: 12px; }
+  #ratios th { font-weight: 500; color: #6b7280; text-align: left; padding: 2px 10px 4px 0; vertical-align: bottom; max-width: 78px; line-height: 1.2; }
+  #ratios tr[data-iso] { cursor: pointer; }
+  #ratios tr.on td { background: #e8f1fb; font-weight: 600; }
+  .fall { color: #c4501f; } .rise { color: #12835a; }
+</style>
+</head>
+<body>
+<div class="top">
+  <label>Country <select id="sel"></select></label>
+  <span id="summary"></span>
+</div>
+<div class="grid" id="grid"></div>
+<h3>Coupling by age, and child:coupling ratio at matched ages</h3>
+<div class="grid"><div class="panel tall" id="ageProfile"></div><div class="panel tall" id="matched"></div></div>
+<h3>Child:coupling ratio, __BASE__ → __END__</h3>
+<div class="scroll"><table id="ratios"></table></div>
+<h3>Factors, ranked by how far they moved towards fewer births, __BASE__–__END__</h3>
+<table id="rank"></table>
+<script>
+const D = __DATA__;
+const PANELS = [
+  ["tfr", "TFR", ".2f"], ["mothers_by_30", "Mothers by 30 (%)", ".0f"], ["mothers_ever", "Ever mothers (%)", ".0f"],
+  ["second_child", "Mothers with a second child (%)", ".0f"], ["age_first", "Mean age at first birth", ".1f"],
+  ["couple_18_24", "Women 18–24 in a couple (%)", ".0f"], ["couple_25_49", "Women 25–49 in a couple (%)", ".0f"],
+  ["ratio_18_24", "Child by 21 ÷ couple 18–24", ".2f"], ["ratio_15_24", "Child by 20 ÷ couple 15–24", ".2f"],
+  ["ratio_25_34", "Child by 30 ÷ couple 25–34", ".2f"],
+];
+const BLUE = "#2a78d6", ORANGE = "#eb6834", AQUA = "#1baf7a";
+const smallLayout = title => ({
+  title: { text: title, font: { size: 12 }, x: 0.02 }, margin: { l: 40, r: 8, t: 28, b: 34 }, hovermode: "closest",
+  legend: { orientation: "h", y: -0.16, font: { size: 10 } }, plot_bgcolor: "#fff", paper_bgcolor: "#fff",
+  yaxis: { gridcolor: "#eef0f2", tickfont: { size: 10 }, rangemode: "tozero" },
+});
+
+function bandTrace(rows, key, name, color, dash) {
+  const single = rows.every(r => r.lo === r.hi), x = [], y = [], text = [];
+  rows.forEach(r => {
+    if (r[key] === null || r[key] === undefined) return;
+    if (single) { x.push(r.lo); y.push(r[key]); text.push(r.label); }
+    else { x.push(r.lo, Math.min(r.hi + 1, 40), null); y.push(r[key], r[key], null); text.push(r.label, r.label, null); }
+  });
+  return { x, y, text, name, mode: single ? "lines+markers" : "lines", line: { color, width: 2.5, dash: dash || "solid" }, marker: { size: 8, color },
+           hovertemplate: `${name}, age %{text}: %{y:.0f}%<extra></extra>` };
+}
+
+function drawAges(c) {
+  const p = D.profiles[c.iso], traces = [];
+  if (p) {
+    if (p.rows.length) {
+      traces.push(bandTrace(p.rows, "a", `${D.base} (${p.source})`, ORANGE));
+      traces.push(bandTrace(p.rows, "b", `${D.end} (${p.source})`, BLUE));
+    }
+    if (p.census) traces.push(bandTrace(p.census.rows, "v", `${p.census.year} (UN census or survey)`, AQUA, "dot"));
+  }
+  const l = smallLayout(`% of women in a couple, by age${p ? "" : " — no data"}`);
+  l.xaxis = { range: [15, 40], dtick: 5, showgrid: false, tickfont: { size: 10 }, title: { text: "Age", font: { size: 10 }, standoff: 2 } };
+  l.yaxis.ticksuffix = "%";
+  Plotly.react("ageProfile", traces, l, { displayModeBar: false, responsive: true });
+}
+
+function drawMatched(c) {
+  const row = D.ratio_dirs[c.iso] || {}, bands = D.matched_bands.filter(b => row[b]);
+  const trace = (i, name, color) => ({ x: bands, y: bands.map(b => row[b][i]), name, mode: "lines+markers", line: { color, width: 2.5 }, marker: { size: 8, color },
+    hovertemplate: `${name}, age %{x}: %{y:.2f}<extra></extra>` });
+  const l = smallLayout(bands.length ? "% with a child ÷ % in a couple, same ages" : "Same-age ratio — no single-year coupling");
+  l.xaxis = { type: "category", categoryorder: "array", categoryarray: D.matched_bands, showgrid: false, tickfont: { size: 10 } };
+  Plotly.react("matched", bands.length ? [trace(0, String(D.base), ORANGE), trace(1, String(D.end), BLUE)] : [], l, { displayModeBar: false, responsive: true });
+}
+
+function cell(v) {
+  if (!v) return `<td class="muted">–</td>`;
+  const ch = v[1] / v[0] - 1, cls = ch < -0.01 ? "fall" : ch > 0.01 ? "rise" : "", arrow = ch < -0.01 ? "↓" : ch > 0.01 ? "↑" : "→";
+  return `<td>${v[0].toFixed(2)} → ${v[1].toFixed(2)} <b class="${cls}">${arrow}</b></td>`;
+}
+
+function drawRatios(iso) {
+  const keys = [...Object.keys(D.ratio_labels), ...D.matched_bands];
+  const head = [...Object.values(D.ratio_labels), ...D.matched_bands.map(b => `Same ages, ${b}`)];
+  const rows = byName.filter(c => keys.some(k => (D.ratio_dirs[c.iso] || {})[k]));
+  document.getElementById("ratios").innerHTML = `<tr><th>Country</th>${head.map(h => `<th>${h}</th>`).join("")}</tr>` +
+    rows.map(c => `<tr data-iso="${c.iso}" class="${c.iso === iso ? "on" : ""}"><td>${c.name}</td>${keys.map(k => cell((D.ratio_dirs[c.iso] || {})[k])).join("")}</tr>`).join("");
+}
+const sel = document.getElementById("sel"), grid = document.getElementById("grid");
+const byName = [...D.countries].sort((a, b) => a.name.localeCompare(b.name));
+byName.forEach(c => sel.add(new Option(c.name, c.iso)));
+PANELS.forEach((p, i) => { const d = document.createElement("div"); d.className = "panel"; d.id = "p" + i; grid.appendChild(d); });
+
+const xy = s => { const ys = Object.keys(s).map(Number).filter(y => y >= 2000 && y <= 2023).sort(); return [ys, ys.map(y => s[y])]; };
+
+function draw(iso) {
+  const c = D.countries.find(c => c.iso === iso);
+  document.getElementById("summary").textContent =
+    `TFR ${c.tfr_base.toFixed(2)} → ${c.tfr_end.toFixed(2)} (${D.base}–${D.end}); ` +
+    (c.d_m30 === null ? "no matched 2010–2019 value for % with a child by 30" :
+      `with a child by 30${c.m30_source ? " (estimate)" : ""} ${c.m30_base.toFixed(0)}% → ${c.m30_end.toFixed(0)}%, ` +
+      `rank ${D.countries.indexOf(c) + 1} of ${D.countries.filter(x => x.d_m30 !== null).length} by size of fall`);
+  PANELS.forEach(([key, title, f], i) => {
+    const all = D.series[key] || {}, traces = [];
+    Object.entries(all).forEach(([k, s]) => {
+      if (k === iso) return;
+      const [x, y] = xy(s);
+      traces.push({ x, y, mode: "lines", line: { color: "#d1d5db", width: 1 }, hoverinfo: "skip", showlegend: false });
+    });
+    const own = all[iso];
+    if (own) {
+      const [x, y] = xy(own);
+      traces.push({ x, y, mode: "lines", line: { color: "#2a78d6", width: 2.5 }, showlegend: false,
+                    hovertemplate: `${c.name} %{x}: %{y:${f}}<extra></extra>` });
+    }
+    Plotly.react("p" + i, traces, {
+      title: { text: title + (own ? "" : " — no data"), font: { size: 12 }, x: 0.02 },
+      margin: { l: 36, r: 8, t: 28, b: 22 }, xaxis: { range: [2000, 2023], showgrid: false, tickfont: { size: 10 } },
+      yaxis: { gridcolor: "#eef0f2", tickfont: { size: 10 } }, plot_bgcolor: "#fff", paper_bgcolor: "#fff",
+      shapes: [{ type: "rect", xref: "x", yref: "paper", x0: D.base, x1: D.end, y0: 0, y1: 1, fillcolor: "#9ca3af", opacity: 0.1, line: { width: 0 } }],
+    }, { displayModeBar: false, responsive: true });
+  });
+
+  drawAges(c); drawMatched(c); drawRatios(iso);
+
+  const rows = D.rows.filter(r => r.kind === "factor").map(r => {
+    const v = r.cells[iso];
+    return { r, v, s: v === null || v === undefined ? null : Math.max(-1, Math.min(1, r.direction * v / (r.scale || 1))) };
+  }).sort((a, b) => (b.s ?? -9) - (a.s ?? -9));
+  document.getElementById("rank").innerHTML = rows.map(({ r, v, s }) => {
+    if (s === null) return `<tr><td>${r.label}</td><td class="muted" colspan="2">no data</td></tr>`;
+    const w = Math.abs(s) * 32, col = s >= 0 ? "#eb6834" : "#1baf7a", pos = s >= 0 ? `left:32px;width:${w}px` : `right:32px;width:${w}px`;
+    const sign = v > 0 ? "+" : v < 0 ? "−" : "";
+    return `<tr><td>${r.label}</td><td class="chip"><span><i style="background:${col};${pos}"></i></span></td>` +
+           `<td class="muted">${sign}${Math.abs(v).toFixed(1)}${r.unit} ${s >= 0 ? "towards fewer births" : "towards more births"}</td></tr>`;
+  }).join("");
+}
+
+function fromHash() {
+  let iso = (location.hash || "").slice(1);
+  try { iso = iso || (window.parent && window.parent.location.hash || "").slice(1); } catch (e) {}
+  return D.countries.some(c => c.iso === iso) ? iso : "FIN";
+}
+sel.value = fromHash();
+draw(sel.value);
+const choose = () => { draw(sel.value); try { history.replaceState(null, "", "#" + sel.value); } catch (e) {} };
+sel.addEventListener("change", choose);
+document.getElementById("ratios").addEventListener("click", e => {
+  const tr = e.target.closest("tr[data-iso]");
+  if (tr) { sel.value = tr.dataset.iso; choose(); }
+});
+</script>
+</body>
+</html>

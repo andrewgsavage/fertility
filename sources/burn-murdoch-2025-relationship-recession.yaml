@@ -10,6 +10,7 @@ oa: closed
 local:
 - FT/data/
 scripts:
+- eurostat/scripts/change_matrix.py
 - FT/scripts/ft_coupling.py
 measurables:
 - share-in-couple
