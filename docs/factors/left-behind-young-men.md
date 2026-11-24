@@ -48,6 +48,10 @@ Women were ahead of men in tertiary attainment among 25–34s in 29 of 32 countr
 Eurostat [attainment by sex and age](https://ec.europa.eu/eurostat/databrowser/view/edat_lfse_03/default/table) (edat_lfse_03; 38 countries, 1992–2025) and [NEET rates](https://ec.europa.eu/eurostat/databrowser/view/lfsi_neet_a/default/table) (lfsi_neet_a; 37 countries, 2003–2025, most from 2013 or later).
 ```
 
+## Coupling by employment status
+
+Coupling fell among employed and non-employed men alike, and changes in the employment mix explain little of the fall: see [Coupling by employment status](coupling-by-employment.md).
+
 ## Labour market activity and first births: Sweden
 
 [Ohlsson-Wijk & Andersson (2022)](https://doi.org/10.4054/DemRes.2022.47.12) model first-birth rates of Swedish-born men and women aged 16–45 from population registers, 1991–2018, by their main activity in the previous year:

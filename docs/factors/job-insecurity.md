@@ -48,6 +48,8 @@ Across countries the two are positively related: correlation 0.63 in 2005 (25 co
 Eurostat [temporary employees by age](https://ec.europa.eu/eurostat/databrowser/view/lfsa_etpgan/default/table) (38 countries, 1995–2025, many series start later) and [mean age at first birth](https://ec.europa.eu/eurostat/databrowser/view/demo_find/default/table) (34 countries in the scatter, 1995–2024). Youth unemployment is not shown.
 ```
 
+Coupling rates of full-time, part-time and non-employed adults, with a shift-share of the fall, are on [Coupling by employment status](coupling-by-employment.md).
+
 ## Across countries, 2010–2019
 
 Temporary contracts have a weak relation to the change in women with a child by 30. Youth unemployment fell in 15 of the 19 countries where fertility fell.

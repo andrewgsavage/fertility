@@ -1,0 +1,401 @@
+year,band,group,earn_q,persons,couples,n,sex
+2008,25-34,Employed full-time,1,1153144,404631,8279,Men
+2008,25-34,Employed full-time,2,3197421,1370773,22845,Men
+2008,25-34,Employed full-time,3,3634256,1911284,28691,Men
+2008,25-34,Employed full-time,4,3778170,2301343,32069,Men
+2008,25-34,Employed full-time,5,3827259,2611260,35998,Men
+2008,25-34,Employed part-time,1,764529,208109,5935,Men
+2008,25-34,Employed part-time,2,452044,168097,3540,Men
+2008,25-34,Employed part-time,3,153433,70313,1216,Men
+2008,25-34,Employed part-time,4,70918,35943,567,Men
+2008,25-34,Employed part-time,5,52031,27596,445,Men
+2008,25-34,"Not in labour force, in education",1,303729,80350,2421,Men
+2008,25-34,"Not in labour force, in education",2,23241,9255,189,Men
+2008,25-34,"Not in labour force, in education",3,9355,3536,75,Men
+2008,25-34,"Not in labour force, in education",4,6180,2495,55,Men
+2008,25-34,"Not in labour force, in education",5,4423,883,39,Men
+2008,25-34,"Not in labour force, not in education",1,1025203,239890,7391,Men
+2008,25-34,"Not in labour force, not in education",2,60196,23919,452,Men
+2008,25-34,"Not in labour force, not in education",3,26446,10886,205,Men
+2008,25-34,"Not in labour force, not in education",4,15991,7007,140,Men
+2008,25-34,"Not in labour force, not in education",5,15619,7711,113,Men
+2008,25-34,Unemployed,1,687179,180484,5117,Men
+2008,25-34,Unemployed,2,200884,73160,1474,Men
+2008,25-34,Unemployed,3,110302,46767,795,Men
+2008,25-34,Unemployed,4,62529,30371,502,Men
+2008,25-34,Unemployed,5,34463,16701,273,Men
+2008,35-44,Employed full-time,1,1545898,825717,12350,Men
+2008,35-44,Employed full-time,2,3702861,2296255,31182,Men
+2008,35-44,Employed full-time,3,3951318,2757620,36155,Men
+2008,35-44,Employed full-time,4,4035619,3085686,38214,Men
+2008,35-44,Employed full-time,5,4045482,3353164,40221,Men
+2008,35-44,Employed part-time,1,610306,282359,5109,Men
+2008,35-44,Employed part-time,2,235261,139862,2026,Men
+2008,35-44,Employed part-time,3,95737,62812,864,Men
+2008,35-44,Employed part-time,4,53930,34593,503,Men
+2008,35-44,Employed part-time,5,61613,42755,555,Men
+2008,35-44,"Not in labour force, in education",1,90374,42649,758,Men
+2008,35-44,"Not in labour force, in education",2,5081,2635,39,Men
+2008,35-44,"Not in labour force, in education",3,1902,1256,17,Men
+2008,35-44,"Not in labour force, in education",4,1525,1135,17,Men
+2008,35-44,"Not in labour force, in education",5,927,237,7,Men
+2008,35-44,"Not in labour force, not in education",1,1310226,475027,10638,Men
+2008,35-44,"Not in labour force, not in education",2,48936,28572,397,Men
+2008,35-44,"Not in labour force, not in education",3,25740,16239,215,Men
+2008,35-44,"Not in labour force, not in education",4,14199,8420,130,Men
+2008,35-44,"Not in labour force, not in education",5,13381,8708,116,Men
+2008,35-44,Unemployed,1,592508,249209,4785,Men
+2008,35-44,Unemployed,2,157385,76671,1289,Men
+2008,35-44,Unemployed,3,74908,45878,633,Men
+2008,35-44,Unemployed,4,44204,28454,395,Men
+2008,35-44,Unemployed,5,28083,17302,262,Men
+2008,25-34,Employed full-time,1,5395,4010,59,Women
+2008,25-34,Employed full-time,2,1207710,537567,9828,Women
+2008,25-34,Employed full-time,3,2900609,1387393,23703,Women
+2008,25-34,Employed full-time,4,3526801,1895783,30824,Women
+2008,25-34,Employed full-time,5,3667332,2176873,35794,Women
+2008,25-34,Employed part-time,1,11183,7613,103,Women
+2008,25-34,Employed part-time,2,1702571,900768,14870,Women
+2008,25-34,Employed part-time,3,778851,448210,6969,Women
+2008,25-34,Employed part-time,4,278262,189847,2684,Women
+2008,25-34,Employed part-time,5,185657,139027,1848,Women
+2008,25-34,"Not in labour force, in education",1,408745,197670,3574,Women
+2008,25-34,"Not in labour force, in education",2,138693,64841,1264,Women
+2008,25-34,"Not in labour force, in education",3,29727,15173,279,Women
+2008,25-34,"Not in labour force, in education",4,13003,5534,133,Women
+2008,25-34,"Not in labour force, in education",5,10204,4530,92,Women
+2008,25-34,"Not in labour force, not in education",1,3116477,2136706,26368,Women
+2008,25-34,"Not in labour force, not in education",2,488059,325205,4387,Women
+2008,25-34,"Not in labour force, not in education",3,102939,72110,893,Women
+2008,25-34,"Not in labour force, not in education",4,43223,29103,413,Women
+2008,25-34,"Not in labour force, not in education",5,28949,21341,295,Women
+2008,25-34,Unemployed,1,381878,154382,3039,Women
+2008,25-34,Unemployed,2,386759,145868,3159,Women
+2008,25-34,Unemployed,3,111488,42773,927,Women
+2008,25-34,Unemployed,4,62569,29381,536,Women
+2008,25-34,Unemployed,5,31605,13575,278,Women
+2008,35-44,Employed full-time,1,6491,5626,81,Women
+2008,35-44,Employed full-time,2,1345324,755724,12137,Women
+2008,35-44,Employed full-time,3,3231863,1915286,29678,Women
+2008,35-44,Employed full-time,4,3766004,2328288,35673,Women
+2008,35-44,Employed full-time,5,3906466,2564267,38308,Women
+2008,35-44,Employed part-time,1,9120,7401,110,Women
+2008,35-44,Employed part-time,2,1921490,1356135,19087,Women
+2008,35-44,Employed part-time,3,812256,604208,8146,Women
+2008,35-44,Employed part-time,4,376029,309586,3880,Women
+2008,35-44,Employed part-time,5,267681,213004,2798,Women
+2008,35-44,"Not in labour force, in education",1,197729,132850,1867,Women
+2008,35-44,"Not in labour force, in education",2,58128,37220,576,Women
+2008,35-44,"Not in labour force, in education",3,8856,5853,93,Women
+2008,35-44,"Not in labour force, in education",4,5223,2964,52,Women
+2008,35-44,"Not in labour force, in education",5,2377,1604,24,Women
+2008,35-44,"Not in labour force, not in education",1,3693234,2718079,34436,Women
+2008,35-44,"Not in labour force, not in education",2,594086,464517,6078,Women
+2008,35-44,"Not in labour force, not in education",3,75154,54146,699,Women
+2008,35-44,"Not in labour force, not in education",4,40053,28744,391,Women
+2008,35-44,"Not in labour force, not in education",5,30552,22897,307,Women
+2008,35-44,Unemployed,1,329833,179977,2900,Women
+2008,35-44,Unemployed,2,317398,161392,2844,Women
+2008,35-44,Unemployed,3,108467,50656,958,Women
+2008,35-44,Unemployed,4,49150,25506,437,Women
+2008,35-44,Unemployed,5,29471,14755,263,Women
+2013,25-34,Employed full-time,1,534312,183472,4199,Men
+2013,25-34,Employed full-time,2,2723951,1057393,20485,Men
+2013,25-34,Employed full-time,3,3713981,1725306,29477,Men
+2013,25-34,Employed full-time,4,3928062,2265851,33720,Men
+2013,25-34,Employed full-time,5,4005970,2599392,36004,Men
+2013,25-34,Employed part-time,1,683233,161118,5470,Men
+2013,25-34,Employed part-time,2,979039,307344,7723,Men
+2013,25-34,Employed part-time,3,249459,98433,2017,Men
+2013,25-34,Employed part-time,4,89363,44809,709,Men
+2013,25-34,Employed part-time,5,50255,26601,426,Men
+2013,25-34,"Not in labour force, in education",1,453518,105800,3509,Men
+2013,25-34,"Not in labour force, in education",2,39211,12377,332,Men
+2013,25-34,"Not in labour force, in education",3,13876,5049,113,Men
+2013,25-34,"Not in labour force, in education",4,7211,3319,60,Men
+2013,25-34,"Not in labour force, in education",5,3981,1174,34,Men
+2013,25-34,"Not in labour force, not in education",1,1365230,279232,10803,Men
+2013,25-34,"Not in labour force, not in education",2,81351,27678,676,Men
+2013,25-34,"Not in labour force, not in education",3,32007,10552,248,Men
+2013,25-34,"Not in labour force, not in education",4,20024,9858,168,Men
+2013,25-34,"Not in labour force, not in education",5,15676,7266,138,Men
+2013,25-34,Unemployed,1,1079362,246405,8485,Men
+2013,25-34,Unemployed,2,291961,93592,2247,Men
+2013,25-34,Unemployed,3,106316,43234,833,Men
+2013,25-34,Unemployed,4,71079,29672,546,Men
+2013,25-34,Unemployed,5,39911,17723,323,Men
+2013,35-44,Employed full-time,1,828689,444758,6778,Men
+2013,35-44,Employed full-time,2,3251248,1895594,26377,Men
+2013,35-44,Employed full-time,3,3708345,2539134,33042,Men
+2013,35-44,Employed full-time,4,3811242,2905183,35428,Men
+2013,35-44,Employed full-time,5,3851303,3206229,37249,Men
+2013,35-44,Employed part-time,1,636132,273016,5363,Men
+2013,35-44,Employed part-time,2,446874,248228,3729,Men
+2013,35-44,Employed part-time,3,118520,76044,1063,Men
+2013,35-44,Employed part-time,4,64082,41823,560,Men
+2013,35-44,Employed part-time,5,49488,36105,445,Men
+2013,35-44,"Not in labour force, in education",1,132081,59739,1097,Men
+2013,35-44,"Not in labour force, in education",2,6247,3505,55,Men
+2013,35-44,"Not in labour force, in education",3,2261,2261,19,Men
+2013,35-44,"Not in labour force, in education",4,1375,1067,7,Men
+2013,35-44,"Not in labour force, in education",5,493,297,6,Men
+2013,35-44,"Not in labour force, not in education",1,1516280,551097,12515,Men
+2013,35-44,"Not in labour force, not in education",2,59667,30076,499,Men
+2013,35-44,"Not in labour force, not in education",3,24504,13662,207,Men
+2013,35-44,"Not in labour force, not in education",4,17773,11405,160,Men
+2013,35-44,"Not in labour force, not in education",5,10051,5472,98,Men
+2013,35-44,Unemployed,1,822408,328087,6717,Men
+2013,35-44,Unemployed,2,171537,90172,1444,Men
+2013,35-44,Unemployed,3,82040,48308,665,Men
+2013,35-44,Unemployed,4,40629,23679,354,Men
+2013,35-44,Unemployed,5,24837,14830,219,Men
+2013,25-34,Employed full-time,1,1717,1002,23,Women
+2013,25-34,Employed full-time,2,888866,348935,7215,Women
+2013,25-34,Employed full-time,3,2767374,1200102,22718,Women
+2013,25-34,Employed full-time,4,3697835,1872775,31905,Women
+2013,25-34,Employed full-time,5,3954244,2345092,35806,Women
+2013,25-34,Employed part-time,1,3403,2318,38,Women
+2013,25-34,Employed part-time,2,1774249,774930,15294,Women
+2013,25-34,Employed part-time,3,1134190,546369,9661,Women
+2013,25-34,Employed part-time,4,358583,221263,3234,Women
+2013,25-34,Employed part-time,5,173518,121528,1624,Women
+2013,25-34,"Not in labour force, in education",1,490111,207425,4120,Women
+2013,25-34,"Not in labour force, in education",2,188664,85713,1704,Women
+2013,25-34,"Not in labour force, in education",3,29969,12804,291,Women
+2013,25-34,"Not in labour force, in education",4,15054,6985,125,Women
+2013,25-34,"Not in labour force, in education",5,3325,1345,38,Women
+2013,25-34,"Not in labour force, not in education",1,3043058,1892701,25537,Women
+2013,25-34,"Not in labour force, not in education",2,837824,551069,7459,Women
+2013,25-34,"Not in labour force, not in education",3,100458,61374,899,Women
+2013,25-34,"Not in labour force, not in education",4,46918,32838,396,Women
+2013,25-34,"Not in labour force, not in education",5,26152,19656,242,Women
+2013,25-34,Unemployed,1,647303,219036,5234,Women
+2013,25-34,Unemployed,2,495917,182129,4078,Women
+2013,25-34,Unemployed,3,153621,60877,1253,Women
+2013,25-34,Unemployed,4,67199,27891,542,Women
+2013,25-34,Unemployed,5,28451,13677,255,Women
+2013,35-44,Employed full-time,1,4410,3038,51,Women
+2013,35-44,Employed full-time,2,874486,476259,7699,Women
+2013,35-44,Employed full-time,3,2946788,1652296,25519,Women
+2013,35-44,Employed full-time,4,3622081,2246142,33034,Women
+2013,35-44,Employed full-time,5,3812256,2613323,36483,Women
+2013,35-44,Employed part-time,1,6904,4884,75,Women
+2013,35-44,Employed part-time,2,1710798,1070247,16037,Women
+2013,35-44,Employed part-time,3,923835,618111,8704,Women
+2013,35-44,Employed part-time,4,371538,288573,3699,Women
+2013,35-44,Employed part-time,5,216918,179089,2210,Women
+2013,35-44,"Not in labour force, in education",1,230890,140610,2087,Women
+2013,35-44,"Not in labour force, in education",2,82448,52217,784,Women
+2013,35-44,"Not in labour force, in education",3,11831,7093,100,Women
+2013,35-44,"Not in labour force, in education",4,3795,1708,33,Women
+2013,35-44,"Not in labour force, in education",5,2762,1626,22,Women
+2013,35-44,"Not in labour force, not in education",1,3336009,2332863,30121,Women
+2013,35-44,"Not in labour force, not in education",2,1016499,761152,9572,Women
+2013,35-44,"Not in labour force, not in education",3,85420,61243,759,Women
+2013,35-44,"Not in labour force, not in education",4,37689,28490,340,Women
+2013,35-44,"Not in labour force, not in education",5,20895,15766,208,Women
+2013,35-44,Unemployed,1,502047,239163,4383,Women
+2013,35-44,Unemployed,2,396108,192373,3418,Women
+2013,35-44,Unemployed,3,112390,55947,976,Women
+2013,35-44,Unemployed,4,45077,23903,407,Women
+2013,35-44,Unemployed,5,27676,14525,265,Women
+2018,25-34,Employed full-time,1,855145,262146,6766,Men
+2018,25-34,Employed full-time,2,3375678,1194058,25168,Men
+2018,25-34,Employed full-time,3,4117489,1845821,33287,Men
+2018,25-34,Employed full-time,4,4274206,2361606,36840,Men
+2018,25-34,Employed full-time,5,4326748,2762270,38995,Men
+2018,25-34,Employed part-time,1,914318,176583,7194,Men
+2018,25-34,Employed part-time,2,782677,204138,6064,Men
+2018,25-34,Employed part-time,3,190579,76509,1531,Men
+2018,25-34,Employed part-time,4,82462,37218,663,Men
+2018,25-34,Employed part-time,5,50323,25860,462,Men
+2018,25-34,"Not in labour force, in education",1,418736,92479,3243,Men
+2018,25-34,"Not in labour force, in education",2,27127,8497,231,Men
+2018,25-34,"Not in labour force, in education",3,11127,3718,88,Men
+2018,25-34,"Not in labour force, in education",4,7073,3398,65,Men
+2018,25-34,"Not in labour force, in education",5,3460,1279,31,Men
+2018,25-34,"Not in labour force, not in education",1,1525268,268003,11658,Men
+2018,25-34,"Not in labour force, not in education",2,71659,22582,580,Men
+2018,25-34,"Not in labour force, not in education",3,29750,10180,241,Men
+2018,25-34,"Not in labour force, not in education",4,20777,7879,170,Men
+2018,25-34,"Not in labour force, not in education",5,12412,6429,117,Men
+2018,25-34,Unemployed,1,706128,127605,5396,Men
+2018,25-34,Unemployed,2,162595,43807,1205,Men
+2018,25-34,Unemployed,3,70687,24051,540,Men
+2018,25-34,Unemployed,4,35248,14739,301,Men
+2018,25-34,Unemployed,5,26762,10602,201,Men
+2018,35-44,Employed full-time,1,1197020,617073,9520,Men
+2018,35-44,Employed full-time,2,3599187,2051967,28206,Men
+2018,35-44,Employed full-time,3,3859507,2645094,33993,Men
+2018,35-44,Employed full-time,4,3924931,2964983,36018,Men
+2018,35-44,Employed full-time,5,3946407,3291904,37855,Men
+2018,35-44,Employed part-time,1,693863,295223,5773,Men
+2018,35-44,Employed part-time,2,289705,168538,2424,Men
+2018,35-44,Employed part-time,3,96969,63909,867,Men
+2018,35-44,Employed part-time,4,56915,40140,512,Men
+2018,35-44,Employed part-time,5,52581,40760,504,Men
+2018,35-44,"Not in labour force, in education",1,108254,52933,914,Men
+2018,35-44,"Not in labour force, in education",2,2889,1784,28,Men
+2018,35-44,"Not in labour force, in education",3,2273,1398,24,Men
+2018,35-44,"Not in labour force, in education",4,1807,893,15,Men
+2018,35-44,"Not in labour force, in education",5,1202,683,9,Men
+2018,35-44,"Not in labour force, not in education",1,1527032,513417,12319,Men
+2018,35-44,"Not in labour force, not in education",2,44029,23308,365,Men
+2018,35-44,"Not in labour force, not in education",3,18609,11508,191,Men
+2018,35-44,"Not in labour force, not in education",4,16802,9806,162,Men
+2018,35-44,"Not in labour force, not in education",5,9689,6872,103,Men
+2018,35-44,Unemployed,1,497978,169365,3993,Men
+2018,35-44,Unemployed,2,88678,44186,699,Men
+2018,35-44,Unemployed,3,46903,24261,394,Men
+2018,35-44,Unemployed,4,23912,15329,216,Men
+2018,35-44,Unemployed,5,14471,8421,143,Men
+2018,25-34,Employed full-time,1,26219,10962,207,Women
+2018,25-34,Employed full-time,2,1571527,592440,12639,Women
+2018,25-34,Employed full-time,3,3405839,1388541,27422,Women
+2018,25-34,Employed full-time,4,4042017,2048103,35202,Women
+2018,25-34,Employed full-time,5,4213174,2479775,38462,Women
+2018,25-34,Employed part-time,1,116931,51899,1027,Women
+2018,25-34,Employed part-time,2,2041272,883772,17406,Women
+2018,25-34,Employed part-time,3,828436,399208,6981,Women
+2018,25-34,Employed part-time,4,296205,187520,2665,Women
+2018,25-34,Employed part-time,5,171182,122107,1605,Women
+2018,25-34,"Not in labour force, in education",1,488796,200123,3961,Women
+2018,25-34,"Not in labour force, in education",2,115907,53262,1001,Women
+2018,25-34,"Not in labour force, in education",3,22470,10283,204,Women
+2018,25-34,"Not in labour force, in education",4,11375,4082,97,Women
+2018,25-34,"Not in labour force, in education",5,3914,1876,35,Women
+2018,25-34,"Not in labour force, not in education",1,3346065,2055761,27831,Women
+2018,25-34,"Not in labour force, not in education",2,406908,246523,3666,Women
+2018,25-34,"Not in labour force, not in education",3,83489,52838,700,Women
+2018,25-34,"Not in labour force, not in education",4,42558,24366,370,Women
+2018,25-34,"Not in labour force, not in education",5,23514,15464,196,Women
+2018,25-34,Unemployed,1,451866,155914,3466,Women
+2018,25-34,Unemployed,2,294187,91410,2288,Women
+2018,25-34,Unemployed,3,89482,30452,636,Women
+2018,25-34,Unemployed,4,37956,16143,317,Women
+2018,25-34,Unemployed,5,18112,8817,163,Women
+2018,35-44,Employed full-time,1,4469,3404,50,Women
+2018,35-44,Employed full-time,2,1348647,701842,11211,Women
+2018,35-44,Employed full-time,3,3293142,1812828,27748,Women
+2018,35-44,Employed full-time,4,3754729,2366890,34321,Women
+2018,35-44,Employed full-time,5,3913110,2798824,37201,Women
+2018,35-44,Employed part-time,1,6087,5048,69,Women
+2018,35-44,Employed part-time,2,1888925,1211325,17107,Women
+2018,35-44,Employed part-time,3,736427,500231,6743,Women
+2018,35-44,Employed part-time,4,337461,265584,3262,Women
+2018,35-44,Employed part-time,5,206574,168222,2008,Women
+2018,35-44,"Not in labour force, in education",1,172271,105844,1540,Women
+2018,35-44,"Not in labour force, in education",2,55028,34000,494,Women
+2018,35-44,"Not in labour force, in education",3,4325,2298,50,Women
+2018,35-44,"Not in labour force, in education",4,3602,2557,30,Women
+2018,35-44,"Not in labour force, in education",5,2054,1204,20,Women
+2018,35-44,"Not in labour force, not in education",1,3661096,2575419,31652,Women
+2018,35-44,"Not in labour force, not in education",2,631095,454888,5909,Women
+2018,35-44,"Not in labour force, not in education",3,63806,42522,582,Women
+2018,35-44,"Not in labour force, not in education",4,35009,23755,313,Women
+2018,35-44,"Not in labour force, not in education",5,17881,13632,162,Women
+2018,35-44,Unemployed,1,314565,152459,2590,Women
+2018,35-44,Unemployed,2,234797,110669,2040,Women
+2018,35-44,Unemployed,3,60838,30505,502,Women
+2018,35-44,Unemployed,4,27679,16348,255,Women
+2018,35-44,Unemployed,5,18978,10193,163,Women
+2023,25-34,Employed full-time,1,1013387,373849,8355,Men
+2023,25-34,Employed full-time,2,3504634,1313727,28565,Men
+2023,25-34,Employed full-time,3,4151329,2019313,34564,Men
+2023,25-34,Employed full-time,4,4258183,2458626,37145,Men
+2023,25-34,Employed full-time,5,4299873,2781611,38666,Men
+2023,25-34,Employed part-time,1,944322,206690,8274,Men
+2023,25-34,Employed part-time,2,679561,202488,5794,Men
+2023,25-34,Employed part-time,3,169078,75284,1435,Men
+2023,25-34,Employed part-time,4,98835,48262,829,Men
+2023,25-34,Employed part-time,5,73232,40742,694,Men
+2023,25-34,"Not in labour force, in education",1,315220,72074,2806,Men
+2023,25-34,"Not in labour force, in education",2,22688,8113,208,Men
+2023,25-34,"Not in labour force, in education",3,7986,3228,66,Men
+2023,25-34,"Not in labour force, in education",4,6002,2841,45,Men
+2023,25-34,"Not in labour force, in education",5,5272,1658,32,Men
+2023,25-34,"Not in labour force, not in education",1,1572316,300136,13730,Men
+2023,25-34,"Not in labour force, not in education",2,80444,28794,630,Men
+2023,25-34,"Not in labour force, not in education",3,37187,14786,283,Men
+2023,25-34,"Not in labour force, not in education",4,24643,9818,190,Men
+2023,25-34,"Not in labour force, not in education",5,16376,6925,141,Men
+2023,25-34,Unemployed,1,581827,123711,4917,Men
+2023,25-34,Unemployed,2,139706,44845,1097,Men
+2023,25-34,Unemployed,3,61603,23536,493,Men
+2023,25-34,Unemployed,4,39382,15043,346,Men
+2023,25-34,Unemployed,5,32426,15562,283,Men
+2023,35-44,Employed full-time,1,1359680,747429,11168,Men
+2023,35-44,Employed full-time,2,3873748,2309584,31754,Men
+2023,35-44,Employed full-time,3,4185491,2913685,36268,Men
+2023,35-44,Employed full-time,4,4245231,3293179,38205,Men
+2023,35-44,Employed full-time,5,4267585,3575448,40367,Men
+2023,35-44,Employed part-time,1,801194,367729,6874,Men
+2023,35-44,Employed part-time,2,355287,210127,2988,Men
+2023,35-44,Employed part-time,3,126613,82813,1080,Men
+2023,35-44,Employed part-time,4,84692,55412,756,Men
+2023,35-44,Employed part-time,5,77959,60667,772,Men
+2023,35-44,"Not in labour force, in education",1,92938,42824,787,Men
+2023,35-44,"Not in labour force, in education",2,5827,2976,50,Men
+2023,35-44,"Not in labour force, in education",3,1948,1474,15,Men
+2023,35-44,"Not in labour force, in education",4,1344,641,15,Men
+2023,35-44,"Not in labour force, in education",5,809,489,8,Men
+2023,35-44,"Not in labour force, not in education",1,1652273,597214,14652,Men
+2023,35-44,"Not in labour force, not in education",2,59168,33852,493,Men
+2023,35-44,"Not in labour force, not in education",3,27968,17834,228,Men
+2023,35-44,"Not in labour force, not in education",4,22557,14786,180,Men
+2023,35-44,"Not in labour force, not in education",5,14572,8773,133,Men
+2023,35-44,Unemployed,1,479216,194605,3999,Men
+2023,35-44,Unemployed,2,91304,47588,779,Men
+2023,35-44,Unemployed,3,43233,24666,379,Men
+2023,35-44,Unemployed,4,31505,18828,272,Men
+2023,35-44,Unemployed,5,24469,16521,245,Men
+2023,25-34,Employed full-time,1,116369,53276,934,Women
+2023,25-34,Employed full-time,2,2002351,849243,16744,Women
+2023,25-34,Employed full-time,3,3647097,1674547,30283,Women
+2023,25-34,Employed full-time,4,4077093,2214639,35354,Women
+2023,25-34,Employed full-time,5,4206954,2594699,38265,Women
+2023,25-34,Employed part-time,1,368952,178949,3217,Women
+2023,25-34,Employed part-time,2,1877657,877735,16519,Women
+2023,25-34,Employed part-time,3,630124,340063,5399,Women
+2023,25-34,Employed part-time,4,274696,170261,2482,Women
+2023,25-34,Employed part-time,5,174146,116318,1648,Women
+2023,25-34,"Not in labour force, in education",1,430147,188859,3692,Women
+2023,25-34,"Not in labour force, in education",2,75893,33552,632,Women
+2023,25-34,"Not in labour force, in education",3,19721,9176,156,Women
+2023,25-34,"Not in labour force, in education",4,9202,2223,80,Women
+2023,25-34,"Not in labour force, in education",5,5121,2335,45,Women
+2023,25-34,"Not in labour force, not in education",1,3108181,1910632,27043,Women
+2023,25-34,"Not in labour force, not in education",2,288447,178842,2437,Women
+2023,25-34,"Not in labour force, not in education",3,75731,48723,645,Women
+2023,25-34,"Not in labour force, not in education",4,38649,23987,342,Women
+2023,25-34,"Not in labour force, not in education",5,30684,18856,246,Women
+2023,25-34,Unemployed,1,424738,165420,3440,Women
+2023,25-34,Unemployed,2,204618,81884,1646,Women
+2023,25-34,Unemployed,3,75889,25573,577,Women
+2023,25-34,Unemployed,4,49100,21629,342,Women
+2023,25-34,Unemployed,5,31913,14397,274,Women
+2023,35-44,Employed full-time,1,31548,20696,251,Women
+2023,35-44,Employed full-time,2,1833923,1028060,15877,Women
+2023,35-44,Employed full-time,3,3665825,2143469,32024,Women
+2023,35-44,Employed full-time,4,4040552,2678658,36845,Women
+2023,35-44,Employed full-time,5,4166715,3069773,40309,Women
+2023,35-44,Employed part-time,1,103417,62811,972,Women
+2023,35-44,Employed part-time,2,2037474,1339845,18520,Women
+2023,35-44,Employed part-time,3,643678,452870,5927,Women
+2023,35-44,Employed part-time,4,321738,244102,3088,Women
+2023,35-44,Employed part-time,5,210910,168484,2117,Women
+2023,35-44,"Not in labour force, in education",1,186013,120715,1653,Women
+2023,35-44,"Not in labour force, in education",2,31561,17934,287,Women
+2023,35-44,"Not in labour force, in education",3,7268,5340,64,Women
+2023,35-44,"Not in labour force, in education",4,3775,2143,32,Women
+2023,35-44,"Not in labour force, in education",5,2337,1656,22,Women
+2023,35-44,"Not in labour force, not in education",1,3761705,2708446,34021,Women
+2023,35-44,"Not in labour force, not in education",2,340543,246803,3177,Women
+2023,35-44,"Not in labour force, not in education",3,59634,38860,535,Women
+2023,35-44,"Not in labour force, not in education",4,34663,22900,316,Women
+2023,35-44,"Not in labour force, not in education",5,24097,16708,236,Women
+2023,35-44,Unemployed,1,351224,191087,2917,Women
+2023,35-44,Unemployed,2,190511,84175,1599,Women
+2023,35-44,Unemployed,3,57601,28274,453,Women
+2023,35-44,Unemployed,4,33221,19670,293,Women
+2023,35-44,Unemployed,5,29952,20435,277,Women
