@@ -51,15 +51,22 @@ Previously married people (separated, divorced or widowed) who are not living in
 <iframe src="../_static/ons/union_stability_ew.html" style="width: 100%; height: 840px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
-| Women 40–44 | 2002 | 2010 | 2025 |
+| Women 40–44, % of all women 40–44 | 2002 | 2010 | 2025 |
 |---|--:|--:|--:|
+| Married, living with spouse (first marriage or remarried) | 67.0% | 59.0% | 63.5% |
+| Never married, cohabiting | 4.1% | 7.2% | 11.5% |
+| Never married, not in a couple | 8.8% | 12.5% | 14.4% |
+| Previously married, cohabiting with a new partner | 5.6% | 5.7% | 2.2% |
 | Previously married, not in a couple | 14.5% | 15.6% | 8.5% |
-| Previously married, cohabiting | 5.6% | 5.7% | 2.2% |
-| Re-partnered share | 28.0% | 26.6% | 20.3% |
-| Not in a couple (any status) | 23.2% | 28.1% | 22.9% |
+| **Total** | **100%** | **100%** | **100%** |
+| *Not in a couple, any status (sum of the two "not in a couple" rows)* | *23.2%* | *28.1%* | *22.9%* |
+
+| Women 40–44, % of previously married women who have not remarried | 2002 | 2010 | 2025 |
+|---|--:|--:|--:|
+| Cohabiting with a new partner (re-partnered share) | 28.0% | 26.6% | 20.3% |
 
 ```{note}
-ONS [Population estimates by marital status and living arrangements](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesbymaritalstatusandlivingarrangements), England and Wales, 2002–2025 (Labour Force Survey weighted to mid-year population estimates). Legal marital status: separations of never-married cohabiting couples are not counted, and remarried people are counted as married. Partners living apart for work, prison or a care home count as previously married and not in a couple. Survey estimates; single-year changes in the re-partnered share are within sampling error.
+ONS [Population estimates by marital status and living arrangements](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesbymaritalstatusandlivingarrangements), England and Wales, 2002–2025 (Labour Force Survey weighted to mid-year population estimates). Legal marital status: separations of never-married cohabiting couples are not counted, and remarried people are counted as married. Partners living apart for work, prison or a care home count as previously married and not in a couple. Rows may not add to exactly 100% because of rounding. Survey estimates; single-year changes in the re-partnered share are within sampling error.
 ```
 
 ## Lone parents, Europe

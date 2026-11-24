@@ -12,6 +12,9 @@ not living with the spouse), divorced or widowed. Per age group and sex:
   have not remarried who live with a new partner. People who remarried are counted as married
   and cannot be told apart from people in a first marriage, so this understates re-partnering.
 - not_in_couple: % of all people not living in a couple, for scale.
+- married_pct, never_cohab, never_single: % of all people who are married and living with
+  the spouse (first marriage or remarried), never married and cohabiting, and never married
+  and not in a couple. With prev_single and prev_cohab these five sum to 100.
 
 Marital status is legal status: a cohabiting couple who were never married and split up
 shows up only as "never married, not living in a couple". Partners living apart for work,
@@ -72,10 +75,15 @@ def load():
         t["prev_cohab"] = 100 * t.cohab_prev / total
         t["repartnered"] = 100 * t.cohab_prev / (t.cohab_prev + t.single_prev)
         t["not_in_couple"] = 100 * (t.single_never + t.single_prev) / total
+        # Remaining shares of all people, so that with prev_single and prev_cohab they sum to 100.
+        t["married_pct"] = 100 * t.married / total
+        t["never_cohab"] = 100 * t.cohab_never / total
+        t["never_single"] = 100 * t.single_never / total
         t["sex"] = sex
         rows.append(t)
     d = pd.concat(rows)
-    return d[["sex", "age", "year", "prev_single", "prev_cohab", "repartnered", "not_in_couple"]]
+    return d[["sex", "age", "year", "married_pct", "never_cohab", "never_single",
+              "prev_cohab", "prev_single", "repartnered", "not_in_couple"]]
 
 
 def plot(d):

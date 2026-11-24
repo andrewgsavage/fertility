@@ -6,6 +6,10 @@ This page was written by AI and has not been fully reviewed. Check figures and c
 
 Part of [Partnership formation](partnership-formation.md). The FT split the fall in the US TFR into fewer couples and fewer births per couple (ACS, 2000–2022: −14.5% from fewer couples, −2.5% from fewer births among couples; see [Coupling over time](coupling-trends.md)). This page makes the same split for every country with coupling rates by age and fertility rates for the same years.
 
+```{caution}
+"Births per coupled woman" is a poor measure of whether couples are having fewer children, because it ignores how long the couple has been together. When couples form later, a woman in a couple at a given age has on average been in that couple for fewer years, and first births typically come a few years after a union starts (see [Couple to first birth](union-to-first-birth.md)). So later coupling lowers births per coupled woman at younger ages even if every couple goes on to have the same number of children. The split books that effect as "fewer births per couple" rather than "fewer couples", so the couples part understates the role of partnering and the births-per-couple part overstates a change in couples' fertility. The US age pattern fits this: births per coupled woman fell under 30 and rose at 35 and over. Births per couple by years since the union began, or completed fertility of women who partnered, would separate the two effects; neither is in the published tables used here.
+```
+
 **Method.** At each age, fertility is the share of women in a couple (married or cohabiting) times births per coupled woman, plus the share not in a couple times births per woman not in a couple. The change between two years splits exactly into:
 
 - **fewer couples**: the change in the share in a couple, times the gap between births per coupled and per uncoupled woman;
