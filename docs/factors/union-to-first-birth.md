@@ -112,6 +112,7 @@ Japan: Ministry of Health, Labour and Welfare, [Specified Report of Vital Statis
 
 ::::
 
+(couples-living-with-children-by-age)=
 ## Couples living with children, by age
 
 Of women living in a couple, the share who live with a child of their own fell after 2010 under age 30 in all three countries with census data at 5-year ages. Above 30 they differ. In Japan it held at 30–34 and rose at 35–39: couples had children later, as the longer time from moving in together to a first birth shows. In South Korea it also fell at 30–34 and 35–39, by 13 and 7 points, so fewer couples had a child at all, not only later. New Zealand fell slowly at 30–34 and 35–39, faster after 2018. In Japan the share barely moved between 2005 and 2010. Unlike the times above, these shares include couples who never have a child.

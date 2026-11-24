@@ -19,7 +19,7 @@ The share of women aged 25–34 with a degree rose in every country; it rose mor
 <iframe src="../_static/eurostat/change_scatter_tertiary_women.html" style="width: 100%; height: 440px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
-Each dot is a country. See the [change matrix](change-matrix.md) for all factors side by side.
+Each dot is a country. See the [country comparison](country-comparison.md) for all factors side by side.
 
 ## Findings in the source registry
 

@@ -39,7 +39,7 @@ Changes in the price-to-income ratio have a weak relation to changes in the shar
 <iframe src="../_static/eurostat/change_scatter_price_to_income.html" style="width: 100%; height: 440px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
-Each dot is a country. See the [change matrix](change-matrix.md) for all factors side by side.
+Each dot is a country. See the [country comparison](country-comparison.md) for all factors side by side.
 
 ## The UK since 2022
 

@@ -1,4 +1,4 @@
-"""Factor-by-country change matrix, country profiles and per-factor scatters.
+"""Factor-by-country change matrix, country detail and per-factor scatters.
 
 For about 20 low-fertility countries, compares how fertility outcomes and
 proposed factors changed between 2010 and 2019 (every country has data for
@@ -25,7 +25,7 @@ Factors (downloaded on first run into eurostat/data/change_matrix/):
 - World Bank SL.UEM.1524.ZS (youth unemployment, ILO modelled).
 - OECD analytical house price indicators (price-to-income ratio).
 
-Child:coupling ratios and coupling by age (country profiles):
+Child:coupling ratios and coupling by age (country detail):
 - % of women with a child: HFD exposRRpa.txt (UK: ONS cohort table 3).
 - Coupling: NSO/outputs/coupling_nso.csv, ILO/outputs/coupling_ilo.csv,
   UN/outputs/coupling_un.csv, FT/outputs/ft_coupling_25_34.csv and
@@ -90,7 +90,8 @@ CENSUS_COUPLE_PASSED = {
     (2010, 2020): ("JPN", "KOR"),
     (2005, 2010): ("JPN", "KOR"),
 }
-CENSUS_COUPLE_ROWS = {"couple_census_20_24": ("Y20-24",), "couple_census_25_34": ("Y25-29", "Y30-34"),
+CENSUS_COUPLE_ROWS = {"couple_census_20_24": ("Y20-24",), "couple_census_25_29": ("Y25-29",),
+                      "couple_census_30_34": ("Y30-34",), "couple_census_25_34": ("Y25-29", "Y30-34"),
                       "couple_census_35_39": ("Y35-39",)}
 # Lets 2005 reach the 2001 round. New Zealand's nearest censuses are 2013 and 2018.
 CENSUS_COUPLE_TOL = {**{c: 4 for c in COUNTRIES}, "NZL": 3}
@@ -370,17 +371,23 @@ def load_factors():
 
 # (key, label, direction, factor page or None, group)
 # direction +1: a rise is proposed to lower fertility; -1: a fall is.
+COUPLE_GROUP = "Women in a couple"
+RATIO_GROUP = "Couples with a child"
+GROUP_NOTES = {COUPLE_GROUP: "% of women living with a partner, married or not",
+               RATIO_GROUP: "% of women with a child by the given age ÷ % in a couple in the age band"}
 FACTORS = [
-    ("couple_18_24", "Women 18–24 in a couple (Eurostat)", -1, "partnership-formation", "Coupling"),
-    ("couple_under_25", "Women under 25 in a couple", -1, "partnership-formation", "Coupling"),
-    ("couple_25_34", "Women 25–34 in a couple", -1, "partnership-formation", "Coupling"),
-    ("couple_25_29", "Women 25–29 in a couple", -1, "partnership-formation", "Coupling"),
-    ("couple_30_34", "Women 30–34 in a couple", -1, "partnership-formation", "Coupling"),
-    ("couple_35_39", "Women 35–39 in a couple", -1, "partnership-formation", "Coupling"),
-    ("couple_census_20_24", "Women 20–24 in a couple (census)", -1, "partnership-formation", "Coupling"),
-    ("couple_census_25_34", "Women 25–34 in a couple (census)", -1, "partnership-formation", "Coupling"),
-    ("couple_census_35_39", "Women 35–39 in a couple (census)", -1, "partnership-formation", "Coupling"),
-    ("couple_ess_25_34", "Women 25–34 in a couple (ESS survey)", -1, "partnership-formation", "Coupling"),
+    ("couple_18_24", "18–24 · EU-LFS", -1, "partnership-formation", COUPLE_GROUP),
+    ("couple_under_25", "Under 25 · registers, ILO", -1, "partnership-formation", COUPLE_GROUP),
+    ("couple_25_34", "25–34 · registers, ILO, FT", -1, "partnership-formation", COUPLE_GROUP),
+    ("couple_25_29", "25–29 · registers, ONS", -1, "partnership-formation", COUPLE_GROUP),
+    ("couple_30_34", "30–34 · registers, ONS", -1, "partnership-formation", COUPLE_GROUP),
+    ("couple_35_39", "35–39 · registers, ONS", -1, "partnership-formation", COUPLE_GROUP),
+    ("couple_census_20_24", "20–24 · census", -1, "partnership-formation", COUPLE_GROUP),
+    ("couple_census_25_29", "25–29 · census", -1, "partnership-formation", COUPLE_GROUP),
+    ("couple_census_30_34", "30–34 · census", -1, "partnership-formation", COUPLE_GROUP),
+    ("couple_census_25_34", "25–34 · census", -1, "partnership-formation", COUPLE_GROUP),
+    ("couple_census_35_39", "35–39 · census", -1, "partnership-formation", COUPLE_GROUP),
+    ("couple_ess_25_34", "25–34 · ESS survey", -1, "partnership-formation", COUPLE_GROUP),
     ("leaving_home", "Women's age leaving home", +1, "leaving-home", "Life course"),
     ("tertiary_women", "Women 25–34 with a degree", +1, "education", "Life course"),
     ("youth_unemployment", "Unemployment, 15–24", +1, "job-insecurity", "Work and costs"),
@@ -780,16 +787,26 @@ def load_ratios(factors):
 
 # (key, label, age for % with a child, coupling row; None = already built by load_ratios)
 RATIO_ROWS = [
-    ("ratio_15_24", "Child by 20 ÷ couple 15–24", 20, None),
-    ("ratio_25_29", "Child by 27 ÷ couple 25–29", 27, "couple_25_29"),
-    ("ratio_25_34", "Child by 30 ÷ couple 25–34", 30, None),
-    ("ratio_30_34", "Child by 32 ÷ couple 30–34", 32, "couple_30_34"),
-    ("ratio_35_39", "Child by 37 ÷ couple 35–39", 37, "couple_35_39"),
-    ("ratio_census_20_24", "Child by 25 ÷ couple 20–24 (census)", 25, "couple_census_20_24"),
-    ("ratio_census_25_34", "Child by 30 ÷ couple 25–34 (census)", 30, "couple_census_25_34"),
-    ("ratio_census_35_39", "Child by 35 ÷ couple 35–39 (census)", 35, "couple_census_35_39"),
-    ("ratio_ess_25_34", "Child by 30 ÷ couple 25–34 (ESS)", 30, "couple_ess_25_34"),
+    ("ratio_15_24", "15–24, child by 20 · registers, ILO", 20, None),
+    ("ratio_25_29", "25–29, child by 27 · registers, ONS", 27, "couple_25_29"),
+    ("ratio_25_34", "25–34, child by 30 · registers, ILO, FT", 30, None),
+    ("ratio_30_34", "30–34, child by 32 · registers, ONS", 32, "couple_30_34"),
+    ("ratio_35_39", "35–39, child by 37 · registers, ONS", 37, "couple_35_39"),
+    ("ratio_census_20_24", "20–24, child by 25 · census", 25, "couple_census_20_24"),
+    ("ratio_census_25_34", "25–34, child by 30 · census", 30, "couple_census_25_34"),
+    ("ratio_census_35_39", "35–39, child by 35 · census", 35, "couple_census_35_39"),
+    ("ratio_ess_25_34", "25–34, child by 30 · ESS survey", 30, "couple_ess_25_34"),
 ]
+# Summary rows: one per 5-year band, each country taking the first coupling row in this list with a
+# confirmed change (then an unconfirmed one, faded). ":register" and ":ILO" split couple_under_25 by source.
+# The ratio divides % with a child by the end of the band by that coupling series.
+SUMMARY_BANDS = [
+    ("20_24", "20–24", 25, ["couple_under_25:register", "couple_census_20_24", "couple_18_24", "couple_under_25:ILO"]),
+    ("25_29", "25–29", 30, ["couple_25_29", "couple_census_25_29"]),
+    ("30_34", "30–34", 35, ["couple_30_34", "couple_census_30_34"]),
+    ("35_39", "35–39", 40, ["couple_35_39", "couple_census_35_39"]),
+]
+SUMMARY_KEYS = [f"{p}_{b}" for p in ("sum_couple", "sum_ratio") for b, *_ in SUMMARY_BANDS]
 # Ratios over coupling measured only in some years: each coupling year takes the % with a child from the
 # with-a-child rows (HFD, estimates and censuses) within two years of it, and the change uses the coupling
 # row's tolerance, faded cells and noise flags.
@@ -884,9 +901,79 @@ def ratio_row(key, label, s, order, sources):
     else:
         cells = {c: change(s.get(c)) for c in order}
         before = [-v for c in order if (v := change(s.get(c), 2001, BASE)) is not None]
-    return dict(key=key, label=label, group="Relationships leading to a child", kind="ratio",
+    return dict(key=key, label=label, group=RATIO_GROUP, kind="ratio",
                 unit="", dp=2, direction=-1, cells=cells, sources=sources, before=median(before),
                 after=median([-v for v in cells.values() if v is not None]))
+
+
+def row_tols(key):
+    """{iso: years} a row's start and end values may sit from the window's ends."""
+    return (CENSUS_TOL if key.startswith("mothers_by_") else COUPLING_TOL if key in COUPLING_TOL_ROWS
+            else CENSUS_COUPLE_TOL if key in CENSUS_COUPLE_ROWS else ESS_TOL if key == "couple_ess_25_34"
+            else sparse_tols(key) if key in RATIO_OF_SPARSE else {})
+
+
+def pick_coupling(rows_by_key, candidates, iso):
+    """The first candidate row with a change for this country: confirmed first, then unconfirmed."""
+    for strict in (True, False):
+        for cand in candidates:
+            key, _, only = cand.partition(":")
+            r = rows_by_key[key]
+            src = (r.get("sources") or {}).get(iso, "")
+            if (only == "ILO") != src.startswith("ILO") and only:
+                continue
+            if r["cells"].get(iso) is None or (strict and r.get("low_confidence", {}).get(iso)):
+                continue
+            return r
+    return None
+
+
+def summary_rows(rows, ts, parity, order):
+    """One coupling row and one ratio row per 5-year band, each country from its best coupling row."""
+    by_key = {r["key"]: r for r in rows}
+    couples, ratios = [], []
+    for band, label, age, candidates in SUMMARY_BANDS:
+        ck, rk = f"sum_couple_{band}", f"sum_ratio_{band}"
+        c_row = dict(key=ck, label=label, group=COUPLE_GROUP, kind="factor", unit="%", direction=-1,
+                     page="partnership-formation", cells={}, years={}, sources={}, low_confidence={})
+        r_row = dict(key=rk, label=f"{label}, child by {age}", group=RATIO_GROUP, kind="ratio", unit="", dp=2,
+                     direction=-1, cells={}, years={}, sources={}, low_confidence={})
+        ts[ck], ts[rk] = {}, {}
+        mothers = parity[f"mothers_by_{age}"]
+        c_before, r_before = [], []
+        for c in order:
+            src = pick_coupling(by_key, candidates, c)
+            c_row["cells"][c] = r_row["cells"][c] = None
+            if src is None:
+                continue
+            s = ts[src["key"]][c]
+            tol = row_tols(src["key"])
+            where = src["label"].split(" · ")[-1] if " · " in src["label"] else ""
+            detail = (src.get("sources") or {}).get(c) or where
+            low = bool(src.get("low_confidence", {}).get(c))
+            ts[ck][c] = s
+            c_row["cells"][c], c_row["years"][c] = src["cells"][c], src["years"][c]
+            c_row["sources"][c], c_row["low_confidence"][c] = f"{src['label'].split(' · ')[0]}, {detail}", low
+            if (v := change(s, 2001, BASE)) is not None:
+                c_before.append(-v)
+            m = mothers.get(c, {})
+            ratio = {y: m[my] / v for y, v in s.items() if v > 0 and (my := near_year(m, y, 2)) is not None}
+            if not ratio:
+                continue
+            ts[rk][c] = ratio
+            r_row["cells"][c] = child_change(ratio, c, tol)
+            if r_row["cells"][c] is not None:
+                t = tol.get(c, 1)
+                r_row["years"][c] = [near_year(ratio, BASE, t), near_year(ratio, END, t)]
+                r_row["sources"][c], r_row["low_confidence"][c] = c_row["sources"][c], low
+            if (v := change(ratio, 2001, BASE)) is not None:
+                r_before.append(-v)
+        for row, before in ((c_row, c_before), (r_row, r_before)):
+            row["before"] = median(before)
+            row["after"] = median([-v for c, v in row["cells"].items() if v is not None and not row["low_confidence"].get(c)])
+        couples.append(c_row)
+        ratios.append(r_row)
+    return couples, ratios
 
 
 def build(reference=None):
@@ -961,6 +1048,36 @@ def build(reference=None):
             src_low = next(x for x in rows if x["key"] == RATIO_OF_SPARSE[r["key"]])["low_confidence"]
             r["low_confidence"] = {c: src_low.get(c, True) for c, v in r["cells"].items() if v is not None}
             r["after"] = median([r["direction"] * v for c, v in r["cells"].items() if v is not None and not r["low_confidence"][c]])
+
+    ts = {"tfr": tfr, **parity, **rates, **factors, **ratios}
+    for r in rows:  # the years each cell actually compares
+        tols = row_tols(r["key"])
+        tol = lambda c: tols.get(c, 1)
+        r["years"] = {c: [near_year(ts[r["key"]].get(c, {}), BASE, tol(c)), near_year(ts[r["key"]].get(c, {}), END, tol(c))]
+                      for c, v in r["cells"].items() if v is not None}
+        if r["key"] == "couple_ess_25_34":  # change smaller than two standard errors
+            r["noisy"] = {c: bool(abs(r["cells"][c]) < 2 * (ess_errors[c][y0] ** 2 + ess_errors[c][y1] ** 2) ** 0.5)
+                          for c, (y0, y1) in r["years"].items()}
+    ess = next(x for x in rows if x["key"] == "couple_ess_25_34")
+    for r in rows:
+        if r["key"] == "ratio_ess_25_34":
+            r["noisy"] = {c: ess["noisy"].get(c, True) for c in r["years"]}
+
+    # Summary rows go first in each group; the existing rows become its expandable detail.
+    sum_couple, sum_ratio = summary_rows(rows, ts, parity, order)
+    couple = [r for r in rows if r["group"] == COUPLE_GROUP]
+    ratio = [r for r in rows if r["group"] == RATIO_GROUP]
+    for r in couple + ratio:
+        r["detail"] = True
+    first = next(i for i, r in enumerate(rows) if r["group"] == COUPLE_GROUP)
+    rest = [r for r in rows[first:] if r["group"] not in (COUPLE_GROUP, RATIO_GROUP)]
+    rows = rows[:first] + sum_couple + couple + sum_ratio + ratio + rest
+    for r in rows:
+        r["long"] = f"{r['group']}, {r['label']}" if r["group"] in GROUP_NOTES else r["label"]
+        if r["group"] in GROUP_NOTES:
+            r["group_note"] = GROUP_NOTES[r["group"]]
+
+    for r in rows:
         low = r.get("low_confidence", {})
         pairs = [(r["direction"] * v, -target[c]) for c, v in r["cells"].items()
                  if v is not None and target[c] is not None and not low.get(c)]
@@ -974,21 +1091,6 @@ def build(reference=None):
 
     countries = [dict(iso=c, name=COUNTRIES[c][1], m30_source=M30_ESTIMATES.get(c), d_tfr=d_tfr[c], d_m30=d_m30[c], tfr_base=value_near(tfr[c], BASE), tfr_end=value_near(tfr[c], END),
                       m30_base=value_near(m30.get(c, {}), BASE), m30_end=value_near(m30.get(c, {}), END)) for c in order]
-    ts = {"tfr": tfr, **parity, **rates, **factors, **ratios}
-    for r in rows:  # the years each cell actually compares
-        tols = (CENSUS_TOL if r["key"].startswith("mothers_by_") else COUPLING_TOL if r["key"] in COUPLING_TOL_ROWS
-                else CENSUS_COUPLE_TOL if r["key"] in CENSUS_COUPLE_ROWS else ESS_TOL if r["key"] == "couple_ess_25_34"
-                else sparse_tols(r["key"]) if r["key"] in RATIO_OF_SPARSE else {})
-        tol = lambda c: tols.get(c, 1)
-        r["years"] = {c: [near_year(ts[r["key"]].get(c, {}), BASE, tol(c)), near_year(ts[r["key"]].get(c, {}), END, tol(c))]
-                      for c, v in r["cells"].items() if v is not None}
-        if r["key"] == "couple_ess_25_34":  # change smaller than two standard errors
-            r["noisy"] = {c: bool(abs(r["cells"][c]) < 2 * (ess_errors[c][y0] ** 2 + ess_errors[c][y1] ** 2) ** 0.5)
-                          for c, (y0, y1) in r["years"].items()}
-    ess = next(x for x in rows if x["key"] == "couple_ess_25_34")
-    for r in rows:
-        if r["key"] == "ratio_ess_25_34":
-            r["noisy"] = {c: ess["noisy"].get(c, True) for c in r["years"]}
     extra = dict(profiles=profiles, ratio_dirs=ratio_directions(ratios, matched),
                  ratio_labels={k: label for k, _, _, label in RATIOS},
                  matched_bands=[f"{lo}–{hi}" for lo, hi in MATCHED_BANDS])
@@ -1029,8 +1131,8 @@ def scatters(countries, rows):
         stat = f"{r['toward_fewer_in_falling']} of {r['n_falling']} falling countries towards fewer births"
         fig.update_layout(
             template="plotly_white", height=420, margin=dict(l=60, r=20, t=50, b=50),
-            title=dict(text=f"{r['label']}, {BASE}–{END}: {stat}, n = {r['n']}", font=dict(size=13)),
-            xaxis_title=f"Change in {r['label'][0].lower() + r['label'][1:]}", yaxis_title="Change in % with a child by 30 (points)")
+            title=dict(text=f"{r['long']}, {BASE}–{END}: {stat}, n = {r['n']}", font=dict(size=13)),
+            xaxis_title=f"Change in {r['long'][0].lower() + r['long'][1:]}", yaxis_title="Change in % with a child by 30 (points)")
         fig.add_hline(y=0, line=dict(color="#d1d5db", width=1))
         fig.add_vline(x=0, line=dict(color="#d1d5db", width=1))
         fig.write_html(OUT / f"change_scatter_{r['key']}.html", include_plotlyjs="cdn", full_html=True)
@@ -1043,7 +1145,8 @@ def render_preceding(reference):
     BASE, END = PRECEDING
     try:
         countries, rows, ts, _ = build(reference)
-        keys = ["tfr"] + [f"mothers_by_{a}" for a in CHILD_AGES] + [k for k, *_ in RATE_ROWS] + [k for k, *_ in FACTORS] + [k for k, *_ in RATIO_ROWS]
+        keys = (["tfr"] + [f"mothers_by_{a}" for a in CHILD_AGES] + [k for k, *_ in RATE_ROWS] + [k for k, *_ in FACTORS]
+                + [k for k, *_ in RATIO_ROWS] + SUMMARY_KEYS)
         slim = {k: {c: {y: round(v, 3) for y, v in s.items() if 2000 <= y <= 2023} for c, s in ts[k].items() if c in COUNTRIES}
                 for k in keys}
         note = (f"Fit: correlation across countries between the factor's {BASE}–{END} change and the later fall in % of women "
@@ -1055,7 +1158,7 @@ def render_preceding(reference):
         tpl = pathlib.Path(__file__).resolve().parent / "templates"
         html = (tpl / "change_matrix.html").read_text(encoding="utf-8")
         html = html.replace("__DATA__", data).replace("__PAGES__", "../../factors/").replace(
-            "__PROFILE__", "../../factors/country-profiles.html")
+            "__PROFILE__", "../../factors/country-detail.html")
         (OUT / f"change_matrix_{BASE}_{END}.html").write_text(html, encoding="utf-8")
         return rows
     finally:
@@ -1064,7 +1167,7 @@ def render_preceding(reference):
 
 def render(countries, rows, ts, extra):
     keys = ["tfr"] + [f"mothers_by_{a}" for a in CHILD_AGES] + ["mothers_ever", "second_child", "age_first", "couple_25_49"] + [k for k, *_ in RATE_ROWS] + [
-        k for k, *_ in FACTORS] + sorted({k for k, *_ in RATIOS} | {k for k, *_ in RATIO_ROWS})
+        k for k, *_ in FACTORS] + sorted({k for k, *_ in RATIOS} | {k for k, *_ in RATIO_ROWS}) + SUMMARY_KEYS
     slim = {k: {c: {y: round(v, 3) for y, v in s.items() if 2000 <= y <= 2023} for c, s in ts[k].items() if c in COUNTRIES}
             for k in keys}
     data = json.dumps(dict(base=BASE, end=END, countries=countries, rows=rows, series=slim, **extra),
@@ -1072,7 +1175,7 @@ def render(countries, rows, ts, extra):
     tpl = pathlib.Path(__file__).resolve().parent / "templates"
     html = (tpl / "change_matrix.html").read_text(encoding="utf-8")
     html = html.replace("__DATA__", data).replace("__PAGES__", "../../factors/").replace(
-        "__PROFILE__", "../../factors/country-profiles.html")
+        "__PROFILE__", "../../factors/country-detail.html")
     (OUT / "change_matrix.html").write_text(html, encoding="utf-8")
     html = (tpl / "country_profiles.html").read_text(encoding="utf-8")
     html = html.replace("__DATA__", data).replace("__BASE__", str(BASE)).replace("__END__", str(END))

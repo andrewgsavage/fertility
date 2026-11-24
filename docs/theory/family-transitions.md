@@ -228,7 +228,7 @@ Censuses give the same split for more countries. In the 13 whose census coupling
 | 35–39 (child by 35) | −10% | −1% | −10% | 5% |
 
 ```{note}
-Census coupling 2011 and 2021 (2010 and 2020 for Japan and South Korea, 2013 and 2018 for New Zealand) from the [change matrix](../factors/change-matrix.md), 12 or 13 countries where another series confirms the change; \% with a child from the matrix's with-a-child rows within two years of each census. Columns are medians of log changes taken separately; share of fall is the sum of coupling changes over the sum of with-a-child changes. At 20–24 Estonia's coupling fall is likely part artefact and Czechia rose.
+Census coupling 2011 and 2021 (2010 and 2020 for Japan and South Korea, 2013 and 2018 for New Zealand) from the [country comparison](../factors/country-comparison.md), 12 or 13 countries where another series confirms the change; \% with a child from the matrix's with-a-child rows within two years of each census. Columns are medians of log changes taken separately; share of fall is the sum of coupling changes over the sum of with-a-child changes. At 20–24 Estonia's coupling fall is likely part artefact and Czechia rose.
 ```
 
 Coupling was already falling before 2011, at a median −3.8 points at 25–34 between 2001 and 2011, while mothers per coupled woman held steady (median 0.00). Fewer couples alone did not bring the fall in mothers; what changed after 2010 was the ratio.
@@ -318,7 +318,7 @@ The falls shrink with age, which is what delay would produce. The share of women
 
 Following each birth cohort as it reaches 35–39 would settle this for the cohorts now in their early thirties.
 
-Censuses that split couples by whether they live with children point both ways ([Couple to first birth](../factors/union-to-first-birth.md#couples-living-with-children-by-age)). In Japan the share of women in a couple living with a child fell under 30 between 2010 and 2020 but held at 30–34 and rose at 35–39, which fits delay. In South Korea it fell at every age, by 13 points at 30–34, which fits births forgone.
+Censuses that split couples by whether they live with children point both ways ([Couple to first birth](#couples-living-with-children-by-age)). In Japan the share of women in a couple living with a child fell under 30 between 2010 and 2020 but held at 30–34 and rose at 35–39, which fits delay. In South Korea it fell at every age, by 13 points at 30–34, which fits births forgone.
 
 ### The chain is not a single path
 

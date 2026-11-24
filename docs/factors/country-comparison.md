@@ -1,4 +1,4 @@
-# Change Matrix
+# Country Comparison
 
 ```{warning}
 This page was written by AI and has not been fully reviewed. Check figures and claims against the linked sources.
@@ -6,7 +6,9 @@ This page was written by AI and has not been fully reviewed. Check figures and c
 
 Fertility fell after 2010 in many rich countries at once, and rose in a few. A factor that explains the shared fall should have moved towards fewer births where fewer women were having children, and not where that held or rose. This page checks that for 36 countries between 2010 and 2019. Both years have TFR data for every country, and 2019 ends the window before COVID.
 
-Columns are countries. The 33 with a 2010–2019 value for the share of women with a child by 30 come first, sorted by its change, with the largest fall on the left. For 10 of them the value is an estimate, marked ≈. Australia, France and New Zealand follow, sorted by TFR change, because their child-by-age rows compare other years. The 13 countries without HFD birth-order tables for 2010–2019 have no birth-rate cells for that window. TFR is shown above for context. Rows are the share of women with a child by age, birth rates by age, coupling by age and the factors with a cross-country series. Each cell shows how far that row moved in that country, coloured by direction: orange if it moved towards fewer births, aqua if the other way. A dot marks a cell whose start or end value comes from a different year. Hover a cell for the values. Click a country for its [profile](country-profiles.md), or a factor for its page.
+Columns are countries. The 33 with a 2010–2019 value for the share of women with a child by 30 come first, sorted by its change, with the largest fall on the left. For 10 of them the value is an estimate, marked ≈. Australia, France and New Zealand follow, sorted by TFR change, because their child-by-age rows compare other years. The 13 countries without HFD birth-order tables for 2010–2019 have no birth-rate cells for that window. TFR is shown above for context. Rows are the share of women with a child by age, birth rates by age, coupling by age and the factors with a cross-country series. Each cell shows how far that row moved in that country, coloured by direction: orange if it moved towards fewer births, aqua if the other way. A dot marks a cell whose start or end value comes from a different year. Hover a cell for the values. Click a country for its [profile](country-detail.md), or a factor for its page.
+
+"Women in a couple" and "Couples with a child" show one summary row per 5-year age band. Each country uses its best coupling series for that band: a register first, then a census confirmed by another series, then EU-LFS 18–24 or ILO 15–24 for 20–24, then an unconfirmed census, faded. "Couples with a child" divides the share with a child by the end of the band (by 25 for 20–24, up to by 40 for 35–39) by that coupling share. Pick "All source rows" in a group's dropdown to see every series.
 
 ::::{tab-set}
 

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Change matrix</title>
+<title>Country comparison</title>
 <style>
   :root { --ink: #1f2328; --muted: #6b7280; --line: #e5e7eb; --bg: #ffffff; --neutral: #f1f1ef; }
   html, body { margin: 0; background: var(--bg); color: var(--ink); font: 12px/1.4 system-ui, sans-serif; }
@@ -13,6 +13,8 @@
   th.row { text-align: left; font-weight: 400; white-space: nowrap; padding-right: 8px; max-width: 210px; overflow: hidden; text-overflow: ellipsis; }
   th.row a { color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--muted); }
   th.group { text-align: left; font-weight: 600; color: var(--muted); padding-top: 8px; font-size: 11px; }
+  th.group .gnote { font-weight: 400; }
+  th.group select { font: inherit; font-size: 11px; margin-left: 6px; color: var(--ink); }
   th.col { font-weight: 500; font-size: 11px; width: 28px; min-width: 28px; }
   th.col a { color: var(--ink); text-decoration: none; }
   .bar { height: 46px; position: relative; }
@@ -66,14 +68,18 @@ h += `<tr><th class="row" style="color:var(--muted)">With a child by 30, change 
 h += "<tr><th></th>" + C.map(c => `<th class="col"><a href="${PROFILE}#${c.iso}" target="_top" title="${c.name}${c.m30_source ? ` (child by 30: ${c.m30_source})` : ""}">${c.iso}</a></th>`).join("") +
      `<th class="num" title="${FALLING_NOTE}">Falling countries, towards fewer</th></tr>`;
 
-let group = null;
+let group = null, gi = -1;
 D.rows.forEach((r, ri) => {
   if (r.group !== group) {
-    group = r.group;
-    h += `<tr><th class="group" colspan="${C.length + 2}">${group}</th></tr>`;
+    group = r.group; gi++;
+    const n = D.rows.filter(x => x.group === group && x.detail).length;
+    const note = r.group_note ? ` <span class="gnote">${r.group_note}</span>` : "";
+    h += n ? `<tr><th class="group" colspan="${C.length + 2}">${group}${note} <select class="expand" data-g="${gi}">` +
+             `<option value="summary">Summary by age</option><option value="all">All ${n} source rows</option></select></th></tr>`
+           : `<tr><th class="group" colspan="${C.length + 2}">${group}${note}</th></tr>`;
   }
   const label = r.page ? `<a href="${PAGES}${r.page}.html" target="_top">${r.label}</a>` : r.label;
-  h += `<tr><th class="row" title="${r.label}">${label}</th>`;
+  h += `<tr${r.detail ? ` class="detail g${gi}" hidden` : ""}><th class="row" title="${r.long || r.label}">${label}</th>`;
   C.forEach((c, ci) => {
     const v = r.cells[c.iso];
     if (v === null || v === undefined) { h += `<td class="cell na" data-r="${ri}" data-c="${ci}"></td>`; return; }
@@ -87,6 +93,15 @@ D.rows.forEach((r, ri) => {
   h += `<td class="num">${r.n_falling ? `${r.toward_fewer_in_falling}/${r.n_falling}` : "–"}</td></tr>`;
 });
 t.innerHTML = h;
+// Fit the embedding iframe to the table, since expanding a group changes the height.
+const fitFrame = () => { try { if (window.frameElement) window.frameElement.style.height = Math.ceil(document.body.getBoundingClientRect().height) + 8 + "px"; } catch (e) {} };
+t.addEventListener("change", e => {
+  const sel = e.target.closest("select.expand");
+  if (!sel) return;
+  t.querySelectorAll(`tr.g${sel.dataset.g}`).forEach(tr => tr.hidden = sel.value !== "all");
+  fitFrame();
+});
+window.addEventListener("load", fitFrame);
 
 const series = (key, iso) => (D.series[key] || {})[iso] || {};
 const near = (s, y) => s[y] ?? s[y - 1] ?? s[y + 1];
@@ -101,7 +116,7 @@ t.addEventListener("mousemove", e => {
   const body = a === undefined || b === undefined ? "No data" :
     `${a.toFixed(dp)}${r.unit} → ${b.toFixed(dp)}${r.unit} (${change})${yrs ? `<br><span style="color:var(--muted)">${yrs[0]} → ${yrs[1]}</span>` : ""}`;
   const src = r.sources && r.sources[c.iso] ? `<br><span style="color:var(--muted)">${r.sources[c.iso]}</span>` : "";
-  tip.innerHTML = `<b>${c.name}</b><br>${r.label}<br>${body}${src}${r.low_confidence && r.low_confidence[c.iso] ? "<br>Low confidence: not confirmed by another series" : ""}`;
+  tip.innerHTML = `<b>${c.name}</b><br>${r.long || r.label}<br>${body}${src}${r.low_confidence && r.low_confidence[c.iso] ? "<br>Low confidence: not confirmed by another series" : ""}`;
   tip.style.display = "block";
   const x = Math.min(e.pageX + 12, document.body.scrollWidth - 250);
   tip.style.left = x + "px"; tip.style.top = (e.pageY + 12) + "px";

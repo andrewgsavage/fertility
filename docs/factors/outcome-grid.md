@@ -30,8 +30,8 @@ The cells need different data:
 
 ## By country
 
-- [Change matrix](change-matrix.md): 36 countries, 2010–2019, outcomes and factors side by side.
-- [Country profiles](country-profiles.md): the same data one country at a time.
+- [Country comparison](country-comparison.md): 36 countries, 2010–2019, outcomes and factors side by side.
+- [Country detail](country-detail.md): the same data one country at a time.
 - [UK: Which Outcomes Moved?](../uk/outcome-grid.md): England & Wales, 2010–2022, including desire for a first child.
 
 ## Further reading

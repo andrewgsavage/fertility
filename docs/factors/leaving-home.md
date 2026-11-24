@@ -130,7 +130,7 @@ Women left home later where the share with a child by 30 fell most, but the medi
 <iframe src="../_static/eurostat/change_scatter_leaving_home.html" style="width: 100%; height: 440px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
-Each dot is a country. See the [change matrix](change-matrix.md) for all factors side by side.
+Each dot is a country. See the [country comparison](country-comparison.md) for all factors side by side.
 
 ```{note}
 Data: Eurostat, [Estimated average age of young people leaving the parental household by sex](https://ec.europa.eu/eurostat/databrowser/view/yth_demo_030/default/table) (yth_demo_030), women; [Fertility indicators](https://ec.europa.eu/eurostat/databrowser/view/demo_find/default/table) (demo_find), total fertility rate and mean age of women at birth of first child. Cohort fertility: [Human Fertility Database](https://www.humanfertility.org), cumulative cohort fertility rates by age and birth order (ccfrVH, ccfrVHbo). Leaving age is estimated from the Labour Force Survey and has series breaks in some countries; Sweden's series is noisy, dropping to about 17.6 in 2019-20. Leaving-age series start in 2009 for Sweden, 2010 for Denmark and 2021 for Norway, and the UK series ends in 2019 (2018 for the scatter). Assigning a year's average leaving age to the cohort aged 25 that year is an approximation; the estimate covers everyone who left home that year.
