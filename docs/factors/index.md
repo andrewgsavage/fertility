@@ -6,6 +6,46 @@ This page was written by AI and has not been fully reviewed. Check figures and c
 
 Factors are proposed drivers of lower birth rates. Factors that have been investigated have their own page.
 
+## Pages
+
+**What changed and why**
+
+- [Change matrix](change-matrix.md): which outcomes and factors moved in each country since 2010
+- [Outcome grid](outcome-grid.md): each stage split into desire, age and ability
+- [Explaining the 2010s drop](explaining-the-2010s-drop.md): how much of the UK's drop the measured effects explain
+- [Causal analysis](causal-analysis.md): which links studies have shown to be causal
+- [Country profiles](country-profiles.md)
+
+**Life-course timing**
+
+- [Leaving home](leaving-home.md)
+- [Coupling and partnership formation](partnership-formation.md)
+  - [Coupling over time](coupling-trends.md)
+  - [Marriage](marriage.md)
+  - [Coupling and motherhood](coupling-vs-mothers.md)
+  - [Couple to first birth](union-to-first-birth.md)
+
+**Education and work**
+
+- [Education](education.md)
+- [Student debt](student-debt.md)
+- [Job insecurity](job-insecurity.md)
+- [Left-behind young men](left-behind-young-men.md)
+
+**Costs and housing**
+
+- [Housing](housing.md)
+
+**Social and cultural**
+
+- [Abortion](abortion.md), with [abortions and births by age](abortion-by-age.md)
+- [Smartphones](smartphones.md)
+- [Dating apps](dating-apps.md)
+- [Social media](social-media.md)
+- [Political divide between young men and women](political-divide-between-young-men-and-women.md)
+
+## Factor table
+
 Outcomes are changes that have occurred in most countries with large drops in fertility since the 2010s (see the [change matrix](change-matrix.md)):
 
 - Coupling has fallen (marriage and cohabitation rates).
@@ -23,8 +63,6 @@ In the table:
 - **?**: mixed evidence.
 - **✗**: the factor is not expected to affect the outcome.
 - **Blank**: no data.
-
-The [outcome grid](outcome-grid.md) splits each stage into desire, age and ability. [Explaining the 2010s Drop](explaining-the-2010s-drop.md) estimates how much of the UK's drop the measured effects explain.
 
 ```{raw} html
 <style>
@@ -198,20 +236,19 @@ For which of these links have studies separated cause from correlation, see the 
 :maxdepth: 1
 :hidden:
 
-leaving-home
-education
-housing
-causal-analysis
-explaining-the-2010s-drop
-outcome-grid
 change-matrix
+outcome-grid
+explaining-the-2010s-drop
+causal-analysis
 country-profiles
+leaving-home
 partnership-formation
+education
 student-debt
 job-insecurity
 left-behind-young-men
+housing
 abortion
-abortion-by-age
 smartphones
 dating-apps
 social-media

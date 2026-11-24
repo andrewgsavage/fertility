@@ -219,6 +219,20 @@ Women in Denmark, Finland and the Netherlands. \% with a child from the [Human F
 
 Below 35, fewer couples explain roughly a third to a half of the fall in mothers, and the lower ratio the rest. At 25–29, where the fall in percentage points is largest, the ratio accounts for about two-thirds. [Hellstrand, Nisén & Myrskylä (2022)](https://doi.org/10.1007/s10680-022-09605-8) reach a similar result for Finland with individual histories: fertility within unions explains about three-quarters of the first-birth decline since 2010.
 
+Censuses give the same split for more countries. In the 13 whose census coupling another series confirms, the 2010s fall in mothers was mostly within couples except at 20–24:
+
+| Age | % with a child | % in a couple | Mothers per coupled woman | Share of fall from fewer couples |
+|---|--:|--:|--:|--:|
+| 20–24 (child by 25) | −55% | −23% | −26% | 55% |
+| 25–34 (child by 30) | −26% | −6% | −19% | 24% |
+| 35–39 (child by 35) | −10% | −1% | −10% | 5% |
+
+```{note}
+Census coupling 2011 and 2021 (2010 and 2020 for Japan and South Korea, 2013 and 2018 for New Zealand) from the [change matrix](../factors/change-matrix.md), 12 or 13 countries where another series confirms the change; \% with a child from the matrix's with-a-child rows within two years of each census. Columns are medians of log changes taken separately; share of fall is the sum of coupling changes over the sum of with-a-child changes. At 20–24 Estonia's coupling fall is likely part artefact and Czechia rose.
+```
+
+Coupling was already falling before 2011, at a median −3.8 points at 25–34 between 2001 and 2011, while mothers per coupled woman held steady (median 0.00). Fewer couples alone did not bring the fall in mothers; what changed after 2010 was the ratio.
+
 ### Single → couple
 
 The share in a couple can fall because people couple later, couple less or separate more. In Finland, fewer marriages explain 19% of the first-birth decline since 2010, fewer cohabitations 2–4% and more dissolution 6% (Hellstrand et al.).
@@ -303,6 +317,8 @@ The falls shrink with age, which is what delay would produce. The share of women
 - The share with a child at 35–39 is already lower in Denmark (82% to 78%) and Finland (75% to 70%).
 
 Following each birth cohort as it reaches 35–39 would settle this for the cohorts now in their early thirties.
+
+Censuses that split couples by whether they live with children point both ways ([Couple to first birth](../factors/union-to-first-birth.md#couples-living-with-children-by-age)). In Japan the share of women in a couple living with a child fell under 30 between 2010 and 2020 but held at 30–34 and rose at 35–39, which fits delay. In South Korea it fell at every age, by 13 points at 30–34, which fits births forgone.
 
 ### The chain is not a single path
 

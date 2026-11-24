@@ -1,0 +1,15 @@
+id: statsnz-cen23-fhh-036
+type: dataset
+title: Individual's role in family nucleus, ethnicity, age, and gender, 2013, 2018 and 2023 Censuses (CEN23_FHH_036)
+publisher: Stats NZ
+url: https://explore.data.stats.govt.nz/vis?df[ds]=ds-nsiws-disseminate&df[id]=CEN23_FHH_036&df[ag]=STATSNZ&df[vs]=1.0
+oa: gold
+countries:
+- NZL
+period:
+- 2013
+- 2023
+factors:
+- partnership-formation
+notes: Women aged 20-39 by 5-year age, parent and spouse/partner against spouse/partner only in a family nucleus, read in the Aotearoa Data Explorer for the couples-with-children table on the union-to-first-birth page. Couples include de facto; children of any age. Counts randomly rounded to base 3.
+accessed: 2026-11-24

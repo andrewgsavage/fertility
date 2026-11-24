@@ -11,5 +11,5 @@ period:
 - 2020
 scripts:
 - eurostat/scripts/change_matrix.py
-notes: Reproduces Statistics Bureau of Japan census counts. Marital status is the actual state regardless of registration (e-Stat definition https://www.e-stat.go.jp/surveyitems/definitions/39981). Women with a spouse and women of stated status at 20-24, 25-29 and 30-34 copied into JP_COUPLES in the script from the 2009 (2005 census), 2012 (2010) and 2025 (2020) editions. Unknown status is excluded; table 6-24 instead uses imputed values for 2015 and 2020.
+notes: Reproduces Statistics Bureau of Japan census counts. Marital status is the actual state regardless of registration (e-Stat definition https://www.e-stat.go.jp/surveyitems/definitions/39981). Women with a spouse and women of stated status at 20-24, 25-29, 30-34 and 35-39 copied into JP_COUPLES in the script from the 2009 (2005 census), 2012 (2010) and 2025 (2020) editions. Unknown status is excluded; table 6-24 instead uses imputed values for 2015 and 2020.
 accessed: 2026-11-24

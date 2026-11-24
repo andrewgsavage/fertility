@@ -121,6 +121,8 @@ The share of women in a couple fell in all 8 countries with data under 25 and 11
 
 Each dot is a country. See the [change matrix](change-matrix.md) for all factors side by side.
 
+How many couples go on to have a child, and when, is on [Couple to first birth](union-to-first-birth.md), including the share of women in a couple living with a child by age.
+
 ## Causal evidence
 
 No study with a readable causal test was found for this factor. See the [causal analysis](causal-analysis.md).
@@ -156,8 +158,8 @@ Each row is one source's verdict on one cell of the [factor table](index.md), ag
 ```{toctree}
 :hidden:
 
-coupling-vs-mothers
-union-to-first-birth
 coupling-trends
 marriage
+coupling-vs-mothers
+union-to-first-birth
 ```
