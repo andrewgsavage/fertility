@@ -18,7 +18,6 @@ Some of the largest fertility falls came where real house prices fell. Finland's
 ```{raw} html
 <iframe src="../_static/housing/price_change_vs_tfr_change.html" style="width: 100%; aspect-ratio: 1 / 1; max-height: 720px; height: auto; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
-Use the dropdown to switch between real house prices, real rents and price-to-income.
 :::
 
 :::{tab-item} Over time, by country
@@ -39,7 +38,7 @@ Changes in the price-to-income ratio have a weak relation to changes in the shar
 <iframe src="../_static/eurostat/change_scatter_price_to_income.html" style="width: 100%; height: 440px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
-Each dot is a country. See the [country comparison](country-comparison.md) for all factors side by side.
+See the [country comparison](country-comparison.md) for all factors side by side.
 
 ## Young adults' housing conditions
 

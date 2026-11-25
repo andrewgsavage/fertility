@@ -121,7 +121,7 @@ The share of women in a couple fell in all 8 countries with data under 25 and 11
 <iframe src="../_static/eurostat/change_scatter_couple_25_34.html" style="width: 100%; height: 440px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
-Each dot is a country. See the [country comparison](country-comparison.md) for all factors side by side.
+See the [country comparison](country-comparison.md) for all factors side by side.
 
 How many couples go on to have a child, and when, is on [Couple to first birth](union-to-first-birth.md), including the share of women in a couple living with a child by age.
 
