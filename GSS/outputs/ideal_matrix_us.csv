@@ -1,0 +1,7 @@
+key,iso,year,value,n,source
+ideal_young,USA,2005,2.7,263,"GSS, ideal for a family, women 18–29, 2004/2006 pooled"
+ideal_young,USA,2010,2.7,352,"GSS, ideal for a family, women 18–29, 2008/2010/2012 pooled"
+ideal_young,USA,2018,2.56,377,"GSS, ideal for a family, women 18–29, 2016/2018/2021 pooled"
+ideal_30s,USA,2005,2.51,287,"GSS, ideal for a family, women 30–39, 2004/2006 pooled"
+ideal_30s,USA,2010,2.58,368,"GSS, ideal for a family, women 30–39, 2008/2010/2012 pooled"
+ideal_30s,USA,2018,2.61,470,"GSS, ideal for a family, women 30–39, 2016/2018/2021 pooled"

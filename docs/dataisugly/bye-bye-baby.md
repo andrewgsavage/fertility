@@ -124,6 +124,10 @@ It's difficult to compare charts accross multiple pages of a report. When making
 
 See [Bye Bye Baby?](../uk/childlessness-by-education) for what the shared-axis data implies about the report's argument.
 
+## Survey vs population data
+
+Figure 2's "actual births" come from two different surveys, Eurobarometer in 2011 and the Generations and Gender Survey in 2020–2023. Population data from the Human Fertility Database shows almost no change in the number of children of women aged 40–54 over that period (UK 1.91 to 1.90), while the survey figures fall from 2.10 to 1.66. With population data, the gap between ideal and actual children narrows in five of the eight countries. See [Ideal family size](../factors/ideal-family-size.md).
+
 ```{note}
 Figures 4, 5, 6, 7, and 8 (originals, including cropped sub-panels) are reproduced from the Resolution Foundation's [Bye Bye Baby](https://www.resolutionfoundation.org/publications/bye-bye-baby/) report ([PDF](https://www.resolutionfoundation.org/app/uploads/2026/03/Bye-bye-baby.pdf)), included here for commentary and comparison against the recoloured/re-sliced versions above; copyright remains with the Resolution Foundation.
 

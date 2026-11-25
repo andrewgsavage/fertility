@@ -121,7 +121,7 @@ In the table:
 | Low fertility awareness | People overestimate how late they can conceive and how well IVF works, so they postpone past the point where births are realised | ✗ | ✓ | ✓ | ✓ ✓ | ✓ | ✓ |
 | Secularisation | Decline in religious practice, which is associated with marriage and larger families | ✓ | ✓ | ✓ | ✓ ✗ | ✓ | ✓ |
 | Gender equality at home | Women carrying most housework and childcare after a first birth deters a second | ✗ | ✗ | ✗ | ? ? | ✓ | ✓ |
-| Ideal family size | Smaller desired family size; children as one life option among many | ✗ | ? | ? | ? ? | ? | ? |
+| [Ideal family size](ideal-family-size.md) | Smaller desired family size; children as one life option among many | ✗ | ? | ? | ? ? | ? | ? |
 | Intensive parenting norms | Higher expected time and money per child raise the cost of each extra child | ✗ | ✗ | ✗ | ? ? | ✓ | ✓ |
 | [Smartphones](smartphones.md) | Screen time displaces in-person socialising, so young adults meet fewer potential partners | ✓ | ✗ | ✓ | ✓ ✗ | ✗ | ✗ |
 | [Dating apps](dating-apps.md) | Abundant choice and swipe markets delay commitment and concentrate attention on a minority of profiles | ✓ | ✗ | ✓ | ✓ ✗ | ✗ | ✗ |
