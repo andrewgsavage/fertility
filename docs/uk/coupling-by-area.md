@@ -20,7 +20,7 @@ Share of women living in a couple (married, civil partnership or cohabiting) in 
 <iframe src="../_static/ons/coupling_vs_asfr_lad_ew.html" style="width: 100%; height: 560px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
-Labelled: the five LADs with the lowest coupling share, and LADs more than 2.5 standard deviations from the fitted line. Outliers at 25–29: City of London (ASFR 8.7, 556 women in the age group in households), Wandsworth, Warwick and Cambridge below the line, Oldham above. At 30–34 the outliers are all above the line, in the commuter belt around London (Tandridge, Epping Forest, Brentwood, Hertsmere, Elmbridge, Sevenoaks). Dropping them changes r by less than 0.02.
+Outliers (more than 2.5 standard deviations from the fitted line) at 25–29: City of London (ASFR 8.7, 556 women in the age group in households), Wandsworth, Warwick and Cambridge below the line, Oldham above. At 30–34 the outliers are all above the line, in the commuter belt around London (Tandridge, Epping Forest, Brentwood, Hertsmere, Elmbridge, Sevenoaks). Dropping them changes r by less than 0.02.
 
 University towns are low on both axes at 25–29 but do not drive the fit. Oxford (38% coupled) and Cambridge (40%) have the lowest coupling outside London; Cambridge and Warwick (ASFR 51 at 57% coupled) are below the line, likely from postgraduate students, and Oxford's residual is −1.8. At 30–34 none of the three is an outlier.
 
@@ -31,8 +31,6 @@ Fertility: ONS [births and fertility rates by local authority](https://www.nomis
 ```
 
 ## Births per coupled woman
-
-Each LAD's ASFR and births per coupled woman, as a percentage of the median LAD.
 
 ```{raw} html
 <iframe src="../_static/ons/births_per_coupled_lad_ew.html" style="width: 100%; height: 520px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
@@ -48,7 +46,7 @@ Same sources as above. Births per coupled woman = 2021 ASFR ÷ Census 2021 share
 <iframe src="../_static/ons/coupling_change_lad_ew.html" style="width: 100%; height: 520px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
-Points below the dotted line had a smaller share in a couple in 2021 than in 2011. LAD shares are stable relative to each other (r between 2011 and 2021 is 0.90 at 25–29 and 0.94 at 30–34).
+LAD shares are stable relative to each other (r between 2011 and 2021 is 0.90 at 25–29 and 0.94 at 30–34).
 
 ```{note}
 2011: ONS Census 2011 [DC1108EW living arrangements by sex by age](https://www.nomisweb.co.uk/census/2011/dc1108ew) (Nomis), women in households, local authorities before April 2015, summed to April 2023 boundaries. In a couple = married, civil partnership or cohabiting. 2021: as above. LAD ASFRs start in 2013, so the fertility change compared is 2013–2021, not 2011–2021.

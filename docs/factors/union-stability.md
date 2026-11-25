@@ -21,8 +21,6 @@ So the legal-marriage data point the other way from the hypothesis: fewer people
 
 ## Divorced or separated, by country
 
-Women and men aged 25–34 and 35–44 who are currently divorced or separated, as a share of everyone in the age group (top) and of those ever married or in a recorded union (bottom). Countries marked "(legal)" code legal marital status only.
-
 ::::{tab-set}
 
 :::{tab-item} Women
@@ -45,8 +43,6 @@ ILOSTAT [population by sex, age and marital status](https://rplumber.ilo.org/dat
 
 ## Previously married at 30–44, England & Wales
 
-Previously married people (separated, divorced or widowed) who are not living in a couple, and those cohabiting with a new partner, by 5-year age group. The bottom row is the cohabiting share of all previously married people who have not remarried.
-
 ```{raw} html
 <iframe src="../_static/ons/union_stability_ew.html" style="width: 100%; height: 840px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
@@ -66,12 +62,10 @@ Previously married people (separated, divorced or widowed) who are not living in
 | Cohabiting with a new partner (re-partnered share) | 28.0% | 26.6% | 20.3% |
 
 ```{note}
-ONS [Population estimates by marital status and living arrangements](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesbymaritalstatusandlivingarrangements), England and Wales, 2002–2025 (Labour Force Survey weighted to mid-year population estimates). Legal marital status: separations of never-married cohabiting couples are not counted, and remarried people are counted as married. Partners living apart for work, prison or a care home count as previously married and not in a couple. Rows may not add to exactly 100% because of rounding. Survey estimates; single-year changes in the re-partnered share are within sampling error.
+ONS [Population estimates by marital status and living arrangements](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesbymaritalstatusandlivingarrangements), England and Wales, 2002–2025 (Labour Force Survey weighted to mid-year population estimates). Previously married: separated, divorced or widowed. Legal marital status: separations of never-married cohabiting couples are not counted, and remarried people are counted as married. Partners living apart for work, prison or a care home count as previously married and not in a couple. Rows may not add to exactly 100% because of rounding. Survey estimates; single-year changes in the re-partnered share are within sampling error.
 ```
 
 ## Lone parents, Europe
-
-Lone parents aged 25–49 as a share of everyone aged 25–49 living in a household with children.
 
 ```{raw} html
 <iframe src="../_static/eurostat/lone_parents_europe.html" style="width: 100%; height: 520px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
@@ -93,14 +87,12 @@ Eurostat [divorce indicators](https://ec.europa.eu/eurostat/databrowser/view/dem
 
 ## Separation against second births
 
-Change between 2010 and 2019 (or the latest earlier year both series have) in the second-birth rate at 30–44, against the change in women aged 35–44 divorced or separated (left) and in lone mothers aged 25–49 (right).
-
 ```{raw} html
 <iframe src="../_static/ilo/separation_vs_second_birth.html" style="width: 100%; height: 540px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
 ```{note}
-Second-birth rate: [Human Fertility Database](https://www.humanfertility.org) conditional rates (second births per woman with one child), ages 30–44 pooled with parity-1 exposures as weights. Left: ILOSTAT [marital status](https://rplumber.ilo.org/data/indicator/?id=POP_XWAP_SEX_AGE_MTS_NB_A&format=.csv.gz), divorced or separated as a share of ever married, women 35–44 (legal status in all but Chile and South Korea). Right: Eurostat [household composition table](https://ec.europa.eu/eurostat/databrowser/view/lfst_hhindws/default/table), lone mothers 25–49. Ends by 2019, before the 2021 EU-LFS break. Poland ends in 2017 and Russia in 2018. The UK has no HFD conditional rates.
+Second-birth rate: [Human Fertility Database](https://www.humanfertility.org) conditional rates (second births per woman with one child), ages 30–44 pooled with parity-1 exposures as weights. Left: ILOSTAT [marital status](https://rplumber.ilo.org/data/indicator/?id=POP_XWAP_SEX_AGE_MTS_NB_A&format=.csv.gz), divorced or separated as a share of ever married, women 35–44 (legal status in all but Chile and South Korea). Right: Eurostat [household composition table](https://ec.europa.eu/eurostat/databrowser/view/lfst_hhindws/default/table), lone mothers 25–49. Changes run from 2010 to 2019, or the latest earlier year both series have, before the 2021 EU-LFS break. Poland ends in 2017 and Russia in 2018. The UK has no HFD conditional rates.
 ```
 
 ## Related pages

@@ -249,6 +249,10 @@ Under 20 and 20–24, the ratio rose in most of Western Europe and in Japan, mos
 
 Only at 20–24 in England & Wales, Scotland and Spain did abortions rise. Everywhere else young women had fewer abortions and far fewer births, so fewer pregnancies overall. In England & Wales, pregnancies at 20–24 (abortions + births) fell 20%, from 174,000 to 139,000, while births fell 42%. In Central and Eastern Europe the ratio fell at every age.
 
+### Under 20 since 2020
+
+Under 20, abortions to women with no children per 100 first births rose faster after 2020: England & Wales 139 (2019) to 188 (2022), Spain 157 to 225 (2024), Italy 168 (2021) to 229, Finland 160 to 200, Estonia 104 to 176, while Slovakia and Hungary did not rise. Until 2021 the rise came from births falling faster than abortions; after 2021 the number of abortions itself rose (England & Wales 18,661 in 2021 to 24,058 in 2022, Spain 8,762 to 11,023 by 2024) while first births stayed flat or kept falling. Abortions dipped in 2020–21, so part of the later rise may be a rebound, and without rates per woman a change in the number of teenage women can't be ruled out.
+
 ## Abortions to women who already have a child
 
 Share of abortions to women with at least one previous birth. A high share means abortion is mostly used to stop or space births after the first, not to delay or avoid the first. The share also moves when the number of women who are mothers changes, so it is a rough guide to behaviour.
