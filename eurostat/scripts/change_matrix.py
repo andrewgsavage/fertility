@@ -34,6 +34,10 @@ Child:coupling ratios and coupling by age (country detail):
   ONS/outputs/coupling_by_age_ew.csv; each falls back to a copy in
   eurostat/data/change_matrix/main/ when the branch doesn't have it.
 
+Ideal and intended number of children (women, by age): GGS/outputs/ideal_matrix_europe.csv
+(Eurobarometer 2011 to GGS-II 2020-23, from published tables) and GSS/outputs/ideal_matrix_us.csv
+(GSS, pooled survey years). Ends up to 3 years from the window's ends.
+
 Run with cwd = eurostat/.
 """
 
@@ -152,6 +156,11 @@ NZ_COUPLES = {
 }
 # European Social Survey integrated files, downloaded by hand after login to eurostat/data/ess/.
 # Two rounds are pooled at each point; a country needs both rounds and this many women aged 25-34.
+# Ideal and intended number of children. Europe compares Eurobarometer 2011 with GGS-II (2020-23), so the end
+# sits 1-3 years after 2019; the US pools GSS survey years around 2005, 2010 and 2018.
+IDEAL_FILES = (ROOT / "GGS" / "outputs" / "ideal_matrix_europe.csv", ROOT / "GSS" / "outputs" / "ideal_matrix_us.csv")
+IDEAL_ROWS = ("ideal_young", "ideal_30s", "intended_young", "intended_30s")
+IDEAL_TOL = {c: 3 for c in COUNTRIES}
 ESS_POINTS = {2005: (2, 3), 2011: (5, 6), 2017: (8, 9)}
 ESS_MIN_WOMEN = 150
 ESS_TOL = {c: 2 for c in COUNTRIES}
@@ -419,6 +428,16 @@ def load_factors():
     return f
 
 
+def load_ideals():
+    """({row key: {iso: {year: mean children}}}, {row key: {iso: source}})"""
+    d = pd.concat([pd.read_csv(f) for f in IDEAL_FILES if f.exists()])
+    series_, sources = {k: {} for k in IDEAL_ROWS}, {k: {} for k in IDEAL_ROWS}
+    for r in d.itertuples():
+        series_[r.key].setdefault(r.iso, {})[int(r.year)] = r.value
+        sources[r.key][r.iso] = r.source
+    return series_, sources
+
+
 def load_abortion_order():
     """{row key: {iso: {year: abortions per 100 births of the same order}}}"""
     d = pd.read_csv(ABORTION_ORDER)
@@ -441,12 +460,16 @@ PARENTS_GROUP = "Women living with their parents"
 ALONE_GROUP = "Women living alone"
 UNSIGNED = ("alone_18_24", "alone_25_34")  # no proposed direction: coloured by rise or fall, left out of counts
 ABORTION_GROUPS = {"first": "First pregnancies ended by abortion", "later": "Later pregnancies ended by abortion"}
+IDEAL_GROUP = "Ideal number of children"
+INTENDED_GROUP = "Intended number of children"
 GROUP_NOTES = {COUPLE_GROUP: "% of women living with a partner, married or not",
                ABORTION_GROUPS["first"]: "abortions to women with no children per 100 first births",
                ABORTION_GROUPS["later"]: "abortions to mothers per 100 second or later births",
                RATIO_GROUP: "% of women with a child by the given age ÷ % in a couple in the age band",
                PARENTS_GROUP: "% of women in the age band",
-               ALONE_GROUP: "% of women in the age band; purple rose, grey fell, no proposed direction"}
+               ALONE_GROUP: "% of women in the age band; purple rose, grey fell, no proposed direction",
+               IDEAL_GROUP: "women's mean personal ideal: Eurobarometer 2011 to GGS-II 2020–23; US: GSS ideal for a family",
+               INTENDED_GROUP: "women's mean intended number, including children already born: Eurobarometer 2011 to GGS-II 2020–23"}
 FACTORS = [
     ("couple_18_24", "18–24 · EU-LFS", -1, "partnership-formation", COUPLE_GROUP),
     ("couple_under_25", "Under 25 · registers, ILO", -1, "partnership-formation", COUPLE_GROUP),
@@ -467,6 +490,10 @@ FACTORS = [
     ("parents_25_34", "25–34 · EU-SILC", +1, "living-arrangements", PARENTS_GROUP),
     ("alone_18_24", "18–24 · EU-LFS", +1, "living-arrangements", ALONE_GROUP),
     ("alone_25_34", "25–34 · registers, CPS", +1, "living-arrangements", ALONE_GROUP),
+    ("ideal_young", "Women under 30 · Eurobarometer, GGS, GSS", -1, "ideal-family-size", IDEAL_GROUP),
+    ("ideal_30s", "Women in their 30s · Eurobarometer, GGS, GSS", -1, "ideal-family-size", IDEAL_GROUP),
+    ("intended_young", "Women under 30 · Eurobarometer, GGS", -1, "ideal-family-size", INTENDED_GROUP),
+    ("intended_30s", "Women in their 30s · Eurobarometer, GGS", -1, "ideal-family-size", INTENDED_GROUP),
     ("leaving_home", "Women's age leaving home", +1, "leaving-home", "Life course"),
     ("tertiary_women", "Women 25–34 with a degree", +1, "education", "Life course"),
     ("youth_unemployment", "Unemployment, 15–24", +1, "job-insecurity", "Work and costs"),
@@ -479,6 +506,8 @@ FACTORS = [
     ("mobile_internet", "Mobile internet use, 16–24", +1, "smartphones", "Technology"),
 ]
 UNITS = {"leaving_home": " yrs", "price_to_income": " (index)", "youth_unemployment": "%"}
+UNITS.update({k: " children" for k in IDEAL_ROWS} | {k: " per 100 births" for k in ABORTION_ROWS})
+DP = {k: 2 for k in IDEAL_ROWS}  # means of about 2 children: 1 dp hides the change
 
 
 # ---------- outcomes ----------
@@ -990,7 +1019,7 @@ def ratio_row(key, label, s, order, sources):
 def row_tols(key):
     """{iso: years} a row's start and end values may sit from the window's ends."""
     return (CENSUS_TOL if key.startswith("mothers_by_") else COUPLING_TOL if key in COUPLING_TOL_ROWS
-            else ABORTION_TOL if key in ABORTION_ROWS
+            else ABORTION_TOL if key in ABORTION_ROWS else IDEAL_TOL if key in IDEAL_ROWS
             else CENSUS_COUPLE_TOL if key in CENSUS_COUPLE_ROWS else ESS_TOL if key == "couple_ess_25_34"
             else sparse_tols(key) if key in RATIO_OF_SPARSE else {})
 
@@ -1072,6 +1101,9 @@ def build(reference=None):
     factors.update(census)
     factors.update(load_abortion_order())
     sources.update(census_sources)
+    ideals, ideal_sources = load_ideals()
+    factors.update(ideals)
+    sources.update(ideal_sources)
     factors["couple_ess_25_34"], ess_errors = load_ess_couples()
     sources["couple_ess_25_34"] = {c: "ESS, two rounds pooled" for c in factors["couple_ess_25_34"]}
     sources["alone_25_34"] = {c: {"NLD": "CBS register", "FIN": "Statistics Finland register", "USA": "CPS"}[c]
@@ -1109,12 +1141,13 @@ def build(reference=None):
                          before=median(before), after=median(after)))
     for key, label, direction, page, group in FACTORS:
         s = factors[key]
-        tols = (COUPLING_TOL if key in COUPLING_TOL_ROWS else ABORTION_TOL if key in ABORTION_ROWS else CENSUS_COUPLE_TOL if key in CENSUS_COUPLE_ROWS
+        tols = (COUPLING_TOL if key in COUPLING_TOL_ROWS else ABORTION_TOL if key in ABORTION_ROWS
+                else IDEAL_TOL if key in IDEAL_ROWS else CENSUS_COUPLE_TOL if key in CENSUS_COUPLE_ROWS
                 else ESS_TOL if key == "couple_ess_25_34" else None)
         cells = {c: child_change(s.get(c), c, tols) if tols else change(s.get(c)) for c in order}
         before = [direction * change(s.get(c), 2001, BASE) for c in order if change(s.get(c), 2001, BASE) is not None]
         after = [direction * v for v in cells.values() if v is not None]
-        rows.append(dict(key=key, label=label, group=group, kind="factor", unit=UNITS.get(key, "%"), direction=direction, page=page, cells=cells,
+        rows.append(dict(key=key, label=label, group=group, kind="factor", unit=UNITS.get(key, "%"), **({"dp": DP[key]} if key in DP else {}), direction=direction, page=page, cells=cells,
                          before=median(before), after=median(after), sources=sources.get(key), unsigned=key in UNSIGNED))
         if key == COUPLING_LAST:
             rows += [ratio_row(k, label, ratios[k], order, ratio_src[k]) for k, label, *_ in RATIO_ROWS]
@@ -1223,7 +1256,7 @@ def scatters(countries, rows):
                         line=dict(color=["#2a78d6" if p[0] in M30_ESTIMATES else "white" for p in pts],
                                   width=[2 if p[0] in M30_ESTIMATES else 1 for p in pts])),
             customdata=[names[p[0]] + (" (estimated child by 30)" if p[0] in M30_ESTIMATES else "") for p in pts],
-            hovertemplate="%{customdata}<br>Change in factor: %{x:.1f}<br>Change in % with a child by 30: %{y:+.1f}<extra></extra>"))
+            hovertemplate="%{customdata}<br>Change in factor: %{x:." + str(r.get("dp", 1)) + "f}<br>Change in % with a child by 30: %{y:+.1f}<extra></extra>"))
         stat = f"{r['toward_fewer_in_falling']} of {r['n_falling']} falling countries towards fewer births"
         fig.update_layout(
             template="plotly_white", height=420, margin=dict(l=60, r=20, t=50, b=50),

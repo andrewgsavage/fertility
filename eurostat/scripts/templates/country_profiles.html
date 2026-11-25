@@ -149,7 +149,7 @@ function draw(iso) {
     const w = Math.abs(s) * 32, col = s >= 0 ? "#eb6834" : "#1baf7a", pos = s >= 0 ? `left:32px;width:${w}px` : `right:32px;width:${w}px`;
     const sign = v > 0 ? "+" : v < 0 ? "−" : "";
     return `<tr><td>${r.label}</td><td class="chip"><span><i style="background:${col};${pos}"></i></span></td>` +
-           `<td class="muted">${sign}${Math.abs(v).toFixed(1)}${r.unit} ${s >= 0 ? "towards fewer births" : "towards more births"}</td></tr>`;
+           `<td class="muted">${sign}${Math.abs(v).toFixed(r.dp ?? 1)}${r.unit} ${s >= 0 ? "towards fewer births" : "towards more births"}</td></tr>`;
   }).join("");
 }
 
