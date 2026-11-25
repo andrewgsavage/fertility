@@ -17,7 +17,7 @@ These charts compare abortions with births of the same order. Abortions to women
 <iframe src="../_static/eurostat/abortion_order_ratio_first_by_age.html" style="width: 100%; height: 900px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
-Abortions to women with no children per 100 first births, by age. England & Wales runs to 2022, when HFD births by order end, and uses DHSC's age groups (Under 20, 20–34, 35+, with 20–34 as a grey line), so its panel isn't directly comparable with the five-group panels.
+England & Wales runs to 2022, when HFD births by order end, and uses DHSC's age groups (Under 20, 20–34, 35+), so its panel isn't directly comparable with the five-group panels.
 
 | Country | 20–24, 2013 | 20–24, latest | 25–29, 2013 | 25–29, latest | 30–34, 2013 | 30–34, latest |
 |---|--:|--:|--:|--:|--:|--:|
@@ -39,7 +39,7 @@ In England & Wales the ratio at 20–34 held at 26–32 from 2013 to 2021, then 
 <iframe src="../_static/eurostat/abortion_order_ratio_second_by_age.html" style="width: 100%; height: 900px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
-Abortions to women with exactly one child per 100 second births, by age: roughly how many pregnancies that would have been a second child end in abortion for every 100 that end in a birth. This is the pregnancy-level counterpart of the share of mothers who go on to a second child (PPR 1→2). Eurostat countries only; England & Wales splits out women with one child only from 2021, too few years to show.
+Eurostat countries only; England & Wales splits out women with one child only from 2021, too few years to show.
 
 | Country | Age | 2013 | Latest |
 |---|---|--:|--:|
@@ -61,7 +61,7 @@ All ages, the ratio rose in Spain (19 to 21, 2013–2024) and Finland (9 to 11),
 <iframe src="../_static/eurostat/abortion_order_ratio_later_by_age.html" style="width: 100%; height: 900px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
-Abortions to mothers per 100 second-or-later births, by age, Eurostat countries plus England & Wales (to 2022). England & Wales uses DHSC's own age groups (Under 20, 20–34, 35+, with 20–34 as a grey line), so its panel isn't directly comparable with the five-group panels.
+England & Wales runs to 2022. England & Wales uses DHSC's own age groups (Under 20, 20–34, 35+), so its panel isn't directly comparable with the five-group panels.
 
 | Country | Age | 2013 | Latest |
 |---|---|--:|--:|
@@ -127,7 +127,7 @@ Abortions and live births by the woman's age, for 31 European countries (England
 <iframe src="../_static/eurostat/abortion_by_age_small_multiples.html" style="width: 100%; height: 1690px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
-Abortions per 100 live births, 2005–2025. Each chart has its own y-axis; switch to a shared axis to compare levels. Countries with fewer than three years of data in the period are left out.
+Countries with fewer than three years of data in the period are left out.
 
 ## Abortions and births by country
 
@@ -135,7 +135,7 @@ Abortions per 100 live births, 2005–2025. Each chart has its own y-axis; switc
 <iframe src="../_static/eurostat/abortion_by_age.html" style="width: 100%; height: 900px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
-Pick a country from the dropdown. The full table (country, year, age group, abortions, births, abortions per 100 births) is in [`abortion_by_age.csv`](../_static/eurostat/abortion_by_age.csv).
+The full table (country, year, age group, abortions, births, abortions per 100 births) is in [`abortion_by_age.csv`](../_static/eurostat/abortion_by_age.csv).
 
 ## Abortions per 100 births, latest year
 
@@ -284,8 +284,6 @@ In Central Europe about three-quarters of abortions are to mothers, and that has
 <iframe src="../_static/eurostat/abortion_parity_abs.html" style="width: 100%; height: 900px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
-Each chart has its own scale.
-
 | Country | No children, 2013 | No children, latest | Mothers, 2013 | Mothers, latest |
 |---|--:|--:|--:|--:|
 | England & Wales | 87,100 | 127,900 (2023) | 98,200 | 150,100 (2023) |
@@ -305,7 +303,7 @@ England & Wales is the only country where abortions rose a lot in both groups, m
 <iframe src="../_static/eurostat/abortion_parity_abs_by_age.html" style="width: 100%; height: 900px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
-Eurostat countries plus England & Wales (2013–2023); use the buttons to switch between women with no children and mothers. Each chart has its own scale. England & Wales uses DHSC's own age groups (Under 20, 20–34, 35+, with 20–34 as a grey line), so its panel isn't directly comparable with the five-group panels.
+England & Wales covers 2013–2023. England & Wales uses DHSC's own age groups (Under 20, 20–34, 35+), so its panel isn't directly comparable with the five-group panels.
 
 | Country | Age | No children, 2013 → latest | Mothers, 2013 → latest |
 |---|---|--:|--:|
@@ -327,7 +325,7 @@ In Spain and Portugal, abortions to women in their twenties with no children ros
 <iframe src="../_static/eurostat/abortion_parity_by_age.html" style="width: 100%; height: 900px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
-Eurostat countries plus England & Wales. England & Wales uses DHSC's own age groups (Under 20, 20–34, 35+, with 20–34 as a grey line), so its panel isn't directly comparable with the five-group panels. In England & Wales the share to mothers at 20–34 fell from 55% to 51% between 2019 and 2023, after years of no change. The fall is clearest at 25–34: the share of abortions at 25–29 to women with a child fell in Spain (55% to 44%, 2013–2024), Portugal (61% to 49%, 2008–2024), Germany (64% to 52%, 2008–2022), Estonia (83% to 63%) and Finland (58% to 50%). More women at the usual age for a first birth are ending a first pregnancy.
+England & Wales uses DHSC's own age groups (Under 20, 20–34, 35+), so its panel isn't directly comparable with the five-group panels. In England & Wales the share to mothers at 20–34 fell from 55% to 51% between 2019 and 2023, after years of no change. The fall is clearest at 25–34: the share of abortions at 25–29 to women with a child fell in Spain (55% to 44%, 2013–2024), Portugal (61% to 49%, 2008–2024), Germany (64% to 52%, 2008–2022), Estonia (83% to 63%) and Finland (58% to 50%). More women at the usual age for a first birth are ending a first pregnancy.
 :::
 
 :::{tab-item} Per 100 births of the same order
