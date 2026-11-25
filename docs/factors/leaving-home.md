@@ -26,9 +26,8 @@ Eurostat's annual estimates of the average age young people leave home show this
 ```
 :::
 
-::::
-
-The collapse comes from fertility falling in the early-leaving countries, not from leaving ages converging. Between 2010 and 2024, for the same 28 countries:
+:::{tab-item} Data
+**Change 2010–2024, same 28 countries**
 
 | Region | Countries | Change in TFR | Change in women's leaving age (years) |
 |---|---|---|---|
@@ -36,6 +35,11 @@ The collapse comes from fertility falling in the early-leaving countries, not fr
 | Western | 7 | -0.33 | +0.7 |
 | Southern | 6 | -0.19 | +0.7 |
 | Central & Eastern | 11 | -0.13 | -1.0 |
+:::
+
+::::
+
+The collapse comes from fertility falling in the early-leaving countries, not from leaving ages converging.
 
 Finland, Denmark, France and the Netherlands kept leaving home at 21-23 but lost 0.36-0.62 children per woman. Southern Europe left home later still and fell by less. Much of Central and Eastern Europe left home earlier, with smaller falls in fertility. Late home-leaving still goes with low fertility in Southern Europe, but early home-leaving no longer goes with high fertility.
 
@@ -59,7 +63,9 @@ If leaving home late delayed families, countries where women leave later would a
 ```
 :::
 
-:::{tab-item} By region, 2024
+:::{tab-item} Data
+**By region, 2024**
+
 | Region | Leaving age | Age at first birth | Gap (years) |
 |---|---|---|---|
 | Nordic | 21.5 | 30.2 | 8.7 |
@@ -103,7 +109,9 @@ Leaving age is not related to whether women become mothers by 30. For the 10 cou
 ```
 :::
 
-:::{tab-item} By region
+:::{tab-item} Data
+**By region**
+
 | Region | Leaving age | Children by 35 (1988 cohort) | Mothers by 30 (1992 cohort) |
 |---|---|---|---|
 | Nordic | 20.3-20.9 | 1.29 | 37% |
@@ -122,17 +130,25 @@ Late home-leaving goes with fewer children by 35 mainly through Southern Europe,
 
 Women left home later where the share with a child by 30 fell most, but the median shift was about 0.1 years.
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/eurostat/change_scatter_leaving_home.html" style="width: 100%; height: 440px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
-See the [country comparison](country-comparison.md) for all factors side by side.
-
+:::{tab-item} Notes
 ```{note}
 Data: Eurostat, [Estimated average age of young people leaving the parental household by sex](https://ec.europa.eu/eurostat/databrowser/view/yth_demo_030/default/table) (yth_demo_030), women; [Fertility indicators](https://ec.europa.eu/eurostat/databrowser/view/demo_find/default/table) (demo_find), total fertility rate and mean age of women at birth of first child. Cohort fertility: [Human Fertility Database](https://www.humanfertility.org), cumulative cohort fertility rates by age and birth order (ccfrVH, ccfrVHbo). Leaving age is estimated from the Labour Force Survey and has series breaks in some countries; Sweden's series is noisy, dropping to about 17.6 in 2019-20. Leaving-age series start in 2009 for Sweden, 2010 for Denmark and 2021 for Norway, and the UK series ends in 2019 (2018 for the scatter). Assigning a year's average leaving age to the cohort aged 25 that year is an approximation; the estimate covers everyone who left home that year.
 
 Billari, F.C. and Kohler, H.-P. (2002), [*Patterns of Lowest-Low Fertility in Europe*](https://www.demogr.mpg.de/papers/working/wp-2002-040.pdf), MPIDR Working Paper WP-2002-040, Figure 6.
 ```
+:::
+
+::::
+
+See the [country comparison](country-comparison.md) for all factors side by side.
 
 ## Findings in the source registry
 

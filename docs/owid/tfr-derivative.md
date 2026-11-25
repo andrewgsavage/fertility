@@ -8,10 +8,15 @@ TFR-vs-rate-of-change space — useful for spotting whether decline
 accelerates or slows as TFR approaches a given level, and whether a country
 is currently rising or falling at its current level.
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/owid/tfr_derivative.html" style="width: 100%; height: 650px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
+:::{tab-item} Notes
 ```{note}
 Data: Human Fertility Database (2025); UN, World Population Prospects (2024)
 — with major processing by Our World in Data. Source:
@@ -21,3 +26,6 @@ Our World in Data.
 The derivative is computed as a simple year-on-year central difference of
 the reported TFR series (one-sided at each series' first and last year).
 ```
+:::
+
+::::

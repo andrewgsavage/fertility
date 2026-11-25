@@ -29,10 +29,9 @@ Part of [Partnership formation](partnership-formation.md). How long after moving
 ```{raw} html
 <iframe src="../_static/nso/union_to_first_birth_ffs.html" style="width: 100%; height: 560px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
-
 :::
 
-:::{tab-item} Table
+:::{tab-item} Data
 
 | Country | Period | 1 yr | 2 yrs | 3 yrs | 5 yrs | 10 yrs | Median (yrs) |
 |---|---|--:|--:|--:|--:|--:|--:|
@@ -58,7 +57,7 @@ Part of [Partnership formation](partnership-formation.md). How long after moving
 
 :::
 
-:::{tab-item} Sources
+:::{tab-item} Notes
 
 ```{note}
 Andersson & Philipov (2002), [Life-table representations of family dynamics in Sweden, Hungary, and 14 other FFS countries](https://doi.org/10.4054/DemRes.2002.7.4), Demographic Research 7(4), Table 17 (p. 99 and Appendix 2, pp. 210–211). Fertility and Family Surveys. Life table of unions formed by a childless person, cohabiting or married, censored at separation, so it shows the pace of entry into parenthood if no couple split. Men's and women's reports pooled. Synthetic cohorts from the period shown, one per country, so no trend. Medians are whole years as printed. Czech Republic has no value at 10 years.
@@ -80,7 +79,7 @@ Andersson & Philipov (2002), [Life-table representations of family dynamics in S
 
 :::
 
-:::{tab-item} Sources
+:::{tab-item} Notes
 
 ```{note}
 Andersson & Philipov (2002), [Demographic Research 7(4)](https://doi.org/10.4054/DemRes.2002.7.4), Appendix 2: women's median age at first union (Table 6, cohabitation or marriage) and at first becoming a parent (Table 8). Synthetic cohorts from the FFS, periods as in the chart above. Medians are whole-year ages, so each gap is only accurate to about a year. The parenthood median includes women who never formed a union.
@@ -102,7 +101,7 @@ Andersson & Philipov (2002), [Demographic Research 7(4)](https://doi.org/10.4054
 
 :::
 
-:::{tab-item} Sources
+:::{tab-item} Notes
 
 ```{note}
 Japan: Ministry of Health, Labour and Welfare, [Specified Report of Vital Statistics: births, 2021](https://www.mhlw.go.jp/toukei/saikin/hw/jinkou/tokusyu/syussyo07/dl/gaikyou.pdf) (Table 1, mean years from the start of living together to the birth, marital births, 1975–2019; Table 6, births with a marriage shorter than the pregnancy as % of marital first births, 1995–2019). The duration runs from "started living together" on the birth registration, not from the legal marriage. S Korea: Statistics Korea birth statistics, from the start of married life regardless of legal registration. 2000–2010 from [2010 Birth Statistics (final)](https://m.korea.kr/expertWeb/resources/files/data/document_file/2011/2010%EB%85%84%20%EC%B6%9C%EC%83%9D%ED%86%B5%EA%B3%84%28%ED%99%95%EC%A0%95%29.pdf), Tables 6–7. Later years from press coverage of the final releases: [2015](https://m.seoul.co.kr/news/2016/08/24/20160824800098), [2018](https://mobile.newsis.com/view/NISX20190828_0000752780) (with 2017's share), [2022](https://www.newsis.com/view/NISX20230830_0002431412) and [2024](https://www.newsis.com/view/NISX20250827_0003305090), with the 2023 mean from the [2024 release](https://mods.go.kr/board.es?mid=a20108100000&bid=11773&act=view&list_no=439008). The 2021 and 2023 shares within 2 years (open markers) are derived from the printed year-on-year change. Both series count only couples who had a first birth that year, so they measure the lag among births, not the chance that a couple has a child.
@@ -146,7 +145,7 @@ The FFS curves and the Japanese series start the clock when the couple moves in 
 
 :::
 
-:::{tab-item} Sources
+:::{tab-item} Notes
 
 ```{note}
 Europe: Perelli-Harris, Sigle-Rushton, Kreyenfeld, Lappegård, Berghammer & Keizer (2010), [The educational gradient of nonmarital childbearing in Europe](https://www.demogr.mpg.de/papers/working/wp-2010-004.pdf), MPIDR Working Paper 2010-004, Table 1 (published in Population and Development Review 36(4)). Women's first births by union status at the birth, from retrospective union and birth histories, by period of the birth. Austria (36% within cohabitation, 1980–2009 combined) and West Germany (21%, women born 1971–73) have no breakdown by period and are not plotted. US: Martinez, Daniels & Chandra (2012), [NSFG 2006–2010](https://www.cdc.gov/nchs/data/nhsr/nhsr051.pdf), National Health Statistics Reports 51, Table 11, women aged 15–44 at interview, by year of first birth. Their births before 1990 were mostly at young ages, which have more births outside marriage. US births before 1985 (9.4%) are not plotted. Points sit at the middle of each period.
@@ -185,7 +184,7 @@ Women's age at first cohabitation (or first union, whichever of cohabitation or 
 
 :::
 
-:::{tab-item} Sources
+:::{tab-item} Notes
 
 ```{note}
 US: Manning, Brown & Payne (2014), Two decades of stability and change in age at first union formation, Journal of Marriage and Family 76(2), [working-paper version](https://www.bgsu.edu/content/dam/BGSU/college-of-arts-and-sciences/NCFMR/documents/WP/Wp-13-06.pdf), Table 1A: women's median age at first cohabitation and at first union, by period the union began (NSFH 1987–88, NSFG 1995, 2002, 2006–2010). Age at first birth: [Human Fertility Database](https://www.humanfertility.org/) period mean age at first birth (MAB1), averaged over the same years. That is a mean among mothers set against a median, so the US gap is approximate. France: Costemalle (2016), [Changes in family and partnership life courses](https://epc2016.eaps.nl/papers/160656), European Population Conference (INED-INSEE EPIC survey, 2013–14): gap between median age at first cohabitation and median age at first birth, men and women whose first cohabitation began before 30. The paper gives the gap for unions begun 1978–84 and "20 years later", plotted at 1998–2004, and not the ages. UK: Chao, Blom, Berrington & Perelli-Harris (2020), [How partnerships have changed in the UK over the last 30 years](https://eprints.soton.ac.uk/439249/), ESRC Centre for Population Change Policy Briefing 50 (Understanding Society partnership histories): women's median age at first cohabitation, 21 for partnerships begun in 1980 and 22 in 2009, in whole years. Age at first birth: ONS [Births by parents' characteristics](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/livebirths/datasets/birthsbyparentscharacteristics), 2022 workbook, Table 4, standardised mean age of mother at first birth, England and Wales; before 2013 ONS estimates birth order for births outside marriage. Japan: MHLW (as in the Japan and S Korea chart), wives' mean age at first marriage, counted at the wedding or the start of living together, whichever came first, for marriages registered that year, against mean age at first birth. FFS: Andersson & Philipov (2002), [Demographic Research 7(4)](https://doi.org/10.4054/DemRes.2002.7.4), Tables 6 and 8, women's median age at first union and at first becoming a parent, in whole years. The parenthood median counts all women, including those who stay childless, so it sits above a mean among mothers.
@@ -225,7 +224,7 @@ Mean age at first birth against women's mean age at first marriage. Points below
 
 :::
 
-:::{tab-item} Sources
+:::{tab-item} Notes
 
 ```{note}
 Mean age at first birth: [Human Fertility Database](https://www.humanfertility.org/) period mean age at first birth (`mabRRbo`, MAB1). Women's mean age at first marriage: Eurostat [demo_nind](https://ec.europa.eu/eurostat/databrowser/view/demo_nind/default/table) (FAGEMAR1, from marriage registrations) for European countries; Japan from the MHLW report in the chart above (wives' mean age at first marriage); the US, Canada, S Korea, Taiwan and Chile from UN [World Marriage Data 2019](https://www.un.org/development/desa/pd/data/world-marriage-data) singulate mean age at marriage (SMAM), census years only. SMAM is computed from the share never married by age, not from registrations, and is not directly comparable with the register means. The US has two census years (1970 and 2010), so no arrow from 1990; it shows on the Gap over time tab. Marriage only: no source has a yearly mean age at first cohabitation by country.

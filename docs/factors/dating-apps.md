@@ -24,10 +24,15 @@ Ticks from the [factors table](index.md): ✓ where the mechanism is proposed to
 
 Share of couples by the period in which they first met, from the [How Couples Meet and Stay Together](https://data.stanford.edu/hcmst2017) 2017 wave (Rosenfeld, Thomas and Hausen; weighted, n = 3,341 couples). Categories overlap. Couples that split before 2017 are missing, which understates short-lived relationships in earlier periods.
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/hcmst/how_couples_meet_us.html" style="width: 100%; height: 480px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
+:::{tab-item} Data
 | Met | 1980–89 | 2000–04 | 2010–14 | 2015–17 |
 |---|--:|--:|--:|--:|
 | Online (all kinds) | 0.0% | 11.8% | 21.3% | 34.0% |
@@ -35,15 +40,23 @@ Share of couples by the period in which they first met, from the [How Couples Me
 | Through friends | 26.3% | 28.8% | 25.9% | 20.6% |
 | Work | 24.3% | 16.0% | 12.6% | 10.4% |
 | Through family | 15.6% | 14.1% | 10.8% | 5.6% |
+:::
+
+::::
 
 Online meeting went from 0.0% of couples formed in the 1980s (2.2% in the 1990s) to a third of those formed in 2015–17, alongside declines in meeting through family, work and friends. This shows where couples that did form met. It says nothing about how many people failed to form a couple.
 
 ### Couple households and first-birth age, Europe
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/eurostat/couples_firstbirth_age_europe.html" style="width: 100%; height: 520px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
+:::{tab-item} Data
 | Country | Couple households, 25–49, 2012 | 2024 | First-birth age 2013 | 2023 |
 |---|--:|--:|--:|--:|
 | EU27 | 50.9% | 51.2% | 28.8 | 29.8 |
@@ -55,24 +68,37 @@ Online meeting went from 0.0% of couples formed in the 1980s (2.2% in the 1990s)
 | Germany | 53.1% | 54.0% | 29.3 | 29.8 |
 | Sweden | 54.6% | 63.9% | 29.1 | 30.0 |
 | Poland | 41.2% | 49.0% | 26.7 | 28.4 |
+:::
 
-The EU share of 25–49 year-olds in couple households was flat (50.9% to 51.2%) while the first-birth age rose in every country shown. The couple share fell in 12 of 30 countries between 2012 and 2024 (median change +1.2 points), so there is no general fall in partnering over the app era. Spain, France, the Netherlands and Finland fell; Poland and Sweden rose, and the Spanish and Swedish series show apparent breaks. The measure counts cohabiting and married couples at ages 25–49, not young adults or relationship formation, and it can't separate apps from other causes.
-
+:::{tab-item} Notes
 ```{note}
 Eurostat [couple households](https://ec.europa.eu/eurostat/databrowser/view/lfst_hhindws/default/table) (EU-LFS, 2006–2025; the UK ends in 2019) and [mean age at first birth](https://ec.europa.eu/eurostat/databrowser/view/demo_find/default/table), 35 and 34 countries.
 ```
+:::
+
+::::
+
+The EU share of 25–49 year-olds in couple households was flat (50.9% to 51.2%) while the first-birth age rose in every country shown. The couple share fell in 12 of 30 countries between 2012 and 2024 (median change +1.2 points), so there is no general fall in partnering over the app era. Spain, France, the Netherlands and Finland fell; Poland and Sweden rose, and the Spanish and Swedish series show apparent breaks. The measure counts cohabiting and married couples at ages 25–49, not young adults or relationship formation, and it can't separate apps from other causes.
 
 ### US young adults
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/gss/young_adults_no_sex_us.html" style="width: 100%; height: 480px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
+:::{tab-item} Data
 | Pooled years | No sex, 18–29: men | women | Never married, 25–29: men | women |
 |---|--:|--:|--:|--:|
 | 1989–92 | 15.1% | 13.4% | 47.0% | 32.5% |
 | 2009–12 | 7.4% | 7.2% | 72.4% | 49.1% |
 | 2021–24 | 21.0% | 22.3% | 69.2% | 61.8% |
+:::
+
+::::
 
 From the [General Social Survey](https://gss.norc.org/content/dam/gss/get-the-data/documents/stata/GSS_stata.zip) 1972–2024 file. No-sex shares were 7% in 2009–12 and 21–22% in 2021–24; each pooled group has 126–716 respondents, so changes of a few points aren't reliable. The series doesn't isolate apps.
 

@@ -9,7 +9,7 @@ This is correct but misleading. It is an artefact of using childlessness rates r
 
 ::::{tab-set}
 
-:::{tab-item} Table
+:::{tab-item} Data
 | | Graduate: childless | Graduate: with child | | Non-graduate: childless | Non-graduate: with child |
 |---|---|---|---|---|---|
 | 2011 | 77% | 23% | | 33% | 67% |

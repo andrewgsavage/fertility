@@ -42,6 +42,9 @@ Post-1989 cohorts have seen a significant reduction in fertility in their early 
 
 
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <style>
   .range-slider-wrap { position: relative; height: 32px; max-width: 500px; }
@@ -78,7 +81,9 @@ Post-1989 cohorts have seen a significant reduction in fertility in their early 
   })();
 </script>
 ```
+:::
 
+:::{tab-item} Notes
 ```{note}
 HFD. Human Fertility Database. Max Planck Institute for Demographic Research (Germany)
 and Vienna Institute of Demography (Austria). Available at [www.humanfertility.org](https://www.humanfertility.org/).
@@ -89,3 +94,6 @@ England and Wales", Table 3 (percentage of women by number of live-born children
 age and year of birth). Available at
 [ons.gov.uk](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/datasets/childbearingforwomenbornindifferentyearsreferencetable).
 ```
+:::
+
+::::

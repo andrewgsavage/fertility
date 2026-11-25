@@ -22,23 +22,33 @@ Ticks from the [factors table](index.md): ✓ where the mechanism is proposed to
 
 England: average balance per borrower with a loan balance, as at the end of each financial year (the x-axis is the year it ends). US: total student loans outstanding at Q4 each year. Both nominal.
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/ons/student_loan_debt_england_us.html" style="width: 100%; height: 420px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
+:::{tab-item} Data
 | | 2007 | 2010 | 2015 | 2020 | 2024 |
 |---|--:|--:|--:|--:|--:|
 | England: borrowers with a balance (millions) | 1.27 | 1.92 | 3.04 | 4.46 | 5.52 |
 | England: average balance (£) | 9,320 | 10,780 | 14,580 | 25,150 | 36,740 |
 | US: total outstanding ($ billion) | 589 | 855 | 1,320 | 1,694 | 1,777 |
+:::
+
+:::{tab-item} Notes
+```{note}
+Student Loans Company, [Student Loans in England: Financial Year 2024-25](https://www.gov.uk/government/statistics/student-loans-in-england-2024-to-2025), Table 5A, income-contingent borrowers who were England-domiciled or EU-domiciled studying in England, 2006-07 to 2023-24 (2024-25 is suppressed). US: Federal Reserve, [Student Loans Owned and Securitized, Outstanding](https://fred.stlouisfed.org/series/SLOAS), 2006–2024.
+```
+:::
+
+::::
 
 In England the average balance rose about four-fold and the number of borrowers with a balance about four-fold between 2007 and 2024. US balances tripled between 2007 and 2024 but have been roughly flat since 2021 ($1,733bn in 2021, $1,777bn in 2024). Both series cover all borrowers, not only those of childbearing age, and say nothing about repayments. England's loans are [income-contingent](https://www.gov.uk/government/statistics/student-loans-in-england-2024-to-2025), so a larger balance does not mean proportionally larger repayments. Fertility fell over the same years. The data here has no comparison of borrowers with non-borrowers.
 
 No comparable cross-country series (debt per borrower or share of graduates with debt) was found in a downloadable form, so only England and the US are shown.
-
-```{note}
-Student Loans Company, [Student Loans in England: Financial Year 2024-25](https://www.gov.uk/government/statistics/student-loans-in-england-2024-to-2025), Table 5A, income-contingent borrowers who were England-domiciled or EU-domiciled studying in England, 2006-07 to 2023-24 (2024-25 is suppressed). US: Federal Reserve, [Student Loans Owned and Securitized, Outstanding](https://fred.stlouisfed.org/series/SLOAS), 2006–2024.
-```
 
 ## Causal evidence
 

@@ -102,8 +102,10 @@ Median age of the UK electorate and of the people who actually voted, at every g
 1964 and 1966 youngest band is 21-24.
 :::
 
-::::
-
+:::{tab-item} Notes
 ```{note}
 Population: ONS, [UK population estimates, 1838 to 2025](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland) (5-year age bands to 1970, single year of age from 1971; mid-year of each election year) and [2024-based national population projections](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/datasets/z1zippedpopulationprojectionsdatafilesuk), principal projection. Turnout by age: British Election Study, scaled to actual turnout, as tabulated in House of Commons Library, ["Turnout at elections"](https://commonslibrary.parliament.uk/research-briefings/cbp-8060/) (CBP-8060, Jan 2023); Ipsos, [How Britain Voted](https://www.ipsos.com/en-uk/how-britain-voted-in-the-2024-election) post-election aggregates (self-reported). Medians interpolated linearly within the single year of age crossing 50%; 5-year bands split uniformly.
 ```
+:::
+
+::::

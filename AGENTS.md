@@ -17,3 +17,29 @@ Cite a chart's or table's data sources in a `{note}` block directly below it: da
 Eurostat [household composition table](https://ec.europa.eu/eurostat/databrowser/view/lfst_hhindws/default/table) (EU Labour Force Survey), 2006–2024. EU-LFS household data has a methodology break in 2021.
 ```
 ````
+
+Put a chart, its data table and its `{note}` in one `tab-set`: a tab per chart, then a `Data` tab with the table(s) and a `Notes` tab with the `{note}`. Leave out `Data` when there's no table. If the chart has variants (by age, ratio vs level), give each its own tab and put all their tables in the one `Data` tab, under a bold label per variant. Findings prose goes outside the tab-set, except findings about one variant, which stay in that variant's tab. Coverage caveats go in the `{note}`, not the chart tab. A table with no chart stays in the body with its `{note}` directly below it.
+
+`````
+::::{tab-set}
+
+:::{tab-item} Chart
+```{raw} html
+<iframe src="../_static/eurostat/abortion_by_age.html" ...></iframe>
+```
+:::
+
+:::{tab-item} Data
+| Country | 2013 | Latest |
+|---|--:|--:|
+| Spain | 22 | 41 (2024) |
+:::
+
+:::{tab-item} Notes
+```{note}
+Eurostat [demo_fabort](https://ec.europa.eu/eurostat/databrowser/view/demo_fabort/default/table), 2007–2024. ...
+```
+:::
+
+::::
+`````

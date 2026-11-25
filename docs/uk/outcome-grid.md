@@ -6,10 +6,15 @@ This page was written by AI and has not been fully reviewed. Check figures and c
 
 This page applies the [outcome grid](../factors/outcome-grid.md) to England & Wales: which of the nine stage-and-channel outcomes moved between 2010 and 2022.
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/ons/outcome_grid_uk.html" style="width: 100%; height: 780px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
+:::{tab-item} Data
 | Stage | Channel | Measure | 2010 | 2022 | Change |
 |---|---|---|--:|--:|--:|
 | Couple | Desire | No UK trend series found | | | |
@@ -25,6 +30,9 @@ This page applies the [outcome grid](../factors/outcome-grid.md) to England & Wa
 | Second+ | Age | Mean age at second birth, synthetic cohort | 30.5 | 32.4 | +1.9 years |
 | Second+ | Desire + ability | Mothers who have a second child by 45 | 77.7% | 73.6% | −4.1 pts |
 | | | Children per mother | 2.23 | 2.02 | −0.20 |
+:::
+
+::::
 
 Synthetic cohort: a woman who lives through each year's first-, second- and later-birth rates for mothers at that parity, from age 20 to 45. It shows what that year's rates imply, separate from how many mothers there already are.
 

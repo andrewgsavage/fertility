@@ -13,10 +13,15 @@ Most countries do not make data available that shows children per mother by firs
 
 
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/hfd/births_per_mother_facet.html" style="width: 100%; height: 870px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
+:::{tab-item} Notes
 ```{note}
 HFD. Human Fertility Database. Max Planck Institute for Demographic Research (Germany)
 and Vienna Institute of Demography (Austria). Available at [www.humanfertility.org](https://www.humanfertility.org/).
@@ -37,6 +42,9 @@ UK column reconstructed from Table 3 (HFD has no UK parity-progression tables): 
 \% of the cohort with >=1/2/3/4 children, differenced by age into the same kind of discrete
 hazard, capped at 4+ (coarser than HFD's 5+).
 ```
+:::
+
+::::
 
 ## Comparison to published research
 
@@ -45,10 +53,15 @@ hazard, capped at 4+ (coarser than HFD's 5+).
 The estimation and published data both show fewer children born to older mothers and give similar numbers. The trends accross cohorts is similar, with the estimation and published data both showing increasing family sizes for older mothers.
 
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/hfd/beaujouan_paper_comparison.html" style="width: 100%; height: 1310px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
+:::{tab-item} Notes
 ```{note}
 Beaujouan É, Zeman K, Nathan M. "Delayed first births and completed fertility across the
 1940–1969 birth cohorts." Demographic Research 2023;48(15):387-420. Available at
@@ -58,29 +71,45 @@ for the seven countries shown are taken directly from the paper's supplementary 
 also in the paper but aren't in HFD's cft.txt. Age bins (15-19 .. 40-44) plotted at their
 midpoint.
 ```
+:::
+
+::::
 
 ### Sweden, Andersson (2008)
 
 Andersson (2008), reprinted in Schmidt et al. (2012)'s review of postponement research, shows the same pattern for Sweden. HFD does not contain data for Sweden during this period, so the closest available HFD data, the 1955 cohort, has been plotted with the 1950-54 cohort.
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/hfd/andersson_sweden_paper_comparison.html" style="width: 100%; height: 460px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
+:::{tab-item} Notes
 ```{note}
 Schmidt L, Sobotka T, Bentzen JG, Nyboe Andersen A. "Demographic and medical consequences
 of the postponement of parenthood." Human Reproduction Update 2012;18(1):29-43. Original
 data source: Andersson G (2008), Table 12d. Digitized by eye from Figure 4.
 ```
+:::
+
+::::
 
 ## Estimated across all countries, period basis
 
 Using calendar periods give similar trends to birth cohorts.
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/hfd/births_per_mother_estimated_facet.html" style="width: 100%; height: 870px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
+:::{tab-item} Notes
 ```{note}
 HFD. Human Fertility Database. Max Planck Institute for Demographic Research (Germany)
 and Vienna Institute of Demography (Austria). Available at [www.humanfertility.org](https://www.humanfertility.org/).
@@ -88,6 +117,9 @@ Data downloaded on 2026-07-13.
 
 UK excluded: no HFD period fertility table exists for it.
 ```
+:::
+
+::::
 
 
 ## Comparison to published research
@@ -96,10 +128,15 @@ UK excluded: no HFD period fertility table exists for it.
 
 The estimation and published data both show fewer children born to older mothers and give similar numbers. The trends accross periods is similar, with the estimation and published data both showing increasing family sizes for older mothers.
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/hfd/finland_paper_comparison.html" style="width: 100%; height: 480px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
+:::{tab-item} Notes
 ```{note}
 Roustaei Z, Räisänen S, Gissler M, Heinonen S. "Fertility rates and the postponement of
 first births: a descriptive study with Finnish population data." BMJ Open 2019;9:e026336.
@@ -120,3 +157,6 @@ children real women had, tracked to today via personal identifiers, no chaining 
 required. That a rate-based model and a direct headcount land on the same shape and range
 is itself a useful check on the hazard-independence assumption the recursion relies on.
 ```
+:::
+
+::::

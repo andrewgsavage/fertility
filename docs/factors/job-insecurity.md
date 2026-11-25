@@ -26,10 +26,15 @@ Temporary employees as a share of all employees aged 15–29, 1995–2025, and a
 <iframe src="../_static/eurostat/temp_contracts_youth_europe.html" style="width: 100%; height: 480px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/eurostat/temp_contracts_vs_first_birth_age.html" style="width: 100%; height: 540px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
+:::{tab-item} Data
 | Country | Temp. share 2000 | 2010 | 2025 | Mean age at first birth 2010 | 2023 |
 |---|--:|--:|--:|--:|--:|
 | Spain | 55.6% | 45.1% | 33.7% | 29.8 | 31.5 |
@@ -41,12 +46,17 @@ Temporary employees as a share of all employees aged 15–29, 1995–2025, and a
 | Portugal | 34.3% | 46.0% | 36.7% | 28.1 | 30.2 |
 | Sweden | 32.3% | 42.4% | 34.6% | 28.9 | 30.0 |
 | Hungary | 10.4% | 17.6% | 7.5% | 27.7 | 28.8 |
+:::
 
-Across countries the two are positively related: correlation 0.63 in 2005 (25 countries), 0.48 in 2015 and 0.50 in 2023 (33 each). Over time within countries the link is weak. Poland's share rose from 9% to 48% between 2000 and 2010 as first-birth age rose from 24.5 to 26.5. But Spain's share fell from 54% in 2015 to 34% in 2025 while its first-birth age rose from 29.8 in 2010 to 31.5 in 2023. The cross-country link may reflect other differences, such as long education or late home-leaving in southern Europe. The 15–29 group includes students working part-time, which inflates the share.
-
+:::{tab-item} Notes
 ```{note}
 Eurostat [temporary employees by age](https://ec.europa.eu/eurostat/databrowser/view/lfsa_etpgan/default/table) (38 countries, 1995–2025, many series start later) and [mean age at first birth](https://ec.europa.eu/eurostat/databrowser/view/demo_find/default/table) (34 countries in the scatter, 1995–2024). Youth unemployment is not shown.
 ```
+:::
+
+::::
+
+Across countries the two are positively related: correlation 0.63 in 2005 (25 countries), 0.48 in 2015 and 0.50 in 2023 (33 each). Over time within countries the link is weak. Poland's share rose from 9% to 48% between 2000 and 2010 as first-birth age rose from 24.5 to 26.5. But Spain's share fell from 54% in 2015 to 34% in 2025 while its first-birth age rose from 29.8 in 2010 to 31.5 in 2023. The cross-country link may reflect other differences, such as long education or late home-leaving in southern Europe. The 15–29 group includes students working part-time, which inflates the share.
 
 Coupling rates of full-time, part-time and non-employed adults, with a shift-share of the fall, are on [Coupling by employment status](coupling-by-employment.md).
 

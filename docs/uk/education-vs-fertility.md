@@ -256,8 +256,7 @@ Bottom: The Resolution Foundation ["Bye Bye Baby"](https://www.resolutionfoundat
 ```
 :::
 
-::::
-
+:::{tab-item} Notes
 ```{note}
 Childlessness: Office for National Statistics, "Childbearing for women born in different
 years, England and Wales", Table 3 (percentage of women by number of live-born children,
@@ -312,3 +311,6 @@ discontinued after 2017/18 here: later years moved to a cohort-based measure (CH
 not directly comparable to HEIPR — the two segments aren't directly splice-able into
 one continuous series.
 ```
+:::
+
+::::
