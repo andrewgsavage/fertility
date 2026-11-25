@@ -72,6 +72,17 @@ COUNTRIES = {
     "SVK": ("SK", "Slovakia"), "CYP": ("CY", "Cyprus"), "MLT": ("MT", "Malta"),
     "ISL": ("IS", "Iceland"), "AUS": (None, "Australia"), "NZL": (None, "New Zealand"),
 }
+# Region, for grouping countries in the matrix. "English-speaking" is outside Europe; GBR and IRL sit with Western Europe.
+REGION_MEMBERS = {
+    "Nordic": ("DNK", "FIN", "ISL", "NOR", "SWE"),
+    "Western Europe": ("AUT", "BEL", "CHE", "DEU", "FRA", "GBR", "IRL", "NLD"),
+    "Southern Europe": ("CYP", "ESP", "GRC", "ITA", "MLT", "PRT"),
+    "Central & Eastern Europe": ("BGR", "CZE", "EST", "HRV", "HUN", "LTU", "LVA", "POL", "ROU", "SVK", "SVN"),
+    "English-speaking": ("AUS", "CAN", "NZL", "USA"),
+    "East Asia": ("JPN", "KOR"),
+}
+REGIONS = {iso: r for r, members in REGION_MEMBERS.items() for iso in members}
+assert set(REGIONS) == set(COUNTRIES), set(COUNTRIES) ^ set(REGIONS)
 HFD_TFR_CODES = {"GBRTENW": "GBR", "DEUTNP": "DEU", "FRATNP": "FRA"}
 # % with a child by 30 where HFD has no birth-order table for 2010-2019: first-birth rates summed to age 29.
 # France's birth-order series breaks between 2006 and 2013, so only 2013 onward is used.
@@ -174,7 +185,9 @@ EUROSTAT = {
     "edat_lfse_03": "A..Y25-34.PC.ED5-8.",
     "ilc_lvho05a": "A.PC.TOTAL.Y25-29.T.",
     "ilc_lvho07a": "A.PC.TOTAL.Y25-29.T.",
+    "ilc_lvps08": "A.Y20-24+Y25-29+Y25-34.F.PC.",
 }
+LFS_ALONE = "A.F.Y18-24.A1_NCH+TOTAL.THS_PER.POP."  # lfst_hhindws: one adult, no children
 
 
 def fetch(name, url):
@@ -370,6 +383,23 @@ def load_factors():
     d = eurostat("edat_lfse_03")
     f["tertiary_women"] = series(d[d.sex == "F"].rename(columns={"OBS_VALUE": "value"}))
 
+    d = eurostat("ilc_lvps08")
+    for age in ("20-24", "25-29", "25-34"):
+        f[f"parents_{age.replace('-', '_')}"] = series(d[d.age == f"Y{age}"].rename(columns={"OBS_VALUE": "value"}))
+
+    url = f"https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/lfst_hhindws/{LFS_ALONE}?format=SDMX-CSV"
+    d = pd.read_csv(fetch("lfst_hhindws_alone.csv", url), low_memory=False)
+    d = d[d.geo.isin(EU2ISO) & ~d.OBS_FLAG.fillna("").astype(str).str.contains("u")].dropna(subset=["OBS_VALUE"])
+    d = d.assign(iso=d.geo.map(EU2ISO), year=d.TIME_PERIOD.astype(int))
+    p = d.pivot_table(index=["iso", "year"], columns="phhcomp", values="OBS_VALUE").reset_index()
+    f["alone_18_24"] = series(p.assign(value=100 * p.A1_NCH / p.TOTAL))
+    for iso in EUROSTAT_COUPLE_BREAKS:
+        f["alone_18_24"].pop(iso, None)
+
+    d = pd.read_csv(ROOT / "NSO" / "outputs" / "living_arrangements_nso.csv")
+    d = d[(d.age == "25-34") & (d.sex == "Women") & d.country.isin(NSO_ISO)]
+    f["alone_25_34"] = series(d.assign(iso=d.country.map(NSO_ISO), value=d.alone))
+
     for code, key in (("ilc_lvho05a", "overcrowded_25_29"), ("ilc_lvho07a", "overburden_25_29")):
         f[key] = series(eurostat(code).rename(columns={"OBS_VALUE": "value"}))
 
@@ -407,11 +437,16 @@ def load_abortion_order():
 # direction +1: a rise is proposed to lower fertility; -1: a fall is.
 COUPLE_GROUP = "Women in a couple"
 RATIO_GROUP = "Couples with a child"
+PARENTS_GROUP = "Women living with their parents"
+ALONE_GROUP = "Women living alone"
+UNSIGNED = ("alone_18_24", "alone_25_34")  # no proposed direction: coloured by rise or fall, left out of counts
 ABORTION_GROUPS = {"first": "First pregnancies ended by abortion", "later": "Later pregnancies ended by abortion"}
 GROUP_NOTES = {COUPLE_GROUP: "% of women living with a partner, married or not",
                ABORTION_GROUPS["first"]: "abortions to women with no children per 100 first births",
                ABORTION_GROUPS["later"]: "abortions to mothers per 100 second or later births",
-               RATIO_GROUP: "% of women with a child by the given age ÷ % in a couple in the age band"}
+               RATIO_GROUP: "% of women with a child by the given age ÷ % in a couple in the age band",
+               PARENTS_GROUP: "% of women in the age band",
+               ALONE_GROUP: "% of women in the age band; purple rose, grey fell, no proposed direction"}
 FACTORS = [
     ("couple_18_24", "18–24 · EU-LFS", -1, "partnership-formation", COUPLE_GROUP),
     ("couple_under_25", "Under 25 · registers, ILO", -1, "partnership-formation", COUPLE_GROUP),
@@ -427,6 +462,11 @@ FACTORS = [
     ("couple_ess_25_34", "25–34 · ESS survey", -1, "partnership-formation", COUPLE_GROUP),
     *[(k, ABORTION_AGES[k.split("_", 2)[2]], +1, "abortion-by-age", ABORTION_GROUPS[k.split("_", 2)[1]])
       for k in ABORTION_ROWS],
+    ("parents_20_24", "20–24 · EU-SILC", +1, "living-arrangements", PARENTS_GROUP),
+    ("parents_25_29", "25–29 · EU-SILC", +1, "living-arrangements", PARENTS_GROUP),
+    ("parents_25_34", "25–34 · EU-SILC", +1, "living-arrangements", PARENTS_GROUP),
+    ("alone_18_24", "18–24 · EU-LFS", +1, "living-arrangements", ALONE_GROUP),
+    ("alone_25_34", "25–34 · registers, CPS", +1, "living-arrangements", ALONE_GROUP),
     ("leaving_home", "Women's age leaving home", +1, "leaving-home", "Life course"),
     ("tertiary_women", "Women 25–34 with a degree", +1, "education", "Life course"),
     ("youth_unemployment", "Unemployment, 15–24", +1, "job-insecurity", "Work and costs"),
@@ -1034,6 +1074,8 @@ def build(reference=None):
     sources.update(census_sources)
     factors["couple_ess_25_34"], ess_errors = load_ess_couples()
     sources["couple_ess_25_34"] = {c: "ESS, two rounds pooled" for c in factors["couple_ess_25_34"]}
+    sources["alone_25_34"] = {c: {"NLD": "CBS register", "FIN": "Statistics Finland register", "USA": "CPS"}[c]
+                              for c in factors["alone_25_34"]}
     ratios, matched, profiles = load_ratios(factors)
     ratios.update(matrix_ratios(exposures, factors, parity))
     ratio_src = ratio_sources(sources)
@@ -1073,7 +1115,7 @@ def build(reference=None):
         before = [direction * change(s.get(c), 2001, BASE) for c in order if change(s.get(c), 2001, BASE) is not None]
         after = [direction * v for v in cells.values() if v is not None]
         rows.append(dict(key=key, label=label, group=group, kind="factor", unit=UNITS.get(key, "%"), direction=direction, page=page, cells=cells,
-                         before=median(before), after=median(after), sources=sources.get(key)))
+                         before=median(before), after=median(after), sources=sources.get(key), unsigned=key in UNSIGNED))
         if key == COUPLING_LAST:
             rows += [ratio_row(k, label, ratios[k], order, ratio_src[k]) for k, label, *_ in RATIO_ROWS]
     for r in rows:
@@ -1141,9 +1183,9 @@ def build(reference=None):
         r["scale"] = vals[int(0.9 * (len(vals) - 1))] if vals else 1
         falling = [c for c in order if c in falling_set and r["cells"][c] is not None and not low.get(c)]
         r["toward_fewer_in_falling"] = sum(1 for c in falling if r["direction"] * r["cells"][c] > 0)
-        r["n_falling"] = len(falling)
+        r["n_falling"] = 0 if r.get("unsigned") else len(falling)
 
-    countries = [dict(iso=c, name=COUNTRIES[c][1], m30_source=M30_ESTIMATES.get(c), d_tfr=d_tfr[c], d_m30=d_m30[c], tfr_base=value_near(tfr[c], BASE), tfr_end=value_near(tfr[c], END),
+    countries = [dict(iso=c, name=COUNTRIES[c][1], region=REGIONS[c], region_rank=list(REGION_MEMBERS).index(REGIONS[c]), m30_source=M30_ESTIMATES.get(c), d_tfr=d_tfr[c], d_m30=d_m30[c], tfr_base=value_near(tfr[c], BASE), tfr_end=value_near(tfr[c], END),
                       m30_base=value_near(m30.get(c, {}), BASE), m30_end=value_near(m30.get(c, {}), END)) for c in order]
     extra = dict(profiles=profiles, ratio_dirs=ratio_directions(ratios, matched),
                  ratio_labels={k: label for k, _, _, label in RATIOS},
