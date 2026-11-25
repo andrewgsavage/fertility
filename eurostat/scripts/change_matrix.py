@@ -1207,16 +1207,81 @@ def render_preceding(reference):
                 f"with a child by 30 ({main_window[0]}–{main_window[1]}); positive means it was already moving towards fewer "
                 "births where the later fall was largest. Shown for factors with 10 or more countries.")
         falling = f"Countries where TFR fell by more than 0.1 in {main_window[0]}–{main_window[1]}, and this row moved towards fewer births"
-        data = json.dumps(dict(base=BASE, end=END, countries=countries, rows=rows, series=slim, fit_note=note, falling_note=falling),
-                          ensure_ascii=False, default=lambda o: None).replace("NaN", "null")
-        tpl = pathlib.Path(__file__).resolve().parent / "templates"
-        html = (tpl / "change_matrix.html").read_text(encoding="utf-8")
-        html = html.replace("__DATA__", data).replace("__PAGES__", "../../factors/").replace(
-            "__PROFILE__", "../../factors/country-detail.html")
-        (OUT / f"change_matrix_{BASE}_{END}.html").write_text(html, encoding="utf-8")
+        for name, rs in ((f"change_matrix_{BASE}_{END}.html", rows), (f"change_matrix_no_second_{BASE}_{END}.html", without_second(rows))):
+            data = json.dumps(dict(base=BASE, end=END, countries=countries, rows=rs, series=slim, fit_note=note, falling_note=falling),
+                              ensure_ascii=False, default=lambda o: None).replace("NaN", "null")
+            tpl = pathlib.Path(__file__).resolve().parent / "templates"
+            html = (tpl / "change_matrix.html").read_text(encoding="utf-8")
+            html = html.replace("__DATA__", data).replace("__PAGES__", "../../factors/").replace(
+                "__PROFILE__", "../../factors/country-detail.html")
+            (OUT / name).write_text(html, encoding="utf-8")
+        render_first_second(countries, rows, ts, BASE, END, f"change_matrix_first_second_{BASE}_{END}.html", main_window)
         return rows
     finally:
         BASE, END = main_window
+
+
+# ---------- first vs second births only ----------
+
+PAIR_AGES = [("20–24", "first_20_24", "second_20_24", "abort_first_20_24", "abort_later_20_24"),
+             ("25–29", "first_25_29", "second_25_29", "abort_first_25_29", "abort_later_25_29"),
+             ("30–34", "first_30_34", "second_30_34", "abort_first_30_34", "abort_later_30_34"),
+             ("35–39", "first_35_39", "second_35_39", "abort_first_35", "abort_later_35")]
+PAIR_LABELS = {"first": "First-birth rate", "second": "Second-birth rate",
+               "abort_first": "First pregnancies aborted", "abort_later": "Later pregnancies aborted"}
+PAIR_NOTES = {"first": "% change in first births per woman with no children",
+              "second": "% change in second births per mother of one"}
+
+
+def first_second_rows(countries, rows):
+    """Birth-rate and abortion rows, one group per metric with a row per age, on shared colour scales."""
+    by_key = {r["key"]: r for r in rows}
+    out = []
+    for i, (kind, metric) in enumerate(PAIR_LABELS.items()):
+        for age, *keys in PAIR_AGES:
+            key = keys[i]
+            r = dict(by_key[key])
+            age = "35+" if key.endswith("_35") else age
+            r.update(group=metric, label=age, long=f"{metric}, {age}", age=age,
+                     page=None if kind in ("first", "second") else r.get("page"), detail=False)
+            if kind in PAIR_NOTES:
+                r["group_note"] = PAIR_NOTES[kind]
+            out.append(r)
+    for prefix in (("first", "second"), ("abort_",)):
+        same = [r for r in out if r["key"].startswith(prefix)]
+        vals = sorted(abs(v) for r in same for v in r["cells"].values() if v is not None)
+        for r in same:
+            r["scale"] = vals[int(0.9 * (len(vals) - 1))] if vals else 1
+    keep = [c for c in countries if any(by_key[k]["cells"].get(c["iso"]) is not None for _, *ks in PAIR_AGES for k in ks)]
+    return keep, out
+
+
+def render_first_second(countries, rows, ts, base, end, name, window=None):
+    keep, out = first_second_rows(countries, rows)
+    keys = ["tfr", "mothers_by_30"] + [k for _, *ks in PAIR_AGES for k in ks]
+    slim = {k: {c: {y: round(v, 3) for y, v in s.items() if 2000 <= y <= 2023} for c, s in ts[k].items() if c in COUNTRIES}
+            for k in keys}
+    w = window or (base, end)
+    falling = f"Countries where TFR fell by more than 0.1 in {w[0]}–{w[1]}, and this row moved towards fewer births"
+    data = json.dumps(dict(base=base, end=end, countries=keep, rows=out, series=slim, falling_note=falling),
+                      ensure_ascii=False, default=lambda o: None).replace("NaN", "null")
+    tpl = pathlib.Path(__file__).resolve().parent / "templates"
+    html = (tpl / "change_matrix.html").read_text(encoding="utf-8")
+    html = html.replace("__DATA__", data).replace("__PAGES__", "../../factors/").replace(
+        "__PROFILE__", "../../factors/country-detail.html")
+    (OUT / name).write_text(html, encoding="utf-8")
+    csv = ["age,row,country,change_pct"]
+    for r in out:
+        for c in keep:
+            v = r["cells"].get(c["iso"])
+            csv.append(f"{r['age']},{r['group']},{c['iso']},{'' if v is None else round(v, 2)}")
+    (OUT / name.replace(".html", ".csv")).write_text("\n".join(csv), encoding="utf-8")
+    return keep, out
+
+
+def without_second(rows):
+    """The matrix minus second-birth rates and abortions of later pregnancies."""
+    return [r for r in rows if not r["key"].startswith(("second_", "abort_later_"))]
 
 
 def render(countries, rows, ts, extra):
@@ -1231,6 +1296,11 @@ def render(countries, rows, ts, extra):
     html = html.replace("__DATA__", data).replace("__PAGES__", "../../factors/").replace(
         "__PROFILE__", "../../factors/country-detail.html")
     (OUT / "change_matrix.html").write_text(html, encoding="utf-8")
+    data_ns = json.dumps(dict(base=BASE, end=END, countries=countries, rows=without_second(rows), series=slim, **extra),
+                         ensure_ascii=False, default=lambda o: None).replace("NaN", "null")
+    html_ns = (tpl / "change_matrix.html").read_text(encoding="utf-8").replace("__DATA__", data_ns).replace(
+        "__PAGES__", "../../factors/").replace("__PROFILE__", "../../factors/country-detail.html")
+    (OUT / "change_matrix_no_second.html").write_text(html_ns, encoding="utf-8")
     html = (tpl / "country_profiles.html").read_text(encoding="utf-8")
     html = html.replace("__DATA__", data).replace("__BASE__", str(BASE)).replace("__END__", str(END))
     (OUT / "country_profiles.html").write_text(html, encoding="utf-8")
@@ -1240,6 +1310,7 @@ def main():
     countries, rows, ts, extra = build()
     write_json(countries, rows, ts)
     render(countries, rows, ts, extra)
+    render_first_second(countries, rows, ts, BASE, END, "change_matrix_first_second.html")
     scatters(countries, rows)
     for r in render_preceding(countries):
         fit = "  n/a" if r["fit"] is None else f"{r['fit']:+.2f}"

@@ -1,0 +1,401 @@
+age,row,country,change_pct
+20–24,First-birth rate,NOR,2.22
+20–24,First-birth rate,FIN,-1.45
+20–24,First-birth rate,KOR,-11.17
+20–24,First-birth rate,IRL,11.62
+20–24,First-birth rate,EST,-21.35
+20–24,First-birth rate,USA,-10.81
+20–24,First-birth rate,BEL,-0.91
+20–24,First-birth rate,GBR,
+20–24,First-birth rate,NLD,-4.18
+20–24,First-birth rate,HRV,-19.68
+20–24,First-birth rate,CAN,-8.25
+20–24,First-birth rate,SWE,7.73
+20–24,First-birth rate,PRT,-11.1
+20–24,First-birth rate,ESP,6.41
+20–24,First-birth rate,LTU,-26.69
+20–24,First-birth rate,DNK,1.83
+20–24,First-birth rate,POL,-7.15
+20–24,First-birth rate,CHE,-13.1
+20–24,First-birth rate,BGR,-17.42
+20–24,First-birth rate,AUT,-14.52
+20–24,First-birth rate,JPN,-3.63
+20–24,First-birth rate,SVN,4.49
+20–24,First-birth rate,SVK,-15.14
+20–24,First-birth rate,HUN,-21.96
+20–24,First-birth rate,CZE,-6.84
+25–29,First-birth rate,NOR,1.68
+25–29,First-birth rate,FIN,-0.27
+25–29,First-birth rate,KOR,-22.06
+25–29,First-birth rate,IRL,32.18
+25–29,First-birth rate,EST,4.35
+25–29,First-birth rate,USA,-9.42
+25–29,First-birth rate,BEL,4.72
+25–29,First-birth rate,GBR,7.17
+25–29,First-birth rate,NLD,6.15
+25–29,First-birth rate,HRV,3.57
+25–29,First-birth rate,CAN,-8.51
+25–29,First-birth rate,SWE,8.79
+25–29,First-birth rate,PRT,-16.68
+25–29,First-birth rate,ESP,-6.92
+25–29,First-birth rate,LTU,17.91
+25–29,First-birth rate,DNK,-1.44
+25–29,First-birth rate,POL,-0.77
+25–29,First-birth rate,CHE,-6.4
+25–29,First-birth rate,BGR,1.87
+25–29,First-birth rate,AUT,-9.04
+25–29,First-birth rate,JPN,1.64
+25–29,First-birth rate,SVN,12.05
+25–29,First-birth rate,SVK,-2.75
+25–29,First-birth rate,HUN,-22.95
+25–29,First-birth rate,CZE,-8.53
+30–34,First-birth rate,NOR,7.61
+30–34,First-birth rate,FIN,5.67
+30–34,First-birth rate,KOR,1.9
+30–34,First-birth rate,IRL,11.42
+30–34,First-birth rate,EST,19.63
+30–34,First-birth rate,USA,-3.56
+30–34,First-birth rate,BEL,13.2
+30–34,First-birth rate,GBR,10.55
+30–34,First-birth rate,NLD,7.89
+30–34,First-birth rate,HRV,14.44
+30–34,First-birth rate,CAN,-2.17
+30–34,First-birth rate,SWE,6.39
+30–34,First-birth rate,PRT,-11.23
+30–34,First-birth rate,ESP,-12.4
+30–34,First-birth rate,LTU,60.61
+30–34,First-birth rate,DNK,6.77
+30–34,First-birth rate,POL,17.48
+30–34,First-birth rate,CHE,10.93
+30–34,First-birth rate,BGR,28.28
+30–34,First-birth rate,AUT,7.21
+30–34,First-birth rate,JPN,8.31
+30–34,First-birth rate,SVN,12.5
+30–34,First-birth rate,SVK,36.26
+30–34,First-birth rate,HUN,-6.57
+30–34,First-birth rate,CZE,10.51
+35–39,First-birth rate,NOR,23.52
+35–39,First-birth rate,FIN,17.12
+35–39,First-birth rate,KOR,12.02
+35–39,First-birth rate,IRL,23.76
+35–39,First-birth rate,EST,0.91
+35–39,First-birth rate,USA,15.61
+35–39,First-birth rate,BEL,16.47
+35–39,First-birth rate,GBR,17.58
+35–39,First-birth rate,NLD,11.47
+35–39,First-birth rate,HRV,22.99
+35–39,First-birth rate,CAN,19.26
+35–39,First-birth rate,SWE,21.13
+35–39,First-birth rate,PRT,23.55
+35–39,First-birth rate,ESP,0.44
+35–39,First-birth rate,LTU,64.98
+35–39,First-birth rate,DNK,30.12
+35–39,First-birth rate,POL,39.75
+35–39,First-birth rate,CHE,31.64
+35–39,First-birth rate,BGR,31.8
+35–39,First-birth rate,AUT,30.76
+35–39,First-birth rate,JPN,21.32
+35–39,First-birth rate,SVN,28.86
+35–39,First-birth rate,SVK,73.7
+35–39,First-birth rate,HUN,3.9
+35–39,First-birth rate,CZE,49.75
+20–24,Second-birth rate,NOR,0.77
+20–24,Second-birth rate,FIN,2.64
+20–24,Second-birth rate,KOR,5.66
+20–24,Second-birth rate,IRL,10.39
+20–24,Second-birth rate,EST,22.14
+20–24,Second-birth rate,USA,-10.85
+20–24,Second-birth rate,BEL,-10.91
+20–24,Second-birth rate,GBR,
+20–24,Second-birth rate,NLD,-0.82
+20–24,Second-birth rate,HRV,-9.9
+20–24,Second-birth rate,CAN,6.26
+20–24,Second-birth rate,SWE,3.86
+20–24,Second-birth rate,PRT,15.66
+20–24,Second-birth rate,ESP,4.4
+20–24,Second-birth rate,LTU,-4.82
+20–24,Second-birth rate,DNK,-8.78
+20–24,Second-birth rate,POL,4.75
+20–24,Second-birth rate,CHE,4.64
+20–24,Second-birth rate,BGR,16.79
+20–24,Second-birth rate,AUT,0.63
+20–24,Second-birth rate,JPN,6.6
+20–24,Second-birth rate,SVN,16.42
+20–24,Second-birth rate,SVK,-2.99
+20–24,Second-birth rate,HUN,-8.97
+20–24,Second-birth rate,CZE,8.49
+25–29,Second-birth rate,NOR,-2.46
+25–29,Second-birth rate,FIN,2.07
+25–29,Second-birth rate,KOR,7.55
+25–29,Second-birth rate,IRL,2.53
+25–29,Second-birth rate,EST,26.82
+25–29,Second-birth rate,USA,-6.02
+25–29,Second-birth rate,BEL,-3.23
+25–29,Second-birth rate,GBR,5.83
+25–29,Second-birth rate,NLD,3.26
+25–29,Second-birth rate,HRV,-6.48
+25–29,Second-birth rate,CAN,6.42
+25–29,Second-birth rate,SWE,-0.14
+25–29,Second-birth rate,PRT,5.9
+25–29,Second-birth rate,ESP,1.63
+25–29,Second-birth rate,LTU,30.96
+25–29,Second-birth rate,DNK,-4.6
+25–29,Second-birth rate,POL,12.67
+25–29,Second-birth rate,CHE,4.57
+25–29,Second-birth rate,BGR,19.66
+25–29,Second-birth rate,AUT,1.2
+25–29,Second-birth rate,JPN,3.68
+25–29,Second-birth rate,SVN,22.91
+25–29,Second-birth rate,SVK,-1.34
+25–29,Second-birth rate,HUN,-8.04
+25–29,Second-birth rate,CZE,8.48
+30–34,Second-birth rate,NOR,3.44
+30–34,Second-birth rate,FIN,4.6
+30–34,Second-birth rate,KOR,22.27
+30–34,Second-birth rate,IRL,-2.87
+30–34,Second-birth rate,EST,41.47
+30–34,Second-birth rate,USA,-1.78
+30–34,Second-birth rate,BEL,22.07
+30–34,Second-birth rate,GBR,-1.7
+30–34,Second-birth rate,NLD,4.21
+30–34,Second-birth rate,HRV,12.84
+30–34,Second-birth rate,CAN,7.43
+30–34,Second-birth rate,SWE,4.07
+30–34,Second-birth rate,PRT,-4.51
+30–34,Second-birth rate,ESP,-0.74
+30–34,Second-birth rate,LTU,59.69
+30–34,Second-birth rate,DNK,4.06
+30–34,Second-birth rate,POL,27.68
+30–34,Second-birth rate,CHE,4.06
+30–34,Second-birth rate,BGR,45.14
+30–34,Second-birth rate,AUT,17.84
+30–34,Second-birth rate,JPN,5.11
+30–34,Second-birth rate,SVN,45.3
+30–34,Second-birth rate,SVK,23.91
+30–34,Second-birth rate,HUN,7.55
+30–34,Second-birth rate,CZE,38.85
+35–39,Second-birth rate,NOR,18.68
+35–39,Second-birth rate,FIN,15.18
+35–39,Second-birth rate,KOR,35.71
+35–39,Second-birth rate,IRL,-2.47
+35–39,Second-birth rate,EST,62.63
+35–39,Second-birth rate,USA,-5.29
+35–39,Second-birth rate,BEL,34.43
+35–39,Second-birth rate,GBR,3.17
+35–39,Second-birth rate,NLD,1.4
+35–39,Second-birth rate,HRV,38.51
+35–39,Second-birth rate,CAN,18.26
+35–39,Second-birth rate,SWE,19.71
+35–39,Second-birth rate,PRT,3.72
+35–39,Second-birth rate,ESP,10.35
+35–39,Second-birth rate,LTU,57.14
+35–39,Second-birth rate,DNK,21.38
+35–39,Second-birth rate,POL,52.21
+35–39,Second-birth rate,CHE,12.32
+35–39,Second-birth rate,BGR,87.95
+35–39,Second-birth rate,AUT,35.01
+35–39,Second-birth rate,JPN,18.27
+35–39,Second-birth rate,SVN,68.66
+35–39,Second-birth rate,SVK,68.39
+35–39,Second-birth rate,HUN,38.31
+35–39,Second-birth rate,CZE,82.56
+20–24,First pregnancies aborted,NOR,
+20–24,First pregnancies aborted,FIN,
+20–24,First pregnancies aborted,KOR,
+20–24,First pregnancies aborted,IRL,
+20–24,First pregnancies aborted,EST,
+20–24,First pregnancies aborted,USA,
+20–24,First pregnancies aborted,BEL,
+20–24,First pregnancies aborted,GBR,
+20–24,First pregnancies aborted,NLD,
+20–24,First pregnancies aborted,HRV,
+20–24,First pregnancies aborted,CAN,
+20–24,First pregnancies aborted,SWE,
+20–24,First pregnancies aborted,PRT,
+20–24,First pregnancies aborted,ESP,
+20–24,First pregnancies aborted,LTU,
+20–24,First pregnancies aborted,DNK,
+20–24,First pregnancies aborted,POL,
+20–24,First pregnancies aborted,CHE,
+20–24,First pregnancies aborted,BGR,
+20–24,First pregnancies aborted,AUT,
+20–24,First pregnancies aborted,JPN,
+20–24,First pregnancies aborted,SVN,
+20–24,First pregnancies aborted,SVK,
+20–24,First pregnancies aborted,HUN,
+20–24,First pregnancies aborted,CZE,
+25–29,First pregnancies aborted,NOR,
+25–29,First pregnancies aborted,FIN,
+25–29,First pregnancies aborted,KOR,
+25–29,First pregnancies aborted,IRL,
+25–29,First pregnancies aborted,EST,
+25–29,First pregnancies aborted,USA,
+25–29,First pregnancies aborted,BEL,
+25–29,First pregnancies aborted,GBR,
+25–29,First pregnancies aborted,NLD,
+25–29,First pregnancies aborted,HRV,
+25–29,First pregnancies aborted,CAN,
+25–29,First pregnancies aborted,SWE,
+25–29,First pregnancies aborted,PRT,
+25–29,First pregnancies aborted,ESP,
+25–29,First pregnancies aborted,LTU,
+25–29,First pregnancies aborted,DNK,
+25–29,First pregnancies aborted,POL,
+25–29,First pregnancies aborted,CHE,
+25–29,First pregnancies aborted,BGR,
+25–29,First pregnancies aborted,AUT,
+25–29,First pregnancies aborted,JPN,
+25–29,First pregnancies aborted,SVN,
+25–29,First pregnancies aborted,SVK,
+25–29,First pregnancies aborted,HUN,
+25–29,First pregnancies aborted,CZE,
+30–34,First pregnancies aborted,NOR,
+30–34,First pregnancies aborted,FIN,
+30–34,First pregnancies aborted,KOR,
+30–34,First pregnancies aborted,IRL,
+30–34,First pregnancies aborted,EST,
+30–34,First pregnancies aborted,USA,
+30–34,First pregnancies aborted,BEL,
+30–34,First pregnancies aborted,GBR,
+30–34,First pregnancies aborted,NLD,
+30–34,First pregnancies aborted,HRV,
+30–34,First pregnancies aborted,CAN,
+30–34,First pregnancies aborted,SWE,
+30–34,First pregnancies aborted,PRT,
+30–34,First pregnancies aborted,ESP,
+30–34,First pregnancies aborted,LTU,
+30–34,First pregnancies aborted,DNK,
+30–34,First pregnancies aborted,POL,
+30–34,First pregnancies aborted,CHE,
+30–34,First pregnancies aborted,BGR,
+30–34,First pregnancies aborted,AUT,
+30–34,First pregnancies aborted,JPN,
+30–34,First pregnancies aborted,SVN,
+30–34,First pregnancies aborted,SVK,
+30–34,First pregnancies aborted,HUN,
+30–34,First pregnancies aborted,CZE,
+35+,First pregnancies aborted,NOR,
+35+,First pregnancies aborted,FIN,
+35+,First pregnancies aborted,KOR,
+35+,First pregnancies aborted,IRL,
+35+,First pregnancies aborted,EST,
+35+,First pregnancies aborted,USA,
+35+,First pregnancies aborted,BEL,
+35+,First pregnancies aborted,GBR,
+35+,First pregnancies aborted,NLD,
+35+,First pregnancies aborted,HRV,
+35+,First pregnancies aborted,CAN,
+35+,First pregnancies aborted,SWE,
+35+,First pregnancies aborted,PRT,
+35+,First pregnancies aborted,ESP,
+35+,First pregnancies aborted,LTU,
+35+,First pregnancies aborted,DNK,
+35+,First pregnancies aborted,POL,
+35+,First pregnancies aborted,CHE,
+35+,First pregnancies aborted,BGR,
+35+,First pregnancies aborted,AUT,
+35+,First pregnancies aborted,JPN,
+35+,First pregnancies aborted,SVN,
+35+,First pregnancies aborted,SVK,
+35+,First pregnancies aborted,HUN,
+35+,First pregnancies aborted,CZE,
+20–24,Later pregnancies aborted,NOR,
+20–24,Later pregnancies aborted,FIN,
+20–24,Later pregnancies aborted,KOR,
+20–24,Later pregnancies aborted,IRL,
+20–24,Later pregnancies aborted,EST,
+20–24,Later pregnancies aborted,USA,
+20–24,Later pregnancies aborted,BEL,
+20–24,Later pregnancies aborted,GBR,
+20–24,Later pregnancies aborted,NLD,
+20–24,Later pregnancies aborted,HRV,
+20–24,Later pregnancies aborted,CAN,
+20–24,Later pregnancies aborted,SWE,
+20–24,Later pregnancies aborted,PRT,
+20–24,Later pregnancies aborted,ESP,
+20–24,Later pregnancies aborted,LTU,
+20–24,Later pregnancies aborted,DNK,
+20–24,Later pregnancies aborted,POL,
+20–24,Later pregnancies aborted,CHE,
+20–24,Later pregnancies aborted,BGR,
+20–24,Later pregnancies aborted,AUT,
+20–24,Later pregnancies aborted,JPN,
+20–24,Later pregnancies aborted,SVN,
+20–24,Later pregnancies aborted,SVK,
+20–24,Later pregnancies aborted,HUN,
+20–24,Later pregnancies aborted,CZE,
+25–29,Later pregnancies aborted,NOR,
+25–29,Later pregnancies aborted,FIN,
+25–29,Later pregnancies aborted,KOR,
+25–29,Later pregnancies aborted,IRL,
+25–29,Later pregnancies aborted,EST,
+25–29,Later pregnancies aborted,USA,
+25–29,Later pregnancies aborted,BEL,
+25–29,Later pregnancies aborted,GBR,
+25–29,Later pregnancies aborted,NLD,
+25–29,Later pregnancies aborted,HRV,
+25–29,Later pregnancies aborted,CAN,
+25–29,Later pregnancies aborted,SWE,
+25–29,Later pregnancies aborted,PRT,
+25–29,Later pregnancies aborted,ESP,
+25–29,Later pregnancies aborted,LTU,
+25–29,Later pregnancies aborted,DNK,
+25–29,Later pregnancies aborted,POL,
+25–29,Later pregnancies aborted,CHE,
+25–29,Later pregnancies aborted,BGR,
+25–29,Later pregnancies aborted,AUT,
+25–29,Later pregnancies aborted,JPN,
+25–29,Later pregnancies aborted,SVN,
+25–29,Later pregnancies aborted,SVK,
+25–29,Later pregnancies aborted,HUN,
+25–29,Later pregnancies aborted,CZE,
+30–34,Later pregnancies aborted,NOR,
+30–34,Later pregnancies aborted,FIN,
+30–34,Later pregnancies aborted,KOR,
+30–34,Later pregnancies aborted,IRL,
+30–34,Later pregnancies aborted,EST,
+30–34,Later pregnancies aborted,USA,
+30–34,Later pregnancies aborted,BEL,
+30–34,Later pregnancies aborted,GBR,
+30–34,Later pregnancies aborted,NLD,
+30–34,Later pregnancies aborted,HRV,
+30–34,Later pregnancies aborted,CAN,
+30–34,Later pregnancies aborted,SWE,
+30–34,Later pregnancies aborted,PRT,
+30–34,Later pregnancies aborted,ESP,
+30–34,Later pregnancies aborted,LTU,
+30–34,Later pregnancies aborted,DNK,
+30–34,Later pregnancies aborted,POL,
+30–34,Later pregnancies aborted,CHE,
+30–34,Later pregnancies aborted,BGR,
+30–34,Later pregnancies aborted,AUT,
+30–34,Later pregnancies aborted,JPN,
+30–34,Later pregnancies aborted,SVN,
+30–34,Later pregnancies aborted,SVK,
+30–34,Later pregnancies aborted,HUN,
+30–34,Later pregnancies aborted,CZE,
+35+,Later pregnancies aborted,NOR,
+35+,Later pregnancies aborted,FIN,
+35+,Later pregnancies aborted,KOR,
+35+,Later pregnancies aborted,IRL,
+35+,Later pregnancies aborted,EST,
+35+,Later pregnancies aborted,USA,
+35+,Later pregnancies aborted,BEL,
+35+,Later pregnancies aborted,GBR,
+35+,Later pregnancies aborted,NLD,
+35+,Later pregnancies aborted,HRV,
+35+,Later pregnancies aborted,CAN,
+35+,Later pregnancies aborted,SWE,
+35+,Later pregnancies aborted,PRT,
+35+,Later pregnancies aborted,ESP,
+35+,Later pregnancies aborted,LTU,
+35+,Later pregnancies aborted,DNK,
+35+,Later pregnancies aborted,POL,
+35+,Later pregnancies aborted,CHE,
+35+,Later pregnancies aborted,BGR,
+35+,Later pregnancies aborted,AUT,
+35+,Later pregnancies aborted,JPN,
+35+,Later pregnancies aborted,SVN,
+35+,Later pregnancies aborted,SVK,
+35+,Later pregnancies aborted,HUN,
+35+,Later pregnancies aborted,CZE,
