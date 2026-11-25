@@ -178,7 +178,7 @@ ILOSTAT [working-age population by sex, age and marital status](https://ilostat.
 
 ## Coupling by 5-year age, long run
 
-Share of women and men married or in a consensual union, by 5-year age group, from 1970, for 116 countries. The dropdown picks the age group. Points are census, survey or register years, so most countries have one every 5–10 years; hover shows the source.
+Share of women and men married or in a consensual union, by 5-year age group, from 1970, for 116 countries. Points are census, survey or register years, so most countries have one every 5–10 years.
 
 ::::{tab-set}
 

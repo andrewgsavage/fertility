@@ -10,8 +10,6 @@ This page applies the [outcome grid](../factors/outcome-grid.md) to England & Wa
 <iframe src="../_static/ons/outcome_grid_uk.html" style="width: 100%; height: 780px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 
-Shaded band: 2010–2022.
-
 | Stage | Channel | Measure | 2010 | 2022 | Change |
 |---|---|---|--:|--:|--:|
 | Couple | Desire | No UK trend series found | | | |
