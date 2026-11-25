@@ -1,0 +1,21 @@
+id: census-acs-pums
+type: dataset
+title: American Community Survey 1-year Public Use Microdata Sample (person records)
+publisher: US Census Bureau
+url: https://www2.census.gov/programs-surveys/acs/data/pums/
+oa: gold
+local:
+- ACS/data/
+countries:
+- USA
+period:
+- 2008
+- 2024
+scripts:
+- ACS/scripts/acs_births_by_union.py
+measurables:
+- births
+- asfr
+- share-in-couple
+notes: National person file csv_pus.zip per year (2008, 2010, 2019, 2024). Births in the past 12 months (FER) to women 15-50 by single year of age and whether they live with a spouse or unmarried partner.
+accessed: 2026-11-24

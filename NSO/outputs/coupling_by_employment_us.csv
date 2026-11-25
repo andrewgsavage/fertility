@@ -1,0 +1,81 @@
+year,sex,band,group,persons,couples,n,share,couple_rate
+2008,Men,25-34,Employed full-time,15590250,8599291,127882,79.26,55.16
+2008,Men,25-34,Employed part-time,1492955,510058,11703,7.59,34.16
+2008,Men,25-34,"Not in labour force, in education",346928,96519,2779,1.76,27.82
+2008,Men,25-34,"Not in labour force, not in education",1143455,289413,8301,5.81,25.31
+2008,Men,25-34,Unemployed,1095357,347483,8161,5.57,31.72
+2008,Men,35-44,Employed full-time,17281178,12318442,158122,83.29,71.28
+2008,Men,35-44,Employed part-time,1056847,562381,9057,5.09,53.21
+2008,Men,35-44,"Not in labour force, in education",99809,47912,838,0.48,48.0
+2008,Men,35-44,"Not in labour force, not in education",1412482,536966,11496,6.81,38.02
+2008,Men,35-44,Unemployed,897088,417514,7364,4.32,46.54
+2008,Women,25-34,Employed full-time,11307847,6001626,100208,57.64,53.07
+2008,Women,25-34,Employed part-time,2956524,1685465,26474,15.07,57.01
+2008,Women,25-34,"Not in labour force, in education",600372,287748,5342,3.06,47.93
+2008,Women,25-34,"Not in labour force, not in education",3779647,2584465,32356,19.27,68.38
+2008,Women,25-34,Unemployed,974299,385979,7939,4.97,39.62
+2008,Women,35-44,Employed full-time,12256148,7569191,115877,57.86,61.76
+2008,Women,35-44,Employed part-time,3386576,2490334,34021,15.99,73.54
+2008,Women,35-44,"Not in labour force, in education",272313,180491,2612,1.29,66.28
+2008,Women,35-44,"Not in labour force, not in education",4433079,3288383,41911,20.93,74.18
+2008,Women,35-44,Unemployed,834319,432286,7402,3.94,51.81
+2013,Men,25-34,Employed full-time,14906276,7831414,123885,72.44,52.54
+2013,Men,25-34,Employed part-time,2051349,638305,16345,9.97,31.12
+2013,Men,25-34,"Not in labour force, in education",517797,127719,4048,2.52,24.67
+2013,Men,25-34,"Not in labour force, not in education",1514288,334586,12033,7.36,22.1
+2013,Men,25-34,Unemployed,1588629,430626,12434,7.72,27.11
+2013,Men,35-44,Employed full-time,15450827,10990898,138874,78.52,71.13
+2013,Men,35-44,Employed part-time,1315096,675216,11160,6.68,51.34
+2013,Men,35-44,"Not in labour force, in education",142457,66869,1184,0.72,46.94
+2013,Men,35-44,"Not in labour force, not in education",1628275,611712,13479,8.27,37.57
+2013,Men,35-44,Unemployed,1141451,505076,9399,5.8,44.25
+2013,Women,25-34,Employed full-time,11310036,5767906,97667,54.04,51.0
+2013,Women,25-34,Employed part-time,3443943,1666408,29851,16.46,48.39
+2013,Women,25-34,"Not in labour force, in education",727123,314272,6278,3.47,43.22
+2013,Women,25-34,"Not in labour force, not in education",4054410,2557638,34533,19.37,63.08
+2013,Women,25-34,Unemployed,1392491,503610,11362,6.65,36.17
+2013,Women,35-44,Employed full-time,11260021,6991058,102786,55.19,62.09
+2013,Women,35-44,Employed part-time,3229993,2160904,30725,15.83,66.9
+2013,Women,35-44,"Not in labour force, in education",331726,203254,3026,1.63,61.27
+2013,Women,35-44,"Not in labour force, not in education",4496512,3199514,41000,22.04,71.16
+2013,Women,35-44,Unemployed,1083298,525911,9449,5.31,48.55
+2018,Men,25-34,Employed full-time,16949266,8425901,141056,76.7,49.71
+2018,Men,25-34,Employed part-time,2020359,520308,15914,9.14,25.75
+2018,Men,25-34,"Not in labour force, in education",467523,109371,3658,2.12,23.39
+2018,Men,25-34,"Not in labour force, not in education",1659866,315073,12766,7.51,18.98
+2018,Men,25-34,Unemployed,1001420,220804,7643,4.53,22.05
+2018,Men,35-44,Employed full-time,16527052,11571021,145592,82.14,70.01
+2018,Men,35-44,Employed part-time,1190033,608570,10080,5.91,51.14
+2018,Men,35-44,"Not in labour force, in education",116425,57691,990,0.58,49.55
+2018,Men,35-44,"Not in labour force, not in education",1616161,564911,13140,8.03,34.95
+2018,Men,35-44,Unemployed,671942,261562,5445,3.34,38.93
+2018,Women,25-34,Employed full-time,13258776,6519821,113932,59.86,49.17
+2018,Women,25-34,Employed part-time,3454026,1644506,29684,15.59,47.61
+2018,Women,25-34,"Not in labour force, in education",642462,269626,5298,2.9,41.97
+2018,Women,25-34,"Not in labour force, not in education",3902534,2394952,32763,17.62,61.37
+2018,Women,25-34,Unemployed,891603,302736,6870,4.03,33.95
+2018,Women,35-44,Employed full-time,12314097,7683788,110531,59.22,62.4
+2018,Women,35-44,Employed part-time,3175474,2150410,29189,15.27,67.72
+2018,Women,35-44,"Not in labour force, in education",237280,145903,2134,1.14,61.49
+2018,Women,35-44,"Not in labour force, not in education",4408887,3110216,38618,21.2,70.54
+2018,Women,35-44,Unemployed,656857,320174,5550,3.16,48.74
+2023,Men,25-34,Employed full-time,17227406,8947126,147295,77.83,51.94
+2023,Men,25-34,Employed part-time,1965028,573466,17026,8.88,29.18
+2023,Men,25-34,"Not in labour force, in education",357168,87914,3157,1.61,24.61
+2023,Men,25-34,"Not in labour force, not in education",1730966,360459,14974,7.82,20.82
+2023,Men,25-34,Unemployed,854944,222697,7136,3.86,26.05
+2023,Men,35-44,Employed full-time,17931735,12839325,157762,81.78,71.6
+2023,Men,35-44,Employed part-time,1445745,776748,12470,6.59,53.73
+2023,Men,35-44,"Not in labour force, in education",102866,48404,875,0.47,47.06
+2023,Men,35-44,"Not in labour force, not in education",1776538,672459,15686,8.1,37.85
+2023,Men,35-44,Unemployed,669727,302208,5674,3.05,45.12
+2023,Women,25-34,Employed full-time,14049864,7386404,121580,63.16,52.57
+2023,Women,25-34,Employed part-time,3325575,1683326,29265,14.95,50.62
+2023,Women,25-34,"Not in labour force, in education",540084,236145,4605,2.43,43.72
+2023,Women,25-34,"Not in labour force, not in education",3541692,2181040,30713,15.92,61.58
+2023,Women,25-34,Unemployed,786258,308903,6279,3.53,39.29
+2023,Women,35-44,Employed full-time,13738563,8940656,125306,61.97,65.08
+2023,Women,35-44,Employed part-time,3317217,2268112,30624,14.96,68.37
+2023,Women,35-44,"Not in labour force, in education",230954,147788,2058,1.04,63.99
+2023,Women,35-44,"Not in labour force, not in education",4220642,3033717,38285,19.04,71.88
+2023,Women,35-44,Unemployed,662509,343641,5539,2.99,51.87

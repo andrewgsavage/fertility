@@ -1,0 +1,20 @@
+id: ons-census-living-arrangements-lad
+type: dataset
+title: Census living arrangements by sex by age, local authorities, England and Wales (DC1108EW 2011, custom dataset 2021)
+publisher: Office for National Statistics
+url: https://api.beta.ons.gov.uk/v1/population-types/UR/census-observations?area-type=ltla&dimensions=living_arrangements_11a,resident_age_12a,sex
+local:
+- ONS/data/census/
+countries:
+- GBRTENW
+period:
+- 2011
+- 2021
+scripts:
+- ONS/scripts/coupling_by_lad_ew.py
+factors:
+- partnership-formation
+measurables:
+- asfr
+notes: Women 25-29 and 30-34 in households living in a couple, by local authority district, set against 2021 LAD ASFRs (Nomis lebirthrates). 2011 from Nomis NM_747_1 (https://www.nomisweb.co.uk/census/2011/dc1108ew); 2021 from the ONS create-your-own-dataset API. Isles of Scilly withheld in 2021.
+accessed: 2026-11-24

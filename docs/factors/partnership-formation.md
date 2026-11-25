@@ -21,6 +21,8 @@ Studies that relate marriage, cohabitation or partnering to fertility, read from
 
 ### Decompositions: fewer couples or fewer births per couple
 
+The same split, computed here for the US, England and Wales and the HFD countries with coupling data, is on [Fewer couples or fewer births per couple](couples-vs-births-per-couple.md).
+
 | Study | Data | Finding |
 |---|---|---|
 | Hellstrand, Nisén & Myrskylä 2022, *Less partnering, less children, or both?*, European Journal of Population 38: 191–221, [10.1007/s10680-022-09605-8](https://doi.org/10.1007/s10680-022-09605-8) | Finnish registers 2000–2018, multistate model | Most of the first-birth decline since 2010 is lower first-birth rates among cohabiting and married people. Fewer marriages explain 19%, fewer cohabitations 2–4%, more union dissolution 6%. |
@@ -162,4 +164,5 @@ coupling-trends
 marriage
 coupling-vs-mothers
 union-to-first-birth
+couples-vs-births-per-couple
 ```
