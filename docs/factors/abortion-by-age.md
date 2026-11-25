@@ -271,9 +271,67 @@ Under 20 and 20–24, the ratio rose in most of Western Europe and in Japan, mos
 
 Only at 20–24 in England & Wales, Scotland and Spain did abortions rise. Everywhere else young women had fewer abortions and far fewer births, so fewer pregnancies overall. In England & Wales, pregnancies at 20–24 (abortions + births) fell 20%, from 174,000 to 139,000, while births fell 42%. In Central and Eastern Europe the ratio fell at every age.
 
+### Births, abortions and women, by age
+
+Per woman, the rise at 20–24 in England & Wales is real: abortions per 1,000 women aged 20–24 went from 28 to 39 between 2013 and 2023 while births per 1,000 fell from 63 to 38, so both moved the ratio. Spain's abortion rate at 20–24 was flat (19.4 to 19.3) and everywhere else it fell, apart from Azerbaijan and, slightly, Croatia. Under 20, abortion rates fell or held level everywhere except Azerbaijan (3.1 to 4.1 per 1,000), so the higher teenage ratios in Western Europe and Japan come from births falling faster than abortions.
+
+::::{tab-set}
+
+:::{tab-item} Index, 2013 = 100
+```{raw} html
+<iframe src="../_static/eurostat/abortion_change_index.html" style="width: 100%; height: 980px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+:::
+
+:::{tab-item} Pregnancies
+```{raw} html
+<iframe src="../_static/eurostat/abortion_change_pregnancies.html" style="width: 100%; height: 980px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+:::
+
+:::{tab-item} Data
+**Abortions and live births per 1,000 women, 2013 → latest year with population data**
+
+| Country | Latest | Abortions, under 20 | Births, under 20 | Abortions, 20–24 | Births, 20–24 |
+|---|--:|--:|--:|--:|--:|
+| Azerbaijan | 2018 | 3.1 → 4.1 | 51.0 → 43.5 | 12.4 → 20.2 | 156.0 → 140.3 |
+| Belarus | 2018 | 7.7 → 3.6 | 22.1 → 11.7 | 17.9 → 13.1 | 91.7 → 73.8 |
+| Bulgaria | 2021 | 16.2 → 12.0 | 43.6 → 42.7 | 29.4 → 25.4 | 73.8 → 77.0 |
+| Croatia | 2024 | 1.9 → 1.9 | 10.7 → 6.3 | 4.1 → 5.0 | 49.9 → 34.1 |
+| Czechia | 2024 | 7.2 → 3.3 | 11.7 → 5.7 | 12.9 → 9.0 | 41.9 → 34.4 |
+| England & Wales | 2023 | 17.2 → 16.1 | 17.3 → 8.1 | 28.3 → 38.7 | 62.7 → 37.9 |
+| Estonia | 2022 | 17.1 → 7.2 | 16.3 → 5.1 | 29.9 → 17.9 | 55.1 → 37.8 |
+| Finland | 2024 | 10.5 → 5.9 | 7.3 → 3.0 | 17.5 → 12.7 | 50.8 → 26.1 |
+| Germany | 2024 | 4.9 → 4.3 | 7.8 → 5.6 | 10.3 → 9.5 | 35.9 → 29.8 |
+| Hungary | 2023 | 17.1 → 11.2 | 21.6 → 16.7 | 24.2 → 20.4 | 42.0 → 43.5 |
+| Italy | 2024 | 5.9 → 3.6 | 6.0 → 2.5 | 11.9 → 8.0 | 31.7 → 18.2 |
+| Japan | 2024 | 6.7 → 4.2 | 4.5 → 1.6 | 13.7 → 12.1 | 31.1 → 15.4 |
+| Latvia | 2020 | 8.1 → 3.3 | 20.1 → 10.6 | 18.0 → 9.4 | 60.2 → 53.8 |
+| Lithuania | 2024 | 4.5 → 1.3 | 14.0 → 4.2 | 10.2 → 5.5 | 52.2 → 30.7 |
+| Norway | 2024 | 10.1 → 6.8 | 5.7 → 1.4 | 24.5 → 16.1 | 48.4 → 21.3 |
+| Poland | 2019 | 0.0 → 0.0 | 13.7 → 9.4 | 0.1 → 0.1 | 48.8 → 47.4 |
+| Romania | 2024 | 15.6 → 5.3 | 36.0 → 25.5 | 29.3 → 12.4 | 69.2 → 57.1 |
+| Scotland | 2022 | 15.0 → 13.8 | 18.1 → 7.5 | 19.8 → 26.0 | 53.7 → 32.1 |
+| Slovakia | 2024 | 5.1 → 2.6 | 22.3 → 24.3 | 9.7 → 7.3 | 49.3 → 54.4 |
+| Slovenia | 2024 | 5.6 → 4.1 | 4.7 → 3.3 | 10.6 → 9.6 | 44.1 → 37.0 |
+| Spain | 2024 | 12.2 → 9.1 | 8.5 → 4.3 | 19.4 → 19.3 | 27.0 → 19.9 |
+| Switzerland | 2020 | 4.0 → 3.5 | 3.0 → 1.7 | 9.0 → 8.3 | 29.9 → 21.4 |
+| United States (43 areas) | 2022 | 6.1 → 4.1 | 20.3 → 10.7 | 15.9 → 12.6 | 61.0 → 44.4 |
+
+The full series (country, year, age group, abortions, births, women, rates) is in [`abortion_change.csv`](../_static/eurostat/abortion_change.csv).
+:::
+
+:::{tab-item} Notes
+```{note}
+Abortions and births as listed under Sources and coverage at the end of the page. Women by age: Eurostat [demo_pjan](https://ec.europa.eu/eurostat/databrowser/view/demo_pjan/default/table) (women on 1 January, mean of the year and the next), ONS [mid-year population estimates](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland) for England & Wales from 2011, and [Human Fertility Database](https://www.humanfertility.org/) female exposures for Scotland, the United States, Japan and England & Wales before 2011. HFD ends in 2022 for Scotland, so its rates stop there. Under 20 is divided by women aged 15–19 and 35+ by women aged 35–44. The US population is the whole country while abortions and births cover 43 reporting areas, so US rates are understated by about a quarter; the change since 2013 is unaffected. Countries without data by age for 2013, or whose latest year is before 2018 (Russia), are left out.
+```
+:::
+
+::::
+
 ### Under 20 since 2020
 
-Under 20, abortions to women with no children per 100 first births rose faster after 2020: England & Wales 139 (2019) to 188 (2022), Spain 157 to 225 (2024), Italy 168 (2021) to 229, Finland 160 to 200, Estonia 104 to 176, while Slovakia and Hungary did not rise. Until 2021 the rise came from births falling faster than abortions; after 2021 the number of abortions itself rose (England & Wales 18,661 in 2021 to 24,058 in 2022, Spain 8,762 to 11,023 by 2024) while first births stayed flat or kept falling. Abortions dipped in 2020–21, so part of the later rise may be a rebound, and without rates per woman a change in the number of teenage women can't be ruled out.
+Under 20, abortions to women with no children per 100 first births rose faster after 2020: England & Wales 139 (2019) to 188 (2022), Spain 157 to 225 (2024), Italy 168 (2021) to 229, Finland 160 to 200, Estonia 104 to 176, while Slovakia and Hungary did not rise. Until 2021 the rise came from births falling faster than abortions; after 2021 the number of abortions itself rose (England & Wales 18,661 in 2021 to 24,058 in 2022, Spain 8,762 to 11,023 by 2024) while first births stayed flat or kept falling. Abortions dipped in 2020–21, so part of the later rise may be a rebound. Per woman aged 15–19, England & Wales went from 14.4 abortions per 1,000 in 2019 to 12.4 in 2021 and 16.1 in 2023, above the 2019 level, while Spain returned to its 2019 rate (9.1 per 1,000 in 2024); the number of teenage women grew by about 7% and 13% over those years.
 
 ## Abortions to women who already have a child
 
