@@ -63,10 +63,12 @@ A fertility rate of 2.1 is stable. A fertility rate of 1.05 means the population
 | 0.89 | 24.2 | 1.29 | 42.7 | 1.69 | 95.7 | 2.09 | 4356.4 |
 :::
 
-::::
-
+:::{tab-item} Notes
 ```{note}
 Half-life = 30 × ln(0.5) / ln(TFR / 2.1), where 30 years is the mean age of childbirth and 2.1 is the replacement TFR. Each generation multiplies the population by TFR / 2.1, so this is just the number of generations to halve, converted to years. Computed for TFR = 0.50 to 2.09 in steps of 0.01, including the chart and the Data tab's table; see `democracy/scripts/half_life_tfr.py`.
 ```
+:::
+
+::::
 
 When the half-life is greater than a lifetime it seems a far away issue. However, this is precarious. Small reductions in the fertility rate, as has been seen in almost all developed countries globally, lead to half-lives dropping at an exponential rate.

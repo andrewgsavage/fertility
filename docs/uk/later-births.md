@@ -8,6 +8,9 @@ The [Conditional ASFR](cond-asfr) page reconstructs conditional (parity-progress
 
 Each chart below is colored by birth cohort — one line per cohort, tracing that cohort's fertility across its own lifetime — rather than one calendar year's cross-section across all ages. The chart below shows plain ASFR; further down, the same conditional and cumulative first/second-birth charts from the Conditional ASFR page, colored by cohort instead of period. Drag either handle to narrow the cohorts shown across all three charts at once.
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <style>
   .range-slider-wrap { position: relative; height: 32px; max-width: 500px; }
@@ -49,7 +52,9 @@ Each chart below is colored by birth cohort — one line per cohort, tracing tha
   })();
 </script>
 ```
+:::
 
+:::{tab-item} Notes
 ```{note}
 HFD. Human Fertility Database. Max Planck Institute for Demographic Research (Germany)
 and Vienna Institute of Demography (Austria). Available at [www.humanfertility.org](https://www.humanfertility.org/).
@@ -62,3 +67,6 @@ England and Wales", Table 3 (percentage of women by number of live-born children
 age and year of birth). Available at
 [ons.gov.uk](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/datasets/childbearingforwomenbornindifferentyearsreferencetable).
 ```
+:::
+
+::::

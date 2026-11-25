@@ -22,10 +22,15 @@ Ticks from the [factors table](index.md): ✓ where the mechanism is proposed to
 
 Share of 16–24-year-olds who took part in social networks (created a profile or posted messages) in the last 3 months, beside births per woman across ages 20–29 (5 × (ASFR 20–24 + ASFR 25–29)). Eurostat's series starts in 2011, so it shows the later phase of adoption, not the first years of social media. Some countries have series breaks around 2020–21 (for example Germany and France).
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/eurostat/social_media_use_timeline.html" style="width: 100%; height: 480px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
+:::{tab-item} Data
 | Country | Social network use, 16–24: 2011 | 2015 | 2019 | 2025 | Births per woman at 20–29: 2011 | 2019 | 2023 |
 |---|--:|--:|--:|--:|--:|--:|--:|
 | Germany | 90% | 92% | 89% | 85% | 0.59 | 0.58 | |
@@ -39,18 +44,29 @@ Share of 16–24-year-olds who took part in social networks (created a profile o
 | Hungary | 85% | 92% | 93% | 94% | 0.54 | 0.67 | 0.67 |
 | Czechia | 67% | 89% | 96% | 98% | 0.68 | 0.79 | 0.66 |
 | Romania | 55% | 79% | 85% | 94% | 0.81 | 0.91 | 0.79 |
+:::
+
+::::
 
 By 2011 use among 16–24s was already 55–96% (30 countries with data), and in 2025 it was 81–99% (36 countries). With so little room to rise, the data has little cross-country variation to test a threshold. Several countries where use was high and flat (Sweden, Finland, Germany) had very different fertility paths, and Romania, Czechia and Hungary had rising use and rising young fertility.
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/eurostat/social_media_vs_young_fertility.html" style="width: 100%; height: 520px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
-Across 29 countries, a larger rise in use between 2011 and 2019 goes with a smaller fall in 20–29 fertility (r = 0.27), again the opposite sign to the mechanism and driven by Central and Eastern Europe. Neither chart supports social media as the cause of the fall; neither rules out an effect that operates through individual exposure rather than national averages.
-
+:::{tab-item} Notes
 ```{note}
 Eurostat [isoc_ci_ac_i](https://ec.europa.eu/eurostat/databrowser/view/isoc_ci_ac_i/default/table) (social network participation, 2011–2025) and [demo_frate](https://ec.europa.eu/eurostat/databrowser/view/demo_frate/default/table) (fertility rates by age; the UK ends in 2018). Participation is not time spent. Not included: HBSC adolescent social media use and Pew surveys, which were not retrieved.
 ```
+:::
+
+::::
+
+Across 29 countries, a larger rise in use between 2011 and 2019 goes with a smaller fall in 20–29 fertility (r = 0.27), again the opposite sign to the mechanism and driven by Central and Eastern Europe. Neither chart supports social media as the cause of the fall; neither rules out an effect that operates through individual exposure rather than national averages.
 
 ## Causal evidence
 

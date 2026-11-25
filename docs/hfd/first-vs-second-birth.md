@@ -26,12 +26,7 @@ Each rate is shown as the change from the same country's average at that age ove
 
 :::
 
-::::
-
-From this it is clear the factors causing the global fertility decline must affect first birth rates, but NOT second birth rates.
-
-Factors that make it less likely for people to form couples, or factors that make it less likely for a couple to have their first child would explain these trends.
-
+:::{tab-item} Notes
 ```{note}
 HFD. Human Fertility Database. Max Planck Institute for Demographic Research (Germany)
 and Vienna Institute of Demography (Austria). Available at [www.humanfertility.org](https://www.humanfertility.org/).
@@ -49,3 +44,10 @@ rate is estimated as a discrete hazard on the cumulative % of the cohort with at
 1 / at least 2 children, then re-sliced from cohort into period (calendar) year to
 match HFD's chart convention.
 ```
+:::
+
+::::
+
+From this it is clear the factors causing the global fertility decline must affect first birth rates, but NOT second birth rates.
+
+Factors that make it less likely for people to form couples, or factors that make it less likely for a couple to have their first child would explain these trends.

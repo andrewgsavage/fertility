@@ -248,13 +248,21 @@ It appears the short and long term assumptions are based on the trends in ASFRs 
 <iframe src="../_static/ons/projections_asfr.html" style="width: 100%; aspect-ratio: 16 / 9; height: auto; display: block; border: 1px solid var(--color-background-border); margin-top: 8px;" loading="lazy"></iframe>
 ```
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/ons/projections_cfs.html" style="width: 100%; aspect-ratio: 16 / 9; height: auto; display: block; border: 1px solid var(--color-background-border); margin-top: 8px;" loading="lazy"></iframe>
 ```
+:::
 
+:::{tab-item} Notes
 ```{note}
 The Observed line has a small step around 2022: "Historical TFRs used in the 2022-based and 2024-based assumptions differ as they make use of the latest available revised population estimates during the assumption setting process." (ONS)
 ```
+:::
+
+::::
 
 ```{note}
 Parametric models of the age-specific fertility curve (Hadwiger, Coale-Trussell, gamma, skew-normal and skew-logistic) summarise each year's ASFRs in a few parameters, which can then be projected instead of every age separately. Examples:

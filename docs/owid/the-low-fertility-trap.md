@@ -13,13 +13,11 @@ Although these countries saw some recovery from their lowest TFRs, they were sil
 ::::{tab-set}
 
 :::{tab-item} Chart
-
 ```{raw} html
 <iframe src="../_static/owid/tfr_threshold_year.html" style="width: 100%; height: 650px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
-
-
 :::
+
 :::{tab-item} 1.1
 :selected:
 | Country | Crossed below | Avg TFR after crossing | Min TFR | Min year | Subsequent peak | Peak year | Avg TFR after min | Years averaged |
@@ -194,11 +192,13 @@ Although these countries saw some recovery from their lowest TFRs, they were sil
 | Uruguay | 2020 | 1.444 | 1.409 | 2023 | 1.497 | 2020 | – | – |
 :::
 
-::::
-
+:::{tab-item} Notes
 ```{note}
 Data: Human Fertility Database (2025); UN, World Population Prospects (2024)
 — with major processing by Our World in Data. Source:
 [Fertility rate: births per woman](https://ourworldindata.org/grapher/children-born-per-woman),
 Our World in Data.
 ```
+:::
+
+::::

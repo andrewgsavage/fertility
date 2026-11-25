@@ -70,7 +70,7 @@ Eurostat provides data on % living in a couple for 18-24 and 25-49 year olds. Th
 
 :::
 
-:::{tab-item} Sources
+:::{tab-item} Notes
 
 ```{note}
 Eurostat [household composition table](https://ec.europa.eu/eurostat/databrowser/view/lfst_hhindws/default/table) (EU Labour Force Survey), adults living in a couple (married or cohabiting, in their own couple household) over all persons in the group. A couple sharing a home with parents or other adults counts as "another type of household", not as a couple, so the share is low where young couples live with family: in Croatia in 2020, 1.1k of 138k women 18–24 were in a couple household and 135.9k in another type. First-birth rates and % with a child from the Human Fertility Database as in the charts below; UK births are England and Wales (ONS reconstruction, ages 21 and over, so no first-birth rate at 20–24). 20 countries have both. EU-LFS household data has a methodology break in 2021. Denmark, Sweden and Norway start hidden (click their names to show them): Denmark and Sweden jump 15–25 points between years at 25–49 and Denmark falls to 1% at 18–24, which look like series breaks; Norway has data only from 2021, at about 3%. Values Eurostat flags u (low reliability) are drawn but left out of the trend arrows, are marked on hover, and are dashed on the ratio lines: Croatia in every year but 2022, Bulgaria 2015–2016 and 2019–2023, Denmark, Ireland, Slovakia and Slovenia from 2020–2021, Lithuania 2006–2008, Norway 2021 and 2023. End-of-range ratios divide % with a child by the end age by the coupling share averaged over the whole age range, youngest ages included, so they run above the middle-of-range ratios even if every mother is in a couple.
@@ -103,7 +103,7 @@ Other sources provide data on  % living in a couple for 18-24 and 25-34 year old
 
 :::
 
-:::{tab-item} Sources
+:::{tab-item} Notes
 
 | Country | Coupling source | Years |
 |---|---|---|
@@ -148,7 +148,7 @@ First births per childless woman from the [Human Fertility Database](https://www
 
 :::
 
-:::{tab-item} Sources
+:::{tab-item} Notes
 
 ```{note}
 Couples: women living with a spouse or partner (married, registered or cohabiting) over all women of that age, from national registers: [CBS StatLine 37620](https://opendata.cbs.nl/statline/#/CBS/nl/dataset/37620/table) (Netherlands), Statistics Denmark [FAM100N](https://www.statbank.dk/FAM100N) over [BEFOLK1](https://www.statbank.dk/BEFOLK1), Statistics Finland [12c6](https://pxdata.stat.fi/PxWeb/pxweb/en/StatFin/StatFin__perh/statfin_perh_pxt_12c6.px/); US Census Bureau [Table AD-3](https://www.census.gov/data/tables/time-series/demo/families/adults.html) (CPS ASEC), which gives only 18–24 and 25–34. % with a child: 100 minus childless women's share of all women at that age and year, from the [Human Fertility Database](https://www.humanfertility.org/) (`exposRRpa`), pooled over the same ages for the US. More by age and year on [Coupling over time](coupling-trends.md).
@@ -179,7 +179,7 @@ Couples: women living with a spouse or partner (married, registered or cohabitin
 
 :::
 
-:::{tab-item} Sources
+:::{tab-item} Notes
 
 ```{note}
 Coupling from UN World Marriage Data 2019 ([Coupling over time](coupling-trends.md), women married or in a union), one point per census or survey year; the same countries and coupling series as on [Unused plots](#coupling-un-first-birth). % with a child at single ages from the [Human Fertility Database](https://www.humanfertility.org/) (100 minus childless women's share of all female exposure at that age and year, from `exposRRpa`). End-of-range ratios divide % with a child by the end age by the coupling share averaged over the whole age range, youngest ages included, so they run above the middle-of-range ratios even if every mother is in a couple.
@@ -214,7 +214,7 @@ Coupling from UN World Marriage Data 2019 ([Coupling over time](coupling-trends.
 
 :::
 
-:::{tab-item} Sources
+:::{tab-item} Notes
 
 ```{note}
 \% with a child by 30: ONS [childbearing for women born in different years](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/datasets/childbearingforwomenbornindifferentyearsreferencetable), table 3 (parity distribution by age and year of birth), 100 minus the share of each cohort still childless at 30, plotted at year = birth cohort + 30. In a couple at 16–29: ONS [population estimates by marital status and living arrangements](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesbymaritalstatusandlivingarrangements) (Labour Force Survey weighted to mid-year population estimates), women living as a married, civil partnered or cohabiting couple over all women 16–29. England and Wales, 2002–2025. ONS publishes living arrangements under 30 only as one 16–29 group, 18–29 in 2025 after the minimum marriage age rose to 18. ONS suspended the accredited status of LFS-based estimates in November 2023 over falling response; the 2023–2024 dip in coupling may reflect that.
@@ -251,7 +251,7 @@ DHS countries: the share of women in a 5-year age group with at least one child 
 
 :::
 
-:::{tab-item} Sources
+:::{tab-item} Notes
 
 ```{note}
 \% with a child from the [DHS Program API](https://api.dhsprogram.com/) (indicator `FE_CEBA_W_CH0`, women with no children ever born, by 5-year age group), DHS surveys of all women only. Coupling from UN World Marriage Data 2019 ([Coupling over time](coupling-trends.md), women married or in a union), one point per survey year, usually from the same DHS survey. 30 countries with at least two such years.
@@ -287,16 +287,14 @@ Share of women in a 5-year age group with at least one child against the couplin
 
 :::
 
-:::{tab-item} Sources
+:::{tab-item} Notes
 
 ```{note}
 \% with a child from the [DHS Program API](https://api.dhsprogram.com/) (indicator `FE_CEBA_W_CH0`, women with no children ever born, by 5-year age group), DHS surveys of all women only; surveys of ever-married women (most of Egypt, Jordan, Pakistan and Bangladesh) are left out. HFD rows of the table: childless women's share of all women in the age group, from the [Human Fertility Database](https://www.humanfertility.org/) (`exposRRpa`). Coupling from ILOSTAT (women) for 14 DHS countries, FT (both sexes, 25–34) for Angola, Cambodia, Ghana, India, Kenya and Nigeria; UN tab: UN World Marriage Data ([Coupling over time](coupling-trends.md)), 30 DHS countries, one point per survey year, usually from the same DHS survey.
 ```
-
 :::
 
-::::
-
+:::{tab-item} Data
 | Latest survey, women aged 25–29 | Married or in a union | With a child |
 |---|--:|--:|
 | South Africa 2016 | 35.7% | 84.7% |
@@ -306,5 +304,8 @@ Share of women in a 5-year age group with at least one child against the couplin
 | Ukraine 2012 (HFD) | 70.0% | 61.2% |
 | Sweden 2012 (HFD) | 73.3% | 35.0% |
 | Japan 2015 (HFD) | 38.0% | 25.2% |
+:::
+
+::::
 
 At the same coupling rate, DHS countries have far more mothers than HFD countries. In South Africa and Namibia at least 45% of women aged 25–29 are mothers who are not married or in a union (mothers minus coupled), so coupling there says little about first births.

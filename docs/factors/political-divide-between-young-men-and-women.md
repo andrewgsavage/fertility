@@ -22,16 +22,24 @@ Ticks from the [factors table](index.md): ✓ where the mechanism is proposed to
 
 Share of US adults describing themselves as liberal (slightly liberal to extremely liberal on the seven-point scale) or conservative, by sex and age, pooled in four-year windows from the [General Social Survey](https://gss.norc.org/content/dam/gss/get-the-data/documents/stata/GSS_stata.zip) 1972–2024 file. The right panel is women minus men, by age group.
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/gss/political_gender_gap_us.html" style="width: 100%; height: 480px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
+:::{tab-item} Data
 | Aged 18–29 | Liberal: men | women | Conservative: men | women |
 |---|--:|--:|--:|--:|
 | 1989–92 | 30.1% | 33.6% | 34.6% | 27.3% |
 | 2009–12 | 31.8% | 34.3% | 27.1% | 23.4% |
 | 2017–20 | 32.6% | 36.8% | 23.7% | 18.3% |
 | 2021–24 | 30.3% | 44.5% | 31.8% | 17.6% |
+:::
+
+::::
 
 Until 2017–20 the gap among 18–29 year-olds stayed within about ±7 points and changed sign several times. In 2021–24 it was 14.2 points, with young women's liberal share up and young men's flat; among those aged 30–49 and 50+ the gap was 3.8 and 1.5 points. So the divergence is recent and specific to the young, in the US. The data don't show whether it makes partners harder to match, or whether the gap is wide enough to affect partnering; each window has 175–748 respondents per sex, so single-window changes are noisy.
 

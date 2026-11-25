@@ -8,6 +8,9 @@ The [First vs Second Birth](../hfd/first-vs-second-birth) page compares the cond
 
 This page shows that same UK reconstruction on its own, colored by period (calendar) year, with every available year plotted and a slider to narrow the range shown. See [Later Births](later-births) for the same chart colored by birth cohort instead, alongside the underlying cumulative data.
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <style>
   .range-slider-wrap { position: relative; height: 32px; max-width: 500px; }
@@ -44,7 +47,9 @@ This page shows that same UK reconstruction on its own, colored by period (calen
   })();
 </script>
 ```
+:::
 
+:::{tab-item} Notes
 ```{note}
 Office for National Statistics, "Childbearing for women born in different years,
 England and Wales", Table 3 (percentage of women by number of live-born children, by
@@ -56,3 +61,6 @@ at each age, the conditional (parity-progression) rate is estimated as a discret
 hazard on the cumulative % of the cohort with at least 1 / at least 2 children, then
 re-sliced from cohort into period (calendar) year to match HFD's chart convention.
 ```
+:::
+
+::::

@@ -22,10 +22,15 @@ Ticks from the [factors table](index.md): ✓ where the mechanism is proposed to
 
 Share of 16–24-year-olds using a mobile phone or smartphone to access the internet away from home or work (last 3 months), beside births per woman across ages 20–29 (5 × (ASFR 20–24 + ASFR 25–29)). This tests timing only: if smartphones cut young fertility, the fall should start or steepen as adoption passes a threshold. It can't separate smartphones from other changes in the same years.
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/eurostat/smartphone_adoption_timeline.html" style="width: 100%; height: 480px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
+:::{tab-item} Data
 | Country | Mobile internet use, 16–24: 2011 | 2013 | 2015 | 2019 | First year ≥50% | Births per woman at 20–29: 2011 | 2019 | Peak year (1985 on) |
 |---|--:|--:|--:|--:|--:|--:|--:|--:|
 | Germany | 30% | 74% | 89% | 95% | 2012 | 0.59 | 0.58 | 2001 |
@@ -38,20 +43,31 @@ Share of 16–24-year-olds using a mobile phone or smartphone to access the inte
 | Hungary | 21% | 47% | 80% | 92% | 2014 | 0.54 | 0.67 | 1990 |
 | Czechia | 17% | 49% | 77% | 97% | 2014 | 0.68 | 0.79 | ≤1985 |
 | Romania | 6% | 22% | 62% | 92% | 2015 | 0.81 | 0.91 | 1986 |
+:::
+
+::::
 
 Peak year is the maximum of the 3-year average of 20–29 fertility from 1985; "≤1985" means the series was already falling at the start of that window.
 
 Adoption was fast and nearly universal: among 28 countries with both years, use by 16–24s was 6–69% in 2011 and 80–98% in 2019. Fertility at 20–29 had peaked before 2000 in all 26 countries with data back to 1985, so the fall predates smartphones. Among those, in the 19 where use passed 50% by 2013, the latest 20–29 peak was 1993. The timing is consistent with a long decline that smartphones joined late, not with a decline that started when they spread.
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/eurostat/smartphone_vs_young_fertility.html" style="width: 100%; height: 520px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
-Across 28 countries, a larger rise in mobile internet use between 2011 and 2019 goes with a smaller fall in 20–29 fertility (r = 0.51), the opposite sign to the proposed mechanism. The late adopters (Romania, Bulgaria, Czechia, Hungary) are also where 20–29 fertility recovered after earlier postponement, so adoption speed mostly tracks a catch-up in fertility.
-
+:::{tab-item} Notes
 ```{note}
 Eurostat [isoc_ci_im_i](https://ec.europa.eu/eurostat/databrowser/view/isoc_ci_im_i/default/table) (mobile internet, 2011–2019) and [demo_frate](https://ec.europa.eu/eurostat/databrowser/view/demo_frate/default/table) (fertility rates by age; the UK ends in 2018 and Germany's 2023 value is missing). This series ends in 2019 and measures mobile internet use, not smartphone ownership. Not included: ITU/World Bank mobile subscriptions (phones, not smartphones), Pew ownership surveys, and time-use data on in-person socialising (ATUS, HETUS), which have no consistent multi-country annual series.
 ```
+:::
+
+::::
+
+Across 28 countries, a larger rise in mobile internet use between 2011 and 2019 goes with a smaller fall in 20–29 fertility (r = 0.51), the opposite sign to the proposed mechanism. The late adopters (Romania, Bulgaria, Czechia, Hungary) are also where 20–29 fertility recovered after earlier postponement, so adoption speed mostly tracks a catch-up in fertility.
 
 ## Across countries, 2010–2019
 

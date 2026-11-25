@@ -10,10 +10,15 @@ Part of [Partnership formation](partnership-formation.md), which counts married 
 
 Mean age of women at first marriage (solid) and of mothers at first birth (dotted), 1990 onward where Eurostat has data. If births waited on marriage, the two lines would move together.
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/eurostat/first_marriage_birth_age_europe.html" style="width: 100%; height: 480px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
+:::{tab-item} Data
 | Country | Marriage 2000 | Marriage 2020 | Birth 2000 | Birth 2020 | Births outside marriage 2023 |
 |---|--:|--:|--:|--:|--:|
 | France | 28.4 | 33.5 | 27.8 | 28.9 | 58.5% |
@@ -25,12 +30,17 @@ Mean age of women at first marriage (solid) and of mothers at first birth (dotte
 | Czechia | 24.6 | 29.7 | 25.0 | 28.5 | 47.1% |
 | Hungary | 24.8 | 29.5 | 25.1 | 28.4 | 24.4% |
 | Poland | 24.1 | 27.9 | 24.5 | 27.9 | 28.7% |
+:::
 
-Between 2000 and 2020 the age at first marriage rose by more than the age at first birth in every country with both series: France +5.1 years against +1.1, Spain +6.8 against +2.1, Sweden +4.4 against +1.8, Poland +3.8 against +3.4. Marriage is now later than the first birth in most of these countries, and half or more of births in France, Spain and Sweden are outside marriage. So later marriage is not by itself later childbearing; Poland, where marriage and first birth still coincide, is the closest to the proposed mechanism. Marriage is not the same as partnership, and these are period means, not cohort ages.
-
+:::{tab-item} Notes
 ```{note}
 Eurostat [marriages and divorces](https://ec.europa.eu/eurostat/databrowser/view/demo_nind/default/table) and [fertility indicators](https://ec.europa.eu/eurostat/databrowser/view/demo_find/default/table). Series start in 1990 or later and have gaps (Germany's marriage ages end in 2017; first-birth ages for several countries start after 2000).
 ```
+:::
+
+::::
+
+Between 2000 and 2020 the age at first marriage rose by more than the age at first birth in every country with both series: France +5.1 years against +1.1, Spain +6.8 against +2.1, Sweden +4.4 against +1.8, Poland +3.8 against +3.4. Marriage is now later than the first birth in most of these countries, and half or more of births in France, Spain and Sweden are outside marriage. So later marriage is not by itself later childbearing; Poland, where marriage and first birth still coincide, is the closest to the proposed mechanism. Marriage is not the same as partnership, and these are period means, not cohort ages.
 
 ## Marriage decline in East Asia
 

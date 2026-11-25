@@ -6,10 +6,15 @@ This page was written by AI and has not been fully reviewed. Check figures and c
 
 United States conditional age-specific fertility rates, 2016–2024, split into births conceived with assisted reproductive technology (ART, mainly IVF) and all other births.
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/hfd/us_art_cond_asfr.html" style="width: 100%; height: 580px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
+:::{tab-item} Data
 | Birth | Age | 2016 | 2024 | Change | ART part, 2016 → 2024 | Non-ART change |
 |---|---|---|---|---|---|---|
 | First | 20–24 | 4.85% | 3.68% | −24% | 0.00% → 0.00% | −24% |
@@ -22,7 +27,9 @@ United States conditional age-specific fertility rates, 2016–2024, split into 
 | Second | 30–34 | 14.84% | 14.93% | +1% | 0.11% → 0.18% | +0% |
 | Second | 35–39 | 8.21% | 8.51% | +4% | 0.13% → 0.26% | +2% |
 | Second | 40–44 | 1.62% | 1.85% | +14% | 0.06% → 0.12% | +10% |
+:::
 
+:::{tab-item} Notes
 ```{note}
 HFD. Human Fertility Database. Max Planck Institute for Demographic Research (Germany)
 and Vienna Institute of Demography (Austria). Available at [www.humanfertility.org](https://www.humanfertility.org/).
@@ -37,6 +44,9 @@ rate × share of births in that age band and birth order recorded as ART on the 
 among births reporting the item. The second-and-later ART share is applied to the second-birth rate.
 Birth certificates under-record ART compared with clinic reporting.
 ```
+:::
+
+::::
 
 ## Other countries
 
@@ -76,10 +86,15 @@ MAR % of all births). MAR includes IUI and ovulation induction as well as IVF.
 
 ART births ÷ all live births in the country and year, 2000–2019. ART covers IVF and related in vitro methods, not IUI.
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/hfd/goisis_fig1_art_share.html" style="width: 100%; height: 440px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
+:::{tab-item} Notes
 ```{note}
 Goisis et al. (2024), Figure 1, digitised from the marker positions in the article PDF. Values
 for 2015–2019 match ESHRE's "ART in Europe" reports (ART infants per national births) to
@@ -94,15 +109,23 @@ births in Spain in 2019, against 8.9% here. Devolder D, Borisova E. "Demographic
 Fertilization in Spain." Medicina Reproductiva y Embriología Clínica 2022;9(2).
 [doi:10.1016/j.medre.2022.100115](https://doi.org/10.1016/j.medre.2022.100115).
 ```
+:::
+
+::::
 
 ### European countries
 
 ART births ÷ all live births in the country and year, for the European countries on the HFD pages. Panels are ordered by their latest value.
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/hfd/eshre_art_share_by_country.html" style="width: 100%; height: 600px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
+:::{tab-item} Notes
 ```{note}
 European Society of Human Reproduction and Embryology, European IVF-Monitoring Consortium. "ART
 in Europe" reports for 2007 and 2015–2019 (Human Reproduction / Human Reproduction Open), on
@@ -112,6 +135,9 @@ coverage. The 2008–2014 and 2020 reports are not open access. Other years for 
 Spain and the UK are from Goisis et al. (2024) Figure 1, which plots the same series. Austria's
 2016 and 2018 values are about double its 2015 and 2017 values in the source.
 ```
+:::
+
+::::
 
 ### Norway
 
@@ -135,10 +161,15 @@ all live births 1985–2014.
 
 ART births ÷ all live births to mothers of that age, 2015–2023.
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/hfd/japan_art_share_by_age.html" style="width: 100%; height: 440px; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
+:::{tab-item} Notes
 ```{note}
 Japan Society of Obstetrics and Gynecology, "Assisted reproductive technology in Japan: a summary
 report" for each year 2015–2023, Reproductive Medicine and Biology, on
@@ -147,6 +178,9 @@ Cycles resulting in a live birth by woman's age at treatment (Table 4 of each re
 HFD live births by mother's age in the same calendar year. Age at treatment is roughly a year
 below age at birth, and some births from a year's cycles occur the following year.
 ```
+:::
+
+::::
 
 ### ART share of all births, other countries
 

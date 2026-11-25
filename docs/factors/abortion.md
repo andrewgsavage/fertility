@@ -22,10 +22,15 @@ Ticks from the [factors table](index.md): ✓ where the mechanism is proposed to
 
 Abortions as a share of births + abortions (miscarriages aren't counted). A rising share means more pregnancies are ending in abortion rather than a birth. It doesn't show that access caused fewer births, since the same choice not to have a child could otherwise have been made through contraception.
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/eurostat/abortion_share_europe.html" style="width: 100%; height: 480px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
+:::{tab-item} Data
 | Country | 1980 | 1990 | 2000 | 2010 | 2023 |
 |---|--:|--:|--:|--:|--:|
 | England & Wales | 16.4% | 19.8% | 22.5% | 20.8% | 32.0% |
@@ -37,19 +42,29 @@ Abortions as a share of births + abortions (miscarriages aren't counted). A risi
 | Hungary | 35.2% | 41.8% | 37.8% | 30.9% | 19.4% |
 | Czechia | 30.9% | 46.0% | 27.6% | 17.0% | 14.2% |
 | Poland | 16.5% | 9.8% | 0.0% | 0.2% | 0.2% |
+:::
 
-Since 2010 the share has risen in England & Wales and Spain, and in France since 2015 (Eurostat has no French data for 1995–2014), while fertility fell. In Italy, Germany and Finland it has been flat or falling while fertility also fell, and in Central and Eastern Europe it has fallen steeply since 1990 as contraception replaced abortion. So a falling birth rate doesn't need a rising abortion share. Poland, where abortion is almost entirely illegal, records almost none, though some women travel abroad or use pills by post, which aren't counted. Fertility in Poland is now among the lowest in Europe.
-
+:::{tab-item} Notes
 ```{note}
 Eurostat [abortions](https://ec.europa.eu/eurostat/databrowser/view/demo_fabort/default/table) and [live births](https://ec.europa.eu/eurostat/databrowser/view/demo_gind/default/table). England & Wales uses [DHSC abortion statistics](https://www.gov.uk/government/statistics/abortion-statistics-for-england-and-wales-2023) (residents, 1968–2023) with HFD and ONS births. Sweden's series ends in 2010, Norway's in 2006 and the Netherlands' in 1997; France's starts in 1994.
 ```
+:::
+
+::::
+
+Since 2010 the share has risen in England & Wales and Spain, and in France since 2015 (Eurostat has no French data for 1995–2014), while fertility fell. In Italy, Germany and Finland it has been flat or falling while fertility also fell, and in Central and Eastern Europe it has fallen steeply since 1990 as contraception replaced abortion. So a falling birth rate doesn't need a rising abortion share. Poland, where abortion is almost entirely illegal, records almost none, though some women travel abroad or use pills by post, which aren't counted. Fertility in Poland is now among the lowest in Europe.
 
 ### England & Wales by age
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
 <iframe src="../_static/ons/abortion_share_uk.html" style="width: 100%; height: 620px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
+:::{tab-item} Data
 | Age | 2013 | 2022 |
 |---|--:|--:|
 | Under 20 | 49.9% | 63.7% |
@@ -57,6 +72,9 @@ Eurostat [abortions](https://ec.europa.eu/eurostat/databrowser/view/demo_fabort/
 | 25–29 | 18.1% | 28.3% |
 | 30–34 | 12.9% | 20.1% |
 | 35+ | 16.3% | 23.2% |
+:::
+
+::::
 
 The share rose at every age. By 2022, nearly half of pregnancies to women aged 20–24 ended in abortion. The share of abortions to women who already had a child rose from 53% in 2013 to 57% in 2021 (DHSC Table 3a), so the rise is not only among the childless. For how this enters the UK's post-2010 fall in births, see [Explaining the 2010s Drop](explaining-the-2010s-drop.md).
 
