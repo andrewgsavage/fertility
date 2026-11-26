@@ -1,0 +1,34 @@
+id: assortative-mating-papers
+question: >-
+  Trends in educational assortative mating and hypogamy by country, and their link to fertility,
+  from the literature.
+status: partial
+answer: Collected on the assortative-mating research page; some findings are second-hand.
+factors: [partnership-formation, education]
+measurables: [share-in-couple, educational-attainment]
+countries: [KOR, all]
+pages: [docs/research/assortative-mating-and-fertility.md]
+attempts:
+  - date: 2026-11-24
+    tried: Esteve, García-Román & Permanyer 2012 (56 countries, IPUMS)
+    outcome: blocked
+    why: Paywalled. Findings taken from Erát 2021 and Van Bavel et al. 2018.
+  - date: 2026-11-24
+    tried: De Hauw, Grow & Van Bavel 2017 (28 European countries, ESS)
+    outcome: blocked
+    why: Paywalled or repository blocked. Findings taken from Van Bavel et al. 2018.
+  - date: 2026-11-24
+    tried: Park & Kim 2025 online appendix (Korea, 1960-2020)
+    url: https://atkim1.github.io/website/material/Park_Kim2025_Appendix.pdf
+    outcome: blocked
+    why: Host outage; numbers taken from a search snippet.
+    retry: Open the appendix PDF again and check the numbers.
+  - date: 2026-11-24
+    tried: Search for a UK trend in couple-type shares (census or UKHLS)
+    outcome: nothing-found
+    why: No published series found.
+  - date: 2026-11-24
+    tried: Search for births-by-pairing studies for Japan, Korea and Taiwan
+    outcome: nothing-found
+    why: None found.
+next: UKHLS partner records or IPUMS census samples to compute the UK series.

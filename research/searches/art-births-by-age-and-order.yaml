@@ -1,0 +1,17 @@
+id: art-births-by-age-and-order
+question: Births after assisted reproduction by mother's age and birth order, by country.
+status: partial
+answer: >-
+  US natality files (infertility-treatment flag, 2016 on) give the full age by order table; HFEA,
+  JSOG and published register studies give partial tables. Collected in
+  research/ivf-births-by-order-and-age.md.
+factors: [female-infertility]
+measurables: [art-births]
+countries: [USA, GBRTENW, JPN, NOR]
+pages: [research/ivf-births-by-order-and-age.md]
+attempts:
+  - date: 2026-11-17
+    tried: Chanfreau, Goisis & Kravdal 2025, Population and Development Review (10.1111/padr.70009)
+    outcome: blocked
+    why: Paywalled. Most likely source of Norwegian ART rates by age and parity.
+    retry: Manual download into $PAPERS_DIR.

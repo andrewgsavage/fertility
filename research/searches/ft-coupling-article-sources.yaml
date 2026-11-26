@@ -1,0 +1,34 @@
+id: ft-coupling-article-sources
+question: >-
+  Data behind the sources on coupling that the FT "relationship recession" article and the
+  Resolution Foundation "Bye bye baby" report link to.
+status: partial
+answer: >-
+  Findings read from each source's text and listed on the partnership-formation page; RF Figure 7
+  numbers are on the coupling-over-time page. No chart data could be downloaded.
+factors: [partnership-formation]
+measurables: [share-in-couple]
+countries: [USA, FIN, GBRTENW]
+pages: [docs/factors/partnership-formation.md, docs/factors/coupling-trends.md]
+attempts:
+  - date: 2026-11-18
+    tried: Stone 2018, No ring, no baby (IFS blog)
+    url: https://ifstudies.org/blog/no-ring-no-baby
+    outcome: partial
+    why: Counterfactual result read from the text; no data download.
+  - date: 2026-11-18
+    tried: ScienceDirect S1040260823000230 (Finnish couples splitting up more often than having a child)
+    url: https://www.sciencedirect.com/science/article/pii/S1040260823000230/
+    outcome: blocked
+    why: The publisher blocks access. Jalovaara & Andersson 2023 (Demographic Research 48(14)) was read instead.
+    retry: Open in a browser with institutional access.
+  - date: 2026-11-18
+    tried: Stone 2025, How Western dreams became demographic nightmares (Substack)
+    url: https://lymanstone.substack.com/p/how-western-dreams-became-demographic
+    outcome: blocked
+    why: The claim is public but the evidence behind it is paywalled.
+  - date: 2026-11-18
+    tried: Resolution Foundation, Bye bye baby
+    url: https://www.resolutionfoundation.org/publications/bye-bye-baby/
+    outcome: partial
+    why: Figure numbers read from the report; no chart data download.

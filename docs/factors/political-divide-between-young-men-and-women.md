@@ -43,7 +43,7 @@ Share of US adults describing themselves as liberal (slightly liberal to extreme
 
 Until 2017–20 the gap among 18–29 year-olds stayed within about ±7 points and changed sign several times. In 2021–24 it was 14.2 points, with young women's liberal share up and young men's flat; among those aged 30–49 and 50+ the gap was 3.8 and 1.5 points. So the divergence is recent and specific to the young, in the US. The data don't show whether it makes partners harder to match, or whether the gap is wide enough to affect partnering; each window has 175–748 respondents per sex, so single-window changes are noisy.
 
-Only the US could be covered. Cross-country sources ([European Social Survey](https://www.europeansocialsurvey.org/data/), World and European Values Surveys, ISSP) require registration, and no aggregated cross-country table by age and sex was found to cite.
+Only the US is covered.
 
 ## Causal evidence
 

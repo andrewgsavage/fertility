@@ -123,8 +123,6 @@ The EU share of 25–49 year-olds in couple households was flat (50.9% to 51.2%)
 
 From the [General Social Survey](https://gss.norc.org/content/dam/gss/get-the-data/documents/stata/GSS_stata.zip) 1972–2024 file. No-sex shares were 7% in 2009–12 and 21–22% in 2021–24; each pooled group has 126–716 respondents, so changes of a few points aren't reliable. The series doesn't isolate apps.
 
-Not obtained: other countries' how-couples-meet series (Germany's pairfam, Switzerland's, the Netherlands') need registration or weren't found as downloadable tables, and the [European Social Survey](https://www.europeansocialsurvey.org/data/) requires a login.
-
 ## Causal evidence
 
 From the [causal analysis](causal-analysis.md), graded by research design (A quasi-experiment, B panel or register, C correlation or simulation, T theory):

@@ -1,0 +1,20 @@
+id: how-couples-met-outside-us
+question: How couples met (online versus other ways), by year, for countries other than the US.
+status: open
+factors: [dating-apps]
+measurables: [how-couples-met]
+countries: [DEU, CHE, NLD]
+pages: [docs/factors/dating-apps.md]
+attempts:
+  - date: 2026-11-24
+    tried: pairfam (Germany), and Swiss and Dutch how-couples-meet series
+    outcome: blocked
+    why: Need registration, or weren't found as downloadable tables.
+    retry: The user registers for pairfam.
+  - date: 2026-11-24
+    tried: European Social Survey
+    url: https://www.europeansocialsurvey.org/data/
+    outcome: blocked
+    why: Data download requires a login.
+    retry: The user logs in and downloads the files.
+next: Published papers that tabulate these surveys, which would avoid the microdata.
