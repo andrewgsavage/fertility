@@ -1,0 +1,22 @@
+id: flourish-chart-data
+question: Get the data behind FT (Flourish-embedded) charts by script.
+status: answered
+answer: >-
+  Fetch https://flo.uri.sh/visualisation/<id>/embed directly; the data is in the page's
+  _Flourish_data (dates as new Date(ms)). Story embeds list their visualisation_ids. A saved copy
+  of the FT page also holds the embeds.
+factors: [partnership-formation, smartphones]
+pages: [docs/research/ft-birth-rates-everywhere.md]
+attempts:
+  - date: 2026-11-26
+    tried: archive.is copies of FT articles
+    outcome: lacks-it
+    why: archive.is flattens Flourish iframes to SVG, so the data is gone.
+  - date: 2026-11-26
+    tried: flo.uri.sh/visualisation/<id>/embed
+    outcome: found
+    why: Public visualisations load without a login; private ones return 403.
+  - date: 2026-11-26
+    tried: FT birth-rates-everywhere housing counterfactual chart
+    outcome: blocked
+    why: Private on Flourish (403), so not redrawn.

@@ -1,0 +1,13 @@
+id: fecundability-by-age-cohorts
+question: Observed fecundability (chance of conceiving per cycle or within a year) by female age, from cohort studies.
+status: partial
+answer: Léridon 2004's Monte Carlo model only (75% at 30, 66% at 35, 44% at 40 within a year). Used on the causal-analysis page.
+factors: [female-infertility]
+measurables: [conceptions]
+pages: [docs/factors/causal-analysis.md]
+attempts:
+  - date: 2026-11-11
+    tried: Wesselink 2017 (10.1016/j.ajog.2017.09.002) and Steiner 2016 (10.1016/j.fertnstert.2016.02.028)
+    outcome: blocked
+    why: Abstracts empty in Crossref/OpenAlex and no full text, so results not read.
+    retry: Fetch the full texts (sources-fetch, or a manual download into $PAPERS_DIR).

@@ -1,0 +1,59 @@
+id: coupling-by-narrow-age
+question: >-
+  Share of adults living with a partner (married or cohabiting) by 5-year or single-year age,
+  annual or near-annual, across countries, to compare with the FT's 25-34 coupling series.
+status: partial
+answer: >-
+  FT 25-34 by country (Flourish embed data); ILOSTAT 10-year bands; ONS England & Wales 16-29 and
+  30-44; UN World Marriage Data 5-year bands in census and survey years; national registers for the
+  Netherlands, Denmark and Finland. Used on the partnership-formation and coupling pages.
+factors: [partnership-formation]
+measurables: [share-in-couple]
+countries: [GBRTENW, NLD, DNK, FIN, USA, CAN, ESP, all]
+pages: [docs/factors/partnership-formation.md, docs/factors/coupling-vs-mothers.md]
+sources: [ilostat-marital-status, un-world-marriage-data-2019, ons-living-arrangements, cbs-37620, dst-fam100n, statfin-12c6, eurostat-lfst-hhindws, eurostat-household-composition]
+attempts:
+  - date: 2026-11-17
+    tried: Eurostat lfst_hhindws and the household composition statistics
+    url: https://ec.europa.eu/eurostat/databrowser/view/lfst_hhindws/default/table
+    outcome: lacks-it
+    why: No annual table of de facto partnership by an age band narrower than 25-49. Census cens_21m gives legal marital status only.
+  - date: 2026-11-17
+    tried: ILOSTAT POP_XWAP_SEX_AGE_MTS_NB_A (population by marital status)
+    outcome: unreliable
+    why: >-
+      Finest split is 10-year bands. In Europe and the US (and Australia before 2005) "union" is
+      legal marriage or civil partnership only, so cohabitors count as single (Spain 19% against
+      FT 40%). Matches FT for KOR, JPN, MEX, TUR, THA, TUN. Coding breaks in Thailand 2020-21 and
+      Palestine and the Philippines 2024.
+  - date: 2026-11-17
+    tried: ONS living arrangements, England and Wales
+    outcome: partial
+    why: 16-29 is one band (18-29 in 2025), so the under-30 decline can't be split further.
+  - date: 2026-11-18
+    tried: UN World Marriage Data 2019
+    outcome: partial
+    why: >-
+      5-year bands but census and survey years only. Its "Including_consensual_unions" flag is
+      wrong for Swedish and Finnish register estimates, which are legal marriage only; "consensual
+      union" in registers means registered partnership.
+  - date: 2026-11-18
+    tried: Statistics Canada 17-10-0060 (married and common-law by age)
+    url: https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710006001
+    outcome: blocked
+    why: Refuses scripted access.
+    retry: Download the CSV by hand in a browser.
+  - date: 2026-11-18
+    tried: UK Household Longitudinal Study and Family Resources Survey (the FT's UK sources)
+    url: https://ukdataservice.ac.uk/
+    outcome: blocked
+    why: Microdata need a UK Data Service account.
+    retry: The user registers with the UK Data Service and downloads the files.
+  - date: 2026-11-18
+    tried: Statistics Denmark FAM100N and BEFOLK1
+    outcome: found
+    why: Works through the CSV API, not the BULK format.
+next: >-
+  IPUMS International and IPUMS CPS (free registration, single-year ages); EU-LFS microdata
+  (research application to Eurostat); UK Data Service UKHLS and FRS (free registration); e-Stat and
+  KOSIS for Japan and Korea (marriage only).

@@ -1,0 +1,10 @@
+id: hfd-scripted-download
+question: Download Human Fertility Database files by script.
+status: dead-end
+attempts:
+  - date: 2026-08-26
+    tried: humanfertility.org downloads
+    url: https://www.humanfertility.org/
+    outcome: blocked
+    why: Needs a login, which agents don't have.
+    retry: The user downloads the zip by hand into HFD/data/HFD/ (gitignored; copy it into each new worktree).

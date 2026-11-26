@@ -180,6 +180,6 @@ ART births (count), first / second+: 2016 21.3k / 17.9k; 2019 24.0k / 24.3k; 202
    years can be pulled from the same WONDER query for a trend.
 2. Norway/Denmark/Finland/Sweden can produce the same from linked registers, but published tables
    are partial; Chanfreau et al. (2025) is the most likely source of Norwegian ART rates by age
-   and parity (not read; paywalled).
+   and parity (not read).
 3. Definitions differ: IVF-only (HFEA, JSOG, CARTR) vs all MAR incl. IUI (Goisis 2024, Korea
    HIRA). Don't mix them in one chart without saying so.

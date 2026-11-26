@@ -78,12 +78,12 @@ Sources linked from the FT article and the Resolution Foundation report, as they
 
 | Source | What it has |
 |---|---|
-| Stone 2018, [No ring, no baby](https://ifstudies.org/blog/no-ring-no-baby) (IFS) | US counterfactual: with 2008 marital-status rates the 2016 TFR would be about 2.0, not 1.85. Holds age-specific marital status constant; the FT version splits married and cohabiting. No data download. |
-| Finland couples splitting up more often than having a child ([ScienceDirect S1040260823000230](https://www.sciencedirect.com/science/article/pii/S1040260823000230/#fig0025)) | Not readable (publisher blocks access). Jalovaara & Andersson 2023, [Demographic Research 48(14)](https://econpapers.repec.org/RePEc:dem:demres:v:48:y:2023:i:14), Finnish registers 1989–2019: union formation fell and separation rose after about 2010, most among the less educated and under-35s. |
-| Stone 2025, [How Western dreams became demographic nightmares](https://lymanstone.substack.com/p/how-western-dreams-became-demographic) | Claims fertility below desires is mainly due to delayed marriage and coupling; the evidence is paywalled. |
-| Eurostat, [household composition statistics](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Household_composition_statistics) | EU 2025: 20.2% of men and 12.2% of women aged 25–54 living as single adults without children, up from 16.5% and 10.1% in 2016. Eurostat has no annual table of de facto partnership by age band narrower than 25–49; censuses (`cens_21m`) give legal marital status only. |
+| Stone 2018, [No ring, no baby](https://ifstudies.org/blog/no-ring-no-baby) (IFS) | US counterfactual: with 2008 marital-status rates the 2016 TFR would be about 2.0, not 1.85. Holds age-specific marital status constant; the FT version splits married and cohabiting. |
+| Finland couples splitting up more often than having a child ([ScienceDirect S1040260823000230](https://www.sciencedirect.com/science/article/pii/S1040260823000230/#fig0025)) | Jalovaara & Andersson 2023, [Demographic Research 48(14)](https://econpapers.repec.org/RePEc:dem:demres:v:48:y:2023:i:14), Finnish registers 1989–2019: union formation fell and separation rose after about 2010, most among the less educated and under-35s. |
+| Stone 2025, [How Western dreams became demographic nightmares](https://lymanstone.substack.com/p/how-western-dreams-became-demographic) | Claims fertility below desires is mainly due to delayed marriage and coupling. |
+| Eurostat, [household composition statistics](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Household_composition_statistics) | EU 2025: 20.2% of men and 12.2% of women aged 25–54 living as single adults without children, up from 16.5% and 10.1% in 2016. |
 | [GSMA Mobile Gender Gap](https://www.gsma.com/r/gender-gap/) | Mobile internet use by sex and region; the FT's explanation, not coupling data. See [smartphones](smartphones.md). |
-| Resolution Foundation, [Bye bye baby](https://www.resolutionfoundation.org/publications/bye-bye-baby/) | Figure 7 numbers on [Coupling over time](coupling-trends.md). Also: 6% of non-graduates aged 25–29 living with parents are cohabiting or married, against 68% of private renters and 89% of homeowners; a third of the 1989–90 cohort not trying for children at 32 said they had no suitable partner. No chart data download. |
+| Resolution Foundation, [Bye bye baby](https://www.resolutionfoundation.org/publications/bye-bye-baby/) | Figure 7 numbers on [Coupling over time](coupling-trends.md). Also: 6% of non-graduates aged 25–29 living with parents are cohabiting or married, against 68% of private renters and 89% of homeowners; a third of the 1989–90 cohort not trying for children at 32 said they had no suitable partner. |
 
 ## To do
 
@@ -96,7 +96,7 @@ Coupling sources with finer age detail than ILOSTAT's 10-year bands, not yet add
 | [EU-LFS microdata](https://ec.europa.eu/eurostat/web/microdata/european-union-labour-force-survey) | 5-year | Annual | Yes, via household relationships | Research application to Eurostat |
 | Japan and Korea national statistics (e-Stat, KOSIS) | 5-year | Census years, some annual surveys | Marriage only; cohabitation rare | Free |
 | [UK Data Service](https://ukdataservice.ac.uk/): UK Household Longitudinal Study, Family Resources Survey (the FT's UK sources) | Single year | Annual | Yes | Free registration |
-| [Statistics Canada 17-10-0060](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710006001) (married and common-law by age) | Single year | Annual | Yes | Manual download; blocks scripted access |
+| [Statistics Canada 17-10-0060](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710006001) (married and common-law by age) | Single year | Annual | Yes | Manual download |
 
 UN World Marriage Data is already used on [Coupling and motherhood](coupling-vs-mothers.md) (5-year bands, census and survey years).
 

@@ -1,0 +1,13 @@
+id: google-trends-scripted
+question: Get Google Trends series (search interest by country over time) by script, to date smartphone take-off.
+status: answered
+answer: >-
+  The explore and widgetdata/multiline endpoints work with plain requests after a first GET to
+  trends.google.com for the NID cookie. Script FT/scripts/google_trends_app_stores.py.
+factors: [smartphones]
+pages: [docs/research/ft-birth-rates-everywhere.md]
+attempts:
+  - date: 2026-11-25
+    tried: trends.google.com explore and widgetdata/multiline endpoints
+    outcome: found
+    why: Needs the NID cookie from a first GET to trends.google.com.
