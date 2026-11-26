@@ -18,6 +18,27 @@ Ticks from the [factors table](index.md): ✓ where the mechanism is proposed to
 |:-:|:-:|:-:|:-:|:-:|:-:|
 | ✓ | ✓ | ✓ | ✓ |  |  |
 
+## When the apps arrived
+
+| Country | Tinder arrival | Earlier or rival apps |
+|---|---|---|
+| United States | Soft launch on iOS, September 2012; Android, July 2013 ([Wikipedia](https://en.wikipedia.org/wiki/Tinder_(app)), [TechCrunch](https://techcrunch.com/2013/07/15/red-hot-dating-app-tinder-officially-arrives-on-android-begins-hooking-up-with-big-media/)) | Grindr 2009; Badoo US launch March 2012 ([Wikipedia](https://en.wikipedia.org/wiki/Badoo)); Bumble late 2014 |
+| United Kingdom | Named a priority market July 2013; over 1 million new UK users December 2013 to February 2014 ([TechCrunch](https://techcrunch.com/2013/07/15/red-hot-dating-app-tinder-officially-arrives-on-android-begins-hooking-up-with-big-media/), [Kaleva](https://www.kaleva.fi/treffisovelluksen-kaytto-kasvaa-huimaa-vauhtia-oul/1694834)) | Badoo launched in London, November 2006 |
+| Netherlands | 330,000 users October 2013, 1.18 million January 2014 ([ID.nl](https://id.nl/huis-en-entertainment/computer-en-gaming/desktops-en-monitoren/ruim-miljoen-nederlanders-op-dating-app-tinder)) | |
+| Germany | German-language app about late 2013; Berlin launch party February 2014; about 1% of the population using it by May 2014 ([OMR](https://omr.com/de/tinder-in-deutschland-auf-dem-weg-zu-einer-million-nutzern/)) | Lovoo, Dresden, 2011 ([deutsche-startups.de](https://www.deutsche-startups.de/2015/02/02/wurde-die-dating-app-lovoo-zum-mega-erfolg/)) |
+| France | French-language version noticed on iPhone, November 2013 ([iPhoneSoft](https://iphonesoft.fr/2013/11/22/tinder-30-le-concurrent-d-adopteunmec-et-badoo-marque-un-point-sur-iphone)) | AdopteUnMec and Badoo led mobile dating before Tinder; Happn, Paris, 2014 ([Wikipedia](https://en.wikipedia.org/wiki/Happn)) |
+| Spain | Arrived December 2013; 4,500 new users a day by July 2014 ([Valencia Plaza](https://valenciaplaza.com/cultura-y-sociedad/tinder-explota-en-espana-y-se-liga-a-4500-nuevos-usuarios-al-dia)) | Badoo a "mass phenomenon" by 2011 (Wired, via [Wikipedia](https://en.wikipedia.org/wiki/Badoo)) |
+| Italy | No launch date found | Badoo a "mass phenomenon" by 2011 |
+| Finland | Arrived winter 2013–14 ([Kaleva](https://www.kaleva.fi/treffisovelluksen-kaytto-kasvaa-huimaa-vauhtia-oul/1694834)) | |
+| Poland | Still small in March 2014 ([Spider's Web](https://spidersweb.pl/2014/03/tinder.html)) | |
+| Sweden | No launch date found | |
+
+```{note}
+Press reports and company statements collected for this page. Tinder's iOS app had no single international launch date: it spread from the US through 2013, and these dates are first local reports or local-language versions, not release dates. Figures for Germany, the Netherlands and Spain are company claims; the UK figure is unattributed in the Finnish article. Nothing dated was found for Italy or Sweden.
+```
+
+Tinder reached most of the European countries on this page between late 2013 and early 2014, about a year after the US. The 2013 columns of the European first-birth-age table below are therefore roughly pre-Tinder, though Badoo was already widely used in Spain, Italy and France, and Lovoo in Germany.
+
 ## Where couples meet, and who is partnered
 
 ### How US couples met
