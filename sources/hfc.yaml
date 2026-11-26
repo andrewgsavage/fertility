@@ -6,17 +6,24 @@ url: https://www.fertilitydata.org/
 oa: gold
 local:
 - eurostat/data/change_matrix/
+- HFC/data/
 countries:
 - ISL
 - ITA
+- KOR
 - POL
+- URY
 period:
-- 2005
+- 1978
 - 2023
 scripts:
 - eurostat/scripts/change_matrix.py
+- HFC/scripts/korea_by_order.py
+- HFC/scripts/uruguay_by_order.py
+- HFD/scripts/mdf_facet.py
 measurables:
 - asfr
+- tfr
 - young-first-births
-notes: Cumulative first-birth rates (CPFR1) by age, used for women with a child by age. Years repeat across collections and age definitions; the country comparison uses vital registration (Collection HFD), age in completed years (ACY).
+notes: Cumulative first-birth rates (CPFR1) by age, used for women with a child by age. Years repeat across collections and age definitions; the country comparison uses vital registration (Collection HFD), age in completed years (ACY). South Korea TFR by birth order uses ODE estimates 1980-1999 spliced onto HFD vital statistics 2000-2024. Uruguay TFR by birth order 1978-2011 comes from the Latin American Fertility Database (Nathan; Cabella, Nathan and Pardo). For Uruguay the country comparison uses CPFR1 from the LAFD collection (ACY), to 2011.
 accessed: 2026-11-23

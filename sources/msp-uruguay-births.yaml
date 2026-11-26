@@ -1,0 +1,22 @@
+id: msp-uruguay-births
+type: dataset
+title: Uruguay vital statistics, live births and Perinatal Information System (SIP) microdata
+publisher: Ministerio de Salud Pública, Uruguay
+url: https://uins.msp.gub.uy/
+oa: gold
+local:
+- HFC/data/
+countries:
+- URY
+period:
+- 1996
+- 2021
+scripts:
+- eurostat/scripts/change_matrix.py
+- HFC/scripts/uruguay_by_order.py
+- HFC/scripts/uruguay_births_by_education.py
+measurables:
+- births
+- asfr
+notes: Live births by single year of mother's age, 1996-2021 (natality table 3), and SIP public microdata for 2013 and 2021 (previous deliveries by 5-year maternal age group). The ministry's site refuses access from outside Uruguay; files are read from Internet Archive copies (February 2023). SIP covers 97% of births in 2013 and 94% in 2021.
+accessed: 2026-11-26

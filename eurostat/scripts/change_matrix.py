@@ -14,6 +14,9 @@ Outcomes:
   table by birth order (pft.txt, q1x..q5px). The UK has no HFD pft, so it
   uses the ONS-based England & Wales reconstruction in
   ONS/scripts/outcome_grid_uk.py.
+- Uruguay (not in HFD): TFR from MSP births over INE women; with a child by age
+  from HFC first-birth rates to 2011 and MSP/INE/SIP estimates for 2013 and 2021
+  (uruguay_outcomes; MSP, INE and SIP files via HFC/scripts/uruguay_by_order.py).
 - Women in a couple: registers, CPS, ILO and FT by age; Eurostat lfst_hhindws
   as a lower-quality 18-24 row (Denmark and Sweden dropped for series breaks).
 
@@ -71,6 +74,7 @@ COUNTRIES = {
     "POL": ("PL", "Poland"), "ROU": ("RO", "Romania"), "HRV": ("HR", "Croatia"), "LVA": ("LV", "Latvia"),
     "SVK": ("SK", "Slovakia"), "CYP": ("CY", "Cyprus"), "MLT": ("MT", "Malta"),
     "ISL": ("IS", "Iceland"), "AUS": (None, "Australia"), "NZL": (None, "New Zealand"),
+    "CHL": (None, "Chile"), "URY": (None, "Uruguay"), "TWN": (None, "Taiwan"),  # Uruguay is not in HFD: see uruguay_outcomes()
 }
 # Region, for grouping countries in the matrix. "English-speaking" is outside Europe; GBR and IRL sit with Western Europe.
 REGION_MEMBERS = {
@@ -79,7 +83,8 @@ REGION_MEMBERS = {
     "Southern Europe": ("CYP", "ESP", "GRC", "ITA", "MLT", "PRT"),
     "Central & Eastern Europe": ("BGR", "CZE", "EST", "HRV", "HUN", "LTU", "LVA", "POL", "ROU", "SVK", "SVN"),
     "English-speaking": ("AUS", "CAN", "NZL", "USA"),
-    "East Asia": ("JPN", "KOR"),
+    "East Asia": ("JPN", "KOR", "TWN"),
+    "Latin America": ("CHL", "URY"),
 }
 REGIONS = {iso: r for r, members in REGION_MEMBERS.items() for iso in members}
 assert set(REGIONS) == set(COUNTRIES), set(COUNTRIES) ^ set(REGIONS)
@@ -90,8 +95,12 @@ ESTIMATE_HFC = ("ITA", "POL", "ISL")
 ESTIMATE_EUROSTAT = ("GRC", "MLT", "CYP", "DEU", "LVA", "SVK", "ROU", "FRA")
 EUROSTAT_ORDER_FROM = {"FRA": 2013}
 CHILD_AGES = (25, 30, 35, 40)
-# How far a census year may sit from the window's ends.
-CENSUS_TOL = {"AUS": 2, "NZL": 3, "FRA": 3}
+# How far a census year may sit from the window's ends. Uruguay's with-a-child estimates after 2011
+# are for 2013 and 2021 only.
+CENSUS_TOL = {"AUS": 2, "NZL": 3, "FRA": 3, "URY": 2}
+# Countries whose % with a child is known only in some years: a child:coupling ratio uses the same year
+# for both, not the nearest within two years.
+RATIO_SAME_YEAR = ("URY",)
 COUPLING_TOL = {"AUS": 2}  # ILO series for Australia ends in 2017
 COUPLING_TOL_ROWS = ("couple_under_25", "couple_25_34")
 # Abortions per 100 births of the same order (eurostat/scripts/abortion_parity.py). England & Wales and
@@ -167,7 +176,9 @@ NZ_CENSUS = {  # year: {age group start: (no children, total stated)}
 }
 M30_ESTIMATES = {**{c: "estimate, Human Fertility Collection first-birth rates" for c in ESTIMATE_HFC},
                  **{c: "estimate, Eurostat first births per woman" for c in ESTIMATE_EUROSTAT},
-                 "FRA": "estimate, Eurostat first births per woman, 2013 onward (series break)"}
+                 "FRA": "estimate, Eurostat first births per woman, 2013 onward (series break)",
+                 "URY": "estimate, Human Fertility Collection first-birth rates to 2011; "
+                        "MSP births by age × SIP first-birth shares over INE women, 2013 and 2021"}
 EU2ISO = {v[0]: k for k, v in COUNTRIES.items() if v[0]}
 EUROSTAT_COUPLE_BREAKS = ("DNK", "SWE")  # jumps of 15-25 points between years
 MIN_FIT_N = 10  # below this a cross-country correlation isn't shown
@@ -403,9 +414,10 @@ def load_factors():
     for code, key in (("ilc_lvho05a", "overcrowded_25_29"), ("ilc_lvho07a", "overburden_25_29")):
         f[key] = series(eurostat(code).rename(columns={"OBS_VALUE": "value"}))
 
-    url = ("https://api.worldbank.org/v2/country/" + ";".join(COUNTRIES)
+    WB_CODES = [c for c in COUNTRIES if c != "TWN"]  # the World Bank has no Taiwan series
+    url = ("https://api.worldbank.org/v2/country/" + ";".join(WB_CODES)
            + "/indicator/SL.UEM.1524.ZS?format=json&per_page=5000&date=2000:2023")
-    rows = json.loads(fetch(f"wb_youth_unemployment_{len(COUNTRIES)}.json", url).read_text())[1]
+    rows = json.loads(fetch(f"wb_youth_unemployment_{len(WB_CODES)}.json", url).read_text())[1]
     f["youth_unemployment"] = {}
     for r in rows:
         if r["value"] is not None:
@@ -499,10 +511,46 @@ def load_tfr():
     for r in json.loads(fetch("wb_tfr_aus_nzl.json", url).read_text())[1]:
         if r["value"] is not None:
             other.setdefault(r["countryiso3code"], {})[int(r["date"])] = r["value"]
+    other["URY"] = uruguay_outcomes()["tfr"]
     for c in missing:
         if c in other:
             out[c] = other[c]
     return out
+
+
+_URUGUAY = {}
+
+
+def uruguay_outcomes():
+    """Uruguay, which HFD doesn't cover: {"tfr": {year: TFR}, age: {year: % with a child}}.
+
+    TFR: MSP live births by mother's age over INE women at 30 June, 1996-2021.
+    With a child by age: first births per woman summed to the age before, as for the other estimates.
+    To 2011, Human Fertility Collection CPFR1 (Latin American Fertility Database, birth certificates
+    and the Perinatal Information System); for 2013 and 2021, MSP/INE rates by 5-year group times the
+    share of first births in each group in SIP microdata (HFC/scripts/uruguay_by_order.py).
+    """
+    if _URUGUAY:
+        return _URUGUAY
+    sys.path.insert(0, str(ROOT / "HFC" / "scripts"))
+    import uruguay_by_order as ury
+    asfr = (ury.births() / ury.women()).dropna()
+    _URUGUAY["tfr"] = {int(y): float(5 * r.sum()) for y, r in asfr.iterrows()}
+    url = "https://www.fertilitydata.org/File/GetFile/Country/URY%5CURY_ASFRstand_BO.txt"
+    d = pd.read_csv(fetch("hfc_URY_ASFRstand_BO.txt", url), skipinitialspace=True, na_values=".")
+    d.columns = d.columns.str.strip()
+    d = d[(d.Year1 == d.Year2) & (d.AgeDef.str.strip() == "ACY")].dropna(subset=["CPFR1"]).drop_duplicates(["Year1", "Age", "CPFR1"])
+    for age in CHILD_AGES:
+        x = d[d.Age == age]
+        if x.Year1.duplicated().any():
+            raise ValueError("repeated HFC years for URY")
+        _URUGUAY[age] = {int(y): 100 * float(v) for y, v in zip(x.Year1, x.CPFR1)}
+    for year in ury.SIP_URLS:
+        share, _ = ury.sip_shares(year)
+        first = (5 * asfr.loc[year] * share["TFR1"]).reindex(ury.GROUPS)
+        for age in CHILD_AGES:
+            _URUGUAY[age][year] = 100 * float(first.iloc[:(age - 15) // 5].sum())
+    return _URUGUAY
 
 
 def synthetic(qs):
@@ -606,6 +654,7 @@ def load_parity():
         out[f"mothers_by_{age}"].update(by_iso)  # one source per country, no splice with partial HFD years
         out[f"mothers_by_{age}"]["AUS"] = census[age]
         out[f"mothers_by_{age}"]["NZL"] = nz[age]
+        out[f"mothers_by_{age}"]["URY"] = uruguay_outcomes()[age]
     return out
 
 
@@ -713,7 +762,10 @@ def median(v):
 # ---------- child:coupling ratios and coupling by age ----------
 
 NSO_ISO = {"Denmark": "DNK", "Finland": "FIN", "Netherlands": "NLD", "US": "USA"}
-ILO_ISO = ("CAN", "JPN", "KOR", "AUS")
+ILO_ISO = ("CAN", "JPN", "KOR", "AUS", "CHL", "URY")
+# Uruguay's ILO coupling jumps 7-9 points at every age between 2005 and 2006, when its household
+# survey (ECH) was extended from towns of 5,000 or more to the whole country.
+ILO_FROM = {"URY": 2006}
 FT_ISO = {"Spain": "ESP", "UK": "GBR", "France": "FRA", "Germany": "DEU", "Poland": "POL"}
 UN_NAMES = {**{v[1]: k for k, v in COUNTRIES.items()}, "S Korea": "KOR"}
 SINGLE_AGE = ("DNK", "FIN", "NLD")
@@ -774,7 +826,8 @@ def load_coupling_sources():
         add("nso", NSO_ISO[r.country], r.age, r.year, r.share)
     d = pd.read_csv(main_csv("ILO/outputs/coupling_ilo.csv"))
     for r in d[(d.sex == "women") & d.ref_area.isin(ILO_ISO)].itertuples():
-        add("ilo", r.ref_area, r.age, r.year, r.share)
+        if r.year >= ILO_FROM.get(r.ref_area, 0):
+            add("ilo", r.ref_area, r.age, r.year, r.share)
     d = pd.read_csv(main_csv("FT/outputs/ft_coupling_25_34.csv"))
     for r in d[d.country.isin(FT_ISO)].itertuples():
         add("ft", FT_ISO[r.country], "25-34", r.year, r.value)
@@ -909,7 +962,7 @@ def matrix_ratios(e, factors, parity):
                 out[key] = {}
                 for c, s in factors[band].items():
                     m = mothers.get(c, {})
-                    r = {y: m[my] / v for y, v in s.items() if v > 0 and (my := near_year(m, y, 2)) is not None}
+                    r = {y: m[my] / v for y, v in s.items() if v > 0 and (my := near_year(m, y, 0 if c in RATIO_SAME_YEAR else 2)) is not None}
                     if r:
                         out[key][c] = r
             else:
@@ -1039,7 +1092,7 @@ def summary_rows(rows, ts, parity, order):
             if (v := change(s, 2001, BASE)) is not None:
                 c_before.append(-v)
             m = mothers.get(c, {})
-            ratio = {y: m[my] / v for y, v in s.items() if v > 0 and (my := near_year(m, y, 2)) is not None}
+            ratio = {y: m[my] / v for y, v in s.items() if v > 0 and (my := near_year(m, y, 0 if c in RATIO_SAME_YEAR else 2)) is not None}
             if not ratio:
                 continue
             ts[rk][c] = ratio

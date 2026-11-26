@@ -62,7 +62,7 @@ const C0 = D.countries;
 let C = C0;
 const FALLING_NOTE = D.falling_note || "Falling countries (TFR down more than 0.1) where the factor moved towards fewer births";
 const maxDt = Math.max(...C0.map(c => Math.abs(c.d_tfr)));
-const REGION_COLORS = ["#8fb8de", "#b9a3d9", "#f0b27a", "#9ccfa3", "#e8a0a8", "#d6c27a"];
+const REGION_COLORS = ["#8fb8de", "#b9a3d9", "#f0b27a", "#9ccfa3", "#e8a0a8", "#d6c27a", "#b5a08a"];
 const regionColor = c => REGION_COLORS[c.region_rank % REGION_COLORS.length];
 
 // Sorting: "default", "region", "tfr", "m30", or a row index. Missing values go last.

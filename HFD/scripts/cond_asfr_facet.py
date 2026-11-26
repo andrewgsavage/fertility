@@ -4,6 +4,13 @@ the UK reconstruction) — replaces the old per-region tab-set of static
 matplotlib grids (cond_asfr_region_grid.py) with a single page, faceted
 in pairs of (first birth, second birth) subplots, three country-pairs
 (six subplot columns) per row.
+
+Uruguay is not in HFD. Its panel uses the conditional first-birth rates by single
+age, 2016-2021, digitised from Cabella et al. (2024) Figure 5
+(research/data/cabella2024_fig5_ury_casfr1.csv): first births per childless woman,
+the same occurrence/exposure measure as HFD's m1x. No second-birth conditional
+rates or 2009-2011 baseline exist for Uruguay, so its second-birth panel is empty
+and it is left out of the change-since-baseline chart.
 """
 
 import math
@@ -16,7 +23,7 @@ from plotly.subplots import make_subplots
 from common.country_names import COUNTRY_REGIONS, country_title
 from common.hfd import age_to_int, read_hfd
 from common.ons_table3 import load_period_rates
-from common.paths import outputs_dir
+from common.paths import REPO, outputs_dir
 from common.plot_colors import PERIOD_COLORSCALE, period_axis
 from common.plotting import write_html
 
@@ -43,6 +50,11 @@ BETWEEN_PAIR_GAP = 0.028
 # in-plot country names and column headers read as part of the same system.
 LABEL_FONT = dict(size=14, family='"Open Sans", verdana, arial, sans-serif', color="#2a3f5f")
 
+# Non-HFD panels: code -> (panel label, note under the label).
+URY_CODE = "URY_CAB"
+URY_CSV = REPO / "research" / "data" / "cabella2024_fig5_ury_casfr1.csv"
+EXTRA_LABELS = {URY_CODE: ("Uruguay", "Cabella et al. 2024, not HFD")}
+
 BIRTH_ORDERS = [(1, "m1x", "First birth"), (2, "m2x", "Second birth")]
 
 
@@ -60,7 +72,8 @@ def load_data():
         for year, ages in by_period.items()
         for age, (c1, c2) in ages.items()
     ]
-    df = pd.concat([df, pd.DataFrame(uk_rows)], ignore_index=True)
+    ury = pd.read_csv(URY_CSV).rename(columns={"casfr1": "m1x"}).assign(code=URY_CODE)
+    df = pd.concat([df, pd.DataFrame(uk_rows), ury[["code", "year", "age", "m1x"]]], ignore_index=True)
     return df
 
 
@@ -134,8 +147,8 @@ def make_facet(df, countries, change=False):
     for row, row_countries in enumerate(rows_of_countries, start=1):
         for pair, country in enumerate(row_countries):
             subset = df[df["code"] == country]
-            name = country_title(country)
-            hover_name = country_title(country, subset["year"].min(), subset["year"].max())
+            name, sublabel = EXTRA_LABELS.get(country, (country_title(country), None))
+            hover_name = country_title(name, subset["year"].min(), subset["year"].max())
             # Country name sits inside the pair's first-birth subplot (top-left,
             # in-domain) rather than as its own subplot_titles row, so it
             # doesn't cost extra vertical space on every row.
@@ -144,14 +157,31 @@ def make_facet(df, countries, change=False):
                 xanchor="left", yanchor="top", showarrow=False,
                 font=LABEL_FONT, row=row, col=pair * 2 + 1,
             )
+            if sublabel:
+                fig.add_annotation(
+                    text=sublabel, x=0.04, y=0.78, xref="x domain", yref="y domain",
+                    xanchor="left", yanchor="top", showarrow=False,
+                    font=dict(LABEL_FONT, size=10, color="#666"), row=row, col=pair * 2 + 1,
+                )
             for order, column, label in BIRTH_ORDERS:
                 col = pair * 2 + order
                 if change:
                     column = "r" + column[1:]
+                if subset[column].isna().all():
+                    # An empty trace keeps the panel's axes drawn.
+                    fig.add_trace(
+                        go.Scatter(x=[15, 45], y=[None, None], mode="lines", showlegend=False, hoverinfo="skip"),
+                        row=row, col=col,
+                    )
+                    fig.add_annotation(
+                        text="no data", x=0.5, y=0.5, xref="x domain", yref="y domain", showarrow=False,
+                        font=dict(LABEL_FONT, size=11, color="#999"), row=row, col=col,
+                    )
                 for year, year_rows in subset.groupby("year"):
-                    year_rows = year_rows.sort_values("age")
+                    year_rows = year_rows.sort_values("age").dropna(subset=[column])
+                    if year_rows.empty:
+                        continue
                     if change:
-                        year_rows = year_rows.dropna(subset=[column])
                         hover = (
                             f"{hover_name}, {label}<br>Year {year}<br>Age %{{x}}<br>"
                             f"%{{customdata:+.0%}} vs {BASELINE_YEARS[0]}-{BASELINE_YEARS[1]}<extra></extra>"
@@ -221,7 +251,9 @@ def make_facet(df, countries, change=False):
 if __name__ == "__main__":
     df = load_data()
     all_countries = [code for codes in COUNTRY_REGIONS.values() for code in codes]
+    with_ury = all_countries.copy()
+    with_ury.insert(with_ury.index("CHL") + 1, URY_CODE)
     df = add_change_since_baseline(df)
     for output, change in [(OUTPUT, False), (OUTPUT_CHANGE, True)]:
-        fig = make_facet(df, all_countries, change=change)
+        fig = make_facet(df, all_countries if change else with_ury, change=change)
         write_html(fig, output, height=f"{fig.layout.height}px")

@@ -186,6 +186,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/notebook-7.6.5-pyh5ded981_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/notebook-shim-0.2.4-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/numpy-2.5.5-py313hb5f73ae_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/odfpy-1.4.1-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/openjpeg-2.5.4-heb1ab33_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/openldap-2.6.13-hbde042b_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/openpyxl-3.1.5-py313heaa19e1_5.conda
@@ -265,6 +266,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/tomli-2.5.0-pyh5ded981_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/tornado-6.6.1-py313hd42f317_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/traitlets-5.16.1-pyhcf101f3_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/truststore-0.10.5-pyh5ded981_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/typing-extensions-4.16.0-h69aa097_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/typing_extensions-4.16.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/typing_utils-0.1.0-pyhd8ed1ab_1.conda
@@ -471,6 +473,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/notebook-7.6.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/notebook-shim-0.2.4-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/numpy-2.5.1-py314h02f10f6_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/odfpy-1.4.1-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/onemkl-license-2026.0.0-h57928b3_908.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/openjpeg-2.5.4-h0e57b4f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/openpyxl-3.1.5-py314hccc76fc_3.conda
@@ -551,6 +554,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/tomli-2.4.1-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/tornado-6.5.7-py314h5a2d7ad_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/traitlets-5.15.1-pyhcf101f3_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/truststore-0.10.5-pyh5ded981_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/typing-extensions-4.16.0-h69aa097_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/typing_extensions-4.16.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/typing_utils-0.1.0-pyhd8ed1ab_1.conda
@@ -4361,6 +4365,16 @@ packages:
   license_family: BSD
   size: 7452096
   timestamp: 1783206236616
+- conda: https://conda.anaconda.org/conda-forge/noarch/odfpy-1.4.1-pyhd8ed1ab_1.conda
+  sha256: 79867bab6743d94bb00c8c5df1f053cd71dfbfab1e8996fe1604880cf5f2b6e7
+  md5: 0af156e0f72b30a3f5b6d3efd83e28d9
+  depends:
+  - defusedxml
+  - python >=3.9
+  license: Apache-2.0
+  license_family: APACHE
+  size: 105874
+  timestamp: 1734511869535
 - conda: https://conda.anaconda.org/conda-forge/win-64/onemkl-license-2026.0.0-h57928b3_908.conda
   sha256: 42ad15cbb3bf31830efa04d4b86dd2d5c0dd590c86f98adcd3c8c1f75acf5dd5
   md5: 9c9303e08b50e09f5c23e1dac99d0936
@@ -6124,6 +6138,16 @@ packages:
   license_family: BSD
   size: 116935
   timestamp: 1785761789772
+- conda: https://conda.anaconda.org/conda-forge/noarch/truststore-0.10.5-pyh5ded981_0.conda
+  sha256: 4c7ef6ecf5304b1b2f6ead87b6b4baf4b47df3183915c60fe4d186fbe76388bc
+  md5: 932e0e574fd29644d42c77b685885776
+  depends:
+  - python >=3.11,<4
+  - python
+  license: MIT
+  license_family: MIT
+  size: 24467
+  timestamp: 1791873594717
 - conda: https://conda.anaconda.org/conda-forge/noarch/typing-extensions-4.16.0-h69aa097_0.conda
   sha256: b141933ece3518f6d7b75dfb59451e2f26b405a44c18e2518a83e9a02e09315c
   md5: c680b5747e8c4c8f23dca0bb7042a8fc

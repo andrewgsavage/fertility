@@ -30,6 +30,10 @@ Data downloaded on 2026-07-13.
 Backward recursion over each cohort's own parity-progression hazards (cft.txt: q2x-q5px),
 giving expected total children for a woman at parity 1 at each age. 5th-or-higher order
 approximated as exactly 5. Only cohorts whose tracked data reaches age 40 are shown.
+
+Uruguay is not shown: it is not in HFD, and the [Human Fertility Collection](https://www.fertilitydata.org/Country/Country?code=URY)
+holds only birth rates by order (1978-2011, with gaps), not the parity distributions or parity-progression rates the
+recursion needs.
 ```
 
 ```{note}
@@ -116,6 +120,8 @@ and Vienna Institute of Demography (Austria). Available at [www.humanfertility.o
 Data downloaded on 2026-07-13.
 
 UK excluded: no HFD period fertility table exists for it.
+Uruguay excluded: not in HFD, and the Human Fertility Collection has no period fertility table
+or parity-progression rates for it.
 ```
 :::
 
