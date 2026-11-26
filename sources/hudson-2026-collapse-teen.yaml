@@ -1,0 +1,44 @@
+id: hudson-2026-collapse-teen
+type: paper
+title: The collapse of teen fertility in the digital era
+authors:
+- Hudson, N.
+- Moscoso Boedo, H.
+year: 2026
+url: https://papers.ssrn.com/abstract=6676839
+oa: green
+oa_url: https://homepages.uc.edu/~moscoshn/Personal_webpage/papers/Smartphone_web.pdf
+countries:
+- USA
+- NOR
+period:
+- 1995
+- 2024
+factors:
+- smartphones
+measurables:
+- young-first-births
+- conceptions
+- screen-time
+- sexual-inactivity
+findings:
+- factor: smartphones
+  measure: young-first-births
+  verdict: supports
+  tick: 'yes'
+  direction: '-'
+  basis: abstract
+  ref: docs/research/ft-birth-rates-everywhere.md
+  note: 'US counties: cable upgrades to 100 Mbps (2010-19) lowered teen birth rates by 3.5% four to six
+    years later; a 10-point rise in household broadband penetration lowered them 1.5% over four years,
+    with no response at ages 25-34. Faster broadband spread meant Norwegian 13-16s met friends less
+    often and fewer US ninth graders had ever had sex. A peer-interaction model reproduces about 70% of
+    the 2008-18 fall in US teen conceptions. Exposure is fixed broadband, not phones; 4G coverage enters
+    only as a control, near zero.'
+notes: 'Working paper, University of Cincinnati; the FT''s "Why birth rates are falling everywhere all at
+  once" (May 2026) cites the April 2026 SSRN version as a study of the 4G rollout in the US and UK. The
+  October 2026 version read here uses cable upgrades and household broadband instead, with England''s
+  under-18 conceptions as a national timing check. Its Figure 1 dates a "digital marker" per country (the
+  later of the iPhone''s launch and mobile subscriptions passing 80 per 100) for 121 countries, from UN
+  WPP 2024. Finding read from the abstract and introduction only.'
+accessed: 2026-11-25

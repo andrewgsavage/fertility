@@ -6,5 +6,6 @@ Research notes not yet worked into a factor or country page, and charts taken of
 :maxdepth: 1
 
 assortative-mating-and-fertility
+ft-birth-rates-everywhere
 unused-plots
 ```

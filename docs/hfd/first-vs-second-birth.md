@@ -6,6 +6,8 @@ The conditional ASFR gives the probability that a woman will give birth to their
 
 This reduction in first birth fertility rates can be seen in almost all countries the [Human Fertility Database](https://www.humanfertility.org/) has data on. In contrast, the second birth fertility rates do not show the same trend; in most countries the second birth rates are fairly static.
 
+Uruguay, which is not in the Human Fertility Database, shows the same first-birth pattern in [Cabella et al. (2024)](https://www.demographic-research.org/articles/volume/50/16): between 2016 and 2021 the first-birth rate of childless women fell 36% at age 20, 29% at 30 and 12% at 35.
+
 ::::{tab-set}
 
 :::{tab-item} Linear
@@ -43,6 +45,18 @@ HFD has limited data for the UK, so the UK data is reconstructed from this data:
 rate is estimated as a discrete hazard on the cumulative % of the cohort with at least
 1 / at least 2 children, then re-sliced from cohort into period (calendar) year to
 match HFD's chart convention.
+```
+
+```{note}
+Uruguay is not in HFD. Its first-birth panel is Figure 5 of Cabella W, Fernández Soto M, Pardo I, Pedetti G.
+["The big decline: Lowest-low fertility in Uruguay (2016-2021)"](https://www.demographic-research.org/articles/volume/50/16),
+*Demographic Research* 2024;50(16), digitised from the published image (no data file is published; a few points read by eye).
+Its rates are first births per childless woman by single age, the same measure as HFD's first-birth conditional rate, with
+births from the Live Birth Certificate and Perinatal Information System and childless women from INE projections split by
+parity in the 2011 census. Uruguay has no published second-birth conditional rates and none before 2016, so its
+second-birth panel is empty and it is not in the change since 2009-11 chart. The
+[Human Fertility Collection](https://www.fertilitydata.org/Country/Country?code=URY) holds Uruguayan rates by birth order
+for 1978-2011, but as births per woman of any parity, not per woman at risk.
 ```
 :::
 

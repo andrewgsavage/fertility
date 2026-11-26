@@ -1,0 +1,20 @@
+id: ine-uruguay-population
+type: dataset
+title: Uruguay population estimated at 30 June by sex and age, 1996-2023 (Revision 2025)
+publisher: Instituto Nacional de Estadística, Uruguay
+url: https://www.gub.uy/instituto-nacional-estadistica/estimaciones2025
+oa: gold
+local:
+- HFC/data/
+countries:
+- URY
+period:
+- 1996
+- 2023
+scripts:
+- eurostat/scripts/change_matrix.py
+- HFC/scripts/uruguay_by_order.py
+measurables:
+- population-by-age
+notes: File A.1.1 Uruguay.xlsx, single years of age, based on the 2023 census. Female population 15-49 used as exposure for age-specific fertility rates.
+accessed: 2026-11-26

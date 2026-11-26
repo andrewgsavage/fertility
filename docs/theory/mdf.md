@@ -45,3 +45,10 @@ England and Wales", Table 3 (percentage of women by number of live-born children
 age and year of birth). Available at
 [ons.gov.uk](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/datasets/childbearingforwomenbornindifferentyearsreferencetable).
 ```
+
+```{note}
+Uruguay is not in HFD. Its 1978-2011 TFR and first-birth TFR are the [Human Fertility Collection](https://www.fertilitydata.org/Country/Country?code=URY)'s
+Latin American Fertility Database series: Nathan's estimates for 1978-1988 and 1993, and Cabella, Nathan and Pardo's for 1996-2011.
+1989-1992 and 1994-1995 are missing. The 2013 and 2021 points are estimates: Ministry of Public Health births by mother's age over INE's
+female population (Revision 2025), split by birth order using the order shares in the Perinatal Information System's public microdata.
+```

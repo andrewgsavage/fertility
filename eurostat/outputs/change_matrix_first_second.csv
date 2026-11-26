@@ -5,6 +5,7 @@ age,row,country,change_pct
 20–24,First-birth rate,IRL,-42.28
 20–24,First-birth rate,EST,-37.87
 20–24,First-birth rate,USA,-32.91
+20–24,First-birth rate,CHL,-30.44
 20–24,First-birth rate,BEL,-42.1
 20–24,First-birth rate,ISL,
 20–24,First-birth rate,GBR,
@@ -22,6 +23,7 @@ age,row,country,change_pct
 20–24,First-birth rate,AUT,-28.69
 20–24,First-birth rate,JPN,-32.3
 20–24,First-birth rate,DEU,
+20–24,First-birth rate,TWN,-12.48
 20–24,First-birth rate,SVN,-6.85
 20–24,First-birth rate,SVK,
 20–24,First-birth rate,HUN,12.59
@@ -32,6 +34,7 @@ age,row,country,change_pct
 25–29,First-birth rate,IRL,-38.44
 25–29,First-birth rate,EST,-28.42
 25–29,First-birth rate,USA,-26.81
+25–29,First-birth rate,CHL,-14.67
 25–29,First-birth rate,BEL,-27.76
 25–29,First-birth rate,ISL,
 25–29,First-birth rate,GBR,-21.59
@@ -49,6 +52,7 @@ age,row,country,change_pct
 25–29,First-birth rate,AUT,-7.69
 25–29,First-birth rate,JPN,-13.7
 25–29,First-birth rate,DEU,
+25–29,First-birth rate,TWN,-16.86
 25–29,First-birth rate,SVN,-11.19
 25–29,First-birth rate,SVK,
 25–29,First-birth rate,HUN,-3.9
@@ -59,6 +63,7 @@ age,row,country,change_pct
 30–34,First-birth rate,IRL,-12.27
 30–34,First-birth rate,EST,5.77
 30–34,First-birth rate,USA,-15.1
+30–34,First-birth rate,CHL,-8.45
 30–34,First-birth rate,BEL,3.08
 30–34,First-birth rate,ISL,
 30–34,First-birth rate,GBR,-7.8
@@ -76,6 +81,7 @@ age,row,country,change_pct
 30–34,First-birth rate,AUT,10.92
 30–34,First-birth rate,JPN,-1.63
 30–34,First-birth rate,DEU,
+30–34,First-birth rate,TWN,-7.91
 30–34,First-birth rate,SVN,-12.55
 30–34,First-birth rate,SVK,
 30–34,First-birth rate,HUN,-12.14
@@ -86,6 +92,7 @@ age,row,country,change_pct
 35–39,First-birth rate,IRL,14.38
 35–39,First-birth rate,EST,50.86
 35–39,First-birth rate,USA,-6.13
+35–39,First-birth rate,CHL,15.53
 35–39,First-birth rate,BEL,16.19
 35–39,First-birth rate,ISL,
 35–39,First-birth rate,GBR,14.33
@@ -103,6 +110,7 @@ age,row,country,change_pct
 35–39,First-birth rate,AUT,25.03
 35–39,First-birth rate,JPN,15.22
 35–39,First-birth rate,DEU,
+35–39,First-birth rate,TWN,16.07
 35–39,First-birth rate,SVN,-5.15
 35–39,First-birth rate,SVK,
 35–39,First-birth rate,HUN,-7.39
@@ -113,6 +121,7 @@ age,row,country,change_pct
 20–24,Second-birth rate,IRL,21.11
 20–24,Second-birth rate,EST,25.04
 20–24,Second-birth rate,USA,6.72
+20–24,Second-birth rate,CHL,-19.23
 20–24,Second-birth rate,BEL,0.88
 20–24,Second-birth rate,ISL,
 20–24,Second-birth rate,GBR,
@@ -130,6 +139,7 @@ age,row,country,change_pct
 20–24,Second-birth rate,AUT,8.72
 20–24,Second-birth rate,JPN,-7.7
 20–24,Second-birth rate,DEU,
+20–24,Second-birth rate,TWN,29.07
 20–24,Second-birth rate,SVN,35.02
 20–24,Second-birth rate,SVK,
 20–24,Second-birth rate,HUN,25.76
@@ -140,6 +150,7 @@ age,row,country,change_pct
 25–29,Second-birth rate,IRL,7.24
 25–29,Second-birth rate,EST,13.38
 25–29,Second-birth rate,USA,2.38
+25–29,Second-birth rate,CHL,-13.69
 25–29,Second-birth rate,BEL,-10.96
 25–29,Second-birth rate,ISL,
 25–29,Second-birth rate,GBR,12.77
@@ -157,6 +168,7 @@ age,row,country,change_pct
 25–29,Second-birth rate,AUT,-1.37
 25–29,Second-birth rate,JPN,-5.88
 25–29,Second-birth rate,DEU,
+25–29,Second-birth rate,TWN,49.61
 25–29,Second-birth rate,SVN,18.71
 25–29,Second-birth rate,SVK,
 25–29,Second-birth rate,HUN,28.62
@@ -167,6 +179,7 @@ age,row,country,change_pct
 30–34,Second-birth rate,IRL,-11.32
 30–34,Second-birth rate,EST,4.99
 30–34,Second-birth rate,USA,1.12
+30–34,Second-birth rate,CHL,-9.3
 30–34,Second-birth rate,BEL,-7.35
 30–34,Second-birth rate,ISL,
 30–34,Second-birth rate,GBR,15.56
@@ -184,6 +197,7 @@ age,row,country,change_pct
 30–34,Second-birth rate,AUT,4.49
 30–34,Second-birth rate,JPN,4.94
 30–34,Second-birth rate,DEU,
+30–34,Second-birth rate,TWN,37.11
 30–34,Second-birth rate,SVN,11.42
 30–34,Second-birth rate,SVK,
 30–34,Second-birth rate,HUN,32.53
@@ -194,6 +208,7 @@ age,row,country,change_pct
 35–39,Second-birth rate,IRL,-14.29
 35–39,Second-birth rate,EST,32.49
 35–39,Second-birth rate,USA,15.96
+35–39,Second-birth rate,CHL,-7.29
 35–39,Second-birth rate,BEL,26.91
 35–39,Second-birth rate,ISL,
 35–39,Second-birth rate,GBR,13.74
@@ -211,6 +226,7 @@ age,row,country,change_pct
 35–39,Second-birth rate,AUT,32.72
 35–39,Second-birth rate,JPN,19.1
 35–39,Second-birth rate,DEU,
+35–39,Second-birth rate,TWN,43.8
 35–39,Second-birth rate,SVN,43.24
 35–39,Second-birth rate,SVK,
 35–39,Second-birth rate,HUN,48.87
@@ -221,6 +237,7 @@ age,row,country,change_pct
 20–24,First pregnancies aborted,IRL,
 20–24,First pregnancies aborted,EST,9.4
 20–24,First pregnancies aborted,USA,
+20–24,First pregnancies aborted,CHL,
 20–24,First pregnancies aborted,BEL,
 20–24,First pregnancies aborted,ISL,7.8
 20–24,First pregnancies aborted,GBR,3.0
@@ -238,6 +255,7 @@ age,row,country,change_pct
 20–24,First pregnancies aborted,AUT,
 20–24,First pregnancies aborted,JPN,
 20–24,First pregnancies aborted,DEU,2.2
+20–24,First pregnancies aborted,TWN,
 20–24,First pregnancies aborted,SVN,-3.4
 20–24,First pregnancies aborted,SVK,-6.4
 20–24,First pregnancies aborted,HUN,-17.5
@@ -248,6 +266,7 @@ age,row,country,change_pct
 25–29,First pregnancies aborted,IRL,
 25–29,First pregnancies aborted,EST,2.2
 25–29,First pregnancies aborted,USA,
+25–29,First pregnancies aborted,CHL,
 25–29,First pregnancies aborted,BEL,
 25–29,First pregnancies aborted,ISL,7.4
 25–29,First pregnancies aborted,GBR,3.0
@@ -265,6 +284,7 @@ age,row,country,change_pct
 25–29,First pregnancies aborted,AUT,
 25–29,First pregnancies aborted,JPN,
 25–29,First pregnancies aborted,DEU,1.3
+25–29,First pregnancies aborted,TWN,
 25–29,First pregnancies aborted,SVN,0.5
 25–29,First pregnancies aborted,SVK,-4.6
 25–29,First pregnancies aborted,HUN,-5.6
@@ -275,6 +295,7 @@ age,row,country,change_pct
 30–34,First pregnancies aborted,IRL,
 30–34,First pregnancies aborted,EST,-1.9
 30–34,First pregnancies aborted,USA,
+30–34,First pregnancies aborted,CHL,
 30–34,First pregnancies aborted,BEL,
 30–34,First pregnancies aborted,ISL,6.8
 30–34,First pregnancies aborted,GBR,3.0
@@ -292,6 +313,7 @@ age,row,country,change_pct
 30–34,First pregnancies aborted,AUT,
 30–34,First pregnancies aborted,JPN,
 30–34,First pregnancies aborted,DEU,0.3
+30–34,First pregnancies aborted,TWN,
 30–34,First pregnancies aborted,SVN,0.6
 30–34,First pregnancies aborted,SVK,-3.0
 30–34,First pregnancies aborted,HUN,-3.5
@@ -302,6 +324,7 @@ age,row,country,change_pct
 35+,First pregnancies aborted,IRL,
 35+,First pregnancies aborted,EST,-4.9
 35+,First pregnancies aborted,USA,
+35+,First pregnancies aborted,CHL,
 35+,First pregnancies aborted,BEL,
 35+,First pregnancies aborted,ISL,7.4
 35+,First pregnancies aborted,GBR,-0.1
@@ -319,6 +342,7 @@ age,row,country,change_pct
 35+,First pregnancies aborted,AUT,
 35+,First pregnancies aborted,JPN,
 35+,First pregnancies aborted,DEU,0.1
+35+,First pregnancies aborted,TWN,
 35+,First pregnancies aborted,SVN,-0.9
 35+,First pregnancies aborted,SVK,-5.2
 35+,First pregnancies aborted,HUN,-4.4
@@ -329,6 +353,7 @@ age,row,country,change_pct
 20–24,Later pregnancies aborted,IRL,
 20–24,Later pregnancies aborted,EST,-47.7
 20–24,Later pregnancies aborted,USA,
+20–24,Later pregnancies aborted,CHL,
 20–24,Later pregnancies aborted,BEL,
 20–24,Later pregnancies aborted,ISL,-6.4
 20–24,Later pregnancies aborted,GBR,9.7
@@ -346,6 +371,7 @@ age,row,country,change_pct
 20–24,Later pregnancies aborted,AUT,
 20–24,Later pregnancies aborted,JPN,
 20–24,Later pregnancies aborted,DEU,-10.3
+20–24,Later pregnancies aborted,TWN,
 20–24,Later pregnancies aborted,SVN,-13.2
 20–24,Later pregnancies aborted,SVK,-8.0
 20–24,Later pregnancies aborted,HUN,-18.4
@@ -356,6 +382,7 @@ age,row,country,change_pct
 25–29,Later pregnancies aborted,IRL,
 25–29,Later pregnancies aborted,EST,-23.1
 25–29,Later pregnancies aborted,USA,
+25–29,Later pregnancies aborted,CHL,
 25–29,Later pregnancies aborted,BEL,
 25–29,Later pregnancies aborted,ISL,8.4
 25–29,Later pregnancies aborted,GBR,9.7
@@ -373,6 +400,7 @@ age,row,country,change_pct
 25–29,Later pregnancies aborted,AUT,
 25–29,Later pregnancies aborted,JPN,
 25–29,Later pregnancies aborted,DEU,-4.4
+25–29,Later pregnancies aborted,TWN,
 25–29,Later pregnancies aborted,SVN,-3.2
 25–29,Later pregnancies aborted,SVK,-7.8
 25–29,Later pregnancies aborted,HUN,-18.2
@@ -383,6 +411,7 @@ age,row,country,change_pct
 30–34,Later pregnancies aborted,IRL,
 30–34,Later pregnancies aborted,EST,-16.4
 30–34,Later pregnancies aborted,USA,
+30–34,Later pregnancies aborted,CHL,
 30–34,Later pregnancies aborted,BEL,
 30–34,Later pregnancies aborted,ISL,2.0
 30–34,Later pregnancies aborted,GBR,9.7
@@ -400,6 +429,7 @@ age,row,country,change_pct
 30–34,Later pregnancies aborted,AUT,
 30–34,Later pregnancies aborted,JPN,
 30–34,Later pregnancies aborted,DEU,-2.8
+30–34,Later pregnancies aborted,TWN,
 30–34,Later pregnancies aborted,SVN,-2.6
 30–34,Later pregnancies aborted,SVK,-12.4
 30–34,Later pregnancies aborted,HUN,-18.7
@@ -410,6 +440,7 @@ age,row,country,change_pct
 35+,Later pregnancies aborted,IRL,
 35+,Later pregnancies aborted,EST,-32.7
 35+,Later pregnancies aborted,USA,
+35+,Later pregnancies aborted,CHL,
 35+,Later pregnancies aborted,BEL,
 35+,Later pregnancies aborted,ISL,7.0
 35+,Later pregnancies aborted,GBR,7.1
@@ -427,6 +458,7 @@ age,row,country,change_pct
 35+,Later pregnancies aborted,AUT,
 35+,Later pregnancies aborted,JPN,
 35+,Later pregnancies aborted,DEU,-5.1
+35+,Later pregnancies aborted,TWN,
 35+,Later pregnancies aborted,SVN,-11.1
 35+,Later pregnancies aborted,SVK,-29.5
 35+,Later pregnancies aborted,HUN,-45.0

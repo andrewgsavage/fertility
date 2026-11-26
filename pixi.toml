@@ -38,6 +38,8 @@ sphinx-autobuild = "*"
 xlrd = ">=2.0.2,<3"
 pyyaml = ">=6.0.3,<7"
 pypdf = ">=7.1.1,<8"
+odfpy = ">=1.4.1,<2"
+truststore = ">=0.10.5,<0.11"
 
 # Repo root on the import path, so scripts in any folder can `from common import ...`
 # whatever the working directory. Activation runs in cmd on win-64 and bash on linux-64.

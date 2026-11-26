@@ -1,0 +1,28 @@
+id: cabella-2024-big-decline
+type: paper
+title: 'The big decline: Lowest-low fertility in Uruguay (2016-2021)'
+authors:
+- Cabella, W.
+- Fernández Soto, M.
+- Pardo, I.
+- Pedetti, G.
+year: 2024
+url: https://www.demographic-research.org/articles/volume/50/16
+oa: gold
+oa_url: https://www.demographic-research.org/volumes/vol50/16/50-16.pdf
+local:
+- research/data/cabella2024_fig5_ury_casfr1.csv
+countries:
+- URY
+period:
+- 2015
+- 2021
+scripts:
+- HFC/scripts/uruguay_first_births_fig5.py
+- HFD/scripts/cond_asfr_facet.py
+measurables:
+- tfr
+- young-first-births
+- cond-asfr-1
+notes: TFR fell from 2.0 in 2015 to 1.37 in 2021 (1.28 preliminary for 2022). Table A-1 splits the 2015-2021 fall by age group and birth order (first 40.7%, second 30.6%, third 14.2%, fourth+ 14.4%). Figure 5 (conditional first-birth rates by single age, 2016-2021) is digitised in research/data; the paper publishes no data file. Births from the Live Birth Certificate and Perinatal Information System, exposures from INE 2013-revision projections with parity from the 2011 census.
+accessed: 2026-11-26

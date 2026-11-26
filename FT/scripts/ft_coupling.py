@@ -11,15 +11,14 @@ Outputs: FT/outputs/ft_coupling_25_34.html, ft_coupling_education.html and the
 extracted series as CSV.
 """
 
-import json
 import pathlib
-import re
 
 import pandas as pd
 import plotly.colors as pc
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
+from common.flourish import flourish
 from common.plotting import write_html
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -28,24 +27,6 @@ OUTDIR = ROOT / "outputs"
 
 # Shown by default; the rest start hidden in the legend.
 SHOWN = ["US", "UK", "France", "Spain", "Finland", "S Korea", "Japan", "Mexico", "Türkiye", "Thailand"]
-
-
-def flourish(path):
-    """Return a long DataFrame from a Flourish embed's _Flourish_data block."""
-    h = path.read_text(encoding="utf-8", errors="replace")
-    h = re.sub(r"new Date\((-?\d+)\)", lambda m: str(pd.Timestamp(int(m.group(1)), unit="ms").year), h)
-
-    def grab(name):
-        m = re.search(r"\b" + name + r"\s*=\s*(?=[\[{])", h)
-        return json.JSONDecoder().raw_decode(h, m.end())[0]
-
-    cols = grab("_Flourish_data_column_names")["data"]
-    rows = []
-    for r in grab("_Flourish_data")["data"]:
-        for s, v in zip(cols["value"], r["value"]):
-            if v not in (None, ""):
-                rows.append({"facet": r["facet"], "year": int(r["label"]), "series": s, "value": float(v)})
-    return pd.DataFrame(rows)
 
 
 def plot_countries(d):

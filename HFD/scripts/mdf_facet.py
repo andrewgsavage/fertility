@@ -13,6 +13,11 @@ TFR = TMR x CPM. TMR (Total Maternal Rate) is HFD's TFR1 (period first-birth
 TFR) -- the share of women who become mothers under current age-specific
 rates. CPM (Children per Mother) is TFR / TFR1 -- average family size among
 those who become mothers.
+
+Uruguay is not in HFD. Its panel uses HFC's Latin American Fertility Database
+TFR and TFR1 (1978-1988, 1993, 1996-2011) plus the 2013 and 2021 estimates from
+HFC/scripts/uruguay_by_order.py (HFC/outputs/ury_tfr_by_order.csv). Missing years
+are left as gaps, so the two estimate years show as isolated markers.
 """
 
 import datetime
@@ -28,6 +33,9 @@ from common.paths import outputs_dir
 from common.plotting import write_html
 
 OUTPUT = outputs_dir("HFD") / "mdf_facet.html"
+URY_CODE = "URY_HFC"
+URY_CSV = outputs_dir("HFC") / "ury_tfr_by_order.csv"
+EXTRA_NAMES = {URY_CODE: "Uruguay, HFC"}
 
 XLIM = (1950, datetime.date.today().year)
 COUNTRIES_PER_ROW = 6
@@ -73,7 +81,16 @@ def load_data():
         [{"code": "UK_ONS", "year": year, "TMR": tmr, "CPM": cpm, "TFR": tfr} for year, (tmr, cpm, tfr) in uk_ons.items()],
     )
 
-    return pd.concat([df, uk_ons_df], ignore_index=True).sort_values(["code", "year"])
+    ury = pd.read_csv(URY_CSV).set_index("year")
+    ury = ury.reindex(range(ury.index.min(), ury.index.max() + 1)).rename_axis("year").reset_index()
+    ury_df = pd.DataFrame({"code": URY_CODE, "year": ury["year"], "TFR": ury["TFR"], "TMR": ury["TFR1"],
+                           "CPM": ury["TFR"] / ury["TFR1"]})
+
+    return pd.concat([df, uk_ons_df, ury_df], ignore_index=True).sort_values(["code", "year"])
+
+
+def _name(code, *years):
+    return country_title(EXTRA_NAMES.get(code, code), *years)
 
 
 def make_facet(df, countries):
@@ -93,7 +110,7 @@ def make_facet(df, countries):
     subplot_titles = []
     for row_countries in rows_of_countries:
         for code in row_countries:
-            subplot_titles.append(f"<b>{country_title(code)}</b>")
+            subplot_titles.append(f"<b>{_name(code)}</b>")
         subplot_titles += [""] * (ncols - len(row_countries))
 
     specs = [[{"secondary_y": True} for _ in range(ncols)] for _ in range(nrows)]
@@ -107,7 +124,9 @@ def make_facet(df, countries):
     for row, row_countries in enumerate(rows_of_countries, start=1):
         for col, code in enumerate(row_countries, start=1):
             subset = df[df["code"] == code].sort_values("year")
-            name = country_title(code, subset["year"].min(), subset["year"].max())
+            name = _name(code, subset["year"].min(), subset["year"].max())
+            # Uruguay's series has gaps and two isolated estimate years: markers keep them visible.
+            mode = "lines+markers" if code in EXTRA_NAMES else "lines"
             is_first_panel = row == 1 and col == 1
 
             # CPM/TFR (children count) is the primary/left axis, TMR
@@ -116,7 +135,7 @@ def make_facet(df, countries):
             # read at a glance, sits on the left.
             fig.add_trace(
                 go.Scatter(
-                    x=subset["year"], y=subset["CPM"], mode="lines",
+                    x=subset["year"], y=subset["CPM"], mode=mode, marker=dict(size=3),
                     line=dict(width=1.6, color=CPM_COLOR), name="CPM", legendgroup="CPM",
                     showlegend=is_first_panel,
                     hovertemplate=f"{name}<br>CPM<br>%{{x}}<br>%{{y:.2f}}<extra></extra>",
@@ -125,7 +144,7 @@ def make_facet(df, countries):
             )
             fig.add_trace(
                 go.Scatter(
-                    x=subset["year"], y=subset["TFR"], mode="lines",
+                    x=subset["year"], y=subset["TFR"], mode=mode, marker=dict(size=3),
                     line=dict(width=1.6, color=TFR_COLOR), name="TFR", legendgroup="TFR",
                     showlegend=is_first_panel,
                     hovertemplate=f"{name}<br>TFR<br>%{{x}}<br>%{{y:.2f}}<extra></extra>",
@@ -134,7 +153,7 @@ def make_facet(df, countries):
             )
             fig.add_trace(
                 go.Scatter(
-                    x=subset["year"], y=subset["TMR"], mode="lines",
+                    x=subset["year"], y=subset["TMR"], mode=mode, marker=dict(size=3),
                     line=dict(width=1.6, color=TMR_COLOR), name="TMR", legendgroup="TMR",
                     showlegend=is_first_panel,
                     hovertemplate=f"{name}<br>TMR<br>%{{x}}<br>%{{y:.1%}}<extra></extra>",
@@ -178,6 +197,7 @@ def make_facet(df, countries):
 if __name__ == "__main__":
     df = load_data()
     all_countries = [code for codes in MDF_REGIONS.values() for code in codes]
+    all_countries.insert(all_countries.index("CHL") + 1, URY_CODE)
     fig = make_facet(df, all_countries)
 
     write_html(fig, OUTPUT, height=f"{fig.layout.height}px", log=False)
