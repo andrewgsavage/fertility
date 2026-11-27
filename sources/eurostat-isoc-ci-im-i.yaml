@@ -10,6 +10,8 @@ scripts:
 - eurostat/scripts/change_matrix.py
 - eurostat/scripts/smartphone_adoption_timeline.py
 - eurostat/scripts/smartphone_vs_young_fertility.py
+- eurostat/scripts/smartphone_milestones.py
+- eurostat/scripts/country_timelines.py
 measurables:
 - screen-time
 notes: Indicator I_IUMP, ages 16-24.
