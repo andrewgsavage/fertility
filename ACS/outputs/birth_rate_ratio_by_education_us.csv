@@ -1,0 +1,26 @@
+education,age,base,latest,ratio
+Less than high school,20-24,0.2006,0.1225,0.6106
+Less than high school,25-29,0.1462,0.1316,0.8998
+Less than high school,30-34,0.0987,0.1036,1.0499
+Less than high school,35-39,0.0562,0.0674,1.1998
+Less than high school,40-44,0.0184,0.0315,1.7136
+High school,20-24,0.1463,0.0872,0.5956
+High school,25-29,0.1267,0.1098,0.867
+High school,30-34,0.0812,0.0897,1.1047
+High school,35-39,0.0407,0.0536,1.317
+High school,40-44,0.0139,0.0234,1.689
+Some college,20-24,0.1258,0.07,0.5566
+Some college,25-29,0.1348,0.1166,0.8654
+Some college,30-34,0.096,0.0975,1.0163
+Some college,35-39,0.0468,0.0572,1.2233
+Some college,40-44,0.015,0.0225,1.4963
+Bachelor's or more,20-24,0.0338,0.0228,0.675
+Bachelor's or more,25-29,0.0938,0.0685,0.7305
+Bachelor's or more,30-34,0.139,0.1207,0.8682
+Bachelor's or more,35-39,0.0805,0.0849,1.0547
+Bachelor's or more,40-44,0.0234,0.0272,1.1622
+All women,20-24,0.1321,0.071,0.5379
+All women,25-29,0.121,0.0955,0.7896
+All women,30-34,0.108,0.1068,0.9889
+All women,35-39,0.0582,0.07,1.2023
+All women,40-44,0.0178,0.0256,1.4347

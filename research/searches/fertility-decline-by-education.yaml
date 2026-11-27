@@ -156,7 +156,79 @@ attempts:
       Cohort study (1960-64 to 1980-84) on unnamed longitudinal survey data. Text gives only national
       cohort figures (median first-birth age 26 to 29, share with a child by 38 95% to 68%);
       education-specific numbers are in figures and the paper (doi:10.1016/j.ssresearch.2022.102728).
+  - date: 2026-11-27
+    tried: Tan (2022) full text, Social Science Research 105:102728 (ANU Open Research repository, ANU research portal, Elsevier DOI)
+    url: https://openresearch-repository.anu.edu.au/items/8ca07970-fd07-42fa-b5a1-9202a36336d8
+    outcome: blocked
+    why: >-
+      ANU copy restricted until 2099 (request-a-copy only); research portal and Elsevier give the
+      abstract only. Abstract: panel data, 7,914 women born 1960-84, 130,078 person-years;
+      gaps converged then widened, substantial for cohorts 1975-84.
+    retry: Library or interlibrary loan, or the ANU request-a-copy form.
+  - date: 2026-11-27
+    tried: Tan (2021), IUSSP International Population Conference paper (conference version of Tan 2022)
+    url: https://ipc2021.popconf.org/uploads/210423
+    outcome: found
+    why: >-
+      Open PDF. KLoWF waves 1-7 (2007-2018), women born 1960-84. Table 1 gives education shares and
+      share with a first birth by cohort; Table 3 gives cohort x education odds ratios (1980-84 vs
+      1960-64: HS or less 0.61, college 0.65, university 0.34).
+  - date: 2026-11-27
+    tried: IBGE SIDRA table 10078 (Census 2010 and 2022, women by age and education, children born in the last 12 months)
+    url: https://servicodados.ibge.gov.br/api/v3/agregados/10078/metadados
+    outcome: found
+    why: >-
+      Women 12+ by 5-year age group and nivel de instrucao (4 levels + nao determinado), both censuses,
+      API with no key. Used for women only: births in the last 12 months give about 1.35 children per
+      woman at 20-49 in both 2010 and 2022, although registered births fell, so census births are
+      under-reported differently in the two years.
+  - date: 2026-11-27
+    tried: DATASUS SINASC DNBR2010 and DNBR2022, mother's schooling ESCMAEAGR1
+    url: ftp://ftp.datasus.gov.br/dissemin/publicos/SINASC/1996_/Dados/DNRES/
+    outcome: found
+    why: >-
+      ESCMAEAGR1 (2010-form schooling, 00-12) is not in the 2010 or 2011 files (only ESCMAE, years
+      of schooling, which can't be matched to census or PNAD levels); it is in 2014. Code 12
+      (secondary, completion not stated) is 10-20% of births.
+  - date: 2026-11-27
+    tried: IBGE PNAD Continua quarterly microdata (Trimestral/Microdados/<y>/PNADC_03<y>_<date>.zip)
+    url: https://ftp.ibge.gov.br/Trabalho_e_Rendimento/Pesquisa_Nacional_por_Amostra_de_Domicilios_continua/Trimestral/Microdados/
+    outcome: found
+    why: >-
+      About 210 MB per quarter, fixed width (input_PNADC_trimestral.txt in Documentacao): V1028 weight
+      at 50-64, V2007 sex at 95, V2009 age at 104-106, VD3004 level at 405. SIDRA has no PNADC table
+      of education by sex and age.
+  - date: 2026-11-27
+    tried: INEGI natalidad microdata (ESCOL_MAD) and ENOE third-quarter SDEM microdata (CS_P13_1, CS_P13_2)
+    url: https://www.inegi.org.mx/contenidos/programas/enoe/15ymas/microdatos/
+    outcome: found
+    why: >-
+      Births: ESCOL_MAD 1-9 (none, some primary, primary, secundaria, preparatoria, profesional, other,
+      not stated). Women: ENOE files enoe_<y>_trim3_csv.zip, enoe_n_<y>_trim3_csv.zip (2020 Q3-2022) or
+      <y>trim3_csv.zip (older); weight FAC or FAC_TRI. About 93% of births are registered by the end of
+      the following year.
+  - date: 2026-11-27
+    tried: INEGI PxWeb tabulados (Educacion, Poblacion, ENOE databases) for women by age and education
+    url: https://www.inegi.org.mx/app/tabulados/pxwebv2/api/v1/es/Educacion/
+    outcome: lacks-it
+    why: Census 2020 education tables are by state only (literacy, attendance, mean years); no age by level table.
+  - date: 2026-11-27
+    tried: Chile DEIS open birth data, web search for mother's education field
+    outcome: partial
+    why: >-
+      Open CSVs exist (1992-2020 per a GitHub gist reading them), but no source found confirming a
+      mother's education column. Not downloaded.
+    retry: Open a DEIS Datos Abiertos births CSV and check the header for mother's schooling.
+  - date: 2026-11-27
+    tried: DANE microdata catalog, Estadisticas Vitales births (COL-DANE-EEVV-2022 and others)
+    url: https://microdatos.dane.gov.co/index.php/catalog/876/pdf-documentation
+    outcome: partial
+    why: >-
+      Birth records carry mother's education level, per the documentation; not downloaded. Women by
+      age and education would need GEIH microdata.
 next:
+  - Colombia: DANE EEVV births by NIV_EDUM over GEIH women by age and education.
+  - Chile: DEIS births (check for mother's education) over CASEN or census 2017/2024.
   - Comolli et al. 2020/2021 Nordic first-birth decline by education (Sweden, Norway, Finland, Denmark).
   - Ohlsson-Wijk & Andersson 2022 (Sweden, first births by labour-market attachment and education).
   - StatFin table with TFR by education, 2010 onward.
