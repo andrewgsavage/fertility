@@ -17,6 +17,13 @@ from SINASC birth records (NSO/scripts/births_by_order_rates.py), with women by 
 cohort sums of order-specific rates. Years of a cohort's history before the records begin (2000)
 take 2000's rates; a rate is drawn only where those years hold at most MAX_BACKFILL_SHARE of the
 cohort's cumulated births (first births for m1x, first and second for m2x).
+
+Greece and Mauritius are built the same way from order-specific rates: Greece from Human Fertility
+Collection estimates (1960-1991) and Eurostat births by order over women (1992 onward,
+eurostat/scripts/greece_by_order.py), Mauritius from Human Fertility Collection rates from 2005,
+when its birth-order coding changes (HFC/scripts/mauritius_by_order.py). Greece's history runs from
+1960, so all ages pass the backfill rule from 1990; Mauritius reaches age 33 by 2020. Both appear in
+the change-since-baseline chart too.
 """
 
 import math
@@ -60,10 +67,17 @@ LABEL_FONT = dict(size=14, family='"Open Sans", verdana, arial, sans-serif', col
 URY_CODE = "URY_CAB"
 URY_CSV = REPO / "research" / "data" / "cabella2024_fig5_ury_casfr1.csv"
 BRA_CODE = "BRA_SINASC"
-BRA_CSV = outputs_dir("NSO") / "cond_asfr_bra.csv"
-MAX_BACKFILL_SHARE = 0.10  # of a cohort's cumulated births from years before 2000, filled with 2000 rates
+GRC_CODE = "GRC_EST"
+MUS_CODE = "MUS_HFC"
+# Rates per woman at risk from cohort-cumulated order-specific rates (births_by_order_rates.cond_asfr).
+CUMULATED_CSV = {BRA_CODE: outputs_dir("NSO") / "cond_asfr_bra.csv",
+                 GRC_CODE: outputs_dir("eurostat") / "cond_asfr_grc.csv",
+                 MUS_CODE: outputs_dir("HFC") / "cond_asfr_mus.csv"}
+MAX_BACKFILL_SHARE = 0.10  # of a cohort's cumulated births from years before the data begin, filled with the first year's rates
 EXTRA_LABELS = {URY_CODE: ("Uruguay", "Cabella et al. 2024, not HFD"),
-                BRA_CODE: ("Brazil", "SINASC birth records, not HFD")}
+                BRA_CODE: ("Brazil", "SINASC birth records, not HFD"),
+                GRC_CODE: ("Greece", "HFC and Eurostat births by order, not HFD"),
+                MUS_CODE: ("Mauritius", "HFC rates by birth order, not HFD")}
 
 BIRTH_ORDERS = [(1, "m1x", "First birth"), (2, "m2x", "Second birth")]
 
@@ -83,14 +97,19 @@ def load_data():
         for age, (c1, c2) in ages.items()
     ]
     ury = pd.read_csv(URY_CSV).rename(columns={"casfr1": "m1x"}).assign(code=URY_CODE)
-    bra = pd.read_csv(BRA_CSV)
-    bra = bra[bra.year >= 2005].assign(code=BRA_CODE)
-    bra["m1x"] = bra.m1x.where(bra.backfill_share1 <= MAX_BACKFILL_SHARE)
-    bra["m2x"] = bra.m2x.where(bra[["backfill_share1", "backfill_share2"]].max(axis=1) <= MAX_BACKFILL_SHARE)
-    bra = bra.dropna(subset=["m1x", "m2x"], how="all")
     df = pd.concat([df, pd.DataFrame(uk_rows), ury[["code", "year", "age", "m1x"]],
-                    bra[["code", "year", "age", "m1x", "m2x"]]], ignore_index=True)
+                    *(cumulated(code)[["code", "year", "age", "m1x", "m2x"]] for code in CUMULATED_CSV)],
+                   ignore_index=True)
     return df
+
+
+def cumulated(code):
+    """A non-HFD country's rates per woman at risk, 2005 on, where backfilled years hold at most MAX_BACKFILL_SHARE."""
+    d = pd.read_csv(CUMULATED_CSV[code])
+    d = d[d.year >= 2005].assign(code=code)
+    d["m1x"] = d.m1x.where(d.backfill_share1 <= MAX_BACKFILL_SHARE)
+    d["m2x"] = d.m2x.where(d[["backfill_share1", "backfill_share2"]].max(axis=1) <= MAX_BACKFILL_SHARE)
+    return d.dropna(subset=["m1x", "m2x"], how="all")
 
 
 def add_change_since_baseline(df):
@@ -270,7 +289,12 @@ if __name__ == "__main__":
     with_ury = all_countries.copy()
     with_ury.insert(with_ury.index("CHL") + 1, URY_CODE)
     with_ury.insert(with_ury.index(URY_CODE) + 1, BRA_CODE)
+    with_ury.insert(with_ury.index(BRA_CODE) + 1, MUS_CODE)
+    with_ury.insert(with_ury.index("PRT") + 1, GRC_CODE)
+    changed = all_countries.copy()
+    changed.insert(changed.index("TWN") + 1, MUS_CODE)
+    changed.insert(changed.index("PRT") + 1, GRC_CODE)
     df = add_change_since_baseline(df)
     for output, change in [(OUTPUT, False), (OUTPUT_CHANGE, True)]:
-        fig = make_facet(df, all_countries if change else with_ury, change=change)
+        fig = make_facet(df, changed if change else with_ury, change=change)
         write_html(fig, output, height=f"{fig.layout.height}px")

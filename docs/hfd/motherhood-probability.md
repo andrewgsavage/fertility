@@ -42,6 +42,7 @@ Since 2005 the chance has fallen for childless women of 25 in most countries: fr
 | Netherlands | 77% | 73% | 64% | 64% | 31% | 37% | 2023 |
 | Spain | 73% | 62% | 64% | 56% | 37% | 38% | 2023 |
 | Portugal | 84% | 81% | 73% | 74% | 41% | 54% | 2024 |
+| Greece | 65% | 64% | 52% | 56% | 28% | 37% | 2024 |
 | England & Wales | 71% | 70% | 60% | 62% | 35% | 42% | 2025 |
 | Austria | 65% | 69% | 49% | 58% | 22% | 34% | 2023 |
 | Switzerland | 72% | 71% | 59% | 64% | 31% | 42% | 2024 |
@@ -66,6 +67,10 @@ England and Wales", Table 3. Available at
 [ons.gov.uk](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/conceptionandfertilityrates/datasets/childbearingforwomenbornindifferentyearsreferencetable).
 HFD has no conditional rates for England and Wales; they are reconstructed from this table as yearly hazards of a first birth among childless women,
 re-sliced from cohort to calendar year, and combined as {math}`1 - \prod_{x=a}^{44}(1 - h_x)`.
+```
+
+```{note}
+Greece is not in HFD. Its first-birth rates per childless woman are estimated from births by order: [Human Fertility Collection](https://www.fertilitydata.org/Country/Country?code=GRC) estimates for 1960–1991 and Eurostat [demo_fordagec](https://ec.europa.eu/eurostat/databrowser/view/demo_fordagec/default/table) over [demo_pjan](https://ec.europa.eu/eurostat/databrowser/view/demo_pjan/default/table) from 1992, with childless women from each cohort's summed first-birth rates since 1960. Mauritius, estimated the same way from Human Fertility Collection rates, starts in 2005 and doesn't yet cover every age to 44, so it has no panel.
 ```
 :::
 

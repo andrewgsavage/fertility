@@ -40,6 +40,8 @@ NOT_ENTRY_POINTS = {
 RUN_FIRST = [
     "ONS/scripts/dhsc_parity_by_age.py",  # -> eurostat/scripts/abortion_parity.py
     "NSO/scripts/births_by_order_rates.py",  # -> HFD/scripts/cond_asfr_facet.py, eurostat/scripts/change_matrix.py
+    "HFC/scripts/mauritius_by_order.py",  # -> HFD/scripts/cond_asfr_facet.py, motherhood_probability.py, eurostat/scripts/change_matrix.py
+    "eurostat/scripts/greece_by_order.py",  # -> same
     "ILO/scripts/coupling_ilo.py",  # -> common/coupling_hfd.py
     "FT/scripts/ft_birth_rates_everywhere.py",  # -> FT/scripts/ft_birth_rates_charts.py, ft_headline_checks.py
     "FT/scripts/ft_coupling.py",  # -> common/coupling_hfd.py

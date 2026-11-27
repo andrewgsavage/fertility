@@ -6,7 +6,10 @@ question: >-
   series starts late (UK 2013, Belgium and Switzerland 1998, Italy 2004).
 status: open
 answer: >-
-  Mexico 1990-2024 (INEGI registrations, completed for late registration) and Brazil 2000-2024
+  Greece 1960-2024 (HFC estimates to 1991, Eurostat births by order over women from 1992) and
+  Mauritius 2005-2024 (HFC) TFR by order and first- and second-birth rates per woman at risk
+  (cohort-cumulated) are on the first vs second birth, motherhood probability and country
+  comparison pages. Mexico 1990-2024 (INEGI registrations, completed for late registration) and Brazil 2000-2024
   (SINASC) TFR by birth order are on the FT birth-rates page. Brazil's first- and second-birth
   rates per woman at risk, with parity from cohort-cumulated order rates, are on the first vs
   second birth page. Mexico's registers give more than one first birth per woman over a cohort,
@@ -154,6 +157,35 @@ attempts:
       birth. Together these would give parity by age and births in the past year by order at
       census dates.
     retry: Download one year and check the questionnaire for the last-birth date variable.
+  - date: 2026-11-27
+    tried: Human Fertility Collection, Mauritius MUS_ASFRstand_BO.txt and source files MUS_06-09_BO.txt, references and explanatory notes
+    url: https://www.fertilitydata.org/Country/Country?code=MUS
+    outcome: partial
+    why: >-
+      Order-specific rates (1, 2, 3, 4, 5, 6+) by 5-year age group, which HFC splits into
+      single ages 15-49, for 1972, 1983-85, 1990 and 1994-2024. 1973-82, 1986-89 and 1991-93 are
+      missing. Sources are Ministry of Health demographic yearbooks (to 2012) and Statistics
+      Mauritius digests. From 2015 the series excludes Agalega and St Brandon (note 28). There is a
+      break in 2005 within the same yearbook table (MUS_08): TFR1 goes from 0.83 to 0.98 while TFR2
+      falls from 0.64 to 0.52 and TFR from 1.83 to 1.79, which looks like a change in how birth
+      order is coded. 2005-2024 is consistent: TFR1 0.98 to 0.63, TFR2 about 0.5, TFR 1.79 to 1.44.
+  - date: 2026-11-27
+    tried: Eurostat demo_fordagec and demo_pjan for Greece (EL), SDMX-CSV API, all orders and ages
+    url: https://ec.europa.eu/eurostat/databrowser/view/demo_fordagec/default/table
+    outcome: found
+    why: >-
+      Births by order (1, 2, 3, 4+) for 1960-2024 with no unknown order, but by single age and
+      order only from 1992; 1960-1991 have order totals only. Over demo_pjan women, TFR by order
+      for 1992-2008 is within 0.03 of the HFC estimates. The query key A.NR..TOTAL+1+... returns
+      HTTP 400; A.NR...EL (all orders and ages) works.
+  - date: 2026-11-27
+    tried: Human Fertility Collection, Greece GRC_ASFRstand_BO.txt
+    url: https://www.fertilitydata.org/Country/Country?code=GRC
+    outcome: found
+    why: >-
+      European Demographic Observatory (ODE) estimates only, 1960-2008, single ages, ACY and
+      ARDY. Joined to Eurostat at 1992 for TFR by order 1960-2024, and cumulated by cohort for
+      rates per woman at risk.
 next:
   - Colombia DANE EEVV, Chile INE and Costa Rica INEC vital-statistics microdata (previous live births per birth).
   - Japan and Taiwan are already in HFD; Thailand and Malaysia registration data not checked.

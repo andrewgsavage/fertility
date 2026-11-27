@@ -6,6 +6,7 @@ mothers_by_25,IRL,-9.902
 mothers_by_25,EST,-11.698
 mothers_by_25,USA,-12.821
 mothers_by_25,CHL,-17.88
+mothers_by_25,MUS,-12.172
 mothers_by_25,MLT,-6.588
 mothers_by_25,BEL,-9.002
 mothers_by_25,ISL,-12.498
@@ -46,6 +47,7 @@ mothers_by_30,IRL,-15.987
 mothers_by_30,EST,-14.606
 mothers_by_30,USA,-14.385
 mothers_by_30,CHL,-14.139
+mothers_by_30,MUS,-13.798
 mothers_by_30,MLT,-13.436
 mothers_by_30,BEL,-13.226
 mothers_by_30,ISL,-12.965
@@ -86,6 +88,7 @@ mothers_by_35,IRL,-11.159
 mothers_by_35,EST,-8.049
 mothers_by_35,USA,-10.837
 mothers_by_35,CHL,-8.92
+mothers_by_35,MUS,-9.845
 mothers_by_35,MLT,-10.37
 mothers_by_35,BEL,-6.989
 mothers_by_35,ISL,-8.758
@@ -126,6 +129,7 @@ mothers_by_40,IRL,-5.359
 mothers_by_40,EST,-3.781
 mothers_by_40,USA,-8.195
 mothers_by_40,CHL,-4.256
+mothers_by_40,MUS,-8.492
 mothers_by_40,MLT,-7.997
 mothers_by_40,BEL,-4.425
 mothers_by_40,ISL,-6.091
@@ -166,10 +170,11 @@ first_20_24,IRL,-42.281
 first_20_24,EST,-37.865
 first_20_24,USA,-32.907
 first_20_24,CHL,-30.444
+first_20_24,MUS,
 first_20_24,MLT,
 first_20_24,BEL,-42.1
 first_20_24,ISL,
-first_20_24,GRC,
+first_20_24,GRC,-46.408
 first_20_24,GBR,
 first_20_24,NLD,-39.827
 first_20_24,HRV,-31.068
@@ -206,10 +211,11 @@ first_25_29,IRL,-38.438
 first_25_29,EST,-28.418
 first_25_29,USA,-26.811
 first_25_29,CHL,-14.671
+first_25_29,MUS,
 first_25_29,MLT,
 first_25_29,BEL,-27.756
 first_25_29,ISL,
-first_25_29,GRC,
+first_25_29,GRC,-27.818
 first_25_29,GBR,-21.587
 first_25_29,NLD,-25.271
 first_25_29,HRV,-24.624
@@ -246,10 +252,11 @@ first_30_34,IRL,-12.272
 first_30_34,EST,5.767
 first_30_34,USA,-15.097
 first_30_34,CHL,-8.448
+first_30_34,MUS,
 first_30_34,MLT,
 first_30_34,BEL,3.081
 first_30_34,ISL,
-first_30_34,GRC,
+first_30_34,GRC,-6.184
 first_30_34,GBR,-7.804
 first_30_34,NLD,-11.069
 first_30_34,HRV,-0.169
@@ -286,10 +293,11 @@ first_35_39,IRL,14.384
 first_35_39,EST,50.856
 first_35_39,USA,-6.132
 first_35_39,CHL,15.529
+first_35_39,MUS,
 first_35_39,MLT,
 first_35_39,BEL,16.188
 first_35_39,ISL,
-first_35_39,GRC,
+first_35_39,GRC,16.781
 first_35_39,GBR,14.332
 first_35_39,NLD,9.895
 first_35_39,HRV,35.673
@@ -326,10 +334,11 @@ second_20_24,IRL,21.112
 second_20_24,EST,25.036
 second_20_24,USA,6.715
 second_20_24,CHL,-19.226
+second_20_24,MUS,
 second_20_24,MLT,
 second_20_24,BEL,0.883
 second_20_24,ISL,
-second_20_24,GRC,
+second_20_24,GRC,15.603
 second_20_24,GBR,
 second_20_24,NLD,8.991
 second_20_24,HRV,3.294
@@ -366,10 +375,11 @@ second_25_29,IRL,7.238
 second_25_29,EST,13.376
 second_25_29,USA,2.376
 second_25_29,CHL,-13.695
+second_25_29,MUS,
 second_25_29,MLT,
 second_25_29,BEL,-10.962
 second_25_29,ISL,
-second_25_29,GRC,
+second_25_29,GRC,-12.903
 second_25_29,GBR,12.771
 second_25_29,NLD,-6.4
 second_25_29,HRV,-4.77
@@ -406,10 +416,11 @@ second_30_34,IRL,-11.32
 second_30_34,EST,4.988
 second_30_34,USA,1.115
 second_30_34,CHL,-9.299
+second_30_34,MUS,
 second_30_34,MLT,
 second_30_34,BEL,-7.348
 second_30_34,ISL,
-second_30_34,GRC,
+second_30_34,GRC,-13.818
 second_30_34,GBR,15.563
 second_30_34,NLD,-8.277
 second_30_34,HRV,4.981
@@ -446,10 +457,11 @@ second_35_39,IRL,-14.288
 second_35_39,EST,32.495
 second_35_39,USA,15.965
 second_35_39,CHL,-7.289
+second_35_39,MUS,
 second_35_39,MLT,
 second_35_39,BEL,26.915
 second_35_39,ISL,
-second_35_39,GRC,
+second_35_39,GRC,-2.583
 second_35_39,GBR,13.745
 second_35_39,NLD,3.222
 second_35_39,HRV,15.672
@@ -486,6 +498,7 @@ asfr_15_19,IRL,-63.219
 asfr_15_19,EST,-51.314
 asfr_15_19,USA,-54.104
 asfr_15_19,CHL,-63.587
+asfr_15_19,MUS,-19.3
 asfr_15_19,MLT,-37.096
 asfr_15_19,BEL,-46.68
 asfr_15_19,ISL,-66.231
@@ -526,6 +539,7 @@ asfr_20_24,IRL,-36.514
 asfr_20_24,EST,-28.593
 asfr_20_24,USA,-27.424
 asfr_20_24,CHL,-28.11
+asfr_20_24,MUS,-30.734
 asfr_20_24,MLT,-22.44
 asfr_20_24,BEL,-38.743
 asfr_20_24,ISL,-36.057
@@ -566,6 +580,7 @@ asfr_25_29,IRL,-24.453
 asfr_25_29,EST,-8.821
 asfr_25_29,USA,-11.118
 asfr_25_29,CHL,-15.265
+asfr_25_29,MUS,-9.373
 asfr_25_29,MLT,-32.259
 asfr_25_29,BEL,-21.98
 asfr_25_29,ISL,-22.294
@@ -606,6 +621,7 @@ asfr_30_34,IRL,-13.524
 asfr_30_34,EST,10.08
 asfr_30_34,USA,2.059
 asfr_30_34,CHL,-5.71
+asfr_30_34,MUS,25.52
 asfr_30_34,MLT,-7.777
 asfr_30_34,BEL,-3.047
 asfr_30_34,ISL,-12.712
@@ -646,6 +662,7 @@ asfr_35_39,IRL,-6.392
 asfr_35_39,EST,25.578
 asfr_35_39,USA,12.1
 asfr_35_39,CHL,3.029
+asfr_35_39,MUS,41.054
 asfr_35_39,MLT,9.315
 asfr_35_39,BEL,9.243
 asfr_35_39,ISL,-15.563
@@ -686,6 +703,7 @@ sum_couple_20_24,IRL,-6.911
 sum_couple_20_24,EST,-19.193
 sum_couple_20_24,USA,-5.2
 sum_couple_20_24,CHL,-3.44
+sum_couple_20_24,MUS,
 sum_couple_20_24,MLT,-2.658
 sum_couple_20_24,BEL,4.033
 sum_couple_20_24,ISL,-2.253
@@ -726,6 +744,7 @@ sum_couple_25_29,IRL,-11.561
 sum_couple_25_29,EST,-12.432
 sum_couple_25_29,USA,
 sum_couple_25_29,CHL,
+sum_couple_25_29,MUS,
 sum_couple_25_29,MLT,-21.34
 sum_couple_25_29,BEL,-4.391
 sum_couple_25_29,ISL,-4.996
@@ -766,6 +785,7 @@ sum_couple_30_34,IRL,-6.817
 sum_couple_30_34,EST,0.537
 sum_couple_30_34,USA,
 sum_couple_30_34,CHL,
+sum_couple_30_34,MUS,
 sum_couple_30_34,MLT,-26.632
 sum_couple_30_34,BEL,0.655
 sum_couple_30_34,ISL,-2.795
@@ -806,6 +826,7 @@ sum_couple_35_39,IRL,-3.332
 sum_couple_35_39,EST,7.693
 sum_couple_35_39,USA,
 sum_couple_35_39,CHL,
+sum_couple_35_39,MUS,
 sum_couple_35_39,MLT,-24.199
 sum_couple_35_39,BEL,1.815
 sum_couple_35_39,ISL,-3.194
@@ -846,6 +867,7 @@ couple_18_24,IRL,-5.472
 couple_18_24,EST,-3.243
 couple_18_24,USA,
 couple_18_24,CHL,
+couple_18_24,MUS,
 couple_18_24,MLT,
 couple_18_24,BEL,4.033
 couple_18_24,ISL,
@@ -886,6 +908,7 @@ couple_under_25,IRL,
 couple_under_25,EST,
 couple_under_25,USA,-5.2
 couple_under_25,CHL,-3.44
+couple_under_25,MUS,
 couple_under_25,MLT,
 couple_under_25,BEL,
 couple_under_25,ISL,
@@ -926,6 +949,7 @@ couple_25_34,IRL,
 couple_25_34,EST,
 couple_25_34,USA,-2.7
 couple_25_34,CHL,-7.7
+couple_25_34,MUS,
 couple_25_34,MLT,
 couple_25_34,BEL,
 couple_25_34,ISL,
@@ -966,6 +990,7 @@ couple_25_29,IRL,
 couple_25_29,EST,
 couple_25_29,USA,
 couple_25_29,CHL,
+couple_25_29,MUS,
 couple_25_29,MLT,
 couple_25_29,BEL,
 couple_25_29,ISL,
@@ -1006,6 +1031,7 @@ couple_30_34,IRL,
 couple_30_34,EST,
 couple_30_34,USA,
 couple_30_34,CHL,
+couple_30_34,MUS,
 couple_30_34,MLT,
 couple_30_34,BEL,
 couple_30_34,ISL,
@@ -1046,6 +1072,7 @@ couple_35_39,IRL,
 couple_35_39,EST,
 couple_35_39,USA,
 couple_35_39,CHL,
+couple_35_39,MUS,
 couple_35_39,MLT,
 couple_35_39,BEL,
 couple_35_39,ISL,
@@ -1086,6 +1113,7 @@ couple_census_20_24,IRL,-6.911
 couple_census_20_24,EST,-19.193
 couple_census_20_24,USA,
 couple_census_20_24,CHL,
+couple_census_20_24,MUS,
 couple_census_20_24,MLT,-2.658
 couple_census_20_24,BEL,-7.889
 couple_census_20_24,ISL,-2.253
@@ -1126,6 +1154,7 @@ couple_census_25_29,IRL,-11.561
 couple_census_25_29,EST,-12.432
 couple_census_25_29,USA,
 couple_census_25_29,CHL,
+couple_census_25_29,MUS,
 couple_census_25_29,MLT,-21.34
 couple_census_25_29,BEL,-4.391
 couple_census_25_29,ISL,-4.996
@@ -1166,6 +1195,7 @@ couple_census_30_34,IRL,-6.817
 couple_census_30_34,EST,0.537
 couple_census_30_34,USA,
 couple_census_30_34,CHL,
+couple_census_30_34,MUS,
 couple_census_30_34,MLT,-26.632
 couple_census_30_34,BEL,0.655
 couple_census_30_34,ISL,-2.795
@@ -1206,6 +1236,7 @@ couple_census_25_34,IRL,-8.622
 couple_census_25_34,EST,-4.15
 couple_census_25_34,USA,
 couple_census_25_34,CHL,
+couple_census_25_34,MUS,
 couple_census_25_34,MLT,-23.184
 couple_census_25_34,BEL,-1.78
 couple_census_25_34,ISL,-4.107
@@ -1246,6 +1277,7 @@ couple_census_35_39,IRL,-3.332
 couple_census_35_39,EST,7.693
 couple_census_35_39,USA,
 couple_census_35_39,CHL,
+couple_census_35_39,MUS,
 couple_census_35_39,MLT,-24.199
 couple_census_35_39,BEL,1.815
 couple_census_35_39,ISL,-3.194
@@ -1286,6 +1318,7 @@ couple_ess_25_34,IRL,4.819
 couple_ess_25_34,EST,0.132
 couple_ess_25_34,USA,
 couple_ess_25_34,CHL,
+couple_ess_25_34,MUS,
 couple_ess_25_34,MLT,
 couple_ess_25_34,BEL,-2.329
 couple_ess_25_34,ISL,
@@ -1326,6 +1359,7 @@ sum_ratio_20_24,IRL,-0.038
 sum_ratio_20_24,EST,0.443
 sum_ratio_20_24,USA,-0.254
 sum_ratio_20_24,CHL,-0.525
+sum_ratio_20_24,MUS,
 sum_ratio_20_24,MLT,-0.242
 sum_ratio_20_24,BEL,-2.083
 sum_ratio_20_24,ISL,-0.517
@@ -1366,6 +1400,7 @@ sum_ratio_25_29,IRL,-0.124
 sum_ratio_25_29,EST,-0.012
 sum_ratio_25_29,USA,
 sum_ratio_25_29,CHL,
+sum_ratio_25_29,MUS,
 sum_ratio_25_29,MLT,0.107
 sum_ratio_25_29,BEL,-0.188
 sum_ratio_25_29,ISL,-0.045
@@ -1406,6 +1441,7 @@ sum_ratio_30_34,IRL,-0.046
 sum_ratio_30_34,EST,-0.118
 sum_ratio_30_34,USA,
 sum_ratio_30_34,CHL,
+sum_ratio_30_34,MUS,
 sum_ratio_30_34,MLT,0.082
 sum_ratio_30_34,BEL,-0.11
 sum_ratio_30_34,ISL,-0.028
@@ -1446,6 +1482,7 @@ sum_ratio_35_39,IRL,-0.003
 sum_ratio_35_39,EST,-0.181
 sum_ratio_35_39,USA,
 sum_ratio_35_39,CHL,
+sum_ratio_35_39,MUS,
 sum_ratio_35_39,MLT,0.062
 sum_ratio_35_39,BEL,-0.08
 sum_ratio_35_39,ISL,0.016
@@ -1486,6 +1523,7 @@ ratio_15_24,IRL,
 ratio_15_24,EST,
 ratio_15_24,USA,
 ratio_15_24,CHL,-0.38
+ratio_15_24,MUS,
 ratio_15_24,MLT,
 ratio_15_24,BEL,
 ratio_15_24,ISL,
@@ -1526,6 +1564,7 @@ ratio_25_29,IRL,
 ratio_25_29,EST,
 ratio_25_29,USA,
 ratio_25_29,CHL,
+ratio_25_29,MUS,
 ratio_25_29,MLT,
 ratio_25_29,BEL,
 ratio_25_29,ISL,
@@ -1566,6 +1605,7 @@ ratio_25_34,IRL,
 ratio_25_34,EST,
 ratio_25_34,USA,-0.084
 ratio_25_34,CHL,0.089
+ratio_25_34,MUS,
 ratio_25_34,MLT,
 ratio_25_34,BEL,
 ratio_25_34,ISL,
@@ -1606,6 +1646,7 @@ ratio_30_34,IRL,
 ratio_30_34,EST,
 ratio_30_34,USA,
 ratio_30_34,CHL,
+ratio_30_34,MUS,
 ratio_30_34,MLT,
 ratio_30_34,BEL,
 ratio_30_34,ISL,
@@ -1646,6 +1687,7 @@ ratio_35_39,IRL,
 ratio_35_39,EST,
 ratio_35_39,USA,
 ratio_35_39,CHL,
+ratio_35_39,MUS,
 ratio_35_39,MLT,
 ratio_35_39,BEL,
 ratio_35_39,ISL,
@@ -1686,6 +1728,7 @@ ratio_census_20_24,IRL,-0.038
 ratio_census_20_24,EST,0.443
 ratio_census_20_24,USA,
 ratio_census_20_24,CHL,
+ratio_census_20_24,MUS,
 ratio_census_20_24,MLT,-0.242
 ratio_census_20_24,BEL,-0.146
 ratio_census_20_24,ISL,-0.517
@@ -1726,6 +1769,7 @@ ratio_census_25_34,IRL,-0.19
 ratio_census_25_34,EST,-0.161
 ratio_census_25_34,USA,
 ratio_census_25_34,CHL,
+ratio_census_25_34,MUS,
 ratio_census_25_34,MLT,-0.011
 ratio_census_25_34,BEL,-0.204
 ratio_census_25_34,ISL,-0.073
@@ -1766,6 +1810,7 @@ ratio_census_35_39,IRL,-0.104
 ratio_census_35_39,EST,-0.214
 ratio_census_35_39,USA,
 ratio_census_35_39,CHL,
+ratio_census_35_39,MUS,
 ratio_census_35_39,MLT,-0.012
 ratio_census_35_39,BEL,-0.121
 ratio_census_35_39,ISL,-0.024
@@ -1806,6 +1851,7 @@ ratio_ess_25_34,IRL,-0.239
 ratio_ess_25_34,EST,-0.092
 ratio_ess_25_34,USA,
 ratio_ess_25_34,CHL,
+ratio_ess_25_34,MUS,
 ratio_ess_25_34,MLT,
 ratio_ess_25_34,BEL,-0.106
 ratio_ess_25_34,ISL,
@@ -1846,6 +1892,7 @@ abort_first_20_24,IRL,
 abort_first_20_24,EST,9.4
 abort_first_20_24,USA,
 abort_first_20_24,CHL,
+abort_first_20_24,MUS,
 abort_first_20_24,MLT,
 abort_first_20_24,BEL,
 abort_first_20_24,ISL,7.8
@@ -1886,6 +1933,7 @@ abort_first_25_29,IRL,
 abort_first_25_29,EST,2.2
 abort_first_25_29,USA,
 abort_first_25_29,CHL,
+abort_first_25_29,MUS,
 abort_first_25_29,MLT,
 abort_first_25_29,BEL,
 abort_first_25_29,ISL,7.4
@@ -1926,6 +1974,7 @@ abort_first_30_34,IRL,
 abort_first_30_34,EST,-1.9
 abort_first_30_34,USA,
 abort_first_30_34,CHL,
+abort_first_30_34,MUS,
 abort_first_30_34,MLT,
 abort_first_30_34,BEL,
 abort_first_30_34,ISL,6.8
@@ -1966,6 +2015,7 @@ abort_first_35,IRL,
 abort_first_35,EST,-4.9
 abort_first_35,USA,
 abort_first_35,CHL,
+abort_first_35,MUS,
 abort_first_35,MLT,
 abort_first_35,BEL,
 abort_first_35,ISL,7.4
@@ -2006,6 +2056,7 @@ abort_later_20_24,IRL,
 abort_later_20_24,EST,-47.7
 abort_later_20_24,USA,
 abort_later_20_24,CHL,
+abort_later_20_24,MUS,
 abort_later_20_24,MLT,
 abort_later_20_24,BEL,
 abort_later_20_24,ISL,-6.4
@@ -2046,6 +2097,7 @@ abort_later_25_29,IRL,
 abort_later_25_29,EST,-23.1
 abort_later_25_29,USA,
 abort_later_25_29,CHL,
+abort_later_25_29,MUS,
 abort_later_25_29,MLT,
 abort_later_25_29,BEL,
 abort_later_25_29,ISL,8.4
@@ -2086,6 +2138,7 @@ abort_later_30_34,IRL,
 abort_later_30_34,EST,-16.4
 abort_later_30_34,USA,
 abort_later_30_34,CHL,
+abort_later_30_34,MUS,
 abort_later_30_34,MLT,
 abort_later_30_34,BEL,
 abort_later_30_34,ISL,2.0
@@ -2126,6 +2179,7 @@ abort_later_35,IRL,
 abort_later_35,EST,-32.7
 abort_later_35,USA,
 abort_later_35,CHL,
+abort_later_35,MUS,
 abort_later_35,MLT,
 abort_later_35,BEL,
 abort_later_35,ISL,7.0
@@ -2166,6 +2220,7 @@ parents_20_24,IRL,25.9
 parents_20_24,EST,-3.6
 parents_20_24,USA,
 parents_20_24,CHL,
+parents_20_24,MUS,
 parents_20_24,MLT,-3.9
 parents_20_24,BEL,13.8
 parents_20_24,ISL,20.9
@@ -2206,6 +2261,7 @@ parents_25_29,IRL,18.4
 parents_25_29,EST,-5.5
 parents_25_29,USA,
 parents_25_29,CHL,
+parents_25_29,MUS,
 parents_25_29,MLT,-5.0
 parents_25_29,BEL,9.7
 parents_25_29,ISL,19.8
@@ -2246,6 +2302,7 @@ parents_25_34,IRL,12.9
 parents_25_34,EST,-5.1
 parents_25_34,USA,
 parents_25_34,CHL,
+parents_25_34,MUS,
 parents_25_34,MLT,-2.7
 parents_25_34,BEL,4.9
 parents_25_34,ISL,11.4
@@ -2286,6 +2343,7 @@ alone_18_24,IRL,
 alone_18_24,EST,15.005
 alone_18_24,USA,
 alone_18_24,CHL,
+alone_18_24,MUS,
 alone_18_24,MLT,
 alone_18_24,BEL,-1.239
 alone_18_24,ISL,
@@ -2326,6 +2384,7 @@ alone_25_34,IRL,
 alone_25_34,EST,
 alone_25_34,USA,0.808
 alone_25_34,CHL,
+alone_25_34,MUS,
 alone_25_34,MLT,
 alone_25_34,BEL,
 alone_25_34,ISL,
@@ -2366,6 +2425,7 @@ ideal_young,IRL,
 ideal_young,EST,-0.04
 ideal_young,USA,-0.14
 ideal_young,CHL,
+ideal_young,MUS,
 ideal_young,MLT,
 ideal_young,BEL,
 ideal_young,ISL,
@@ -2406,6 +2466,7 @@ ideal_30s,IRL,
 ideal_30s,EST,-0.13
 ideal_30s,USA,0.03
 ideal_30s,CHL,
+ideal_30s,MUS,
 ideal_30s,MLT,
 ideal_30s,BEL,
 ideal_30s,ISL,
@@ -2446,6 +2507,7 @@ intended_young,IRL,
 intended_young,EST,-0.06
 intended_young,USA,
 intended_young,CHL,
+intended_young,MUS,
 intended_young,MLT,
 intended_young,BEL,
 intended_young,ISL,
@@ -2486,6 +2548,7 @@ intended_30s,IRL,
 intended_30s,EST,-0.23
 intended_30s,USA,
 intended_30s,CHL,
+intended_30s,MUS,
 intended_30s,MLT,
 intended_30s,BEL,
 intended_30s,ISL,
@@ -2526,6 +2589,7 @@ leaving_home,IRL,1.8
 leaving_home,EST,-1.3
 leaving_home,USA,
 leaving_home,CHL,
+leaving_home,MUS,
 leaving_home,MLT,-1.0
 leaving_home,BEL,0.1
 leaving_home,ISL,
@@ -2566,6 +2630,7 @@ tertiary_women,IRL,3.5
 tertiary_women,EST,5.5
 tertiary_women,USA,
 tertiary_women,CHL,
+tertiary_women,MUS,
 tertiary_women,MLT,19.9
 tertiary_women,BEL,5.2
 tertiary_women,ISL,12.3
@@ -2606,6 +2671,7 @@ youth_unemployment,IRL,-15.7
 youth_unemployment,EST,-21.315
 youth_unemployment,USA,-9.986
 youth_unemployment,CHL,-0.105
+youth_unemployment,MUS,-1.441
 youth_unemployment,MLT,-3.175
 youth_unemployment,BEL,-8.155
 youth_unemployment,ISL,-7.408
@@ -2646,6 +2712,7 @@ temp_contracts,IRL,3.4
 temp_contracts,EST,0.0
 temp_contracts,USA,
 temp_contracts,CHL,
+temp_contracts,MUS,
 temp_contracts,MLT,3.3
 temp_contracts,BEL,9.9
 temp_contracts,ISL,-9.6
@@ -2686,6 +2753,7 @@ neet_men,IRL,-12.7
 neet_men,EST,-9.0
 neet_men,USA,
 neet_men,CHL,
+neet_men,MUS,
 neet_men,MLT,-1.7
 neet_men,BEL,-0.6
 neet_men,ISL,-2.5
@@ -2726,6 +2794,7 @@ price_to_income,IRL,2.515
 price_to_income,EST,4.204
 price_to_income,USA,7.627
 price_to_income,CHL,31.559
+price_to_income,MUS,
 price_to_income,MLT,
 price_to_income,BEL,3.047
 price_to_income,ISL,14.596
@@ -2766,6 +2835,7 @@ overcrowded_25_29,IRL,3.6
 overcrowded_25_29,EST,-24.5
 overcrowded_25_29,USA,
 overcrowded_25_29,CHL,
+overcrowded_25_29,MUS,
 overcrowded_25_29,MLT,2.1
 overcrowded_25_29,BEL,1.1
 overcrowded_25_29,ISL,11.9
@@ -2806,6 +2876,7 @@ overburden_25_29,IRL,4.3
 overburden_25_29,EST,-1.4
 overburden_25_29,USA,
 overburden_25_29,CHL,
+overburden_25_29,MUS,
 overburden_25_29,MLT,-0.5
 overburden_25_29,BEL,-2.2
 overburden_25_29,ISL,-1.8
@@ -2846,6 +2917,7 @@ childcare,IRL,12.5
 childcare,EST,11.2
 childcare,USA,
 childcare,CHL,
+childcare,MUS,
 childcare,MLT,29.0
 childcare,BEL,19.9
 childcare,ISL,60.0
@@ -2886,6 +2958,7 @@ mobile_internet,IRL,63.81
 mobile_internet,EST,77.08
 mobile_internet,USA,
 mobile_internet,CHL,
+mobile_internet,MUS,
 mobile_internet,MLT,49.65
 mobile_internet,BEL,60.59
 mobile_internet,ISL,57.18

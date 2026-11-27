@@ -19,6 +19,12 @@ Outcomes:
   (uruguay_outcomes; MSP, INE and SIP files via HFC/scripts/uruguay_by_order.py).
 - Brazil (not in HFD): TFR, with a child by age and conditional rates from SINASC birth records
   over UN WPP women (brazil_outcomes; NSO/outputs from NSO/scripts/births_by_order_rates.py).
+- Mauritius (not in HFD): TFR, all-birth rates and with a child by age from Human Fertility
+  Collection order-specific rates, 2005 onward (mauritius_outcomes; HFC/outputs from
+  HFC/scripts/mauritius_by_order.py).
+- Conditional first- and second-birth rates for Greece and Mauritius, as for Brazil, from
+  cohort-cumulated order-specific rates (cumulated_rates; eurostat/scripts/greece_by_order.py and
+  HFC/scripts/mauritius_by_order.py).
 - Women in a couple: registers, CPS, ILO and FT by age; Eurostat lfst_hhindws
   as a lower-quality 18-24 row (Denmark and Sweden dropped for series breaks).
 
@@ -83,6 +89,7 @@ COUNTRIES = {
     "ISL": ("IS", "Iceland"), "AUS": (None, "Australia"), "NZL": (None, "New Zealand"),
     "CHL": (None, "Chile"), "URY": (None, "Uruguay"), "TWN": (None, "Taiwan"),  # Uruguay is not in HFD: see uruguay_outcomes()
     "BRA": (None, "Brazil"),  # not in HFD: see brazil_outcomes()
+    "MUS": (None, "Mauritius"),  # not in HFD: see mauritius_outcomes()
 }
 # Region, for grouping countries in the matrix. "English-speaking" is outside Europe; GBR and IRL sit with Western Europe.
 REGION_MEMBERS = {
@@ -93,6 +100,7 @@ REGION_MEMBERS = {
     "English-speaking": ("AUS", "CAN", "NZL", "USA"),
     "East Asia": ("JPN", "KOR", "TWN"),
     "Latin America": ("BRA", "CHL", "URY"),
+    "Africa": ("MUS",),
 }
 REGIONS = {iso: r for r, members in REGION_MEMBERS.items() for iso in members}
 assert set(REGIONS) == set(COUNTRIES), set(COUNTRIES) ^ set(REGIONS)
@@ -192,7 +200,8 @@ M30_ESTIMATES = {**{c: "estimate, Human Fertility Collection first-birth rates" 
                  "FRA": "estimate, Eurostat first births per woman, 2013 onward (series break)",
                  "URY": "estimate, Human Fertility Collection first-birth rates to 2011; "
                         "MSP births by age × SIP first-birth shares over INE women, 2013 and 2021",
-                 "BRA": "estimate, SINASC first births over UN WPP women"}
+                 "BRA": "estimate, SINASC first births over UN WPP women",
+                 "MUS": "estimate, Human Fertility Collection first-birth rates"}
 EU2ISO = {v[0]: k for k, v in COUNTRIES.items() if v[0]}
 EUROSTAT_COUPLE_BREAKS = ("DNK", "SWE")  # jumps of 15-25 points between years
 MIN_FIT_N = 10  # below this a cross-country correlation isn't shown
@@ -547,6 +556,7 @@ def load_tfr():
             other.setdefault(r["countryiso3code"], {})[int(r["date"])] = r["value"]
     other["URY"] = uruguay_outcomes()["tfr"]
     other["BRA"] = brazil_outcomes()["tfr"]
+    other["MUS"] = mauritius_outcomes()["tfr"]
     for c in missing:
         if c in other:
             out[c] = other[c]
@@ -620,6 +630,29 @@ def brazil_outcomes():
     c["ok2"] = c.ok1 & (c.backfill_share2 <= BRA_MAX_BACKFILL_SHARE)
     _BRAZIL["rates"] = c
     return _BRAZIL
+
+
+HFC_OUT = ROOT / "HFC" / "outputs"
+MUS_FROM = 2005  # the order split breaks between 2004 and 2005 (HFC/scripts/mauritius_by_order.py)
+_MAURITIUS = {}
+
+
+def mauritius_outcomes():
+    """Mauritius, which HFD doesn't cover: {"tfr": {year: TFR}, age: {year: % with a child}, "asfr": DataFrame}.
+
+    Human Fertility Collection order-specific rates by single age (split from 5-year groups), from 2005,
+    when the order coding changes. With a child by age: first births per woman summed to the age before.
+    """
+    if _MAURITIUS:
+        return _MAURITIUS
+    a = pd.read_csv(HFC_OUT / "mus_asfr_by_order.csv")
+    a = a[a.year >= MUS_FROM].assign(asfr=lambda f: f[["f1", "f2", "f3", "f4", "f5p"]].sum(axis=1))
+    _MAURITIUS["tfr"] = {int(y): float(v) for y, v in a.groupby("year").asfr.sum().items()}
+    for age in CHILD_AGES:
+        g = a[a.age < age].groupby("year").f1.sum()
+        _MAURITIUS[age] = {int(y): 100 * float(v) for y, v in g.items()}
+    _MAURITIUS["asfr"] = a
+    return _MAURITIUS
 
 
 def synthetic(qs):
@@ -725,6 +758,7 @@ def load_parity():
         out[f"mothers_by_{age}"]["NZL"] = nz[age]
         out[f"mothers_by_{age}"]["URY"] = uruguay_outcomes()[age]
         out[f"mothers_by_{age}"]["BRA"] = brazil_outcomes()[age]
+        out[f"mothers_by_{age}"]["MUS"] = mauritius_outcomes()[age]
     return out
 
 
@@ -750,7 +784,8 @@ ASFR_ROWS = [(f"asfr_{b.replace('-', '_')}", f"ASFR, {b.replace('-', '–')}", b
 def load_asfr_rows():
     """key -> iso -> {year: births per 100 women, % a year}, and key -> iso -> source. Eurostat demo_frate; HFD asfrRR
     (UK is the whole UK, not England and Wales); HFC for Australia and New Zealand; MSP births over INE women
-    for Uruguay; SINASC births over UN WPP women for Brazil (NSO/outputs/asfr_by_order_bra.csv, all orders)."""
+    for Uruguay; SINASC births over UN WPP women for Brazil (NSO/outputs/asfr_by_order_bra.csv, all orders);
+    HFC order-specific rates summed for Mauritius (HFC/outputs/mus_asfr_by_order.csv)."""
     import smartphone_milestones as sm
     asfr = sm.load_asfr(tuple(b for *_, b in ASFR_ROWS))
     src = lambda c: ("HFD (UK)" if c == "GBR" else "HFD") if c in sm.HFD_CODES else "HFC" if c in sm.HFC_CODES         else "MSP births ÷ INE women" if c == "URY" else "Eurostat demo_frate"
@@ -766,6 +801,10 @@ def load_asfr_rows():
         g = f[f.age.between(lo, lo + 4)].groupby("year").asfr.agg(["mean", "count"])
         out[key]["BRA"] = {int(y): 100 * v for y, v in g[g["count"] == 5]["mean"].items()}
         sources[key]["BRA"] = "SINASC births ÷ UN WPP women"
+        g = mauritius_outcomes()["asfr"]
+        g = g[g.age.between(lo, lo + 4)].groupby("year").asfr.agg(["mean", "count"])
+        out[key]["MUS"] = {int(y): 100 * v for y, v in g[g["count"] == 5]["mean"].items()}
+        sources[key]["MUS"] = "Human Fertility Collection"
     return out, sources
 
 
@@ -796,15 +835,41 @@ def load_rates(e):
         for year, row in x[x.n == hi - lo + 1].iterrows():
             if row.r > 0:
                 out[key].setdefault("GBR", {})[int(year)] = 100 * row.b / row.r
-        # Brazil: births over women at risk, both from the rate and the estimated parity share
-        b = brazil_outcomes()["rates"]
-        b = b[b.age.between(lo, hi)].dropna(subset=[col]).copy()
-        risk = b.p0 if col == "m1x" else b.p1
-        b = b.assign(births=b[col] * risk * b.women, exposure=risk * b.women)
-        ok = "ok1" if col == "m1x" else "ok2"
-        g = b.groupby("year").agg(births=("births", "sum"), exposure=("exposure", "sum"), n=("age", "size"), ok=(ok, "all"))
-        for year, row in g[(g.n == hi - lo + 1) & g.ok].iterrows():
-            out[key].setdefault("BRA", {})[int(year)] = 100 * row.births / row.exposure
+        # Brazil, Greece, Mauritius: births over women at risk, both from the rate and the estimated parity share
+        for iso, b in cumulated_rates().items():
+            b = b[b.age.between(lo, hi)].dropna(subset=[col]).copy()
+            risk = b.p0 if col == "m1x" else b.p1
+            b = b.assign(births=b[col] * risk * b.women, exposure=risk * b.women)
+            ok = "ok1" if col == "m1x" else "ok2"
+            g = b.groupby("year").agg(births=("births", "sum"), exposure=("exposure", "sum"), n=("age", "size"), ok=(ok, "all"))
+            for year, row in g[(g.n == hi - lo + 1) & g.ok].iterrows():
+                out[key].setdefault(iso, {})[int(year)] = 100 * row.births / row.exposure
+    return out
+
+
+# Rates per woman at risk from cohort-cumulated order-specific rates, for countries HFD has no mi.txt for.
+CUMULATED_CSV = {"GRC": ROOT / "eurostat" / "outputs" / "cond_asfr_grc.csv",
+                 "MUS": ROOT / "HFC" / "outputs" / "cond_asfr_mus.csv"}
+
+
+_CUMULATED = {}
+
+
+def cumulated_rates():
+    """{iso: DataFrame(year, age, p0, p1, m1x, m2x, women, ok1, ok2)}: Brazil, Greece and Mauritius, with women
+    by single age from UN WPP 2024 as weights and the same backfill rule as Brazil."""
+    if _CUMULATED:
+        return _CUMULATED
+    out = _CUMULATED
+    out["BRA"] = brazil_outcomes()["rates"]
+    sys.path.insert(0, str(ROOT / "NSO" / "scripts"))
+    from births_by_order_rates import women
+    for iso, path in CUMULATED_CSV.items():
+        w = women(iso).rename("women").reset_index().rename(columns={"Time": "year", "AgeGrpStart": "age"})
+        c = pd.read_csv(path).merge(w, on=["year", "age"])
+        c["ok1"] = c.backfill_share1 <= BRA_MAX_BACKFILL_SHARE
+        c["ok2"] = c.ok1 & (c.backfill_share2 <= BRA_MAX_BACKFILL_SHARE)
+        out[iso] = c
     return out
 
 
