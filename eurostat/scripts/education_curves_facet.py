@@ -129,9 +129,6 @@ def facet(rows, change=False):
                 if p == 0:
                     fig.add_annotation(text=f"<b>{country}</b>", x=0.05, y=0.97, xref="x domain", yref="y domain",
                                        xanchor="left", yanchor="top", showarrow=False, font=LABEL_FONT, row=r, col=col)
-                    fig.add_annotation(text=sub + (f", vs {base_years}" if change else ""), x=0.05, y=0.8,
-                                       xref="x domain", yref="y domain", xanchor="left", yanchor="top",
-                                       showarrow=False, font=dict(LABEL_FONT, size=10, color="#666"), row=r, col=col)
                 if levels is not LEVELS3 or r == 1:  # level names: top row, and on the US's own panels
                     fig.add_annotation(text=lv, x=0.5, y=1.0, xref="x domain", yref="y domain", yanchor="bottom",
                                        showarrow=False, font=dict(LABEL_FONT, size=12 if levels is LEVELS3 else 10), row=r, col=col)
