@@ -12,6 +12,8 @@ Writes ACS/outputs/:
   fertility_by_education_us_ages.html     births per woman at 15-24 and 25-44, all women, by year
   fertility_by_education_us_curves.html   birth rate by single year of age (3-year moving average),
                                           women not enrolled in school, one panel per education
+  fertility_by_education_us_curves_row.html  the same, panels in one row with the axes of the
+                                          Nordic age curves (eurostat fertility_by_education_nordic.py)
   fertility_by_education_us_20_24.html     birth rate at 20-24 by education (not enrolled) and for
                                           enrolled women, by year
   fertility_by_education_us.csv           the numbers behind them
@@ -159,6 +161,32 @@ def curves_chart(c):
     return fig
 
 
+def curves_row_chart(c):
+    """The age curves in one row, on the fixed axes shared with the Nordic age curves."""
+    years = sorted(c.year.unique())
+    axis = period_axis(min(years), max(years))
+    fig = make_subplots(rows=1, cols=4, subplot_titles=[e for e, _ in EDU], shared_yaxes=True,
+                        horizontal_spacing=0.03)
+    for i, (e, _) in enumerate(EDU):
+        for y in years:
+            s = c[(c.education == e) & (c.year == y)]
+            if e == "Bachelor's or more":
+                s = s[s.age >= 21]
+            fig.add_trace(go.Scatter(
+                x=s.age, y=s.rate, name=str(y), legendgroup=str(y), showlegend=i == 0,
+                mode="lines", line=dict(color=sample_color(PERIOD_COLORSCALE, y, axis), width=2),
+                hovertemplate=f"{y}, age %{{x}}: %{{y:.0f}}<extra></extra>",
+            ), row=1, col=i + 1)
+    fig.update_layout(template="plotly_white", title="US birth rate by age and education, women not in school",
+                      title_y=0.97, title_yanchor="top", height=380,
+                      legend=dict(orientation="h", x=0, y=1.12, xanchor="left", yanchor="bottom"),
+                      margin=dict(l=60, r=20, t=120, b=50))
+    fig.update_yaxes(range=[0, 300])
+    fig.update_yaxes(title_text="Births per 1,000 women", col=1)
+    fig.update_xaxes(range=[18, 44], title_text="Age")
+    return fig
+
+
 def young(d):
     """Births per 1,000 women aged 20-24: not enrolled by education, and all enrolled women."""
     q = d[d.age.between(20, 24)]
@@ -198,6 +226,7 @@ def main():
     c = curves(d)
     c.round(1).to_csv(OUT / "fertility_by_education_us_curves.csv", index=False)
     write_html(curves_chart(c), OUT / "fertility_by_education_us_curves.html")
+    write_html(curves_row_chart(c), OUT / "fertility_by_education_us_curves_row.html")
     y = young(d)
     print(y.round(1).to_string())
     y.round(1).to_csv(OUT / "fertility_by_education_us_20_24.csv")

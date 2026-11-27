@@ -6,6 +6,7 @@ Schooling, debt, insecure work and young men falling behind.
 :maxdepth: 1
 
 education
+education-age-curves
 student-debt
 job-insecurity
 left-behind-young-men
