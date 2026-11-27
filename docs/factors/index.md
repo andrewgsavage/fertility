@@ -106,9 +106,9 @@ In the table:
 | Income level | Higher income makes children more affordable but also raises the cost of time spent on them | ✗ | ✓ | ✓ | ✓ ✓ | ? | ? |
 | Economic uncertainty | Recessions and insecure prospects lead couples to postpone births | ✗ | ✓ | ✓ | ✓ ✗ | ✓ | ✓ |
 | **Policy and the state** | | | | | | | |
-| Parental leave | Length and pay of leave around a birth | ✗ | ✓ | ✓ | ✓ ✓ | ✓ | ✓ |
-| Child benefits and tax credits | Cash support per child lowers the net cost of each child | ✗ | ✓ | ✓ | ✓ ✓ | ✓ | ✓ |
-| Childcare provision | Availability of childcare places, separate from their price | ✗ | ✓ | ✓ | ✓ ✓ | ? | ? |
+| [Parental leave](parental-leave.md) | Length and pay of leave around a birth | ✗ | ✓ | ✓ | ✓ ✓ | ✓ | ✓ |
+| [Child benefits and tax credits](child-benefits.md) | Cash support per child lowers the net cost of each child | ✗ | ✓ | ✓ | ✓ ✓ | ✓ | ✓ |
+| [Childcare provision](childcare-provision.md) | Availability of childcare places, separate from their price | ✗ | ✓ | ✓ | ✓ ✓ | ? | ? |
 | Tax system | Individual vs household taxation, marginal rates on second earners | ✗ | ✗ | ✗ | ✗ ✗ | ✓ | ✓ |
 | Pensions and welfare state | State old-age support removes children's role as old-age security | ✗ | ✗ | ✗ | ✗ ✗ | ✓ | ✓ |
 | Car-seat rules | Mandatory child seats mean a third child often needs a bigger car | ✗ | ✗ | ✗ | ✗ ✗ | ✓ | ✓ |
@@ -224,5 +224,6 @@ background
 life-course
 education-and-work
 costs-and-housing
+policy-and-the-state
 social-and-cultural
 ```

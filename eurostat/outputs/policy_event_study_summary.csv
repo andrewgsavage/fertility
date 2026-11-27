@@ -1,0 +1,29 @@
+direction,row,mean,median,n,share_up,domain
+cut,1st birth 20–24,0.1,-0.3,15,0.5,cash
+cut,1st birth 25–29,-0.2,-1.1,15,0.3,cash
+cut,20–24,-0.3,-0.9,23,0.4,cash
+cut,25–29,-0.6,-1.2,23,0.4,cash
+pro,1st birth 20–24,1.2,0.5,55,0.6,cash
+pro,1st birth 25–29,0.9,0.1,55,0.5,cash
+pro,20–24,1.1,0.8,67,0.6,cash
+pro,25–29,0.8,0.7,67,0.6,cash
+cut,1st birth 20–24,-0.1,-0.4,9,0.4,leave
+cut,1st birth 25–29,-1.1,-0.6,9,0.2,leave
+cut,20–24,-0.7,-1.1,10,0.4,leave
+cut,25–29,-1.0,-0.4,10,0.4,leave
+pro,1st birth 20–24,0.1,-0.2,74,0.5,leave
+pro,1st birth 25–29,0.3,0.1,74,0.5,leave
+pro,20–24,-0.0,-0.4,82,0.4,leave
+pro,25–29,0.1,-0.0,82,0.5,leave
+cut,1st birth 20–24,-3.3,-2.4,3,0.0,childcare
+cut,1st birth 25–29,-1.3,-2.0,3,0.3,childcare
+cut,20–24,-2.1,-1.9,3,0.0,childcare
+cut,25–29,-1.0,-1.2,3,0.3,childcare
+pro,1st birth 20–24,-0.0,-0.5,31,0.5,childcare
+pro,1st birth 25–29,1.3,0.9,31,0.6,childcare
+pro,20–24,0.1,-0.4,36,0.4,childcare
+pro,25–29,0.7,0.4,36,0.6,childcare
+pro,1st birth 20–24,0.7,-0.3,3,0.3,housing
+pro,1st birth 25–29,2.9,2.7,3,1.0,housing
+pro,20–24,0.1,1.0,3,0.7,housing
+pro,25–29,3.4,3.6,3,1.0,housing
