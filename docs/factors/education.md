@@ -23,7 +23,7 @@ See the [country comparison](country-comparison.md) for all factors side by side
 
 ## Has the fall been concentrated among less-educated women?
 
-In rich countries, mostly not. Among women aged 25–44, birth rates fell at least as much for graduates as for women with less education in the US, Sweden, Norway, Estonia, Poland and Turkey. Most of the US fall was below age 25, and there it was concentrated among women who had left school without a degree. Counting all ages from 18 to 44, US women out of school lost about a quarter of their births at every education level. Uruguay is the exception: there the fall was largest among the least educated.
+In rich countries, mostly not. Among women aged 25–44, birth rates fell at least as much for graduates as for women with less education in the US, Finland, Sweden, Denmark, Norway, Estonia, Poland and Turkey. Below 25, Nordic rates fell by 38–57% for women without a degree, and US rates fell most among women who had left school without one. Counting all ages from 18 to 44, US women out of school lost about a quarter of their births at every education level. A Korean cohort study finds graduates delaying more and having fewer children. In lower-income countries surveyed by DHS, and in Uruguay, the fall was largest among the least educated.
 
 Annual rates and completed family size give different answers. Graduates have their children later, so a delay shows up first as a fall in their annual rates. Completed family size by birth cohort is falling most among the least educated, because more of them stay childless. That is the finding for the Nordic countries (see [Nordic register studies](#nordic-register-studies) below).
 
@@ -144,9 +144,85 @@ US Census Bureau [American Community Survey 1-year PUMS](https://www.census.gov/
 
 ::::
 
+### United States: birth certificates and children ever born
+
+Birth certificates show the same pattern at 25–44, more sharply than the ACS. Between 2017 and 2024, graduates' births per woman fell from 1.37 to 1.21 (−12%). Women with a high-school diploma or less had slightly more births (+5–6%), and women with some college about the same. At 20–24, the birth rate fell by about a quarter for high-school graduates (122 to 92 per 1,000) and for women with some college, and by 11% for women with no diploma.
+
+Children ever born shows family size so far. Between 2016 and 2024, childlessness at 30–39 rose by 8 points for high-school graduates (17% to 25%), 6 for some college, 5 for graduates (35% to 40%) and 3 for women with no diploma. Children per woman at 30–39 fell by 9–14% in every group. At 40–50 nothing has changed yet, since those women had most of their children before 2010.
+
+::::{tab-set}
+
+:::{tab-item} Birth certificates
+```{raw} html
+<iframe src="../_static/nchs/births_by_education_us.html" style="width: 100%; height: 520px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+:::
+
+:::{tab-item} Children ever born
+```{raw} html
+<iframe src="../_static/cps/children_ever_born_by_education_us.html" style="width: 100%; height: 660px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+:::
+
+:::{tab-item} Data
+**Births per woman, ages 25–44, birth certificates (ACS in brackets)**
+
+| Year | Less than high school | High school | Some college | Bachelor's or more | All women |
+|---|--:|--:|--:|--:|--:|
+| 2017 | 1.61 (1.57) | 1.24 (1.31) | 1.19 (1.34) | 1.37 (1.48) | 1.31 (1.42) |
+| 2019 | 1.56 (1.57) | 1.25 (1.24) | 1.18 (1.33) | 1.31 (1.41) | 1.28 (1.37) |
+| 2022 | 1.71 (1.74) | 1.33 (1.38) | 1.20 (1.40) | 1.26 (1.50) | 1.29 (1.47) |
+| 2024 | 1.69 (1.60) | 1.31 (1.38) | 1.17 (1.39) | 1.21 (1.42) | 1.25 (1.42) |
+
+**Births per 1,000 women aged 20–24, birth certificates**
+
+| Year | Less than high school | High school | Some college | Bachelor's or more | All women |
+|---|--:|--:|--:|--:|--:|
+| 2017 | 187 | 122 | 49 | 21 | 71 |
+| 2019 | 185 | 117 | 45 | 19 | 67 |
+| 2022 | 159 | 98 | 39 | 18 | 58 |
+| 2024 | 166 | 92 | 36 | 17 | 56 |
+
+**Children ever born per woman**
+
+| Age | Year | Less than high school | High school | Some college | Bachelor's or more |
+|---|---|--:|--:|--:|--:|
+| 20–29 | 2016 | 1.33 | 0.84 | 0.55 | 0.29 |
+| 20–29 | 2020 | 1.18 | 0.73 | 0.43 | 0.26 |
+| 20–29 | 2024 | 0.93 | 0.66 | 0.35 | 0.23 |
+| 30–39 | 2016 | 2.63 | 2.11 | 1.80 | 1.28 |
+| 30–39 | 2020 | 2.56 | 1.80 | 1.63 | 1.23 |
+| 30–39 | 2024 | 2.28 | 1.82 | 1.64 | 1.13 |
+| 40–50 | 2016 | 2.67 | 2.06 | 1.99 | 1.78 |
+| 40–50 | 2020 | 2.68 | 2.09 | 2.08 | 1.80 |
+| 40–50 | 2024 | 2.58 | 2.07 | 2.05 | 1.75 |
+
+**Childless**
+
+| Age | Year | Less than high school | High school | Some college | Bachelor's or more |
+|---|---|--:|--:|--:|--:|
+| 20–29 | 2016 | 34% | 51% | 67% | 81% |
+| 20–29 | 2020 | 44% | 58% | 73% | 84% |
+| 20–29 | 2024 | 48% | 62% | 78% | 85% |
+| 30–39 | 2016 | 12% | 17% | 20% | 35% |
+| 30–39 | 2020 | 14% | 23% | 27% | 37% |
+| 30–39 | 2024 | 15% | 25% | 26% | 40% |
+| 40–50 | 2016 | 12% | 14% | 15% | 19% |
+| 40–50 | 2020 | 8% | 13% | 15% | 19% |
+| 40–50 | 2024 | 9% | 16% | 15% | 20% |
+:::
+
+:::{tab-item} Notes
+```{note}
+Birth certificates: NCHS [natality public-use files](https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm), 2017, 2019, 2022 and 2024, US residents; mother's age at birth (MAGER) and education (MEDUC); births with unknown education (1.3–1.7%) spread over the known levels in proportion. Women by age and education come from the ACS, as above, so these rates mix registrations with a survey; age at the birth and age at the survey differ by about half a year. At 20–24 the denominator includes women still in school. Children ever born: Census Bureau [Fertility of Women in the United States](https://www.census.gov/data/tables/2022/demo/fertility/women-fertility.html), Table 3c, Current Population Survey June Fertility Supplement, 2016–2024; education categories combined as above, weighted by women. Education is measured at the survey, so at 20–29 many women's education is unfinished.
+```
+:::
+
+::::
+
 ### Europe, 2015 to the latest year
 
-Of the seven countries where births per woman at 25–44 fell by 10% or more, tertiary-educated women had the largest fall in four: Turkey, Estonia, Sweden and Poland. In Norway the lowest and highest groups fell by about the same amount. In Romania and Finland the fall was among less-educated women, but both series have breaks. These rates divide register births by survey population counts, so single groups can jump between years; countries marked † have such a jump.
+Of the seven countries where births per woman at 25–44 fell by 10% or more, tertiary-educated women had the largest fall in four: Turkey, Estonia, Sweden and Poland. In Norway the lowest and highest groups fell by about the same amount. In Romania and Finland the fall was among less-educated women, but both series have breaks. Single groups can jump between years, mostly because the coding of mothers' education on birth records changed (see the Nordic register rates below); countries marked † have such a jump.
 
 ::::{tab-set}
 
@@ -187,7 +263,110 @@ Of the seven countries where births per woman at 25–44 fell by 10% or more, te
 
 :::{tab-item} Notes
 ```{note}
-Births: Eurostat [demo_faeduc](https://ec.europa.eu/eurostat/databrowser/view/demo_faeduc/default/table) (live births by mother's age and ISCED 2011 level), 2008–2024; births with unknown education are spread over the known levels in proportion, within each age. Women: Eurostat [lfsa_pgaed](https://ec.europa.eu/eurostat/databrowser/view/lfsa_pgaed/default/table) (EU Labour Force Survey, women by age and education). Births per woman is 5 × the sum of the 25–29 to 40–44 rates. Countries with fewer than 10 years of both are left out, including Germany, France and the Netherlands (2020 on only); Italy reports no education breakdown; Spain stops in 2018, so it is in the country chart only. Births come from registers and women from a survey that classifies education separately, so the ratio has breaks: † marks a country with a year-on-year change above 20% in any group, mostly in the small lower-secondary group (Finland's lower-secondary rate falls from 2.10 to 0.53 between 2020 and 2022; Sweden's jumps in 2013, before this window). The country chart's title lists those years.
+Births: Eurostat [demo_faeduc](https://ec.europa.eu/eurostat/databrowser/view/demo_faeduc/default/table) (live births by mother's age and ISCED 2011 level), 2008–2024; births with unknown education are spread over the known levels in proportion, within each age. Women: Eurostat [lfsa_pgaed](https://ec.europa.eu/eurostat/databrowser/view/lfsa_pgaed/default/table) (EU Labour Force Survey, women by age and education). Births per woman is 5 × the sum of the 25–29 to 40–44 rates. Countries with fewer than 10 years of both are left out, including Germany, France and the Netherlands (2020 on only); Italy reports no education breakdown; Spain stops in 2018, so it is in the country chart only. Births come from registers and women from a survey that classifies education separately. The series have breaks, which the Nordic register rates below trace to changes in birth coding: † marks a country with a year-on-year change above 20% in any group, mostly in the small lower-secondary group (Finland's lower-secondary rate falls from 2.10 to 0.53 between 2020 and 2022; Sweden's jumps in 2013, before this window). The country chart's title lists those years.
+```
+:::
+
+::::
+
+### Nordic countries, register data
+
+Here births and women both come from the population registers. The breaks in the Eurostat series are still there, so they come from how births are coded; each country is shown only for years with consistent coding. At 25–44, tertiary-educated women's rate fell about as much as or more than the least-educated women's in all four countries. At 20–24, rates fell by 38–57% for women without a degree. In absolute terms, the least educated lost the most births at 20–24: in Sweden their rate fell from 133 to 82 per 1,000.
+
+::::{tab-set}
+
+:::{tab-item} Ages 25–44
+```{raw} html
+<iframe src="../_static/eurostat/fertility_by_education_nordic.html" style="width: 100%; height: 680px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+:::
+
+:::{tab-item} Ages 20–24
+```{raw} html
+<iframe src="../_static/eurostat/fertility_by_education_nordic_20_24.html" style="width: 100%; height: 680px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+:::
+
+:::{tab-item} Data
+**Births per woman, ages 25–44**
+
+| Country | Years | Lower secondary or less | Upper secondary | Tertiary | All women |
+|---|---|--:|--:|--:|--:|
+| Finland | 2010–2021 | 1.28 → 1.14 (−11%) | 1.33 → 1.09 (−18%) | 1.75 → 1.46 (−16%) | 1.53 → 1.28 (−16%) |
+| Sweden | 2013–2024 | 2.23 → 1.84 (−17%) | 1.56 → 1.34 (−14%) | 1.61 → 1.30 (−20%) | 1.66 → 1.36 (−18%) |
+| Denmark | 2008–2021 | 1.22 → 1.16 (−5%) | 1.59 → 1.49 (−6%) | 1.94 → 1.74 (−10%) | 1.68 → 1.60 (−5%) |
+| Norway (25–39) | 2011–2022 | 1.32 → 0.95 (−28%) | 1.36 → 1.21 (−11%) | 1.80 → 1.33 (−26%) | 1.58 → 1.25 (−21%) |
+
+**Births per 1,000 women aged 20–24**
+
+| Country | Years | Lower secondary or less | Upper secondary | Tertiary | All women |
+|---|---|--:|--:|--:|--:|
+| Finland | 2010–2021 | 96 → 55 (−43%) | 48 → 27 (−43%) | 52 → 22 (−58%) | 57 → 31 (−46%) |
+| Sweden | 2013–2024 | 133 → 82 (−38%) | 48 → 27 (−43%) | 15 → 8 (−51%) | 47 → 25 (−47%) |
+| Denmark | 2008–2021 | 89 → 49 (−44%) | 32 → 18 (−45%) | 17 → 18 (+7%) | 47 → 24 (−49%) |
+| Norway | 2011–2022 | 99 → 42 (−57%) | 46 → 21 (−54%) | 33 → 13 (−61%) | 56 → 22 (−61%) |
+:::
+
+:::{tab-item} Notes
+```{note}
+Births: Eurostat [demo_faeduc](https://ec.europa.eu/eurostat/databrowser/view/demo_faeduc/default/table), compiled from the national registers; unknown education spread in proportion within age. Women by education and age: Statistics Finland [12bq](https://pxdata.stat.fi/PxWeb/pxweb/en/StatFin/StatFin__vkour/statfin_vkour_pxt_12bq.px/), Statistics Sweden [TAB4320](https://www.statistikdatabasen.scb.se/), Statistics Denmark [HFUDD11](https://www.statbank.dk/HFUDD11), Statistics Norway [08921](https://www.ssb.no/en/statbank/table/08921). Lower secondary or less = ISCED 0–2; Sweden's post-secondary under 3 years and Norway's tertiary vocational (fagskole) are counted as tertiary. Years with a birth-coding break are dropped: Sweden before 2013 (low-educated share of births jumps from 11% to 15%), Norway before 2011 (unknown falls from 13% to 3.5%), Finland after 2021 (low-educated share falls from 12.5% to 5% as unknown rises to 8%). Denmark's births by education end in 2021. Norway's population has a 30–39 band, so its figure covers 25–39. At 20–24, education is unfinished for many, and the tertiary group is small.
+```
+:::
+
+::::
+
+### Estonia, register data
+
+Statistics Estonia publishes births, women and children ever born by education from the same register. Between 2018 and 2025, births per woman at 25–44 fell by about 30% at every level: from 1.22 to 0.85 below upper secondary, 1.34 to 0.90 for upper secondary and 1.56 to 1.10 for tertiary. Most of the fall came after 2021. At 20–24 the rate fell 40% below upper secondary (98 to 59 per 1,000) and 48% for upper secondary.
+
+Childlessness at 25–34 rose between 2012 and 2026 at every level, most for women with upper secondary education (28% to 46%), then below upper secondary (20% to 34%) and tertiary (42% to 54%). At 35–44 it barely moved.
+
+::::{tab-set}
+
+:::{tab-item} Birth rates
+```{raw} html
+<iframe src="../_static/nso/estonia_fertility_by_education.html" style="width: 100%; height: 500px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+:::
+
+:::{tab-item} Children ever born
+```{raw} html
+<iframe src="../_static/nso/estonia_children_ever_born_by_education.html" style="width: 100%; height: 640px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+:::
+
+:::{tab-item} Data
+**Births per woman at 25–44, and per 1,000 women at 20–24**
+
+| Year | Below upper secondary | Upper secondary | Tertiary | All women | 20–24: below upper secondary | 20–24: upper secondary | 20–24: tertiary | 20–24: all |
+|---|--:|--:|--:|--:|--:|--:|--:|--:|
+| 2017 | 1.08 | 1.23 | 1.51 | 1.36 | 98 | 43 | 40 | 51 |
+| 2018 | 1.22 | 1.34 | 1.56 | 1.44 | 98 | 40 | 33 | 48 |
+| 2019 | 1.15 | 1.32 | 1.58 | 1.44 | 88 | 40 | 42 | 48 |
+| 2020 | 1.17 | 1.27 | 1.47 | 1.37 | 91 | 36 | 26 | 43 |
+| 2021 | 1.13 | 1.26 | 1.55 | 1.41 | 85 | 31 | 34 | 40 |
+| 2022 | 1.08 | 1.07 | 1.32 | 1.21 | 74 | 32 | 31 | 38 |
+| 2023 | 1.07 | 1.02 | 1.19 | 1.12 | 76 | 28 | 31 | 36 |
+| 2024 | 0.94 | 0.93 | 1.09 | 1.02 | 64 | 24 | 21 | 30 |
+| 2025 | 0.85 | 0.90 | 1.10 | 1.00 | 59 | 21 | 24 | 28 |
+
+**Children ever born per woman (childless in brackets)**
+
+| Age | 1 January | Below upper secondary | Upper secondary | Tertiary |
+|---|---|--:|--:|--:|
+| 25–34 | 2012 | 1.57 (20%) | 1.14 (28%) | 0.87 (42%) |
+| 25–34 | 2018 | 1.52 (23%) | 1.05 (36%) | 0.80 (48%) |
+| 25–34 | 2022 | 1.43 (28%) | 0.93 (43%) | 0.67 (55%) |
+| 25–34 | 2026 | 1.36 (34%) | 0.91 (46%) | 0.69 (54%) |
+| 35–44 | 2012 | 2.21 (13%) | 1.84 (10%) | 1.66 (13%) |
+| 35–44 | 2018 | 2.15 (13%) | 1.83 (11%) | 1.71 (14%) |
+| 35–44 | 2022 | 2.12 (14%) | 1.80 (13%) | 1.64 (16%) |
+| 35–44 | 2026 | 2.15 (13%) | 1.80 (14%) | 1.61 (16%) |
+:::
+
+:::{tab-item} Notes
+```{note}
+Statistics Estonia, register-based: [RV142U](https://andmed.stat.ee/en/stat/RV142U) (live births by mother's age group and education, 2017–2025), [RV0231U](https://andmed.stat.ee/en/stat/RV0231U) (persons by education, sex and age group, 1 January 2018–2026) and [RV096](https://andmed.stat.ee/en/stat/RV096) (women by number of live-born children, education and age group, 1 January 2012–2026). Women in a year are the mean of 1 January that year and the next; 2017 uses 1 January 2018 only. Births at 40 and over are divided by women 40–44. Births with unknown education are spread in proportion within age. Below upper secondary = ISCED 0–2; upper secondary includes post-secondary non-tertiary. At 20–24 education is unfinished for many. Children ever born excludes women whose number of children is unknown. The children-ever-born series has a one-year jump at 1 January 2022, the first date after the 2021 census.
 ```
 :::
 
@@ -206,6 +385,107 @@ Register studies link each woman's births to her education in the same records, 
 ```{note}
 Norway: register data, multistate model of education and births; the period split is shown in figures only. Finland 2010–2019: register data on 153 fields of education, TFR and first-birth TFR as three-year averages. Finland 2023: Statistics Finland *Births 2023* release; the education categories are not fully defined there.
 ```
+
+### South Korea, cohort study
+
+Korea has no published births by mother's education. A cohort study using longitudinal survey data finds the opposite pattern to the rich countries above: the gap is widening, with graduates delaying more and having fewer children. Between women born in 1960–64 and 1980–84, the median age at first birth rose from 26 to 29 and the share with a child by age 38 fell from 95% to 68%. Education differences in first births narrowed for women born in 1965–74, then widened again. Tertiary-educated women are now the large majority: 76% of women aged 25–34 in 2020.
+
+```{note}
+[Tan (2022)](https://doi.org/10.1016/j.ssresearch.2022.102728), "Educational differentials on the transition to first birth in South Korea", *Social Science Research* 105, summarised in [N-IUSSP](https://www.niussp.org/fertility-and-reproduction/fewer-and-later-births-in-south-korea-especially-among-more-educated-women/). Nationally representative longitudinal data; cumulative first-birth probabilities by birth cohort. The summary gives the education differences in figures only, and does not adjust them for the shrinking share of less-educated women.
+```
+
+### Lower-income countries, DHS surveys
+
+In lower-income countries the fall was concentrated among the least educated. In 49 countries where the TFR fell between DHS surveys at least 10 years apart, it fell more in percentage terms among women with no or primary schooling in 37. The median fall was 20% for them against 12% for women with secondary schooling or more (1.1 children against 0.4). Women also became more educated, which moved them into lower-fertility groups. In the 23 countries where the TFR fell by at least 0.5 and the surveys give the education mix in both years, falls within groups account for a median 57% of the fall and the shift to more education for 38%.
+
+::::{tab-set}
+
+:::{tab-item} Less vs more educated
+```{raw} html
+<iframe src="../_static/dhs/tfr_by_education_dhs_change.html" style="width: 100%; height: 600px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+:::
+
+:::{tab-item} Within groups vs more education
+```{raw} html
+<iframe src="../_static/dhs/tfr_by_education_dhs_decomposition.html" style="width: 100%; height: 920px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+:::
+
+:::{tab-item} By country
+```{raw} html
+<iframe src="../_static/dhs/tfr_by_education_dhs.html" style="width: 100%; height: 480px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+:::
+
+:::{tab-item} Data
+**Total fertility rate, first to last DHS survey**
+
+| Country | Surveys | TFR | No education or primary | Secondary or higher | From falls within groups | From more education |
+|---|---|--:|--:|--:|--:|--:|
+| Kenya | 1989–2025 | 6.7 → 3.1 | 7.1 → 3.9 | 4.9 → 2.9 | – | – |
+| Yemen | 1991–2013 | 7.7 → 4.4 | 7.8 → 4.8 | 3.1 → 2.8 | – | – |
+| Malawi | 1992–2024 | 6.7 → 3.7 | 6.8 → 4.1 | 4.4 → 2.9 | −2.3 | −0.6 |
+| Jordan | 1990–2023 | 5.6 → 2.6 | 6.4 → 3.4 | 5.1 → 2.5 | −2.5 | −0.5 |
+| Ghana | 1988–2022 | 6.4 → 3.9 | 6.6 → 5.3 | 3.6 → 3.4 | – | – |
+| Liberia | 1986–2019 | 6.7 → 4.2 | 7.0 → 5.1 | 4.7 → 3.2 | – | – |
+| Rwanda | 1992–2025 | 6.2 → 3.7 | 6.4 → 4.0 | 4.2 → 3.4 | −2.0 | −0.4 |
+| Zambia | 1992–2024 | 6.5 → 4.0 | 6.9 → 5.0 | 4.9 → 3.3 | −1.7 | −0.6 |
+| Nepal | 1996–2022 | 4.6 → 2.1 | 4.9 → 2.6 | 2.5 → 1.9 | −1.4 | −0.9 |
+| Senegal | 1986–2023 | 6.4 → 4.0 | 6.6 → 4.5 | 3.6 → 3.5 | – | – |
+| Guatemala | 1987–2015 | 5.5 → 3.1 | 5.9 → 3.8 | 2.7 → 2.2 | – | – |
+| Philippines | 1993–2022 | 4.1 → 1.9 | 5.5 → 2.9 | 3.4 → 1.9 | −1.7 | −0.4 |
+| Burkina Faso | 1993–2021 | 6.5 → 4.4 | 6.7 → 4.9 | 3.1 → 3.3 | −1.3 | −0.6 |
+| Morocco | 1987–2003 | 4.6 → 2.5 | 5.0 → 2.8 | 2.3 → 1.8 | – | – |
+| Uganda | 1988–2016 | 7.4 → 5.4 | 7.5 → 6.0 | 5.6 → 4.2 | – | – |
+| Namibia | 1992–2013 | 5.4 → 3.6 | 6.1 → 4.9 | 4.1 → 3.3 | −0.9 | −0.8 |
+| Madagascar | 1992–2021 | 6.1 → 4.3 | 6.7 → 4.9 | 4.3 → 3.4 | −1.5 | −0.3 |
+| Haiti | 1994–2016 | 4.8 → 3.0 | 5.4 → 4.3 | 2.5 → 2.2 | −0.6 | −1.0 |
+| Nigeria | 1990–2025 | 6.0 → 4.2 | 6.4 → 5.5 | 4.4 → 3.4 | −0.8 | −0.9 |
+| Togo | 1988–2013 | 6.4 → 4.8 | 6.7 → 5.5 | 4.5 → 3.5 | – | – |
+| Ethiopia | 2000–2024 | 5.5 → 4.0 | 5.7 → 4.5 | 3.2 → 3.1 | −0.6 | −0.7 |
+| Bolivia | 1989–2008 | 5.0 → 3.5 | 6.2 → 4.9 | 3.3 → 2.6 | – | – |
+| Peru | 1986–2012 | 4.1 → 2.6 | 5.4 → 3.6 | 2.9 → 2.3 | – | – |
+| Tanzania | 1992–2022 | 6.2 → 4.8 | 6.3 → 5.4 | 4.2 → 3.8 | −0.8 | −0.5 |
+| Zimbabwe | 1988–2015 | 5.4 → 4.0 | 6.0 → 5.1 | 3.7 → 3.7 | – | – |
+| Burundi | 1987–2016 | 6.9 → 5.5 | 7.0 → 6.1 | 5.8 → 4.1 | – | – |
+| India | 1993–2020 | 3.4 → 2.0 | 3.8 → 2.6 | 2.4 → 1.8 | −0.8 | −0.5 |
+| Colombia | 1986–2015 | 3.2 → 2.0 | 4.1 → 3.1 | 2.4 → 1.9 | – | – |
+| Dominican Republic | 1986–2013 | 3.7 → 2.5 | 4.3 → 3.3 | 2.7 → 2.3 | – | – |
+| Bangladesh | 1994–2022 | 3.4 → 2.3 | 3.7 → 2.6 | 2.6 → 2.3 | −0.8 | −0.3 |
+| Mali | 1987–2023 | 7.1 → 6.0 | 7.1 → 6.5 | 3.8 → 5.1 | – | – |
+| Cambodia | 2000–2021 | 3.8 → 2.7 | 3.9 → 3.2 | 2.7 → 2.5 | −0.5 | −0.4 |
+| Guinea | 1999–2024 | 5.5 → 4.5 | 5.8 → 5.0 | 3.5 → 3.1 | −0.7 | −0.3 |
+| Cameroon | 1991–2018 | 5.8 → 4.8 | 6.3 → 5.9 | 4.5 → 3.8 | −0.5 | −0.6 |
+| Egypt | 1988–2014 | 4.5 → 3.5 | 5.0 → 3.7 | 3.3 → 3.5 | – | – |
+| Lesotho | 2004–2023 | 3.5 → 2.5 | 4.0 → 3.4 | 2.9 → 2.3 | −0.5 | −0.5 |
+| Cote d'Ivoire | 1994–2021 | 5.3 → 4.3 | 5.6 → 4.8 | 3.4 → 3.2 | −0.5 | −0.4 |
+| Brazil | 1986–1996 | 3.4 → 2.5 | 3.9 → 3.5 | 2.0 → 2.1 | – | – |
+| Sierra Leone | 2008–2019 | 5.1 → 4.2 | 5.7 → 5.0 | 3.1 → 3.0 | −0.5 | −0.4 |
+| Congo Democratic Republic | 2007–2023 | 6.3 → 5.5 | 7.1 → 6.5 | 5.0 → 4.7 | −0.4 | −0.5 |
+| Indonesia | 1987–2017 | 3.1 → 2.4 | 3.4 → 2.9 | 2.5 → 2.4 | – | – |
+| Pakistan | 2006–2017 | 4.1 → 3.6 | 4.6 → 4.1 | 2.8 → 2.9 | −0.4 | −0.2 |
+| Gabon | 2000–2019 | 4.2 → 3.9 | 5.3 → 5.3 | 3.5 → 3.7 | +0.3 | −0.5 |
+| Mozambique | 1997–2022 | 5.2 → 4.9 | 5.3 → 5.7 | 3.5 → 3.2 | +0.2 | −0.5 |
+| Comoros | 1996–2012 | 4.6 → 4.3 | 5.1 → 5.5 | 3.6 → 3.1 | +0.2 | −0.5 |
+| South Africa | 1998–2016 | 2.9 → 2.6 | 3.9 → 3.4 | 2.5 → 2.6 | −0.0 | −0.2 |
+| Tajikistan | 2012–2023 | 3.8 → 3.5 | 4.2 → 3.6 | 3.7 → 3.5 | −0.3 | −0.0 |
+| Benin | 1996–2017 | 6.0 → 5.7 | 6.3 → 6.1 | 2.8 → 4.2 | +0.2 | −0.4 |
+| Turkey | 1993–2013 | 2.5 → 2.3 | 2.8 → 3.1 | 1.7 → 2.0 | +0.4 | −0.6 |
+| Armenia | 2000–2016 | 1.7 → 1.7 | – | 1.7 → 1.7 | – | – |
+| Chad | 1997–2014 | 6.4 → 6.4 | 6.4 → 6.7 | 4.8 → 4.8 | +0.2 | −0.1 |
+| Kyrgyz Republic | 1997–2012 | 3.4 → 3.6 | – | 3.4 → 3.6 | – | – |
+| Niger | 1992–2012 | 7.0 → 7.6 | 7.1 → 7.9 | 3.9 → 4.9 | +0.9 | −0.2 |
+| Mauritania | 2000–2020 | 4.5 → 5.2 | 4.7 → 5.8 | 3.2 → 3.6 | +0.9 | −0.2 |
+:::
+
+:::{tab-item} Notes
+```{note}
+DHS Program [API](https://api.dhsprogram.com/), indicator FE_FRTR_W_TFR (TFR for the three years before each survey) by education, standard DHS surveys only; education is the highest level attended. Countries with a first and last survey at least 10 years apart. The split into falls within groups and more education uses the share of all women 15–49 by education (ED_EDUC_W), not shares by age, so it is approximate; the remainder is small. Some surveys don't report every education group.
+```
+:::
+
+::::
 
 ## Uruguay, 2016–2021
 
