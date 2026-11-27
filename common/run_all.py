@@ -15,7 +15,7 @@ import subprocess
 import sys
 import time
 
-from common.paths import REPO, data_dir
+from common.paths import DATA_ROOT, REPO, data_dir
 
 # Modules other scripts import, or that only print a sample: they write nothing.
 NOT_ENTRY_POINTS = {
@@ -62,7 +62,7 @@ RUN_FIRST = [
 
 # A script that reads its own source's data folder this way is skipped up front
 # when that folder is absent.
-OWN_DATA_RE = re.compile(r'data_dir\(\s*"(?P<src>[^"]+)"\s*\)|ROOT\s*/\s*"data"')
+OWN_DATA_RE = re.compile(r'data_dir\(\s*"(?P<src>[^"]+)"\s*\)')
 TIMEOUT = 600  # seconds per script; the slowest takes well under a minute
 MISSING_DATA_RE =re.compile(r"FileNotFoundError: .*[\\/]data[\\/][^\n]*")
 
@@ -85,7 +85,7 @@ def own_data_missing(script):
     source = script.split("/")[0]
     text = (REPO / script).read_text(encoding="utf-8")
     if OWN_DATA_RE.search(text) and not data_dir(source).exists():
-        return data_dir(source).relative_to(REPO).as_posix() + "/"
+        return data_dir(source).relative_to(DATA_ROOT).as_posix() + "/"
     return None
 
 
@@ -112,7 +112,7 @@ def run(script):
     missing = MISSING_DATA_RE.search(proc.stderr)
     if missing:
         detail = missing.group(0).removeprefix("FileNotFoundError: ")
-        for prefix in (str(REPO).replace("\\", "\\\\") + "\\\\", str(REPO) + os.sep):
+        for prefix in (p for root in (DATA_ROOT, REPO) for p in (str(root).replace("\\", "\\\\") + "\\\\", str(root) + os.sep)):
             detail = detail.replace(prefix, "")
         return "skipped", "missing data: " + detail
     lines = [line for line in proc.stderr.strip().splitlines() if line.strip()]

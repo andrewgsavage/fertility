@@ -57,10 +57,11 @@ import zipfile
 
 import pandas as pd
 import plotly.graph_objects as go
+from common.paths import data_dir
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
-CACHE = ROOT / "eurostat" / "data" / "change_matrix"
-HFD = ROOT / "HFD" / "data" / "HFD"
+CACHE = data_dir("eurostat") / "change_matrix"
+HFD = data_dir("HFD") / "HFD"
 OUT = ROOT / "eurostat" / "outputs"
 sys.path.insert(0, str(ROOT / "ONS" / "scripts"))
 

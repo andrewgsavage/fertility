@@ -27,10 +27,11 @@ from plotly.subplots import make_subplots
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from common import ons_mdf as m  # noqa: E402
 from common.ons_table3 import load_table3_shares  # noqa: E402
+from common.paths import data_dir, outputs_dir  # noqa: E402
 
-LIVING = pathlib.Path("data/families/maritalstatuslivingarrangements2002to2025englandandwales.xlsx")
-OUT_HTML = "outputs/outcome_grid_uk.html"
-OUT_CSV = "outputs/outcome_grid_uk.csv"
+LIVING = data_dir("ONS") / "families" / "maritalstatuslivingarrangements2002to2025englandandwales.xlsx"
+OUT_HTML = outputs_dir("ONS") / "outcome_grid_uk.html"
+OUT_CSV = outputs_dir("ONS") / "outcome_grid_uk.csv"
 YEARS = range(2005, 2025)
 BASE, END = 2010, 2022
 COUPLE_AGES = ["16 to 29", "30 to 34", "35 to 39", "40 to 44"]

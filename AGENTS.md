@@ -45,3 +45,5 @@ Eurostat [demo_fabort](https://ec.europa.eu/eurostat/databrowser/view/demo_fabor
 
 ::::
 `````
+
+Reach raw downloads through `common.paths.data_dir("<folder>")`, never `REPO / "<folder>" / "data"`. It points at the main checkout's data folders, which every worktree shares, so a file downloaded once is there for all of them.

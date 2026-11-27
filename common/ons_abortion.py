@@ -12,9 +12,9 @@ import zipfile
 import xml.etree.ElementTree as ET
 
 from common.hfd import HFD_DIR
-from common.paths import REPO
+from common.paths import data_dir
 
-ODS = REPO / "ONS" / "data" / "abortion-statistics-2023-england-and-wales-residents.ods"
+ODS = data_dir("ONS") / "abortion-statistics-2023-england-and-wales-residents.ods"
 HFD_BIRTHS = HFD_DIR / "birthsRR.txt"
 
 # ONS Births in England and Wales: 2023 (HFD ends at 2022).

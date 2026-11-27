@@ -24,9 +24,10 @@ import plotly.colors as pc
 import plotly.graph_objects as go
 
 from common.plotting import write_html
+from common.paths import data_dir
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-DATA = ROOT / "data"
+DATA = data_dir("UN")
 OUTDIR = ROOT / "outputs"
 XLSX = DATA / "undesa_pd_2019_wmd_marital_status.xlsx"
 

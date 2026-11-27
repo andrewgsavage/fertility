@@ -17,9 +17,10 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 from common.plotting import write_html
+from common.paths import data_dir
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-XLSX = ROOT / "data" / "families" / "maritalstatuslivingarrangements2002to2025englandandwales.xlsx"
+XLSX = data_dir("ONS") / "families" / "maritalstatuslivingarrangements2002to2025englandandwales.xlsx"
 OUTDIR = ROOT / "outputs"
 
 SHEETS = {"6": "Women", "5": "Men"}

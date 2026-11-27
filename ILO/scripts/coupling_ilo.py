@@ -24,9 +24,10 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 from common.plotting import write_html
+from common.paths import data_dir
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-DATA = ROOT / "data"
+DATA = data_dir("ILO")
 OUTDIR = ROOT / "outputs"
 
 AGES = {"AGE_10YRBANDS_Y15-24": "15-24", "AGE_10YRBANDS_Y25-34": "25-34", "AGE_10YRBANDS_Y35-44": "35-44"}
