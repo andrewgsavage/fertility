@@ -20,9 +20,10 @@ import pandas as pd
 import plotly.graph_objects as go
 
 from common.plotting import write_html
+from common.paths import data_dir
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-DATA = ROOT / "data"
+DATA = data_dir("NSO")
 OUTDIR = ROOT / "outputs"
 
 BANDS = {"18-24": (18, 24), "20-24": (20, 24), "25-29": (25, 29), "30-34": (30, 34), "35-39": (35, 39),

@@ -20,9 +20,10 @@ from plotly.subplots import make_subplots
 
 from common.flourish import flourish
 from common.plotting import write_html
+from common.paths import data_dir
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-DATA = ROOT / "data"
+DATA = data_dir("FT")
 OUTDIR = ROOT / "outputs"
 
 # Shown by default; the rest start hidden in the legend.

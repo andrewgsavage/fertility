@@ -33,9 +33,10 @@ import zipfile
 import xml.etree.ElementTree as ET
 
 import pandas as pd
+from common.paths import data_dir
 
 _ROOT = pathlib.Path(__file__).resolve().parent.parent
-D = _ROOT / "data" / "dhsc"
+D = data_dir("ONS") / "dhsc"
 OUT = _ROOT / "outputs" / "dhsc_parity_by_age.csv"
 T = "{urn:oasis:names:tc:opendocument:xmlns:table:1.0}"
 P = "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p"

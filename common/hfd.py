@@ -3,9 +3,9 @@ unpacked into HFD/data/HFD/ (not tracked in git)."""
 
 import pandas as pd
 
-from common.paths import REPO
+from common.paths import data_dir
 
-HFD_DIR = REPO / "HFD" / "data" / "HFD"
+HFD_DIR = data_dir("HFD") / "HFD"
 
 
 def read_hfd(name, names=None, *, directory=HFD_DIR, na_values=".", **kwargs):

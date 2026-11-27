@@ -13,9 +13,9 @@ where P1/P2 are cumulative % of the cohort with >=1 / >=2 children.
 
 import openpyxl
 
-from common.paths import REPO
+from common.paths import data_dir
 
-SOURCE = REPO / "ONS" / "data" / "finalisingcohorttables2024finalforupload.xlsx"
+SOURCE = data_dir("ONS") / "finalisingcohorttables2024finalforupload.xlsx"
 MIN_PERIOD_YEAR = 2005
 
 

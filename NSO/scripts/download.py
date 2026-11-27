@@ -19,11 +19,11 @@ not included; ILO covers it.
 """
 
 import json
-import pathlib
 
 import requests
+from common.paths import data_dir
 
-DATA = pathlib.Path(__file__).resolve().parent.parent / "data"
+DATA = data_dir("NSO")
 UA = {"User-Agent": "Mozilla/5.0"}
 
 

@@ -14,9 +14,10 @@ import json
 import pathlib
 
 import pandas as pd
+from common.paths import data_dir
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-DATA = ROOT / "data"
+DATA = data_dir("DHS")
 OUTDIR = ROOT / "outputs"
 
 # DHS country name -> ISO3.
