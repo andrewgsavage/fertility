@@ -30,7 +30,7 @@ import pandas as pd
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-from common.paths import data_dir, outputs_dir
+from common.paths import REPO, data_dir, outputs_dir
 from common.plotting import write_html
 from young_fertility import DATA, NAMES, OUTDIR, internet_use
 
@@ -41,7 +41,7 @@ LAST_YEAR = 2024
 TAKEOFF = outputs_dir("FT") / "smartphone_takeoff_years.csv"
 HFD = data_dir("HFD") / "HFD" / "asfrRR.txt"
 HFC = DATA / "change_matrix"  # hfc_<ISO>_ASFRstand_TOT.txt, fetched on first use
-ROOT = DATA.parents[1]
+ROOT = REPO
 
 # ISO3 -> (name, region). Eurostat countries use demo_frate; the rest the source in SOURCE.
 COUNTRIES = {
