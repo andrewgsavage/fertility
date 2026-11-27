@@ -188,6 +188,77 @@ First-birth rates fell most among the youngest women and were back at their 2009
 [Human Fertility Database](https://www.humanfertility.org/) conditional fertility rates (`mi`) and exposures by parity (`exposRRpa`). Mean rate over each country's latest three years ÷ 2009–2011 mean, standardised within each age band to the 2009–2011 age distribution of women at risk, then the median across 26 countries. First-birth rates are per childless woman, whether single or in a couple, so they combine the first two links of the chain. The UK is not included.
 ```
 
+In the US, birth rates under 25 fell by a third or more at every education level. From 25 to 34 they fell most for graduates, and from 35 they rose for everyone but least for graduates. Across all women the fall at 20–24 is larger than in any education group, because more young women now have degrees and those women have fewer births. See [Education](../factors/education.md).
+
+```{raw} html
+<svg viewBox="0 0 760 420" role="img" aria-label="Block diagram from women not in school to a birth. Under the arrow, the US birth rate in 2022 and 2024 relative to 2008 to 2012, by education and age. Less than high school: 20 to 24 0.61, 25 to 29 0.90, 30 to 34 1.05, 35 to 39 1.20, 40 to 44 1.71; High school: 20 to 24 0.60, 25 to 29 0.87, 30 to 34 1.10, 35 to 39 1.32, 40 to 44 1.69; Some college: 20 to 24 0.56, 25 to 29 0.87, 30 to 34 1.02, 35 to 39 1.22, 40 to 44 1.50; Bachelor's or more: 20 to 24 0.68, 25 to 29 0.73, 30 to 34 0.87, 35 to 39 1.05, 40 to 44 1.16; All women: 20 to 24 0.54, 25 to 29 0.79, 30 to 34 0.99, 35 to 39 1.20, 40 to 44 1.43." style="width: 100%; max-width: 760px; display: block; margin: 1em auto; color: var(--color-foreground-primary);">
+<defs>
+<marker id="ft-arrow-6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker>
+</defs>
+<g fill="none" stroke="currentColor" stroke-width="1.5">
+<rect x="130" y="10" width="140" height="60" rx="6"/>
+<rect x="490" y="10" width="140" height="60" rx="6"/>
+</g>
+<line x1="272" y1="40" x2="488" y2="40" stroke="currentColor" stroke-width="2" marker-end="url(#ft-arrow-6)"/>
+<line x1="380" y1="44" x2="380" y2="108" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3"/>
+<g fill="currentColor" font-size="14" text-anchor="middle">
+<text x="200" y="36">Women</text>
+<text x="200" y="54">not in school</text>
+<text x="560" y="45">Birth</text>
+</g>
+<text x="380" y="126" fill="currentColor" font-size="13" font-weight="bold" text-anchor="middle">Birth rate, US, by education</text>
+<g transform="translate(-40 0)">
+<g fill="currentColor" font-size="12" text-anchor="middle">
+<text x="362" y="150">20–24</text><text x="426" y="150">25–29</text><text x="490" y="150">30–34</text><text x="554" y="150">35–39</text><text x="618" y="150">40–44</text>
+</g>
+<g fill="currentColor" font-size="12" text-anchor="end">
+<text x="322" y="180">Less than high school</text><text x="322" y="214">High school</text><text x="322" y="248">Some college</text><text x="322" y="282">Bachelor&#8217;s or more</text><text x="322" y="322" font-weight="bold">All women</text>
+</g>
+<g stroke="#ffffff" stroke-width="1.5">
+<rect x="330" y="158" width="64" height="34" fill="#efb595"/>
+<rect x="394" y="158" width="64" height="34" fill="#f8dfd0"/>
+<rect x="458" y="158" width="64" height="34" fill="#ececec"/>
+<rect x="522" y="158" width="64" height="34" fill="#b5d2ea"/>
+<rect x="586" y="158" width="64" height="34" fill="#7fb0db"/>
+<rect x="330" y="192" width="64" height="34" fill="#e08a5b"/>
+<rect x="394" y="192" width="64" height="34" fill="#f8dfd0"/>
+<rect x="458" y="192" width="64" height="34" fill="#b5d2ea"/>
+<rect x="522" y="192" width="64" height="34" fill="#7fb0db"/>
+<rect x="586" y="192" width="64" height="34" fill="#7fb0db"/>
+<rect x="330" y="226" width="64" height="34" fill="#e08a5b"/>
+<rect x="394" y="226" width="64" height="34" fill="#f8dfd0"/>
+<rect x="458" y="226" width="64" height="34" fill="#ececec"/>
+<rect x="522" y="226" width="64" height="34" fill="#b5d2ea"/>
+<rect x="586" y="226" width="64" height="34" fill="#7fb0db"/>
+<rect x="330" y="260" width="64" height="34" fill="#efb595"/>
+<rect x="394" y="260" width="64" height="34" fill="#efb595"/>
+<rect x="458" y="260" width="64" height="34" fill="#f8dfd0"/>
+<rect x="522" y="260" width="64" height="34" fill="#b5d2ea"/>
+<rect x="586" y="260" width="64" height="34" fill="#b5d2ea"/>
+<rect x="330" y="300" width="64" height="34" fill="#e08a5b"/>
+<rect x="394" y="300" width="64" height="34" fill="#efb595"/>
+<rect x="458" y="300" width="64" height="34" fill="#ececec"/>
+<rect x="522" y="300" width="64" height="34" fill="#b5d2ea"/>
+<rect x="586" y="300" width="64" height="34" fill="#7fb0db"/>
+</g>
+<g fill="#1a1a1a" font-size="14" text-anchor="middle">
+<text x="362" y="180">0.61</text><text x="426" y="180">0.90</text><text x="490" y="180">1.05</text><text x="554" y="180">1.20</text><text x="618" y="180">1.71</text><text x="362" y="214">0.60</text><text x="426" y="214">0.87</text><text x="490" y="214">1.10</text><text x="554" y="214">1.32</text><text x="618" y="214">1.69</text><text x="362" y="248">0.56</text><text x="426" y="248">0.87</text><text x="490" y="248">1.02</text><text x="554" y="248">1.22</text><text x="618" y="248">1.50</text><text x="362" y="282">0.68</text><text x="426" y="282">0.73</text><text x="490" y="282">0.87</text><text x="554" y="282">1.05</text><text x="618" y="282">1.16</text><text x="362" y="322">0.54</text><text x="426" y="322">0.79</text><text x="490" y="322">0.99</text><text x="554" y="322">1.20</text><text x="618" y="322">1.43</text>
+</g>
+</g>
+<g font-size="12" fill="currentColor">
+<rect x="150" y="358" width="16" height="16" fill="#e08a5b"/><text x="172" y="371">below 2008–12</text>
+<rect x="285" y="358" width="16" height="16" fill="#ececec"/><text x="307" y="371">within 5%</text>
+<rect x="385" y="358" width="16" height="16" fill="#b5d2ea"/><text x="407" y="371">above</text>
+<rect x="460" y="358" width="16" height="16" fill="#7fb0db"/><text x="482" y="371">25%+ above 2008–12</text>
+<text x="380" y="400" text-anchor="middle">American Community Survey, 2022 and 2024 ÷ 2008–12; 1.00 = 2008–12 rate at that age</text>
+</g>
+</svg>
+```
+
+```{note}
+Census Bureau [American Community Survey](https://www.census.gov/programs-surveys/acs/microdata.html) 1-year public-use microdata, weighted: women not enrolled in school, births in the last 12 months (FER) by education (SCHL) and single year of age. Rates by single age are averaged unweighted within each band. 2022 and 2024 ÷ the mean of 2008, 2010 and 2012, the years tabulated. All births, not first births: the ACS does not record birth order. At 20–24 many women with less than a degree are still to finish their education, so these groups are not fixed over time.
+```
+
 ## Critique
 
 | Claim | Verdict | Evidence | Main weakness |

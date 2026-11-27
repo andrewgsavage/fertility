@@ -57,7 +57,12 @@ RUN_FIRST = [
     "ONS/scripts/coupling_by_age_ew.py",  # -> ONS/scripts/births_by_union_ew.py
     "ONS/scripts/births_by_union_ew.py",  # -> HFD/scripts/couples_vs_births_per_couple.py
     "ACS/scripts/acs_births_by_union.py",  # -> HFD/scripts/couples_vs_births_per_couple.py
-    "ACS/scripts/acs_births_by_education.py",  # -> ACS/scripts/fertility_by_education_us.py, NCHS/scripts/births_by_education_us.py
+    "ACS/scripts/acs_births_by_education.py",  # -> ACS/scripts/fertility_by_education_us.py, NCHS/scripts/births_by_education_us.py, birth_rate_ratio_by_education_us.py
+    "NSO/scripts/brazil_births_by_education.py",  # -> NSO/scripts/latam_fertility_by_education.py, eurostat/scripts/education_curves_facet.py
+    "NSO/scripts/mexico_births_by_education.py",  # -> NSO/scripts/latam_fertility_by_education.py, eurostat/scripts/education_curves_facet.py
+    "ACS/scripts/fertility_by_education_us.py",  # -> eurostat/scripts/education_curves_facet.py
+    "eurostat/scripts/fertility_by_education_nordic.py",  # -> same
+    "eurostat/scripts/fertility_by_education_europe_curves.py",  # -> same
     "GGS/scripts/young_ideals_europe.py",  # -> eurostat/scripts/change_matrix.py
     "GSS/scripts/ideal_by_cohort_us.py",  # -> eurostat/scripts/change_matrix.py
     "FT/scripts/smartphone_takeoff.py",  # -> eurostat/scripts/smartphone_milestones.py

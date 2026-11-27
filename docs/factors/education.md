@@ -23,7 +23,7 @@ See the [country comparison](country-comparison.md) for all factors side by side
 
 ## Has the fall been concentrated among less-educated women?
 
-In rich countries, mostly not. Among women aged 25–44, birth rates fell at least as much for graduates as for women with less education in the US, Finland, Sweden, Denmark, Norway, Estonia, Poland and Turkey. Below 25, Nordic rates fell by 38–57% for women without a degree, and US rates fell most among women who had left school without one. Counting all ages from 18 to 44, US women out of school lost about a quarter of their births at every education level. A Korean cohort study finds graduates delaying more and having fewer children. In lower-income countries surveyed by DHS, and in Uruguay, the fall was largest among the least educated.
+In rich countries, mostly not. Among women aged 25–44, birth rates fell at least as much for graduates as for women with less education in the US, Finland, Sweden, Denmark, Norway, Estonia, Poland and Turkey. Below 25, Nordic rates fell by 38–57% for women without a degree, and US rates fell most among women who had left school without one. Counting all ages from 18 to 44, US women out of school lost about a quarter of their births at every education level. In Korea, first births for women born in the early 1980s fell most among university graduates. In Mexico and Brazil since the mid-2010s, the fall at 25–44 was also largest among graduates. In lower-income countries surveyed by DHS, and in Uruguay, the fall was largest among the least educated.
 
 Annual rates and completed family size give different answers. Graduates have their children later, so a delay shows up first as a fall in their annual rates. Completed family size by birth cohort is falling most among the least educated, because more of them stay childless. That is the finding for the Nordic countries (see [Nordic register studies](#nordic-register-studies) below).
 
@@ -388,11 +388,35 @@ Norway: register data, multistate model of education and births; the period spli
 
 ### South Korea, cohort study
 
-Korea has no published births by mother's education. A cohort study using longitudinal survey data finds the opposite pattern to the rich countries above: the gap is widening, with graduates delaying more and having fewer children. Between women born in 1960–64 and 1980–84, the median age at first birth rose from 26 to 29 and the share with a child by age 38 fell from 95% to 68%. Education differences in first births narrowed for women born in 1965–74, then widened again. Tertiary-educated women are now the large majority: 76% of women aged 25–34 in 2020.
+Korea has no published births by mother's education. A survey-based cohort study finds the opposite of the rich countries above: the fall in first births was concentrated among graduates. Compared with women born in 1960–64, the odds of a first birth for women born in 1980–84 were 39% lower for women with high school or less, 35% lower for two-year college and 66% lower for university graduates. For women born 1965–79 the education gap had narrowed. By 2018, when they were 34–38, 54% of women born 1980–84 had had a first birth, against 95% of those born 1960–64. Graduates are also a growing share: 45% of the 1980–84 cohort against 16% of the 1960–64 cohort.
 
+::::{tab-set}
+
+:::{tab-item} Data
+**Odds ratio of a first birth, from a discrete-time model**
+
+| Birth cohort | University vs high school or less | College vs high school or less | Women: high school or less | Women: college | Women: university |
+|---|--:|--:|--:|--:|--:|
+| 1960–64 | 0.66 | 0.58 | 78% | 6% | 16% |
+| 1965–69 | 0.77 | 0.81 | 63% | 11% | 26% |
+| 1970–74 | 0.70 | 0.79 | 50% | 17% | 32% |
+| 1975–79 | 0.64 | 0.79 | 39% | 27% | 35% |
+| 1980–84 | 0.38 | 0.62 | 27% | 27% | 45% |
+
+**Odds ratio of a first birth, 1980–84 vs 1960–64 cohort**
+
+| High school or less | College | University |
+|--:|--:|--:|
+| 0.61 | 0.65 | 0.34 |
+:::
+
+:::{tab-item} Notes
 ```{note}
-[Tan (2022)](https://doi.org/10.1016/j.ssresearch.2022.102728), "Educational differentials on the transition to first birth in South Korea", *Social Science Research* 105, summarised in [N-IUSSP](https://www.niussp.org/fertility-and-reproduction/fewer-and-later-births-in-south-korea-especially-among-more-educated-women/). Nationally representative longitudinal data; cumulative first-birth probabilities by birth cohort. The summary gives the education differences in figures only, and does not adjust them for the shrinking share of less-educated women.
+[Tan (2022)](https://doi.org/10.1016/j.ssresearch.2022.102728), *Social Science Research* 105, summarised in [N-IUSSP](https://www.niussp.org/fertility-and-reproduction/fewer-and-later-births-in-south-korea-especially-among-more-educated-women/); figures from the [2021 IUSSP conference version](https://ipc2021.popconf.org/uploads/210423), Tables 1 and 3. Korean Longitudinal Survey of Women and Families (KLoWF), waves 1–7 (2007–2018), women born 1960–84; discrete-time logit of first birth with cohort × education interaction, controlling for family background and attitudes. College = two-year college. Odds ratios are per year at risk, not shares. The 1980–84 cohort was 34–38 at the last wave, so part of its gap is later rather than fewer first births.
 ```
+:::
+
+::::
 
 ### Lower-income countries, DHS surveys
 
@@ -482,6 +506,90 @@ In lower-income countries the fall was concentrated among the least educated. In
 :::{tab-item} Notes
 ```{note}
 DHS Program [API](https://api.dhsprogram.com/), indicator FE_FRTR_W_TFR (TFR for the three years before each survey) by education, standard DHS surveys only; education is the highest level attended. Countries with a first and last survey at least 10 years apart. The split into falls within groups and more education uses the share of all women 15–49 by education (ED_EDUC_W), not shares by age, so it is approximate; the remainder is small. Some surveys don't report every education group.
+```
+:::
+
+::::
+
+### Mexico and Brazil, registered births
+
+In Mexico and Brazil, birth registrations give the mother's education, and household surveys give women by age and education. In both, the fall at 25–44 since the mid-2010s was largest among graduates. In Mexico, between 2015 and 2024, births per woman at 25–44 fell 43% for women with some university, against 34% for primary or less and 31% for secondary. At 20–24 the falls were 53%, 43% and 38%. In Brazil, between 2014 and 2024, births per woman at 25–44 fell 18% for women with a degree (1.14 to 0.93) and barely changed for the rest. At 20–24 Brazil's rate fell 18% overall but at most 12% within any group, because more young women have finished secondary school.
+
+::::{tab-set}
+
+:::{tab-item} Chart
+```{raw} html
+<iframe src="../_static/nso/latam_fertility_by_education.html" style="width: 100%; height: 780px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+:::
+
+:::{tab-item} Data
+**Mexico, births per woman at 25–44**
+
+| Year | Primary or less | Secondary or preparatoria | Some university | All women |
+|---|--:|--:|--:|--:|
+| 2015 | 1.35 | 1.18 | 1.22 | 1.20 |
+| 2016 | 1.27 | 1.15 | 1.19 | 1.16 |
+| 2017 | 1.31 | 1.14 | 1.17 | 1.15 |
+| 2018 | 1.28 | 1.12 | 1.07 | 1.11 |
+| 2019 | 1.18 | 1.07 | 1.02 | 1.05 |
+| 2020 | 1.19 | 1.00 | 0.89 | 0.97 |
+| 2021 | 1.19 | 0.96 | 0.79 | 0.92 |
+| 2022 | 1.16 | 0.97 | 0.83 | 0.93 |
+| 2023 | 0.98 | 0.88 | 0.77 | 0.84 |
+| 2024 | 0.89 | 0.81 | 0.69 | 0.76 |
+
+**Mexico, births per 1,000 women aged 20–24**
+
+| Year | Primary or less | Secondary or preparatoria | Some university | All women |
+|---|--:|--:|--:|--:|
+| 2015 | 222 | 148 | 34 | 123 |
+| 2016 | 200 | 148 | 34 | 121 |
+| 2017 | 211 | 145 | 31 | 116 |
+| 2018 | 196 | 138 | 28 | 107 |
+| 2019 | 165 | 126 | 25 | 96 |
+| 2020 | 200 | 121 | 22 | 91 |
+| 2021 | 164 | 111 | 18 | 80 |
+| 2022 | 165 | 107 | 18 | 78 |
+| 2023 | 158 | 97 | 18 | 71 |
+| 2024 | 126 | 92 | 16 | 64 |
+
+**Brazil, births per woman at 25–44**
+
+| Year | Below secondary complete | Secondary complete | Tertiary complete | All women |
+|---|--:|--:|--:|--:|
+| 2014 | 1.11 | 0.85 | 1.14 | 0.99 |
+| 2015 | 1.14 | 0.90 | 1.12 | 1.02 |
+| 2016 | 1.10 | 0.86 | 1.03 | 0.97 |
+| 2017 | 1.10 | 0.93 | 1.09 | 1.02 |
+| 2018 | 1.19 | 0.95 | 1.09 | 1.05 |
+| 2019 | 1.17 | 0.95 | 1.05 | 1.03 |
+| 2020 | 1.22 | 0.92 | 0.94 | 1.00 |
+| 2021 | 1.13 | 0.92 | 0.98 | 0.99 |
+| 2022 | 1.12 | 0.91 | 0.95 | 0.98 |
+| 2023 | 1.15 | 0.91 | 0.97 | 0.98 |
+| 2024 | 1.11 | 0.87 | 0.93 | 0.94 |
+
+**Brazil, births per 1,000 women aged 20–24**
+
+| Year | Below secondary complete | Secondary complete | Tertiary complete | All women |
+|---|--:|--:|--:|--:|
+| 2014 | 151 | 59 | 40 | 88 |
+| 2015 | 154 | 61 | 43 | 89 |
+| 2016 | 153 | 60 | 40 | 86 |
+| 2017 | 148 | 63 | 43 | 87 |
+| 2018 | 152 | 64 | 42 | 87 |
+| 2019 | 151 | 63 | 37 | 84 |
+| 2020 | 168 | 60 | 34 | 81 |
+| 2021 | 152 | 62 | 37 | 80 |
+| 2022 | 142 | 60 | 36 | 76 |
+| 2023 | 140 | 61 | 38 | 76 |
+| 2024 | 138 | 59 | 35 | 72 |
+:::
+
+:::{tab-item} Notes
+```{note}
+Mexico: births from INEGI [Estadística de Nacimientos Registrados](https://www.inegi.org.mx/programas/natalidad/) microdata, mother's age at the birth and schooling (ESCOL_MAD), births of each year registered in that year or the next (about 93% of all eventually registered); women from the [ENOE](https://www.inegi.org.mx/programas/enoe/15ymas/) third-quarter microdata, highest level with a grade passed. Primary or less = up to primary complete; secondary = secundaria, preparatoria, normal or carrera técnica; some university = at least one year of profesional. Brazil: births from DATASUS [SINASC](https://datasus.saude.gov.br/nascidos-vivos-desde-1994) by mother's residence, schooling ESCMAEAGR1 (first available in the 2014 file); women from IBGE [PNAD Contínua](https://www.ibge.gov.br/estatisticas/sociais/trabalho/17270-pnad-continua.html) third-quarter microdata, highest level attained (VD3004). Below secondary complete includes secondary incomplete; secondary complete includes tertiary incomplete. Births recorded as secondary with completion not stated (7–16%) are split between the two in proportion; other unknown schooling (1–2%) is spread in proportion within age. Both countries' rates mix registrations with a survey, so the education categories don't match exactly and levels across groups are less reliable than changes within a group. PNAD Contínua was run by telephone in 2020–21. At 20–24 education is unfinished for many.
 ```
 :::
 
