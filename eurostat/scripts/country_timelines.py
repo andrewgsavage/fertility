@@ -3,7 +3,7 @@ and family-policy events.
 
 Rows per country: ASFR at 20-24 and 25-29, all births and first births. Each row is the
 BIC-chosen piecewise-linear fit to log ASFR (0-2 breaks), coloured by % a year, as in
-smartphone_milestones.py.
+smartphone_milestones.py; a button switches to each year's % change from the year before.
 
 - All births: smartphone_milestones.load_asfr (Eurostat demo_frate, HFD asfrRR, HFC, Uruguay).
 - First births: Eurostat demo_fordagec (order 1, single years of age) over demo_pjan women
@@ -113,7 +113,14 @@ def country_events(c, m):
 
 # ---------- chart ----------
 
-def region_chart(region, countries, ms, fits):
+def yearly_changes(s):
+    """[(year, % change from the year before)] from PEAK_FROM, consecutive years only."""
+    s = s.dropna()
+    s = s[s.index >= PEAK_FROM]
+    return [(y, 100 * (s[y] / s[y - 1] - 1)) for y in s.index if y - 1 in s.index]
+
+
+def region_chart(region, countries, ms, fits, series):
     n = len(countries)
     label = lambda c: SHORT.get(COUNTRIES[c][0], COUNTRIES[c][0])
     plot_h = PER_COUNTRY * n
@@ -138,6 +145,20 @@ def region_chart(region, countries, ms, fits):
                         showscale=i == 1, colorbar=dict(title="% a year", ticksuffix="%", len=min(1, 300 / plot_h),
                                                         y=1, yanchor="top", thickness=12)),
             hovertext=text, hoverinfo="text", showlegend=False), row=i, col=1)
+        ys, base, val, text = [], [], [], []
+        for kind, age, name in ROWS:
+            s = series[c].get((kind, age))
+            if s is None or fits[c].get((kind, age)) is None:
+                continue
+            for y, v in yearly_changes(s):
+                ys.append(name), base.append(y - 1), val.append(v)
+                text.append(f"{label(c)}, {name}, {y - 1}–{y}: {v:+.1f}%")
+        fig.add_trace(go.Bar(
+            x=[1] * len(ys), y=ys, base=base, width=1, orientation="h", visible=False,
+            marker=dict(color=val, colorscale=scale, cmin=-LIMIT, cmax=LIMIT, line=dict(color="#fcfcfb", width=1),
+                        showscale=i == 1, colorbar=dict(title="% change", ticksuffix="%", len=min(1, 300 / plot_h),
+                                                        y=1, yanchor="top", thickness=12)),
+            hovertext=text, hoverinfo="text", showlegend=False), row=i, col=1)
         ev = country_events(c, ms[c])
         seen = {}
         xs, syms, tips, rings = [], [], [], []
@@ -160,11 +181,19 @@ def region_chart(region, countries, ms, fits):
     legend = "   ".join(f"{SYMBOL[k]} {KIND_NAME[k]}" for k in SYMBOL) + "<br>" +         f"<span style='color:{RISE}'>○</span> Expansion or liberalisation   "         f"<span style='color:{FALL}'>○</span> Cut or restriction"
     fig.add_annotation(x=0, xref="paper", xanchor="left", y=1, yref="paper", yanchor="bottom", yshift=22,
                        align="left", text=legend, showarrow=False, font=dict(size=12))
+    # Trace order per country: trend bars, yearly bars, rings, icons.
+    trend = [j % 4 != 1 for j in range(4 * n)]
+    yearly = [j % 4 != 0 for j in range(4 * n)]
+    fig.update_layout(updatemenus=[dict(
+        type="buttons", direction="right", showactive=True, x=0, xanchor="left", y=1 + 58 / plot_h,
+        yanchor="bottom", pad=dict(r=0, t=0), font=dict(size=11),
+        buttons=[dict(label="Trend", method="restyle", args=[{"visible": trend}]),
+                 dict(label="Year by year", method="restyle", args=[{"visible": yearly}])])])
     fig.update_xaxes(range=[PEAK_FROM - 0.5, 2026.4], dtick=5, gridcolor="#ecebe8")
     fig.update_xaxes(showticklabels=True, row=n, col=1)
-    height = plot_h + 98
+    height = plot_h + 128
     fig.update_layout(template="plotly_white", barmode="overlay", hovermode="closest", height=height,
-                      title=None, margin=dict(t=68, l=110, r=20, b=30))
+                      title=None, margin=dict(t=98, l=110, r=20, b=30))
     return fig, height
 
 
@@ -177,16 +206,17 @@ def main():
     asfr = load_asfr()
     eurostat_isos = [c for c in asfr if c not in HFD_CODES and c not in ("AUS", "NZL", "URY")]
     first = load_first(eurostat_isos)
-    fits = {}
+    fits, series = {}, {}
     for c in ms:
-        fits[c] = {}
+        fits[c], series[c] = {}, {}
         for kind, src in (("all", asfr), ("first", first)):
             for age in ("20-24", "25-29"):
                 s = src.get(c, {}).get(age)
+                series[c][(kind, age)] = s
                 fits[c][(kind, age)] = None if s is None else slope_breaks(s)
     for region in REGIONS:
         countries = sorted((c for c in ms if ms[c]["region"] == region), key=lambda c: COUNTRIES[c][0])
-        fig, height = region_chart(region, countries, ms, fits)
+        fig, height = region_chart(region, countries, ms, fits, series)
         name = f"country_timelines_{slug(region)}.html"
         write_html(fig, OUTDIR / name)
         print(f"{name}: {height}px")

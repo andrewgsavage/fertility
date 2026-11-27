@@ -89,30 +89,35 @@ LIMIT = 10  # % a year at the ends of the colour scale
 
 # ---------- data ----------
 
-def eurostat_asfr():
+YOUNG = ("20-24", "25-29")
+
+
+def eurostat_asfr(bands=YOUNG):
     """{age: wide table year x ISO3} from demo_frate."""
     d = pd.read_csv(DATA / "demo_frate.csv", usecols=["age", "geo", "TIME_PERIOD", "OBS_VALUE"])
     iso = {v[0]: k for k, v in COUNTRIES.items()}
     d = d[d.geo.isin(NAMES)].assign(iso=lambda x: x.geo.map(NAMES).map(iso)).dropna(subset=["iso"])
     return {a: d[d.age == f"Y{a}"].pivot(index="TIME_PERIOD", columns="iso", values="OBS_VALUE").sort_index()
-            for a in ("20-24", "25-29")}
+            for a in bands}
 
 
-def group_means(d, year, age, rate):
-    """Single-year rates -> mean over 20-24 and 25-29, by year."""
-    d = d[d[age].between(20, 29)].assign(g=lambda x: np.where(x[age] < 25, "20-24", "25-29"))
+def group_means(d, year, age, rate, bands=YOUNG):
+    """Single-year rates -> mean over each 5-year band ("20-24", ...), by year; a band needs all five ages."""
+    lo = {b: int(b[:2]) for b in bands}
+    d = d[d[age].isin([a for b in bands for a in range(lo[b], lo[b] + 5)])]
+    d = d.assign(g=d[age].map({a: b for b in bands for a in range(lo[b], lo[b] + 5)}))
     m = d.groupby([year, "g"])[rate].agg(["mean", "count"])
     m = m[m["count"] == 5]["mean"].unstack()
     return {a: m[a] for a in m}
 
 
-def hfd_asfr(code):
+def hfd_asfr(code, bands=YOUNG):
     d = pd.read_csv(HFD, sep=r"\s+", skiprows=2, dtype={"Age": str})
     d = d[(d.Code == code) & d.Age.str.isdigit()].astype({"Age": int, "ASFR": float})
-    return group_means(d, "Year", "Age", "ASFR")
+    return group_means(d, "Year", "Age", "ASFR", bands)
 
 
-def hfc_asfr(iso):
+def hfc_asfr(iso, bands=YOUNG):
     path = HFC / f"hfc_{iso}_ASFRstand_TOT.txt"
     if not path.exists():
         import urllib.request
@@ -126,25 +131,25 @@ def hfc_asfr(iso):
         d[k] = d[k].str.strip()
     d = d[(d.Year1 == d.Year2) & (d.Collection == "STAT") & (d.AgeDef == "ACY") & (d.AgeInt == 1)]
     d = d.sort_values("RefCode").drop_duplicates(["Year1", "Age"], keep="last")
-    return group_means(d, "Year1", "Age", "ASFR")
+    return group_means(d, "Year1", "Age", "ASFR", bands)
 
 
-def uruguay_asfr():
+def uruguay_asfr(bands=YOUNG):
     sys.path.insert(0, str(ROOT / "HFC" / "scripts"))
     import uruguay_by_order as ury
     a = (ury.births() / ury.women()).dropna()
-    return {g: a[g] for g in ("20-24", "25-29")}
+    return {g: a[g] for g in bands if g in a}
 
 
-def load_asfr():
-    """{ISO3: {"20-24": Series, "25-29": Series}}."""
-    eu = eurostat_asfr()
-    out = {c: {a: eu[a][c].dropna() for a in eu} for c in COUNTRIES if c in eu["20-24"]}
+def load_asfr(bands=YOUNG):
+    """{ISO3: {"20-24": Series, "25-29": Series}}, or the given 5-year bands."""
+    eu = eurostat_asfr(bands)
+    out = {c: {a: eu[a][c].dropna() for a in eu if c in eu[a]} for c in COUNTRIES if c in eu[bands[0]]}
     for c, code in HFD_CODES.items():
-        out[c] = hfd_asfr(code)
+        out[c] = hfd_asfr(code, bands)
     for c in HFC_CODES:
-        out[c] = hfc_asfr(c)
-    out["URY"] = uruguay_asfr()
+        out[c] = hfc_asfr(c, bands)
+    out["URY"] = uruguay_asfr(bands)
     return {c: {a: s[s.index <= LAST_YEAR] for a, s in v.items()} for c, v in out.items()}
 
 
