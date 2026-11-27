@@ -3,6 +3,9 @@
 Reads NSO/outputs/{mexico,brazil}_fertility_by_education.csv (from mexico_births_by_education.py
 and brazil_births_by_education.py) and writes NSO/outputs/latam_fertility_by_education.{csv,html}:
 births per woman at 25-44 and births per 1,000 women at 20-24, by country, year and education.
+Also writes latam_fertility_by_education_curves.html: birth rate by age, a row of three education
+panels per country with every year, on the axes of the European, Nordic and US age curves
+(docs/factors/education-age-curves.md).
 """
 
 import pandas as pd
@@ -10,6 +13,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 from common.paths import outputs_dir
+from common.plot_colors import PERIOD_COLORSCALE, period_axis, sample_color
 from common.plotting import write_html
 
 COUNTRIES = [("mexico", "Mexico"), ("brazil", "Brazil")]
@@ -20,6 +24,8 @@ SERIES = {
     "brazil": [("low", "Below secondary complete", "#eb6834"), ("medium", "Secondary complete", "#eda100"),
                ("tertiary", "Tertiary complete", "#2a78d6")],
 }
+SHORT = {"mexico": ["primary or less", "secondary", "some university"],
+         "brazil": ["below secondary", "secondary", "tertiary"]}
 
 
 def summary():
@@ -58,6 +64,41 @@ def chart(s):
     return fig
 
 
+def curves_chart():
+    d = pd.concat([pd.read_csv(outputs_dir("NSO") / f"{code}_fertility_by_education.csv").assign(country=code)
+                   for code, _ in COUNTRIES])
+    d = d[d.ed != "all"].assign(mid=lambda x: x.age.str[:2].astype(int) + 2, rate=lambda x: x.rate * 1000)
+    axis = period_axis(int(d.year.min()), int(d.year.max()))
+    fig = make_subplots(rows=2, cols=3, shared_yaxes=True, shared_xaxes=True, vertical_spacing=0.12,
+                        horizontal_spacing=0.04,
+                        subplot_titles=[f"{n}: {t}" for c, n in COUNTRIES for t in SHORT[c]])
+    for y in sorted(d.year.unique()):  # legend entries in year order
+        fig.add_trace(go.Scatter(x=[None], y=[None], name=str(y), legendgroup=str(y), mode="lines+markers",
+                                 marker=dict(size=4), line=dict(color=sample_color(PERIOD_COLORSCALE, y, axis), width=2)),
+                      row=1, col=1)
+    for i, (code, name) in enumerate(COUNTRIES):
+        for j, (e, lab, _) in enumerate(SERIES[code]):
+            for y in sorted(d.year.unique()):
+                r = d[(d.country == code) & (d.ed == e) & (d.year == y)].sort_values("mid")
+                if r.empty:
+                    continue
+                fig.add_trace(go.Scatter(
+                    x=r.mid, y=r.rate, customdata=r.age.str.replace("-", "–"), name=str(y), legendgroup=str(y),
+                    showlegend=False, mode="lines+markers", marker=dict(size=4),
+                    line=dict(color=sample_color(PERIOD_COLORSCALE, y, axis), width=2),
+                    hovertemplate=f"{name} {y}, {lab.lower()}, age %{{customdata}}: %{{y:.0f}}<extra></extra>",
+                ), row=i + 1, col=j + 1)
+    fig.update_layout(template="plotly_white", height=690, title="Birth rate by age and education, Mexico and Brazil",
+                      title_y=0.99, title_yanchor="top",
+                      legend=dict(orientation="h", x=0, y=1.08, xanchor="left", yanchor="bottom"),
+                      margin=dict(l=60, r=20, t=150, b=50))
+    fig.update_xaxes(range=[18, 44], dtick=10)
+    fig.update_xaxes(title_text="Age", row=2)
+    fig.update_yaxes(range=[0, 300])  # same axes as the European, Nordic and US curves
+    fig.update_yaxes(title_text="Births per 1,000", col=1)
+    return fig
+
+
 def main():
     s = summary()
     out = outputs_dir("NSO")
@@ -65,6 +106,7 @@ def main():
     print(s.pivot_table(index=["country", "ed"], columns="year", values="tfr_25_44").round(2).to_string())
     print(s.pivot_table(index=["country", "ed"], columns="year", values="per_1000_20_24").round(0).to_string())
     write_html(chart(s), out / "latam_fertility_by_education.html")
+    write_html(curves_chart(), out / "latam_fertility_by_education_curves.html")
 
 
 if __name__ == "__main__":
