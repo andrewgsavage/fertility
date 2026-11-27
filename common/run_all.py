@@ -57,6 +57,7 @@ RUN_FIRST = [
     "ACS/scripts/acs_births_by_union.py",  # -> HFD/scripts/couples_vs_births_per_couple.py
     "GGS/scripts/young_ideals_europe.py",  # -> eurostat/scripts/change_matrix.py
     "GSS/scripts/ideal_by_cohort_us.py",  # -> eurostat/scripts/change_matrix.py
+    "FT/scripts/smartphone_takeoff.py",  # -> eurostat/scripts/smartphone_milestones.py
 ]
 
 # A script that reads its own source's data folder this way is skipped up front

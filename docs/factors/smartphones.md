@@ -67,17 +67,86 @@ Eurostat [isoc_ci_im_i](https://ec.europa.eu/eurostat/databrowser/view/isoc_ci_i
 
 ::::
 
-Across 28 countries, a larger rise in mobile internet use between 2011 and 2019 goes with a smaller fall in 20–29 fertility (r = 0.51), the opposite sign to the proposed mechanism. The late adopters (Romania, Bulgaria, Czechia, Hungary) are also where 20–29 fertility recovered after earlier postponement, so adoption speed mostly tracks a catch-up in fertility.
+In Western and Southern Europe, 20–29 fertility fell while mobile internet use climbed from 20–70% to over 90%. In Bulgaria, Czechia, Hungary, Latvia, Romania and Slovakia it rose over the same climb, and in Poland it held at 0.72. The late adopters are where 20–29 fertility recovered after earlier postponement, so the same spread of phones went with falling young fertility in some countries and rising in others.
 
-## Across countries, 2010–2019
+## Turning points in young fertility
 
-Mobile internet use rose in every country; it rose slightly more where the share of women with a child by 30 fell least.
+If smartphones cut young fertility, the rate at 20–24 or 25–29 should bend downward around the year most 16–24s were online on their phones. Each country's log ASFR from 2005 is fitted with straight segments joined at up to two break years, the number of breaks chosen by BIC.
 
+::::{tab-set}
+
+:::{tab-item} Chart
 ```{raw} html
-<iframe src="../_static/eurostat/change_scatter_mobile_internet.html" style="width: 100%; height: 440px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/eurostat/smartphone_milestones.html" style="width: 100%; height: 1230px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
+:::
 
-See the [country comparison](country-comparison.md) for all factors side by side.
+:::{tab-item} Data
+| Country | Mobile >60% | 20–24 peak | 25–29 peak | 20–24 breaks | 20–24 %/yr by segment | 25–29 breaks | 25–29 %/yr by segment | FT take-off | Search take-off | Tinder |
+|---|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|
+| Albania | ≤2018 | ≤2005 | ≤2005 | 2013, 2020 | -0.1 → -8.1 → -0.3 | 2015, 2020 | -0.7 → -8.0 → +7.6 |  |  |  |
+| Australia |  | 2008 | 2008 | 2008, 2013 | +3.1 → -1.6 → -4.2 | 2012 | -0.2 → -2.6 | 2008 | 2011 |  |
+| Austria | 2012 | ≤2005 | ≤2005 | 2013, 2016 | -3.2 → -1.0 → -4.2 | 2021 | -0.4 → -4.8 |  |  |  |
+| Belarus |  | 2008 | 2015 | 2015 | -0.6 → -7.0 | 2008, 2015 | +6.9 → +2.8 → -7.1 |  |  |  |
+| Belgium | 2013 | 2007 | 2007 | 2009, 2019 | +0.4 → -5.3 → -2.8 | 2010, 2021 | +0.1 → -2.7 → -4.9 |  | 2011 |  |
+| Bulgaria | 2015 | ≤2005 | 2022 | 2008, 2011 | +0.8 → -4.9 → +0.4 | 2009, 2012 | +3.7 → -2.2 → +1.3 |  |  |  |
+| Canada |  | 2007 | 2008 | 2008, 2017 | +1.1 → -3.8 → -7.6 | 2008, 2017 | +0.8 → -1.6 → -5.0 |  | 2011 |  |
+| Chile |  | 2008 | 2009 | 2009, 2015 | +0.4 → -2.6 → -5.4 | 2009 | +1.9 → -1.9 |  | 2011 |  |
+| Croatia | 2012 | ≤2005 | 2009 | 2017, 2021 | -4.2 → -0.3 → -7.1 | 2009, 2015 | +0.9 → -2.7 → -0.1 |  |  |  |
+| Cyprus | 2014 | ≤2005 | ≤2005 | 2015, 2020 | -6.0 → +4.9 → +0.9 | 2016 | -3.4 → -0.6 |  |  |  |
+| Czechia | 2014 | 2018 | 2020 | 2013, 2020 | -1.9 → +3.0 → -10.2 | 2013, 2021 | -1.7 → +2.7 → -8.8 |  | 2011 |  |
+| Denmark | 2012 | ≤2005 | 2006 | 2018 | -2.7 → -9.4 | 2013, 2021 | -2.0 → -0.5 → -7.4 |  |  |  |
+| Estonia | 2014 | ≤2005 | 2009 | 2021 | -4.0 → -9.4 | 2021 | -0.6 → -10.4 |  |  |  |
+| Finland | 2012 | 2008 | ≤2005 | 2009, 2014 | +0.8 → -4.0 → -6.4 | 2011 | -0.2 → -4.3 |  |  | 2013–14 |
+| France | 2012 | ≤2005 | 2007 | 2010, 2014 | -0.2 → -2.4 → -3.8 | 2012, 2021 | -0.3 → -2.1 → -5.6 |  | 2011 | 2013 |
+| Germany | 2013 | ≤2005 | 2017 | 2013, 2016 | -3.5 → +2.5 → -3.3 | 2013, 2017 | -0.7 → +2.5 → -2.7 |  | 2011 | 2013–14 |
+| Greece | 2014 | 2008 | 2009 | 2009, 2013 | +2.6 → -10.2 → -2.8 | 2008 | +0.8 → -2.6 |  | 2011 |  |
+| Hungary | 2014 | 2020 | 2022 | 2011, 2021 | -3.6 → +2.8 → -9.3 | 2011, 2021 | -3.7 → +1.9 → -1.6 |  | 2011 |  |
+| Iceland | 2012 | 2006 | 2009 | none | -4.2 | 2009 | +1.4 → -2.2 |  |  |  |
+| Ireland | 2013 | 2009 | 2010 | 2012 | +0.8 → -6.4 | 2011 | +2.6 → -4.0 |  |  |  |
+| Italy | 2015 | 2008 | 2009 | 2008, 2014 | +2.7 → -2.9 → -5.3 | 2009, 2016 | +0.8 → -1.9 → -3.1 |  | 2011 |  |
+| Japan |  | ≤2005 | 2011 | 2008, 2019 | +0.7 → -3.5 → -9.8 | 2012, 2020 | +0.3 → -1.6 → -5.1 |  | 2010 |  |
+| Latvia | 2014 | 2007 | 2015 | 2011, 2016 | -5.4 → +2.5 → -6.5 | 2021 | +0.5 → -9.1 |  |  |  |
+| Lithuania | 2014 | ≤2005 | 2012 | 2016 | -3.2 → -5.7 | 2010, 2016 | +5.3 → -0.0 → -5.7 |  |  |  |
+| Luxembourg | 2012 | ≤2005 | ≤2005 | 2012, 2018 | -4.2 → -8.0 → -1.9 | 2015, 2018 | -2.9 → -6.3 → -2.5 |  |  |  |
+| Malta | 2012 | ≤2005 | ≤2005 | none | -3.3 | 2015 | -2.3 → -6.2 |  |  |  |
+| Montenegro | 2017 | 2008 | 2008 | 2008, 2021 | +0.1 → -4.4 → +4.0 | 2008 | +3.0 → -0.4 |  |  |  |
+| Netherlands | ≤2011 | ≤2005 | 2009 | 2010, 2021 | -0.9 → -5.0 → -3.4 | 2010, 2021 | +1.2 → -2.3 → -4.8 |  | 2011 | 2013 |
+| New Zealand |  | 2009 | 2008 | 2009, 2018 | +4.1 → -4.7 → -2.5 | 2008 | +2.7 → -2.1 |  |  |  |
+| North Macedonia | 2014 | ≤2005 | 2009 | none | -2.4 | 2020 | -1.0 → +1.9 |  |  |  |
+| Norway | 2012 | 2008 | 2009 | 2010, 2021 | +0.8 → -8.1 → -5.1 | 2010 | +0.1 → -3.1 |  |  |  |
+| Poland | 2014 | 2008 | 2018 | 2015, 2019 | -2.4 → +0.5 → -9.9 | 2015, 2018 | -0.3 → +4.0 → -4.0 |  | 2011 | ≥2014 |
+| Portugal | 2014 | ≤2005 | ≤2005 | 2010, 2013 | -1.2 → -9.5 → -1.0 | 2014 | -2.4 → +0.1 |  | 2011 |  |
+| Romania | 2015 | 2009 | 2020 | 2021 | +0.2 → -7.6 | 2013, 2021 | -0.2 → +2.6 → -10.3 |  | 2011 |  |
+| Russia |  | ≤2005 | 2015 | 2015 | -0.0 → -4.4 | 2008, 2015 | +6.7 → +3.1 → -5.4 |  | 2011 |  |
+| Serbia | ≤2015 | ≤2005 | 2024 | 2011, 2018 | -4.3 → -1.7 → -0.4 | 2008, 2020 | -1.2 → +0.1 → +2.2 |  |  |  |
+| Slovakia | 2013 | ≤2005 | 2021 | 2014, 2019 | -2.3 → +4.2 → -1.7 | 2014, 2021 | -0.8 → +2.3 → -3.1 |  |  |  |
+| Slovenia | 2013 | 2013 | 2011 | 2012, 2019 | +1.2 → -0.5 → -2.8 | 2008, 2021 | +4.7 → +0.1 → -1.8 |  |  |  |
+| South Korea |  | ≤2005 | ≤2005 | 2012, 2016 | -1.3 → -9.1 → -14.2 | 2015 | -4.3 → -12.4 |  | 2010 |  |
+| Spain | 2012 | 2008 | 2007 | 2008, 2013 | +7.2 → -5.8 → -3.1 | 2008, 2016 | +0.4 → -1.9 → -3.4 |  | 2011 | 2013 |
+| Sweden | 2012 | 2009 | 2009 | 2009, 2019 | +2.4 → -2.8 → -9.2 | 2015, 2021 | -0.0 → -2.7 → -6.1 |  | 2010 |  |
+| Switzerland | ≤2014 | ≤2005 | ≤2005 | 2016 | -3.1 → -5.5 | 2016, 2021 | -0.7 → -1.5 → -6.2 |  |  |  |
+| Taiwan |  | ≤2005 | ≤2005 | 2010, 2018 | -11.8 → -1.7 → -5.5 | 2010, 2014 | -5.5 → +2.7 → -5.6 |  | 2010 |  |
+| Turkey | 2015 | ≤2007 | 2015 | 2017 | -2.2 → -7.1 | 2010, 2016 | -1.8 → +1.7 → -4.0 |  | 2012 |  |
+| Ukraine |  | 2008 | 2013 | 2008 | +2.1 → -1.2 | 2008 | +6.2 → +1.2 |  | 2011 |  |
+| United Kingdom | ≤2011 | 2009 | 2011 | 2010 | +0.8 → -5.1 | 2010, 2015 | +1.7 → -1.2 → -3.3 | 2009 | 2011 | 2013 |
+| United States |  | 2007 | 2006 | 2008, 2011 | -0.4 → -5.6 → -3.7 | 2015 | -1.2 → -1.9 | 2007 | 2011 | 2012 |
+| Uruguay |  | ≤2005 | ≤2005 | 2015 | -0.3 → -6.8 | 2015 | -0.5 → -5.0 |  |  |  |
+:::
+
+:::{tab-item} Notes
+```{note}
+ASFR: Eurostat [demo_frate](https://ec.europa.eu/eurostat/databrowser/view/demo_frate/default/table), 2005–2024; [Human Fertility Database](https://www.humanfertility.org) single-year rates averaged over each 5-year group for the UK (whose Eurostat series ends in 2018), the US, Canada, Japan, South Korea, Taiwan, Chile, Russia, Belarus and Ukraine; [Human Fertility Collection](https://www.fertilitydata.org/) vital-registration rates for Australia and New Zealand; Uruguay MSP births over INE women. Russia and Belarus end in 2018, Ukraine in 2013, Chile in 2020, Uruguay in 2021. Mobile internet: Eurostat [isoc_ci_im_i](https://ec.europa.eu/eurostat/databrowser/view/isoc_ci_im_i/default/table), 16–24, 2011–2019, European countries only; "≤" marks a series already above 60% in its first year. Peaks are the maximum of a 3-year centred average from 2005; "≤2005" means already falling. Breaks: continuous piecewise-linear fits to log ASFR, each segment at least 3 years, break years by least squares, 0–2 breaks chosen by BIC; breaks in 2020–21 rest on 3–4 later years. FT take-off from the FT's [smartphone chart](https://www.ft.com/content/fba35eca-df3a-4ad6-b42d-eb08eb7c9ad3) (Burn-Murdoch, May 2026); search take-off is the first year Google Trends searches for app stores reach 25% of their peak year. Tinder arrival dates are from press reports listed on [Dating apps](dating-apps.md). Kosovo has too few years to fit.
+```
+:::
+
+::::
+
+The West's first turn came in 2008–2010: Belgium, Finland, Italy, the Netherlands, Norway, Spain, Sweden and the UK went from flat or rising to falling, at or before mobile internet passed 60% among 16–24s, and in step with the 2008 recession. Canada, Chile, New Zealand and the US turned at the same time; in Canada, Chile and the US that was two to three years before app-store searches took off. Several countries then fell faster from 2014–2021 (Sweden's 20–24 rate at −9% a year from 2019, Japan's at −10% from 2019, Canada's at −8% from 2017), 3–10 years after phones spread.
+
+In Central and Eastern Europe the rates rose by 2–4% a year from about 2011–2015 to 2016–2021, after phones had spread, then fell by up to 10% a year from 2019–2021: Czechia, Hungary, Poland, Romania and Slovakia. Germany and Latvia show the same rise and fall, and Russia and Belarus turned down in 2015 after rises at 25–29. The breaks closest to the 60% year go the wrong way for the mechanism: in 2012–2013 France's 25–29 decline steepened only from −0.3% to −2.1% a year, Austria's 20–24 decline slowed, and Germany's rates turned upward.
+
+Taiwan's rates were already falling 5–12% a year in 2005–2010. South Korea's 25–29 rate fell 4% a year from 2005 and 12% from 2015; its 20–24 rate fell 9% a year from 2012 and 14% from 2016.
 
 ## Causal evidence
 
