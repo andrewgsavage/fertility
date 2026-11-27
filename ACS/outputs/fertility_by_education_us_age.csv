@@ -1,0 +1,17 @@
+age,education,rate_first,rate_last,change
+25-29,Less than high school,156.63,124.54,-20.49
+25-29,High school,132.36,109.02,-17.63
+25-29,Some college,126.73,104.09,-17.86
+25-29,Bachelor's or more,99.15,62.45,-37.02
+30-34,Less than high school,103.93,98.72,-5.01
+30-34,High school,82.81,86.41,4.35
+30-34,Some college,93.41,94.28,0.93
+30-34,Bachelor's or more,136.0,111.8,-17.79
+35-39,Less than high school,54.0,63.84,18.23
+35-39,High school,38.47,55.66,44.69
+35-39,Some college,45.58,56.46,23.87
+35-39,Bachelor's or more,81.42,81.75,0.4
+40-44,Less than high school,17.22,32.62,89.43
+40-44,High school,14.86,25.01,68.29
+40-44,Some college,14.49,22.83,57.54
+40-44,Bachelor's or more,24.77,28.19,13.81

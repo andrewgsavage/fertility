@@ -1,0 +1,121 @@
+year,age,education,women,children_per_woman,childless_pct
+2016,15-19,Less than high school,7512.0,0.039,97.3
+2016,15-44,Less than high school,11826.0,0.842,68.7
+2016,15-50,Less than high school,13062.0,0.997,63.5
+2016,20-29,Less than high school,1510.0,1.334,33.9
+2016,30-39,Less than high school,1795.0,2.635,12.1
+2016,40-50,Less than high school,2245.0,2.667,11.6
+2018,15-19,Less than high school,7495.0,0.029,98.1
+2018,15-44,Less than high school,11658.0,0.76,71.2
+2018,15-50,Less than high school,12920.0,0.951,64.9
+2018,20-29,Less than high school,1539.0,1.265,40.9
+2018,30-39,Less than high school,1708.0,2.479,13.1
+2018,40-50,Less than high school,2178.0,2.707,8.3
+2020,15-19,Less than high school,7017.0,0.027,98.4
+2020,15-44,Less than high school,10330.0,0.69,74.0
+2020,15-50,Less than high school,11330.0,0.879,68.1
+2020,20-29,Less than high school,1076.0,1.18,44.4
+2020,30-39,Less than high school,1431.0,2.559,14.0
+2020,40-50,Less than high school,1810.0,2.676,7.7
+2022,15-19,Less than high school,7511.0,0.038,97.9
+2022,15-44,Less than high school,11030.0,0.701,73.3
+2022,15-50,Less than high school,11970.0,0.846,68.4
+2022,20-29,Less than high school,1184.0,1.314,39.5
+2022,30-39,Less than high school,1436.0,2.409,12.9
+2022,40-50,Less than high school,1841.0,2.62,10.1
+2024,15-19,Less than high school,7438.0,0.027,98.7
+2024,15-44,Less than high school,10814.0,0.611,75.7
+2024,15-50,Less than high school,11831.0,0.775,70.0
+2024,20-29,Less than high school,1193.0,0.934,47.6
+2024,30-39,Less than high school,1327.0,2.278,15.4
+2024,40-50,Less than high school,1874.0,2.576,9.1
+2016,15-19,High school,1422.0,0.114,92.2
+2016,15-44,High school,13981.0,1.401,37.7
+2016,15-50,High school,17078.0,1.513,33.4
+2016,20-29,High school,5595.0,0.842,51.1
+2016,30-39,High school,4666.0,2.111,16.8
+2016,40-50,High school,5394.0,2.061,13.8
+2018,15-19,High school,1435.0,0.123,90.8
+2018,15-44,High school,13638.0,1.3,39.7
+2018,15-50,High school,16614.0,1.449,35.1
+2018,20-29,High school,5565.0,0.826,52.3
+2018,30-39,High school,4388.0,1.86,20.4
+2018,40-50,High school,5226.0,2.131,13.8
+2020,15-19,High school,1722.0,0.079,94.7
+2020,15-44,High school,13180.0,1.207,44.8
+2020,15-50,High school,15960.0,1.357,39.1
+2020,20-29,High school,5203.0,0.734,58.0
+2020,30-39,High school,4170.0,1.804,22.7
+2020,40-50,High school,4869.0,2.092,13.4
+2022,15-19,High school,1762.0,0.058,95.2
+2022,15-44,High school,14820.0,1.193,44.5
+2022,15-50,High school,17550.0,1.322,40.0
+2022,20-29,High school,5829.0,0.747,58.4
+2022,30-39,High school,5009.0,1.794,21.3
+2022,40-50,High school,4949.0,1.971,17.4
+2024,15-19,High school,2004.0,0.08,94.0
+2024,15-44,High school,15447.0,1.17,47.2
+2024,15-50,High school,18092.0,1.305,42.4
+2024,20-29,High school,6088.0,0.656,61.5
+2024,30-39,High school,5052.0,1.82,24.9
+2024,40-50,High school,4947.0,2.072,16.0
+2016,15-19,Some college,1314.0,0.066,95.078
+2016,15-44,Some college,18353.0,1.137,45.833
+2016,15-50,Some college,21853.0,1.265,41.052
+2016,20-29,Some college,8454.0,0.545,66.769
+2016,30-39,Some college,5875.0,1.804,19.741
+2016,40-50,Some college,6211.0,1.987,14.733
+2018,15-19,Some college,1316.0,0.059,96.551
+2018,15-44,Some college,18494.0,1.116,47.414
+2018,15-50,Some college,21816.0,1.247,42.397
+2018,20-29,Some college,8510.0,0.528,68.406
+2018,30-39,Some college,6119.0,1.773,22.036
+2018,40-50,Some college,5873.0,2.009,13.859
+2020,15-19,Some college,1344.0,0.052,96.548
+2020,15-44,Some college,17306.0,1.036,51.651
+2020,15-50,Some college,20367.0,1.185,46.12
+2020,20-29,Some college,7868.0,0.431,73.317
+2020,30-39,Some college,5613.0,1.634,27.098
+2020,40-50,Some college,5537.0,2.076,14.528
+2022,15-19,Some college,1185.0,0.048,98.0
+2022,15-44,Some college,17026.0,1.051,50.378
+2022,15-50,Some college,20010.0,1.173,45.567
+2022,20-29,Some college,5462.0,0.381,77.4
+2022,30-39,Some college,5829.0,1.656,23.742
+2022,40-50,Some college,5454.0,1.938,16.867
+2024,15-19,Some college,1242.0,0.027,98.382
+2024,15-44,Some college,16213.0,1.039,51.777
+2024,15-50,Some college,19094.0,1.197,45.83
+2024,20-29,Some college,6781.0,0.354,78.328
+2024,30-39,Some college,5566.0,1.643,25.507
+2024,40-50,Some college,5504.0,2.049,14.656
+2016,15-19,Bachelor's or more,44.0,0.241,75.9
+2016,15-44,Bachelor's or more,19222.0,1.058,46.825
+2016,15-50,Bachelor's or more,23926.0,1.192,41.716
+2016,20-29,Bachelor's or more,6463.0,0.286,80.806
+2016,30-39,Bachelor's or more,8807.0,1.285,34.904
+2016,40-50,Bachelor's or more,8611.0,1.781,19.234
+2018,15-19,Bachelor's or more,47.0,0.037,98.2
+2018,15-44,Bachelor's or more,20099.0,1.069,46.464
+2018,15-50,Bachelor's or more,25063.0,1.205,40.999
+2018,20-29,Bachelor's or more,6470.0,0.294,80.275
+2018,30-39,Bachelor's or more,9402.0,1.269,35.482
+2018,40-50,Bachelor's or more,9143.0,1.788,18.661
+2020,15-19,Bachelor's or more,82.0,0.559,70.8
+2020,15-44,Bachelor's or more,23268.0,1.019,48.919
+2020,15-50,Bachelor's or more,28590.0,1.166,43.164
+2020,20-29,Bachelor's or more,7610.0,0.255,83.942
+2020,30-39,Bachelor's or more,10790.0,1.225,36.801
+2020,40-50,Bachelor's or more,10095.0,1.796,19.083
+2022,15-19,Bachelor's or more,25.0,0.0,100.0
+2022,15-44,Bachelor's or more,21985.0,1.006,49.113
+2022,15-50,Bachelor's or more,27390.0,1.158,42.871
+2022,20-29,Bachelor's or more,5328.0,0.254,83.5
+2022,30-39,Bachelor's or more,10158.0,1.157,41.034
+2022,40-50,Bachelor's or more,10441.0,1.75,18.315
+2024,15-19,Bachelor's or more,0.0,,
+2024,15-44,Bachelor's or more,23454.0,0.967,50.402
+2024,15-50,Bachelor's or more,28845.0,1.126,44.247
+2024,20-29,Bachelor's or more,7358.0,0.228,84.636
+2024,30-39,Bachelor's or more,10857.0,1.128,40.377
+2024,40-50,Bachelor's or more,10556.0,1.755,19.623

@@ -1,0 +1,166 @@
+id: fertility-decline-by-education
+question: >-
+  Period fertility (TFR or age-specific / first-birth rates) by women's education level (low,
+  medium, high), before and after the post-2010 decline, for several countries, to see whether
+  the fall was concentrated among primary/secondary-educated women.
+status: partial
+answer: >-
+  No harmonised cross-country rate series found. Register studies: Norway (Beck, Hellstrand &
+  Myrskylä 2024) finds the 2010-2018 TFR fall among women was driven most by the highest
+  educated, with cohort fertility falling most among the lower educated; Finland (Hellstrand,
+  Nisén & Myrskylä 2022/2024) finds similar TFR falls across levels, first-birth falls somewhat
+  larger for secondary and lower tertiary, and much larger variation by field; Statistics Finland
+  gives 2023 TFR of 0.94 (basic), 1.04 (upper secondary), 1.59 (master's+), with the 2022-23 fall
+  smallest for the tertiary group. US (Kearney, Levine & Pardue 2022) describes similar trends
+  with and without a degree. Uruguay (already on the education page) fell most among the least
+  educated. Built here: US ACS PUMS rates by education 2008-2024 (graduates fell most at 25-44;
+  most of the US fall is under 25) and Eurostat demo_faeduc / lfsa_pgaed rates at 25-44 with
+  breaks flagged; NCHS birth certificates over ACS women (2017-2024); CPS children ever born and
+  childlessness by age and education (2016-2024); Nordic register births over register women by
+  education (FI, SE, DK, NO); Estonia register births, women and children ever born by education; DHS TFR by education for ~55 countries with a within/composition
+  split. All on the education page.
+factors: [education]
+measurables: [tfr, asfr, cond-asfr-1, births]
+countries: [NOR, FIN, SWE, DNK, EST, USA, URY, all]
+pages: [docs/factors/education.md]
+attempts:
+  - date: 2026-11-27
+    tried: Eurostat demo_faeduc (live births by mother's age and ISCED level), SDMX-CSV API, divided by LFS lfsa_pgaed women by age and ISCED
+    url: https://ec.europa.eu/eurostat/databrowser/view/demo_faeduc/default/table
+    outcome: partial
+    why: >-
+      Used on the education page with breaks flagged (year-on-year change over 20% in any group).
+      Births downloads by script (single years of age, 2007-2024, ~20 countries with long series;
+      5-year age bands only 2013-2019, so sum single years). But births come from registers and
+      the population from the LFS survey, and the resulting rates have level breaks that are
+      classification changes, not behaviour - Sweden ED0-2 jumps 1.25 to 1.82 (25-44 partial TFR)
+      in 2013, Finland ED0-2 falls 2.10 to 0.53 over 2020-2022, Norway ED3_4 dips in 2017-2019.
+      Unknown education is up to 40% (Spain) in early years. Not usable for trends by education
+      without per-country break checks.
+  - date: 2026-11-27
+    tried: Statistics Sweden, search for TFR by education level table
+    outcome: nothing-found
+    why: Search found only a DEMOG report on ages 15-19 and 45-49; no TFR-by-education table located.
+    retry: Browse the SCB PxWeb database (BE0701 / DEMOG) for an education breakdown.
+  - date: 2026-11-27
+    tried: Statistics Norway, search for TFR by education table
+    outcome: nothing-found
+    why: Only national TFR tables (04232) turned up; SSB statbank was blocked in an earlier search.
+  - date: 2026-11-27
+    tried: Statistics Finland, Births 2023 release
+    url: https://stat.fi/en/publication/cln4kbbuv3x5t0avx5isve831
+    outcome: partial
+    why: >-
+      2023 TFR by education for Finnish-born women only (basic 0.94, upper secondary 1.04,
+      master's+ 1.59); a 10-year chart's values are not in the page text; the StatFin table is not
+      named.
+    retry: Find the StatFin synt table with education (pxdata.stat.fi StatFin__synt) for the series.
+  - date: 2026-11-27
+    tried: Beck, Hellstrand & Myrskylä 2024, MPIDR WP-2024-009 (Norway registers)
+    url: https://www.demogr.mpg.de/papers/working/wp-2024-009.pdf
+    outcome: partial
+    why: >-
+      Decomposition, not rate tables in text. Women's TFR 1.95 (2010) to 1.51 (2018) fully driven
+      by falling rates within education groups; largest contribution from the highest educated not
+      enrolled. Cohort fertility fell most among the lower educated. Numbers are in figures only.
+      PDF text extracts with pdftotext.
+  - date: 2026-11-27
+    tried: Hellstrand, Nisén & Myrskylä 2022, MPIDR WP-2022-022 (Finland registers, by level and field)
+    url: https://www.demogr.mpg.de/papers/working/wp-2022-022.pdf
+    outcome: partial
+    why: >-
+      2010s TFR declines "rather similar" by level; first-birth (TFRp1) declines somewhat larger
+      among secondary and lower tertiary than higher tertiary; field matters more than level. Level
+      values are in Appendix Figure A1 only.
+  - date: 2026-11-27
+    tried: Hellstrand, Nisén & Myrskylä 2025, MPIDR WP-2025-001 (Finnish men by field)
+    url: https://www.demogr.mpg.de/papers/working/wp-2025-001.pdf
+    outcome: partial
+    why: >-
+      Men only. States that the Nordic first-birth decline accelerated most among the least
+      educated, citing Comolli et al. 2020 and Hellstrand et al. 2022.
+  - date: 2026-11-27
+    tried: Kearney, Levine & Pardue 2022, JEP 36(1) / NBER w29286 (US)
+    url: https://www.nber.org/papers/w29286
+    outcome: partial
+    why: Summary says the US decline since 2007 is broad-based, with similar trends for women with and without a college degree; rates by education not extracted.
+    retry: Open the paper's education figure, or the openICPSR replication data (project 144981).
+  - date: 2026-11-27
+    tried: CDC NCHS natality searches (birth rates by mother's education)
+    outcome: partial
+    why: NCHS did not publish mothers' education in 2007-2008 (revised certificate rollout); Pew 2013 used counts of new mothers (2008-2011 falls of 17% below high school, 1% bachelor's+), not rates.
+  - date: 2026-11-27
+    tried: US Census ACS 1-year PUMS person files (FER by SCHL), 2008, 2010, 2012, 2015, 2017, 2019, 2022, 2024
+    url: https://www2.census.gov/programs-surveys/acs/data/pums/2024/1-Year/csv_pus.zip
+    outcome: found
+    why: >-
+      Births in the past 12 months and education for the same women, so no numerator/denominator
+      mismatch. Downloads by script; SCHL has the same 24 codes from 2008. Rates run above NCHS
+      registrations (1.52 vs 1.36 births per woman at 25-44 in 2008).
+  - date: 2026-11-27
+    tried: NCHS natality public-use files Nat2017us.zip, Nat2019us.zip, Nat2022us.zip, Nat2024us.zip (MAGER, MEDUC)
+    url: https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/DVS/natality/
+    outcome: found
+    why: >-
+      Git Bash curl fails the host's certificate check (exit 60); Windows curl.exe downloads fine.
+      Zips use Deflate64, which Python zipfile and Windows tar can't read; 7-Zip (7z e -so) can.
+      Positions 75-76 MAGER, 104 RESTATUS, 124 MEDUC check out against 2017 totals.
+  - date: 2026-11-27
+    tried: Census Bureau Fertility of Women in the United States, Table 3c (children ever born and percent childless by age and education)
+    url: https://www2.census.gov/programs-surveys/demo/tables/fertility/2024/am-women-fertility/t3c.xlsx
+    outcome: partial
+    why: Found for 2016, 2018, 2020, 2022 and 2024 at this path; 2008-2014 return 404 there, and the older table locations were not found.
+    retry: Census fertility tables hub (census.gov/topics/health/fertility/data/tables.html) for older years, or IPUMS-CPS microdata (registration).
+  - date: 2026-11-27
+    tried: Statistics Finland, Sweden, Norway and Denmark table catalogues, searched for births or fertility by mother's education
+    outcome: lacks-it
+    why: >-
+      No public table of births or fertility rates by mother's education in StatFin (synt), SCB
+      (API v2 search), SSB StatBank or StatBank Denmark. Each does publish women by education and
+      age (StatFin 12bq, SCB TAB4320, HFUDD11, SSB 08921), which were used as denominators for
+      Eurostat demo_faeduc births.
+  - date: 2026-11-27
+    tried: Eurostat demo_faeduc over Nordic register population by education (same-register check)
+    outcome: partial
+    why: >-
+      The breaks remain with register denominators, so they come from birth coding: Sweden 2013
+      (low-educated share of births 11% to 15%), Norway 2008 and 2011 (unknown 10-13% to 3.5%),
+      Finland 2022 (low-educated share 12.5% to 5%, unknown 8%). Used with those years dropped.
+      Norway's population has 30-39 and 40-49 bands only.
+  - date: 2026-11-27
+    tried: Statistics Estonia RV142U (births by mother's age and education), RV0231U (persons by education, sex and age, 1 January) and RV096 (women by children ever born, education and age)
+    url: https://andmed.stat.ee/en/stat/RV142U
+    outcome: found
+    why: >-
+      All register-based from the same source, PxWeb API (POST json-stat2), no key. Births 2017-2025
+      in 5-year ages with "40 and over"; population 2018-2026; children ever born 2012-2026 in
+      10-year ages. In RV096 the "Total" category is the number of children, not women.
+  - date: 2026-11-27
+    tried: KOSIS (Korea), births by mother's education and age
+    outcome: blocked
+    why: >-
+      No table with mother's education found by web search (KOSIS birth tables found are by
+      mother's age, order and sex). The KOSIS OpenAPI key is for individuals only, needs a KOSIS
+      account verified by a Korean mobile phone, and is approved automatically once applied for.
+    retry: Search kosis.kr in a browser in Korean (출생 모의 교육정도) to see whether the table exists; an API key needs a Korean phone.
+  - date: 2026-11-27
+    tried: DHS Program API FE_FRTR_W_TFR breakdown=all (TFR by education) and ED_EDUC_W_* (women by education)
+    url: https://api.dhsprogram.com/rest/dhs/data?indicatorIds=FE_FRTR_W_TFR&breakdown=all&f=json&perpage=5000&page=1
+    outcome: found
+    why: perpage is capped at 5000, so three pages are needed. Education shares are for all women 15-49, not by age.
+  - date: 2026-11-27
+    tried: N-IUSSP summary of Tan (2022), first births by education in South Korea
+    url: https://www.niussp.org/fertility-and-reproduction/fewer-and-later-births-in-south-korea-especially-among-more-educated-women/
+    outcome: found
+    why: >-
+      Cohort study (1960-64 to 1980-84) on unnamed longitudinal survey data. Text gives only national
+      cohort figures (median first-birth age 26 to 29, share with a child by 38 95% to 68%);
+      education-specific numbers are in figures and the paper (doi:10.1016/j.ssresearch.2022.102728).
+next:
+  - Comolli et al. 2020/2021 Nordic first-birth decline by education (Sweden, Norway, Finland, Denmark).
+  - Ohlsson-Wijk & Andersson 2022 (Sweden, first births by labour-market attachment and education).
+  - StatFin table with TFR by education, 2010 onward.
+notes: >-
+  Education gaps at 20-29 partly reflect women still studying, so compare 25-44 or completed
+  fertility. Period and cohort results can differ: in Norway the period fall was largest among
+  graduates (postponement) while the cohort fall was largest among the lower educated.
