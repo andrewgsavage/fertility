@@ -26,8 +26,11 @@ Norway the population has a 30-39 band, so its figure covers 25-39 (5 x rate 25-
 Also births per 1,000 women aged 20-24 by education (education is unfinished for many at
 these ages, so "low" there includes women still in upper secondary school).
 
-Writes eurostat/outputs/fertility_by_education_nordic.{csv,html} and
-fertility_by_education_nordic_20_24.{csv,html}.
+Also births per 1,000 women by education and 5-year age group (Norway: 20-24, 25-29, 30-39), in
+the first and last year of each country's consistent span, charted as the % change at 25+.
+
+Writes eurostat/outputs/fertility_by_education_nordic.{csv,html},
+fertility_by_education_nordic_20_24.{csv,html} and fertility_by_education_nordic_by_age.{csv,html}.
 """
 
 import json
@@ -38,6 +41,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 from _common import DATA, NAMES, OUTDIR
+from common.plot_colors import PERIOD_COLORSCALE, period_axis, sample_color
 from common.plotting import write_html
 
 RAW = DATA / "nordic"
@@ -51,6 +55,7 @@ EDU = [("low", "Lower secondary or less", "#eb6834"),
        ("medium", "Upper secondary", "#eda100"),
        ("tertiary", "Tertiary", "#2a78d6")]
 COUNTRIES = ["FI", "SE", "DK", "NO"]
+SHORT = {"low": "lower sec. or less", "medium": "upper secondary", "tertiary": "tertiary"}
 
 
 def fetch(name, url, body=None):
@@ -176,6 +181,11 @@ def rates(geo, pop, ages_col, lo_age=25):
     d = pd.concat([b, p], axis=1, join="inner").dropna().reset_index()
     y0, y1 = SPANS[geo]
     d = d[d.year.between(y0, y1)]
+    by_age = (d.births / d.women * 1000).groupby([d.year, d.age, d.ed]).sum().unstack()
+    g = d.groupby(["year", "age"])[["births", "women"]].sum()
+    by_age["all"] = g.births / g.women * 1000
+    by_age = by_age.reset_index()
+    by_age.insert(0, "geo", geo)
     young = d[d.age == "20-24"].set_index(["year", "ed"])
     young = (young.births / young.women * 1000).unstack()
     young["all"] = (d[d.age == "20-24"].groupby("year").births.sum()
@@ -191,7 +201,7 @@ def rates(geo, pop, ages_col, lo_age=25):
     gw = pd.Series([int(a.split("-")[1]) - int(a.split("-")[0]) + 1 for a in g.index.get_level_values(1)], index=g.index)
     t["all"] = (g.births / g.women * gw).groupby("year").sum()
     t.insert(0, "geo", geo)
-    return t.reset_index(), young.reset_index()
+    return t.reset_index(), young.reset_index(), by_age
 
 
 def chart(t, title, ytitle, fmt, no_note):
@@ -216,21 +226,61 @@ def chart(t, title, ytitle, fmt, no_note):
     return fig
 
 
+def chart_by_age(a):
+    """Birth rate by age group, a line per year and a panel per country and education level, in
+    the format of the US age-curves chart. Points sit at the middle of each age band."""
+    axis = period_axis(int(a.year.min()), int(a.year.max()))
+    fig = make_subplots(rows=4, cols=3, shared_yaxes=True, shared_xaxes=True,
+                        vertical_spacing=0.06, horizontal_spacing=0.04,
+                        subplot_titles=[f"{NAMES[g]}: {SHORT[e]}" for g in COUNTRIES
+                                        for e, _, _ in EDU])
+    shown = set()
+    for i, g in enumerate(COUNTRIES):
+        s = a[a.geo == g].copy()
+        lo = s.age.str.split("-").str[0].astype(int)
+        hi = s.age.str.split("-").str[1].astype(int)
+        s["mid"] = (lo + hi) / 2
+        for j, (e, lab, _) in enumerate(EDU):
+            for y in sorted(s.year.unique()):
+                r = s[s.year == y].sort_values("mid")
+                fig.add_trace(go.Scatter(
+                    x=r.mid, y=r[e], customdata=r.age.str.replace("-", "–"), name=str(y), legendgroup=str(y),
+                    showlegend=y not in shown, mode="lines+markers", marker=dict(size=4),
+                    line=dict(color=sample_color(PERIOD_COLORSCALE, y, axis), width=2),
+                    hovertemplate=f"{NAMES[g]} {y}, age %{{customdata}}: %{{y:.0f}}<extra></extra>",
+                ), row=i + 1, col=j + 1)
+                shown.add(y)
+    fig.update_layout(template="plotly_white", height=1100,
+                      title="Birth rate by age and education, Nordic register data",
+                      title_y=0.99, title_yanchor="top", legend_traceorder="normal",
+                      legend=dict(orientation="h", x=0, y=1.03, xanchor="left", yanchor="bottom"),
+                      margin=dict(l=60, r=20, t=130, b=50))
+    fig.update_xaxes(range=[18, 44], dtick=10)
+    fig.update_yaxes(range=[0, 300])  # same axes as the US curves (ACS fertility_by_education_us.py)
+    fig.update_xaxes(title_text="Age", row=4)
+    fig.update_yaxes(title_text="Births per 1,000 women", col=1)
+    return fig
+
+
 def main():
     parts = [rates("FI", pop_fi(), "age5"), rates("SE", pop_se(), "age5"),
              rates("DK", pop_dk(), "age5"), rates("NO", pop_no(), "age10")]
     t = pd.concat([p[0] for p in parts], ignore_index=True)
     y = pd.concat([p[1] for p in parts], ignore_index=True)
+    a = pd.concat([p[2] for p in parts], ignore_index=True)
     OUTDIR.mkdir(parents=True, exist_ok=True)
     t.round(3).rename(columns={e: lab for e, lab, _ in EDU}).to_csv(OUTDIR / "fertility_by_education_nordic.csv", index=False)
     pd.set_option("display.width", 200)
     y.round(1).rename(columns={e: lab for e, lab, _ in EDU}).to_csv(OUTDIR / "fertility_by_education_nordic_20_24.csv", index=False)
+    a.round(1).rename(columns={e: lab for e, lab, _ in EDU}).to_csv(OUTDIR / "fertility_by_education_nordic_by_age.csv", index=False)
     print(t.round(2).to_string())
+    print(a.round(0).to_string())
     print(y.round(0).to_string())
     write_html(chart(t, "Births per woman at ages 25-44 by education, register data", "Births per woman", ".2f",
                      " (ages 25-39)"), OUTDIR / "fertility_by_education_nordic.html")
     write_html(chart(y, "Births per 1,000 women aged 20-24 by education, register data",
                      "Births per 1,000 women", ".0f", ""), OUTDIR / "fertility_by_education_nordic_20_24.html")
+    write_html(chart_by_age(a), OUTDIR / "fertility_by_education_nordic_by_age.html")
 
 
 if __name__ == "__main__":

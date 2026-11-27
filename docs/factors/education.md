@@ -271,7 +271,7 @@ Births: Eurostat [demo_faeduc](https://ec.europa.eu/eurostat/databrowser/view/de
 
 ### Nordic countries, register data
 
-Here births and women both come from the population registers. The breaks in the Eurostat series are still there, so they come from how births are coded; each country is shown only for years with consistent coding. At 25–44, tertiary-educated women's rate fell about as much as or more than the least-educated women's in all four countries. At 20–24, rates fell by 38–57% for women without a degree. In absolute terms, the least educated lost the most births at 20–24: in Sweden their rate fell from 133 to 82 per 1,000.
+Here births and women both come from the population registers. The breaks in the Eurostat series are still there, so they come from how births are coded; each country is shown only for years with consistent coding. At 25–44, tertiary-educated women's rate fell about as much as or more than the least-educated women's in all four countries. At 20–24, rates fell by 38–57% for women without a degree. In absolute terms, the least educated lost the most births at 20–24: in Sweden their rate fell from 133 to 82 per 1,000. Rates by age for each education level are on [Birth rates by age and education](education-age-curves.md).
 
 ::::{tab-set}
 
