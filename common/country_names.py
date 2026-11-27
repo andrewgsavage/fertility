@@ -48,6 +48,10 @@ COUNTRY_NAMES = {
     # cond_asfr_region_grid.py (see its load_data()), since HFD itself has
     # no conditional-ASFR tables for the UK.
     "UK_ONS": "England & Wales",
+    # Not HFD codes: rates per woman at risk from cohort-cumulated order-specific
+    # rates (HFD/scripts/cond_asfr_facet.py CUMULATED_CSV).
+    "GRC_EST": "Greece",
+    "MUS_HFC": "Mauritius",
 }
 
 

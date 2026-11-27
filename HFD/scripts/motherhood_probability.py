@@ -15,6 +15,11 @@ The UK reconstruction (common.ons_table3) gives discrete yearly hazards
 (the share of still-childless women who have a first birth within the year of
 age) for ages 21-45, so for it the survival is prod_{x=a}^{44} (1 - h_x).
 
+Greece and Mauritius are not in HFD. Their m1x come from cohort-cumulated order-specific rates
+(HFD/scripts/cond_asfr_facet.py, MAX_BACKFILL_SHARE rule), so a probability is drawn only for years
+where every age from the starting age to 44 passes that rule: Greece from 1984 at 25, Mauritius not
+at all, since its rates start in 2005.
+
 One panel per country, x = year, a line per starting age (AGES).
 """
 
@@ -70,8 +75,24 @@ def uk_probabilities():
     return pd.DataFrame(rows)
 
 
+def cumulated_probabilities():
+    from cond_asfr_facet import GRC_CODE, MUS_CODE, MAX_BACKFILL_SHARE, CUMULATED_CSV
+    rows = []
+    for code in (GRC_CODE, MUS_CODE):
+        d = pd.read_csv(CUMULATED_CSV[code])
+        d["m1x"] = d.m1x.where(d.backfill_share1 <= MAX_BACKFILL_SHARE)
+        for year, group in d.groupby("year"):
+            m = group.set_index("age")["m1x"]
+            for age in AGES:
+                tail = m.reindex(range(age, END_AGE))
+                if tail.isna().any():
+                    continue
+                rows.append({"code": code, "year": year, "age": age, "p": 1 - np.exp(-tail.sum())})
+    return pd.DataFrame(rows, columns=["code", "year", "age", "p"])
+
+
 def load():
-    return pd.concat([hfd_probabilities(), uk_probabilities()], ignore_index=True)
+    return pd.concat([hfd_probabilities(), uk_probabilities(), cumulated_probabilities()], ignore_index=True)
 
 
 def make_facet(df, countries):
@@ -124,6 +145,10 @@ def make_facet(df, countries):
 if __name__ == "__main__":
     df = load()
     countries = [code for codes in COUNTRY_REGIONS.values() for code in codes]
+    from cond_asfr_facet import GRC_CODE, MUS_CODE
+    for code, after in ((GRC_CODE, "PRT"), (MUS_CODE, "TWN")):
+        if (df["code"] == code).any():
+            countries.insert(countries.index(after) + 1, code)
     df = df[df["code"].isin(countries)]
     df.assign(p=df["p"].round(4)).sort_values(["code", "age", "year"]).to_csv(OUTPUT_CSV, index=False)
     fig = make_facet(df, countries)

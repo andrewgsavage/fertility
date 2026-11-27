@@ -7,6 +7,7 @@ age,row,country,change_pct
 20–24,First-birth rate,USA,-10.81
 20–24,First-birth rate,CHL,-7.86
 20–24,First-birth rate,BEL,-0.91
+20–24,First-birth rate,GRC,5.62
 20–24,First-birth rate,GBR,
 20–24,First-birth rate,NLD,-4.18
 20–24,First-birth rate,HRV,-19.68
@@ -34,6 +35,7 @@ age,row,country,change_pct
 25–29,First-birth rate,USA,-9.42
 25–29,First-birth rate,CHL,-2.86
 25–29,First-birth rate,BEL,4.72
+25–29,First-birth rate,GRC,2.38
 25–29,First-birth rate,GBR,7.17
 25–29,First-birth rate,NLD,6.15
 25–29,First-birth rate,HRV,3.57
@@ -61,6 +63,7 @@ age,row,country,change_pct
 30–34,First-birth rate,USA,-3.56
 30–34,First-birth rate,CHL,-0.16
 30–34,First-birth rate,BEL,13.2
+30–34,First-birth rate,GRC,14.2
 30–34,First-birth rate,GBR,10.55
 30–34,First-birth rate,NLD,7.89
 30–34,First-birth rate,HRV,14.44
@@ -88,6 +91,7 @@ age,row,country,change_pct
 35–39,First-birth rate,USA,15.61
 35–39,First-birth rate,CHL,51.24
 35–39,First-birth rate,BEL,16.47
+35–39,First-birth rate,GRC,13.28
 35–39,First-birth rate,GBR,17.58
 35–39,First-birth rate,NLD,11.47
 35–39,First-birth rate,HRV,22.99
@@ -115,6 +119,7 @@ age,row,country,change_pct
 20–24,Second-birth rate,USA,-10.85
 20–24,Second-birth rate,CHL,5.15
 20–24,Second-birth rate,BEL,-10.91
+20–24,Second-birth rate,GRC,-4.61
 20–24,Second-birth rate,GBR,
 20–24,Second-birth rate,NLD,-0.82
 20–24,Second-birth rate,HRV,-9.9
@@ -142,6 +147,7 @@ age,row,country,change_pct
 25–29,Second-birth rate,USA,-6.02
 25–29,Second-birth rate,CHL,1.19
 25–29,Second-birth rate,BEL,-3.23
+25–29,Second-birth rate,GRC,-3.72
 25–29,Second-birth rate,GBR,5.83
 25–29,Second-birth rate,NLD,3.26
 25–29,Second-birth rate,HRV,-6.48
@@ -169,6 +175,7 @@ age,row,country,change_pct
 30–34,Second-birth rate,USA,-1.78
 30–34,Second-birth rate,CHL,-3.19
 30–34,Second-birth rate,BEL,22.07
+30–34,Second-birth rate,GRC,2.59
 30–34,Second-birth rate,GBR,-1.7
 30–34,Second-birth rate,NLD,4.21
 30–34,Second-birth rate,HRV,12.84
@@ -196,6 +203,7 @@ age,row,country,change_pct
 35–39,Second-birth rate,USA,-5.29
 35–39,Second-birth rate,CHL,-8.46
 35–39,Second-birth rate,BEL,34.43
+35–39,Second-birth rate,GRC,21.53
 35–39,Second-birth rate,GBR,3.17
 35–39,Second-birth rate,NLD,1.4
 35–39,Second-birth rate,HRV,38.51
@@ -223,6 +231,7 @@ age,row,country,change_pct
 20–24,First pregnancies aborted,USA,
 20–24,First pregnancies aborted,CHL,
 20–24,First pregnancies aborted,BEL,
+20–24,First pregnancies aborted,GRC,
 20–24,First pregnancies aborted,GBR,
 20–24,First pregnancies aborted,NLD,
 20–24,First pregnancies aborted,HRV,
@@ -250,6 +259,7 @@ age,row,country,change_pct
 25–29,First pregnancies aborted,USA,
 25–29,First pregnancies aborted,CHL,
 25–29,First pregnancies aborted,BEL,
+25–29,First pregnancies aborted,GRC,
 25–29,First pregnancies aborted,GBR,
 25–29,First pregnancies aborted,NLD,
 25–29,First pregnancies aborted,HRV,
@@ -277,6 +287,7 @@ age,row,country,change_pct
 30–34,First pregnancies aborted,USA,
 30–34,First pregnancies aborted,CHL,
 30–34,First pregnancies aborted,BEL,
+30–34,First pregnancies aborted,GRC,
 30–34,First pregnancies aborted,GBR,
 30–34,First pregnancies aborted,NLD,
 30–34,First pregnancies aborted,HRV,
@@ -304,6 +315,7 @@ age,row,country,change_pct
 35+,First pregnancies aborted,USA,
 35+,First pregnancies aborted,CHL,
 35+,First pregnancies aborted,BEL,
+35+,First pregnancies aborted,GRC,
 35+,First pregnancies aborted,GBR,
 35+,First pregnancies aborted,NLD,
 35+,First pregnancies aborted,HRV,
@@ -331,6 +343,7 @@ age,row,country,change_pct
 20–24,Later pregnancies aborted,USA,
 20–24,Later pregnancies aborted,CHL,
 20–24,Later pregnancies aborted,BEL,
+20–24,Later pregnancies aborted,GRC,
 20–24,Later pregnancies aborted,GBR,
 20–24,Later pregnancies aborted,NLD,
 20–24,Later pregnancies aborted,HRV,
@@ -358,6 +371,7 @@ age,row,country,change_pct
 25–29,Later pregnancies aborted,USA,
 25–29,Later pregnancies aborted,CHL,
 25–29,Later pregnancies aborted,BEL,
+25–29,Later pregnancies aborted,GRC,
 25–29,Later pregnancies aborted,GBR,
 25–29,Later pregnancies aborted,NLD,
 25–29,Later pregnancies aborted,HRV,
@@ -385,6 +399,7 @@ age,row,country,change_pct
 30–34,Later pregnancies aborted,USA,
 30–34,Later pregnancies aborted,CHL,
 30–34,Later pregnancies aborted,BEL,
+30–34,Later pregnancies aborted,GRC,
 30–34,Later pregnancies aborted,GBR,
 30–34,Later pregnancies aborted,NLD,
 30–34,Later pregnancies aborted,HRV,
@@ -412,6 +427,7 @@ age,row,country,change_pct
 35+,Later pregnancies aborted,USA,
 35+,Later pregnancies aborted,CHL,
 35+,Later pregnancies aborted,BEL,
+35+,Later pregnancies aborted,GRC,
 35+,Later pregnancies aborted,GBR,
 35+,Later pregnancies aborted,NLD,
 35+,Later pregnancies aborted,HRV,
