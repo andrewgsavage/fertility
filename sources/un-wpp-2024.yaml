@@ -1,0 +1,21 @@
+id: un-wpp-2024
+type: dataset
+title: World Population Prospects 2024 (population by single age and sex; demographic indicators)
+publisher: United Nations Population Division
+url: https://population.un.org/wpp/downloads
+oa: gold
+local:
+- UN/data/
+countries:
+- all
+period:
+- 1950
+- 2100
+scripts:
+- NSO/scripts/births_by_order_rates.py
+measurables:
+- tfr
+notes: >-
+  CSV files WPP2024_PopulationBySingleAgeSex_Medium_1950-2023 and _2024-2100 (female population
+  at 1 July, thousands) and WPP2024_Demographic_Indicators_Medium (TFR).
+accessed: 2026-11-27

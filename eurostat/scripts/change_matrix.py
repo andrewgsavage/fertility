@@ -17,6 +17,8 @@ Outcomes:
 - Uruguay (not in HFD): TFR from MSP births over INE women; with a child by age
   from HFC first-birth rates to 2011 and MSP/INE/SIP estimates for 2013 and 2021
   (uruguay_outcomes; MSP, INE and SIP files via HFC/scripts/uruguay_by_order.py).
+- Brazil (not in HFD): TFR, with a child by age and conditional rates from SINASC birth records
+  over UN WPP women (brazil_outcomes; NSO/outputs from NSO/scripts/births_by_order_rates.py).
 - Women in a couple: registers, CPS, ILO and FT by age; Eurostat lfst_hhindws
   as a lower-quality 18-24 row (Denmark and Sweden dropped for series breaks).
 
@@ -79,6 +81,7 @@ COUNTRIES = {
     "SVK": ("SK", "Slovakia"), "CYP": ("CY", "Cyprus"), "MLT": ("MT", "Malta"),
     "ISL": ("IS", "Iceland"), "AUS": (None, "Australia"), "NZL": (None, "New Zealand"),
     "CHL": (None, "Chile"), "URY": (None, "Uruguay"), "TWN": (None, "Taiwan"),  # Uruguay is not in HFD: see uruguay_outcomes()
+    "BRA": (None, "Brazil"),  # not in HFD: see brazil_outcomes()
 }
 # Region, for grouping countries in the matrix. "English-speaking" is outside Europe; GBR and IRL sit with Western Europe.
 REGION_MEMBERS = {
@@ -88,7 +91,7 @@ REGION_MEMBERS = {
     "Central & Eastern Europe": ("BGR", "CZE", "EST", "HRV", "HUN", "LTU", "LVA", "POL", "ROU", "SVK", "SVN"),
     "English-speaking": ("AUS", "CAN", "NZL", "USA"),
     "East Asia": ("JPN", "KOR", "TWN"),
-    "Latin America": ("CHL", "URY"),
+    "Latin America": ("BRA", "CHL", "URY"),
 }
 REGIONS = {iso: r for r, members in REGION_MEMBERS.items() for iso in members}
 assert set(REGIONS) == set(COUNTRIES), set(COUNTRIES) ^ set(REGIONS)
@@ -187,7 +190,8 @@ M30_ESTIMATES = {**{c: "estimate, Human Fertility Collection first-birth rates" 
                  **{c: "estimate, Eurostat first births per woman" for c in ESTIMATE_EUROSTAT},
                  "FRA": "estimate, Eurostat first births per woman, 2013 onward (series break)",
                  "URY": "estimate, Human Fertility Collection first-birth rates to 2011; "
-                        "MSP births by age × SIP first-birth shares over INE women, 2013 and 2021"}
+                        "MSP births by age × SIP first-birth shares over INE women, 2013 and 2021",
+                 "BRA": "estimate, SINASC first births over UN WPP women"}
 EU2ISO = {v[0]: k for k, v in COUNTRIES.items() if v[0]}
 EUROSTAT_COUPLE_BREAKS = ("DNK", "SWE")  # jumps of 15-25 points between years
 MIN_FIT_N = 10  # below this a cross-country correlation isn't shown
@@ -541,6 +545,7 @@ def load_tfr():
         if r["value"] is not None:
             other.setdefault(r["countryiso3code"], {})[int(r["date"])] = r["value"]
     other["URY"] = uruguay_outcomes()["tfr"]
+    other["BRA"] = brazil_outcomes()["tfr"]
     for c in missing:
         if c in other:
             out[c] = other[c]
@@ -580,6 +585,40 @@ def uruguay_outcomes():
         for age in CHILD_AGES:
             _URUGUAY[age][year] = 100 * float(first.iloc[:(age - 15) // 5].sum())
     return _URUGUAY
+
+
+NSO_OUT = ROOT / "NSO" / "outputs"
+# Brazil's women by parity come from cumulating each cohort's rates, with years before 2000 taking
+# 2000's rates: a conditional rate is used only where those years hold at most this share of the
+# cohort's births (as in HFD/scripts/cond_asfr_facet.py).
+BRA_MAX_BACKFILL_SHARE = 0.10
+_BRAZIL = {}
+
+
+def brazil_outcomes():
+    """Brazil, which HFD doesn't cover: {"tfr": {year: TFR}, age: {year: % with a child}, "rates": DataFrame}.
+
+    SINASC live-birth records by mother's age and birth order over UN WPP 2024 women, 2000-2024. With
+    a child by age: first births per woman summed over the ages before, as for the other estimates.
+    Conditional rates per woman at risk, with women by parity from cohort-cumulated rates.
+    """
+    if _BRAZIL:
+        return _BRAZIL
+    s = pd.read_csv(NSO_OUT / "tfr_by_order_mex_bra.csv")
+    s = s[s.country == "Brazil"]
+    _BRAZIL["tfr"] = {int(y): float(v) for y, v in zip(s.year, s.TFR)}
+    f = pd.read_csv(NSO_OUT / "asfr_by_order_bra.csv")
+    for age in CHILD_AGES:
+        g = f[f.age < age].groupby("year").f1.sum()
+        _BRAZIL[age] = {int(y): 100 * float(v) for y, v in g.items()}
+    sys.path.insert(0, str(ROOT / "NSO" / "scripts"))
+    from births_by_order_rates import women
+    w = women("BRA").rename("women").reset_index().rename(columns={"Time": "year", "AgeGrpStart": "age"})
+    c = pd.read_csv(NSO_OUT / "cond_asfr_bra.csv").merge(w, on=["year", "age"])
+    c["ok1"] = c.backfill_share1 <= BRA_MAX_BACKFILL_SHARE
+    c["ok2"] = c.ok1 & (c.backfill_share2 <= BRA_MAX_BACKFILL_SHARE)
+    _BRAZIL["rates"] = c
+    return _BRAZIL
 
 
 def synthetic(qs):
@@ -684,6 +723,7 @@ def load_parity():
         out[f"mothers_by_{age}"]["AUS"] = census[age]
         out[f"mothers_by_{age}"]["NZL"] = nz[age]
         out[f"mothers_by_{age}"]["URY"] = uruguay_outcomes()[age]
+        out[f"mothers_by_{age}"]["BRA"] = brazil_outcomes()[age]
     return out
 
 
@@ -727,6 +767,15 @@ def load_rates(e):
         for year, row in x[x.n == hi - lo + 1].iterrows():
             if row.r > 0:
                 out[key].setdefault("GBR", {})[int(year)] = 100 * row.b / row.r
+        # Brazil: births over women at risk, both from the rate and the estimated parity share
+        b = brazil_outcomes()["rates"]
+        b = b[b.age.between(lo, hi)].dropna(subset=[col]).copy()
+        risk = b.p0 if col == "m1x" else b.p1
+        b = b.assign(births=b[col] * risk * b.women, exposure=risk * b.women)
+        ok = "ok1" if col == "m1x" else "ok2"
+        g = b.groupby("year").agg(births=("births", "sum"), exposure=("exposure", "sum"), n=("age", "size"), ok=(ok, "all"))
+        for year, row in g[(g.n == hi - lo + 1) & g.ok].iterrows():
+            out[key].setdefault("BRA", {})[int(year)] = 100 * row.births / row.exposure
     return out
 
 
@@ -795,7 +844,7 @@ ILO_ISO = ("CAN", "JPN", "KOR", "AUS", "CHL", "URY")
 # Uruguay's ILO coupling jumps 7-9 points at every age between 2005 and 2006, when its household
 # survey (ECH) was extended from towns of 5,000 or more to the whole country.
 ILO_FROM = {"URY": 2006}
-FT_ISO = {"Spain": "ESP", "UK": "GBR", "France": "FRA", "Germany": "DEU", "Poland": "POL"}
+FT_ISO = {"Spain": "ESP", "UK": "GBR", "France": "FRA", "Germany": "DEU", "Poland": "POL", "Brazil": "BRA"}
 UN_NAMES = {**{v[1]: k for k, v in COUNTRIES.items()}, "S Korea": "KOR"}
 SINGLE_AGE = ("DNK", "FIN", "NLD")
 MATCHED_BANDS = [(18, 24), (25, 29), (30, 34), (35, 39)]
