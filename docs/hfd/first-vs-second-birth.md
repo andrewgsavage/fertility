@@ -8,6 +8,8 @@ This reduction in first birth fertility rates can be seen in almost all countrie
 
 Uruguay, which is not in the Human Fertility Database, shows the same first-birth pattern in [Cabella et al. (2024)](https://www.demographic-research.org/articles/volume/50/16): between 2016 and 2021 the first-birth rate of childless women fell 36% at age 20, 29% at 30 and 12% at 35.
 
+Brazil, estimated here from birth records, shows first-birth rates falling most at young ages, as elsewhere: from 2010 to 2024 the rate fell 50% at 16, 41% at 18 and 25% at 20, and from 2015 to 2024 it fell 9% at 25 and 5% at 28. Unlike most HFD countries, its second-birth rates fell too, by 20–32% at every age from 18 to 29 between 2015 and 2024.
+
 ::::{tab-set}
 
 :::{tab-item} Linear
@@ -57,6 +59,10 @@ parity in the 2011 census. Uruguay has no published second-birth conditional rat
 second-birth panel is empty and it is not in the change since 2009-11 chart. The
 [Human Fertility Collection](https://www.fertilitydata.org/Country/Country?code=URY) holds Uruguayan rates by birth order
 for 1978-2011, but as births per woman of any parity, not per woman at risk.
+```
+
+```{note}
+Brazil is not in HFD. Births by mother's age and order are from the Ministry of Health's [SINASC](https://datasus.saude.gov.br/nascidos-vivos-desde-1994) live-birth declarations (DATASUS FTP national files), 2000–2024, order being the mother's previous live-born children plus one; women by single year of age are from [UN WPP 2024](https://population.un.org/wpp/downloads). Women by parity are not observed: they are estimated by summing each cohort's order-specific birth rates over its earlier ages, ignoring mortality and migration differences by parity. A cohort's years before 2000 take 2000's rates, and a rate is drawn only where those years hold at most 10% of the cohort's first births (first and second births for the second-birth rate), which is up to age 20 in 2005 and 40 in 2024. Years are drawn from 2005, as for the HFD countries. 2009–2011 has ages up to about 25, so Brazil is not in the change since 2009-11 chart. Order is not stated for 13% of births in 2000, 6% in 2010 and 1% in 2024; these are spread over the order mix at the same age, which understates first births if most of them are first births. SINASC counts 5–8% fewer births than WPP in 2000–2004. Mexico's birth registrations were tried the same way but count more than one first birth per woman over a cohort's lifetime, so they give no usable childless population.
 ```
 :::
 

@@ -11,6 +11,12 @@ age, 2016-2021, digitised from Cabella et al. (2024) Figure 5
 the same occurrence/exposure measure as HFD's m1x. No second-birth conditional
 rates or 2009-2011 baseline exist for Uruguay, so its second-birth panel is empty
 and it is left out of the change-since-baseline chart.
+
+Brazil is not in HFD either. Its panel uses first- and second-birth rates per woman at risk
+from SINASC birth records (NSO/scripts/births_by_order_rates.py), with women by parity from
+cohort sums of order-specific rates. Years of a cohort's history before the records begin (2000)
+take 2000's rates; a rate is drawn only where those years hold at most MAX_BACKFILL_SHARE of the
+cohort's cumulated births (first births for m1x, first and second for m2x).
 """
 
 import math
@@ -53,7 +59,11 @@ LABEL_FONT = dict(size=14, family='"Open Sans", verdana, arial, sans-serif', col
 # Non-HFD panels: code -> (panel label, note under the label).
 URY_CODE = "URY_CAB"
 URY_CSV = REPO / "research" / "data" / "cabella2024_fig5_ury_casfr1.csv"
-EXTRA_LABELS = {URY_CODE: ("Uruguay", "Cabella et al. 2024, not HFD")}
+BRA_CODE = "BRA_SINASC"
+BRA_CSV = outputs_dir("NSO") / "cond_asfr_bra.csv"
+MAX_BACKFILL_SHARE = 0.10  # of a cohort's cumulated births from years before 2000, filled with 2000 rates
+EXTRA_LABELS = {URY_CODE: ("Uruguay", "Cabella et al. 2024, not HFD"),
+                BRA_CODE: ("Brazil", "SINASC birth records, not HFD")}
 
 BIRTH_ORDERS = [(1, "m1x", "First birth"), (2, "m2x", "Second birth")]
 
@@ -73,7 +83,13 @@ def load_data():
         for age, (c1, c2) in ages.items()
     ]
     ury = pd.read_csv(URY_CSV).rename(columns={"casfr1": "m1x"}).assign(code=URY_CODE)
-    df = pd.concat([df, pd.DataFrame(uk_rows), ury[["code", "year", "age", "m1x"]]], ignore_index=True)
+    bra = pd.read_csv(BRA_CSV)
+    bra = bra[bra.year >= 2005].assign(code=BRA_CODE)
+    bra["m1x"] = bra.m1x.where(bra.backfill_share1 <= MAX_BACKFILL_SHARE)
+    bra["m2x"] = bra.m2x.where(bra[["backfill_share1", "backfill_share2"]].max(axis=1) <= MAX_BACKFILL_SHARE)
+    bra = bra.dropna(subset=["m1x", "m2x"], how="all")
+    df = pd.concat([df, pd.DataFrame(uk_rows), ury[["code", "year", "age", "m1x"]],
+                    bra[["code", "year", "age", "m1x", "m2x"]]], ignore_index=True)
     return df
 
 
@@ -253,6 +269,7 @@ if __name__ == "__main__":
     all_countries = [code for codes in COUNTRY_REGIONS.values() for code in codes]
     with_ury = all_countries.copy()
     with_ury.insert(with_ury.index("CHL") + 1, URY_CODE)
+    with_ury.insert(with_ury.index(URY_CODE) + 1, BRA_CODE)
     df = add_change_since_baseline(df)
     for output, change in [(OUTPUT, False), (OUTPUT_CHANGE, True)]:
         fig = make_facet(df, all_countries if change else with_ury, change=change)

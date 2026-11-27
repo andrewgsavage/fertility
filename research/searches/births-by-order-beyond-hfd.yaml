@@ -1,0 +1,164 @@
+id: births-by-order-beyond-hfd
+question: >-
+  Births or fertility rates by birth order (ideally by mother's age, annual) for countries and years
+  the Human Fertility Database lacks: countries with no HFD birth-order series (France, Greece,
+  Latvia, Romania, Australia, Israel, Mexico, Singapore and others) and earlier years where the HFD
+  series starts late (UK 2013, Belgium and Switzerland 1998, Italy 2004).
+status: open
+answer: >-
+  Mexico 1990-2024 (INEGI registrations, completed for late registration) and Brazil 2000-2024
+  (SINASC) TFR by birth order are on the FT birth-rates page. Brazil's first- and second-birth
+  rates per woman at risk, with parity from cohort-cumulated order rates, are on the first vs
+  second birth page. Mexico's registers give more than one first birth per woman over a cohort,
+  so no conditional rates for Mexico. Eurostat demo_fordagec gives births by order and single-year age for
+  about 50 European countries, and the Human Fertility Collection has order-specific ASFRs for about
+  ten countries missing from HFD. Both give order-specific rates per woman, not parity-conditional
+  rates, because neither has exposure by parity.
+measurables: [births, asfr, tfr]
+countries: [FRA, GRC, LVA, ROU, CYP, LUX, MLT, SRB, MKD, ALB, MDA, GEO, ARM, TUR, MUS, CUB, HKG, AUS, ISR, MEX, SGP, BRA, NZL]
+attempts:
+  - date: 2026-11-26
+    tried: Eurostat demo_fordagec (live births by mother's age and birth order), JSON API
+    url: https://ec.europa.eu/eurostat/databrowser/view/demo_fordagec/default/table
+    outcome: partial
+    why: >-
+      Has single-year age by order 1, 2, 3, 4+ with under 2% unknown order for most countries.
+      Not in HFD: Greece, Latvia, Romania, Cyprus and Luxembourg (1960 or 1980s-2024), Malta
+      2005-2024, Serbia 2000-2024, North Macedonia, Georgia, Armenia, Moldova (up to 15% unknown),
+      Albania (gappy, up to 11% unknown), Türkiye 2018-2024 (gappy). France is 1998-2024 with
+      2007-2012 missing. UK series is 1960-2018, but UK order before 2013 counted only births within
+      the current marriage, which is why HFD starts in 2013. Early years for Belgium, Switzerland and
+      Italy may have the same within-marriage coding. Births only, so rates need demo_pjan
+      populations, and there is no exposure by parity.
+  - date: 2026-11-26
+    tried: Human Fertility Collection data availability page, birth-order section
+    url: https://www.fertilitydata.org/Data/DataAvailability
+    outcome: partial
+    why: >-
+      Order-specific ASFRs not in HFD: Greece 1960-2008, Latvia 1990-2008, Romania 1961-2007,
+      Mauritius 1972-2024, Cuba 1989-2013, Hong Kong 1976-2007, Moldova 1980-2014, North Macedonia
+      1950-2008, Montenegro, Serbia, Bosnia (to 1990), Australia 1992-2000, China and Cyprus in a few
+      years. Extends HFD back: Belgium from 1960, Italy 1952, Switzerland 1969, England and Wales
+      1938-2007, West Germany 1958, Korea 1980 (already used). Files download by script
+      (<CODE>_ASFRRR_BO.txt style, as for KOR and URY). Pre-2013 England and Wales order is
+      within-marriage.
+  - date: 2026-11-26
+    tried: ABS Births, Australia (3301.0), previous children of the mother
+    url: https://www.abs.gov.au/AUSSTATS/abs@.nsf/7d12b0f6763c78caca257061001cc588/c85454bfe10249ffca2577cf000deff2!OpenDocument
+    outcome: unreliable
+    why: >-
+      Confinements by previous children, but Victoria and Queensland count only children from the
+      current relationship, and Tasmania has had missing values. Not a national all-relationships
+      birth order.
+  - date: 2026-11-26
+    tried: Israel CBS Statistical Abstract, chapter 2 (table 2.29 and 2.43)
+    url: https://www.cbs.gov.il/he/publications/DocLib/2025/2.ShnatonPopulation/st02_29x.pdf
+    outcome: partial
+    why: >-
+      Table 2.29 gives the share of live births by order (1, 2, 3, 4+) and mean age at first birth by
+      year, not births by order and age. No order-by-age table found in the search results; PDFs not
+      opened.
+    retry: Open the full chapter 2 PDFs, or ask CBS for a custom order-by-age table.
+  - date: 2026-11-26
+    tried: SingStat Table Builder TS/M810081 and Population Trends (live births by birth order)
+    url: https://tablebuilder.singstat.gov.sg/table/TS/M810081
+    outcome: partial
+    why: >-
+      Live births by birth order 1980 onward; no TFR by order or order-by-age table found. Order for
+      births registered from 29 May 2022 is self-declared only.
+    retry: Check Table Builder for an order-by-age table; the data.gov.sg API serves the births table.
+  - date: 2026-11-26
+    tried: INEGI natalidad, nacimientos registrados OLAP cube
+    url: https://www.inegi.org.mx/sistemas/olap/Proyectos/bd/continuas/natalidad/nacimientos.asp
+    outcome: partial
+    why: Has mother's age and birth order as variables, but by registration year; the microdata were used instead.
+  - date: 2026-11-27
+    tried: INEGI ENR microdata, DBF zip per registration year (microdatos/<y>/natalidad_base_datos_<y>_dbf.zip)
+    url: https://www.inegi.org.mx/programas/natalidad/
+    outcome: found
+    why: >-
+      Downloads by script for 1985-2025. The CSV open-data zips exist only for some years
+      (2018-2022); the DBF zips exist for every year. Two-digit birth years up to the 1998 file.
+  - date: 2026-11-26
+    tried: Hong Kong C&SD tables on data.gov.hk (115-01016 age-specific fertility rates)
+    url: https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-115-01016
+    outcome: nothing-found
+    why: No birth-order table turned up after 2007 (HFC covers 1976-2007).
+  - date: 2026-11-26
+    tried: Stats NZ / Health NZ maternity tables
+    url: https://figure.nz/chart/eyZVPki1ro8RflNW
+    outcome: partial
+    why: >-
+      Health NZ maternity data gives people giving birth by number of previous births, 2008-2024,
+      not linked to mother's age in the chart found. Stats NZ birth registrations have no birth order.
+  - date: 2026-11-26
+    tried: UN Demographic Yearbook natality special issue, tables 6-7 (live births and rates by age of mother and birth order)
+    url: https://unstats.un.org/unsd/demographic/products/dyb/DYBNat/NatStatTab06.pdf
+    outcome: partial
+    why: >-
+      96 countries, but only 1990-1998, and many count order within marriage only. Later yearbooks
+      drop birth order from table 10.
+  - date: 2026-11-26
+    tried: INSEE Données nationales, naissances (NAIS9, NAIS10)
+    url: https://www.insee.fr/fr/statistiques/8999017
+    outcome: partial
+    why: >-
+      NAIS10 has births by order and mother's age from 2014 only; NAIS9 mean age by order from 1967.
+      INSEE notes that civil-registration order overstates first births and needs correcting from
+      the census, so the raw order split is biased.
+  - date: 2026-11-27
+    tried: DATASUS TabNet SINASC (nvbr.def)
+    url: http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinasc/cnv/nvbr.def
+    outcome: lacks-it
+    why: Mother's age is a row/column variable but previous children is not.
+  - date: 2026-11-27
+    tried: OpenDataSUS SINASC dataset page and CKAN API
+    url: https://opendatasus.saude.gov.br/dataset/sistema-de-informacao-sobre-nascidos-vivos-sinasc
+    outcome: blocked
+    why: The dataset page and the package_show API redirect to the portal's home page; the S3 CSV path returns AccessDenied.
+    retry: Find the current CSV links in a browser.
+  - date: 2026-11-27
+    tried: DATASUS FTP, SINASC DNRES national files DNBR1996-2024.dbc
+    url: ftp://ftp.datasus.gov.br/dissemin/publicos/SINASC/1996_/Dados/DNRES/
+    outcome: found
+    why: >-
+      QTDFILVIVO (previous live-born children) and IDADEMAE on every record. Files are DBC
+      (PKWARE-imploded DBF), expanded with common/dbc2dbf.c. The FTP data connection times out
+      on about half of tries; repeated attempts get through.
+  - date: 2026-11-27
+    tried: IBGE Censo 2022 fecundidade e migração, preliminary sample results (release slides PDF)
+    url: https://agenciadenoticias.ibge.gov.br/media/com_mediaibge/arquivos/5372562f3733b0300ecc87116b276e54.pdf
+    outcome: partial
+    why: >-
+      Women 50-59 with no live-born child: 10.0% in 2000, 11.8% in 2010, 16.1% in 2022 (Gráfico 8).
+      No childlessness or parity distribution by 5-year age under 50 in the release, which is what
+      a check of Brazil's cohort-cumulated parity shares needs.
+    retry: SIDRA census tables of women by number of live-born children and age.
+  - date: 2026-11-27
+    tried: DATASUS FTP, SINASC 1994-1995 national files (SINASC/1994_1995/Dados/DNRES/DNBR1995.dbc)
+    url: ftp://ftp.datasus.gov.br/dissemin/publicos/SINASC/1994_1995/Dados/DNRES/
+    outcome: unreliable
+    why: >-
+      Old layout, with FIL_VIVOS for previous children. In 1995 it is blank for 47% of 2.87M
+      records, and for all of São Paulo's. Among stated values, 1 (596k) outnumbers 0 (264k),
+      which is implausible for previous children. The count may include the newborn, but it
+      can't be confirmed. 1994 was not checked.
+  - date: 2026-11-27
+    tried: IBGE census sample microdata 1970, 1980, 1991 (ftp.ibge.gov.br/Censos/Censo_Demografico_<y>/Microdados/)
+    url: https://ftp.ibge.gov.br/Censos/
+    outcome: partial
+    why: >-
+      Free zips: 1970 is 263 MB, 1980 is 545 MB and 1991 is 674 MB. 2000, 2010 and 2022
+      folders exist too. Not downloaded, so the variables are unconfirmed. The censuses ask
+      women their live-born children. 1980 onward is believed to ask the date of the last live
+      birth. Together these would give parity by age and births in the past year by order at
+      census dates.
+    retry: Download one year and check the questionnaire for the last-birth date variable.
+next:
+  - Colombia DANE EEVV, Chile INE and Costa Rica INEC vital-statistics microdata (previous live births per birth).
+  - Japan and Taiwan are already in HFD; Thailand and Malaysia registration data not checked.
+  - INED for a corrected French TFR by order.
+notes: >-
+  HFD derives parity-conditional rates from births by order plus census parity distributions, so
+  Eurostat or HFC counts support order-specific ASFR/TFR (TFR1, TFR2, ...) and mean age by order, but
+  not the conditional rates or the motherhood-probability calculation without extra work.

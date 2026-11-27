@@ -1,0 +1,23 @@
+id: datasus-sinasc
+type: dataset
+title: Sistema de Informações sobre Nascidos Vivos (SINASC), national files by mother's residence
+publisher: DATASUS, Ministério da Saúde, Brazil
+url: ftp://ftp.datasus.gov.br/dissemin/publicos/SINASC/1996_/Dados/DNRES/
+oa: gold
+local:
+- NSO/data/bra/
+countries:
+- BRA
+period:
+- 1996
+- 2024
+scripts:
+- NSO/scripts/births_by_order_download.py
+- NSO/scripts/births_by_order_rates.py
+measurables:
+- births
+notes: >-
+  DNBR<year>.dbc, one file per year of birth, compressed DBF (PKWARE implode), expanded with
+  common/dbc2dbf.c. Birth order = QTDFILVIVO (previous live-born children) + 1. The FTP data
+  connection times out often; retries get through. TabNet has no previous-children variable.
+accessed: 2026-11-27
