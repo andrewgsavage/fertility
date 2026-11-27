@@ -1,0 +1,25 @@
+id: inegi-enr
+type: dataset
+title: Estadística de Nacimientos Registrados (ENR), microdata
+publisher: Instituto Nacional de Estadística y Geografía (INEGI), Mexico
+url: https://www.inegi.org.mx/programas/natalidad/
+oa: gold
+local:
+- NSO/data/mex/
+countries:
+- MEX
+period:
+- 1985
+- 2025
+scripts:
+- NSO/scripts/births_by_order_download.py
+- NSO/scripts/births_by_order_rates.py
+measurables:
+- births
+notes: >-
+  One file per registration year (DBF zip at contenidos/programas/natalidad/microdatos/<year>/
+  natalidad_base_datos_<year>_dbf.zip). Each birth has year of birth, mother's age at the birth
+  and birth order (ORDEN_PART, 10 = 10+). Late registration is common, so births of a year are
+  summed over later registration files and recent years are incomplete. Mother's age is not
+  stated for 6-10% of records.
+accessed: 2026-11-27

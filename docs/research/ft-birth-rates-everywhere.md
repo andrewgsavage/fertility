@@ -12,7 +12,7 @@ The FT's [Why birth rates are falling everywhere all at once](https://www.ft.com
 - **The take-off date is not where the break is.** On the FT's own data, moving each country's take-off date 1–3 years later makes the gap after it bigger (median −17% to −18%, against −13.7% at the FT dates). Moving it 3+ years earlier puts TFR *above* trend. The chart shows a decline that sped up through the 2010s, measured against a straight line. It doesn't show a break at take-off.
 - **App-store searches date take-off to 2010–2013 almost everywhere.** That is true from Sweden to Ethiopia, so searches can't produce the FT's spread of dates (US 2007, Iran 2015). The FT's early dates for the US, UK and Australia come from adoption surveys.
 - **With search dates the effect is about half the size.** Across 65 countries, the median gap 5–7 years after the search-dated take-off is −6%, against −13.7% for the FT's eight countries. A third of countries are at or above trend.
-- **Mexico's fall depends on the data source.** WPP 2024 has Mexico's TFR at 1.91 in 2023, still above the US (1.62). The FT's series (national estimates) has 1.52. On WPP, Mexico is 2% below trend 8 years after take-off. On the FT's series it is 17.6% below.
+- **Mexico's fall depends on the data source.** WPP 2024 has Mexico's TFR at 1.91 in 2023, still above the US (1.62). The FT's series (national estimates) has 1.52. On WPP, Mexico is 2% below trend 8 years after take-off. On the FT's series it is 17.6% below. Birth registrations side with the FT: 1.51 in 2023 after allowing for late registration.
 - **"More than two-thirds of 195 countries below 2.1" is not in WPP.** WPP has 52–57% below 2.1, depending on the year and which territories count.
 
 ## The smartphone chart
@@ -130,17 +130,18 @@ The test can't rule smartphones out. It only shows that the chart can't separate
 
 ## Mexico vs the US
 
-| Year | Mexico, FT | US, FT | Mexico, WPP | US, WPP |
-|---|--:|--:|--:|--:|
-| 2018 | 1.91 | 1.71 | 2.03 | 1.72 |
-| 2020 | 1.75 | 1.62 | 1.99 | 1.62 |
-| 2021 | 1.63 | 1.63 | 1.97 | 1.63 |
-| 2022 | 1.57 | 1.65 | 1.94 | 1.66 |
-| 2023 | 1.52 | 1.60 | 1.91 | 1.62 |
-| 2025 | 1.38 | 1.57 | | |
+| Year | Mexico, FT | US, FT | Mexico, WPP | US, WPP | Mexico, registers |
+|---|--:|--:|--:|--:|--:|
+| 2018 | 1.91 | 1.71 | 2.03 | 1.72 | 2.00 |
+| 2020 | 1.75 | 1.62 | 1.99 | 1.62 | 1.78 |
+| 2021 | 1.63 | 1.63 | 1.97 | 1.63 | 1.64 |
+| 2022 | 1.57 | 1.65 | 1.94 | 1.66 | 1.63 |
+| 2023 | 1.52 | 1.60 | 1.91 | 1.62 | 1.51 |
+| 2024 | | | | | 1.41 |
+| 2025 | 1.38 | 1.57 | | | |
 
 ```{note}
-FT chart data from the article's Flourish embed (visualisation 28970599); its footer cites UN WPP, national statistics agencies and Birth Gauge. [UN WPP 2024](https://population.un.org/wpp/) via [Our World in Data](https://ourworldindata.org/grapher/children-born-per-woman), estimates to 2023.
+FT chart data from the article's Flourish embed (visualisation 28970599); its footer cites UN WPP, national statistics agencies and Birth Gauge. [UN WPP 2024](https://population.un.org/wpp/) via [Our World in Data](https://ourworldindata.org/grapher/children-born-per-woman), estimates to 2023. Mexico, registers: INEGI birth registrations over WPP women, completed for late registration (see Mexico by birth order below).
 ```
 
 In the FT's series, Mexico first falls below the US in 2022, and the two are level in 2021. The article says 2023. WPP 2024 has Mexico 0.29 above the US in 2023, with a much slower decline after 2018. The two sources agree on the US to within 0.02.
@@ -289,6 +290,87 @@ Digitised from Figure 5 of [Cabella et al. (2024)](https://www.demographic-resea
 ::::
 
 The fall in first births was steepest at the youngest ages. Between 2016 and 2021 the rate fell by 55% at 16, 40% at 19 and 26% at 32, but by 10–11% at 36 and 40. The early peak around 19–20, which made Uruguay's first-birth curve two-humped, has nearly gone. At 2021 rates, 31% of women would have a first child by 25, against 44% at 2016 rates, and 76% by 50, against 86%.
+
+## Mexico by birth order
+
+::::{tab-set}
+
+:::{tab-item} Chart
+```{raw} html
+<iframe src="../_static/nso/mex_tfr_by_order.html" style="width: 100%; height: 460px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+:::
+
+:::{tab-item} Data
+| Year | TFR | First | Second | Third+ | Registered so far | WPP TFR |
+|---|--:|--:|--:|--:|--:|--:|
+| 1990 | 3.74 | 1.06 | 0.83 | 1.85 | 3.74 | 3.44 |
+| 2000 | 2.93 | 1.10 | 0.80 | 1.04 | 2.93 | 2.71 |
+| 2010 | 2.41 | 1.02 | 0.65 | 0.73 | 2.41 | 2.34 |
+| 2015 | 2.20 | 0.98 | 0.62 | 0.60 | 2.19 | 2.14 |
+| 2018 | 2.00 | 0.86 | 0.58 | 0.55 | 1.98 | 2.03 |
+| 2020 | 1.78 | 0.78 | 0.53 | 0.48 | 1.76 | 1.99 |
+| 2022 | 1.63 | 0.71 | 0.49 | 0.43 | 1.58 | 1.94 |
+| 2023 | 1.51 | 0.69 | 0.45 | 0.38 | 1.44 | 1.91 |
+| 2024 | 1.41 | 0.66 | 0.41 | 0.33 | 1.30 | 1.89 |
+
+**Registered births vs WPP births**
+
+| Year | Registered so far | WPP | Ratio |
+|---|--:|--:|--:|
+| 2010 | 2,377,000 | 2,310,000 | 1.03 |
+| 2015 | 2,257,000 | 2,207,000 | 1.02 |
+| 2018 | 2,070,000 | 2,122,000 | 0.98 |
+| 2020 | 1,851,000 | 2,100,000 | 0.88 |
+| 2022 | 1,671,000 | 2,063,000 | 0.81 |
+| 2023 | 1,530,000 | 2,038,000 | 0.75 |
+:::
+
+:::{tab-item} Notes
+```{note}
+INEGI [birth registration statistics](https://www.inegi.org.mx/programas/natalidad/) (Estadística de Nacimientos Registrados), microdata for registration years 1985–2025, counted by year of birth, mother's age at the birth and birth order (order of this birth among children born alive, 10+ grouped). Women by single year of age: [UN WPP 2024](https://population.un.org/wpp/downloads) female population at 1 July. Order-specific rates (births of each order per woman), not conditional on parity. Births with mother's age not stated (1% to 2019, rising to 9% in 2024) are spread over the age pattern of the same order; birth order is always stated.
+
+Many births are registered years after the birth. A year's rates are raised by the share of births registered within the same number of years among births of 2010–2014: 2024 by 8.4%, 2023 by 5.0%, 2022 by 3.2%, 2020 by 1.4%. Dotted years are raised by more than 1%. 2025 (42% still to come) is left out. Births that are never registered, and any registered twice, are not adjusted for. Up to 2017 registered births run 1–9% above WPP's. The 2009 registration file codes about twice as many births first as second, against about 1.6 times in the files either side, so 2009 has too many first births and too few second. Levels by order are overstated, most of all for first births: summed over each cohort's ages, registered first births come to 1.06–1.15 per woman for women born 1973–1979 and second births to 0.71–0.83, but no cohort can have more than one first birth per woman. Late registrations are no more often coded first than births registered on time.
+```
+:::
+
+::::
+
+Birth registrations side with the FT's national series, not WPP. Completed for late registration, they give a TFR of 1.51 in 2023, against 1.52 in the FT's series and 1.91 in WPP. The gap is in births, not women: WPP has 2.04 million births in 2023, against 1.53 million registered so far, after registered births had run 2–3% above WPP's every year up to 2015. From 2019 to 2024 WPP's births fall by at most 1.2% a year; completed registrations fall by 5–7.5% in every year but 2022.
+
+Mexico's fall from 3.7 in 1990 to 2.4 in 2010 was almost all third and later births: 1.12 of the 1.33 fall. First births stayed level, at about one per woman in the registers, which overstate them. From 2015 to 2024 TFR fell by 0.79: 0.32 of that was first births (40%), 0.21 second (26%) and 0.27 third and later (34%). That is close to Uruguay's 2013–2021 split. First births fell from 0.98 to 0.66 per woman while mean age at first birth rose from 24.0 to 24.9. A delay of 0.1 years a year would cut period first births by about 10%; they fell by a third.
+
+## Brazil by birth order
+
+::::{tab-set}
+
+:::{tab-item} Chart
+```{raw} html
+<iframe src="../_static/nso/bra_tfr_by_order.html" style="width: 100%; height: 460px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+```
+:::
+
+:::{tab-item} Data
+| Year | TFR | First | Second | Third+ | WPP TFR | Order not stated |
+|---|--:|--:|--:|--:|--:|--:|
+| 2000 | 2.08 | 0.70 | 0.67 | 0.71 | 2.25 | 13% |
+| 2005 | 1.86 | 0.67 | 0.60 | 0.59 | 1.94 | 12% |
+| 2010 | 1.72 | 0.73 | 0.54 | 0.45 | 1.79 | 6% |
+| 2015 | 1.81 | 0.79 | 0.59 | 0.44 | 1.78 | 6% |
+| 2019 | 1.73 | 0.73 | 0.57 | 0.43 | 1.70 | 2% |
+| 2022 | 1.58 | 0.67 | 0.51 | 0.40 | 1.63 | 1% |
+| 2024 | 1.50 | 0.65 | 0.48 | 0.38 | 1.61 | 1% |
+:::
+
+:::{tab-item} Notes
+```{note}
+Ministry of Health [SINASC](https://datasus.saude.gov.br/nascidos-vivos-desde-1994) live-birth declarations, national files by mother's residence (DATASUS FTP), 2000–2024, counted by mother's age and order (previous live-born children plus one). Women by single year of age: [UN WPP 2024](https://population.un.org/wpp/downloads) female population at 1 July. Order-specific rates, not conditional on parity. Births with order or age not stated are spread pro rata; order is not stated for 13% of births in 2000, falling to 1% from 2022, which understates first births in the early years if most of them are first births. 1996–1999 are left out: order is not stated for 15–47% of births. SINASC's TFR is 4–8% below WPP's in 2000–2007 and within 4% in 2008–2023; years more than 5% below are dotted (2000–2004, 2006–2007 and 2024, when WPP's figure is a projection).
+```
+:::
+
+::::
+
+Brazil's TFR fell from 2.08 to 1.72 between 2000 and 2010, all of it from second and later births; first births stayed at 0.67–0.73 per woman. After a rise to 1.81 in 2015, it fell to 1.50 in 2024. That fall of 0.31 was 0.14 first births (45%), 0.11 second (35%) and 0.06 third and later (19%). SINASC's 2024 TFR is 0.11 below WPP's projection for that year.
 
 ## The article's other charts
 

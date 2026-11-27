@@ -31,6 +31,7 @@ NOT_ENTRY_POINTS = {
     "ONS/scripts/births_per_mother_uk_ons.py",  # prints a sample from common/ons_births_per_mother.py
     "ONS/scripts/mdf_uk_ons.py",  # prints a sample from common/ons_mdf.py
     "NSO/scripts/download.py",  # downloads data; not part of regenerating outputs
+    "NSO/scripts/births_by_order_download.py",  # downloads data; not part of regenerating outputs
     "FT/scripts/google_trends_app_stores.py",  # downloads data; not part of regenerating outputs
 }
 
@@ -38,6 +39,7 @@ NOT_ENTRY_POINTS = {
 # else runs after these, alphabetically.
 RUN_FIRST = [
     "ONS/scripts/dhsc_parity_by_age.py",  # -> eurostat/scripts/abortion_parity.py
+    "NSO/scripts/births_by_order_rates.py",  # -> HFD/scripts/cond_asfr_facet.py, eurostat/scripts/change_matrix.py
     "ILO/scripts/coupling_ilo.py",  # -> common/coupling_hfd.py
     "FT/scripts/ft_birth_rates_everywhere.py",  # -> FT/scripts/ft_birth_rates_charts.py, ft_headline_checks.py
     "FT/scripts/ft_coupling.py",  # -> common/coupling_hfd.py
