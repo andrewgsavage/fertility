@@ -12,8 +12,6 @@ Writes ACS/outputs/:
   fertility_by_education_us_ages.html     births per woman at 15-24 and 25-44, all women, by year
   fertility_by_education_us_curves.html   birth rate by single year of age (3-year moving average),
                                           women not enrolled in school, one panel per education
-  fertility_by_education_us_curves_row.html  the same, panels in one row with the axes of the
-                                          Nordic age curves (eurostat fertility_by_education_nordic.py)
   fertility_by_education_us_20_24.html     birth rate at 20-24 by education (not enrolled) and for
                                           enrolled women, by year
   fertility_by_education_us.csv           the numbers behind them
@@ -26,7 +24,6 @@ from plotly.subplots import make_subplots
 from common.plot_colors import PERIOD_COLORSCALE, period_axis, sample_color
 
 from common.paths import outputs_dir
-from common.education_curves import curves_grid
 from common.plotting import write_html
 
 OUT = outputs_dir("ACS")
@@ -162,17 +159,6 @@ def curves_chart(c):
     return fig
 
 
-def curves_row_chart(c):
-    """The age curves as one row of small multiples, in the layout of the other countries' age
-    curves (common.education_curves)."""
-    panels = []
-    for e, _ in EDU:
-        s = c[c.education == e].rename(columns={"age": "x"})
-        panels.append(s[s.x >= 21] if e == "Bachelor's or more" else s)
-    return curves_grid([("United States", panels)], [e for e, _ in EDU],
-                       "Birth rate by age and education, US women not in school")
-
-
 def young(d):
     """Births per 1,000 women aged 20-24: not enrolled by education, and all enrolled women."""
     q = d[d.age.between(20, 24)]
@@ -212,7 +198,6 @@ def main():
     c = curves(d)
     c.round(1).to_csv(OUT / "fertility_by_education_us_curves.csv", index=False)
     write_html(curves_chart(c), OUT / "fertility_by_education_us_curves.html")
-    write_html(curves_row_chart(c), OUT / "fertility_by_education_us_curves_row.html")
     y = young(d)
     print(y.round(1).to_string())
     y.round(1).to_csv(OUT / "fertility_by_education_us_20_24.csv")

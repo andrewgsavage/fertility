@@ -3,8 +3,6 @@
 Reads NSO/outputs/{mexico,brazil}_fertility_by_education.csv (from mexico_births_by_education.py
 and brazil_births_by_education.py) and writes NSO/outputs/latam_fertility_by_education.{csv,html}:
 births per woman at 25-44 and births per 1,000 women at 20-24, by country, year and education.
-Also writes latam_fertility_by_education_curves.html: birth rate by age, a row of small multiples per
-country (common.education_curves), for docs/factors/education-age-curves.md.
 """
 
 import pandas as pd
@@ -12,7 +10,6 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 from common.paths import outputs_dir
-from common.education_curves import curves_grid
 from common.plotting import write_html
 
 COUNTRIES = [("mexico", "Mexico"), ("brazil", "Brazil")]
@@ -61,16 +58,6 @@ def chart(s):
     return fig
 
 
-def curves_chart():
-    rows = []
-    for code, name in COUNTRIES:
-        d = pd.read_csv(outputs_dir("NSO") / f"{code}_fertility_by_education.csv")
-        d = d.assign(band=d.age, x=d.age.str[:2].astype(int) + 2, rate=d.rate * 1000)
-        rows.append((name, [d[d.ed == e][["year", "x", "band", "rate"]] for e, _, _ in SERIES[code]]))
-    return curves_grid(rows, ["Lowest education", "Middle", "Highest"],
-                       "Birth rate by age and education, Mexico and Brazil")
-
-
 def main():
     s = summary()
     out = outputs_dir("NSO")
@@ -78,7 +65,6 @@ def main():
     print(s.pivot_table(index=["country", "ed"], columns="year", values="tfr_25_44").round(2).to_string())
     print(s.pivot_table(index=["country", "ed"], columns="year", values="per_1000_20_24").round(0).to_string())
     write_html(chart(s), out / "latam_fertility_by_education.html")
-    write_html(curves_chart(), out / "latam_fertility_by_education_curves.html")
 
 
 if __name__ == "__main__":

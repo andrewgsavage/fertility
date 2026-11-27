@@ -30,7 +30,7 @@ Also births per 1,000 women by education and 5-year age group (Norway: 20-24, 25
 the first and last year of each country's consistent span, charted as the % change at 25+.
 
 Writes eurostat/outputs/fertility_by_education_nordic.{csv,html},
-fertility_by_education_nordic_20_24.{csv,html} and fertility_by_education_nordic_by_age.{csv,html}.
+fertility_by_education_nordic_20_24.{csv,html} and fertility_by_education_nordic_by_age.csv (for education_curves_facet.py).
 """
 
 import json
@@ -41,8 +41,6 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 from _common import DATA, NAMES, OUTDIR
-from common.plot_colors import PERIOD_COLORSCALE, period_axis, sample_color
-from common.education_curves import curves_grid
 from common.plotting import write_html
 
 RAW = DATA / "nordic"
@@ -226,15 +224,6 @@ def chart(t, title, ytitle, fmt, no_note):
     return fig
 
 
-def chart_by_age(a):
-    """Birth rate by age group, a row of small multiples per country (common.education_curves).
-    Points sit at the middle of each age band."""
-    a = a.assign(band=a.age, x=a.age.str.split("-").str[0].astype(int) / 2 + a.age.str.split("-").str[1].astype(int) / 2)
-    rows = [(NAMES[g], [a[a.geo == g].rename(columns={e: "rate"})[["year", "x", "band", "rate"]] for e, _, _ in EDU])
-            for g in COUNTRIES]
-    return curves_grid(rows, [lab for _, lab, _ in EDU], "Birth rate by age and education, Nordic register data")
-
-
 def main():
     parts = [rates("FI", pop_fi(), "age5"), rates("SE", pop_se(), "age5"),
              rates("DK", pop_dk(), "age5"), rates("NO", pop_no(), "age10")]
@@ -253,7 +242,6 @@ def main():
                      " (ages 25-39)"), OUTDIR / "fertility_by_education_nordic.html")
     write_html(chart(y, "Births per 1,000 women aged 20-24 by education, register data",
                      "Births per 1,000 women", ".0f", ""), OUTDIR / "fertility_by_education_nordic_20_24.html")
-    write_html(chart_by_age(a), OUTDIR / "fertility_by_education_nordic_by_age.html")
 
 
 if __name__ == "__main__":

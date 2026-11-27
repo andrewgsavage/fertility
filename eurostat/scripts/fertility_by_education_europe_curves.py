@@ -1,5 +1,5 @@
-"""Birth rate by age and mother's education, other European countries: age curves in the format of
-the Nordic and US ones (fertility_by_education_nordic.py, ACS fertility_by_education_us.py).
+"""Birth rate by age and mother's education, other European countries, for the age-curve facet
+(education_curves_facet.py).
 
 Births: Eurostat demo_faeduc (register data) by mother's single year of age, summed to 5-year
 groups 20-24 ... 40-44; unknown education spread over the known levels in proportion, within age.
@@ -10,22 +10,19 @@ Women by education and age:
               reliability) are dropped, so small groups can be missing.
 Levels: ISCED 0-2, 3-4, 5-8.
 
-Writes eurostat/outputs/fertility_by_education_europe_curves.{csv,html}.
+Writes eurostat/outputs/fertility_by_education_europe_curves.csv.
 """
 
 import importlib.util
 
 import pandas as pd
 
-from _common import DATA, NAMES, OUTDIR
+from _common import DATA, OUTDIR
 from common.paths import REPO
-from common.education_curves import curves_grid
-from common.plotting import write_html
 
 LFS = ["CZ", "EL", "HR", "HU", "LV", "MK", "PL", "PT", "RO", "RS", "SI", "SK", "TR"]
 AGES = ["20-24", "25-29", "30-34", "35-39", "40-44"]
 EDU = [("low", "ED0-2"), ("medium", "ED3_4"), ("tertiary", "ED5-8")]
-LABEL = {"low": "Lower secondary or less", "medium": "Upper secondary", "tertiary": "Tertiary"}
 
 
 def lfs_rates():
@@ -68,23 +65,14 @@ def curves():
     return t
 
 
-def chart(t, geos):
-    t = t.assign(band=t.age, x=t.age.str.split("-").str[0].astype(int) + 2)
-    rows = [(NAMES[g], [t[t.geo == g].rename(columns={e: "rate"})[["year", "x", "band", "rate"]].dropna() for e, _ in EDU])
-            for g in geos]
-    return curves_grid(rows, [LABEL[e] for e, _ in EDU], "Birth rate by age and education, other European countries")
-
-
 def main():
     t = curves()
-    geos = ["EE"] + sorted(LFS, key=lambda g: NAMES[g])
     OUTDIR.mkdir(parents=True, exist_ok=True)
     t.round(1).to_csv(OUTDIR / "fertility_by_education_europe_curves.csv", index=False)
     pd.set_option("display.width", 200)
     print(t.groupby("geo").agg(y0=("year", "min"), y1=("year", "max"), n=("year", "size"),
                                low_max=("low", "max"), med_max=("medium", "max"), ter_max=("tertiary", "max"),
                                missing=("tertiary", lambda x: x.isna().sum())).round(0).to_string())
-    write_html(chart(t, geos), OUTDIR / "fertility_by_education_europe_curves.html")
 
 
 if __name__ == "__main__":
