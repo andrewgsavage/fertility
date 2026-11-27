@@ -72,7 +72,7 @@ def load():
     u = pd.read_csv(outputs_dir("ACS") / "fertility_by_education_us_curves.csv")
     u = u[~((u.education == "Bachelor's or more") & (u.age < 21))]
     u = u.assign(level=u.education.map(dict(US_LEVELS)), x=u.age)
-    out.append(("United States", "ACS, not in school", [s for _, s in US_LEVELS], u))
+    out.insert(0, ("United States", "ACS, not in school", [s for _, s in US_LEVELS], u))
     return [(c, s, lv, d[["level", "year", "x", "rate"]].dropna()) for c, s, lv, d in out]
 
 
