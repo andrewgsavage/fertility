@@ -1,0 +1,47 @@
+id: union-to-first-birth-interval
+question: >-
+  Time from first union (marriage or cohabitation) to first birth, by cohort or period, ideally as
+  median intervals or survival curves, for several countries.
+status: partial
+answer: >-
+  Japan from MHLW registration data; published survival and probability figures for the US, France,
+  Hungary and the Nordic countries. Listed on the union-to-first-birth page.
+factors: [partnership-formation, age-at-first-birth]
+measurables: [cond-asfr-1]
+countries: [JPN, GBRTENW, NLD, FIN, DNK, HUN]
+pages: [docs/factors/union-to-first-birth.md]
+attempts:
+  - date: 2026-11-24
+    tried: Generations and Gender Survey (rounds 1 and 2) and Harmonized Histories microdata
+    outcome: blocked
+    why: Needs registration.
+    retry: The user registers and downloads the microdata.
+  - date: 2026-11-24
+    tried: IPSS Japan National Fertility Survey reports
+    outcome: blocked
+    why: HTTP 403 to automated access. The MHLW registration series was used instead.
+    retry: Open the reports in a browser.
+  - date: 2026-11-24
+    tried: ONS birth tables, England and Wales
+    outcome: lacks-it
+    why: Median interval between births only, not from marriage to first birth.
+  - date: 2026-11-24
+    tried: CBS Netherlands 37422eng and StatFin 12dk
+    outcome: lacks-it
+    why: Births by marital status and age at first birth, but no union duration.
+  - date: 2026-11-24
+    tried: Statistics Denmark and KSH Hungary table lists
+    outcome: blocked
+    why: Table lists couldn't be read automatically, so not checked.
+    retry: Browse the table lists in a browser.
+  - date: 2026-11-24
+    tried: Rahnu & Jalovaara, Finnish registers, cohorts 1969-2000 (working paper)
+    url: https://www.utupub.fi/handle/11111/53571
+    outcome: partial
+    why: Cumulative incidence curves only, no median ages, so not plotted. Read in a browser.
+  - date: 2026-11-24
+    tried: Mikolai, Berrington & Perelli-Harris 2018, Demographic Research 39(27)
+    url: https://doi.org/10.4054/DemRes.2018.39.27
+    outcome: lacks-it
+    why: Harmonized Histories, 16 European countries and the US, but hazard ratios by education only, no median ages.
+next: UK Understanding Society and BHPS partnership histories (UK Data Service registration).

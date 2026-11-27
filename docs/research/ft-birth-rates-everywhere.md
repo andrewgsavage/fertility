@@ -292,7 +292,7 @@ The fall in first births was steepest at the youngest ages. Between 2016 and 202
 
 ## The article's other charts
 
-These are redrawn from the data in the article's Flourish charts, in article order. The data for all of them is in `FT/outputs/ft_birth_rates_everywhere.csv`. The housing counterfactual chart is private on Flourish and can't be downloaded, so it isn't here. The FT drew children per mother and the share of women who are mothers on two y-axes. Here they are two rows of panels instead.
+These are redrawn from the data in the article's Flourish charts, in article order. The data for all of them is in `FT/outputs/ft_birth_rates_everywhere.csv`. The FT drew children per mother and the share of women who are mothers on two y-axes. Here they are two rows of panels instead.
 
 ### TFR by region
 

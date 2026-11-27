@@ -1,3 +1,5 @@
+Before searching the web, a statistics portal or the literature for data or papers, check the search log: `pixi run searches-check <term>` (a factor tag, country code, dataset code or publisher). Don't repeat an attempt it records as `lacks-it` or `unreliable`; retry a `blocked` one only by the route in its `retry`. After searching, record every place tried, including failures, with the `log-search` skill.
+
 When an agent writes a new docs page (`docs/**/*.md`), put this warning directly under the page title:
 
 ````

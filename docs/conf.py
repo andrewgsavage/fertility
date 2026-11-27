@@ -14,6 +14,7 @@ extensions = [
     "sphinx_design",
     "scatter_controls",
     "sources_registry",
+    "search_log",
 ]
 
 myst_enable_extensions = [

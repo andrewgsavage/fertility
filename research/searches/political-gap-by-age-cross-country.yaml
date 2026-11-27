@@ -1,0 +1,19 @@
+id: political-gap-by-age-cross-country
+question: Gap in political ideology between young men and women, by age group and year, for countries other than the US.
+status: open
+factors: [political-divide]
+measurables: [political-gender-gap]
+countries: [all]
+pages: [docs/factors/political-divide-between-young-men-and-women.md]
+attempts:
+  - date: 2026-11-11
+    tried: European Social Survey, World and European Values Surveys, ISSP
+    url: https://www.europeansocialsurvey.org/data/
+    outcome: blocked
+    why: Microdata downloads require registration.
+    retry: The user registers and downloads the files.
+  - date: 2026-11-11
+    tried: Search for a published cross-country table of ideology by age and sex
+    outcome: nothing-found
+    why: No aggregated table found to cite.
+next: Published papers or Gallup/FT charts that tabulate these surveys by age and sex.

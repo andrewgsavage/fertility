@@ -13,4 +13,5 @@ dataisugly/index
 democracy/index
 research/index
 sources
+searches
 ```

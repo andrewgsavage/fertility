@@ -1,0 +1,30 @@
+id: completed-fertility-by-age-at-first-birth
+question: >-
+  Published curves of total children (or births per mother) by age at first birth, by cohort, to
+  compare with the HFD-derived chart on the Smaller Families page.
+status: answered
+answer: >-
+  Roustaei et al. 2019 (Finland, digitised), Beaujouan, Zeman & Nathan 2023 (7 countries, from the
+  paper's supplementary Excel file) and Andersson 2008 via Schmidt et al. 2012 (Sweden, digitised).
+factors: [age-at-first-birth]
+measurables: [cpm, mab1]
+countries: [FIN, SWE]
+pages: [docs/hfd/smaller-families.md]
+attempts:
+  - date: 2026-08-26
+    tried: Beaujouan, Zeman & Nathan 2023 supplementary material
+    outcome: found
+    why: Exact values in a supplementary Excel file, found by asking WebFetch for the article page's supplementary links.
+  - date: 2026-08-26
+    tried: Winkler-Dworak, Pohl & Beaujouan 2024, Demography
+    outcome: blocked
+    why: Paywalled. Its open working-paper precursor has only scenario simulations, no direct age-at-first-birth curve.
+  - date: 2026-08-26
+    tried: Leridon, N-IUSSP article
+    outcome: lacks-it
+    why: Tables only, no curve.
+  - date: 2026-08-26
+    tried: Nishikido, Cui & Esteve 2022, Genus
+    outcome: lacks-it
+    why: About decomposing partnership formation, not completed fertility by age.
+notes: Before digitising a figure by eye, look for a supplementary data file on the journal's article page.

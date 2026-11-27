@@ -106,7 +106,7 @@ education levels (ISCED 0–2 / 3–4 / 5+). Ratio column = hypogamous couples p
   France, Indonesia, Kenya, South Korea, US named). The paper gives no table of shares; numbers
   are only in figures.
 - Esteve, García-Román & Permanyer 2012 (56 countries, IPUMS, age 25–34) is the predecessor.
-  Not read (paywalled); described in Erát 2021 and Van Bavel et al. 2018.
+  Described in Erát 2021 and Van Bavel et al. 2018.
 
 ### UK specifically
 
@@ -240,12 +240,12 @@ Southern Europe. The negative gradient is linked to agreement with "men have mor
 1. UK: no published trend in couple-type shares from census or UKHLS found. Could be computed
    from UKHLS partner records or the census microdata samples in IPUMS.
 2. Japan, Korea, Taiwan: no births-by-pairing study found. Taiwan not covered at all.
-3. Esteve et al. 2012 and De Hauw et al. 2017 not read in full (paywalled or repository blocked).
-   Their findings here come via Erát 2021 and Van Bavel et al. 2018.
+3. Esteve et al. 2012 and De Hauw et al. 2017 findings here come via Erát 2021 and Van Bavel et
+   al. 2018, not the papers themselves.
 4. Nitsche et al. 2018 read as the 2015 working paper (Families and Societies WP 38). The
    published *Demography* version may differ in detail.
 5. Park & Kim 2025 (Korea six-decade series) numbers are from a search snippet of the online
-   appendix. The file couldn't be opened (host outage). Verify before use.
+   appendix. Verify against the appendix before use.
 
 ## Sources
 

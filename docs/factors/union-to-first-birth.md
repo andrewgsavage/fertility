@@ -243,15 +243,3 @@ Mean age at first birth: [Human Fertility Database](https://www.humanfertility.o
 | [From union formation to first birth: the role of age at first cohabitation](https://shs.cairn.info/journal-population-2022-3-page-411?lang=en), Population 77(3), 2022 | France, EPIC survey, cohorts 1948–1970 | Among those who become parents, the interval from first cohabitation to first birth gets shorter as age at first union rises, especially from 32. Read from the abstract. |
 | Winkler-Dworak, Beaujouan, Di Giulio & Spielauer 2021, [Simulating family life courses](https://doi.org/10.4054/DemRes.2021.44.1), Demographic Research 44(1), Appendix | Retrospective histories, Italy, Great Britain, Norway and Sweden, women born since 1940 | First-birth rates depend less on how long the union has lasted in later cohorts: "the timing of parenthood and partnership formation has become less connected". Married women have higher first-birth rates than cohabiting women. |
 | Holland 2013, [Love, marriage, then the baby carriage?](https://doi.org/10.4054/DemRes.2013.29.11), Demographic Research 29(11) | Swedish registers, women born 1950–1977 | Marriages that follow a conception or birth have declined across cohorts, and marriages after the children ("capstone") are emerging. Marriage timing, not union-to-birth intervals. From the abstract. |
-
-## Sources checked
-
-| Source | What it has |
-|---|---|
-| Generations and Gender Survey (rounds 1 and 2), Harmonized Histories | Partnership and birth histories that would give union-to-first-birth curves by cohort, but the microdata needs registration. Not downloaded. |
-| Japan National Fertility Survey (IPSS) | Marriage-to-first-birth by marriage cohort in the reports, but the IPSS site refused automated access (HTTP 403). The MHLW registration series above is used instead. |
-| ONS, England and Wales | Current birth tables give the median interval between births, not from marriage to first birth. UK Understanding Society and BHPS would need the microdata. |
-| CBS Netherlands, Statistics Finland | Births by marital status and age at first birth (CBS 37422eng, StatFin 12dk). No marriage or cohabitation duration. |
-| Rahnu & Jalovaara, Finnish registers, cohorts 1969–2000 ([working paper](https://www.utupub.fi/handle/11111/53571)) | Cumulative incidence of first partnership and first birth by cohort, read in a browser. Curves only, no median ages, so not plotted. |
-| Mikolai, Berrington & Perelli-Harris 2018, [Demographic Research 39(27)](https://doi.org/10.4054/DemRes.2018.39.27) | Harmonized Histories, 16 European countries and the US. Hazard ratios by education, no median ages. |
-| Statistics Denmark, KSH Hungary | Table lists could not be read automatically. Not checked. |

@@ -1,0 +1,27 @@
+id: motherhood-after-childless-at-30
+question: >-
+  Published figures for the share of women childless at 30 (or 35) who later become mothers, to
+  check the motherhood-probability page against.
+status: partial
+answer: >-
+  IFS (Bailey 2026, US NSFG women 46-50, retrospective) gives about half at 30 and a quarter at 35,
+  with no survey wave, sample or formula stated. HFD cohort tables (cft.txt) and ONS Table 3 give
+  the same figures for women born about 1955-1965, and higher figures for later cohorts.
+factors: [age-at-first-birth]
+measurables: [cond-asfr-1]
+countries: [USA, GBRTENW]
+pages: [docs/hfd/motherhood-probability.md]
+attempts:
+  - date: 2026-11-26
+    tried: Bailey 2026, Half of women childless at 30 never had children (IFS Insights)
+    url: https://ifstudies.org/insights?id=3886
+    outcome: partial
+    why: >-
+      Figures (about 50% at 30, 25% at 35) read from the text. Source is NSFG women aged 46-50, but
+      the wave, sample size, weighting and exact age definition are not given, and there is no data
+      download.
+next: >-
+  Stephen Shaw's version of the "half of women childless at 30" claim (Birth Gap) was not looked up;
+  it is probably based on the ONS cohort table already used here. The NSFG wave behind the IFS
+  figure could be found in the IFS "projecting childlessness" post
+  (https://ifstudies.org/blog/1-in-4-projecting-childlessness-among-todays-young-women).

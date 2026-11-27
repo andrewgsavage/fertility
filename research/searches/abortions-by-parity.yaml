@@ -1,0 +1,35 @@
+id: abortions-by-parity
+question: Abortions by the woman's number of previous live births and age, European countries, annual.
+status: partial
+answer: >-
+  Eurostat demo_fabortord for countries that report previous live births, and DHSC Table 2 for
+  England and Wales. Used on the abortion-by-age page.
+factors: [abortion]
+measurables: [abortions]
+countries: [SWE, DNK, NOR, GBRTENW]
+pages: [docs/factors/abortion-by-age.md]
+sources: [eurostat-demo-fabortord, dhsc-abortion-statistics]
+attempts:
+  - date: 2026-11-24
+    tried: Eurostat demo_fabortord
+    url: https://ec.europa.eu/eurostat/databrowser/view/demo_fabortord/default/table
+    outcome: partial
+    why: Several countries report no parity or 15%+ unknown parity; Serbia, Albania and Croatia dropped.
+  - date: 2026-11-24
+    tried: Statistics Sweden abortion tables
+    outcome: lacks-it
+    why: Give previous abortions, not previous births.
+  - date: 2026-11-24
+    tried: Statistics Denmark abortion tables
+    outcome: lacks-it
+    why: No parity breakdown.
+  - date: 2026-11-24
+    tried: Statistics Norway statistics bank
+    outcome: blocked
+    why: The statistics bank couldn't be read.
+    retry: Open the table in a browser, or try the SSB PxWebApi JSON endpoint.
+  - date: 2026-11-24
+    tried: DHSC abortion statistics, England and Wales, Table 2
+    url: https://www.gov.uk/government/collections/abortion-statistics-in-england-and-wales
+    outcome: partial
+    why: Three age groups only (under 20, 20-34, 35+); women with exactly one child split out only from 2021.
