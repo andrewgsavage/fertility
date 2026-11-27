@@ -1,0 +1,2243 @@
+year,age,education,enrolled,women,births
+2008,15,High school,False,3439,0
+2008,15,High school,True,1984,0
+2008,15,Less than high school,False,39456,1300
+2008,15,Less than high school,True,1989686,10462
+2008,15,Some college,False,326,0
+2008,15,Some college,True,1132,0
+2008,16,High school,False,7026,77
+2008,16,High school,True,7401,385
+2008,16,Less than high school,False,57156,6615
+2008,16,Less than high school,True,2024704,22069
+2008,16,Some college,False,1712,0
+2008,16,Some college,True,6020,112
+2008,17,High school,False,30737,1657
+2008,17,High school,True,150294,3209
+2008,17,Less than high school,False,91326,11482
+2008,17,Less than high school,True,1800207,30449
+2008,17,Some college,False,4577,0
+2008,17,Some college,True,43143,827
+2008,18,High school,False,228484,16412
+2008,18,High school,True,664376,10179
+2008,18,Less than high school,False,151700,29234
+2008,18,Less than high school,True,624395,20400
+2008,18,Some college,False,31548,2406
+2008,18,Some college,True,578970,5567
+2008,19,Bachelor's or more,False,1967,92
+2008,19,Bachelor's or more,True,3462,0
+2008,19,High school,False,370313,44139
+2008,19,High school,True,305539,8797
+2008,19,Less than high school,False,172372,38013
+2008,19,Less than high school,True,97398,9133
+2008,19,Some college,False,113117,10642
+2008,19,Some college,True,1071383,18037
+2008,20,Bachelor's or more,False,6198,224
+2008,20,Bachelor's or more,True,10240,230
+2008,20,High school,False,436155,72154
+2008,20,High school,True,173212,6369
+2008,20,Less than high school,False,190643,43756
+2008,20,Less than high school,True,41742,6019
+2008,20,Some college,False,220276,24778
+2008,20,Some college,True,1126097,24095
+2008,21,Bachelor's or more,False,21538,1016
+2008,21,Bachelor's or more,True,66210,710
+2008,21,High school,False,452937,80069
+2008,21,High school,True,107726,3320
+2008,21,Less than high school,False,181809,42035
+2008,21,Less than high school,True,20897,1600
+2008,21,Some college,False,314764,44018
+2008,21,Some college,True,929041,27017
+2008,22,Bachelor's or more,False,173061,2871
+2008,22,Bachelor's or more,True,209925,2797
+2008,22,High school,False,403039,62736
+2008,22,High school,True,63369,3075
+2008,22,Less than high school,False,187981,41175
+2008,22,Less than high school,True,17238,1802
+2008,22,Some college,False,378694,53712
+2008,22,Some college,True,596655,21399
+2008,23,Bachelor's or more,False,328141,10442
+2008,23,Bachelor's or more,True,202692,3293
+2008,23,High school,False,410668,66345
+2008,23,High school,True,35295,2472
+2008,23,Less than high school,False,193367,37668
+2008,23,Less than high school,True,11073,465
+2008,23,Some college,False,426827,62769
+2008,23,Some college,True,369629,23067
+2008,24,Bachelor's or more,False,396979,17407
+2008,24,Bachelor's or more,True,193828,3972
+2008,24,High school,False,409692,62524
+2008,24,High school,True,25681,1810
+2008,24,Less than high school,False,182543,36678
+2008,24,Less than high school,True,8866,1491
+2008,24,Some college,False,420342,65107
+2008,24,Some college,True,261434,19805
+2008,25,Bachelor's or more,False,469616,35233
+2008,25,Bachelor's or more,True,182037,6305
+2008,25,High school,False,459944,69147
+2008,25,High school,True,23659,2621
+2008,25,Less than high school,False,224441,43642
+2008,25,Less than high school,True,9911,824
+2008,25,Some college,False,514221,72667
+2008,25,Some college,True,247668,18597
+2008,26,Bachelor's or more,False,499628,47682
+2008,26,Bachelor's or more,True,169798,6854
+2008,26,High school,False,428796,64664
+2008,26,High school,True,16718,1296
+2008,26,Less than high school,False,217128,38862
+2008,26,Less than high school,True,8927,737
+2008,26,Some college,False,529041,82058
+2008,26,Some college,True,210823,13447
+2008,27,Bachelor's or more,False,516084,55674
+2008,27,Bachelor's or more,True,143681,7922
+2008,27,High school,False,456218,62625
+2008,27,High school,True,17355,1553
+2008,27,Less than high school,False,224252,36739
+2008,27,Less than high school,True,9819,726
+2008,27,Some college,False,504811,75803
+2008,27,Some college,True,178803,13687
+2008,28,Bachelor's or more,False,538967,71001
+2008,28,Bachelor's or more,True,124161,8428
+2008,28,High school,False,433792,49371
+2008,28,High school,True,16404,1160
+2008,28,Less than high school,False,230567,26360
+2008,28,Less than high school,True,8347,410
+2008,28,Some college,False,526498,82090
+2008,28,Some college,True,172573,14814
+2008,29,Bachelor's or more,False,528848,79093
+2008,29,Bachelor's or more,True,104557,6752
+2008,29,High school,False,411001,47784
+2008,29,High school,True,14613,1359
+2008,29,Less than high school,False,199994,29496
+2008,29,Less than high school,True,5547,596
+2008,29,Some college,False,518835,65612
+2008,29,Some college,True,133654,9466
+2008,30,Bachelor's or more,False,583460,88010
+2008,30,Bachelor's or more,True,102937,5066
+2008,30,High school,False,423637,40602
+2008,30,High school,True,11906,561
+2008,30,Less than high school,False,240516,25991
+2008,30,Less than high school,True,5699,764
+2008,30,Some college,False,508882,62496
+2008,30,Some college,True,127289,8104
+2008,31,Bachelor's or more,False,567223,87939
+2008,31,Bachelor's or more,True,82758,6319
+2008,31,High school,False,390297,35834
+2008,31,High school,True,12018,606
+2008,31,Less than high school,False,217005,24159
+2008,31,Less than high school,True,6508,480
+2008,31,Some college,False,503152,55686
+2008,31,Some college,True,119687,7038
+2008,32,Bachelor's or more,False,575219,83379
+2008,32,Bachelor's or more,True,77088,5588
+2008,32,High school,False,392758,33149
+2008,32,High school,True,9423,547
+2008,32,Less than high school,False,217424,23858
+2008,32,Less than high school,True,3853,449
+2008,32,Some college,False,516212,55259
+2008,32,Some college,True,103075,6035
+2008,33,Bachelor's or more,False,578198,82478
+2008,33,Bachelor's or more,True,65991,3829
+2008,33,High school,False,379320,27736
+2008,33,High school,True,8562,485
+2008,33,Less than high school,False,209442,22409
+2008,33,Less than high school,True,3377,150
+2008,33,Some college,False,520511,48282
+2008,33,Some college,True,101576,5515
+2008,34,Bachelor's or more,False,571776,77116
+2008,34,Bachelor's or more,True,65393,4990
+2008,34,High school,False,397887,27664
+2008,34,High school,True,11270,1514
+2008,34,Less than high school,False,217347,18625
+2008,34,Less than high school,True,4229,81
+2008,34,Some college,False,530795,40473
+2008,34,Some college,True,89667,2639
+2008,35,Bachelor's or more,False,631937,80958
+2008,35,Bachelor's or more,True,68712,3582
+2008,35,High school,False,432701,22368
+2008,35,High school,True,9354,240
+2008,35,Less than high school,False,239389,17173
+2008,35,Less than high school,True,5039,328
+2008,35,Some college,False,546180,35951
+2008,35,Some college,True,92786,3829
+2008,36,Bachelor's or more,False,627600,63547
+2008,36,Bachelor's or more,True,63767,3331
+2008,36,High school,False,427898,19392
+2008,36,High school,True,10726,554
+2008,36,Less than high school,False,220787,11459
+2008,36,Less than high school,True,5741,0
+2008,36,Some college,False,591115,32157
+2008,36,Some college,True,93895,4844
+2008,37,Bachelor's or more,False,687875,55689
+2008,37,Bachelor's or more,True,64343,3132
+2008,37,High school,False,474210,17645
+2008,37,High school,True,9913,292
+2008,37,Less than high school,False,226391,13600
+2008,37,Less than high school,True,3937,0
+2008,37,Some college,False,596074,28018
+2008,37,Some college,True,91576,3070
+2008,38,Bachelor's or more,False,687315,42449
+2008,38,Bachelor's or more,True,63821,1973
+2008,38,High school,False,484967,15678
+2008,38,High school,True,9296,298
+2008,38,Less than high school,False,232119,9919
+2008,38,Less than high school,True,3962,238
+2008,38,Some college,False,606020,24226
+2008,38,Some college,True,80126,1269
+2008,39,Bachelor's or more,False,634269,34694
+2008,39,Bachelor's or more,True,53468,2380
+2008,39,High school,False,498424,14359
+2008,39,High school,True,8780,204
+2008,39,Less than high school,False,223837,10230
+2008,39,Less than high school,True,4500,0
+2008,39,Some college,False,600070,18318
+2008,39,Some college,True,74659,2038
+2008,40,Bachelor's or more,False,661445,29033
+2008,40,Bachelor's or more,True,48108,1494
+2008,40,High school,False,541961,12068
+2008,40,High school,True,7952,291
+2008,40,Less than high school,False,260241,6673
+2008,40,Less than high school,True,4413,50
+2008,40,Some college,False,621299,13265
+2008,40,Some college,True,72295,1003
+2008,41,Bachelor's or more,False,595899,16871
+2008,41,Bachelor's or more,True,45298,769
+2008,41,High school,False,494983,7884
+2008,41,High school,True,8391,315
+2008,41,Less than high school,False,213120,4123
+2008,41,Less than high school,True,4130,69
+2008,41,Some college,False,579135,12254
+2008,41,Some college,True,69613,1075
+2008,42,Bachelor's or more,False,591265,14682
+2008,42,Bachelor's or more,True,49560,1114
+2008,42,High school,False,536259,7297
+2008,42,High school,True,6959,51
+2008,42,Less than high school,False,218918,4803
+2008,42,Less than high school,True,2867,88
+2008,42,Some college,False,626498,9338
+2008,42,Some college,True,66354,1040
+2008,43,Bachelor's or more,False,604815,10185
+2008,43,Bachelor's or more,True,47823,533
+2008,43,High school,False,568198,6951
+2008,43,High school,True,6477,90
+2008,43,Less than high school,False,230053,2021
+2008,43,Less than high school,True,3230,76
+2008,43,Some college,False,677864,5647
+2008,43,Some college,True,67744,695
+2008,44,Bachelor's or more,False,619275,6560
+2008,44,Bachelor's or more,True,45739,718
+2008,44,High school,False,613241,6406
+2008,44,High school,True,7319,132
+2008,44,Less than high school,False,242513,2286
+2008,44,Less than high school,True,3003,171
+2008,44,Some college,False,724774,6840
+2008,44,Some college,True,61406,525
+2008,45,Bachelor's or more,False,639569,5829
+2008,45,Bachelor's or more,True,43481,312
+2008,45,High school,False,645854,5139
+2008,45,High school,True,7425,0
+2008,45,Less than high school,False,260661,2558
+2008,45,Less than high school,True,3209,65
+2008,45,Some college,False,702238,4731
+2008,45,Some college,True,60978,633
+2008,46,Bachelor's or more,False,606405,5355
+2008,46,Bachelor's or more,True,43173,213
+2008,46,High school,False,609012,3606
+2008,46,High school,True,7122,0
+2008,46,Less than high school,False,242702,2944
+2008,46,Less than high school,True,2173,77
+2008,46,Some college,False,697544,4216
+2008,46,Some college,True,59834,344
+2008,47,Bachelor's or more,False,623047,3855
+2008,47,Bachelor's or more,True,45368,430
+2008,47,High school,False,631018,5043
+2008,47,High school,True,4646,0
+2008,47,Less than high school,False,238199,1946
+2008,47,Less than high school,True,4066,55
+2008,47,Some college,False,700395,3563
+2008,47,Some college,True,52072,517
+2008,48,Bachelor's or more,False,599645,4447
+2008,48,Bachelor's or more,True,44668,95
+2008,48,High school,False,657202,3559
+2008,48,High school,True,6046,0
+2008,48,Less than high school,False,254880,2134
+2008,48,Less than high school,True,3096,0
+2008,48,Some college,False,733296,5101
+2008,48,Some college,True,53094,536
+2008,49,Bachelor's or more,False,608538,2796
+2008,49,Bachelor's or more,True,34342,107
+2008,49,High school,False,651011,2973
+2008,49,High school,True,5673,68
+2008,49,Less than high school,False,247815,1795
+2008,49,Less than high school,True,2591,0
+2008,49,Some college,False,732812,3596
+2008,49,Some college,True,43181,269
+2008,50,Bachelor's or more,False,626446,2554
+2008,50,Bachelor's or more,True,43367,670
+2008,50,High school,False,670464,2254
+2008,50,High school,True,4523,0
+2008,50,Less than high school,False,257718,940
+2008,50,Less than high school,True,1834,0
+2008,50,Some college,False,759271,2989
+2008,50,Some college,True,42620,222
+2010,15,High school,False,3403,316
+2010,15,High school,True,1961,60
+2010,15,Less than high school,False,34452,107
+2010,15,Less than high school,True,1986484,8831
+2010,15,Some college,False,263,0
+2010,15,Some college,True,963,0
+2010,16,High school,False,6266,891
+2010,16,High school,True,4618,76
+2010,16,Less than high school,False,46425,4036
+2010,16,Less than high school,True,2017724,21220
+2010,16,Some college,False,1751,0
+2010,16,Some college,True,8011,157
+2010,17,High school,False,30799,1328
+2010,17,High school,True,106502,2949
+2010,17,Less than high school,False,72658,10829
+2010,17,Less than high school,True,1839218,31801
+2010,17,Some college,False,2678,125
+2010,17,Some college,True,51906,989
+2010,18,Bachelor's or more,False,61,0
+2010,18,Bachelor's or more,True,175,0
+2010,18,High school,False,239257,15930
+2010,18,High school,True,582596,9171
+2010,18,Less than high school,False,119291,21796
+2010,18,Less than high school,True,690869,20933
+2010,18,Some college,False,30455,1821
+2010,18,Some college,True,646039,7597
+2010,19,Bachelor's or more,False,995,0
+2010,19,Bachelor's or more,True,2674,347
+2010,19,High school,False,367304,41105
+2010,19,High school,True,276126,7612
+2010,19,Less than high school,False,151742,32055
+2010,19,Less than high school,True,118383,6429
+2010,19,Some college,False,109038,9670
+2010,19,Some college,True,1137231,21032
+2010,20,Bachelor's or more,False,6269,210
+2010,20,Bachelor's or more,True,12540,118
+2010,20,High school,False,435008,55006
+2010,20,High school,True,188669,8458
+2010,20,Less than high school,False,174511,33220
+2010,20,Less than high school,True,49666,3352
+2010,20,Some college,False,228379,20808
+2010,20,Some college,True,1212133,26495
+2010,21,Bachelor's or more,False,23453,642
+2010,21,Bachelor's or more,True,65710,1267
+2010,21,High school,False,454579,66415
+2010,21,High school,True,127710,4597
+2010,21,Less than high school,False,174151,35226
+2010,21,Less than high school,True,26936,2865
+2010,21,Some college,False,305365,33720
+2010,21,Some college,True,1036870,33579
+2010,22,Bachelor's or more,False,171499,2921
+2010,22,Bachelor's or more,True,199373,2394
+2010,22,High school,False,430304,75380
+2010,22,High school,True,73669,3753
+2010,22,Less than high school,False,186351,37394
+2010,22,Less than high school,True,17881,2213
+2010,22,Some college,False,363974,42713
+2010,22,Some college,True,655995,27613
+2010,23,Bachelor's or more,False,329873,10653
+2010,23,Bachelor's or more,True,223531,1988
+2010,23,High school,False,406411,57337
+2010,23,High school,True,43014,3443
+2010,23,Less than high school,False,167670,32863
+2010,23,Less than high school,True,12471,1738
+2010,23,Some college,False,416215,51582
+2010,23,Some college,True,401114,21555
+2010,24,Bachelor's or more,False,414334,18493
+2010,24,Bachelor's or more,True,210924,3658
+2010,24,High school,False,399914,57568
+2010,24,High school,True,31636,3274
+2010,24,Less than high school,False,181572,33023
+2010,24,Less than high school,True,12817,1327
+2010,24,Some college,False,415616,60960
+2010,24,Some college,True,313741,18529
+2010,25,Bachelor's or more,False,504815,26007
+2010,25,Bachelor's or more,True,199496,4560
+2010,25,High school,False,431774,57858
+2010,25,High school,True,25302,2126
+2010,25,Less than high school,False,204692,35570
+2010,25,Less than high school,True,8239,850
+2010,25,Some college,False,476420,60990
+2010,25,Some college,True,276348,18870
+2010,26,Bachelor's or more,False,511592,35623
+2010,26,Bachelor's or more,True,186738,6800
+2010,26,High school,False,410640,58733
+2010,26,High school,True,19772,1439
+2010,26,Less than high school,False,205287,28975
+2010,26,Less than high school,True,7989,831
+2010,26,Some college,False,481486,66625
+2010,26,Some college,True,232178,15029
+2010,27,Bachelor's or more,False,579726,48434
+2010,27,Bachelor's or more,True,168064,6724
+2010,27,High school,False,406985,54621
+2010,27,High school,True,19491,1471
+2010,27,Less than high school,False,211401,28567
+2010,27,Less than high school,True,11108,1340
+2010,27,Some college,False,496650,72070
+2010,27,Some college,True,196770,16213
+2010,28,Bachelor's or more,False,591985,58647
+2010,28,Bachelor's or more,True,150988,7744
+2010,28,High school,False,421861,48196
+2010,28,High school,True,17398,2121
+2010,28,Less than high school,False,224324,32340
+2010,28,Less than high school,True,5539,938
+2010,28,Some college,False,491519,69017
+2010,28,Some college,True,182839,15181
+2010,29,Bachelor's or more,False,602783,81275
+2010,29,Bachelor's or more,True,123091,9139
+2010,29,High school,False,418154,47967
+2010,29,High school,True,18133,1231
+2010,29,Less than high school,False,215603,27004
+2010,29,Less than high school,True,9652,776
+2010,29,Some college,False,486020,63636
+2010,29,Some college,True,172111,13844
+2010,30,Bachelor's or more,False,654484,87018
+2010,30,Bachelor's or more,True,108998,7163
+2010,30,High school,False,451691,47255
+2010,30,High school,True,14626,1365
+2010,30,Less than high school,False,230681,27080
+2010,30,Less than high school,True,7321,554
+2010,30,Some college,False,552975,61013
+2010,30,Some college,True,162741,9034
+2010,31,Bachelor's or more,False,605805,85277
+2010,31,Bachelor's or more,True,91549,5996
+2010,31,High school,False,400281,34166
+2010,31,High school,True,13128,285
+2010,31,Less than high school,False,209430,22276
+2010,31,Less than high school,True,6978,1249
+2010,31,Some college,False,517024,52704
+2010,31,Some college,True,132281,9739
+2010,32,Bachelor's or more,False,627561,91971
+2010,32,Bachelor's or more,True,87752,6923
+2010,32,High school,False,406700,32713
+2010,32,High school,True,11324,906
+2010,32,Less than high school,False,223357,22588
+2010,32,Less than high school,True,7191,866
+2010,32,Some college,False,516040,48614
+2010,32,Some college,True,126357,7947
+2010,33,Bachelor's or more,False,622717,84452
+2010,33,Bachelor's or more,True,80692,5886
+2010,33,High school,False,377330,28426
+2010,33,High school,True,11098,638
+2010,33,Less than high school,False,205303,18601
+2010,33,Less than high school,True,4914,372
+2010,33,Some college,False,491623,44364
+2010,33,Some college,True,122361,5871
+2010,34,Bachelor's or more,False,601037,73971
+2010,34,Bachelor's or more,True,69999,3064
+2010,34,High school,False,394369,26460
+2010,34,High school,True,9527,309
+2010,34,Less than high school,False,210944,14220
+2010,34,Less than high school,True,4336,110
+2010,34,Some college,False,512851,37942
+2010,34,Some college,True,101583,4793
+2010,35,Bachelor's or more,False,637971,67911
+2010,35,Bachelor's or more,True,63928,4794
+2010,35,High school,False,440615,24264
+2010,35,High school,True,9417,513
+2010,35,Less than high school,False,227761,16974
+2010,35,Less than high school,True,5806,225
+2010,35,Some college,False,551128,33997
+2010,35,Some college,True,117069,5674
+2010,36,Bachelor's or more,False,594528,57391
+2010,36,Bachelor's or more,True,62743,2076
+2010,36,High school,False,400414,19159
+2010,36,High school,True,10031,394
+2010,36,Less than high school,False,224003,16002
+2010,36,Less than high school,True,4778,59
+2010,36,Some college,False,516573,29318
+2010,36,Some college,True,95942,3519
+2010,37,Bachelor's or more,False,631903,48085
+2010,37,Bachelor's or more,True,55682,3047
+2010,37,High school,False,415461,19190
+2010,37,High school,True,9724,143
+2010,37,Less than high school,False,222709,12913
+2010,37,Less than high school,True,7167,35
+2010,37,Some college,False,535132,22001
+2010,37,Some college,True,89971,2575
+2010,38,Bachelor's or more,False,647770,43058
+2010,38,Bachelor's or more,True,56754,1561
+2010,38,High school,False,453795,13107
+2010,38,High school,True,7878,193
+2010,38,Less than high school,False,227087,11762
+2010,38,Less than high school,True,4850,62
+2010,38,Some college,False,591096,21622
+2010,38,Some college,True,92580,3075
+2010,39,Bachelor's or more,False,690529,37358
+2010,39,Bachelor's or more,True,57585,1505
+2010,39,High school,False,473851,15382
+2010,39,High school,True,7821,298
+2010,39,Less than high school,False,228030,9129
+2010,39,Less than high school,True,4414,0
+2010,39,Some college,False,626112,16911
+2010,39,Some college,True,89887,1493
+2010,40,Bachelor's or more,False,715666,28050
+2010,40,Bachelor's or more,True,56302,956
+2010,40,High school,False,535398,11998
+2010,40,High school,True,8409,56
+2010,40,Less than high school,False,253513,7499
+2010,40,Less than high school,True,2805,100
+2010,40,Some college,False,640656,12308
+2010,40,Some college,True,80695,2355
+2010,41,Bachelor's or more,False,638154,17835
+2010,41,Bachelor's or more,True,51890,974
+2010,41,High school,False,478856,7548
+2010,41,High school,True,8673,61
+2010,41,Less than high school,False,212568,3646
+2010,41,Less than high school,True,4309,269
+2010,41,Some college,False,585644,11380
+2010,41,Some college,True,79296,1133
+2010,42,Bachelor's or more,False,622590,13868
+2010,42,Bachelor's or more,True,48427,407
+2010,42,High school,False,516445,7949
+2010,42,High school,True,8890,0
+2010,42,Less than high school,False,224381,4900
+2010,42,Less than high school,True,4812,57
+2010,42,Some college,False,577977,8865
+2010,42,Some college,True,74588,844
+2010,43,Bachelor's or more,False,605821,9457
+2010,43,Bachelor's or more,True,43071,294
+2010,43,High school,False,518788,4656
+2010,43,High school,True,7680,111
+2010,43,Less than high school,False,222765,3323
+2010,43,Less than high school,True,3455,301
+2010,43,Some college,False,588055,7332
+2010,43,Some college,True,65445,882
+2010,44,Bachelor's or more,False,593581,7418
+2010,44,Bachelor's or more,True,49425,458
+2010,44,High school,False,550561,3874
+2010,44,High school,True,7910,70
+2010,44,Less than high school,False,232584,1789
+2010,44,Less than high school,True,3414,17
+2010,44,Some college,False,620599,5981
+2010,44,Some college,True,62317,591
+2010,45,Bachelor's or more,False,634316,4897
+2010,45,Bachelor's or more,True,45865,654
+2010,45,High school,False,606675,4478
+2010,45,High school,True,6418,0
+2010,45,Less than high school,False,251471,2612
+2010,45,Less than high school,True,3176,0
+2010,45,Some college,False,699091,6368
+2010,45,Some college,True,66571,95
+2010,46,Bachelor's or more,False,612963,3875
+2010,46,Bachelor's or more,True,43562,395
+2010,46,High school,False,580826,3527
+2010,46,High school,True,7821,176
+2010,46,Less than high school,False,239493,2027
+2010,46,Less than high school,True,4347,0
+2010,46,Some college,False,680186,3551
+2010,46,Some college,True,68361,509
+2010,47,Bachelor's or more,False,601658,2968
+2010,47,Bachelor's or more,True,41707,380
+2010,47,High school,False,626222,3609
+2010,47,High school,True,6987,0
+2010,47,Less than high school,False,237848,1450
+2010,47,Less than high school,True,3492,0
+2010,47,Some college,False,706249,4545
+2010,47,Some college,True,62666,172
+2010,48,Bachelor's or more,False,601966,3707
+2010,48,Bachelor's or more,True,39474,445
+2010,48,High school,False,640013,3770
+2010,48,High school,True,5313,0
+2010,48,Less than high school,False,248765,1658
+2010,48,Less than high school,True,3766,160
+2010,48,Some college,False,706320,3842
+2010,48,Some college,True,59369,271
+2010,49,Bachelor's or more,False,608714,2589
+2010,49,Bachelor's or more,True,41492,232
+2010,49,High school,False,643065,2959
+2010,49,High school,True,4414,95
+2010,49,Less than high school,False,251388,1146
+2010,49,Less than high school,True,2745,0
+2010,49,Some college,False,703376,3860
+2010,49,Some college,True,56094,179
+2010,50,Bachelor's or more,False,636886,1820
+2010,50,Bachelor's or more,True,41319,425
+2010,50,High school,False,686502,2527
+2010,50,High school,True,4493,0
+2010,50,Less than high school,False,279853,1693
+2010,50,Less than high school,True,1392,0
+2010,50,Some college,False,743488,3372
+2010,50,Some college,True,49337,708
+2012,15,High school,False,2194,173
+2012,15,High school,True,4365,37
+2012,15,Less than high school,False,34798,936
+2012,15,Less than high school,True,1971374,8661
+2012,15,Some college,False,212,66
+2012,15,Some college,True,1369,0
+2012,16,High school,False,5368,184
+2012,16,High school,True,5096,110
+2012,16,Less than high school,False,39477,2329
+2012,16,Less than high school,True,1988464,15956
+2012,16,Some college,False,1712,355
+2012,16,Some college,True,6669,130
+2012,17,High school,False,25300,1173
+2012,17,High school,True,112008,1063
+2012,17,Less than high school,False,60917,8153
+2012,17,Less than high school,True,1778992,21519
+2012,17,Some college,False,2983,0
+2012,17,Some college,True,46080,823
+2012,18,High school,False,225350,17551
+2012,18,High school,True,551791,4703
+2012,18,Less than high school,False,96414,17236
+2012,18,Less than high school,True,659609,14177
+2012,18,Some college,False,29507,1159
+2012,18,Some college,True,651788,6478
+2012,19,Bachelor's or more,False,1622,137
+2012,19,Bachelor's or more,True,2373,0
+2012,19,High school,False,352131,31594
+2012,19,High school,True,274854,6121
+2012,19,Less than high school,False,109771,21404
+2012,19,Less than high school,True,116050,5338
+2012,19,Some college,False,111388,9610
+2012,19,Some college,True,1151266,15191
+2012,20,Bachelor's or more,False,8024,514
+2012,20,Bachelor's or more,True,13192,261
+2012,20,High school,False,435710,53113
+2012,20,High school,True,198072,5836
+2012,20,Less than high school,False,153990,31517
+2012,20,Less than high school,True,56574,6785
+2012,20,Some college,False,251764,27258
+2012,20,Some college,True,1264009,26537
+2012,21,Bachelor's or more,False,27073,1198
+2012,21,Bachelor's or more,True,67051,405
+2012,21,High school,False,442237,57572
+2012,21,High school,True,139863,4654
+2012,21,Less than high school,False,162043,33191
+2012,21,Less than high school,True,25896,2206
+2012,21,Some college,False,347874,40707
+2012,21,Some college,True,1104432,22751
+2012,22,Bachelor's or more,False,182922,2136
+2012,22,Bachelor's or more,True,223809,3182
+2012,22,High school,False,426472,56373
+2012,22,High school,True,82811,4678
+2012,22,Less than high school,False,168084,32776
+2012,22,Less than high school,True,17862,2283
+2012,22,Some college,False,410584,51211
+2012,22,Some college,True,681155,27282
+2012,23,Bachelor's or more,False,381219,10271
+2012,23,Bachelor's or more,True,213444,2084
+2012,23,High school,False,436968,59527
+2012,23,High school,True,40886,2449
+2012,23,Less than high school,False,159936,26947
+2012,23,Less than high school,True,13951,3064
+2012,23,Some college,False,427552,51614
+2012,23,Some college,True,429047,19852
+2012,24,Bachelor's or more,False,452306,13633
+2012,24,Bachelor's or more,True,204730,3145
+2012,24,High school,False,395575,51354
+2012,24,High school,True,31883,2607
+2012,24,Less than high school,False,163708,31052
+2012,24,Less than high school,True,11170,865
+2012,24,Some college,False,449592,58736
+2012,24,Some college,True,313701,15976
+2012,25,Bachelor's or more,False,537473,26275
+2012,25,Bachelor's or more,True,207690,5061
+2012,25,High school,False,424284,50941
+2012,25,High school,True,24617,1867
+2012,25,Less than high school,False,173448,26435
+2012,25,Less than high school,True,12072,2263
+2012,25,Some college,False,493824,59473
+2012,25,Some college,True,270988,13200
+2012,26,Bachelor's or more,False,565499,35083
+2012,26,Bachelor's or more,True,170111,5612
+2012,26,High school,False,414575,51345
+2012,26,High school,True,21708,1940
+2012,26,Less than high school,False,170488,26110
+2012,26,Less than high school,True,10456,737
+2012,26,Some college,False,505290,65911
+2012,26,Some college,True,226175,13774
+2012,27,Bachelor's or more,False,617719,48965
+2012,27,Bachelor's or more,True,161269,6614
+2012,27,High school,False,391444,45508
+2012,27,High school,True,18887,1467
+2012,27,Less than high school,False,183843,23125
+2012,27,Less than high school,True,8747,792
+2012,27,Some college,False,509335,66440
+2012,27,Some college,True,192915,14798
+2012,28,Bachelor's or more,False,627976,58285
+2012,28,Bachelor's or more,True,140036,4166
+2012,28,High school,False,418228,50217
+2012,28,High school,True,14621,479
+2012,28,Less than high school,False,192310,23489
+2012,28,Less than high school,True,7882,328
+2012,28,Some college,False,506826,58074
+2012,28,Some college,True,177732,14111
+2012,29,Bachelor's or more,False,641781,81081
+2012,29,Bachelor's or more,True,126625,8050
+2012,29,High school,False,387577,43144
+2012,29,High school,True,12525,1351
+2012,29,Less than high school,False,191393,23243
+2012,29,Less than high school,True,6667,513
+2012,29,Some college,False,526550,59865
+2012,29,Some college,True,164836,12395
+2012,30,Bachelor's or more,False,714549,93575
+2012,30,Bachelor's or more,True,118441,6728
+2012,30,High school,False,423934,40504
+2012,30,High school,True,16855,455
+2012,30,Less than high school,False,210340,22644
+2012,30,Less than high school,True,7560,603
+2012,30,Some college,False,554177,62497
+2012,30,Some college,True,158421,10481
+2012,31,Bachelor's or more,False,679953,98028
+2012,31,Bachelor's or more,True,102849,9087
+2012,31,High school,False,408563,35987
+2012,31,High school,True,9164,394
+2012,31,Less than high school,False,194517,18831
+2012,31,Less than high school,True,5082,221
+2012,31,Some college,False,541325,57867
+2012,31,Some college,True,145139,10105
+2012,32,Bachelor's or more,False,673606,94533
+2012,32,Bachelor's or more,True,87347,6652
+2012,32,High school,False,418988,32025
+2012,32,High school,True,10607,540
+2012,32,Less than high school,False,231784,22550
+2012,32,Less than high school,True,4363,478
+2012,32,Some college,False,559723,52665
+2012,32,Some college,True,131804,5586
+2012,33,Bachelor's or more,False,647403,89766
+2012,33,Bachelor's or more,True,72565,4002
+2012,33,High school,False,383296,25116
+2012,33,High school,True,9181,785
+2012,33,Less than high school,False,219110,19827
+2012,33,Less than high school,True,6484,559
+2012,33,Some college,False,538941,38367
+2012,33,Some college,True,119080,3796
+2012,34,Bachelor's or more,False,642224,79126
+2012,34,Bachelor's or more,True,71517,3750
+2012,34,High school,False,404654,26388
+2012,34,High school,True,8725,199
+2012,34,Less than high school,False,217294,18214
+2012,34,Less than high school,True,4042,694
+2012,34,Some college,False,533256,39614
+2012,34,Some college,True,110983,4408
+2012,35,Bachelor's or more,False,666832,73065
+2012,35,Bachelor's or more,True,68484,3730
+2012,35,High school,False,424183,19933
+2012,35,High school,True,8854,98
+2012,35,Less than high school,False,220458,15967
+2012,35,Less than high school,True,4429,180
+2012,35,Some college,False,539620,37777
+2012,35,Some college,True,113244,4057
+2012,36,Bachelor's or more,False,661491,54880
+2012,36,Bachelor's or more,True,62217,3746
+2012,36,High school,False,380313,16900
+2012,36,High school,True,7498,123
+2012,36,Less than high school,False,206664,14271
+2012,36,Less than high school,True,2303,56
+2012,36,Some college,False,523476,30395
+2012,36,Some college,True,102609,3255
+2012,37,Bachelor's or more,False,659482,51500
+2012,37,Bachelor's or more,True,60071,2694
+2012,37,High school,False,399993,19380
+2012,37,High school,True,6373,554
+2012,37,Less than high school,False,199541,9676
+2012,37,Less than high school,True,5350,134
+2012,37,Some college,False,539194,24673
+2012,37,Some college,True,90905,2265
+2012,38,Bachelor's or more,False,628845,40411
+2012,38,Bachelor's or more,True,60226,2146
+2012,38,High school,False,404609,14377
+2012,38,High school,True,9208,54
+2012,38,Less than high school,False,220352,9898
+2012,38,Less than high school,True,4999,308
+2012,38,Some college,False,526335,21878
+2012,38,Some college,True,84144,1797
+2012,39,Bachelor's or more,False,633449,29605
+2012,39,Bachelor's or more,True,53662,1534
+2012,39,High school,False,408613,11923
+2012,39,High school,True,7387,758
+2012,39,Less than high school,False,215733,8711
+2012,39,Less than high school,True,5133,396
+2012,39,Some college,False,545176,13988
+2012,39,Some college,True,90155,1400
+2012,40,Bachelor's or more,False,696825,23503
+2012,40,Bachelor's or more,True,61951,1252
+2012,40,High school,False,486671,9120
+2012,40,High school,True,9079,166
+2012,40,Less than high school,False,244926,7703
+2012,40,Less than high school,True,4071,296
+2012,40,Some college,False,636487,14302
+2012,40,Some college,True,95882,1811
+2012,41,Bachelor's or more,False,729539,19472
+2012,41,Bachelor's or more,True,49221,592
+2012,41,High school,False,484336,6572
+2012,41,High school,True,7256,475
+2012,41,Less than high school,False,215357,5379
+2012,41,Less than high school,True,4440,185
+2012,41,Some college,False,613963,10890
+2012,41,Some college,True,81761,1451
+2012,42,Bachelor's or more,False,693474,15869
+2012,42,Bachelor's or more,True,51270,664
+2012,42,High school,False,486914,7396
+2012,42,High school,True,6548,0
+2012,42,Less than high school,False,233643,4022
+2012,42,Less than high school,True,5161,67
+2012,42,Some college,False,606186,10266
+2012,42,Some college,True,80116,786
+2012,43,Bachelor's or more,False,666199,10157
+2012,43,Bachelor's or more,True,48781,707
+2012,43,High school,False,478276,4410
+2012,43,High school,True,6332,68
+2012,43,Less than high school,False,228582,3402
+2012,43,Less than high school,True,2883,0
+2012,43,Some college,False,593281,5476
+2012,43,Some college,True,65263,188
+2012,44,Bachelor's or more,False,609018,6429
+2012,44,Bachelor's or more,True,42812,569
+2012,44,High school,False,472525,3431
+2012,44,High school,True,6020,144
+2012,44,Less than high school,False,220843,2337
+2012,44,Less than high school,True,4096,155
+2012,44,Some college,False,610980,4684
+2012,44,Some college,True,60882,593
+2012,45,Bachelor's or more,False,630234,3873
+2012,45,Bachelor's or more,True,43164,271
+2012,45,High school,False,528532,5459
+2012,45,High school,True,7404,148
+2012,45,Less than high school,False,233618,2568
+2012,45,Less than high school,True,3300,109
+2012,45,Some college,False,611694,2848
+2012,45,Some college,True,59400,37
+2012,46,Bachelor's or more,False,603836,4367
+2012,46,Bachelor's or more,True,41864,942
+2012,46,High school,False,531491,2866
+2012,46,High school,True,6618,89
+2012,46,Less than high school,False,228473,1303
+2012,46,Less than high school,True,4679,0
+2012,46,Some college,False,610752,3884
+2012,46,Some college,True,53465,647
+2012,47,Bachelor's or more,False,613171,3261
+2012,47,Bachelor's or more,True,43131,386
+2012,47,High school,False,563563,2724
+2012,47,High school,True,5791,0
+2012,47,Less than high school,False,223616,2141
+2012,47,Less than high school,True,4031,131
+2012,47,Some college,False,672094,2825
+2012,47,Some college,True,54162,679
+2012,48,Bachelor's or more,False,639762,5353
+2012,48,Bachelor's or more,True,36849,140
+2012,48,High school,False,622883,4188
+2012,48,High school,True,5708,96
+2012,48,Less than high school,False,241252,1483
+2012,48,Less than high school,True,2499,83
+2012,48,Some college,False,712437,3976
+2012,48,Some college,True,59502,437
+2012,49,Bachelor's or more,False,630495,2976
+2012,49,Bachelor's or more,True,40666,609
+2012,49,High school,False,616250,4497
+2012,49,High school,True,4310,159
+2012,49,Less than high school,False,240350,888
+2012,49,Less than high school,True,1721,224
+2012,49,Some college,False,696275,4377
+2012,49,Some college,True,48900,182
+2012,50,Bachelor's or more,False,661198,3697
+2012,50,Bachelor's or more,True,41548,681
+2012,50,High school,False,674108,1918
+2012,50,High school,True,6748,294
+2012,50,Less than high school,False,266752,1671
+2012,50,Less than high school,True,1549,150
+2012,50,Some college,False,730635,2640
+2012,50,Some college,True,46014,314
+2015,15,High school,False,4474,165
+2015,15,High school,True,3415,63
+2015,15,Less than high school,False,36039,1025
+2015,15,Less than high school,True,1995663,8397
+2015,15,Some college,False,71,0
+2015,15,Some college,True,486,0
+2015,16,High school,False,7670,271
+2015,16,High school,True,4330,0
+2015,16,Less than high school,False,48987,2245
+2015,16,Less than high school,True,1977957,10993
+2015,16,Some college,False,2093,0
+2015,16,Some college,True,7073,0
+2015,17,High school,False,32307,1821
+2015,17,High school,True,96997,1369
+2015,17,Less than high school,False,59230,4330
+2015,17,Less than high school,True,1797080,17827
+2015,17,Some college,False,3421,70
+2015,17,Some college,True,44305,650
+2015,18,High school,False,222187,11908
+2015,18,High school,True,556853,4473
+2015,18,Less than high school,False,85444,11697
+2015,18,Less than high school,True,673150,11573
+2015,18,Some college,False,37888,2695
+2015,18,Some college,True,637922,3639
+2015,19,Bachelor's or more,False,818,0
+2015,19,Bachelor's or more,True,3183,0
+2015,19,High school,False,358141,29660
+2015,19,High school,True,283170,4383
+2015,19,Less than high school,False,92796,13535
+2015,19,Less than high school,True,99761,5179
+2015,19,Some college,False,108193,6190
+2015,19,Some college,True,1101785,10857
+2015,20,Bachelor's or more,False,8008,246
+2015,20,Bachelor's or more,True,13728,0
+2015,20,High school,False,460136,48267
+2015,20,High school,True,182138,3660
+2015,20,Less than high school,False,117332,20637
+2015,20,Less than high school,True,51822,4405
+2015,20,Some college,False,245564,19326
+2015,20,Some college,True,1178459,15442
+2015,21,Bachelor's or more,False,28618,532
+2015,21,Bachelor's or more,True,73982,312
+2015,21,High school,False,474385,52009
+2015,21,High school,True,129498,3072
+2015,21,Less than high school,False,127184,21576
+2015,21,Less than high school,True,26711,1918
+2015,21,Some college,False,343930,33032
+2015,21,Some college,True,1034664,21199
+2015,22,Bachelor's or more,False,204937,2149
+2015,22,Bachelor's or more,True,232038,2739
+2015,22,High school,False,460808,62352
+2015,22,High school,True,76836,1629
+2015,22,Less than high school,False,146693,25131
+2015,22,Less than high school,True,16306,1738
+2015,22,Some college,False,400236,42940
+2015,22,Some college,True,670993,20729
+2015,23,Bachelor's or more,False,392624,7144
+2015,23,Bachelor's or more,True,227660,2618
+2015,23,High school,False,447789,51787
+2015,23,High school,True,45308,2826
+2015,23,Less than high school,False,142477,22976
+2015,23,Less than high school,True,16120,1518
+2015,23,Some college,False,479545,54000
+2015,23,Some college,True,419943,18075
+2015,24,Bachelor's or more,False,483108,13353
+2015,24,Bachelor's or more,True,221165,3155
+2015,24,High school,False,429857,57282
+2015,24,High school,True,28447,1920
+2015,24,Less than high school,False,144808,23104
+2015,24,Less than high school,True,12959,1129
+2015,24,Some college,False,511806,57924
+2015,24,Some college,True,308697,15333
+2015,25,Bachelor's or more,False,619981,28825
+2015,25,Bachelor's or more,True,205970,4621
+2015,25,High school,False,484799,53827
+2015,25,High school,True,23846,1655
+2015,25,Less than high school,False,174104,24069
+2015,25,Less than high school,True,8197,471
+2015,25,Some college,False,565313,67442
+2015,25,Some college,True,272571,16925
+2015,26,Bachelor's or more,False,623897,37237
+2015,26,Bachelor's or more,True,191360,4571
+2015,26,High school,False,438010,50370
+2015,26,High school,True,18096,1805
+2015,26,Less than high school,False,154224,20494
+2015,26,Less than high school,True,9499,508
+2015,26,Some college,False,559883,67671
+2015,26,Some college,True,225202,14429
+2015,27,Bachelor's or more,False,663789,53180
+2015,27,Bachelor's or more,True,151991,5949
+2015,27,High school,False,430642,49678
+2015,27,High school,True,16936,996
+2015,27,Less than high school,False,167003,24301
+2015,27,Less than high school,True,9044,235
+2015,27,Some college,False,552992,73553
+2015,27,Some college,True,175146,12230
+2015,28,Bachelor's or more,False,691671,64579
+2015,28,Bachelor's or more,True,141264,7599
+2015,28,High school,False,428974,47178
+2015,28,High school,True,12727,1301
+2015,28,Less than high school,False,167591,22834
+2015,28,Less than high school,True,7119,521
+2015,28,Some college,False,534479,66290
+2015,28,Some college,True,157067,12954
+2015,29,Bachelor's or more,False,694789,81773
+2015,29,Bachelor's or more,True,116660,6731
+2015,29,High school,False,407607,47246
+2015,29,High school,True,11650,1548
+2015,29,Less than high school,False,172850,22215
+2015,29,Less than high school,True,5035,263
+2015,29,Some college,False,534990,63310
+2015,29,Some college,True,157109,11746
+2015,30,Bachelor's or more,False,774856,95460
+2015,30,Bachelor's or more,True,104054,7007
+2015,30,High school,False,459426,46282
+2015,30,High school,True,14070,585
+2015,30,Less than high school,False,193592,22874
+2015,30,Less than high school,True,6697,124
+2015,30,Some college,False,599621,72240
+2015,30,Some college,True,130152,7790
+2015,31,Bachelor's or more,False,723388,95515
+2015,31,Bachelor's or more,True,91205,7109
+2015,31,High school,False,404810,38014
+2015,31,High school,True,10033,484
+2015,31,Less than high school,False,188119,20112
+2015,31,Less than high school,True,4950,283
+2015,31,Some college,False,574971,59347
+2015,31,Some college,True,107714,5959
+2015,32,Bachelor's or more,False,754460,105377
+2015,32,Bachelor's or more,True,91220,7249
+2015,32,High school,False,417105,35315
+2015,32,High school,True,8625,759
+2015,32,Less than high school,False,191448,18372
+2015,32,Less than high school,True,4709,406
+2015,32,Some college,False,567561,56373
+2015,32,Some college,True,110260,5751
+2015,33,Bachelor's or more,False,748737,96435
+2015,33,Bachelor's or more,True,76851,5183
+2015,33,High school,False,392056,28243
+2015,33,High school,True,10991,351
+2015,33,Less than high school,False,209720,15943
+2015,33,Less than high school,True,3597,136
+2015,33,Some college,False,568821,51588
+2015,33,Some college,True,100122,4416
+2015,34,Bachelor's or more,False,749705,93589
+2015,34,Bachelor's or more,True,70209,5093
+2015,34,High school,False,416500,28310
+2015,34,High school,True,7402,262
+2015,34,Less than high school,False,212377,18685
+2015,34,Less than high school,True,4436,158
+2015,34,Some college,False,554904,43546
+2015,34,Some college,True,98591,5160
+2015,35,Bachelor's or more,False,776500,82743
+2015,35,Bachelor's or more,True,61967,4532
+2015,35,High school,False,444371,21530
+2015,35,High school,True,9220,118
+2015,35,Less than high school,False,237397,16442
+2015,35,Less than high school,True,4651,242
+2015,35,Some college,False,608019,37712
+2015,35,Some college,True,85640,3591
+2015,36,Bachelor's or more,False,741622,74425
+2015,36,Bachelor's or more,True,58208,3659
+2015,36,High school,False,417101,21733
+2015,36,High school,True,5562,428
+2015,36,Less than high school,False,220399,12310
+2015,36,Less than high school,True,3047,175
+2015,36,Some college,False,551376,31653
+2015,36,Some college,True,80325,3155
+2015,37,Bachelor's or more,False,714651,59794
+2015,37,Bachelor's or more,True,61761,2577
+2015,37,High school,False,410441,18589
+2015,37,High school,True,7595,355
+2015,37,Less than high school,False,207897,14285
+2015,37,Less than high school,True,5702,145
+2015,37,Some college,False,546881,27818
+2015,37,Some college,True,73880,2792
+2015,38,Bachelor's or more,False,723673,44156
+2015,38,Bachelor's or more,True,54080,2675
+2015,38,High school,False,405212,13938
+2015,38,High school,True,5610,91
+2015,38,Less than high school,False,204239,10469
+2015,38,Less than high school,True,2565,21
+2015,38,Some college,False,547299,21054
+2015,38,Some college,True,74972,997
+2015,39,Bachelor's or more,False,691484,32097
+2015,39,Bachelor's or more,True,54681,1990
+2015,39,High school,False,396096,9974
+2015,39,High school,True,6469,121
+2015,39,Less than high school,False,208536,6945
+2015,39,Less than high school,True,3731,0
+2015,39,Some college,False,538819,15586
+2015,39,Some college,True,60314,2039
+2015,40,Bachelor's or more,False,709458,30188
+2015,40,Bachelor's or more,True,52274,911
+2015,40,High school,False,439145,9001
+2015,40,High school,True,6697,0
+2015,40,Less than high school,False,231284,7561
+2015,40,Less than high school,True,3613,36
+2015,40,Some college,False,584170,14025
+2015,40,Some college,True,61719,1076
+2015,41,Bachelor's or more,False,666846,17176
+2015,41,Bachelor's or more,True,45893,547
+2015,41,High school,False,400123,6172
+2015,41,High school,True,5170,182
+2015,41,Less than high school,False,208594,6940
+2015,41,Less than high school,True,3985,0
+2015,41,Some college,False,519350,8297
+2015,41,Some college,True,59771,935
+2015,42,Bachelor's or more,False,687840,13236
+2015,42,Bachelor's or more,True,48470,925
+2015,42,High school,False,447534,5229
+2015,42,High school,True,4067,228
+2015,42,Less than high school,False,218798,5399
+2015,42,Less than high school,True,3493,0
+2015,42,Some college,False,574056,6677
+2015,42,Some college,True,57631,423
+2015,43,Bachelor's or more,False,702072,8787
+2015,43,Bachelor's or more,True,42573,440
+2015,43,High school,False,440489,4387
+2015,43,High school,True,4470,0
+2015,43,Less than high school,False,231129,5110
+2015,43,Less than high school,True,3178,88
+2015,43,Some college,False,572853,6807
+2015,43,Some college,True,56764,929
+2015,44,Bachelor's or more,False,751752,6612
+2015,44,Bachelor's or more,True,46252,592
+2015,44,High school,False,478340,3790
+2015,44,High school,True,5787,234
+2015,44,Less than high school,False,220348,2032
+2015,44,Less than high school,True,3722,0
+2015,44,Some college,False,637909,3685
+2015,44,Some college,True,57023,533
+2015,45,Bachelor's or more,False,752658,3201
+2015,45,Bachelor's or more,True,43121,375
+2015,45,High school,False,495433,2466
+2015,45,High school,True,5588,0
+2015,45,Less than high school,False,239951,2035
+2015,45,Less than high school,True,2034,0
+2015,45,Some college,False,637590,3299
+2015,45,Some college,True,46023,384
+2015,46,Bachelor's or more,False,698179,4087
+2015,46,Bachelor's or more,True,36348,136
+2015,46,High school,False,492315,3719
+2015,46,High school,True,4124,0
+2015,46,Less than high school,False,214380,1332
+2015,46,Less than high school,True,3556,148
+2015,46,Some college,False,586552,2506
+2015,46,Some college,True,44030,0
+2015,47,Bachelor's or more,False,658435,2321
+2015,47,Bachelor's or more,True,40786,579
+2015,47,High school,False,495310,2575
+2015,47,High school,True,5808,147
+2015,47,Less than high school,False,222459,1178
+2015,47,Less than high school,True,3252,0
+2015,47,Some college,False,583329,2425
+2015,47,Some college,True,38793,233
+2015,48,Bachelor's or more,False,624238,2777
+2015,48,Bachelor's or more,True,35129,188
+2015,48,High school,False,502136,2327
+2015,48,High school,True,3869,0
+2015,48,Less than high school,False,228955,1446
+2015,48,Less than high school,True,3841,94
+2015,48,Some college,False,588160,1989
+2015,48,Some college,True,43118,253
+2015,49,Bachelor's or more,False,631625,2273
+2015,49,Bachelor's or more,True,33894,292
+2015,49,High school,False,551865,2055
+2015,49,High school,True,4251,39
+2015,49,Less than high school,False,229250,1027
+2015,49,Less than high school,True,2603,0
+2015,49,Some college,False,630684,3088
+2015,49,Some college,True,41035,372
+2015,50,Bachelor's or more,False,699751,2356
+2015,50,Bachelor's or more,True,35870,241
+2015,50,High school,False,602531,2513
+2015,50,High school,True,2941,129
+2015,50,Less than high school,False,266047,492
+2015,50,Less than high school,True,2723,88
+2015,50,Some college,False,708630,1335
+2015,50,Some college,True,38315,542
+2017,15,High school,False,4490,38
+2017,15,High school,True,3180,0
+2017,15,Less than high school,False,37142,90
+2017,15,Less than high school,True,1963525,6404
+2017,15,Some college,False,397,0
+2017,15,Some college,True,1275,0
+2017,16,High school,False,6649,260
+2017,16,High school,True,4502,0
+2017,16,Less than high school,False,41358,1007
+2017,16,Less than high school,True,2025351,6676
+2017,16,Some college,False,970,86
+2017,16,Some college,True,5597,0
+2017,17,High school,False,30715,1295
+2017,17,High school,True,101264,733
+2017,17,Less than high school,False,61247,3730
+2017,17,Less than high school,True,1806027,11981
+2017,17,Some college,False,5730,0
+2017,17,Some college,True,39852,0
+2017,18,High school,False,241763,10981
+2017,18,High school,True,592312,3651
+2017,18,Less than high school,False,76958,6295
+2017,18,Less than high school,True,667370,10443
+2017,18,Some college,False,31077,1191
+2017,18,Some college,True,649933,3210
+2017,19,Bachelor's or more,False,2546,94
+2017,19,Bachelor's or more,True,5016,0
+2017,19,High school,False,363062,23765
+2017,19,High school,True,289647,2185
+2017,19,Less than high school,False,84277,12215
+2017,19,Less than high school,True,100424,3596
+2017,19,Some college,False,118515,6672
+2017,19,Some college,True,1075450,7209
+2017,20,Bachelor's or more,False,8390,128
+2017,20,Bachelor's or more,True,17722,222
+2017,20,High school,False,455393,46956
+2017,20,High school,True,198241,2090
+2017,20,Less than high school,False,110781,20097
+2017,20,Less than high school,True,51877,2772
+2017,20,Some college,False,230683,16977
+2017,20,Some college,True,1131106,16297
+2017,21,Bachelor's or more,False,30905,772
+2017,21,Bachelor's or more,True,79104,711
+2017,21,High school,False,455128,49020
+2017,21,High school,True,146165,4366
+2017,21,Less than high school,False,114657,20014
+2017,21,Less than high school,True,25574,1463
+2017,21,Some college,False,310598,27491
+2017,21,Some college,True,1020605,16931
+2017,22,Bachelor's or more,False,213998,2977
+2017,22,Bachelor's or more,True,234533,3168
+2017,22,High school,False,436306,58356
+2017,22,High school,True,84186,2407
+2017,22,Less than high school,False,116620,18629
+2017,22,Less than high school,True,13044,395
+2017,22,Some college,False,392722,33823
+2017,22,Some college,True,620837,13861
+2017,23,Bachelor's or more,False,417848,10817
+2017,23,Bachelor's or more,True,244361,4368
+2017,23,High school,False,452541,58780
+2017,23,High school,True,40213,2674
+2017,23,Less than high school,False,115816,19663
+2017,23,Less than high school,True,8943,1594
+2017,23,Some college,False,439539,48431
+2017,23,Some college,True,370387,15228
+2017,24,Bachelor's or more,False,510263,12153
+2017,24,Bachelor's or more,True,215562,4261
+2017,24,High school,False,475666,58331
+2017,24,High school,True,30389,1967
+2017,24,Less than high school,False,116450,16496
+2017,24,Less than high school,True,9446,1066
+2017,24,Some college,False,481624,55124
+2017,24,Some college,True,291225,11409
+2017,25,Bachelor's or more,False,634500,26731
+2017,25,Bachelor's or more,True,216035,3707
+2017,25,High school,False,484588,56712
+2017,25,High school,True,22803,2001
+2017,25,Less than high school,False,144643,21211
+2017,25,Less than high school,True,12026,999
+2017,25,Some college,False,549160,64134
+2017,25,Some college,True,245213,9933
+2017,26,Bachelor's or more,False,672598,35762
+2017,26,Bachelor's or more,True,182852,4145
+2017,26,High school,False,485641,59795
+2017,26,High school,True,20102,1916
+2017,26,Less than high school,False,154944,20541
+2017,26,Less than high school,True,8583,433
+2017,26,Some college,False,578245,70640
+2017,26,Some college,True,203295,12122
+2017,27,Bachelor's or more,False,738421,55641
+2017,27,Bachelor's or more,True,165787,6880
+2017,27,High school,False,466654,47871
+2017,27,High school,True,19190,1941
+2017,27,Less than high school,False,162548,21512
+2017,27,Less than high school,True,8687,1758
+2017,27,Some college,False,593578,73947
+2017,27,Some college,True,155959,11854
+2017,28,Bachelor's or more,False,738977,69780
+2017,28,Bachelor's or more,True,146618,6146
+2017,28,High school,False,443263,48751
+2017,28,High school,True,15765,1863
+2017,28,Less than high school,False,155791,20104
+2017,28,Less than high school,True,3667,922
+2017,28,Some college,False,567616,67624
+2017,28,Some college,True,159389,13782
+2017,29,Bachelor's or more,False,751951,86285
+2017,29,Bachelor's or more,True,114007,5667
+2017,29,High school,False,428404,48106
+2017,29,High school,True,12761,1498
+2017,29,Less than high school,False,152844,15700
+2017,29,Less than high school,True,6479,260
+2017,29,Some college,False,571859,75797
+2017,29,Some college,True,140241,7587
+2017,30,Bachelor's or more,False,799810,99293
+2017,30,Bachelor's or more,True,109155,6233
+2017,30,High school,False,445763,40433
+2017,30,High school,True,12573,872
+2017,30,Less than high school,False,183036,20402
+2017,30,Less than high school,True,3990,197
+2017,30,Some college,False,594406,68859
+2017,30,Some college,True,113304,8704
+2017,31,Bachelor's or more,False,797523,105174
+2017,31,Bachelor's or more,True,93781,7298
+2017,31,High school,False,418666,43313
+2017,31,High school,True,9682,618
+2017,31,Less than high school,False,156986,17371
+2017,31,Less than high school,True,3704,384
+2017,31,Some college,False,551587,62284
+2017,31,Some college,True,101407,6150
+2017,32,Bachelor's or more,False,818399,112299
+2017,32,Bachelor's or more,True,84323,5059
+2017,32,High school,False,413064,34921
+2017,32,High school,True,7296,1204
+2017,32,Less than high school,False,178573,21952
+2017,32,Less than high school,True,4557,326
+2017,32,Some college,False,558479,59536
+2017,32,Some college,True,100523,7183
+2017,33,Bachelor's or more,False,790383,103372
+2017,33,Bachelor's or more,True,81902,7302
+2017,33,High school,False,398789,26960
+2017,33,High school,True,7777,376
+2017,33,Less than high school,False,171544,15757
+2017,33,Less than high school,True,4386,16
+2017,33,Some college,False,571423,51008
+2017,33,Some college,True,90221,4673
+2017,34,Bachelor's or more,False,818206,101939
+2017,34,Bachelor's or more,True,77296,6700
+2017,34,High school,False,404006,34728
+2017,34,High school,True,8956,937
+2017,34,Less than high school,False,186360,12326
+2017,34,Less than high school,True,5352,164
+2017,34,Some college,False,571914,44891
+2017,34,Some college,True,87031,4260
+2017,35,Bachelor's or more,False,845500,93602
+2017,35,Bachelor's or more,True,74340,6460
+2017,35,High school,False,439673,27155
+2017,35,High school,True,7601,579
+2017,35,Less than high school,False,211672,16899
+2017,35,Less than high school,True,4956,129
+2017,35,Some college,False,598749,40074
+2017,35,Some college,True,81559,3648
+2017,36,Bachelor's or more,False,815005,77435
+2017,36,Bachelor's or more,True,62364,3063
+2017,36,High school,False,424901,21528
+2017,36,High school,True,8227,0
+2017,36,Less than high school,False,199927,13570
+2017,36,Less than high school,True,4883,331
+2017,36,Some college,False,575556,35924
+2017,36,Some college,True,77980,3170
+2017,37,Bachelor's or more,False,821981,60081
+2017,37,Bachelor's or more,True,59991,4663
+2017,37,High school,False,416141,19608
+2017,37,High school,True,8269,194
+2017,37,Less than high school,False,210077,14324
+2017,37,Less than high school,True,3963,0
+2017,37,Some college,False,588987,28756
+2017,37,Some college,True,68313,1732
+2017,38,Bachelor's or more,False,776866,54478
+2017,38,Bachelor's or more,True,59694,2535
+2017,38,High school,False,407336,15993
+2017,38,High school,True,5983,109
+2017,38,Less than high school,False,207872,11457
+2017,38,Less than high school,True,3272,595
+2017,38,Some college,False,571027,23808
+2017,38,Some college,True,67516,2718
+2017,39,Bachelor's or more,False,765496,40498
+2017,39,Bachelor's or more,True,55367,1098
+2017,39,High school,False,413927,13326
+2017,39,High school,True,5578,238
+2017,39,Less than high school,False,207371,8283
+2017,39,Less than high school,True,3917,139
+2017,39,Some college,False,531476,19504
+2017,39,Some college,True,57080,989
+2017,40,Bachelor's or more,False,775544,31430
+2017,40,Bachelor's or more,True,53161,979
+2017,40,High school,False,484681,11033
+2017,40,High school,True,4919,117
+2017,40,Less than high school,False,236103,9072
+2017,40,Less than high school,True,6703,54
+2017,40,Some college,False,589078,14236
+2017,40,Some college,True,58872,1382
+2017,41,Bachelor's or more,False,720746,24246
+2017,41,Bachelor's or more,True,43103,839
+2017,41,High school,False,371084,8824
+2017,41,High school,True,5518,55
+2017,41,Less than high school,False,199655,6565
+2017,41,Less than high school,True,4278,271
+2017,41,Some college,False,524471,10083
+2017,41,Some college,True,52429,1003
+2017,42,Bachelor's or more,False,724026,16371
+2017,42,Bachelor's or more,True,45770,683
+2017,42,High school,False,403750,5537
+2017,42,High school,True,5796,434
+2017,42,Less than high school,False,218355,5210
+2017,42,Less than high school,True,2536,0
+2017,42,Some college,False,542404,7903
+2017,42,Some college,True,47200,661
+2017,43,Bachelor's or more,False,704074,10807
+2017,43,Bachelor's or more,True,42869,247
+2017,43,High school,False,404443,6664
+2017,43,High school,True,4637,100
+2017,43,Less than high school,False,206236,1918
+2017,43,Less than high school,True,2964,276
+2017,43,Some college,False,530999,6775
+2017,43,Some college,True,47356,249
+2017,44,Bachelor's or more,False,697968,8656
+2017,44,Bachelor's or more,True,42435,1472
+2017,44,High school,False,406223,4161
+2017,44,High school,True,5420,49
+2017,44,Less than high school,False,196438,3469
+2017,44,Less than high school,True,2705,116
+2017,44,Some college,False,556959,5633
+2017,44,Some college,True,43568,624
+2017,45,Bachelor's or more,False,741972,7362
+2017,45,Bachelor's or more,True,41533,858
+2017,45,High school,False,463342,4538
+2017,45,High school,True,3324,97
+2017,45,Less than high school,False,227066,2546
+2017,45,Less than high school,True,2405,277
+2017,45,Some college,False,606165,5105
+2017,45,Some college,True,39990,408
+2017,46,Bachelor's or more,False,766158,5195
+2017,46,Bachelor's or more,True,38191,120
+2017,46,High school,False,469222,3276
+2017,46,High school,True,4735,25
+2017,46,Less than high school,False,199915,1749
+2017,46,Less than high school,True,3092,0
+2017,46,Some college,False,610825,3641
+2017,46,Some college,True,43426,537
+2017,47,Bachelor's or more,False,771941,5005
+2017,47,Bachelor's or more,True,41482,296
+2017,47,High school,False,487416,4067
+2017,47,High school,True,4766,62
+2017,47,Less than high school,False,227564,1646
+2017,47,Less than high school,True,2073,0
+2017,47,Some college,False,625088,4121
+2017,47,Some college,True,36352,275
+2017,48,Bachelor's or more,False,731101,3847
+2017,48,Bachelor's or more,True,35074,466
+2017,48,High school,False,477616,2341
+2017,48,High school,True,4611,167
+2017,48,Less than high school,False,210941,1881
+2017,48,Less than high school,True,1800,0
+2017,48,Some college,False,592225,3503
+2017,48,Some college,True,34775,567
+2017,49,Bachelor's or more,False,674361,4050
+2017,49,Bachelor's or more,True,32462,577
+2017,49,High school,False,487743,2949
+2017,49,High school,True,3608,0
+2017,49,Less than high school,False,229542,844
+2017,49,Less than high school,True,2595,26
+2017,49,Some college,False,572653,4792
+2017,49,Some college,True,32565,204
+2017,50,Bachelor's or more,False,680941,4279
+2017,50,Bachelor's or more,True,30942,475
+2017,50,High school,False,556282,3171
+2017,50,High school,True,3080,59
+2017,50,Less than high school,False,236902,1866
+2017,50,Less than high school,True,2750,125
+2017,50,Some college,False,625587,2861
+2017,50,Some college,True,30994,431
+2019,15,High school,False,2966,0
+2019,15,High school,True,719,0
+2019,15,Less than high school,False,40724,613
+2019,15,Less than high school,True,2015310,4452
+2019,15,Some college,False,569,0
+2019,15,Some college,True,1843,0
+2019,16,High school,False,6296,182
+2019,16,High school,True,3005,141
+2019,16,Less than high school,False,41536,892
+2019,16,Less than high school,True,1949489,7139
+2019,16,Some college,False,2465,0
+2019,16,Some college,True,5394,0
+2019,17,High school,False,28434,1205
+2019,17,High school,True,96360,515
+2019,17,Less than high school,False,53429,3126
+2019,17,Less than high school,True,1744988,8882
+2019,17,Some college,False,3495,0
+2019,17,Some college,True,47304,90
+2019,18,High school,False,247753,9470
+2019,18,High school,True,619031,2795
+2019,18,Less than high school,False,68337,5760
+2019,18,Less than high school,True,647772,8469
+2019,18,Some college,False,35208,1134
+2019,18,Some college,True,636331,2252
+2019,19,Bachelor's or more,False,3900,0
+2019,19,Bachelor's or more,True,6168,0
+2019,19,High school,False,388924,23342
+2019,19,High school,True,310527,2411
+2019,19,Less than high school,False,84608,12378
+2019,19,Less than high school,True,92864,3173
+2019,19,Some college,False,116447,4915
+2019,19,Some college,True,1093279,9002
+2019,20,Bachelor's or more,False,9307,882
+2019,20,Bachelor's or more,True,17031,111
+2019,20,High school,False,457021,36724
+2019,20,High school,True,210196,3218
+2019,20,Less than high school,False,101290,13154
+2019,20,Less than high school,True,43206,2512
+2019,20,Some college,False,226883,11271
+2019,20,Some college,True,1108893,14238
+2019,21,Bachelor's or more,False,37205,133
+2019,21,Bachelor's or more,True,92522,902
+2019,21,High school,False,441733,47283
+2019,21,High school,True,151475,2437
+2019,21,Less than high school,False,107899,15754
+2019,21,Less than high school,True,20268,1125
+2019,21,Some college,False,315397,22051
+2019,21,Some college,True,955780,13084
+2019,22,Bachelor's or more,False,222395,1683
+2019,22,Bachelor's or more,True,261682,1571
+2019,22,High school,False,426116,46791
+2019,22,High school,True,82707,1916
+2019,22,Less than high school,False,107554,16891
+2019,22,Less than high school,True,11789,1070
+2019,22,Some college,False,359025,33915
+2019,22,Some college,True,578037,11892
+2019,23,Bachelor's or more,False,452994,7568
+2019,23,Bachelor's or more,True,248117,1640
+2019,23,High school,False,462952,55943
+2019,23,High school,True,42845,3774
+2019,23,Less than high school,False,113261,12880
+2019,23,Less than high school,True,7193,470
+2019,23,Some college,False,397452,37425
+2019,23,Some college,True,331211,12849
+2019,24,Bachelor's or more,False,527294,13641
+2019,24,Bachelor's or more,True,234108,3358
+2019,24,High school,False,452717,57001
+2019,24,High school,True,26663,1391
+2019,24,Less than high school,False,103112,14488
+2019,24,Less than high school,True,6995,252
+2019,24,Some college,False,443406,48328
+2019,24,Some college,True,267005,12829
+2019,25,Bachelor's or more,False,645627,23222
+2019,25,Bachelor's or more,True,216627,6403
+2019,25,High school,False,479681,49940
+2019,25,High school,True,24969,2101
+2019,25,Less than high school,False,133376,17521
+2019,25,Less than high school,True,7914,335
+2019,25,Some college,False,510445,53404
+2019,25,Some college,True,231276,12423
+2019,26,Bachelor's or more,False,685777,36936
+2019,26,Bachelor's or more,True,189588,4701
+2019,26,High school,False,491457,54722
+2019,26,High school,True,20773,1140
+2019,26,Less than high school,False,127435,14132
+2019,26,Less than high school,True,5350,732
+2019,26,Some college,False,508352,55659
+2019,26,Some college,True,190016,12312
+2019,27,Bachelor's or more,False,723152,51423
+2019,27,Bachelor's or more,True,171187,6605
+2019,27,High school,False,461478,58598
+2019,27,High school,True,13362,903
+2019,27,Less than high school,False,139444,19831
+2019,27,Less than high school,True,3182,459
+2019,27,Some college,False,582698,68890
+2019,27,Some college,True,158521,9116
+2019,28,Bachelor's or more,False,767906,61499
+2019,28,Bachelor's or more,True,155312,4661
+2019,28,High school,False,476186,50094
+2019,28,High school,True,15000,839
+2019,28,Less than high school,False,143040,17216
+2019,28,Less than high school,True,5519,187
+2019,28,Some college,False,581041,63514
+2019,28,Some college,True,148727,11320
+2019,29,Bachelor's or more,False,831576,75521
+2019,29,Bachelor's or more,True,139293,7045
+2019,29,High school,False,487741,47933
+2019,29,High school,True,15873,1355
+2019,29,Less than high school,False,161824,22214
+2019,29,Less than high school,True,4545,359
+2019,29,Some college,False,622690,78621
+2019,29,Some college,True,129876,10686
+2019,30,Bachelor's or more,False,859388,95810
+2019,30,Bachelor's or more,True,117883,9313
+2019,30,High school,False,466920,46988
+2019,30,High school,True,9782,982
+2019,30,Less than high school,False,176854,20612
+2019,30,Less than high school,True,6748,919
+2019,30,Some college,False,604003,69044
+2019,30,Some college,True,114929,7833
+2019,31,Bachelor's or more,False,834823,110457
+2019,31,Bachelor's or more,True,97469,7271
+2019,31,High school,False,410798,32242
+2019,31,High school,True,9902,1211
+2019,31,Less than high school,False,163955,19605
+2019,31,Less than high school,True,3996,977
+2019,31,Some college,False,548821,60398
+2019,31,Some college,True,101102,6140
+2019,32,Bachelor's or more,False,862650,108550
+2019,32,Bachelor's or more,True,94465,7563
+2019,32,High school,False,418775,33699
+2019,32,High school,True,11275,278
+2019,32,Less than high school,False,165768,17476
+2019,32,Less than high school,True,2148,0
+2019,32,Some college,False,570166,59361
+2019,32,Some college,True,85450,2829
+2019,33,Bachelor's or more,False,850545,113810
+2019,33,Bachelor's or more,True,79527,6496
+2019,33,High school,False,414212,27719
+2019,33,High school,True,10483,618
+2019,33,Less than high school,False,170759,15716
+2019,33,Less than high school,True,4174,34
+2019,33,Some college,False,551985,49429
+2019,33,Some college,True,84877,6877
+2019,34,Bachelor's or more,False,850210,104153
+2019,34,Bachelor's or more,True,75563,5745
+2019,34,High school,False,415284,27615
+2019,34,High school,True,6016,574
+2019,34,Less than high school,False,175971,12086
+2019,34,Less than high school,True,3941,18
+2019,34,Some college,False,565820,45768
+2019,34,Some college,True,80452,4336
+2019,35,Bachelor's or more,False,886943,95967
+2019,35,Bachelor's or more,True,66670,3940
+2019,35,High school,False,423074,21907
+2019,35,High school,True,6434,584
+2019,35,Less than high school,False,191282,14333
+2019,35,Less than high school,True,4604,0
+2019,35,Some college,False,572332,40274
+2019,35,Some college,True,74517,2898
+2019,36,Bachelor's or more,False,856674,80078
+2019,36,Bachelor's or more,True,65582,3215
+2019,36,High school,False,403208,24902
+2019,36,High school,True,7062,405
+2019,36,Less than high school,False,202405,14837
+2019,36,Less than high school,True,2711,141
+2019,36,Some college,False,564155,34928
+2019,36,Some college,True,70797,2639
+2019,37,Bachelor's or more,False,843993,69460
+2019,37,Bachelor's or more,True,64206,3186
+2019,37,High school,False,416075,15674
+2019,37,High school,True,8949,426
+2019,37,Less than high school,False,191516,10662
+2019,37,Less than high school,True,3899,228
+2019,37,Some college,False,583096,28669
+2019,37,Some college,True,60617,2505
+2019,38,Bachelor's or more,False,848427,52664
+2019,38,Bachelor's or more,True,64334,2093
+2019,38,High school,False,414220,13871
+2019,38,High school,True,6989,276
+2019,38,Less than high school,False,203664,10528
+2019,38,Less than high school,True,5436,117
+2019,38,Some college,False,563428,24540
+2019,38,Some college,True,62966,3624
+2019,39,Bachelor's or more,False,832351,43803
+2019,39,Bachelor's or more,True,59941,2026
+2019,39,High school,False,415417,15374
+2019,39,High school,True,5180,61
+2019,39,Less than high school,False,197860,7943
+2019,39,Less than high school,True,5090,831
+2019,39,Some college,False,561482,19684
+2019,39,Some college,True,60446,923
+2019,40,Bachelor's or more,False,825119,30934
+2019,40,Bachelor's or more,True,55003,1991
+2019,40,High school,False,446518,10568
+2019,40,High school,True,5696,252
+2019,40,Less than high school,False,225174,7432
+2019,40,Less than high school,True,4655,107
+2019,40,Some college,False,595890,16598
+2019,40,Some college,True,61225,1214
+2019,41,Bachelor's or more,False,766818,21965
+2019,41,Bachelor's or more,True,52711,1134
+2019,41,High school,False,386697,6304
+2019,41,High school,True,5281,145
+2019,41,Less than high school,False,187832,6385
+2019,41,Less than high school,True,4405,0
+2019,41,Some college,False,549892,12352
+2019,41,Some college,True,51285,1030
+2019,42,Bachelor's or more,False,767983,17887
+2019,42,Bachelor's or more,True,48495,777
+2019,42,High school,False,401274,6412
+2019,42,High school,True,5736,0
+2019,42,Less than high school,False,210301,6474
+2019,42,Less than high school,True,2587,0
+2019,42,Some college,False,561007,9362
+2019,42,Some college,True,48340,1532
+2019,43,Bachelor's or more,False,749272,11326
+2019,43,Bachelor's or more,True,42234,806
+2019,43,High school,False,395108,5740
+2019,43,High school,True,4437,17
+2019,43,Less than high school,False,199619,4090
+2019,43,Less than high school,True,2300,145
+2019,43,Some college,False,528926,9373
+2019,43,Some college,True,40697,378
+2019,44,Bachelor's or more,False,735373,9628
+2019,44,Bachelor's or more,True,42423,1018
+2019,44,High school,False,403923,4911
+2019,44,High school,True,4406,108
+2019,44,Less than high school,False,204083,4340
+2019,44,Less than high school,True,2695,191
+2019,44,Some college,False,549272,5302
+2019,44,Some college,True,41502,246
+2019,45,Bachelor's or more,False,716466,6249
+2019,45,Bachelor's or more,True,51247,694
+2019,45,High school,False,411437,3249
+2019,45,High school,True,4324,0
+2019,45,Less than high school,False,206395,2189
+2019,45,Less than high school,True,1019,0
+2019,45,Some college,False,539331,4968
+2019,45,Some college,True,40155,583
+2019,46,Bachelor's or more,False,728032,3919
+2019,46,Bachelor's or more,True,40381,818
+2019,46,High school,False,407030,2156
+2019,46,High school,True,3562,168
+2019,46,Less than high school,False,203845,1707
+2019,46,Less than high school,True,2527,43
+2019,46,Some college,False,550750,4757
+2019,46,Some college,True,37357,164
+2019,47,Bachelor's or more,False,759808,4965
+2019,47,Bachelor's or more,True,44917,151
+2019,47,High school,False,432014,3189
+2019,47,High school,True,5825,0
+2019,47,Less than high school,False,203020,1334
+2019,47,Less than high school,True,2810,40
+2019,47,Some college,False,570307,3876
+2019,47,Some college,True,33849,230
+2019,48,Bachelor's or more,False,800663,5167
+2019,48,Bachelor's or more,True,44069,1092
+2019,48,High school,False,476903,3746
+2019,48,High school,True,5620,0
+2019,48,Less than high school,False,209453,3103
+2019,48,Less than high school,True,2335,0
+2019,48,Some college,False,596179,5340
+2019,48,Some college,True,36017,789
+2019,49,Bachelor's or more,False,766483,4960
+2019,49,Bachelor's or more,True,39736,1150
+2019,49,High school,False,476078,4715
+2019,49,High school,True,3425,438
+2019,49,Less than high school,False,221095,1497
+2019,49,Less than high school,True,2306,62
+2019,49,Some college,False,606015,5295
+2019,49,Some college,True,30738,115
+2019,50,Bachelor's or more,False,739552,3665
+2019,50,Bachelor's or more,True,35272,203
+2019,50,High school,False,526992,3766
+2019,50,High school,True,2462,0
+2019,50,Less than high school,False,235057,1919
+2019,50,Less than high school,True,2201,0
+2019,50,Some college,False,596690,5025
+2019,50,Some college,True,29532,1177
+2022,15,High school,False,3949,0
+2022,15,High school,True,1675,0
+2022,15,Less than high school,False,43811,622
+2022,15,Less than high school,True,2095603,3339
+2022,15,Some college,False,800,0
+2022,15,Some college,True,1422,0
+2022,16,High school,False,4942,0
+2022,16,High school,True,7420,131
+2022,16,Less than high school,False,48865,654
+2022,16,Less than high school,True,1978174,7634
+2022,16,Some college,False,3647,0
+2022,16,Some college,True,6197,101
+2022,17,High school,False,29826,223
+2022,17,High school,True,101701,87
+2022,17,Less than high school,False,68551,1354
+2022,17,Less than high school,True,1850674,7476
+2022,17,Some college,False,3616,173
+2022,17,Some college,True,34784,131
+2022,18,High school,False,270739,5696
+2022,18,High school,True,624779,2981
+2022,18,Less than high school,False,75740,5522
+2022,18,Less than high school,True,617102,6506
+2022,18,Some college,False,33609,450
+2022,18,Some college,True,579186,2330
+2022,19,Bachelor's or more,False,1945,0
+2022,19,Bachelor's or more,True,4062,0
+2022,19,High school,False,451674,20280
+2022,19,High school,True,340740,1650
+2022,19,Less than high school,False,83171,7566
+2022,19,Less than high school,True,85018,806
+2022,19,Some college,False,98532,2877
+2022,19,Some college,True,1009402,5254
+2022,20,Bachelor's or more,False,8085,332
+2022,20,Bachelor's or more,True,20253,55
+2022,20,High school,False,508265,30564
+2022,20,High school,True,249175,1904
+2022,20,Less than high school,False,107685,11398
+2022,20,Less than high school,True,39192,1391
+2022,20,Some college,False,230236,8046
+2022,20,Some college,True,1018468,10578
+2022,21,Bachelor's or more,False,36257,554
+2022,21,Bachelor's or more,True,113271,865
+2022,21,High school,False,523011,49338
+2022,21,High school,True,191171,3396
+2022,21,Less than high school,False,106929,14523
+2022,21,Less than high school,True,20569,1564
+2022,21,Some college,False,299493,17369
+2022,21,Some college,True,901296,11385
+2022,22,Bachelor's or more,False,282715,3668
+2022,22,Bachelor's or more,True,291884,3084
+2022,22,High school,False,510359,44519
+2022,22,High school,True,97125,2281
+2022,22,Less than high school,False,112156,15212
+2022,22,Less than high school,True,12201,1523
+2022,22,Some college,False,392550,30968
+2022,22,Some college,True,533481,11266
+2022,23,Bachelor's or more,False,524148,11666
+2022,23,Bachelor's or more,True,282621,3235
+2022,23,High school,False,479517,55856
+2022,23,High school,True,47458,2409
+2022,23,Less than high school,False,114176,14638
+2022,23,Less than high school,True,5363,525
+2022,23,Some college,False,430594,40104
+2022,23,Some college,True,305978,10286
+2022,24,Bachelor's or more,False,626221,18230
+2022,24,Bachelor's or more,True,253128,4088
+2022,24,High school,False,495952,54021
+2022,24,High school,True,32705,2481
+2022,24,Less than high school,False,119135,16455
+2022,24,Less than high school,True,4680,493
+2022,24,Some college,False,439884,43527
+2022,24,Some college,True,209655,11607
+2022,25,Bachelor's or more,False,681260,26046
+2022,25,Bachelor's or more,True,206626,5544
+2022,25,High school,False,469175,52383
+2022,25,High school,True,21309,1615
+2022,25,Less than high school,False,109807,13322
+2022,25,Less than high school,True,6641,1190
+2022,25,Some college,False,449020,54255
+2022,25,Some college,True,161005,11419
+2022,26,Bachelor's or more,False,718106,39081
+2022,26,Bachelor's or more,True,178546,5800
+2022,26,High school,False,437738,49571
+2022,26,High school,True,17061,1074
+2022,26,Less than high school,False,109515,17831
+2022,26,Less than high school,True,3959,234
+2022,26,Some college,False,477215,62551
+2022,26,Some college,True,147506,12528
+2022,27,Bachelor's or more,False,766755,56175
+2022,27,Bachelor's or more,True,166853,7079
+2022,27,High school,False,455576,46119
+2022,27,High school,True,18158,1733
+2022,27,Less than high school,False,110321,15782
+2022,27,Less than high school,True,5006,746
+2022,27,Some college,False,491202,61431
+2022,27,Some college,True,142229,8123
+2022,28,Bachelor's or more,False,818585,71011
+2022,28,Bachelor's or more,True,153757,7834
+2022,28,High school,False,457891,52950
+2022,28,High school,True,18424,1762
+2022,28,Less than high school,False,116279,15363
+2022,28,Less than high school,True,5132,796
+2022,28,Some college,False,521897,62883
+2022,28,Some college,True,115144,8799
+2022,29,Bachelor's or more,False,856186,89862
+2022,29,Bachelor's or more,True,125954,7632
+2022,29,High school,False,439466,47618
+2022,29,High school,True,13802,1623
+2022,29,Less than high school,False,126887,17281
+2022,29,Less than high school,True,3706,518
+2022,29,Some college,False,542740,55128
+2022,29,Some college,True,105991,6376
+2022,30,Bachelor's or more,False,923232,108249
+2022,30,Bachelor's or more,True,123948,8537
+2022,30,High school,False,445424,43272
+2022,30,High school,True,12219,377
+2022,30,Less than high school,False,129535,16171
+2022,30,Less than high school,True,3642,324
+2022,30,Some college,False,594763,66463
+2022,30,Some college,True,105245,7844
+2022,31,Bachelor's or more,False,931690,113636
+2022,31,Bachelor's or more,True,103781,10627
+2022,31,High school,False,428150,41120
+2022,31,High school,True,11434,931
+2022,31,Less than high school,False,140720,15053
+2022,31,Less than high school,True,3763,302
+2022,31,Some college,False,568786,57419
+2022,31,Some college,True,101762,9278
+2022,32,Bachelor's or more,False,951674,123737
+2022,32,Bachelor's or more,True,96307,7816
+2022,32,High school,False,434380,44761
+2022,32,High school,True,11957,1494
+2022,32,Less than high school,False,147718,16031
+2022,32,Less than high school,True,3396,340
+2022,32,Some college,False,568853,55676
+2022,32,Some college,True,91845,5396
+2022,33,Bachelor's or more,False,948354,124012
+2022,33,Bachelor's or more,True,89344,6918
+2022,33,High school,False,413653,36170
+2022,33,High school,True,11357,280
+2022,33,Less than high school,False,141161,16292
+2022,33,Less than high school,True,3592,94
+2022,33,Some college,False,586960,47457
+2022,33,Some college,True,82895,6026
+2022,34,Bachelor's or more,False,928049,120845
+2022,34,Bachelor's or more,True,89867,5982
+2022,34,High school,False,414877,32659
+2022,34,High school,True,11070,713
+2022,34,Less than high school,False,143262,12674
+2022,34,Less than high school,True,3201,142
+2022,34,Some college,False,557433,48331
+2022,34,Some college,True,74935,6692
+2022,35,Bachelor's or more,False,953910,111186
+2022,35,Bachelor's or more,True,74213,6733
+2022,35,High school,False,419879,27534
+2022,35,High school,True,8389,1234
+2022,35,Less than high school,False,156384,12682
+2022,35,Less than high school,True,3207,608
+2022,35,Some college,False,573845,41518
+2022,35,Some college,True,64835,3552
+2022,36,Bachelor's or more,False,949594,98430
+2022,36,Bachelor's or more,True,70007,3562
+2022,36,High school,False,407811,23003
+2022,36,High school,True,6341,216
+2022,36,Less than high school,False,161464,12015
+2022,36,Less than high school,True,2341,30
+2022,36,Some college,False,559252,34792
+2022,36,Some college,True,70604,3708
+2022,37,Bachelor's or more,False,948595,79044
+2022,37,Bachelor's or more,True,75251,5054
+2022,37,High school,False,407693,23344
+2022,37,High school,True,7251,670
+2022,37,Less than high school,False,166646,11538
+2022,37,Less than high school,True,3569,719
+2022,37,Some college,False,543504,31735
+2022,37,Some college,True,59185,4850
+2022,38,Bachelor's or more,False,912854,69180
+2022,38,Bachelor's or more,True,62184,3715
+2022,38,High school,False,405354,17804
+2022,38,High school,True,6720,1001
+2022,38,Less than high school,False,182090,10749
+2022,38,Less than high school,True,1852,0
+2022,38,Some college,False,549675,30053
+2022,38,Some college,True,56704,3384
+2022,39,Bachelor's or more,False,911836,50274
+2022,39,Bachelor's or more,True,70137,2382
+2022,39,High school,False,396306,14364
+2022,39,High school,True,5222,203
+2022,39,Less than high school,False,182722,12254
+2022,39,Less than high school,True,2451,339
+2022,39,Some college,False,562106,19991
+2022,39,Some college,True,54246,1800
+2022,40,Bachelor's or more,False,939185,39949
+2022,40,Bachelor's or more,True,59111,1616
+2022,40,High school,False,436702,14788
+2022,40,High school,True,3901,131
+2022,40,Less than high school,False,199761,10755
+2022,40,Less than high school,True,3186,135
+2022,40,Some college,False,591869,19577
+2022,40,Some college,True,60095,1713
+2022,41,Bachelor's or more,False,890639,29651
+2022,41,Bachelor's or more,True,62273,1429
+2022,41,High school,False,422379,11945
+2022,41,High school,True,6198,0
+2022,41,Less than high school,False,191099,5190
+2022,41,Less than high school,True,4584,0
+2022,41,Some college,False,567547,14473
+2022,41,Some college,True,43888,917
+2022,42,Bachelor's or more,False,897953,20881
+2022,42,Bachelor's or more,True,54311,1168
+2022,42,High school,False,433472,9589
+2022,42,High school,True,5440,109
+2022,42,Less than high school,False,208358,5857
+2022,42,Less than high school,True,3439,434
+2022,42,Some college,False,558169,11907
+2022,42,Some college,True,49798,784
+2022,43,Bachelor's or more,False,831517,15018
+2022,43,Bachelor's or more,True,55108,830
+2022,43,High school,False,420714,6526
+2022,43,High school,True,4102,0
+2022,43,Less than high school,False,193283,5606
+2022,43,Less than high school,True,3425,0
+2022,43,Some college,False,547358,9065
+2022,43,Some college,True,40804,1542
+2022,44,Bachelor's or more,False,813750,10910
+2022,44,Bachelor's or more,True,50023,1146
+2022,44,High school,False,408072,5659
+2022,44,High school,True,6258,0
+2022,44,Less than high school,False,184846,2596
+2022,44,Less than high school,True,1709,0
+2022,44,Some college,False,536238,7075
+2022,44,Some college,True,42232,571
+2022,45,Bachelor's or more,False,806963,10537
+2022,45,Bachelor's or more,True,47898,481
+2022,45,High school,False,395104,5296
+2022,45,High school,True,4838,0
+2022,45,Less than high school,False,196360,3331
+2022,45,Less than high school,True,2149,0
+2022,45,Some college,False,524546,5875
+2022,45,Some college,True,35961,710
+2022,46,Bachelor's or more,False,771444,6759
+2022,46,Bachelor's or more,True,49115,765
+2022,46,High school,False,383304,4051
+2022,46,High school,True,3881,204
+2022,46,Less than high school,False,185759,2231
+2022,46,Less than high school,True,1404,0
+2022,46,Some college,False,514002,5693
+2022,46,Some college,True,29672,463
+2022,47,Bachelor's or more,False,767913,5401
+2022,47,Bachelor's or more,True,40831,883
+2022,47,High school,False,386338,4370
+2022,47,High school,True,3926,149
+2022,47,Less than high school,False,193192,4442
+2022,47,Less than high school,True,1830,47
+2022,47,Some college,False,524333,3010
+2022,47,Some college,True,28993,270
+2022,48,Bachelor's or more,False,766889,7830
+2022,48,Bachelor's or more,True,40854,679
+2022,48,High school,False,394026,4246
+2022,48,High school,True,6672,0
+2022,48,Less than high school,False,182422,3252
+2022,48,Less than high school,True,1476,214
+2022,48,Some college,False,522327,3712
+2022,48,Some college,True,27577,385
+2022,49,Bachelor's or more,False,746046,6077
+2022,49,Bachelor's or more,True,40383,328
+2022,49,High school,False,397262,5458
+2022,49,High school,True,4229,0
+2022,49,Less than high school,False,194279,3429
+2022,49,Less than high school,True,2489,0
+2022,49,Some college,False,526770,5427
+2022,49,Some college,True,27747,296
+2022,50,Bachelor's or more,False,771918,5752
+2022,50,Bachelor's or more,True,36619,715
+2022,50,High school,False,456133,3309
+2022,50,High school,True,2573,0
+2022,50,Less than high school,False,208470,2100
+2022,50,Less than high school,True,2322,290
+2022,50,Some college,False,577983,5124
+2022,50,Some college,True,26985,813
+2024,15,High school,False,4162,0
+2024,15,High school,True,4744,0
+2024,15,Less than high school,False,41556,365
+2024,15,Less than high school,True,2073543,3468
+2024,15,Some college,False,161,0
+2024,15,Some college,True,1462,0
+2024,16,High school,False,8178,129
+2024,16,High school,True,7384,0
+2024,16,Less than high school,False,50267,667
+2024,16,Less than high school,True,2146557,5889
+2024,16,Some college,False,1544,0
+2024,16,Some college,True,5671,0
+2024,17,High school,False,36556,512
+2024,17,High school,True,111464,718
+2024,17,Less than high school,False,64976,3443
+2024,17,Less than high school,True,1917948,9240
+2024,17,Some college,False,2779,0
+2024,17,Some college,True,39235,133
+2024,18,High school,False,273536,4751
+2024,18,High school,True,686414,2197
+2024,18,Less than high school,False,72825,4804
+2024,18,Less than high school,True,615871,3672
+2024,18,Some college,False,25117,130
+2024,18,Some college,True,567729,1147
+2024,19,Bachelor's or more,False,2441,0
+2024,19,Bachelor's or more,True,5887,0
+2024,19,High school,False,456178,16294
+2024,19,High school,True,417021,1317
+2024,19,Less than high school,False,94792,9437
+2024,19,Less than high school,True,84788,1164
+2024,19,Some college,False,96953,1534
+2024,19,Some college,True,1011659,2445
+2024,20,Bachelor's or more,False,7878,200
+2024,20,Bachelor's or more,True,21029,308
+2024,20,High school,False,511135,26079
+2024,20,High school,True,281493,3497
+2024,20,Less than high school,False,104976,10150
+2024,20,Less than high school,True,31041,893
+2024,20,Some college,False,197139,9567
+2024,20,Some college,True,987910,6624
+2024,21,Bachelor's or more,False,39480,658
+2024,21,Bachelor's or more,True,109949,326
+2024,21,High school,False,526174,41704
+2024,21,High school,True,213179,1797
+2024,21,Less than high school,False,104082,10735
+2024,21,Less than high school,True,19300,766
+2024,21,Some college,False,267263,13026
+2024,21,Some college,True,817022,11581
+2024,22,Bachelor's or more,False,245263,3160
+2024,22,Bachelor's or more,True,279895,2404
+2024,22,High school,False,557986,50915
+2024,22,High school,True,106980,4605
+2024,22,Less than high school,False,112717,13749
+2024,22,Less than high school,True,9844,567
+2024,22,Some college,False,332661,22556
+2024,22,Some college,True,489390,8944
+2024,23,Bachelor's or more,False,540480,9701
+2024,23,Bachelor's or more,True,290592,2900
+2024,23,High school,False,520436,43968
+2024,23,High school,True,62553,2172
+2024,23,Less than high school,False,107054,13860
+2024,23,Less than high school,True,7366,336
+2024,23,Some college,False,371956,28126
+2024,23,Some college,True,301023,12391
+2024,24,Bachelor's or more,False,671443,23354
+2024,24,Bachelor's or more,True,267432,5238
+2024,24,High school,False,502388,49458
+2024,24,High school,True,37580,1577
+2024,24,Less than high school,False,121614,15812
+2024,24,Less than high school,True,9575,617
+2024,24,Some college,False,450371,43047
+2024,24,Some college,True,223266,9903
+2024,25,Bachelor's or more,False,716223,28998
+2024,25,Bachelor's or more,True,219854,5362
+2024,25,High school,False,471755,47125
+2024,25,High school,True,24119,1166
+2024,25,Less than high school,False,114302,15192
+2024,25,Less than high school,True,3778,536
+2024,25,Some college,False,450673,48631
+2024,25,Some college,True,164906,10998
+2024,26,Bachelor's or more,False,806297,41183
+2024,26,Bachelor's or more,True,198031,7554
+2024,26,High school,False,474626,51554
+2024,26,High school,True,21430,2901
+2024,26,Less than high school,False,121282,13047
+2024,26,Less than high school,True,2652,374
+2024,26,Some college,False,425253,46773
+2024,26,Some college,True,139381,6525
+2024,27,Bachelor's or more,False,809925,52394
+2024,27,Bachelor's or more,True,170004,8590
+2024,27,High school,False,471214,57453
+2024,27,High school,True,20219,2362
+2024,27,Less than high school,False,123364,16666
+2024,27,Less than high school,True,5768,871
+2024,27,Some college,False,461727,50583
+2024,27,Some college,True,133851,9422
+2024,28,Bachelor's or more,False,870775,69572
+2024,28,Bachelor's or more,True,155122,7900
+2024,28,High school,False,461950,51080
+2024,28,High school,True,15962,1293
+2024,28,Less than high school,False,110363,13329
+2024,28,Less than high school,True,3414,496
+2024,28,Some college,False,484455,56513
+2024,28,Some college,True,116938,10254
+2024,29,Bachelor's or more,False,908115,83264
+2024,29,Bachelor's or more,True,130920,6492
+2024,29,High school,False,453683,48648
+2024,29,High school,True,14121,1245
+2024,29,Less than high school,False,122817,15213
+2024,29,Less than high school,True,3549,406
+2024,29,Some college,False,486343,59847
+2024,29,Some college,True,96375,8563
+2024,30,Bachelor's or more,False,962623,97197
+2024,30,Bachelor's or more,True,116286,6448
+2024,30,High school,False,463872,47439
+2024,30,High school,True,14206,976
+2024,30,Less than high school,False,132634,15266
+2024,30,Less than high school,True,3694,184
+2024,30,Some college,False,527882,59665
+2024,30,Some college,True,102216,7738
+2024,31,Bachelor's or more,False,940631,106857
+2024,31,Bachelor's or more,True,101116,9031
+2024,31,High school,False,442137,43139
+2024,31,High school,True,13718,1099
+2024,31,Less than high school,False,132726,9532
+2024,31,Less than high school,True,4724,279
+2024,31,Some college,False,547239,61333
+2024,31,Some college,True,87945,5790
+2024,32,Bachelor's or more,False,984215,116366
+2024,32,Bachelor's or more,True,90070,5613
+2024,32,High school,False,455125,38726
+2024,32,High school,True,12419,1212
+2024,32,Less than high school,False,146482,14857
+2024,32,Less than high school,True,5465,1100
+2024,32,Some college,False,580070,60429
+2024,32,Some college,True,86751,5447
+2024,33,Bachelor's or more,False,1025725,126692
+2024,33,Bachelor's or more,True,95791,7760
+2024,33,High school,False,477919,40101
+2024,33,High school,True,10013,576
+2024,33,Less than high school,False,149917,14430
+2024,33,Less than high school,True,4216,303
+2024,33,Some college,False,573338,46215
+2024,33,Some college,True,84265,4359
+2024,34,Bachelor's or more,False,1053980,126473
+2024,34,Bachelor's or more,True,92319,8313
+2024,34,High school,False,450839,29768
+2024,34,High school,True,12656,287
+2024,34,Less than high school,False,141607,15237
+2024,34,Less than high school,True,3970,428
+2024,34,Some college,False,604015,52723
+2024,34,Some college,True,78788,4824
+2024,35,Bachelor's or more,False,1028856,108811
+2024,35,Bachelor's or more,True,87028,7285
+2024,35,High school,False,434219,30982
+2024,35,High school,True,9613,203
+2024,35,Less than high school,False,164067,11841
+2024,35,Less than high school,True,3798,91
+2024,35,Some college,False,573951,44983
+2024,35,Some college,True,76701,5124
+2024,36,Bachelor's or more,False,980551,101921
+2024,36,Bachelor's or more,True,66932,4461
+2024,36,High school,False,433464,26146
+2024,36,High school,True,10673,829
+2024,36,Less than high school,False,165521,11914
+2024,36,Less than high school,True,4989,241
+2024,36,Some college,False,569861,40278
+2024,36,Some college,True,71625,2266
+2024,37,Bachelor's or more,False,992753,84323
+2024,37,Bachelor's or more,True,81594,4407
+2024,37,High school,False,432434,23140
+2024,37,High school,True,7739,657
+2024,37,Less than high school,False,165467,10352
+2024,37,Less than high school,True,3108,12
+2024,37,Some college,False,568766,31847
+2024,37,Some college,True,66145,2832
+2024,38,Bachelor's or more,False,978814,66705
+2024,38,Bachelor's or more,True,77281,4064
+2024,38,High school,False,421573,20193
+2024,38,High school,True,7867,393
+2024,38,Less than high school,False,178957,11545
+2024,38,Less than high school,True,3940,57
+2024,38,Some college,False,585482,28945
+2024,38,Some college,True,62928,2669
+2024,39,Bachelor's or more,False,966052,50392
+2024,39,Bachelor's or more,True,70431,3374
+2024,39,High school,False,400256,17393
+2024,39,High school,True,6553,541
+2024,39,Less than high school,False,180152,9438
+2024,39,Less than high school,True,2703,226
+2024,39,Some college,False,569825,19816
+2024,39,Some college,True,56196,1996
+2024,40,Bachelor's or more,False,985497,43213
+2024,40,Bachelor's or more,True,73338,1814
+2024,40,High school,False,437160,15020
+2024,40,High school,True,6356,212
+2024,40,Less than high school,False,203520,10351
+2024,40,Less than high school,True,2619,204
+2024,40,Some college,False,578485,19623
+2024,40,Some college,True,54912,1301
+2024,41,Bachelor's or more,False,955635,35301
+2024,41,Bachelor's or more,True,59985,2392
+2024,41,High school,False,393358,10061
+2024,41,High school,True,8367,535
+2024,41,Less than high school,False,182424,6656
+2024,41,Less than high school,True,2519,164
+2024,41,Some college,False,551405,14475
+2024,41,Some college,True,47340,881
+2024,42,Bachelor's or more,False,989695,22822
+2024,42,Bachelor's or more,True,63889,1202
+2024,42,High school,False,423815,9248
+2024,42,High school,True,10692,801
+2024,42,Less than high school,False,194935,7605
+2024,42,Less than high school,True,3178,0
+2024,42,Some college,False,556223,12696
+2024,42,Some college,True,48147,660
+2024,43,Bachelor's or more,False,941968,18516
+2024,43,Bachelor's or more,True,65451,1313
+2024,43,High school,False,422507,8866
+2024,43,High school,True,6669,823
+2024,43,Less than high school,False,196552,2717
+2024,43,Less than high school,True,3738,110
+2024,43,Some college,False,573023,9893
+2024,43,Some college,True,49135,1033
+2024,44,Bachelor's or more,False,942459,16943
+2024,44,Bachelor's or more,True,55639,1179
+2024,44,High school,False,416348,7439
+2024,44,High school,True,5581,282
+2024,44,Less than high school,False,207600,4630
+2024,44,Less than high school,True,3966,213
+2024,44,Some college,False,552305,8189
+2024,44,Some college,True,47693,1064
+2024,45,Bachelor's or more,False,874733,11816
+2024,45,Bachelor's or more,True,52488,889
+2024,45,High school,False,402633,4906
+2024,45,High school,True,4354,101
+2024,45,Less than high school,False,204336,3232
+2024,45,Less than high school,True,2989,0
+2024,45,Some college,False,530478,5153
+2024,45,Some college,True,38231,588
+2024,46,Bachelor's or more,False,835769,8026
+2024,46,Bachelor's or more,True,44405,813
+2024,46,High school,False,403164,5104
+2024,46,High school,True,5351,54
+2024,46,Less than high school,False,191867,2852
+2024,46,Less than high school,True,1579,2
+2024,46,Some college,False,505025,4781
+2024,46,Some college,True,34634,687
+2024,47,Bachelor's or more,False,839631,10492
+2024,47,Bachelor's or more,True,46751,547
+2024,47,High school,False,411016,4621
+2024,47,High school,True,5333,0
+2024,47,Less than high school,False,200828,2193
+2024,47,Less than high school,True,2896,291
+2024,47,Some college,False,527556,4664
+2024,47,Some college,True,38269,193
+2024,48,Bachelor's or more,False,816460,8000
+2024,48,Bachelor's or more,True,45461,837
+2024,48,High school,False,406163,4433
+2024,48,High school,True,3197,0
+2024,48,Less than high school,False,202257,3668
+2024,48,Less than high school,True,1688,55
+2024,48,Some college,False,501445,4590
+2024,48,Some college,True,31972,279
+2024,49,Bachelor's or more,False,810714,7588
+2024,49,Bachelor's or more,True,42676,782
+2024,49,High school,False,376927,5552
+2024,49,High school,True,3669,107
+2024,49,Less than high school,False,198496,3549
+2024,49,Less than high school,True,2175,0
+2024,49,Some college,False,536279,6792
+2024,49,Some college,True,25080,671
+2024,50,Bachelor's or more,False,781895,8740
+2024,50,Bachelor's or more,True,37715,584
+2024,50,High school,False,416398,4415
+2024,50,High school,True,3988,105
+2024,50,Less than high school,False,200693,2269
+2024,50,Less than high school,True,1683,36
+2024,50,Some college,False,519423,4271
+2024,50,Some college,True,28427,125

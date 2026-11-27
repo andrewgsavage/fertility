@@ -1,0 +1,865 @@
+year,education,age,rate
+2008,Bachelor's or more,18,46.8
+2008,Bachelor's or more,19,38.7
+2008,Bachelor's or more,20,44.8
+2008,Bachelor's or more,21,20.5
+2008,Bachelor's or more,22,27.4
+2008,Bachelor's or more,23,34.2
+2008,Bachelor's or more,24,52.8
+2008,Bachelor's or more,25,73.4
+2008,Bachelor's or more,26,93.3
+2008,Bachelor's or more,27,112.1
+2008,Bachelor's or more,28,129.9
+2008,Bachelor's or more,29,144.2
+2008,Bachelor's or more,30,151.9
+2008,Bachelor's or more,31,150.3
+2008,Bachelor's or more,32,147.5
+2008,Bachelor's or more,33,140.8
+2008,Bachelor's or more,34,135.0
+2008,Bachelor's or more,35,121.0
+2008,Bachelor's or more,36,102.8
+2008,Bachelor's or more,37,80.7
+2008,Bachelor's or more,38,66.1
+2008,Bachelor's or more,39,53.5
+2008,Bachelor's or more,40,42.6
+2008,Bachelor's or more,41,32.8
+2008,Bachelor's or more,42,23.3
+2008,Bachelor's or more,43,17.3
+2008,Bachelor's or more,44,12.1
+2008,High school,18,98.8
+2008,High school,19,128.2
+2008,High school,20,155.9
+2008,High school,21,166.4
+2008,High school,22,165.1
+2008,High school,23,156.6
+2008,High school,24,154.7
+2008,High school,25,151.2
+2008,High school,26,146.1
+2008,High school,27,134.0
+2008,High school,28,122.8
+2008,High school,29,108.6
+2008,High school,30,101.4
+2008,High school,31,90.8
+2008,High school,32,83.2
+2008,High school,33,75.7
+2008,High school,34,64.3
+2008,High school,35,55.2
+2008,High school,36,44.5
+2008,High school,37,38.0
+2008,High school,38,32.7
+2008,High school,39,27.6
+2008,High school,40,22.3
+2008,High school,41,17.3
+2008,High school,42,13.8
+2008,High school,43,12.0
+2008,High school,44,10.1
+2008,Less than high school,18,189.5
+2008,Less than high school,19,215.7
+2008,Less than high school,20,227.2
+2008,Less than high school,21,226.5
+2008,Less than high school,22,214.6
+2008,Less than high school,23,204.9
+2008,Less than high school,24,196.5
+2008,Less than high school,25,191.0
+2008,Less than high school,26,179.1
+2008,Less than high school,27,151.7
+2008,Less than high school,28,141.4
+2008,Less than high school,29,122.0
+2008,Less than high school,30,121.1
+2008,Less than high school,31,109.7
+2008,Less than high school,32,109.4
+2008,Less than high school,33,100.7
+2008,Less than high school,34,87.4
+2008,Less than high school,35,69.7
+2008,Less than high school,36,61.5
+2008,Less than high school,37,51.5
+2008,Less than high school,38,49.5
+2008,Less than high school,39,37.5
+2008,Less than high school,40,30.2
+2008,Less than high school,41,22.5
+2008,Less than high school,42,16.5
+2008,Less than high school,43,13.2
+2008,Less than high school,44,9.4
+2008,Some college,18,87.4
+2008,Some college,19,103.6
+2008,Some college,20,122.6
+2008,Some college,21,134.1
+2008,Some college,22,143.3
+2008,Some college,23,148.1
+2008,Some college,24,147.3
+2008,Some college,25,150.2
+2008,Some college,26,148.9
+2008,Some college,27,153.8
+2008,Some college,28,144.2
+2008,Some college,29,135.2
+2008,Some college,30,120.1
+2008,Some college,31,113.5
+2008,Some college,32,103.4
+2008,Some college,33,91.9
+2008,Some college,34,78.1
+2008,Some college,35,65.1
+2008,Some college,36,55.5
+2008,Some college,37,47.1
+2008,Some college,38,39.2
+2008,Some college,39,30.5
+2008,Some college,40,24.3
+2008,Some college,41,19.1
+2008,Some college,42,14.5
+2008,Some college,43,10.8
+2008,Some college,44,8.2
+2010,Bachelor's or more,18,0.0
+2010,Bachelor's or more,19,28.7
+2010,Bachelor's or more,20,27.7
+2010,Bachelor's or more,21,18.8
+2010,Bachelor's or more,22,27.1
+2010,Bachelor's or more,23,35.0
+2010,Bachelor's or more,24,44.2
+2010,Bachelor's or more,25,56.0
+2010,Bachelor's or more,26,69.0
+2010,Bachelor's or more,27,84.8
+2010,Bachelor's or more,28,106.1
+2010,Bachelor's or more,29,122.7
+2010,Bachelor's or more,30,136.1
+2010,Bachelor's or more,31,140.0
+2010,Bachelor's or more,32,141.0
+2010,Bachelor's or more,33,135.3
+2010,Bachelor's or more,34,121.6
+2010,Bachelor's or more,35,108.7
+2010,Bachelor's or more,36,93.0
+2010,Bachelor's or more,37,79.3
+2010,Bachelor's or more,38,65.2
+2010,Bachelor's or more,39,52.8
+2010,Bachelor's or more,40,40.7
+2010,Bachelor's or more,41,30.2
+2010,Bachelor's or more,42,22.1
+2010,Bachelor's or more,43,16.9
+2010,Bachelor's or more,44,11.9
+2010,High school,18,91.6
+2010,High school,19,107.6
+2010,High school,20,129.3
+2010,High school,21,149.1
+2010,High school,22,154.2
+2010,High school,23,153.9
+2010,High school,24,139.5
+2010,High school,25,140.2
+2010,High school,26,137.0
+2010,High school,27,130.3
+2010,High school,28,120.9
+2010,High school,29,111.0
+2010,High school,30,101.9
+2010,High school,31,90.7
+2010,High school,32,80.5
+2010,High school,33,74.3
+2010,High school,34,65.3
+2010,High school,35,56.6
+2010,High school,36,49.8
+2010,High school,37,40.5
+2010,High school,38,35.5
+2010,High school,39,27.7
+2010,High school,40,23.5
+2010,High school,41,18.0
+2010,High school,42,13.3
+2010,High school,43,10.4
+2010,High school,44,7.8
+2010,Less than high school,18,188.2
+2010,Less than high school,19,195.4
+2010,Less than high school,20,200.8
+2010,Less than high school,21,197.8
+2010,Less than high school,22,199.7
+2010,Less than high school,23,192.8
+2010,Less than high school,24,183.2
+2010,Less than high school,25,164.9
+2010,Less than high school,26,149.8
+2010,Less than high school,27,140.2
+2010,Less than high school,28,135.0
+2010,Less than high school,29,128.9
+2010,Less than high school,30,116.5
+2010,Less than high school,31,108.4
+2010,Less than high school,32,99.5
+2010,Less than high school,33,86.6
+2010,Less than high school,34,77.3
+2010,Less than high school,35,71.2
+2010,Less than high school,36,68.0
+2010,Less than high school,37,60.4
+2010,Less than high school,38,49.9
+2010,Less than high school,39,40.1
+2010,Less than high school,40,29.2
+2010,Less than high school,41,23.2
+2010,Less than high school,42,18.0
+2010,Less than high school,43,14.7
+2010,Less than high school,44,10.9
+2010,Some college,18,81.7
+2010,Some college,19,87.8
+2010,Some college,20,99.9
+2010,Some college,21,108.3
+2010,Some college,22,117.9
+2010,Some college,23,129.8
+2010,Some college,24,132.6
+2010,Some college,25,137.3
+2010,Some college,26,137.3
+2010,Some college,27,141.3
+2010,Some college,28,138.9
+2010,Some college,29,126.5
+2010,Some college,30,114.0
+2010,Some college,31,102.3
+2010,Some college,32,95.5
+2010,Some college,33,86.1
+2010,Some college,34,74.8
+2010,Some college,35,64.1
+2010,Some college,36,53.2
+2010,Some college,37,44.4
+2010,Some college,38,34.5
+2010,Some college,39,27.4
+2010,Some college,40,21.9
+2010,Some college,41,18.0
+2010,Some college,42,15.7
+2010,Some college,43,12.4
+2010,Some college,44,10.3
+2012,Bachelor's or more,18,84.5
+2012,Bachelor's or more,19,67.5
+2012,Bachelor's or more,20,50.4
+2012,Bachelor's or more,21,17.6
+2012,Bachelor's or more,22,23.0
+2012,Bachelor's or more,23,25.6
+2012,Bachelor's or more,24,36.6
+2012,Bachelor's or more,25,48.2
+2012,Bachelor's or more,26,64.1
+2012,Bachelor's or more,27,78.6
+2012,Bachelor's or more,28,99.8
+2012,Bachelor's or more,29,117.4
+2012,Bachelor's or more,30,133.9
+2012,Bachelor's or more,31,138.4
+2012,Bachelor's or more,32,141.1
+2012,Bachelor's or more,33,134.2
+2012,Bachelor's or more,34,123.7
+2012,Bachelor's or more,35,105.1
+2012,Bachelor's or more,36,90.3
+2012,Bachelor's or more,37,75.3
+2012,Bachelor's or more,38,63.2
+2012,Bachelor's or more,39,47.7
+2012,Bachelor's or more,40,35.2
+2012,Bachelor's or more,41,27.8
+2012,Bachelor's or more,42,21.8
+2012,Bachelor's or more,43,16.5
+2012,Bachelor's or more,44,10.7
+2012,High school,18,83.5
+2012,High school,19,100.9
+2012,High school,20,115.7
+2012,High school,21,128.1
+2012,High school,22,132.9
+2012,High school,23,132.8
+2012,High school,24,128.8
+2012,High school,25,124.5
+2012,High school,26,120.1
+2012,High school,27,120.1
+2012,High school,28,116.0
+2012,High school,29,108.9
+2012,High school,30,98.1
+2012,High school,31,86.7
+2012,High school,32,76.9
+2012,High school,33,69.2
+2012,High school,34,58.9
+2012,High school,35,52.3
+2012,High school,36,46.7
+2012,High school,37,42.8
+2012,High school,38,37.7
+2012,High school,39,27.2
+2012,High school,40,20.0
+2012,High school,41,15.8
+2012,High school,42,12.7
+2012,High school,43,10.6
+2012,High school,44,9.0
+2012,Less than high school,18,175.2
+2012,Less than high school,19,194.8
+2012,Less than high school,20,202.2
+2012,Less than high school,21,201.4
+2012,Less than high school,22,189.6
+2012,Less than high school,23,184.6
+2012,Less than high school,24,169.9
+2012,Less than high school,25,164.7
+2012,Less than high school,26,143.4
+2012,Less than high school,27,133.0
+2012,Less than high school,28,123.1
+2012,Less than high school,29,116.8
+2012,Less than high school,30,108.5
+2012,Less than high school,31,100.6
+2012,Less than high school,32,94.8
+2012,Less than high school,33,90.7
+2012,Less than high school,34,82.2
+2012,Less than high school,35,75.2
+2012,Less than high school,36,63.7
+2012,Less than high school,37,54.0
+2012,Less than high school,38,44.5
+2012,Less than high school,39,38.6
+2012,Less than high school,40,32.2
+2012,Less than high school,41,24.6
+2012,Less than high school,42,18.9
+2012,Less than high school,43,14.3
+2012,Less than high school,44,12.2
+2012,Some college,18,74.8
+2012,Some college,19,96.8
+2012,Some college,20,109.1
+2012,Some college,21,118.0
+2012,Some college,22,121.0
+2012,Some college,23,125.5
+2012,Some college,24,123.9
+2012,Some college,25,127.1
+2012,Some college,26,127.2
+2012,Some college,27,125.2
+2012,Some college,28,119.5
+2012,Some college,29,113.7
+2012,Some college,30,111.1
+2012,Some college,31,104.5
+2012,Some college,32,90.8
+2012,Some college,33,80.1
+2012,Some college,34,71.8
+2012,Some college,35,67.5
+2012,Some college,36,57.9
+2012,Some college,37,48.4
+2012,Some college,38,37.6
+2012,Some college,39,29.4
+2012,Some college,40,21.8
+2012,Some college,41,19.1
+2012,Some college,42,14.7
+2012,Some college,43,11.3
+2012,Some college,44,7.2
+2015,Bachelor's or more,18,0.0
+2015,Bachelor's or more,19,27.9
+2015,Bachelor's or more,20,20.8
+2015,Bachelor's or more,21,12.1
+2015,Bachelor's or more,22,15.7
+2015,Bachelor's or more,23,21.0
+2015,Bachelor's or more,24,33.0
+2015,Bachelor's or more,25,46.0
+2015,Bachelor's or more,26,62.5
+2015,Bachelor's or more,27,78.3
+2015,Bachelor's or more,28,97.3
+2015,Bachelor's or more,29,111.9
+2015,Bachelor's or more,30,124.4
+2015,Bachelor's or more,31,131.6
+2015,Bachelor's or more,32,133.5
+2015,Bachelor's or more,33,131.1
+2015,Bachelor's or more,34,119.9
+2015,Bachelor's or more,35,110.6
+2015,Bachelor's or more,36,97.2
+2015,Bachelor's or more,37,81.8
+2015,Bachelor's or more,38,63.9
+2015,Bachelor's or more,39,50.1
+2015,Bachelor's or more,40,38.4
+2015,Bachelor's or more,41,29.4
+2015,Bachelor's or more,42,19.1
+2015,Bachelor's or more,43,13.4
+2015,Bachelor's or more,44,8.4
+2015,High school,18,70.8
+2015,High school,19,86.3
+2015,High school,20,100.5
+2015,High school,21,116.6
+2015,High school,22,120.1
+2015,High school,23,128.1
+2015,High school,24,119.6
+2015,High school,25,119.4
+2015,High school,26,113.7
+2015,High school,27,113.5
+2015,High school,28,113.7
+2015,High school,29,108.6
+2015,High school,30,103.4
+2015,High school,31,93.3
+2015,High school,32,83.7
+2015,High school,33,75.0
+2015,High school,34,62.3
+2015,High school,35,56.0
+2015,High school,36,48.6
+2015,High school,37,44.0
+2015,High school,38,35.1
+2015,High school,39,26.5
+2015,High school,40,20.4
+2015,High school,41,15.9
+2015,High school,42,12.3
+2015,High school,43,9.8
+2015,High school,44,7.5
+2015,Less than high school,18,124.5
+2015,Less than high school,19,155.2
+2015,Less than high school,20,165.3
+2015,Less than high school,21,172.1
+2015,Less than high school,22,167.4
+2015,Less than high school,23,164.1
+2015,Less than high school,24,152.0
+2015,Less than high school,25,143.0
+2015,Less than high school,26,139.0
+2015,Less than high school,27,138.4
+2015,Less than high school,28,136.7
+2015,Less than high school,29,127.2
+2015,Less than high school,30,117.6
+2015,Less than high school,31,107.1
+2015,Less than high school,32,92.4
+2015,Less than high school,33,86.4
+2015,Less than high school,34,77.4
+2015,Less than high school,35,70.8
+2015,Less than high school,36,64.6
+2015,Less than high school,37,58.6
+2015,Less than high school,38,51.1
+2015,Less than high school,39,38.8
+2015,Less than high school,40,33.1
+2015,Less than high school,41,30.2
+2015,Less than high school,42,26.5
+2015,Less than high school,43,18.7
+2015,Less than high school,44,13.3
+2015,Some college,18,59.9
+2015,Some college,19,72.0
+2015,Some college,20,83.9
+2015,Some college,21,96.3
+2015,Some college,22,106.2
+2015,Some college,23,111.3
+2015,Some college,24,115.2
+2015,Some college,25,117.9
+2015,Some college,26,124.3
+2015,Some college,27,126.0
+2015,Some college,28,125.2
+2015,Some college,29,120.9
+2015,Some college,30,114.0
+2015,Some college,31,107.9
+2015,Some college,32,97.8
+2015,Some college,33,89.6
+2015,Some college,34,76.7
+2015,Some college,35,65.9
+2015,Some college,36,57.0
+2015,Some college,37,48.9
+2015,Some college,38,39.5
+2015,Some college,39,30.3
+2015,Some college,40,23.1
+2015,Some college,41,17.3
+2015,Some college,42,13.1
+2015,Some college,43,9.6
+2015,Some college,44,7.5
+2017,Bachelor's or more,18,36.9
+2017,Bachelor's or more,19,20.3
+2017,Bachelor's or more,20,23.8
+2017,Bachelor's or more,21,15.3
+2017,Bachelor's or more,22,22.0
+2017,Bachelor's or more,23,22.7
+2017,Bachelor's or more,24,31.8
+2017,Bachelor's or more,25,41.1
+2017,Bachelor's or more,26,57.8
+2017,Bachelor's or more,27,75.0
+2017,Bachelor's or more,28,95.0
+2017,Bachelor's or more,29,111.5
+2017,Bachelor's or more,30,123.8
+2017,Bachelor's or more,31,131.1
+2017,Bachelor's or more,32,133.3
+2017,Bachelor's or more,33,130.9
+2017,Bachelor's or more,34,121.8
+2017,Bachelor's or more,35,110.1
+2017,Bachelor's or more,36,93.1
+2017,Bachelor's or more,37,79.5
+2017,Bachelor's or more,38,65.6
+2017,Bachelor's or more,39,54.5
+2017,Bachelor's or more,40,42.5
+2017,Bachelor's or more,41,32.4
+2017,Bachelor's or more,42,23.9
+2017,Bachelor's or more,43,16.9
+2017,Bachelor's or more,44,12.5
+2017,High school,18,56.7
+2017,High school,19,77.1
+2017,High school,20,94.0
+2017,High school,21,114.6
+2017,High school,22,123.6
+2017,High school,23,128.6
+2017,High school,24,123.0
+2017,High school,25,120.9
+2017,High school,26,114.4
+2017,High school,27,112.1
+2017,High school,28,108.1
+2017,High school,29,104.2
+2017,High school,30,102.0
+2017,High school,31,92.9
+2017,High school,32,85.5
+2017,High school,33,79.5
+2017,High school,34,71.5
+2017,High school,35,65.8
+2017,High school,36,53.3
+2017,High school,37,45.8
+2017,High school,38,39.5
+2017,High school,39,30.9
+2017,High school,40,26.1
+2017,High school,41,20.2
+2017,High school,42,17.8
+2017,High school,43,13.5
+2017,High school,44,12.1
+2017,Less than high school,18,100.0
+2017,Less than high school,19,141.9
+2017,Less than high school,20,168.9
+2017,Less than high school,21,171.7
+2017,Less than high school,22,168.0
+2017,Less than high school,23,157.0
+2017,Less than high school,24,152.2
+2017,Less than high school,25,140.0
+2017,Less than high school,26,136.9
+2017,Less than high school,27,131.3
+2017,Less than high school,28,121.6
+2017,Less than high school,29,114.3
+2017,Less than high school,30,108.5
+2017,Less than high school,31,115.2
+2017,Less than high school,32,108.6
+2017,Less than high school,33,93.3
+2017,Less than high school,34,79.0
+2017,Less than high school,35,71.6
+2017,Less than high school,36,72.1
+2017,Less than high school,37,63.7
+2017,Less than high school,38,54.5
+2017,Less than high school,39,44.2
+2017,Less than high school,40,37.2
+2017,Less than high school,41,31.9
+2017,Less than high school,42,21.9
+2017,Less than high school,43,17.1
+2017,Less than high school,44,12.6
+2017,Some college,18,50.6
+2017,Some college,19,65.3
+2017,Some college,20,77.5
+2017,Some college,21,83.8
+2017,Some college,22,96.0
+2017,Some college,23,104.6
+2017,Some college,24,114.0
+2017,Some college,25,118.0
+2017,Some college,26,121.3
+2017,Some college,27,122.0
+2017,Some college,28,125.4
+2017,Some college,29,122.4
+2017,Some college,30,120.5
+2017,Some college,31,111.9
+2017,Some college,32,102.8
+2017,Some college,33,91.3
+2017,Some college,34,78.1
+2017,Some college,35,69.2
+2017,Some college,36,59.4
+2017,Some college,37,51.0
+2017,Some college,38,42.6
+2017,Some college,39,34.0
+2017,Some college,40,26.6
+2017,Some college,41,19.5
+2017,Some college,42,15.5
+2017,Some college,43,12.5
+2017,Some college,44,10.3
+2019,Bachelor's or more,18,0.0
+2019,Bachelor's or more,19,66.8
+2019,Bachelor's or more,20,20.1
+2019,Bachelor's or more,21,10.0
+2019,Bachelor's or more,22,13.2
+2019,Bachelor's or more,23,19.0
+2019,Bachelor's or more,24,27.3
+2019,Bachelor's or more,25,39.7
+2019,Bachelor's or more,26,54.3
+2019,Bachelor's or more,27,68.8
+2019,Bachelor's or more,28,81.1
+2019,Bachelor's or more,29,94.7
+2019,Bachelor's or more,30,111.6
+2019,Bachelor's or more,31,123.1
+2019,Bachelor's or more,32,130.6
+2019,Bachelor's or more,33,127.4
+2019,Bachelor's or more,34,121.3
+2019,Bachelor's or more,35,108.0
+2019,Bachelor's or more,36,94.9
+2019,Bachelor's or more,37,79.3
+2019,Bachelor's or more,38,65.7
+2019,Bachelor's or more,39,50.8
+2019,Bachelor's or more,40,39.9
+2019,Bachelor's or more,41,30.0
+2019,Bachelor's or more,42,22.4
+2019,Bachelor's or more,43,17.2
+2019,Bachelor's or more,44,12.4
+2019,High school,18,51.1
+2019,High school,19,63.6
+2019,High school,20,83.4
+2019,High school,21,98.7
+2019,High school,22,112.7
+2019,High school,23,119.0
+2019,High school,24,116.7
+2019,High school,25,113.5
+2019,High school,26,114.0
+2019,High school,27,114.3
+2019,High school,28,109.9
+2019,High school,29,101.3
+2019,High school,30,93.1
+2019,High school,31,87.1
+2019,High school,32,75.3
+2019,High school,33,71.3
+2019,High school,34,61.7
+2019,High school,35,59.9
+2019,High school,36,50.3
+2019,High school,37,44.1
+2019,High school,38,36.1
+2019,High school,39,31.2
+2019,High school,40,25.8
+2019,High school,41,18.9
+2019,High school,42,15.6
+2019,High school,43,14.2
+2019,High school,44,11.5
+2019,Less than high school,18,103.0
+2019,Less than high school,19,123.1
+2019,Less than high school,20,140.5
+2019,Less than high school,21,144.6
+2019,Less than high school,22,138.5
+2019,Less than high school,23,136.6
+2019,Less than high school,24,128.3
+2019,Less than high school,25,126.8
+2019,Less than high school,26,128.6
+2019,Less than high school,27,124.9
+2019,Less than high school,28,133.4
+2019,Less than high school,29,124.6
+2019,Less than high school,30,124.2
+2019,Less than high school,31,113.9
+2019,Less than high school,32,105.5
+2019,Less than high school,33,88.3
+2019,Less than high school,34,78.3
+2019,Less than high school,35,72.4
+2019,Less than high school,36,68.1
+2019,Less than high school,37,60.3
+2019,Less than high school,38,49.1
+2019,Less than high school,39,41.3
+2019,Less than high school,40,35.6
+2019,Less than high school,41,32.6
+2019,Less than high school,42,28.4
+2019,Less than high school,43,24.3
+2019,Less than high school,44,17.4
+2019,Some college,18,39.0
+2019,Some college,19,45.8
+2019,Some college,20,58.0
+2019,Some college,21,74.6
+2019,Some college,22,87.1
+2019,Some college,23,99.7
+2019,Some college,24,103.0
+2019,Some college,25,107.6
+2019,Some college,26,111.1
+2019,Some college,27,112.5
+2019,Some college,28,118.1
+2019,Some college,29,116.8
+2019,Some college,30,117.2
+2019,Some college,31,109.6
+2019,Some college,32,101.3
+2019,Some college,33,91.6
+2019,Some college,34,80.2
+2019,Some college,35,71.1
+2019,Some college,36,60.4
+2019,Some college,37,51.5
+2019,Some college,38,42.7
+2019,Some college,39,35.3
+2019,Some college,40,28.5
+2019,Some college,41,22.4
+2019,Some college,42,19.0
+2019,Some college,43,14.7
+2019,Some college,44,12.1
+2022,Bachelor's or more,18,0.0
+2022,Bachelor's or more,19,33.1
+2022,Bachelor's or more,20,19.1
+2022,Bachelor's or more,21,13.9
+2022,Bachelor's or more,22,18.8
+2022,Bachelor's or more,23,23.4
+2022,Bachelor's or more,24,30.5
+2022,Bachelor's or more,25,41.2
+2022,Bachelor's or more,26,56.0
+2022,Bachelor's or more,27,72.2
+2022,Bachelor's or more,28,88.9
+2022,Bachelor's or more,29,103.6
+2022,Bachelor's or more,30,115.0
+2022,Bachelor's or more,31,123.1
+2022,Bachelor's or more,32,127.6
+2022,Bachelor's or more,33,130.3
+2022,Bachelor's or more,34,125.8
+2022,Bachelor's or more,35,116.7
+2022,Bachelor's or more,36,101.2
+2022,Bachelor's or more,37,87.7
+2022,Bachelor's or more,38,71.6
+2022,Bachelor's or more,39,57.7
+2022,Bachelor's or more,40,43.7
+2022,Bachelor's or more,41,33.2
+2022,Bachelor's or more,42,25.0
+2022,Bachelor's or more,43,18.4
+2022,Bachelor's or more,44,14.9
+2022,High school,18,34.8
+2022,High school,19,45.9
+2022,High school,20,67.6
+2022,High school,21,80.7
+2022,High school,22,99.0
+2022,High school,23,103.9
+2022,High school,24,112.3
+2022,High school,25,111.2
+2022,High school,26,108.7
+2022,High school,27,110.0
+2022,High school,28,108.4
+2022,High school,29,107.1
+2022,High school,30,100.5
+2022,High school,31,98.7
+2022,High school,32,95.6
+2022,High school,33,89.9
+2022,High school,34,77.2
+2022,High school,35,67.0
+2022,High school,36,59.8
+2022,High school,37,52.5
+2022,High school,38,45.9
+2022,High school,39,37.9
+2022,High school,40,32.7
+2022,High school,41,28.1
+2022,High school,42,22.0
+2022,High school,43,17.3
+2022,High school,44,14.3
+2022,Less than high school,18,63.5
+2022,Less than high school,19,91.8
+2022,Less than high school,20,112.5
+2022,Less than high school,21,125.9
+2022,Less than high school,22,133.1
+2022,Less than high school,23,134.0
+2022,Less than high school,24,129.4
+2022,Less than high school,25,140.7
+2022,Less than high school,26,142.4
+2022,Less than high school,27,145.7
+2022,Less than high school,28,137.0
+2022,Less than high school,29,131.0
+2022,Less than high school,30,122.1
+2022,Less than high school,31,113.1
+2022,Less than high school,32,110.3
+2022,Less than high school,33,104.1
+2022,Less than high school,34,94.5
+2022,Less than high school,35,81.0
+2022,Less than high school,36,74.8
+2022,Less than high school,37,67.2
+2022,Less than high school,38,65.0
+2022,Less than high school,39,59.8
+2022,Less than high school,40,49.2
+2022,Less than high school,41,36.4
+2022,Less than high school,42,28.1
+2022,Less than high school,43,24.0
+2022,Less than high school,44,20.1
+2022,Some college,18,25.8
+2022,Some college,19,31.4
+2022,Some college,20,45.0
+2022,Some college,21,61.1
+2022,Some college,22,78.8
+2022,Some college,23,90.7
+2022,Some college,24,104.5
+2022,Some college,25,117.4
+2022,Some college,26,125.7
+2022,Some college,27,125.4
+2022,Some college,28,115.3
+2022,Some college,29,111.2
+2022,Some college,30,104.9
+2022,Some college,31,103.6
+2022,Some college,32,93.1
+2022,Some college,33,88.4
+2022,Some college,34,79.9
+2022,Some college,35,73.7
+2022,Some college,36,64.4
+2022,Some college,37,58.4
+2022,Some college,38,49.4
+2022,Some college,39,40.9
+2022,Some college,40,31.4
+2022,Some college,41,26.8
+2022,Some college,42,21.2
+2022,Some college,43,17.1
+2022,Some college,44,13.7
+2024,Bachelor's or more,18,0.0
+2024,Bachelor's or more,19,19.4
+2024,Bachelor's or more,20,17.2
+2024,Bachelor's or more,21,13.7
+2024,Bachelor's or more,22,16.4
+2024,Bachelor's or more,23,24.9
+2024,Bachelor's or more,24,32.2
+2024,Bachelor's or more,25,42.6
+2024,Bachelor's or more,26,52.6
+2024,Bachelor's or more,27,65.6
+2024,Bachelor's or more,28,79.3
+2024,Bachelor's or more,29,91.2
+2024,Bachelor's or more,30,102.2
+2024,Bachelor's or more,31,111.0
+2024,Bachelor's or more,32,118.6
+2024,Bachelor's or more,33,120.6
+2024,Bachelor's or more,34,116.4
+2024,Bachelor's or more,35,110.1
+2024,Bachelor's or more,36,98.3
+2024,Bachelor's or more,37,85.7
+2024,Bachelor's or more,38,68.6
+2024,Bachelor's or more,39,54.7
+2024,Bachelor's or more,40,44.3
+2024,Bachelor's or more,41,34.6
+2024,Bachelor's or more,42,26.5
+2024,Bachelor's or more,43,20.3
+2024,Bachelor's or more,44,17.1
+2024,High school,18,28.1
+2024,High school,19,38.0
+2024,High school,20,56.3
+2024,High school,21,74.4
+2024,High school,22,85.1
+2024,High school,23,91.3
+2024,High school,24,94.0
+2024,High school,25,102.3
+2024,High school,26,110.1
+2024,High school,27,113.7
+2024,High school,28,113.3
+2024,High school,29,106.7
+2024,High school,30,102.4
+2024,High school,31,95.0
+2024,High school,32,88.7
+2024,High school,33,78.5
+2024,High school,34,74.0
+2024,High school,35,65.9
+2024,High school,36,61.7
+2024,High school,37,54.0
+2024,High school,38,48.4
+2024,High school,39,41.8
+2024,High school,40,34.5
+2024,High school,41,27.4
+2024,High school,42,22.7
+2024,High school,43,20.2
+2024,High school,44,17.1
+2024,Less than high school,18,76.0
+2024,Less than high school,19,89.5
+2024,Less than high school,20,99.8
+2024,Less than high school,21,107.6
+2024,Less than high school,22,118.4
+2024,Less than high school,23,127.2
+2024,Less than high school,24,130.8
+2024,Less than high school,25,123.3
+2024,Less than high school,26,125.1
+2024,Less than high school,27,121.2
+2024,Less than high school,28,126.8
+2024,Less than high school,29,119.8
+2024,Less than high school,30,103.1
+2024,Less than high school,31,96.3
+2024,Less than high school,32,90.5
+2024,Less than high school,33,101.7
+2024,Less than high school,34,91.1
+2024,Less than high school,35,82.8
+2024,Less than high school,36,68.9
+2024,Less than high school,37,66.3
+2024,Less than high school,38,59.7
+2024,Less than high school,39,55.7
+2024,Less than high school,40,46.7
+2024,Less than high school,41,42.4
+2024,Less than high school,42,29.6
+2024,Less than high school,43,25.0
+2024,Less than high school,44,17.4
+2024,Some college,18,13.3
+2024,Some college,19,35.2
+2024,Some college,20,43.0
+2024,Some college,21,56.6
+2024,Some college,22,65.6
+2024,Some college,23,81.2
+2024,Some college,24,94.1
+2024,Some college,25,104.4
+2024,Some college,26,109.1
+2024,Some college,27,112.2
+2024,Some college,28,116.5
+2024,Some college,29,117.5
+2024,Some college,30,115.8
+2024,Some college,31,109.6
+2024,Some college,32,98.8
+2024,Some college,33,90.7
+2024,Some college,34,82.2
+2024,Some college,35,78.9
+2024,Some college,36,68.4
+2024,Some college,37,58.6
+2024,Some college,38,46.8
+2024,Some college,39,39.4
+2024,Some college,40,31.7
+2024,Some college,41,27.8
+2024,Some college,42,22.1
+2024,Some college,43,18.3
+2024,Some college,44,14.0
