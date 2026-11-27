@@ -700,6 +700,27 @@ RATE_ROWS = [
 ]
 
 
+# All births per woman (ASFR) by 5-year age group: (key, label, band).
+ASFR_GROUP = "All births per woman"
+ASFR_ROWS = [(f"asfr_{b.replace('-', '_')}", f"ASFR, {b.replace('-', '–')}", b)
+             for b in ("15-19", "20-24", "25-29", "30-34", "35-39")]
+
+
+def load_asfr_rows():
+    """key -> iso -> {year: births per 100 women, % a year}, and key -> iso -> source. Eurostat demo_frate; HFD asfrRR
+    (UK is the whole UK, not England and Wales); HFC for Australia and New Zealand; MSP births over INE women
+    for Uruguay."""
+    import smartphone_milestones as sm
+    asfr = sm.load_asfr(tuple(b for *_, b in ASFR_ROWS))
+    src = lambda c: ("HFD (UK)" if c == "GBR" else "HFD") if c in sm.HFD_CODES else "HFC" if c in sm.HFC_CODES         else "MSP births ÷ INE women" if c == "URY" else "Eurostat demo_frate"
+    out, sources = {}, {}
+    for key, _, band in ASFR_ROWS:
+        out[key] = {c: {int(y): 100 * v for y, v in d[band].dropna().items()} for c, d in asfr.items()
+                    if c in COUNTRIES and band in d}
+        sources[key] = {c: src(c) for c in out[key]}
+    return out, sources
+
+
 def load_rates(e):
     """key -> iso -> {year: conditional rate, % per year}, pooled over the band's ages."""
     from common.ons_table3 import load_table3
@@ -1148,6 +1169,7 @@ def build(reference=None):
     factors = load_factors()
     exposures = load_exposures()
     rates = load_rates(exposures)
+    asfr, asfr_sources = load_asfr_rows()
     new_rows, sources = coupling_rows(load_coupling_sources())
     factors.update(new_rows)
     census, census_sources = load_census_couples()
@@ -1192,6 +1214,12 @@ def build(reference=None):
         after = [-v for v in cells.values() if v is not None]
         rows.append(dict(key=key, label=label, group=group, kind="outcome", unit="%", pct=True, direction=-1, cells=cells,
                          before=median(before), after=median(after)))
+    for key, label, _ in ASFR_ROWS:
+        cells = {c: pct_change(asfr[key].get(c)) for c in order}
+        before = [-v for c in order if (v := pct_change(asfr[key].get(c), 2001, BASE)) is not None]
+        rows.append(dict(key=key, label=label, group=ASFR_GROUP, kind="outcome", unit="%", pct=True, direction=-1,
+                         cells=cells, before=median(before), after=median([-v for v in cells.values() if v is not None]),
+                         sources=asfr_sources[key]))
     for key, label, direction, page, group in FACTORS:
         s = factors[key]
         tols = (COUPLING_TOL if key in COUPLING_TOL_ROWS else ABORTION_TOL if key in ABORTION_ROWS
@@ -1231,7 +1259,7 @@ def build(reference=None):
             r["sources"] = {**(r.get("sources") or {}), **{c: "DHSC 20–34 value" for c in spread}}
             r["after"] = median([r["direction"] * v for c, v in r["cells"].items() if v is not None and not r["low_confidence"][c]])
 
-    ts = {"tfr": tfr, **parity, **rates, **factors, **ratios}
+    ts = {"tfr": tfr, **parity, **rates, **asfr, **factors, **ratios}
     for r in rows:  # the years each cell actually compares
         tols = row_tols(r["key"])
         tol = lambda c: tols.get(c, 1)
@@ -1327,7 +1355,7 @@ def render_preceding(reference):
     BASE, END = PRECEDING
     try:
         countries, rows, ts, _ = build(reference)
-        keys = (["tfr"] + [f"mothers_by_{a}" for a in CHILD_AGES] + [k for k, *_ in RATE_ROWS] + [k for k, *_ in FACTORS]
+        keys = (["tfr"] + [f"mothers_by_{a}" for a in CHILD_AGES] + [k for k, *_ in RATE_ROWS] + [k for k, *_ in ASFR_ROWS] + [k for k, *_ in FACTORS]
                 + [k for k, *_ in RATIO_ROWS] + SUMMARY_KEYS)
         slim = {k: {c: {y: round(v, 3) for y, v in s.items() if 2000 <= y <= 2023} for c, s in ts[k].items() if c in COUNTRIES}
                 for k in keys}
@@ -1413,7 +1441,7 @@ def without_second(rows):
 
 
 def render(countries, rows, ts, extra):
-    keys = ["tfr"] + [f"mothers_by_{a}" for a in CHILD_AGES] + ["mothers_ever", "second_child", "age_first", "couple_25_49"] + [k for k, *_ in RATE_ROWS] + [
+    keys = ["tfr"] + [f"mothers_by_{a}" for a in CHILD_AGES] + ["mothers_ever", "second_child", "age_first", "couple_25_49"] + [k for k, *_ in RATE_ROWS] + [k for k, *_ in ASFR_ROWS] + [
         k for k, *_ in FACTORS] + sorted({k for k, *_ in RATIOS} | {k for k, *_ in RATIO_ROWS}) + SUMMARY_KEYS
     slim = {k: {c: {y: round(v, 3) for y, v in s.items() if 2000 <= y <= 2023} for c, s in ts[k].items() if c in COUNTRIES}
             for k in keys}

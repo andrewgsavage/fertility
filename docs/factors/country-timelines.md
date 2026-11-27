@@ -10,49 +10,49 @@ Fertility at 20–24 and 25–29 from 2005, for all births and first births, set
 
 :::{tab-item} Nordic
 ```{raw} html
-<iframe src="../_static/eurostat/country_timelines_nordic.html" style="width: 100%; height: 508px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/eurostat/country_timelines_nordic.html" style="width: 100%; height: 538px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 :::
 
 :::{tab-item} Western Europe
 ```{raw} html
-<iframe src="../_static/eurostat/country_timelines_western_europe.html" style="width: 100%; height: 820px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/eurostat/country_timelines_western_europe.html" style="width: 100%; height: 850px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 :::
 
 :::{tab-item} Southern Europe
 ```{raw} html
-<iframe src="../_static/eurostat/country_timelines_southern_europe.html" style="width: 100%; height: 586px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/eurostat/country_timelines_southern_europe.html" style="width: 100%; height: 616px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 :::
 
 :::{tab-item} Central & Eastern Europe
 ```{raw} html
-<iframe src="../_static/eurostat/country_timelines_central_eastern_europe.html" style="width: 100%; height: 976px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/eurostat/country_timelines_central_eastern_europe.html" style="width: 100%; height: 1006px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 :::
 
 :::{tab-item} Balkans, Türkiye, ex-USSR
 ```{raw} html
-<iframe src="../_static/eurostat/country_timelines_balkans_turkiye_ex_ussr.html" style="width: 100%; height: 742px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/eurostat/country_timelines_balkans_turkiye_ex_ussr.html" style="width: 100%; height: 772px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 :::
 
 :::{tab-item} English-speaking
 ```{raw} html
-<iframe src="../_static/eurostat/country_timelines_english_speaking.html" style="width: 100%; height: 430px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/eurostat/country_timelines_english_speaking.html" style="width: 100%; height: 460px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 :::
 
 :::{tab-item} East Asia
 ```{raw} html
-<iframe src="../_static/eurostat/country_timelines_east_asia.html" style="width: 100%; height: 352px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/eurostat/country_timelines_east_asia.html" style="width: 100%; height: 382px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 :::
 
 :::{tab-item} Latin America
 ```{raw} html
-<iframe src="../_static/eurostat/country_timelines_latin_america.html" style="width: 100%; height: 274px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/eurostat/country_timelines_latin_america.html" style="width: 100%; height: 304px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 :::
 
@@ -354,7 +354,7 @@ Fertility at 20–24 and 25–29 from 2005, for all births and first births, set
 ```{note}
 All births: Eurostat [demo_frate](https://ec.europa.eu/eurostat/databrowser/view/demo_frate/default/table); [Human Fertility Database](https://www.humanfertility.org) asfrRR for the UK (England and Wales, Scotland and Northern Ireland), US, Canada, Japan, South Korea, Taiwan, Chile, Russia, Belarus and Ukraine; [Human Fertility Collection](https://www.fertilitydata.org/) for Australia and New Zealand; MSP births over INE women for Uruguay. First births: Eurostat [demo_fordagec](https://ec.europa.eu/eurostat/databrowser/view/demo_fordagec/default/table) over women in [demo_pjan](https://ec.europa.eu/eurostat/databrowser/view/demo_pjan/default/table), France from 2013 (series break); HFD asfrRRbo for the HFD countries; none for Australia, New Zealand, Uruguay, Montenegro or Turkey. Eurostat first births exclude births of unknown order. HFD series for Russia, Belarus and Ukraine end in 2013–2018.
 
-Rates are the mean of single-year rates in each age group. Fits use log ASFR from 2005 with 0–2 breaks, each segment at least 3 years. Smartphones: the first year Eurostat [isoc_ci_im_i](https://ec.europa.eu/eurostat/databrowser/view/isoc_ci_im_i/default/table) mobile internet use among 16–24s passed 60%; outside Eurostat, the Google Trends app-store search take-off year plus 3, the median gap where both exist. Policies: major national changes taking effect 2004–2025 in cash benefits, parental leave, childcare, child-linked housing aid and abortion law, found by the same search for every country: the [International Network on Leave Policies and Research](https://www.leavenetwork.org/) annual reviews (Europe, Russia, Serbia, Türkiye; not used outside Europe, where its pages could not be read), the [OECD Family Database](https://www.oecd.org/en/data/datasets/oecd-family-database.html) leave-reform annex, then government, legal, EUROMOD and ESPN pages for dates and sizes. [MISSOC](https://www.missoc.org/) tables could not be read. 'Major' means a new or abolished benefit, a change of 25% or more in its amount, a change costing 0.1% of GDP or more, paid leave changed by a month or more or its pay by 10 points or 20%, a father-only quota of a month or more, a new or removed childcare entitlement or fee cap, or a change in abortion grounds or time limit; indexation and regional schemes are left out. A few dates and sizes rest on search results rather than the page linked. A blue ring marks an expansion or liberalisation, a red ring a cut or restriction.
+Rates are the mean of single-year rates in each age group. Fits use log ASFR from 2005 with 0–2 breaks, each segment at least 3 years. Year-by-year view: each year's % change in the rate from the year before, unsmoothed. Smartphones: the first year Eurostat [isoc_ci_im_i](https://ec.europa.eu/eurostat/databrowser/view/isoc_ci_im_i/default/table) mobile internet use among 16–24s passed 60%; outside Eurostat, the Google Trends app-store search take-off year plus 3, the median gap where both exist. Policies: major national changes taking effect 2004–2025 in cash benefits, parental leave, childcare, child-linked housing aid and abortion law, found by the same search for every country: the [International Network on Leave Policies and Research](https://www.leavenetwork.org/) annual reviews (Europe, Russia, Serbia, Türkiye; not used outside Europe, where its pages could not be read), the [OECD Family Database](https://www.oecd.org/en/data/datasets/oecd-family-database.html) leave-reform annex, then government, legal, EUROMOD and ESPN pages for dates and sizes. [MISSOC](https://www.missoc.org/) tables could not be read. 'Major' means a new or abolished benefit, a change of 25% or more in its amount, a change costing 0.1% of GDP or more, paid leave changed by a month or more or its pay by 10 points or 20%, a father-only quota of a month or more, a new or removed childcare entitlement or fee cap, or a change in abortion grounds or time limit; indexation and regional schemes are left out. A few dates and sizes rest on search results rather than the page linked. A blue ring marks an expansion or liberalisation, a red ring a cut or restriction.
 ```
 :::
 

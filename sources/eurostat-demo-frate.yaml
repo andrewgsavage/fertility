@@ -10,6 +10,7 @@ scripts:
 - eurostat/scripts/young_fertility.py
 - eurostat/scripts/country_timelines.py
 - eurostat/scripts/policy_event_study.py
+- eurostat/scripts/change_matrix.py
 measurables:
 - asfr
 notes: European countries; see the script for the download query.
