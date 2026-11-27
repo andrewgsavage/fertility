@@ -26,6 +26,7 @@ from plotly.subplots import make_subplots
 from common.plot_colors import PERIOD_COLORSCALE, period_axis, sample_color
 
 from common.paths import outputs_dir
+from common.education_curves import curves_grid
 from common.plotting import write_html
 
 OUT = outputs_dir("ACS")
@@ -162,29 +163,14 @@ def curves_chart(c):
 
 
 def curves_row_chart(c):
-    """The age curves in one row, on the fixed axes shared with the Nordic age curves."""
-    years = sorted(c.year.unique())
-    axis = period_axis(min(years), max(years))
-    fig = make_subplots(rows=1, cols=4, subplot_titles=[e for e, _ in EDU], shared_yaxes=True,
-                        horizontal_spacing=0.03)
-    for i, (e, _) in enumerate(EDU):
-        for y in years:
-            s = c[(c.education == e) & (c.year == y)]
-            if e == "Bachelor's or more":
-                s = s[s.age >= 21]
-            fig.add_trace(go.Scatter(
-                x=s.age, y=s.rate, name=str(y), legendgroup=str(y), showlegend=i == 0,
-                mode="lines", line=dict(color=sample_color(PERIOD_COLORSCALE, y, axis), width=2),
-                hovertemplate=f"{y}, age %{{x}}: %{{y:.0f}}<extra></extra>",
-            ), row=1, col=i + 1)
-    fig.update_layout(template="plotly_white", title="US birth rate by age and education, women not in school",
-                      title_y=0.97, title_yanchor="top", height=380,
-                      legend=dict(orientation="h", x=0, y=1.12, xanchor="left", yanchor="bottom"),
-                      margin=dict(l=60, r=20, t=120, b=50))
-    fig.update_yaxes(range=[0, 300])
-    fig.update_yaxes(title_text="Births per 1,000 women", col=1)
-    fig.update_xaxes(range=[18, 44], title_text="Age")
-    return fig
+    """The age curves as one row of small multiples, in the layout of the other countries' age
+    curves (common.education_curves)."""
+    panels = []
+    for e, _ in EDU:
+        s = c[c.education == e].rename(columns={"age": "x"})
+        panels.append(s[s.x >= 21] if e == "Bachelor's or more" else s)
+    return curves_grid([("United States", panels)], [e for e, _ in EDU],
+                       "Birth rate by age and education, US women not in school")
 
 
 def young(d):

@@ -16,18 +16,16 @@ Writes eurostat/outputs/fertility_by_education_europe_curves.{csv,html}.
 import importlib.util
 
 import pandas as pd
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
 
 from _common import DATA, NAMES, OUTDIR
 from common.paths import REPO
-from common.plot_colors import PERIOD_COLORSCALE, period_axis, sample_color
+from common.education_curves import curves_grid
 from common.plotting import write_html
 
 LFS = ["CZ", "EL", "HR", "HU", "LV", "MK", "PL", "PT", "RO", "RS", "SI", "SK", "TR"]
 AGES = ["20-24", "25-29", "30-34", "35-39", "40-44"]
 EDU = [("low", "ED0-2"), ("medium", "ED3_4"), ("tertiary", "ED5-8")]
-SHORT = {"low": "lower sec. or less", "medium": "upper secondary", "tertiary": "tertiary"}
+LABEL = {"low": "Lower secondary or less", "medium": "Upper secondary", "tertiary": "Tertiary"}
 
 
 def lfs_rates():
@@ -71,37 +69,10 @@ def curves():
 
 
 def chart(t, geos):
-    axis = period_axis(int(t.year.min()), int(t.year.max()))
-    n = len(geos)
-    fig = make_subplots(rows=n, cols=3, shared_yaxes=True, shared_xaxes=True,
-                        vertical_spacing=0.3 / n, horizontal_spacing=0.04,
-                        subplot_titles=[f"{NAMES[g]}: {SHORT[e]}" for g in geos for e, _ in EDU])
-    for y in sorted(t.year.unique()):  # legend entries in year order
-        fig.add_trace(go.Scatter(x=[None], y=[None], name=str(y), legendgroup=str(y), mode="lines+markers",
-                                 marker=dict(size=4), line=dict(color=sample_color(PERIOD_COLORSCALE, y, axis), width=2)),
-                      row=1, col=1)
-    for i, g in enumerate(geos):
-        s = t[t.geo == g].copy()
-        s["mid"] = s.age.str.split("-").str[0].astype(int) + 2
-        for j, (e, _) in enumerate(EDU):
-            for y in sorted(s.year.unique()):
-                r = s[(s.year == y)].sort_values("mid")
-                fig.add_trace(go.Scatter(
-                    x=r.mid, y=r[e], customdata=r.age.str.replace("-", "–"), name=str(y), legendgroup=str(y),
-                    showlegend=False, mode="lines+markers", marker=dict(size=4),
-                    line=dict(color=sample_color(PERIOD_COLORSCALE, y, axis), width=2),
-                    hovertemplate=f"{NAMES[g]} {y}, age %{{customdata}}: %{{y:.0f}}<extra></extra>",
-                ), row=i + 1, col=j + 1)
-    fig.update_layout(template="plotly_white", height=230 * n + 230,
-                      title="Birth rate by age and education, other European countries",
-                      title_y=0.995, title_yanchor="top",
-                      legend=dict(orientation="h", x=0, y=1 + 40 / (230 * n), xanchor="left", yanchor="bottom"),
-                      margin=dict(l=60, r=20, t=200, b=50))
-    fig.update_xaxes(range=[18, 44], dtick=10)
-    fig.update_xaxes(title_text="Age", row=n)
-    fig.update_yaxes(range=[0, 300])  # same axes as the Nordic and US curves
-    fig.update_yaxes(title_text="Births per 1,000", col=1)
-    return fig
+    t = t.assign(band=t.age, x=t.age.str.split("-").str[0].astype(int) + 2)
+    rows = [(NAMES[g], [t[t.geo == g].rename(columns={e: "rate"})[["year", "x", "band", "rate"]].dropna() for e, _ in EDU])
+            for g in geos]
+    return curves_grid(rows, [LABEL[e] for e, _ in EDU], "Birth rate by age and education, other European countries")
 
 
 def main():

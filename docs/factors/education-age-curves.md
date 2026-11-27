@@ -20,7 +20,7 @@ In Mexico, rates fell at every age and education level, by about a third or more
 
 :::{tab-item} Chart
 ```{raw} html
-<iframe src="../_static/acs/fertility_by_education_us_curves_row.html" style="width: 100%; height: 420px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/acs/fertility_by_education_us_curves_row.html" style="width: 100%; height: 425px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 :::
 
@@ -38,7 +38,7 @@ US Census Bureau [American Community Survey 1-year PUMS](https://www.census.gov/
 
 :::{tab-item} Chart
 ```{raw} html
-<iframe src="../_static/eurostat/fertility_by_education_nordic_by_age.html" style="width: 100%; height: 1140px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/eurostat/fertility_by_education_nordic_by_age.html" style="width: 100%; height: 1025px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 :::
 
@@ -85,7 +85,7 @@ The least educated women's rates fell at 20–29 in Estonia, Latvia, Poland, Rom
 
 :::{tab-item} Chart
 ```{raw} html
-<iframe src="../_static/eurostat/fertility_by_education_europe_curves.html" style="width: 100%; height: 3490px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/eurostat/fertility_by_education_europe_curves.html" style="width: 100%; height: 3050px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 :::
 
@@ -107,7 +107,7 @@ In Brazil, between 2014 and 2024, rates of women below secondary complete and wi
 
 :::{tab-item} Chart
 ```{raw} html
-<iframe src="../_static/nso/latam_fertility_by_education_curves.html" style="width: 100%; height: 710px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/nso/latam_fertility_by_education_curves.html" style="width: 100%; height: 625px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 :::
 
