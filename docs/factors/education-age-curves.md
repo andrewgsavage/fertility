@@ -18,33 +18,15 @@ This page was written by AI and has not been fully reviewed. Check figures and c
 ```
 :::
 
-:::{tab-item} By year, age panels
+:::{tab-item} By year
 ```{raw} html
-<iframe src="../_static/eurostat/education_by_year_age_panels.html" style="width: 100%; height: 1200px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
-```
-:::
-
-:::{tab-item} By year, education panels
-```{raw} html
-<iframe src="../_static/eurostat/education_by_year_edu_panels.html" style="width: 100%; height: 1200px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
+<iframe src="../_static/eurostat/education_by_year_facet.html" style="width: 100%; height: 1240px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 :::
 
 :::{tab-item} United States, by age
 ```{raw} html
 <iframe src="../_static/eurostat/education_curves_us.html" style="width: 100%; height: 450px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
-```
-:::
-
-:::{tab-item} United States, by year, age panels
-```{raw} html
-<iframe src="../_static/eurostat/education_by_year_us_age_panels.html" style="width: 100%; height: 450px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
-```
-:::
-
-:::{tab-item} United States, by year, education panels
-```{raw} html
-<iframe src="../_static/eurostat/education_by_year_us_edu_panels.html" style="width: 100%; height: 450px; display: block; border: 1px solid var(--color-background-border);" loading="lazy"></iframe>
 ```
 :::
 
@@ -92,7 +74,7 @@ Low, middle, high: Mexico primary or less, secondary or preparatoria, some unive
 
 :::{tab-item} Notes
 ```{note}
-Low, middle and high are lower secondary or less (ISCED 0–2), upper secondary (ISCED 3–4) and tertiary (ISCED 5–8) for the European countries; for Mexico and Brazil they are defined below. The US has four groups and is charted separately; its by-year rates average single years of age within each band. The by-year charts stop at 35–39; Norway's 30–39 band is drawn in the 30–34 panel. Change is relative to the same country's mean at that age in its first three years; ages where that mean is under 5 per 1,000 are left out.
+Low, middle and high are lower secondary or less (ISCED 0–2), upper secondary (ISCED 3–4) and tertiary (ISCED 5–8) for the European countries; for Mexico and Brazil they are defined below. The US has four groups; its age curves are charted separately, and its by-year rates average single years of age within each band. The by-year chart stops at 35–39; Norway's 30–39 band is drawn in the 30–34 panel. Change is relative to the same country's mean at that age in its first three years; ages where that mean is under 5 per 1,000 are left out.
 ```
 
 ```{note}

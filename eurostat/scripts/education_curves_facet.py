@@ -14,12 +14,9 @@ Writes to eurostat/outputs/:
                                       per country, three countries per row, a thin line per year
   education_curves_facet_change.html  the same, each rate over the country's mean in its first three
                                       years at that age, log axis; bases under 5 per 1,000 dropped
-  education_by_year_age_panels.html   rate by year: a panel per age band 20-24 ... 35-39 per country,
-                                      a line per education level
-  education_by_year_edu_panels.html   rate by year: a panel per education level per country, a line per
-                                      age band
+  education_by_year_facet.html        every country, the US first: rate by year, a panel per age band
+                                      20-24 ... 35-39 per country, a line per education level
   education_curves_us.html            the US age curves, four education panels
-  education_by_year_us_*_panels.html  the US by year, in the format of the two above
 """
 
 import math
@@ -174,72 +171,61 @@ def by_band(d):
     return d[d.band.isin(BAND_SLOT)].groupby(["level", "band", "year"]).rate.mean().reset_index()
 
 
-def year_facet(rows, panels="band", per_row=GROUPS_PER_ROW, row_height=ROW_HEIGHT, title=None):
-    """Birth rate by year: a group of panels per country, one per age band (lines = education levels)
-    or one per education level (lines = age bands)."""
-    full = per_row == 1
-    name = lambda lv: US_FULL.get(lv, lv) if full else lv
+LEGEND = [("Low (US less than high school)", "Low"), ("US high school", "HS"),
+          ("Middle (US some college)", "Middle"), ("High (US bachelor's or more)", "High")]
+
+
+def year_facet(rows, per_row=GROUPS_PER_ROW, row_height=ROW_HEIGHT):
+    """Birth rate by year: a group of panels per country, one per age band, a line per education level."""
     years = [int(y) for _, _, _, d in rows for y in d.year]
     grid = [rows[i:i + per_row] for i in range(0, len(rows), per_row)]
     nrows = len(grid)
     fig = make_subplots(rows=nrows, cols=per_row * SLOTS, horizontal_spacing=0.001,
                         vertical_spacing=min(0.012, 1 / max(nrows - 1, 1)))
-    keys = rows[0][2] if panels == "band" else BANDS  # legend entries: what the lines are
-    for k in keys:
-        lab, col = (name(k), LEVEL_COLORS[k]) if panels == "band" else (k.replace("-", "–"), BAND_COLORS[k])
-        fig.add_trace(go.Scatter(x=[None], y=[None], mode="lines", name=lab, line=dict(color=col, width=2)), row=1, col=1)
-    heads = BANDS if panels == "band" else rows[0][2]
+    for lab, lv in LEGEND:
+        fig.add_trace(go.Scatter(x=[None], y=[None], mode="lines", name=lab,
+                                 line=dict(color=LEVEL_COLORS[lv], width=2)), row=1, col=1)
     for r, line in enumerate(grid, start=1):
         for g, (country, _, levels, d) in enumerate(line):
             b = by_band(d)
-            k = len(BANDS) if panels == "band" else len(levels)
-            doms = group_domains(k, per_row)[g]
+            doms = group_domains(len(BANDS), per_row)[g]
             for p in range(SLOTS):
                 col = g * SLOTS + p + 1
-                if p >= k:
-                    fig.update_xaxes(visible=False, row=r, col=col)
-                    fig.update_yaxes(visible=False, row=r, col=col)
-                    continue
                 fig.update_xaxes(domain=list(doms[p]), row=r, col=col)
-                if panels == "band":
-                    sel = b[b.band.map(BAND_SLOT) == p]
-                    groups = [(lv, sel[sel.level == lv]) for lv in levels]
-                else:
-                    sel = b[b.level == levels[p]]
-                    groups = [(bd, sel[sel.band == bd]) for bd in sorted(sel.band.unique(), key=BAND_SLOT.get)]
-                for key, s in groups:
+                sel = b[b.band.map(BAND_SLOT) == p]
+                for lv in levels:
+                    s = sel[sel.level == lv].sort_values("year")
                     if s.empty:
                         continue
-                    s = s.sort_values("year")
-                    lv, band = (key, s.band.iloc[0]) if panels == "band" else (levels[p], key)
-                    c = LEVEL_COLORS[lv] if panels == "band" else BAND_COLORS[band]
+                    band = s.band.iloc[0].replace("-", "–")
                     fig.add_trace(go.Scatter(
-                        x=s.year, y=s.rate, mode="lines", showlegend=False, line=dict(width=1.5, color=c),
-                        hovertemplate=f"{country}, {US_FULL.get(lv, lv)}, age {band.replace('-', '–')}"
+                        x=s.year, y=s.rate, mode="lines", showlegend=False,
+                        line=dict(width=1.5, color=LEVEL_COLORS[lv]),
+                        hovertemplate=f"{country}, {US_FULL.get(lv, lv)}, age {band}"
                                       "<br>%{x}: %{y:.0f} per 1,000<extra></extra>",
                     ), row=r, col=col)
-                if panels == "band" and p == 2 and (b.band == "30-39").any():
+                if p == 2 and (b.band == "30-39").any():
                     fig.add_annotation(text="30–39", x=0.95, y=0.97, xref="x domain", yref="y domain",
                                        xanchor="right", yanchor="top", showarrow=False,
                                        font=dict(LABEL_FONT, size=11), row=r, col=col)
-                if p == 0 and not full:
+                if p == 0:
                     fig.add_annotation(text=f"<b>{country}</b>", x=0.05, y=0.97, xref="x domain", yref="y domain",
                                        xanchor="left", yanchor="top", showarrow=False, font=LABEL_FONT, row=r, col=col)
                 if r == 1:
-                    h = heads[p]
-                    h = h.replace("-", "–") if panels == "band" else name(h)
-                    fig.add_annotation(text=h, x=0.5, y=1.0, xref="x domain", yref="y domain", yanchor="bottom",
-                                       showarrow=False, font=dict(LABEL_FONT, size=12), row=r, col=col)
+                    fig.add_annotation(text=BANDS[p].replace("-", "–"), x=0.5, y=1.0, xref="x domain",
+                                       yref="y domain", yanchor="bottom", showarrow=False,
+                                       font=dict(LABEL_FONT, size=12), row=r, col=col)
                 last = r == nrows or (r == nrows - 1 and g >= len(grid[-1]))
-                fig.update_xaxes(range=[min(years) - 0.5, max(years) + 0.5],
-                                 tickvals=[2010, 2020] if not full else list(range(2010, max(years) + 1, 5)),
-                                 tickangle=0, showticklabels=last, row=r, col=col)
+                fig.update_xaxes(range=[min(years) - 0.5, max(years) + 0.5], tickvals=[2010, 2015, 2020],
+                                 tickangle=-90, showticklabels=last, row=r, col=col)
                 fig.update_yaxes(range=list(RATE_RANGE), dtick=100, showticklabels=col == 1, row=r, col=col)
-    what = "age" if panels == "band" else "education"
-    fig.update_layout(template="plotly_white", height=row_height * nrows + 130,
-                      title=title or f"Birth rate by year, panels by {what}, births per 1,000 women",
-                      legend=dict(x=1.01, y=1, xanchor="left", yanchor="top"),
-                      margin=dict(l=50, r=170 if full else 110, t=90, b=40))
+    height = row_height * nrows + 170
+    fig.update_layout(template="plotly_white", height=height,
+                      title=dict(text="Birth rate by year, age and education, births per 1,000 women",
+                                 y=1 - 25 / height, yref="container"),
+                      legend=dict(orientation="h", x=0, xanchor="left", y=1 - 50 / height, yref="container",
+                                  yanchor="top"),
+                      margin=dict(l=50, r=30, t=110, b=60))
     return fig
 
 
@@ -250,14 +236,9 @@ def main():
     figs = {
         "education_curves_facet.html": facet(rest),
         "education_curves_facet_change.html": facet(rest, change=True),
-        "education_by_year_age_panels.html": year_facet(rest, "band"),
-        "education_by_year_edu_panels.html": year_facet(rest, "level"),
+        "education_by_year_facet.html": year_facet(rows),
         "education_curves_us.html": facet([us], per_row=1, row_height=300,
                                           title=f"Birth rate by age and education, {us_title}"),
-        "education_by_year_us_age_panels.html": year_facet(
-            [us], "band", per_row=1, row_height=300, title=f"Birth rate by year, panels by age, {us_title}"),
-        "education_by_year_us_edu_panels.html": year_facet(
-            [us], "level", per_row=1, row_height=300, title=f"Birth rate by year, panels by education, {us_title}"),
     }
     out = outputs_dir("eurostat")
     for name, fig in figs.items():
