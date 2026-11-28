@@ -21,7 +21,7 @@ answer: >-
   split. All on the education page.
 factors: [education]
 measurables: [tfr, asfr, cond-asfr-1, births]
-countries: [NOR, FIN, SWE, DNK, EST, USA, URY, all]
+countries: [NOR, FIN, SWE, DNK, EST, USA, URY, GBR_NP, all]
 pages: [docs/factors/education.md]
 attempts:
   - date: 2026-11-27
@@ -226,7 +226,27 @@ attempts:
     why: >-
       Birth records carry mother's education level, per the documentation; not downloaded. Women by
       age and education would need GEIH microdata.
+  - date: 2026-11-28
+    tried: ONS Census 2021 custom dataset API, population type UR_HH (usual residents in households), resident_age_18a x sex x highest_qualification x hh_dependent_children_6a, England and Wales
+    url: https://api.beta.ons.gov.uk/v1/population-types/UR_HH/census-observations?area-type=nat&dimensions=resident_age_18a,sex,highest_qualification,hh_dependent_children_6a
+    outcome: partial
+    why: >-
+      The cross is allowed at national level, no key. But the child variable is the household's
+      youngest dependent child aged 0-4 (not the woman's own child, not births in the past year),
+      and it is one date only, so it gives no trend. Women 20-24 in households: 36% of those with
+      no qualifications live with a child 0-4, 6% of graduates (level 4+). No mother-child link or
+      birth-in-past-year variable in the 2021 population types (UR, UR_HH).
+  - date: 2026-11-28
+    tried: Nomis 2011 Census tables with highest level of qualification (search *qualification*), incl. LC5104EW, DC5104EWla, LC5106EW, DC5102EW
+    url: https://www.nomisweb.co.uk/api/v01/dataset/def.sdmx.json?search=*qualification*
+    outcome: lacks-it
+    why: >-
+      No 2011 table crosses women's age, qualification and age of youngest child. LC5104EW and
+      DC5104EWla cover parents in employment only, with no age; DC5102EW (qualification by sex by
+      age) has no children; LC5106EW gives family type only. So no 2011 match for the 2021 cross.
+    retry: 2011 Census safeguarded microdata (UK Data Service registration) or an ONS commissioned table.
 next:
+  - UK: 2011 census safeguarded microdata (UKDS) for the 2021 cross; Scotland's census 2011/2022 tables.
   - Colombia: DANE EEVV births by NIV_EDUM over GEIH women by age and education.
   - Chile: DEIS births (check for mother's education) over CASEN or census 2017/2024.
   - Comolli et al. 2020/2021 Nordic first-birth decline by education (Sweden, Norway, Finland, Denmark).
