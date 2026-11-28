@@ -4,20 +4,6 @@
 This page was written by AI and has not been fully reviewed. Check figures and claims against the linked sources.
 ```
 
-The [Education](education.md) page has births per woman by education for these countries and the rates at 20–24. The [family transitions](../theory/family-transitions.md) page has the US change by age and education as a grid.
-
-In the US and the Nordic countries the fall in birth rates was concentrated in the 20s, and rates after 35 rose little. In the US, every group's peak moved later and lower: for women without a degree, rates fell before about 28 and rose after 31; for graduates, they fell at 22–34 and barely rose later. In the Nordic countries, rates at 25–29 fell 13–39% at every education level, with the largest falls for tertiary-educated women in Finland (−39%) and Norway (−37%). At 30–34, tertiary rates fell 6% in Finland, 20% in Sweden and 11% in Denmark; rates without a degree barely moved in Denmark and fell 13–16% in Finland and Sweden. Rates at 35–44 were flat or rising almost everywhere, much less than the fall at 25–29.
-
-The lowest education groups are the closest match between the US and the Nordic countries. Nordic "tertiary" also covers short-cycle degrees that the US counts under "some college", so the higher groups compare less well. The European countries use the same three levels as the Nordic ones.
-
-Tertiary-educated women's rates at 25–29 fell in most countries: by 35% in Estonia (2017–2025), 34% in Latvia, 29% in Serbia, 27% in Hungary and Portugal, and 26% in Poland. They rose in Czechia (+10%), Romania (+6%) and Turkey (+1%). At 30–34 they fell 7–28% in every country.
-
-The least educated women's rates fell at 20–29 in Estonia, Latvia, Poland, Romania and Serbia, but rose at most ages in Hungary, Portugal, Slovakia and North Macedonia, and at 20–24 in Greece (186 to 242 per 1,000). In Estonia, the one register-based series, rates fell 18–50% at every level from 20 to 34. Rates at 40–44 rose in most countries.
-
-In Mexico, between 2015 and 2024, rates fell 25–53% in every age group at every education level. Women with some university fell most at every age under 35: 53% at 20–24, 48% at 25–29 and 46% at 30–34, against 29–43% for the other two groups. Unlike the US and the Nordic countries, rates at 35–44 fell too, by 25–36%.
-
-In Brazil, between 2014 and 2024, rates of women below secondary complete and with secondary complete changed by under 10% at 20–34 and rose 6–11% at 35–44. Graduates' rates fell 12–25% at 20–39, most at 30–34 (88 to 66 per 1,000), so their peak flattened rather than moved later.
-
 ::::{tab-set}
 
 :::{tab-item} Birth rate
