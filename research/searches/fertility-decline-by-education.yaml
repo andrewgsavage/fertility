@@ -272,7 +272,7 @@ attempts:
     outcome: found
     why: >-
       Births by registration year, by village, sex, mother's nationality, 5-year age (from under 15)
-      and education (国小以下, 国中, 高中, 专科, 大学, 硕士, 博士); API has 2017-2025 (ROC 106-114),
+      and education (國小畢業以下, 國中, 高中, 專科, 大學, 碩士, 博士); API has 2017-2025 (ROC 106-114),
       2000 records per page, ~117 pages a year; data.gov.tw has file downloads from 2015 (ROC 104).
       Women by age and education from the same register: 32944 files 2015-2018, 117988 zips
       2019-2025. No key. Not downloaded. Births are by registration date, not occurrence.
