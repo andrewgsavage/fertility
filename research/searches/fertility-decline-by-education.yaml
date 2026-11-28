@@ -17,11 +17,11 @@ answer: >-
   most of the US fall is under 25) and Eurostat demo_faeduc / lfsa_pgaed rates at 25-44 with
   breaks flagged; NCHS birth certificates over ACS women (2017-2024); CPS children ever born and
   childlessness by age and education (2016-2024); Nordic register births over register women by
-  education (FI, SE, DK, NO); Estonia register births, women and children ever born by education; DHS TFR by education for ~55 countries with a within/composition
+  education (FI, SE, DK, NO); Estonia register births, women and children ever born by education; Colombia EEVV births over GEIH women (2010-2024, no 2021) and Taiwan register births over register women (2016-2025) on the age-curves page; DHS TFR by education for ~55 countries with a within/composition
   split. All on the education page.
 factors: [education]
 measurables: [tfr, asfr, cond-asfr-1, births]
-countries: [NOR, FIN, SWE, DNK, EST, USA, URY, all]
+countries: [NOR, FIN, SWE, DNK, EST, USA, URY, GBR_NP, CHL, COL, TWN, all]
 pages: [docs/factors/education.md]
 attempts:
   - date: 2026-11-27
@@ -226,9 +226,60 @@ attempts:
     why: >-
       Birth records carry mother's education level, per the documentation; not downloaded. Women by
       age and education would need GEIH microdata.
+  - date: 2026-11-28
+    tried: ONS Census 2021 custom dataset API, population type UR_HH (usual residents in households), resident_age_18a x sex x highest_qualification x hh_dependent_children_6a, England and Wales
+    url: https://api.beta.ons.gov.uk/v1/population-types/UR_HH/census-observations?area-type=nat&dimensions=resident_age_18a,sex,highest_qualification,hh_dependent_children_6a
+    outcome: partial
+    why: >-
+      The cross is allowed at national level, no key. But the child variable is the household's
+      youngest dependent child aged 0-4 (not the woman's own child, not births in the past year),
+      and it is one date only, so it gives no trend. Women 20-24 in households: 36% of those with
+      no qualifications live with a child 0-4, 6% of graduates (level 4+). No mother-child link or
+      birth-in-past-year variable in the 2021 population types (UR, UR_HH).
+  - date: 2026-11-28
+    tried: Nomis 2011 Census tables with highest level of qualification (search *qualification*), incl. LC5104EW, DC5104EWla, LC5106EW, DC5102EW
+    url: https://www.nomisweb.co.uk/api/v01/dataset/def.sdmx.json?search=*qualification*
+    outcome: lacks-it
+    why: >-
+      No 2011 table crosses women's age, qualification and age of youngest child. LC5104EW and
+      DC5104EWla cover parents in employment only, with no age; DC5102EW (qualification by sex by
+      age) has no children; LC5106EW gives family type only. So no 2011 match for the 2021 cross.
+    retry: 2011 Census safeguarded microdata (UK Data Service registration) or an ONS commissioned table.
+  - date: 2026-11-28
+    tried: Chile DEIS Datos Abiertos page (deis.minsal.cl/#datosabiertos) and repositoriodeis.minsal.cl/DatosAbiertos/VITALES/ file names
+    url: https://deis.minsal.cl/#datosabiertos
+    outcome: lacks-it
+    why: >-
+      deis.minsal.cl is behind a Cloudflare challenge for scripts (opens in a browser). The open-data
+      list's Nacimientos entry is only a Tableau series for 2000-2016; no births microdata file is
+      listed. Guessed names under DatosAbiertos/VITALES/ (NACIMIENTOS_1992_20xx.zip,
+      Serie_Nacimientos_2001_2019.zip/csv, as read by an old gist) all return 404, while
+      EGRESOS_2004.zip on the same host returns 200, so the births files have been withdrawn or renamed.
+    retry: INE Chile Anuario de Estadisticas Vitales tables, or a DEIS data request.
+  - date: 2026-11-28
+    tried: DANE NADA catalog API (microdatos.dane.gov.co/index.php/api/catalog/search, /api/catalog/<idno>/variables), EEVV births and GEIH
+    url: https://microdatos.dane.gov.co/index.php/api/catalog/COL-DANE-EEVV-2023/variables
+    outcome: found
+    why: >-
+      Births files carry EDAD_MADRE, NIV_EDUM (mother's last level passed) and ULTCURMAD in every
+      EEVV release checked (2008-2011, 2014, 2015, 2023, 2024); releases 2008-2025 are all
+      form_model "direct" (download without login). GEIH microdata (women by age and education) are
+      also "direct", 2012-2020 under the old frame and later releases. Not downloaded; the GEIH frame
+      changed in 2021 (2018 census), so levels may break there.
+  - date: 2026-11-28
+    tried: Taiwan Ministry of the Interior household-registration open data, data.gov.tw 32945 (ODRP028 births by mother's age and education), 32944 (ODRP023) and 117988 (ODRP053) women 15+ by age, marital status and education
+    url: https://www.ris.gov.tw/rs-opendata/api/v1/datastore/ODRP028/106
+    outcome: found
+    why: >-
+      Births by registration year, by village, sex, mother's nationality, 5-year age (from under 15)
+      and education (國小畢業以下, 國中, 高中, 專科, 大學, 碩士, 博士); API has 2017-2025 (ROC 106-114),
+      2000 records per page, ~117 pages a year; data.gov.tw has file downloads from 2015 (ROC 104).
+      Women by age and education from the same register: 32944 files 2015-2018, 117988 zips
+      2019-2025. No key. Not downloaded. Births are by registration date, not occurrence.
 next:
-  - Colombia: DANE EEVV births by NIV_EDUM over GEIH women by age and education.
-  - Chile: DEIS births (check for mother's education) over CASEN or census 2017/2024.
+  - UK: 2011 census safeguarded microdata (UKDS) for the 2021 cross; Scotland's census 2011/2022 tables.
+  - Taiwan: pre-2016 births by mother's education from the MOI statistical yearbook.
+  - Chile: INE vital statistics yearbook tables of births by mother's age and education, over CASEN women.
   - Comolli et al. 2020/2021 Nordic first-birth decline by education (Sweden, Norway, Finland, Denmark).
   - Ohlsson-Wijk & Andersson 2022 (Sweden, first births by labour-market attachment and education).
   - StatFin table with TFR by education, 2010 onward.
