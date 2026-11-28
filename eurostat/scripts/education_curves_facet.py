@@ -5,6 +5,7 @@ Reads the curves the per-source scripts write:
   eurostat/outputs/fertility_by_education_nordic_by_age.csv   (fertility_by_education_nordic.py)
   eurostat/outputs/fertility_by_education_europe_curves.csv   (fertility_by_education_europe_curves.py)
   NSO/outputs/{mexico,brazil}_fertility_by_education.csv      (mexico/brazil_births_by_education.py)
+  NSO/outputs/{colombia,taiwan}_fertility_by_education.csv   (colombia/taiwan_fertility_by_education.py)
   ACS/outputs/fertility_by_education_us_curves.csv            (ACS fertility_by_education_us.py)
 Rates by 5-year age group are drawn at the band's middle; the US has single years of age, averaged
 within each band for the by-year charts.
@@ -77,7 +78,7 @@ def load():
         d["level"] = d.level.map(dict(zip(["low", "medium", "tertiary"], LEVELS3)))
         out.append((NAMES[g], "register" if g == "EE" else "births / LFS women", LEVELS3,
                     d.assign(x=mid(d.age), band=d.age)))
-    for code, name in [("mexico", "Mexico"), ("brazil", "Brazil")]:
+    for code, name in [("mexico", "Mexico"), ("brazil", "Brazil"), ("colombia", "Colombia"), ("taiwan", "Taiwan")]:
         d = pd.read_csv(outputs_dir("NSO") / f"{code}_fertility_by_education.csv")
         d = d[d.ed != "all"].assign(rate=lambda t: t.rate * 1000)
         d["level"] = d.ed.map(dict(zip(["low", "medium", "tertiary"], LEVELS3)))

@@ -61,6 +61,8 @@ RUN_FIRST = [
     "NSO/scripts/brazil_births_by_education.py",  # -> NSO/scripts/latam_fertility_by_education.py, eurostat/scripts/education_curves_facet.py
     "NSO/scripts/mexico_births_by_education.py",  # -> NSO/scripts/latam_fertility_by_education.py, eurostat/scripts/education_curves_facet.py
     "ACS/scripts/fertility_by_education_us.py",  # -> eurostat/scripts/education_curves_facet.py
+    "NSO/scripts/colombia_fertility_by_education.py",  # -> eurostat/scripts/education_curves_facet.py
+    "NSO/scripts/taiwan_fertility_by_education.py",  # -> eurostat/scripts/education_curves_facet.py
     "eurostat/scripts/fertility_by_education_nordic.py",  # -> same
     "eurostat/scripts/fertility_by_education_europe_curves.py",  # -> same
     "GGS/scripts/young_ideals_europe.py",  # -> eurostat/scripts/change_matrix.py

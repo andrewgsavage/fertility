@@ -17,7 +17,7 @@ answer: >-
   most of the US fall is under 25) and Eurostat demo_faeduc / lfsa_pgaed rates at 25-44 with
   breaks flagged; NCHS birth certificates over ACS women (2017-2024); CPS children ever born and
   childlessness by age and education (2016-2024); Nordic register births over register women by
-  education (FI, SE, DK, NO); Estonia register births, women and children ever born by education; DHS TFR by education for ~55 countries with a within/composition
+  education (FI, SE, DK, NO); Estonia register births, women and children ever born by education; Colombia EEVV births over GEIH women (2010-2024, no 2021) and Taiwan register births over register women (2016-2025) on the age-curves page; DHS TFR by education for ~55 countries with a within/composition
   split. All on the education page.
 factors: [education]
 measurables: [tfr, asfr, cond-asfr-1, births]
@@ -278,8 +278,7 @@ attempts:
       2019-2025. No key. Not downloaded. Births are by registration date, not occurrence.
 next:
   - UK: 2011 census safeguarded microdata (UKDS) for the 2021 cross; Scotland's census 2011/2022 tables.
-  - Colombia: build DANE EEVV births by NIV_EDUM over GEIH women by age and education, 2012-2025.
-  - Taiwan: build ODRP028 births over ODRP023/ODRP053 women by age and education, 2015-2025; pre-2015 from the MOI statistical yearbook.
+  - Taiwan: pre-2016 births by mother's education from the MOI statistical yearbook.
   - Chile: INE vital statistics yearbook tables of births by mother's age and education, over CASEN women.
   - Comolli et al. 2020/2021 Nordic first-birth decline by education (Sweden, Norway, Finland, Denmark).
   - Ohlsson-Wijk & Andersson 2022 (Sweden, first births by labour-market attachment and education).
