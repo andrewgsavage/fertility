@@ -243,6 +243,9 @@ def main():
     }
     out = outputs_dir("eurostat")
     for name, fig in figs.items():
+        # fixedrange: no zoom/pan, so no axis drag zones (an up-down resize cursor on hover)
+        fig.update_xaxes(fixedrange=True)
+        fig.update_yaxes(fixedrange=True)
         write_html(fig, out / name, height=f"{fig.layout.height}px")
     print(f"{len(rest)} countries plus the US")
 
